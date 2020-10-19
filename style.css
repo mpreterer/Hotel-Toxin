@@ -4,10 +4,21 @@ body {
 	padding:0;
 }
 
+a {
+	text-decoration:none;
+}
+
 .header {
 	height:70px;
 	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 	display:flex;
+	justify-content:space-around;
+	align-items:center;
+}
+
+.right_Part_Header{
+	display:flex;
+	justify-content:space-around;
 }
 
 .header img {
@@ -20,12 +31,16 @@ body {
 	list-style:normal;
 	font-size:14px;
 	line-height:17,07px;
-	color: rgba(31, 32, 65, 0.5);
+	color:rgba(31, 32, 65, 0.5);
 }
 
 .list li {
 	list-style:none;
-	padding-left:15px;
+	margin-left:15px;
+}
+
+.list a {
+	color: rgba(31, 32, 65, 0.5);
 }
 
 .logup {
@@ -34,18 +49,100 @@ body {
 	font-weight:bold;
 	font-size:12px;
 	line-height:15px;
+	height:34px;
 	text-align:center;
+	margin-top:5px;
+	margin-left:35px;
 }
 
 .logup .login {
 	color:#BC9CFF;
-	height:34px;
 	width:87px;
 	border:3px solid #BC9CFF;
 	border-radius:22px;
 }
 
+.logup .registration {
+	width:196px;
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	color:#fff;
+	border-radius:22px;
+	margin-left:20px;
+	border:3px solid transparent;
+}
 
-.logup .login p {
+
+.logup p {
 	padding:0;
+	margin:7px 0;
+}
+
+.content {
+	height:1022px;
+	background-image:url(image/content.png);
+	background-repeat:no-repeat;
+}
+
+.content .block {
+	height:374px;
+	width:380px;
+	background:#fff;
+	color:#1F2041;
+	position:relative;
+	left:140px;
+	top:140px;
+	font-weight:bold;
+	font-style:normal;
+	line-height:30px;
+	font-size:24px;
+	font-family:quicksand,sans-serif;
+	padding:20px 40px 20px 20px;
+	border:1px solid rgba(0, 0, 0, 0.12);
+	box-sizing:border-box;
+	box-shadow:0px 0px 25px rgba(0, 0, 0, 0.2);
+	border-radius:4px;
+	display:flex;
+	flex-direction:column;
+}
+
+.residence {
+	font-family:Montserrat;
+	font-size:13px;
+	font-style:normal;
+	font-weight:700;
+	line-height:15px;
+	letter-spacing:0em;
+	text-align:left;
+	text-transform:uppercase;
+}
+
+.block_date {
+	display:flex;
+	justify-content:space-around;
+	text-align:left;
+}
+
+
+.date_arrival, .date_departure {
+	height:44px;
+	width:150px;
+	background:#FFFFFF;
+	border:1px solid rgba(31, 32, 65, 0.25);
+	box-sizing:border-box;
+	border-radius:4px;
+	font-family:Montserrat;
+	font-size:14px;
+	font-style:normal;
+	font-weight:400;
+	line-height:18px;
+	letter-spacing:0em;
+	text-align:left;
+	color:rgba(31, 32, 65, 0.75);
+	padding:11px;
+	text-align:left;
+}
+
+.date_arrival p, .date_departure p {
+	margin:0;
+
 }
