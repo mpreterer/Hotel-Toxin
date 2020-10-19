@@ -27,3 +27,25 @@ body {
 	list-style:none;
 	padding-left:15px;
 }
+
+.logup {
+	display:flex;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:12px;
+	line-height:15px;
+	text-align:center;
+}
+
+.logup .login {
+	color:#BC9CFF;
+	height:34px;
+	width:87px;
+	border:3px solid #BC9CFF;
+	border-radius:22px;
+}
+
+
+.logup .login p {
+	padding:0;
+}
