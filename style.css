@@ -14,11 +14,52 @@ a {
 	display:flex;
 	justify-content:space-around;
 	align-items:center;
+	padding:0;
+	margin:0;
+}
+
+/*Выпадающее меню*/
+.list {
+	height:70px;
+}
+
+.list > ul > li {
+	float:left;
+}
+
+.list ul li a {
+	display:block;
+	background:white;
+}
+
+.list ul ul {
+	display:none;
+	position:absolute;
+	padding:16px 32px 0 0;
+}
+
+.list ul li ul li {
+	width:80px;
+	height:27px;
+}
+
+.list ul li ul a {
+	border:1px solid grey;
+}
+
+.list ul li:hover ul {
+	display:block;
+}
+
+.menu_list {
+	margin:0;
+	padding:0;
 }
 /*панель входа и список*/
 .right_Part_Header{
 	display:flex;
 	justify-content:space-around;
+	margin-top:15px;
 }
 
 .header img {
@@ -37,6 +78,7 @@ a {
 .list li {
 	list-style:none;
 	margin-left:15px;
+	height:50px;
 }
 
 .list a {
