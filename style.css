@@ -14,58 +14,7 @@ a {
 	display:flex;
 	justify-content:space-around;
 	align-items:center;
-	padding:0;
-	margin:0;
 }
-
-/*Выпадающее меню*/
-.list {
-	height:70px;
-}
-
-.list > ul > li {
-	float:left;
-}
-
-.list ul li a {
-	display:block;
-	background:white;
-}
-
-.list ul ul {
-	display:none;
-	position:absolute;
-	padding:16px 32px 0 0;
-}
-
-.list ul li ul li {
-	width:80px;
-	height:27px;
-}
-
-.list ul li ul a {
-	border:1px solid grey;
-}
-
-.list ul li:hover ul {
-	display:block;
-}
-
-.menu_list {
-	margin:0;
-	padding:0;
-}
-/*панель входа и список*/
-.right_Part_Header{
-	display:flex;
-	justify-content:space-around;
-	margin-top:15px;
-}
-
-.header img {
-	padding-left:10px;
-}
-
 .list ul {
 	display:flex;
 	font-weight:400;
@@ -77,13 +26,73 @@ a {
 
 .list li {
 	list-style:none;
-	margin-left:15px;
-	height:50px;
 }
 
 .list a {
 	color: rgba(31, 32, 65, 0.5);
+	transition:0.3s;
 }
+
+.list > ul > li {
+	float:left;
+	padding:25px 10px;
+	transition:0.3s;
+}
+
+.list ul li a {
+	display:block;
+	background:white;
+}
+
+.list ul ul {
+	display:none;
+	position:absolute;
+	padding:25px 35px 0 0;
+}
+
+.list ul li ul li {
+	width:80px;
+	height:30px;
+}
+
+.list ul li ul li {
+	border:1px solid grey;
+	background:white;
+}
+
+.list ul li:hover ul {
+	display:block;
+}
+
+.list ul li:hover > a{
+	background:#D8D8D8;
+	color:white;
+	transition:0.3s;
+}
+
+.list ul li:hover {
+	background:#D8D8D8;
+	transition:0.3s;
+}
+
+.menu_list {
+	margin:0;
+	padding:0;
+	height:70px;
+}
+
+/*панель входа и список*/
+.right_Part_Header{
+	display:flex;
+	justify-content:space-around;
+	height:70px;
+}
+
+.header img {
+	padding-left:10px;
+}
+
+
 
 /*панель входа и регистрации*/
 .logup {
@@ -94,7 +103,7 @@ a {
 	line-height:15px;
 	height:34px;
 	text-align:center;
-	margin-top:5px;
+	margin-top:15px;
 	margin-left:35px;
 }
 
@@ -105,6 +114,10 @@ a {
 	border-radius:22px;
 }
 
+.logup .login a{
+	color:#BC9CFF;
+}
+
 .logup .registration {
 	width:196px;
 	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -112,6 +125,10 @@ a {
 	border-radius:22px;
 	margin-left:20px;
 	border:3px solid transparent;
+}
+
+.logup .registration a {
+	color:#fff;
 }
 
 
