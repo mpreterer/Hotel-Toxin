@@ -7,79 +7,101 @@
 	<title>index</title>
 </head>
 <body>
-
-<div class="header">
+<!-- лого сайта -->
+<nav class="header">
 	<a href="#">
 		<div class="logo">
 			<img src="image/logo.png" width="100px" 	height="40px">
 		</div>
 	</a>
 <div class="right_Part_Header">
+	<!-- список в navbar -->
 	<div class="list">	
-		<ul class="ul_list">
-			<a href="#">
-				<li>О нас</li>
-			</a>
-			<a href="#">
+		<ul class="menu_list">
+	
+			<li><a href="#">О нас</a></li>
 				<li>
+					<a href="#">
 					Услуги
-				<ul>
-				</ul>
-		   	   </li>
-		   	</a>
-			<a href="#">
-				<li>
-					Вакансии
-				</li>
-			</a>
-			<a href="#">
-				<li>
-				Новости
-				</li>
-			</a>
-			<a href="#">
-				<li>Соглашения
+					</a>
 					<ul>
+						<li><a href="#">text1</a></li>
+						<li><a href="#">text1</a></li>
+						<li><a href="#">text1</a></li>
 					</ul>
+		   	   </li>
+				<li>
+					<a href="#">
+						Вакансии
+					</a>
 				</li>
-			</a>	
+				<li>
+					<a href="#">
+						Новости
+					</a>
+				</li>
+				<li>
+					<a href="#">Соглашения</a>
+					<ul>
+						<li><a href="#">text1</a></li>
+						<li><a href="#">text1</a></li>
+						<li><a href="#">text1</a></li>
+					</ul>
+				</li>	
 		</ul>
 	</div>
-
+	<!-- панель входа и регистрации -->
 	<div class="logup">
-		<a href="#">
 			<div class="login">
-				<p>Войти</p>
+				<a href="#">
+					<p>Войти</p>
+				</a>
 			</div>
-		</a>
-		<a href="#">
 			<div class="registration">
-				<p>Зарегистрироваться</p>
+				<a href="#">
+					<p>Зарегистрироваться</p>
+				</a>
 			</div>
 		</a>
 	</div>
 </div>
-</div>
+</nav>
 
+<!-- блок с контентом -->
 <div class="content">
 	<div class="block">
 		<h3>Найдём номера под ваши пожелания</h3>
 		<div class="residence">
+			<!-- блоки времени выезда и прибытия -->
 			<div class="block_date">
-				<p>
-					Прибытие
-				</p>
-				<div class="date_arrival">
-					
+				<div class="block1">
+					<p>
+						Прибытие
+					</p>
+					<div class="date_arrival">	
+						<p>ДД.ММ.ГГГГ</p>
+					</div>
 				</div>
-				<p>
-					Выезд
-				</p>
-				<div class="date_departure">
-					
+
+				<div class="block2">
+					<p>
+						Выезд
+					</p>
+					<div class="date_departure">
+						<p>ДД.ММ.ГГГГ</p>
+					</div>
+				</div>
+				<div class="block3">
+					<p>
+						Гости
+					</p>
+					<div class="guests">
+						<p>Сколько гостей</p>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 </div>
 
 
