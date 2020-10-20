@@ -259,16 +259,32 @@ a {
 
 .footer {
 	height:442px;
+	padding:7.2857rem 1.0714rem 7.1429rem;
 }
 
 .footer .footer_list {
 	height:168px;
-	width:1090px;
 	display:flex;
+	justify-content:space-around;
 	margin:0 auto;
 	font-style:normal;
-	font-weight:bold;
 	font-size:12px;
 	line-height:15px;
+}
+
+.footer .text_block1_f {
+	height:72px;
+	width:260px;
+}
+
+.footer .footer_list ul {
+	list-style:none;
+	display:flex;
+	flex-direction:column;
+	padding:0;
+}
+
+.footer .footer_list h3 {
 	text-transform:uppercase;
+	font-weight:bold;
 }
