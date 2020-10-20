@@ -6,6 +6,7 @@ body {
 
 a {
 	text-decoration:none;
+	cursor:pointer;
 }
 /*верхушка сайта*/
 .header {
@@ -26,6 +27,8 @@ a {
 
 .list li {
 	list-style:none;
+	transition:0.3s;
+	cursor:pointer;
 }
 
 .list a {
@@ -145,7 +148,7 @@ a {
 }
 
 /*блок в контенте с временем выезда и прибытия*/
-.content .block {
+.content .search_room {
 	height:374px;
 	width:380px;
 	background:#fff;
@@ -182,10 +185,13 @@ a {
 	display:flex;
 	justify-content:space-around;
 	text-align:left;
+	flex-wrap:wrap;
+	margin:0;
+	padding:0;
 }
 
 
-.date_arrival, .date_departure {
+.date_arrival, .date_departure, .guests {
 	height:44px;
 	width:150px;
 	background:#FFFFFF;
@@ -204,7 +210,47 @@ a {
 	text-align:left;
 }
 
-.date_arrival p, .date_departure p {
+.date_arrival p, .date_departure p, .guests p {
 	margin:0;
+}
 
+.search_room .date_arrival, .date_departure, .guests {
+	position:relative;
+}
+
+.search_room .block3 .guests {
+	width:320px;
+	height:44px;
+}
+
+.search_room .arrow {
+	position:absolute;
+	width:0; 
+	height:0;
+	border-left:7px solid transparent;
+	border-right:7px solid transparent;
+	border-top:14px solid #8F8FA0;
+}
+
+.search_room .block1 .arrow, .block2, .arrow {
+	top:14px;
+	right:14px;
+}
+
+.search_room .block3 .arrow {
+	right:20px;
+	top:15px;
+}
+
+.search_room .block4 .search {
+	width:320px;
+	height:44px;
+	border-radius:22px;
+	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	color:white;
+	text-align:center;
+}
+
+.search_room .block4 {
+	margin-top:15px;
 }
