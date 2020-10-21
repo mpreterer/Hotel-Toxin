@@ -2,6 +2,7 @@ body {
 	font-family:'Montserrat',sans-serif;
 	margin:0;
 	padding:0;
+	font-size:14px;
 }
 
 a {
@@ -154,8 +155,8 @@ a {
 	background:#fff;
 	color:#1F2041;
 	position:relative;
-	left:140px;
-	top:140px;
+	left:180px;
+	top:80px;
 	font-weight:bold;
 	font-style:normal;
 	line-height:30px;
@@ -259,17 +260,16 @@ a {
 
 .footer {
 	height:372px;
-	padding:7.2857rem 1.0714rem 7.1429rem;
+	box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
 }
 
+/*Список блоков*/
 .footer .footer_list {
 	height:168px;
 	display:flex;
-	justify-content:space-around;
-	margin:0 auto;
 	font-style:normal;
-	font-size:12px;
 	line-height:15px;
+	padding:116.571px 114.286px;
 }
 
 .footer .footer_list li {
@@ -286,8 +286,8 @@ a {
 	height:72px;
 	width:260px;
 	margin-top:10px;
-	color: rgba(31, 32, 65, 0.75);
-
+	color:rgba(31, 32, 65, 0.75);
+	line-height: 24px;
 }
 
 .footer .footer_list ul {
@@ -300,6 +300,7 @@ a {
 .footer .footer_list h3 {
 	text-transform:uppercase;
 	font-weight:bold;
+	font-size:14px;
 }
 
 .footer .footer_list .block5{
@@ -316,5 +317,57 @@ a {
 	height:44px;
 	width:260px;
 	border:1px solid rgba(31, 32, 65, 0.25);
+	box-sizing: border-box;
+	border-radius: 4px;
 	color:rgba(31, 32, 65, 0.5);
+}
+
+.footer .footer_list .email input {
+	padding:10px 55px 10px 10px;
+	font-size:1rem;
+	border:none;
+	color: rgba(31, 32, 65, 0.25);
+}
+
+.footer .block1 {
+	margin-right:60px;
+}
+
+.footer .block3 {
+	margin:0 90px 0 70px;
+}
+
+.footer .block5 {
+	margin-left:60px;
+}
+
+/*Под футером*/
+.footer_sub {
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	padding:26px 0 15px 0;
+	color: rgba(31, 32, 65, 0.75);
+}
+
+.footer_sub_container {
+	width:1190px;
+	height:35px;
+	margin:0 auto;
+	display:flex;
+	justify-content:space-between;
+}
+
+.footer_sub .sub_icons{
+	width:150px;
+	text-align:center;
+}
+
+.footer_sub i {
+	font-size:24px;
+	line-height:23.46px;
+	padding-left:20px;
+	color:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.footer_sub i:first-child {
+	padding:0;
 }
