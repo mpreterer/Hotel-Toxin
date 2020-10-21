@@ -258,7 +258,7 @@ a {
 /*низ странички*/
 
 .footer {
-	height:442px;
+	height:372px;
 	padding:7.2857rem 1.0714rem 7.1429rem;
 }
 
@@ -272,9 +272,22 @@ a {
 	line-height:15px;
 }
 
+.footer .footer_list li {
+	margin-top:20px;
+	font-size:14px;
+	font-weight:400;
+	line-height:17px;
+	text-align:left;
+	color: rgba(31, 32, 65, 0.5);
+
+}
+
 .footer .text_block1_f {
 	height:72px;
 	width:260px;
+	margin-top:10px;
+	color: rgba(31, 32, 65, 0.75);
+
 }
 
 .footer .footer_list ul {
@@ -287,4 +300,21 @@ a {
 .footer .footer_list h3 {
 	text-transform:uppercase;
 	font-weight:bold;
+}
+
+.footer .footer_list .block5{
+	height:168px;
+	width:260px;
+}
+
+.footer .footer_list .block5 p {
+	color: rgba(31, 32, 65, 0.75);
+	line-height:24px;
+}
+
+.footer .footer_list .email {
+	height:44px;
+	width:260px;
+	border:1px solid rgba(31, 32, 65, 0.25);
+	color:rgba(31, 32, 65, 0.5);
 }
