@@ -202,6 +202,13 @@ a {
 	padding:0;
 }
 
+.search_room .residence input {
+	padding:10px 0 12px 6px;
+	cursor:pointer;
+	border:none;
+	border-radius:3px;
+}
+
 
 .date_arrival, .date_departure, .guests {
 	height:44px;
@@ -218,7 +225,6 @@ a {
 	letter-spacing:0em;
 	text-align:left;
 	color:rgba(31, 32, 65, 0.75);
-	padding:11px;
 	text-align:left;
 }
 
@@ -342,6 +348,7 @@ a {
 	font-size:1rem;
 	border:none;
 	color: rgba(31, 32, 65, 0.25);
+	border-radius:3px;
 }
 
 .footer .block1 {
@@ -358,9 +365,9 @@ a {
 
 /*Под футером*/
 .footer_sub {
-	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
 	padding:26px 0 15px 0;
-	color: rgba(31, 32, 65, 0.75);
+	color:rgba(31, 32, 65, 0.75);
 }
 
 .footer_sub_container {
