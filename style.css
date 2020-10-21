@@ -171,6 +171,17 @@ a {
 	flex-direction:column;
 }
 
+.content_page {
+	width:297px; 
+	height:48px;
+	position:absolute;
+	text-align:right;
+	bottom:-310px;
+	right:140px;
+	line-height:24px;
+	color:rgba(31, 32, 65, 0.75);
+}
+
 .residence {
 	font-family:Montserrat;
 	font-size:13px;
@@ -217,6 +228,10 @@ a {
 
 .search_room .date_arrival, .date_departure, .guests {
 	position:relative;
+}
+
+.search_room .date_arrival:hover, .date_departure:hover, .guests:hover {
+	border:1px solid rgba(120,120,120);
 }
 
 .search_room .block3 .guests {
@@ -363,11 +378,15 @@ a {
 
 .footer_sub i {
 	font-size:24px;
-	line-height:23.46px;
-	padding-left:20px;
-	color:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	background:-webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
 }
 
-.footer_sub i:first-child {
+.footer_sub a {
+	padding-left:20px;
+}
+
+.footer_sub a:first-child {
 	padding:0;
 }
