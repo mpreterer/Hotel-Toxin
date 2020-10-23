@@ -8,6 +8,7 @@ body {
 a {
 	text-decoration:none;
 	cursor:pointer;
+	color:#BC9CFF;
 }
 /*верхушка сайта*/
 .header {
@@ -314,12 +315,10 @@ a {
 .dropBlock .drop_function {
 	display:flex;
 	justify-content:space-between;
+	padding:16px 7px 13px 14px;
+	font-weight:bold;
 }
 
-/*.dropBlock .drop_block_item a {
-	padding:29px 0 0px 19px;
-}
-*/
 
 .search_room .guests {
 	cursor:pointer;
