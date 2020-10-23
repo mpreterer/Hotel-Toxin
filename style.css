@@ -249,6 +249,7 @@ a {
 	flex-wrap:wrap;
 	width:320px;
 	height:159px;
+	cursor:default;
 }
 
 .dropBlock .drop_block_item span {
@@ -257,41 +258,68 @@ a {
 	font-size:13px;
 }
 
+/*цнетровка кругов*/
+#dropItem1 {
+	margin-right:127px;
+}
+
+#dropItem2 {
+	margin-right:169px;
+}
+
+#dropItem3 {
+	margin-right:119px;
+}
+
 /*Выравнивание кругов счетчика и названий*/
 
 .dropBlock .drop_block_row {
 	display:flex;
-	justify-content:space-between;
+	flex-wrap:wrap;
 }
 
 
 /*Выравнивание кругов*/
-.dropBlock .circle_drop_item {
+.dropBlock .circle_drop_item, .circle_drop_item2 {
 	border: 1px solid rgba(31, 32, 65, 0.25);
 	box-sizing: border-box;
 	border-radius: 22px;
 	width:30px;
 	height:30px;
-	margin-right:7px;
-	margin-top:7px;
+	margin:7px 7px 0 7px;
 	font-size:16px;
 	text-align:center;
+	cursor:pointer;
 }
 
+/*Выравнивание плюса и минуса в круге*/
 .dropBlock .drop_block_row .circle_drop_item p{
 	padding:0;
 	padding-top:5px;
+	margin:0;
 }
 
+.dropBlock .drop_block_row .circle_drop_item2 p {
+	padding:0;
+	padding-top:5px;
+	margin:0;
+}
+
+.dropBlock .drop_block_row .counter {
+	padding-top:12px;
+	margin:0;
+}
+
+/*функции dropItem*/
 .dropBlock .drop_function {
 	display:flex;
 	justify-content:space-between;
 }
 
-.dropBlock .drop_block_item a {
+/*.dropBlock .drop_block_item a {
 	padding:29px 0 0px 19px;
 }
-
+*/
 
 .search_room .guests {
 	cursor:pointer;
