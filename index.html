@@ -6,7 +6,8 @@
 	<link rel="stylesheet" href="font/quicksand.css">
 	<link rel="stylesheet" href="fontawesome.min.css">
 	<script type="text/javascript" src="awesome/fontawesome.min.js"></script>
-	<script src="https://kit.fontawesome.com/bc390f5649.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/bc390f5649.js" crossorigin="anonymous"></script>	
+
 	<title>index</title>
 </head>
 <body>
@@ -84,7 +85,7 @@
 					</p>
 					<a href="#">
 						<div class="date_arrival">
-							<input class="arrival_input" placeholder="ДД.ММ.ГГГГ">
+							<input class="arrival_input" placeholder="ДД.ММ.ГГГГ" readonly="" autocomplete="off">
 							<div class="arrow">
 							</div>
 						</div>
@@ -97,7 +98,7 @@
 					</p>
 					<a href="#">
 						<div class="date_departure">
-							<input class="departure_input" placeholder="ДД.ММ.ГГГГ">
+							<input class="departure_input" placeholder="ДД.ММ.ГГГГ" autocomplete="off" readonly="">
 							<div class="arrow">
 							</div>
 						</div>
@@ -107,13 +108,22 @@
 					<p>
 						Гости
 					</p>
-					<a href="#">
 					<div class="guests">
-						<input class="departure_input" placeholder="СКОЛЬКО ГОСТЕЙ">
+						<div class="dropBlock">
+							<div class="drop_block_item">
+							<span class="dropItem">Взрослые</span>
+							<span class="dropItem">Дети</span>
+							<span class="dropItem">Младенцы</span>
+							<div class="drop_function">
+								<a href="#">ПРИМЕНИТЬ</a>
+								<a href="#">ОЧИСТИТЬ</a>
+							</div>
+							</div>
+						</div>
+						<p>Сколько гостей</p>
 							<div class="arrow">
 							</div>
 					</div>
-					</a>
 				</div>
 				<a href="searchRoom.html">
 				<div class="block4">
