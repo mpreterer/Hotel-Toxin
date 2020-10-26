@@ -10,6 +10,10 @@ a {
 	cursor:pointer;
 	color:#BC9CFF;
 }
+
+a:hover {
+	color:#C8AEFF;
+}
 /*верхушка сайта*/
 .header {
 	height:70px;
@@ -293,20 +297,26 @@ a {
 	cursor:pointer;
 }
 
+.dropBlock .circle_drop_item {
+	opacity:0.5;
+}
+
 /*Выравнивание плюса и минуса в круге*/
 .dropBlock .drop_block_row .circle_drop_item p{
 	padding:0;
 	padding-top:5px;
 	margin:0;
+	color: rgba(31, 32, 65, 0.5);
 }
 
 .dropBlock .drop_block_row .circle_drop_item2 p {
 	padding:0;
 	padding-top:5px;
 	margin:0;
+	color: rgba(31, 32, 65, 0.5);
 }
 
-.dropBlock .drop_block_row .counter {
+#counter {
 	padding-top:12px;
 	margin:0;
 }
@@ -525,8 +535,8 @@ a {
 .footer_sub i {
 	font-size:24px;
 	background:-webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
-  	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
+  	-webkit-background-clip:text;
+  	-webkit-text-fill-color:transparent;
 }
 
 .footer_sub a {
