@@ -285,36 +285,26 @@ a:hover {
 
 
 /*Выравнивание кругов*/
-.dropBlock .circle_drop_item, .circle_drop_item2 {
+.dropBlock .circle_drop_item {
 	border: 1px solid rgba(31, 32, 65, 0.25);
 	box-sizing: border-box;
 	border-radius: 22px;
 	width:30px;
 	height:30px;
-	margin:7px 7px 0 7px;
+	margin:7px 10px 0 0px;
 	font-size:16px;
 	text-align:center;
 	cursor:pointer;
+}
+.dropBlock .drop_block_item .circle_drop_plus {
+	margin-right:0;
+	margin-left:4px;
 }
 
 .dropBlock .circle_drop_item {
 	opacity:0.5;
 }
 
-/*Выравнивание плюса и минуса в круге*/
-.dropBlock .drop_block_row .circle_drop_item p{
-	padding:0;
-	padding-top:5px;
-	margin:0;
-	color: rgba(31, 32, 65, 0.5);
-}
-
-.dropBlock .drop_block_row .circle_drop_item2 p {
-	padding:0;
-	padding-top:5px;
-	margin:0;
-	color: rgba(31, 32, 65, 0.5);
-}
 
 #counter {
 	padding-top:12px;
@@ -327,6 +317,14 @@ a:hover {
 	justify-content:space-between;
 	padding:16px 7px 13px 14px;
 	font-weight:bold;
+}
+
+.dropBlock .drop_block_item .drop_block_row input {
+	margin:0;
+	padding:0;
+	margin-top:15px;
+	width:15px;
+	height:12px;
 }
 
 

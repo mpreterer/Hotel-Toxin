@@ -7,8 +7,7 @@
 	<link rel="stylesheet" href="fontawesome.min.css">
 	<script type="text/javascript" src="awesome/fontawesome.min.js"></script>
 	<script src="https://kit.fontawesome.com/bc390f5649.js" crossorigin="anonymous"></script>
-
-	<title>index</title>
+	<title>Главная «Toxin» | Отели</title>
 </head>
 <body>
 <!-- лого сайта -->
@@ -113,33 +112,33 @@
 							<div class="drop_block_item">
 								<div class="drop_block_row">
 									<span class="dropItem" id="dropItem1">Взрослые</span>
-									<div class="circle_drop_item">
-										<p>-</p>
-									</div>
-										<h5 id="counter">0</h5>
-									<div class="circle_drop_item2" onclick="countjs()">
-										<p>+</p>
-									</div>
+									<button class="circle_drop_item" data-direction="minus">
+										-
+									</button>
+										<input type="text" class="counter" value="0">
+									<button class="circle_drop_item circle_drop_plus" data-direction="plus">
+										+
+									</button>
 								</div>
 								<div class="drop_block_row">
 									<span class="dropItem" id="dropItem2">Дети</span>
-									<div class="circle_drop_item">
-										<p>-</p>
-									</div>
-										<h5 id="counter">0</h5>
-									<div class="circle_drop_item2">
-										<p>+</p>
-									</div>
+									<button class="circle_drop_item" data-direction="minus">
+										-
+									</button>
+										<input class="counter" value="0">
+									<button class="circle_drop_item circle_drop_plus"data-direction="plus">
+										+
+									</button>
 								</div>
 								<div class="drop_block_row">
 									<span class="dropItem" id="dropItem3">Младенцы</span>
-									<div class="circle_drop_item">
-										<p>-</p>
-									</div>
-										<h5 id="counter">0</h5>
-									<div class="circle_drop_item2">
-										<p>+</p>
-									</div>
+									<button class="circle_drop_item" data-direction="minus">
+										-
+									</button>
+										<input class="counter" value="0">
+									<button class="circle_drop_item circle_drop_plus" data-direction="plus">
+										+
+									</button>
 								</div>
 								<div class="drop_function">
 									<a href="#">ПРИМЕНИТЬ</a>
@@ -220,5 +219,6 @@
 	</div>
 </div>
 
+<script src="click.js"></script>
 </body>
 </html>
