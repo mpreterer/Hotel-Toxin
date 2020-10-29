@@ -72,25 +72,25 @@
 	padding-top:6px;
 }
 
-.order_in_house .checkbox_order label {
+ .checkbox_order label {
 	padding-top:11px;
 	cursor:pointer;
 	user-select:none;
 }
 
-.order_in_house .custom-checkbox {
+ .custom-checkbox {
 	position:absolute;
 	z-index:-1;
 	opacity:0;
 }
 
-.order_in_house .custom-checkbox {
+ .custom-checkbox {
   display:inline-flex;
   align-items:center;
   user-select:none;
 }
 
-.order_in_house .custom-checkbox+label::before {
+ .custom-checkbox+label::before {
   content:'';
   display:inline-block;
   width:20px;
@@ -105,30 +105,50 @@
   background-size:50% 50%;
 }
 
-.order_in_house .custom-checkbox:checked+label::before {
+ .custom-checkbox:checked+label::before {
   border-color:#0b76ef;
   background-color:#FFF;
   background-image:url("image/gal.png");
  }
 
 /* стили при наведении курсора на checkbox */
-.order_in_house .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
   border-color:#9190E2;
 }
 /* стили для активного состояния чекбокса (при нажатии на него) */
-.order_in_house .custom-checkbox:not(:disabled):active+label::before {
+.custom-checkbox:not(:disabled):active+label::before {
   border-color:#9190E2;
 }
 /* стили для чекбокса, находящегося в фокусе */
-.order_in_house .custom-checkbox:focus+label::before {
+.custom-checkbox:focus+label::before {
   box-shadow:0 0 3px 3px rgba(0, 123, 255, 0.25);
 }
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-.order_in_house .custom-checkbox:focus:not(:checked)+label::before {
+.custom-checkbox:focus:not(:checked)+label::before {
   border-color:#80bdff;
 }
 /* стили для чекбокса, находящегося в состоянии disabled */
-.order_in_house .custom-checkbox:disabled+label::before {
+.custom-checkbox:disabled+label::before {
   background-color:#FFF;
   border-color:#C7C7CF;
+}
+
+/*блок доступность*/
+.availability {
+	height:148px;
+	width:266px;
+	margin-top:40px;
+	display:flex;
+	flex-direction:column;
+}
+
+
+.availability .span_availability {
+	color:#575870;
+	font-weight:bold;
+}
+
+.availability label {
+	cursor:pointer;
+	padding-top:13px;
 }
