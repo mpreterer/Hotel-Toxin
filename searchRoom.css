@@ -48,3 +48,12 @@
 .price_hotel .span_price_hotel{
 	color:#8B8B9C;
 }
+
+.price_hotel .slider_price {
+	height:6px;
+	width:266px;
+	border:1px solid rgba(31, 32, 65, 0.25);
+	box-sizing:border-box;
+	border-radius:3px;
+	margin:23px 0 14px 0;
+}
