@@ -74,21 +74,22 @@
 		<div class="left_bar">
 			<div class="data_arrival_in_otel">
 				<span class="h_span_block_hotel">даты пребывания в отеле</span>
-				<input type="text" autocomplete="off" placeholder="19 авг - 23 авг">
+				<input type="text" autocomplete="off" placeholder="19 авг - 23 авг" readonly="">
 				<i class="fas fa-angle-down"></i>
 				
 			</div>
 
 			<div class="guests_in_hotel" >
 				<span class="h_span_block_hotel">гости</span>
-				<input type="text" autocomplete="off" placeholder="3 гостя, 1 младенец">
+				<input type="text" autocomplete="off" placeholder="3 гостя, 1 младенец" readonly="">
 				<i class="fas fa-angle-down"></i>
 			</div>
 
 			<div class="price_hotel">
 				<span style="margin-right:35px;" class="h_span_block_hotel">диапазон цены</span>
-					<input  type="text" autocomplete="off" placeholder="0"><span class="span_price_hotel">₽ -</span>
-					<input  type="text" autocomplete="off" placeholder="0"><span class="span_price_hotel">₽</span>
+					<input  type="text" autocomplete="off" placeholder="0" readonly=""><span class="span_price_hotel">₽ -</span>
+
+					<input  type="text" autocomplete="off" placeholder="0" readonly=""><span class="span_price_hotel">₽</span>
 
 				<div class="slider_price">	
 				</div>
@@ -99,14 +100,19 @@
 			<div class="order_in_house">
 				<span class="h_span_block_hotel">правила дома</span>
 					<div class="checkbox_order">
-							<input type="checkbox" class="custom-checkbox" name="bones">
-							<label for="bones">Можно курить</label>
 						
-							<input type="checkbox" class="custom-checkbox" name="bones">
-							<label for="bones">Можно с питомцами</label>
+							<input type="checkbox" class="custom-checkbox" name="block_1" id="block_1">
+							<label for="block_1">Можно курить</label>
+					
 
-							<input type="checkbox" class="custom-checkbox" name="bones">
-							<label for="bones">Можно пригласить гостей (до 10 человек)</label>
+						
+							<input type="checkbox" class="custom-checkbox" name="block_2" id="block_2">
+							<label for="block_2" >Можно с питомцами</label>
+						
+
+						
+							<input type="checkbox" class="custom-checkbox" name="block_3" id="block_3">
+							<label for="block_3">Можно пригласить гостей (до 10 человек)</label>
 					</div>
 			</div>
 		</div>

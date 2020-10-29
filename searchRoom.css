@@ -74,6 +74,8 @@
 
 .order_in_house .checkbox_order label {
 	padding-top:11px;
+	cursor:pointer;
+	user-select:none;
 }
 
 .order_in_house .custom-checkbox {
@@ -89,8 +91,8 @@
 }
 
 .order_in_house .custom-checkbox+label::before {
-  content: '';
-  display: inline-block;
+  content:'';
+  display:inline-block;
   width:20px;
   height:20px;
   flex-shrink:0;
@@ -103,30 +105,30 @@
   background-size:50% 50%;
 }
 
-.custom-checkbox:checked+label::before {
+.order_in_house .custom-checkbox:checked+label::before {
   border-color:#0b76ef;
-  background-color:#0b76ef;
+  background-color:#FFF;
   background-image:url("image/gal.png");
  }
 
 /* стили при наведении курсора на checkbox */
-.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
-  border-color: #b3d7ff;
+.order_in_house .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+  border-color:#9190E2;
 }
 /* стили для активного состояния чекбокса (при нажатии на него) */
-.custom-checkbox:not(:disabled):active+label::before {
-  background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-color:#b3d7ff;
+.order_in_house .custom-checkbox:not(:disabled):active+label::before {
+  border-color:#9190E2;
 }
 /* стили для чекбокса, находящегося в фокусе */
-.custom-checkbox:focus+label::before {
-  box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.25);
+.order_in_house .custom-checkbox:focus+label::before {
+  box-shadow:0 0 3px 3px rgba(0, 123, 255, 0.25);
 }
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-.custom-checkbox:focus:not(:checked)+label::before {
-  border-color: #80bdff;
+.order_in_house .custom-checkbox:focus:not(:checked)+label::before {
+  border-color:#80bdff;
 }
 /* стили для чекбокса, находящегося в состоянии disabled */
-.custom-checkbox:disabled+label::before {
+.order_in_house .custom-checkbox:disabled+label::before {
   background-color:#FFF;
+  border-color:#C7C7CF;
 }
