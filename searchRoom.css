@@ -1,15 +1,16 @@
 .content_search_room {
 	margin:30px 120px 70px 175px;
-	line-height: 15px;
+	line-height:15px;
+	font-size:12px;
 }
-
+.content_search_room .h_span_block_hotel {
+	font-weight:bold;
+	text-transform:uppercase;
+}
 
 .data_arrival_in_otel, .guests_in_hotel {
 	height:64px;
 	width:266px;
-	font-weight:bold;
-	font-size:12px;
-	text-transform:uppercase;
 	margin:0 0 20.44px 0;
 	position:relative;
 }
@@ -18,7 +19,7 @@
 	padding:12px 110px 14.4px 15px;
 	box-sizing:border-box;
 	border-radius:4px;
-	background: #FFF;
+	background:#FFF;
 	border:1px solid rgba(31, 32, 65, 0.25);
 	margin-top:5px;
 	cursor:pointer;
@@ -56,4 +57,76 @@
 	box-sizing:border-box;
 	border-radius:3px;
 	margin:23px 0 14px 0;
+}
+
+.order_in_house {
+	height:128px;
+	width:266px;
+}
+
+.order_in_house .checkbox_order {
+	color:rgba(31, 32, 65, 0.5);
+	font-size:14px;
+	display:flex;
+	flex-direction:column;
+	padding-top:6px;
+}
+
+.order_in_house .checkbox_order label {
+	padding-top:11px;
+}
+
+.order_in_house .custom-checkbox {
+	position:absolute;
+	z-index:-1;
+	opacity:0;
+}
+
+.order_in_house .custom-checkbox {
+  display:inline-flex;
+  align-items:center;
+  user-select:none;
+}
+
+.order_in_house .custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width:20px;
+  height:20px;
+  flex-shrink:0;
+  flex-grow:0;
+  border:1px solid rgba(31, 32, 65, 0.25);
+  border-radius:4px;
+  margin-right:0.5em;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:50% 50%;
+}
+
+.custom-checkbox:checked+label::before {
+  border-color:#0b76ef;
+  background-color:#0b76ef;
+  background-image:url("image/gal.png");
+ }
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+  border-color: #b3d7ff;
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active+label::before {
+  background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-color:#b3d7ff;
+}
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox:focus+label::before {
+  box-shadow: 0 0 0 10px rgba(0, 123, 255, 0.25);
+}
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus:not(:checked)+label::before {
+  border-color: #80bdff;
+}
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled+label::before {
+  background-color:#FFF;
 }
