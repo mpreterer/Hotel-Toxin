@@ -1,19 +1,50 @@
-.left_bar {
-
+.content_search_room {
+	margin:30px 120px 70px 175px;
+	line-height: 15px;
 }
-.data_arrival_in_otel {
+
+
+.data_arrival_in_otel, .guests_in_hotel {
 	height:64px;
 	width:266px;
 	font-weight:bold;
-	line-height: 15px;
 	font-size:12px;
 	text-transform:uppercase;
+	margin:0 0 20.44px 0;
+	position:relative;
 }
 
-.data_arrival_in_otel input{
+.data_arrival_in_otel input, .guests_in_hotel input{
 	padding:12px 110px 14.4px 15px;
 	box-sizing:border-box;
 	border-radius:4px;
 	background: #FFF;
-	border: 1px solid rgba(31, 32, 65, 0.25);
+	border:1px solid rgba(31, 32, 65, 0.25);
+	margin-top:5px;
+	cursor:pointer;
+}
+
+.content_search_room i {
+	position:absolute;
+	font-size:18px;
+	color:rgba(31, 32, 65, 0.5);
+	position:absolute;
+	top:33px;
+	right:15px;
+	cursor:pointer;
+}
+
+.content_search_room .price_hotel {
+	width:266px;
+}
+
+.content_search_room .price_hotel input{
+	width:35px;
+	border:none;
+	text-align:right;
+	color:#8B8B9C;
+}
+
+.price_hotel .span_price_hotel{
+	color:#8B8B9C;
 }
