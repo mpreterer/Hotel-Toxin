@@ -298,7 +298,7 @@ a:hover {
 	cursor:pointer;
 	background:white;
 	color:rgba(31, 32, 65, 1);
-	transition:0.2s;
+	transition:0.1s;
 }
 
 .dropBlock .circle_drop_minus {
@@ -317,7 +317,7 @@ a:hover {
 	color:white;
 	border-color:white;
 	background:#C8AEFF;
-	transition:0.2s;
+	transition:0.1s;
 	font-weight:bold;
 }
 
@@ -338,6 +338,7 @@ a:hover {
 	justify-content:space-between;
 	padding:16px 7px 13px 14px;
 	font-weight:bold;
+	color:#1F2041;
 }
 
 .dropBlock .drop_block_item .drop_block_row input {

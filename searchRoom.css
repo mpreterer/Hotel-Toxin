@@ -1,0 +1,19 @@
+.left_bar {
+
+}
+.data_arrival_in_otel {
+	height:64px;
+	width:266px;
+	font-weight:bold;
+	line-height: 15px;
+	font-size:12px;
+	text-transform:uppercase;
+}
+
+.data_arrival_in_otel input{
+	padding:12px 110px 14.4px 15px;
+	box-sizing:border-box;
+	border-radius:4px;
+	background: #FFF;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+}

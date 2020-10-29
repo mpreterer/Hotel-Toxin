@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="fontawesome.min.css">
 	<script type="text/javascript" src="awesome/fontawesome.min.js"></script>
 	<script src="https://kit.fontawesome.com/bc390f5649.js" crossorigin="anonymous"></script>
+	
 	<title>Главная «Toxin» | Отели</title>
 </head>
 <body>
@@ -116,7 +117,7 @@
 										-
 									</button>
 										<input type="text" class="counter" value="0">
-									<button class="circle_drop_item circle_drop_plus" data-direction="plus">
+									<button class="circle_drop_item circle_drop_plus" data-direction="plus" onclick="backCircle()">
 										+
 									</button>
 								</div>
@@ -141,8 +142,8 @@
 									</button>
 								</div>
 								<div class="drop_function">
-									<a href="#" id="clear">ОЧИСТИТЬ</a>
-									<a href="#">ПРИМЕНИТЬ</a>
+									<a href="#!" id="clear" data-direction="clear" class="link_drop_function">ОЧИСТИТЬ</a>
+									<a href="#!" class="link_drop_function">ПРИМЕНИТЬ</a>
 								</div>
 							</div>
 						</div>
@@ -220,5 +221,6 @@
 </div>
 
 <script src="click.js"></script>
+
 </body>
 </html>
