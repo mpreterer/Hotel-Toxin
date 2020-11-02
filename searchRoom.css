@@ -1,3 +1,4 @@
+/*Блок с контентом*/
 .content_search_room {
 	margin:30px 120px 70px 175px;
 	line-height:15px;
@@ -13,6 +14,10 @@
 	width:266px;
 	margin:0 0 20.44px 0;
 	position:relative;
+}
+
+.left_bar {
+	width:266px;
 }
 
 .data_arrival_in_otel input, .guests_in_hotel input{
@@ -102,11 +107,11 @@
  .custom-checkbox+label::before {
   content:'';
   display:inline-block;
-  width:20px;
-  height:20px;
+  width:18px;
+  height:18px;
   flex-shrink:0;
   flex-grow:0;
-  border:1px solid rgba(31, 32, 65, 0.25);
+  border:2px solid rgba(31, 32, 65, 0.25);
   border-radius:4px;
   margin-right:0.5em;
   background-repeat:no-repeat;
@@ -169,6 +174,7 @@
 .availability label {
 	cursor:pointer;
 	padding-top:13px;
+	color:#8F8FA0;
 }
 
 
@@ -203,4 +209,13 @@
 .conveniences i {
 	position:absolute;
 	top:12px;
+}
+
+/*Блок основного контента*/
+
+.main_content_search_room {
+	width:837px;
+	height:1140px;
+	margin:0 auto;
+	float:right;
 }
