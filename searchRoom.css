@@ -216,7 +216,7 @@
 .main_content_search_room{
 	width:853px;
 	height:1140px;
-	margin:0 auto;
+	margin-right:50px;
 	float:right;
 }
 
@@ -234,11 +234,73 @@
 .container_in_hotel .room_in_hotel{
 	width:270px;
 	height:257px;
-	background:red;
 	margin:0 12px 12px 0;
-	background:url('image/room_1.png');
 	background-repeat:no-repeat;
+	box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
+	border-radius:4px;
 }
+
+.room1{
+	background:url(image/room_1.png);
+}
+.room2{
+	background:url(image/room_2.png);
+}
+.room3{
+	background:url(image/room_3.png);
+}
+.room4{
+	background:url(image/room_4.png);
+}
+.room5{
+	background:url(image/room_5.png);
+}
+.room6{
+	background:url(image/room_6.png);
+}
+.room7{
+	background:url(image/room_7.png);
+}
+.room8{
+	background:url(image/room_8.png);
+}
+.room9{
+	background:url(image/room_9.png);
+}
+.room10{
+	background:url(image/room_10.png);
+}
+.room11{
+	background:url(image/room_11.png);
+}
+.room12{
+	background:url(image/room_12.png);
+}
+
+/*заголовоки и номера комнат*/
+.head_room {
+	height:55px;
+	width:230px;
+	display:flex;
+}
+
+.head_room p {
+	margin:0;
+	padding:0;
+}
+
+/*рейтинг в блоке комнат*/
+.rating {
+	width:230px;
+	height:32px;
+	background:red;
+	border-top:1px solid #E8E8EC;
+	margin:10px auto 0 auto;
+}
+
+
+
+
 
 /*Переключатель номеров*/
 
