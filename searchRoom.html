@@ -117,17 +117,61 @@
 
 				<input type="checkbox" class="custom-checkbox" name="block_4" id="block_4">
 				<label for="block_4">
-					<span class="span_availability">Широкий коридор</span>
-					<span>Ширина коридоров в номере не менее 91 см.
+					<span>Широкий коридор
+					Ширина коридоров в номере не менее 91 см.
 					</span>
 				</label>
 
 				<input type="checkbox" class="custom-checkbox" name="block_5" id="block_5">
 					<label for="block_5">
-						<span class="span_availability">Помощник для инвалидов</span>
-						<span>На 1 этаже вас встретит специалист  и проводит до номера.
+						<span>Помощник для инвалидов
+						На 1 этаже вас встретит специалист  и проводит до номера.
 						</span>
 					</label>
+			</div>
+
+			<div class="conveniences">
+				<span class="h_span_block_hotel">удобства номера</span>
+				
+						<div class="dropBlock">
+							<div class="drop_block_item">
+								<div class="drop_block_row">
+									<span class="dropItem" id="dropItem1">Взрослые</span>
+									<button class="circle_drop_item circle_drop_minus" data-direction="minus">
+										-
+									</button>
+										<input type="text" class="counter" value="0">
+									<button class="circle_drop_item circle_drop_plus" data-direction="plus" onclick="backCircle()">
+										+
+									</button>
+								</div>
+								<div class="drop_block_row">
+									<span class="dropItem" id="dropItem2">Дети</span>
+									<button class="circle_drop_item circle_drop_minus" data-direction="minus">
+										-
+									</button>
+										<input class="counter" value="0">
+									<button class="circle_drop_item circle_drop_plus"data-direction="plus">
+										+
+									</button>
+								</div>
+								<div class="drop_block_row">
+									<span class="dropItem" id="dropItem3">Младенцы</span>
+									<button class="circle_drop_item circle_drop_minus" data-direction="minus">
+										-
+									</button>
+										<input class="counter" value="0">
+									<button class="circle_drop_item circle_drop_plus" data-direction="plus">
+										+
+									</button>
+								</div>
+								<div class="drop_function">
+									<a href="#!" id="clear" data-direction="clear" class="link_drop_function">ОЧИСТИТЬ</a>
+									<a href="#!" class="link_drop_function">ПРИМЕНИТЬ</a>
+								</div>
+							</div>
+						</div>
+
 			</div>
 		</div>
 </div>
@@ -188,6 +232,6 @@
 </div>
 
 
-
+<script src="click.js"></script>
 </body>
 </html>

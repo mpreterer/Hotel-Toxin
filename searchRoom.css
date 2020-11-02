@@ -8,14 +8,14 @@
 	text-transform:uppercase;
 }
 
-.data_arrival_in_otel, .guests_in_hotel {
+.data_arrival_in_otel, .guests_in_hotel, .conveniences_in_hotel{
 	height:64px;
 	width:266px;
 	margin:0 0 20.44px 0;
 	position:relative;
 }
 
-.data_arrival_in_otel input, .guests_in_hotel input{
+.data_arrival_in_otel input, .guests_in_hotel input, .conveniences_in_hotel input{
 	padding:12px 110px 14.4px 15px;
 	box-sizing:border-box;
 	border-radius:4px;
@@ -64,6 +64,8 @@
 	width:266px;
 }
 
+/*Чекбокс*/
+
 .order_in_house .checkbox_order {
 	color:rgba(31, 32, 65, 0.5);
 	font-size:14px;
@@ -103,6 +105,8 @@
   background-repeat:no-repeat;
   background-position:center center;
   background-size:50% 50%;
+  float:left;
+
 }
 
  .custom-checkbox:checked+label::before {
@@ -119,10 +123,13 @@
 .custom-checkbox:not(:disabled):active+label::before {
   border-color:#9190E2;
 }
-/* стили для чекбокса, находящегося в фокусе */
+
+/* стили для чекбокса, находящегося в фокусе
 .custom-checkbox:focus+label::before {
   box-shadow:0 0 3px 3px rgba(0, 123, 255, 0.25);
 }
+*/
+
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
 .custom-checkbox:focus:not(:checked)+label::before {
   border-color:#80bdff;
@@ -140,6 +147,7 @@
 	margin-top:40px;
 	display:flex;
 	flex-direction:column;
+	user-select:none;
 }
 
 
@@ -152,3 +160,9 @@
 	cursor:pointer;
 	padding-top:13px;
 }
+
+.conveniences_in_hotel i {
+	top:19px;
+}
+
+/*Выпадающий блок*/
