@@ -213,9 +213,42 @@
 
 /*Блок основного контента*/
 
-.main_content_search_room {
-	width:837px;
+.main_content_search_room{
+	width:853px;
 	height:1140px;
 	margin:0 auto;
 	float:right;
+}
+
+.main_content_search_room h2 {
+	margin:0 0 21px 0;
+	font-size:24px;
+	line-height:30px;
+}
+
+.container_in_hotel {
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.container_in_hotel .room_in_hotel{
+	width:270px;
+	height:257px;
+	background:red;
+	margin:0 12px 12px 0;
+	background:url('image/room_1.png');
+	background-repeat:no-repeat;
+}
+
+/*Переключатель номеров*/
+
+.switch {
+	height:72px;
+	width:240px;
+	background:red;
+	margin:41px auto 0 auto;
+}
+
+.footer {
+	margin-top:655px;
 }
