@@ -238,6 +238,8 @@
 	background-repeat:no-repeat;
 	box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
 	border-radius:4px;
+	position:relative;
+	user-select:none;
 }
 
 .room1{
@@ -276,26 +278,92 @@
 .room12{
 	background:url(image/room_12.png);
 }
+/*Перелистывания картинок комнат (стрелки)*/
+
+.move_arrow {
+	width:42px;
+	height:151px;
+	cursor:pointer;
+	position:absolute;
+	transition:0.3s;
+	border-radius:4px;
+}
+
+.move_arrow i {
+	position:absolute;
+	top:75.5px;
+	color:white;
+}
+
+.arrow_left {
+	top:0;
+	left:0;
+	transition:0.3s;
+}
+
+.arrow_right {
+	top:0;
+	left:228px;
+	transform:matrix(-1, 0, 0, 1, 0, 0);
+	transition:0.3s;
+}
+
+.arrow_right:hover {
+	background:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+	transition:0.3s;
+}
+
+.arrow_left:hover{
+	color:white;
+	background:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+	transition:0.3s;
+}
 
 /*заголовоки и номера комнат*/
 .head_room {
-	height:55px;
+	height:24px;
 	width:230px;
 	display:flex;
+	position:absolute;
+	bottom:62px;
+	right:20px;
+	font-family:montserrat;
+}
+
+.container_in_hotel .head_room p, h2, h3{
+	margin:0;
+	padding:0;
 }
 
 .head_room p {
 	margin:0;
-	padding:0;
+	font-style:normal;
+	line-height:18px;
+}
+
+.head_room span {
+	color:#BC9CFF;
+	text-transform:uppercase;
+	line-height:15px;
+	padding:0 30px 0 4px;
+	font-weight:bold;
+	margin-top:3px;
+}
+
+.head_room p {
+	color: rgba(31, 32, 65, 0.5);
+	line-height:18px;
 }
 
 /*рейтинг в блоке комнат*/
 .rating {
 	width:230px;
 	height:32px;
-	background:red;
+	background:grey;
 	border-top:1px solid #E8E8EC;
-	margin:10px auto 0 auto;
+	position:absolute;
+	bottom:19px;
+	right:20px;
 }
 
 
