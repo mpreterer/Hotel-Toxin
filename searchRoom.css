@@ -8,14 +8,14 @@
 	text-transform:uppercase;
 }
 
-.data_arrival_in_otel, .guests_in_hotel, .conveniences_in_hotel{
+.data_arrival_in_otel, .guests_in_hotel{
 	height:64px;
 	width:266px;
 	margin:0 0 20.44px 0;
 	position:relative;
 }
 
-.data_arrival_in_otel input, .guests_in_hotel input, .conveniences_in_hotel input{
+.data_arrival_in_otel input, .guests_in_hotel input{
 	padding:12px 110px 14.4px 15px;
 	box-sizing:border-box;
 	border-radius:4px;
@@ -23,6 +23,12 @@
 	border:1px solid rgba(31, 32, 65, 0.25);
 	margin-top:5px;
 	cursor:pointer;
+	transition:0.2s;
+}
+
+.data_arrival_in_otel input:hover, .guests_in_hotel input:hover {
+	border-color:#848489;
+	transition:0.2s;
 }
 
 .content_search_room i {
@@ -37,6 +43,7 @@
 
 .content_search_room .price_hotel {
 	width:266px;
+	margin-bottom:30px;
 }
 
 .content_search_room .price_hotel input{
@@ -110,19 +117,20 @@
 }
 
  .custom-checkbox:checked+label::before {
-  border-color:#0b76ef;
+  border-color:#BC9CFF;
   background-color:#FFF;
   background-image:url("image/gal.png");
  }
 
 /* стили при наведении курсора на checkbox */
 .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
-  border-color:#9190E2;
+  border-color:#BC9CFF;
 }
-/* стили для активного состояния чекбокса (при нажатии на него) */
+/* стили для активного состояния чекбокса (при нажатии на него)
 .custom-checkbox:not(:disabled):active+label::before {
-  border-color:#9190E2;
+  border-color:#BC9CFF;
 }
+*/
 
 /* стили для чекбокса, находящегося в фокусе
 .custom-checkbox:focus+label::before {
@@ -130,10 +138,12 @@
 }
 */
 
-/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked 
 .custom-checkbox:focus:not(:checked)+label::before {
-  border-color:#80bdff;
+  border-color:#BC9CFF;
 }
+*/
+
 /* стили для чекбокса, находящегося в состоянии disabled */
 .custom-checkbox:disabled+label::before {
   background-color:#FFF;
@@ -161,8 +171,36 @@
 	padding-top:13px;
 }
 
-.conveniences_in_hotel i {
-	top:19px;
-}
+
+
 
 /*Выпадающий блок*/
+
+.conveniences {
+	margin-top:5px;
+	width:266px;
+	height:44px;
+	border:1px solid rgba(31, 32, 65, 0.25);
+	box-sizing:border-box;
+	border-radius:4px;
+	padding:12px 91px 8px 15px;
+	position:relative;
+	cursor:pointer;
+	transition:0.2s;
+}
+
+.conveniences:hover {
+	border-color:#848489;
+	transition:0.2s;
+}
+
+.conveniences input {
+	border:none;
+	width:150px;
+	cursor:pointer;
+}
+
+.conveniences i {
+	position:absolute;
+	top:12px;
+}
