@@ -15,7 +15,11 @@
 	margin:0 0 20.44px 0;
 	position:relative;
 }
+/*блок рейтинга*/
+.
 
+
+/*Левый бар*/
 .left_bar {
 	width:266px;
 }
@@ -82,22 +86,6 @@
     color: #777777;
     margin-bottom: 8px;
 }
-/* noUiSlider styles */
-.noUi-tooltip {
-    display:none;
-}
-.noUi-active .noUi-tooltip {
-    display:block;
-}
-.noUi-connect {
-    background:#c0392b;
-}
-
-.noUi-horizontal {
-	height:6px;
-}
-
-
 
 .order_in_house {
 	height:128px;
@@ -322,12 +310,14 @@
 	top:75.5px;
 	color:white;
 }
+/*стрелка слева*/
 
 .arrow_left {
 	top:0;
 	left:0;
 	transition:0.3s;
 }
+/*стрелка справа*/
 
 .arrow_right {
 	top:0;
@@ -348,6 +338,7 @@
 }
 
 /*заголовоки и номера комнат*/
+
 .head_room {
 	height:24px;
 	width:230px;
@@ -384,15 +375,63 @@
 }
 
 /*рейтинг в блоке комнат*/
+
 .rating {
 	width:230px;
 	height:32px;
-	background:grey;
 	border-top:1px solid #E8E8EC;
 	position:absolute;
 	bottom:19px;
 	right:20px;
+	display:flex;
+	justify-content:space-between;
 }
+.star {
+	width:120px;
+	height:24px;
+	position:relative;
+}
+
+.feedback {
+	height:18px;
+}
+
+.star i {
+	font-size:20px;
+	position:absolute;
+}
+/*Каллибровка звезд*/
+#star_1 {
+	top:2px;
+	left:2px;
+}
+
+#star_2 {
+	top:2px;
+	left:27px;
+}
+#star_3 {
+	top:2px;
+	left:50px;
+}
+#star_4 {
+	top:2px;
+	left:74px;
+}
+#star_5 {
+	top:2px;
+	left:98px;
+}
+
+.rating ul {
+	list-style:none;
+	display:flex;
+	margin:0;
+	padding:0;
+}
+
+
+
 
 
 
