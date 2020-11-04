@@ -3,6 +3,10 @@
 	margin:30px 120px 70px 175px;
 	line-height:15px;
 	font-size:12px;
+	display:flex;
+	flex-direction:row-reverse;
+	justify-content:space-between;
+
 }
 .content_search_room .h_span_block_hotel {
 	font-weight:bold;
@@ -15,14 +19,7 @@
 	margin:0 0 20.44px 0;
 	position:relative;
 }
-/*блок рейтинга*/
-.
-
-
 /*Левый бар*/
-.left_bar {
-	width:266px;
-}
 
 .data_arrival_in_otel input, .guests_in_hotel input{
 	padding:12px 110px 14.4px 15px;
@@ -233,7 +230,6 @@
 	width:853px;
 	height:1140px;
 	margin-right:50px;
-	float:right;
 }
 
 .main_content_search_room h2 {
@@ -258,6 +254,10 @@
 	user-select:none;
 }
 
+.room_in_hotel .container {
+	height:151px;
+	width:270px;
+}
 
 
 .room1{
@@ -308,7 +308,7 @@
 	opacity:0;
 }
 
-.room_in_hotel:hover > .move_arrow {
+.room_in_hotel .container:hover > .move_arrow {
 	opacity:1;
 }
 
@@ -347,6 +347,10 @@
 	background:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
 	transition:0.3s;
 }
+
+/*Круги в блоке со стрелками слайдера*/
+
+
 
 /*заголовоки и номера комнат*/
 
@@ -453,12 +457,45 @@
 	padding:0;
 }
 
+/*Кружочки в контейнере с комнатами*/
+.container {
+	position:relative;
+}
 
+.in_circle {
+	position:absolute;
+	right:15px;
+	bottom:15px;
+	width:45px;
+	height:8px;
+	display:flex;
+	opacity:0;
+	transition:0.4s;
+}
 
+.container .circle {
+	width:7.5px;
+	height:7.49px;
+	border: 1px solid #FFFFFF;
+	box-sizing: border-box;
+	filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+	box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+	margin-right:3.75px;
+	border-radius:50%;
+}
 
+.container .circle:first-child {
+	background:#fff;
+}
 
+.container .circle:last-child {
+	margin:0;
+}
 
-
+.container:hover > .in_circle {
+	opacity:1;
+	transition:0.4s;
+}
 
 /*Переключатель номеров*/
 
@@ -470,5 +507,5 @@
 }
 
 .footer {
-	margin-top:655px;
+	margin-top:255px;
 }
