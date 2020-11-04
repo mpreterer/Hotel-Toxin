@@ -258,6 +258,8 @@
 	user-select:none;
 }
 
+
+
 .room1{
 	background:url(image/room_1.png);
 }
@@ -303,6 +305,11 @@
 	position:absolute;
 	transition:0.3s;
 	border-radius:4px;
+	opacity:0;
+}
+
+.room_in_hotel:hover > .move_arrow {
+	opacity:1;
 }
 
 .move_arrow i {
@@ -316,6 +323,8 @@
 	top:0;
 	left:0;
 	transition:0.3s;
+	background:transparent;
+	cursor:pointer;
 }
 /*стрелка справа*/
 
@@ -324,6 +333,8 @@
 	left:228px;
 	transform:matrix(-1, 0, 0, 1, 0, 0);
 	transition:0.3s;
+	cursor:pointer;
+	background:transparent;
 }
 
 .arrow_right:hover {
@@ -381,24 +392,36 @@
 	height:32px;
 	border-top:1px solid #E8E8EC;
 	position:absolute;
-	bottom:19px;
+	bottom:15px;
 	right:20px;
 	display:flex;
 	justify-content:space-between;
+	padding-top:8px;
 }
+
 .star {
 	width:120px;
 	height:24px;
 	position:relative;
 }
-
+/*Отзывы*/
 .feedback {
 	height:18px;
+	width:90px;
+	font-size:14px;
+	line-height:18px;
+	text-align:right;
+	color: rgba(31, 32, 65, 0.5);
+	margin-top:5px;
 }
 
 .star i {
 	font-size:20px;
 	position:absolute;
+	background:-webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+  	-webkit-background-clip:text;
+  	-webkit-text-fill-color:transparent;
+  	padding-right:22px;
 }
 /*Каллибровка звезд*/
 #star_1 {
