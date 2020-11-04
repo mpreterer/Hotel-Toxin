@@ -8,27 +8,12 @@
 	<link rel="stylesheet" href="fontawesome.min.css">
 	<script type="text/javascript" src="awesome/fontawesome.min.js"></script>
 	<script src="https://kit.fontawesome.com/bc390f5649.js" crossorigin="anonymous"></script>
-	<!-- JQuery UI Kit ползунок -->
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	<title>index</title>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
-	<script>
-    $("#polzunok").slider({
-        animate: "slow",
-        range: true,    
-        values: [ 10, 65 ],
-        slide : function(event, ui) {    
-            $("#result-polzunok").text( "от " + ui.values[ 0 ] + " до " + ui.values[ 1 ] );        
-        }
-    });
-    $( "#result-polzunok" ).text("от " + $("#polzunok").slider("values", 0) + " до " + $("#polzunok").slider("values", 1));
-</script>
+	<title>«Toxin» | Лучшие номера для вас</title>
+	
 </head>
 <body>
-<div id="polzunok"></div>
-<b>Значение ползунка: <span style="color:green" id="result-polzunok"></span></b>
+
 <!-- Верхняя панель navbar -->
 <nav class="header">
 	<a href="#">
@@ -247,8 +232,11 @@
 					<input  type="text" autocomplete="off" placeholder="0" readonly=""><span class="span_price_hotel">₽ -</span>
 
 					<input  type="text" autocomplete="off" placeholder="0" readonly=""><span class="span_price_hotel">₽</span>
+
 					<!-- Ползунок с ценами -->
-				<div class="slider_price" id="slider_price">	
+
+				<div class="slider_price">
+					<div id="slider1"></div>
 				</div>
 
 				<span style="color:#8E8E9F">Стоимость за сутки пребывания в номере</span>
@@ -355,7 +343,5 @@
 </div>
 
 
-<script src="click.js"></script>
-<script src="slider.js"></script>
 </body>
 </html>
