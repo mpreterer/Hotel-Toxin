@@ -188,8 +188,13 @@
 	cursor:pointer;
 	padding-top:13px;
 	color:#8F8FA0;
+	font-size:12px;
+	line-height:14px;
 }
 
+.availability p {
+	margin:5px 0 0 28px;
+}
 
 
 
