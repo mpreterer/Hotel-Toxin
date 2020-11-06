@@ -478,7 +478,7 @@
 	transition:0.4s;
 }
 
-.container .circle {
+.room_in_hotel .container .circle {
 	width:7.5px;
 	height:7.49px;
 	border: 1px solid #FFFFFF;
@@ -489,11 +489,11 @@
 	border-radius:50%;
 }
 
-.container .circle:first-child {
+.room_in_hotel .container .circle:first-child {
 	background:#fff;
 }
 
-.container .circle:last-child {
+.room_in_hotel .container .circle:last-child {
 	margin:0;
 }
 
@@ -505,11 +505,49 @@
 /*Переключатель номеров*/
 
 .switch {
-	height:72px;
-	width:240px;
-	background:red;
+	height:82px;
+	width:260px;
 	margin:41px auto 0 auto;
 }
+
+.switch .container {
+	display:flex;
+	box-shadow:none;
+}
+
+.switch .container p{
+	color:rgba(31, 32, 65, 0.5);
+	text-align:center;
+	font-size:12px;
+	line-height:15px;
+}
+
+/*Круги с нумерацией*/
+.switch .circle {
+	width:40px;
+	height:40px;
+	border-radius:22px;
+	box-shadow:none;	
+}
+
+.switch .circle:first-child {
+	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.switch .container .circle:last-child {
+	background:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
+	position:relative;
+}
+
+.switch .container .circle_6 i {
+	font-size:24px;
+	line-height:20px;
+	color:white;
+	position:absolute;
+	top:11px;
+	right:9px;
+}
+
 
 .footer {
 	margin-top:255px;
