@@ -88,16 +88,43 @@
 
 }
 
+.room_information b {
+	color:#575871;
+}
+
+.ul_room li{
+	display:block;
+	width:243px;
+	height:48px;
+	padding-bottom:23px;
+}
 
 .ul_room li:before {
 	content:'';
 	width:40px;
 	height:40px;
 	font-size:12px;
-	background-color:red;
 	display:inline-block;
 	margin-right:5px;
 	float:left;
 }
 
+#li_room1:before {
+	background-image:url(image/insert_emoticon.svg);
+	background-repeat:no-repeat;
+	background-size:90%;
+	margin:2px 5px 0 0;
+}
+
+#li_room2:before {
+	background-image:url(image/location_city.svg);
+	background-repeat:no-repeat;
+	background-size:80%;
+}
+
+#li_room3:before {
+	background-image:url(image/whatshot.svg);
+	background-repeat:no-repeat;
+	background-size:77%;
+}
 
