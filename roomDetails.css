@@ -1,0 +1,32 @@
+/*Основной контент*/
+.content_room_details {
+	height:485px;
+	display:flex;
+}
+/*Комнаты*/
+.room_loop1 {
+	width:981px;
+	height:485px;
+	background-image:url(image/room_loop1.jpg);
+	background-repeat:no-repeat;
+}
+
+
+.room_loop_head {
+	height:485px;
+	width:538px;
+}
+
+.room_loop2 {
+	width:538px;
+	height:243px;
+	background-image:url(image/room_loop2.jpg);
+	background-repeat:no-repeat;
+}
+
+.room_loop3 {
+	width:538px;
+	height:242px;
+	background-image:url(image/room_loop3.jpg);
+	background-repeat:no-repeat;
+}
