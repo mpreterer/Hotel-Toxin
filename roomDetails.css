@@ -9,6 +9,13 @@
 	height:485px;
 	background-image:url(image/room_loop1.jpg);
 	background-repeat:no-repeat;
+	background-size:100%;
+	transition:0.3s;
+}
+
+.room_loop1:hover {
+	background-size:115%;
+	transition:0.3s;
 }
 
 
@@ -22,6 +29,14 @@
 	height:243px;
 	background-image:url(image/room_loop2.jpg);
 	background-repeat:no-repeat;
+	background-size:100%;
+	transition:0.3s;
+	background-position:center;
+}
+
+.room_loop2:hover {
+	background-size:115%;
+	transition:0.3s;
 }
 
 .room_loop3 {
@@ -29,4 +44,13 @@
 	height:242px;
 	background-image:url(image/room_loop3.jpg);
 	background-repeat:no-repeat;
+	background-size:100%;
+	transition:0.3s;
+	background-position:center;
+}
+
+.room_loop3:hover {
+	background-size:115%;
+	transition:0.3s;
+	background-position:center;
 }
