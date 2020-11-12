@@ -84,6 +84,16 @@ a:hover {
 	transition:0.3s;
 }
 
+/*#arrow_list_li:after {
+	content:'';
+	width:15px;
+	height:10px;
+	display:inline-block;
+	background:url(image/expand_more.svg);
+	background-repeat:no-repeat;
+	margin:2px 0 0 2px;
+}*/
+
 .menu_list {
 	margin:0;
 	padding:0;
