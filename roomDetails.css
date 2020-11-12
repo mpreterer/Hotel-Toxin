@@ -142,3 +142,19 @@
 	background:red;
 }
 
+.rating_impressions {
+	width:120px;
+	height:120px;
+	border-radius:50%;
+	background:yellow;
+}
+
+.ul_impressions li:before {
+	content:'';
+	width:10px;
+	height:10px;
+	background:linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+	display:inline-block;
+	border-radius:50%;
+	margin-right:5px;
+}
