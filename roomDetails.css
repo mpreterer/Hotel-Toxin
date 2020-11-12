@@ -398,6 +398,7 @@
 	border-radius:50%;
 }
 
+/*Забронировать*/
 .booking {
 	height:511px;
 	width:380px;
@@ -410,8 +411,28 @@
 	margin:50px 30px 30px 30px;
 }
 
+/*Заголовок*/
 .booking .container .head {
 	display:flex;
+	justify-content:space-between;
+	margin-bottom:20px;
+}
+
+.booking .container .head p {
+	margin:4px 0 0 0;
+	color: rgba(31, 32, 65, 0.5);
+}
+
+.booking .container .head span {
+	margin-left:5px;
+	color:#BC9CFF;
+	font-size:16px;
+}
+
+/*Прибытие и отъезд*/
+.booking_arrival {
+	width:;
+	height
 }
 
 
