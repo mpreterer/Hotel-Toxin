@@ -72,12 +72,21 @@
 	margin:70px auto;
 }
 
+.container_expend_details {
+	display:flex;
+	width:672px;
+	height:273px;
+
+}
+
+/*Блок сведение о номере*/
 .room_information {
 	height:273px;
 	width:280px;
+	margin-right:81px;
 }
 
-.room_information h2 {
+.container_expend_details h2 {
 	font-size:19px;
 	line-height:24px;
 	margin:0 0 24px 0;
@@ -117,6 +126,7 @@
 	float:left;
 }
 
+/*Расположение блоков до li*/
 #li_room1:before {
 	background-image:url(image/insert_emoticon.svg);
 	background-repeat:no-repeat;
@@ -124,12 +134,14 @@
 	margin:2px 5px 0 0;
 }
 
+/*Расположение блоков до li*/
 #li_room2:before {
 	background-image:url(image/location_city.svg);
 	background-repeat:no-repeat;
 	background-size:80%;
 }
 
+/*Расположение блоков до li*/
 #li_room3:before {
 	background-image:url(image/whatshot.svg);
 	background-repeat:no-repeat;
@@ -139,22 +151,82 @@
 .impressions_room {
 	width:311px;
 	height:165px;
-	background:red;
 }
 
+.container_impressions {
+	display:flex;
+}
+
+
+/*Блок с рейтингом впечатления*/
 .rating_impressions {
 	width:120px;
 	height:120px;
 	border-radius:50%;
-	background:yellow;
+	background:url(image/Ellipse.jpg);
+	margin-right:30px;
 }
 
+/*Кол-во голосов*/
+.rating_impressions p {
+	text-align:center;
+	color:#BC9CFF;
+	font-weight:bold;
+}
+
+.rating_impressions p:first-child{
+	font-size:24px;
+	line-height:30px;
+	margin:35px 0 0 0;
+}
+
+.rating_impressions p:last-child{
+	font-size:12px;
+	line-height:15px;
+	margin:0;
+}
+
+.impressions_list {
+	width:161px;
+	height:96px;
+	margin-top:15px;
+}
+
+.ul_impressions {
+	padding:0;
+	list-style:none
+}
+
+.ul_impressions li {
+	margin-bottom:8px;
+}
+
+/*Блоки круги напротив li*/
 .ul_impressions li:before {
 	content:'';
 	width:10px;
 	height:10px;
-	background:linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
 	display:inline-block;
 	border-radius:50%;
 	margin-right:5px;
 }
+
+#li_impressions1:before {
+	background:linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+
+#li_impressions2:before {
+	background:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+#li_impressions3:before {
+	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+#li_impressions4:before {
+	background:linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
+
+
+
+
