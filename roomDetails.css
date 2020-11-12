@@ -72,6 +72,7 @@
 	width:1179px;
 	height:796px;
 	margin:70px auto;
+	position:relative;
 }
 /*Контейнер для блоков сведения и впечатлений*/
 .container_expend_details {
@@ -396,6 +397,24 @@
 	margin-right:10px;
 	border-radius:50%;
 }
+
+.booking {
+	height:511px;
+	width:380px;
+	position:absolute;
+	top:0px;
+	right:0;
+}
+
+.booking .container {
+	margin:50px 30px 30px 30px;
+}
+
+.booking .container .head {
+	display:flex;
+}
+
+
 
 
 
