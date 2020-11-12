@@ -434,6 +434,7 @@
 	width:320px;
 	height:64.4px;
 	display:flex;
+	text-transform:uppercase;
 }
 
 .booking_arrival h2 {
@@ -450,7 +451,7 @@
 
 .booking_arrival input {
 	width:135px;
-	height:44px;
+	height:41px;
 	border:1px solid rgba(31, 32, 65, 0.25);
 	border-radius:4px;
 	padding-left:15px;
@@ -462,7 +463,52 @@
 }
 
 /*Блок гости*/
+.booking_guests {
+	height:64px;
+	width:320px;
+	margin-top:25px;
+}
 
+.booking_guests input {
+	height:44px;
+	width:305px;
+	border:1px solid rgba(31, 32, 65, 0.25);
+	border-radius:4px;
+	padding-left:15px;
+}
+/*блок с ценами*/
+.booking_price {
+	height:104px;
+	width:319px;
+	margin-top:50px;
+	color:rgba(31, 32, 65, 0.75);
+}
+
+.booking_price .container_block1,.container_block2,.container_block3 {
+	display:flex;
+	justify-content:space-between;
+	margin-bottom:15px;
+}
+
+.booking_price .span_container {
+	position:relative;
+}
+
+.booking_price .span_container:after {
+	content:'';
+	width:20px;
+	height:20px;
+	border:1px solid rgba(31, 32, 65, 0.25);
+	border-radius:50%;
+	display:inline-block;
+	position:absolute;
+	top:0;
+	right:-30px;
+	background-image:url(image/i.svg);
+	background-repeat:no-repeat;
+	background-position:center;
+	cursor:pointer;
+}
 
 
 
