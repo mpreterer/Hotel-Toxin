@@ -10,13 +10,15 @@
 	background-image:url(image/room_loop1.jpg);
 	background-repeat:no-repeat;
 	background-size:100%;
-	transition:0.3s;
+	transition:0.4s;
+	background-position:center;
 }
 
 /*прближение картинки фона*/
 .room_loop1:hover {
 	background-size:115%;
-	transition:0.3s;
+	transition:0.4s;
+	background-position:center;
 }
 
 
@@ -31,7 +33,7 @@
 	background-image:url(image/room_loop2.jpg);
 	background-repeat:no-repeat;
 	background-size:100%;
-	transition:0.3s;
+	transition:0.4s;
 	background-position:center;
 }
 
@@ -47,7 +49,7 @@
 	background-image:url(image/room_loop3.jpg);
 	background-repeat:no-repeat;
 	background-size:100%;
-	transition:0.3s;
+	transition:0.4s;
 	background-position:center;
 }
 
@@ -235,6 +237,15 @@
 	color:rgba(31, 32, 65, 0.75);
 	font-size:14px;
 	line-height:24px;
+	position:relative;
+	margin-bottom:30px;
+}
+
+.user_reviews .otziv {
+	position:absolute;
+	top:0;
+	right:0;
+	color:rgba(31, 32, 65, 0.5);
 }
 
 .ul_reviews {
@@ -327,6 +338,63 @@
 .heart_2:hover {
 	color:#BC9CFF;
 	border-color:#BC9CFF;
+}
+
+/*Правила номера и отмена*/
+.order_rooms .container {
+	width:711px;
+	height:160px;
+	display:flex;
+}
+
+.order_rooms .container .order {
+	height:160px;
+	width:292px;
+	margin-right:100px;
+}
+
+/*Блок отмена (справа)*/
+.order_rooms .container .cancel {
+	height:160px;
+	width:341px;
+	line-height:24px;
+}
+
+.order h2 {
+	margin-left:21px;
+}
+
+/*Блок - правила (слева)*/
+.ul_order {
+	list-style:none;
+	padding:0;
+	color:rgba(31, 32, 65, 0.75);
+}
+
+.ul_order li {
+	margin-bottom:15px;
+}
+
+.ul_order .li_order3 {
+	display:flex;
+	margin-bottom:10px;
+}
+
+.ul_order span {
+	padding:0;
+	margin:0;
+	display:block;
+	width:250px;
+}
+
+.ul_order li:before {
+	content:'';
+	width:10px;
+	height:10px;
+	background-color:rgba(31, 32, 65, 0.25);;
+	display:inline-block;
+	margin-right:10px;
+	border-radius:50%;
 }
 
 
