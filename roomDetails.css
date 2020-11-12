@@ -451,6 +451,34 @@
 	height:64.4px;
 	width:150px;
 	margin-right:20px;
+	position:relative;
+	transition:0.3s;
+}
+
+/*Наведение на инпуты*/
+.container_arrival input:hover {
+	border-color:#8C8C92;
+	transition:0.3s;
+}
+
+.container_departure input:hover {
+	border-color:#8C8C92;
+	transition:0.3s;
+}
+
+
+
+/*Стрелка - узнать больше*/
+.container_arrival:after ,.container_departure:after {
+	content:'';
+	width:15px;
+	height:15px;
+	display:inline-block;
+	position:absolute;
+	top:44px;
+	right:10px;
+	background-image:url(image/expand_more.png);
+	background-repeat:no-repeat;
 }
 
 .booking_arrival input {
@@ -459,11 +487,14 @@
 	border:1px solid rgba(31, 32, 65, 0.25);
 	border-radius:4px;
 	padding-left:15px;
+	cursor:pointer;
 }
 
 .container_departure {
 	height:64.4px;
 	width:150px;
+	position:relative;
+	transition:0.3s;
 }
 
 /*Блок гости*/
@@ -471,6 +502,26 @@
 	height:64px;
 	width:320px;
 	margin-top:25px;
+	position:relative;
+	transition:0.3s;
+}
+
+.booking_guests input:hover {
+	border-color:#8C8C92;
+	transition:0.3s;
+}
+
+/*Стрелочка - узнать больше*/
+.booking_guests:after {
+	content:'';
+	width:15px;
+	height:15px;
+	display:inline-block;
+	position:absolute;
+	top:44px;
+	right:10px;
+	background-image:url(image/expand_more.png);
+	background-repeat:no-repeat;
 }
 
 .booking_guests h2 {
@@ -483,6 +534,7 @@
 	border:1px solid rgba(31, 32, 65, 0.25);
 	border-radius:4px;
 	padding-left:15px;
+	cursor:pointer;
 }
 /*блок с ценами*/
 .booking_price {
