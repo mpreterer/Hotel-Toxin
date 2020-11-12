@@ -296,14 +296,15 @@
 	margin-left:3px;
 	background-repeat:no-repeat;
 	position:relative;
+	cursor:pointer;
 }
+
 
 .heart i{
 	position:absolute;
 	top:5px;
 	left:5px;
 	font-size:10px;
-	cursor:pointer;
 }
 
 .heart span {
@@ -321,6 +322,11 @@
 	border:1px solid rgba(31, 32, 65, 0.25);
 	box-sizing:border-box;
 	color:#C7C7CF;
+}
+
+.heart_2:hover {
+	color:#BC9CFF;
+	border-color:#BC9CFF;
 }
 
 
