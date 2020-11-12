@@ -86,7 +86,7 @@
 	margin-right:81px;
 }
 
-.container_expend_details h2 {
+.container_expend_details_room h2 {
 	font-size:19px;
 	line-height:24px;
 	margin:0 0 24px 0;
@@ -225,6 +225,17 @@
 
 #li_impressions4:before {
 	background:linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
+
+.user_reviews {
+	height:435px;
+	width:711px;
+	background:red;
+}
+
+.user_1 {
+	width:711px;
+	height:306px;
 }
 
 
