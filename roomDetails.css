@@ -92,11 +92,19 @@
 	color:#575871;
 }
 
+.ul_room {
+	padding:0;
+}
+
 .ul_room li{
 	display:block;
 	width:243px;
 	height:48px;
-	padding-bottom:23px;
+}
+
+.ul_room hr {
+	color:rgba(31, 32, 65, 0.1);;
+	margin:15px 0 20px 0;
 }
 
 .ul_room li:before {
@@ -126,5 +134,11 @@
 	background-image:url(image/whatshot.svg);
 	background-repeat:no-repeat;
 	background-size:77%;
+}
+
+.impressions_room {
+	width:311px;
+	height:165px;
+	background:red;
 }
 
