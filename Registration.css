@@ -114,13 +114,19 @@
 }
 
 /*Дата рождения*/
-.data_birthday{
+.date_birthday{
 	text-transform:uppercase;
 	width:320px;
 	height:64px;
 	line-height:15px;
 	margin-top:20px;
+}
 
+/*Данные для входа*/
+.data_login {
+	height:116px;
+	text-transform:uppercase;
+	margin-top:20px;
 }
 
 
