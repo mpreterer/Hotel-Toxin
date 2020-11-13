@@ -4,3 +4,21 @@
 	background-repeat:no-repeat;
 	background-position:center;
 }
+
+.block_registration .container {
+	height:684px;
+	padding:19px 577px;
+}
+
+.registration_user {
+	height:646px;
+	width:380px;
+	background-color:red;
+}
+
+.registration_user .container_user {
+	height:576px;
+	width:320px;
+	padding:40px 30px 30px 30px;
+}
+
