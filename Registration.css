@@ -205,6 +205,32 @@
 	right:15px;
 }
 
+/*Если есть аакаунт*/
+.if_have_account {
+	display:flex;
+	justify-content:space-between;
+	margin-top:30px;
+}
+
+.if_have_account .login {
+	height:42.4px;
+	width:97.4px;
+	border:2px solid #BC9CFF;
+	border-radius:22px;
+	text-align:center;
+	text-transform:uppercase;
+	color:#BC9CFF;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.if_have_account .question {
+	width:186px;
+}
+
+.if_have_account .question p,.if_have_account .login p{
+	margin:12px 0 0 0;
+}
 
 
 
