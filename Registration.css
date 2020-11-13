@@ -165,12 +165,44 @@
 	cursor:pointer;
 }
 
+/*Нажал на кнопку*/
 .offer_checkbox:checked+label::before {
 	background-image:url(image/Rectangle.svg);
 	background-position:right;
 	background-position:23px 4px;
 	border-color:#BC9CFF;
 	transition:0.3s;
+}
+
+/*Перейти к оплате*/
+.buy {
+	width:320px;
+	height:44px;
+	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	border-radius:22px;
+	margin-top:20px;
+	text-align:center;
+	text-transform:uppercase;
+	color:#fff;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.buy p {
+	margin:0;
+	padding-top:12px;
+	position:relative;
+}
+
+.buy p:after {
+	content:'';
+	width:18px;
+	height:18px;
+	background:url(image/arrow_forward.png);
+	display:inline-block;
+	position:absolute;
+	top:12px;
+	right:15px;
 }
 
 
