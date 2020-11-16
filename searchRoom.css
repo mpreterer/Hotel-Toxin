@@ -407,11 +407,35 @@
 	justify-content:space-between;
 	padding-top:8px;
 }
-
-.star {
+/*Звезды оценки*/
+/*.star {
 	width:120px;
 	height:24px;
-	position:relative;
+	display:flex;
+	overflow:hidden;
+}
+
+.star:not(:checked) > input {
+	display:none;
+}
+
+.star:not(:checked) > label {
+	color: lightgrey;
+}
+
+.star:not(:checked) > label:before {
+	content: '';
+	background-image:url(image/star.svg);
+}*/
+
+
+.stars {
+	width:20px;
+	height:20px;
+	padding-right:22px;
+	background-image:url(image/star.svg);
+	background-repeat:no-repeat;
+	cursor:pointer;
 }
 /*Отзывы*/
 .feedback {
@@ -422,41 +446,6 @@
 	text-align:right;
 	color: rgba(31, 32, 65, 0.5);
 	margin-top:5px;
-}
-
-.star i {
-	font-size:20px;
-	position:absolute;
-	background:-webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
-  	-webkit-background-clip:text;
-  	-webkit-text-fill-color:transparent;
-  	padding-right:22px;
-}
-/*Каллибровка звезд*/
-#star_1 {
-	top:2px;
-	left:2px;
-}
-
-#star_2 {
-	top:2px;
-	left:27px;
-}
-#star_3 {
-	top:2px;
-	left:50px;
-}
-#star_4 {
-	top:2px;
-	left:74px;
-}
-#star_5 {
-	top:2px;
-	left:98px;
-}
-
-#star_1:hover > #star2{
-	display:none;
 }
 
 .rating ul {
