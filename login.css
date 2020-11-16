@@ -19,55 +19,20 @@
 	border-radius:4px;
 	box-shadow:0px 0px 25px rgba(0,0,0, 0.2);
 }
-
+/*Контейнер с информацией*/
 .container_user {
 	padding:40px 30px 32px 30px;
 	height:286px;
 }
+/*Инпуты*/
 
-.input_favorite {
-	height:44px;
-	width:320px;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	box-sizing:border-box;
-	border-radius:4px;
-	margin-bottom:10px;
-	padding-left:15px;
-	color: rgba(31, 32, 65, 0.25);
-	cursor:pointer;
-	transition:0.2s;
+
+/*Внопка входа*/
+.container_user .btn_login {
+	margin-top:10px;
 }
 
-.input_favorite:hover {
-	border-color:#6F6F74;
-	transition:0.2s;
-}
-
-.btn_login {
-	width:320px;
-	height:44px;
-	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-	border-radius:22px;
-	text-align:center;
-	text-transform:uppercase;
-	color:#fff;
-	font-weight:bold;
-	cursor:pointer;
-}
-
-.btn_login p {
-	margin:0;
-	padding-top:12px;
-	position:relative;
-}
-
-.btn_login p:after {
-	content:'';
-	width:18px;
-	height:18px;
-	background:url(image/arrow_forward.png);
-	display:inline-block;
-	position:absolute;
-	top:12px;
-	right:15px;
+/*Если нет аккаунта*/
+.container_user .if_have_account {
+	margin-top:25px;
 }

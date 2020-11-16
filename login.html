@@ -3,6 +3,7 @@
 <head>
 	<link href="style.css" rel="stylesheet">
 	<link href="login.css" rel="stylesheet">
+	<link href="Registration.css" rel="stylesheet">
 	<meta charset="URF-8">
 	<meta charset="URF-8">
 	<link rel="stylesheet" href="fontawesome.min.css">
@@ -75,13 +76,22 @@
 	<div class="container">
 		<div class="login_user">
 			<div class="container_user">
-				<h1 style="margin:0;">Войти</h1>
+				<h1 style="margin:0; margin-bottom:20px;">Войти</h1>
 				<input placeholder="Email" autocomplete="off" readonly="" class="input_favorite">
 				<input placeholder="Пароль" autocomplete="off" readonly="" class="input_favorite">
 				<!-- Кнопка войти -->
 				<div class="btn_login">
-				<p>войти</p>
-			</div>
+					<p>войти</p>
+				</div>
+				<!-- Если нет аккаунта -->
+				<div class="if_have_account">
+						<div class="question">
+							<p>Нет аккаунта на Toxin?</p>
+						</div>
+						<div class="login">
+							<p>создать</p>
+						</div>
+					</div>
 			</div>
 		</div>
 	</div>
