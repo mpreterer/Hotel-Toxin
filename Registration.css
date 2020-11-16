@@ -182,7 +182,7 @@
 }
 
 /*Перейти к оплате*/
-.buy {
+.buy, .btn_login {
 	width:320px;
 	height:44px;
 	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -195,13 +195,13 @@
 	cursor:pointer;
 }
 
-.buy p {
+.buy p,.btn_login p {
 	margin:0;
 	padding-top:12px;
 	position:relative;
 }
 
-.buy p:after {
+.buy p:after,.btn_login p:after {
 	content:'';
 	width:18px;
 	height:18px;
