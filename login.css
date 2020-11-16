@@ -42,3 +42,32 @@
 	border-color:#6F6F74;
 	transition:0.2s;
 }
+
+.btn_login {
+	width:320px;
+	height:44px;
+	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	border-radius:22px;
+	text-align:center;
+	text-transform:uppercase;
+	color:#fff;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.btn_login p {
+	margin:0;
+	padding-top:12px;
+	position:relative;
+}
+
+.btn_login p:after {
+	content:'';
+	width:18px;
+	height:18px;
+	background:url(image/arrow_forward.png);
+	display:inline-block;
+	position:absolute;
+	top:12px;
+	right:15px;
+}
