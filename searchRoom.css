@@ -408,13 +408,13 @@
 	padding-top:8px;
 }
 /*Звезды оценки*/
-/*.star {
+.star {
 	width:120px;
 	height:24px;
 	display:flex;
 	overflow:hidden;
 }
-
+/*
 .star:not(:checked) > input {
 	display:none;
 }
