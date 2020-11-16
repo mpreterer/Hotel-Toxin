@@ -1,0 +1,44 @@
+/*Блок с авторизацией пользователя*/
+.block_login {
+	height:684px;
+	background-image:url(image/registration_bg.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+.block_login .container {
+	height:684px;
+	padding:172px 577px;
+}
+
+.login_user {
+	height:358px;
+	width:380px;
+	background-color:#fff;
+	border:1px solid rgba(0, 0, 0, 0.12);
+	border-radius:4px;
+	box-shadow:0px 0px 25px rgba(0,0,0, 0.2);
+}
+
+.container_user {
+	padding:40px 30px 32px 30px;
+	height:286px;
+}
+
+.input_favorite {
+	height:44px;
+	width:320px;
+	border:1px solid rgba(31, 32, 65, 0.25);
+	box-sizing:border-box;
+	border-radius:4px;
+	margin-bottom:10px;
+	padding-left:15px;
+	color: rgba(31, 32, 65, 0.25);
+	cursor:pointer;
+	transition:0.2s;
+}
+
+.input_favorite:hover {
+	border-color:#6F6F74;
+	transition:0.2s;
+}
