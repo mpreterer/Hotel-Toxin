@@ -455,6 +455,10 @@
 	left:98px;
 }
 
+#star_1:hover > #star2{
+	display:none;
+}
+
 .rating ul {
 	list-style:none;
 	display:flex;

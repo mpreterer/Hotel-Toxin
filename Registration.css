@@ -39,6 +39,7 @@
 	margin-top:20px;
 }
 
+/*Инпуты*/
 .input_favorite {
 	height:44px;
 	width:320px;
@@ -55,6 +56,10 @@
 .input_favorite:hover {
 	border-color:#6F6F74;
 	transition:0.2s;
+}
+
+.input_favorite:focus {
+	color:rgba(31, 32, 65, 0.75);
 }
 
 .container_name .user_name input:last-child {
@@ -90,7 +95,6 @@
 }
 
 /*Чекбоксы*/
-/*#BC9CFF*/
 .gender_checkbox+label::before {
 	content:'';
 	width:20px;
@@ -102,8 +106,6 @@
 	position:absolute;
 	left:-30px;
 	top:-0.5px;
-	background-position:top;
-	transition:0.2s;
 }
 
 /*Наведен на чекбок но не нажал на него*/
@@ -117,8 +119,8 @@
 	background-position:center;
 	background-repeat:no-repeat;
 	border-color:#BC9CFF;
-	transition:0.2s;
 }
+
 
 /*Дата рождения*/
 .date_birthday{
@@ -181,7 +183,7 @@
 	transition:0.3s;
 }
 
-/*Перейти к оплате*/
+/*Перейти к оплате (кнопка входа в login.html)*/
 .buy, .btn_login {
 	width:320px;
 	height:44px;
@@ -211,6 +213,7 @@
 	top:12px;
 	right:15px;
 }
+
 
 /*Если есть аакаунт*/
 .if_have_account {

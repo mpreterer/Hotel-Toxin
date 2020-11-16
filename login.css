@@ -36,3 +36,7 @@
 .container_user .if_have_account {
 	margin-top:25px;
 }
+
+.container_user .btn_login:focus {
+	color:red;
+}
