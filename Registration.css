@@ -48,6 +48,13 @@
 	margin-bottom:10px;
 	padding-left:15px;
 	color: rgba(31, 32, 65, 0.25);
+	cursor:pointer;
+	transition:0.2s;
+}
+
+.input_favorite:hover {
+	border-color:#6F6F74;
+	transition:0.2s;
 }
 
 .container_name .user_name input:last-child {
