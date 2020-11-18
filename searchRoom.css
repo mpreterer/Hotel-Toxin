@@ -540,14 +540,18 @@
 	right:9px;
 }
 
+/*Дополниетльыне удобства*/
 .convenience {
 	width:266px;
-	height:44px;
-	margin-top:30px;
+	height:14px;
+	margin-top:15px;
 	text-transform:uppercase;
 	font-weight:bold;
 	position:relative;
+	padding:15px 0 15px 0;
+	cursor:pointer;
 }
+
 
 .convenience span:after {
 	content:'';
@@ -557,10 +561,74 @@
 	background-repeat:no-repeat;
 	background-position:4px 4px;
 	position:absolute;
-	top:0;
+	top:13px;
 	right:10px;
 }
 
+/*Дроп блок*/
+.drop_block_convenience {
+	width:266px;
+	height:131px;
+	padding-top:44px;
+	position:absolute;
+	top:0;
+	display:none;
+}
+
+.drop_item_convenience {
+	width:266px;
+	height:171px;
+	background-color:red;
+}
+
+/*Выпадение блока*/
+.convenience:active > .drop_block_convenience {
+	display:block;
+}
+
+.drop_block_convenience:hover {
+	display:block;
+}
+/*Список удобств*/
+.ul_drop_item_convenience {
+	padding:0;
+	list-style:none;
+	font-weight:normal;
+	user-select:none;
+	color:rgba(31, 32, 65, 0.5);
+	cursor:default;
+}
+
+.li_drop_item_convenience {
+	margin-top:10px;
+	position:relative;
+	display:flex;
+	cursor:pointer;
+}
+
+.li_drop_item_convenience input {
+	opacity:0;
+	position:absolute;
+	top:0;
+	left:0;
+	cursor:pointer;
+}
+
+.li_drop_item_convenience label {
+	padding:4px 0 0 5px;
+	cursor:pointer;
+}
+
+/*Чекбокс мнимый*/
+.ul_drop_item_convenience li:before {
+	content:'';
+	width:20px;
+	height:20px;
+	display:inline-block;
+	border:1px solid rgba(31, 32, 65, 0.25);
+	box-sizing:border-box;
+	border-radius:4px;
+}
 
 .footer {
 	margin-top:255px;
