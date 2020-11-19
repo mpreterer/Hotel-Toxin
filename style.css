@@ -602,12 +602,18 @@ a:hover {
 		top:30px;
 		left:30px;
 	}
+
+	.footer {
+		box-shadow:none;
+	}
+
 	.footer_list {
 		padding:0;
 		flex-direction:column;
 	}
 	.footer_sub {
 		margin-top:650px;
+		border-top:1px solid #E8E8EC;
 	}
 	.footer_sub_container {
 		width:330px;
