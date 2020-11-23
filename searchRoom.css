@@ -651,7 +651,31 @@
 }
 
 @media screen and (max-width:480px) and (min-width:320px) {
+	.content_search_room h2 {
+		font-size:16px;
+		margin-left:30px;
+	}
 	.content_search_room {
 		margin:0 0 10px 0;
+		display:inline-block;
+		max-width:320px;
+	}
+	.main_content_search_room {
+		height:3354px;
+		width:320px;
+		margin:0;
+		margin-top:860px;
+	}
+	.container_in_hotel {
+		display:inline-block;
+		margin-left:30px;
+	}
+	.switch {
+		margin:0 0 0 45px;
+	}
+	.left_bar {
+		position:absolute;
+		top:100px;
+		left:10px;
 	}
 }
