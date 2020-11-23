@@ -584,10 +584,11 @@
 /*Выпадение блока*/
 .convenience:active > .drop_block_convenience {
 	display:block;
+	user-select:none;
 }
 
-.convenience:active > .convenience span:after {
-	background-image:url(image/expand_more_up.svg);
+.drop_block_convenience:active {
+	display:none
 }
 
 .drop_block_convenience:hover {
