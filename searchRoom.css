@@ -37,6 +37,38 @@
 	transition:0.2s;
 }
 
+/*Гости*/
+
+.guests{
+	width:266px;
+	margin-bottom:20px;
+}
+
+/*.input_favorite {
+	margin:0;
+}*/
+
+
+/*.input_favorite {
+	width:266px;
+}
+
+.guests input:hover {
+	display:block;
+}*/
+.guests .dropBlock{
+	display:none;
+}
+
+.guests:active > .dropBlock {
+	display:block;
+}
+
+.dropBlock:hover {
+	display:block;
+}
+
+
 .content_search_room i {
 	position:absolute;
 	font-size:18px;
@@ -313,13 +345,24 @@
 	opacity:0;
 }
 
+.container_a {
+	width:41px;
+	height:151px;
+}
+
 .room_in_hotel .container:hover > .move_arrow {
 	opacity:1;
 }
 
-.move_arrow i {
+.move_arrow .icon {
+	width:10px;
+	height:13px;
+	background-image:url(image/expand_more_left.svg);
+	background-position:center;
+	background-repeat:no-repeat;
 	position:absolute;
 	top:75.5px;
+	left:12px;
 	color:white;
 }
 /*стрелка слева*/

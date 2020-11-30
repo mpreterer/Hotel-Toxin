@@ -39,28 +39,6 @@
 	margin-top:20px;
 }
 
-/*Инпуты*/
-.input_favorite {
-	height:44px;
-	width:320px;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	box-sizing:border-box;
-	border-radius:4px;
-	margin-bottom:10px;
-	padding-left:15px;
-	color: rgba(31, 32, 65, 0.25);
-	cursor:pointer;
-	transition:0.2s;
-}
-
-.input_favorite:hover {
-	border-color:#6F6F74;
-	transition:0.2s;
-}
-
-.input_favorite:focus {
-	color:rgba(31, 32, 65, 0.75);
-}
 
 .container_name .user_name input:last-child {
 	margin:0;
