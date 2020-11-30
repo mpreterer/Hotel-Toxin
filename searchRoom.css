@@ -435,8 +435,22 @@
 	padding-right:22px;
 	background-image:url(image/star.svg);
 	background-repeat:no-repeat;
+}
+
+/*Звезды без оценки*/
+.stars_border {
+	width:20px;
+	height:20px;
+	padding-right:22px;
+	background-image:url(image/star_border.svg);
+	background-repeat:no-repeat;
 	cursor:pointer;
 }
+
+.stars_border:hover {
+	background-image:url(image/star.svg);
+}
+
 /*Отзывы*/
 .feedback {
 	height:18px;

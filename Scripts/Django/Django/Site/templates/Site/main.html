@@ -1,0 +1,90 @@
+<! Используем статические файлы (css,img) >
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet"
+  href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet"
+  href = "{% static 'Site/main.css' %}">
+  <title>{{ title }}</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">Django</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Главная <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/jopka/">Помощь</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-nav">
+      {% if user.is_authenticated %}
+        <a href="{% url 'news-add' %}" class="btn btn-outline-secondary">Написать статью</a>
+        <a href="{% url 'profile' %}" class="btn btn-outline-secondary">Профиль</a>
+        <a href="{% url 'exit' %}" class="btn btn-outline-secondary">Выйти</a>
+      {% else %}
+      <a href="{% url 'reg' %}" class="btn btn-outline-secondary mr-2">Регистрация</a>
+      <a href="{% url 'user' %}" class="btn btn-outline-secondary">Войти</a>
+      {% endif %}
+    </div>
+  </nav>
+
+
+  <main class="container">
+    <div class="row">
+
+      <div class="col-md-8">
+        {% if messages %}
+          {% for mess in messages %}
+            <div class="alert alert-success">
+              {{ mess }}
+            </div>
+          {% endfor %}
+        {% endif %}
+
+        {% block main_section %}
+        {% endblock %}
+      </div>
+
+      <aside class="col-md-4 ">
+
+        <div class="p-3 mb-3 rounded">
+          {% block aside_news_section %}
+          {% endblock %}
+        </div>
+
+        <div class="p-3 mb-3 rounded">
+            <img src="https://www.ixbt.com/img/n1/news/2019/11/6/ELu4FeQU0AAApR9_large.jpg" class="img-thumbnail">
+            <button class = "btn btn-warning mt-1"><a href="#">Перейти</a></button>
+        </div>
+
+        <div class=<"bg-info p-3 mb-3 rounded">
+            <img src="https://i.pinimg.com/736x/ab/b6/a8/abb6a800ab2193fcedd9bda566b7402c.jpg" class="img-thumbnail">
+            <button class = "btn btn-warning mt-1"><a href="#">Перейти</a></button>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Вверх</a>
+      </p>
+      <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+      <p>New to Bootstrap? <a href="//">Visit the homepage</a> or read our <a href="/jopka/">getting started guide</a>.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
