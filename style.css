@@ -364,9 +364,51 @@ button {
 	text-transform:uppercase;
 }
 
-.data {
-	width:320px;
-	height:369px;
+/*Календарь*/
+.calendar {
+	width:300px;
+	height:349px;
+	box-sizing:border-box;
+	background:yellow;
+	padding:20px;
+	position:relative;
+	z-index:1;
+}
+
+/*Сделать блок в виде таблицы*/
+.calendar .container {
+	width:240px;
+	height:280px;
+}
+.calendar .container .date {
+	display:grid;
+	grid-template-columns:repeat(auto-fit, minmax(25px, 1fr));
+	grid-gap:10px;
+	box-sizing:border-box;
+}
+
+.calendar .container .date div {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:25px;
+	color:green;
+}
+
+.calendar .container .date div.day {
+	font-weight:bold;
+	color:#BC9CFF;
+}
+
+/*Месяц*/
+.month {
+	font-weight:bold;
+	text-align:center;
+}
+
+/*Числа*/
+.calendar .container .date .number {
+	color:#8F8FA0;
 }
 
 .block_date {
