@@ -364,6 +364,11 @@ button {
 	text-transform:uppercase;
 }
 
+.data {
+	width:320px;
+	height:369px;
+}
+
 .block_date {
 	display:flex;
 	justify-content:space-around;
