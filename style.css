@@ -366,18 +366,54 @@ button {
 
 /*Календарь*/
 .calendar {
-	width:300px;
-	height:349px;
+	width:320px;
+	height:369px;
 	box-sizing:border-box;
-	background:yellow;
 	padding:20px;
 	position:relative;
 	z-index:1;
+	background:#fff;
+	border:1px solid rgba(31, 32, 65, 0.25);
+	border-radius:4px;
+	box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
+	display:none;
+}
+
+.calendar h2 {
+	margin:0 0 40px 0;
+	color:#000;
+	text-transform:capitalize;
+}
+
+.calendar h2:after {
+	content:'';
+	width:23px;
+	height:24px;
+	display:inline-block;
+	position:absolute;
+	top:17px;
+	right:20px;
+	background-image:url(image/arrow_forward.svg);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+.calendar h2:before {
+	content:'';
+	width:23px;
+	height:24px;
+	display:inline-block;
+	position:absolute;
+	top:17px;
+	left:20px;
+	background-image:url(image/arrow_back.svg);
+	background-position:center;
+	background-repeat:no-repeat;
 }
 
 /*Сделать блок в виде таблицы*/
 .calendar .container {
-	width:240px;
+	width:260px;
 	height:280px;
 }
 .calendar .container .date {
@@ -410,6 +446,32 @@ button {
 .calendar .container .date .number {
 	color:#8F8FA0;
 }
+
+/*функции календаря*/
+.calendar .container .function {
+	width:280px;
+	height:15px;
+	margin-top:50px;
+	display:flex;
+	justify-content:space-between;
+	color:#BC9CFF;
+	font-weight:bold;
+}
+
+.date_arrival:active > .calendar{
+	display:block;
+}
+
+.date_departure:active > .calendar{
+	display:block;
+}
+
+.departure_input:active > .calendar{
+	display:block;
+}
+
+
+
 
 .block_date {
 	display:flex;
