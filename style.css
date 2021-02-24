@@ -580,7 +580,6 @@ button {
 	text-align:center;
 	cursor:pointer;
 	background:white;
-	color:rgba(31, 32, 65, 1);
 	transition:0.1s;
 }
 
@@ -589,14 +588,18 @@ button {
 	border-color:rgba(31, 32, 65, 0.25);
 }
 
+.circle_opacity {
+	opacity:1;
+}
+
 .dropBlock .circle_drop_plus {
 	margin-right:0;
 	margin-left:4px;
-	border:1px solid rgba(31, 32, 65, 0.5);
+	border-color:#9393A3;
 }
 
 /*анимация кнопки по нажатию плюса и минуса*/
-.dropBlock button:active{
+.dropBlock .circle_drop_item:active{
 	color:white;
 	border-color:white;
 	background:#C8AEFF;
@@ -604,6 +607,13 @@ button {
 	font-weight:bold;
 }
 
+.link_drop_function {
+	border:none;
+	background-color:#fff;
+	color:#BC9CFF;
+	font-weight:bold;
+	cursor:pointer;
+}
 
 .dropBlock .circle_drop_item {
 	opacity:0.5;
