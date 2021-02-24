@@ -32,7 +32,7 @@
 	transition:0.2s;
 }
 /*Исправить грешок (parcel or webpack)*/
-.h_span_block_hotel:after {
+.data_arrival_in_otel:after {
 	content:'';
 	display:inline-block;
 	position:absolute;
@@ -670,19 +670,25 @@
 	position:relative;
 	padding:15px 0 15px 0;
 	cursor:pointer;
+	user-select:none;
+	display: flex;
+	justify-content: space-between;
 }
 
-
-.convenience span:after {
-	content:'';
+.arrow_convenience {
 	width:20px;
 	height:20px;
-	background-image:url(image/expand_more.svg);
+	padding-right: 9px;
 	background-repeat:no-repeat;
 	background-position:4px 4px;
-	position:absolute;
-	top:13px;
-	right:10px;
+}
+
+.active {
+	background-image:url(image/expand_more_up.svg);
+}
+
+.not_active {
+	background-image:url(image/expand_more.svg);
 }
 
 /*Дроп блок*/
@@ -692,7 +698,6 @@
 	padding-top:34px;
 	position:absolute;
 	top:0;
-	display:none;
 }
 
 .drop_item_convenience {
@@ -701,22 +706,10 @@
 	user-select:none;
 }
 
-/*Выпадение блока*/
-.convenience:active > .drop_block_convenience {
-	display:block;
-	user-select:none;
-}
-
-.drop_block_convenience:active {
-	display:none
-}
-
-.drop_block_convenience:hover {
-	display:block;
-}
 /*Список удобств*/
 .drop_item_convenience {
 	display:inline-block;
+	user-select:none;
 }
 
 .drop_item_convenience input {
