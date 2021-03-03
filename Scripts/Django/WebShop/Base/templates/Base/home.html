@@ -1,8 +1,0 @@
-{% extends 'Base/main.html' %}
-{% block main_section %}
-    {% for post in product %}
-      <h1>{{ post.title }}</h1>
-      <h3><mark>{{ post.model }}</mark></h3>
-      <p>{{ post.about }}</p>
-    {% endfor %}
-{% endblock main_section %}

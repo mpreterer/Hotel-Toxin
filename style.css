@@ -327,7 +327,7 @@ button {
 	color:#1F2041;
 	position:absolute;
 	left:180px;
-	top:80px;
+	top:140px;
 	font-weight:bold;
 	font-style:normal;
 	line-height:30px;
@@ -348,7 +348,7 @@ button {
 	position:absolute;
 	text-align:right;
 	bottom:-310px;
-	right:140px;
+	right:175px;
 	line-height:24px;
 	color:rgba(31, 32, 65, 0.75);
 }
@@ -759,7 +759,7 @@ button {
 /*низ странички*/
 
 .footer {
-	height:372px;
+	height:392px;
 	box-shadow: 0 1px 0px rgba(31, 32, 65, 0.1);
 	border-top:1px solid #D0D0D5;
 }
@@ -770,7 +770,7 @@ button {
 	display:flex;
 	font-style:normal;
 	line-height:15px;
-	padding:116.571px 114.286px;
+	padding:86.571px 179.286px 116.571px 168.286px;
 }
 
 .footer .footer_list li {
