@@ -139,13 +139,6 @@
 	z-index:-1;
 }
 
-.content_search_room .price_hotel input{
-	width:35px;
-	border:none;
-	text-align:right;
-	color:#8B8B9C;
-}
-
 .price_hotel .span_price_hotel{
 	color:#8B8B9C;
 }
