@@ -13,12 +13,7 @@ a {
 
 a:hover {
 	color:#E6D2FF;
-}
-
-h1 {
-	font-size:26.742px;
-	margin:0;
-}
+}	
 
 input:active, input:focus {
 	outline:none;
@@ -163,24 +158,21 @@ button {
 	font-size:14px;
 	line-height:17,07px;
 	color:rgba(31, 32, 65, 0.5);
+	height:35px;
+	align-items: center;
+	margin-right: 44px;
 }
 
 .list li {
 	list-style:none;
-	transition:0.3s;
 	cursor:pointer;
+	padding-left: 24px;
 }
 
 .list a {
 	color: rgba(31, 32, 65, 0.5);
-	transition:0.3s;
 }
 
-.list > ul > li {
-	float:left;
-	padding:25px 10px;
-	transition:0.3s;
-}
 
 .list ul li a {
 	display:block;
@@ -236,13 +228,14 @@ button {
 .right_Part_Header{
 	display:flex;
 	justify-content:space-around;
-	height:70px;
+	height:35px;
+	align-items: center;
+	text-align: center;
 }
 
 .header img {
 	padding-left:10px;
 }
-
 
 
 /*панель входа и регистрации*/
@@ -252,10 +245,7 @@ button {
 	font-weight:bold;
 	font-size:12px;
 	line-height:15px;
-	height:34px;
 	text-align:center;
-	margin-top:15px;
-	margin-left:35px;
 }
 
 .logup .login {
@@ -328,6 +318,16 @@ button {
 	display:flex;
 	flex-direction:column;
 }
+
+.content .search_room h1 {
+	font-size: 24px;
+	margin:0;
+}
+
+.content .search_room p {
+	margin-bottom: 5.44px;
+}
+
 
 .content_page {
 	width:297px; 
@@ -477,6 +477,11 @@ button {
 	flex-wrap:wrap;
 	margin:0;
 	padding:0;
+	font-size: 12px;
+}
+
+.block_date p {
+	margin-top: 24.7px;
 }
 
 .search_room .residence input {
