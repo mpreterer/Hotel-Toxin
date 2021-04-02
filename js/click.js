@@ -1,7 +1,6 @@
   const drop_block_row = function () {
   const btns = document.querySelectorAll('.circle_drop_item');
 
-
   btns.forEach(btn => {
     btn.addEventListener('click', function () {
       const direction = this.dataset.direction;
