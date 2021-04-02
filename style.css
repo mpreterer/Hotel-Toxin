@@ -100,6 +100,25 @@ button {
 	user-select:none;
 }
 
+.arrow_list_li {
+	position: relative;
+}
+
+.arrow_list_li:after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	right: -18px;
+	width: 12px;
+	height: 8px;
+	background-image: url(image/expand_more.svg);
+}
+
+#arrow_li_left {
+	margin-right: 18px;
+}
+
 .li_burger {
 	padding:6px 0px 8px 7px;
 	font-size:16px;
