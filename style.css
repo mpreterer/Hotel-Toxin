@@ -40,12 +40,10 @@ button {
 	padding-left:15px;
 	color: rgba(31, 32, 65, 0.25);
 	cursor:pointer;
-	transition:0.2s;
 }
 
 .input_favorite:hover {
 	border-color:#6F6F74;
-	transition:0.2s;
 }
 
 .input_favorite:focus {
@@ -210,14 +208,11 @@ button {
 }
 
 .list ul li:hover > a{
-	background:#D8D8D8;
-	color:white;
-	transition:0.3s;
+	opacity: 0.5;
 }
 
 .list ul li:hover {
-	background:#D8D8D8;
-	transition:0.3s;
+	opacity: 0.5;
 }
 
 /*#arrow_list_li:after {
@@ -268,13 +263,11 @@ button {
 	width:87px;
 	border:3px solid #BC9CFF;
 	border-radius:22px;
-	transition:0.3s;
+	transition:0.2s;
 }
 
 .logup .login:hover {
-	border-color:#B08BFF;
-	border-radius:15px 0px 15px 0px;
-	transition:0.3s;
+	opacity: 0.5;
 }
 
 
@@ -289,7 +282,7 @@ button {
 	border-radius:22px;
 	margin-left:20px;
 	border:3px solid transparent;
-	transition:0.3s;
+	transition:0.2s;
 }
 
 .logup .registration a {
@@ -297,9 +290,7 @@ button {
 }
 
 .logup .registration:hover {
-	border-color:#B08BFF;
-	border-radius:15px 0px 15px 0px;
-	transition:0.3s;
+	opacity: 0.5;
 }
 
 
