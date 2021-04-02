@@ -28,6 +28,7 @@ button {
 	border:none;
 	outline:none;
 }
+
 /*Инпуты*/
 .input_favorite {
 	height:44px;
@@ -507,6 +508,10 @@ button {
 	height:159px; 
 }
 
+.dropBlock input {
+	border:none !important;
+}
+
 .dropBlock .drop_block_item {
 	border:1px solid rgba(31, 32, 65, 0.5);
 	box-sizing:border-box;
@@ -640,10 +645,6 @@ button {
 .hide {
 	display:none;
 }
-
-/*.search_room .guests .dropBlock:hover {
-	display:block;
-}*/
 
 /*блоки с прибытием отправкой и гостями */
 .date_arrival, .date_departure, .guests {

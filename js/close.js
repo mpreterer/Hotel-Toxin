@@ -1,4 +1,3 @@
-//block Guests
 const guest = document.querySelector('.guests');
 const drop = document.getElementById('apply');
 const dropBlock = document.querySelector('.dropBlock');

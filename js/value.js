@@ -3,7 +3,6 @@ let outputMax = document.getElementById('maxValue');
 let valueLeft = document.getElementById('input-left');
 let valueRight = document.getElementById('input-right');
 
-outputMin.innerHTML = valueLeft.value;
 outputMax.innerHTML = valueRight.value;
 
 valueLeft.oninput = function() {

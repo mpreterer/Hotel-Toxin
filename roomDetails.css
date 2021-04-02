@@ -98,7 +98,10 @@
 
 .room_information p {
 	margin:0 0 5px 0;
+}
 
+.calendar {
+	padding:0;
 }
 
 .room_information b {
@@ -523,24 +526,17 @@
 	transition:0.3s;
 }
 
-.guests {
-	width:322px;
+.dropBlock {
+	z-index: 3 !important;
+	position: absolute;
 }
 
-.guests {
-	padding:10px 0;
+.drop_block_item {
+	z-index: 3 !important;
 }
 
 #temp {
 	margin-left:20px;
-}
-
-.guests .dropBlock input{
-	border:none;
-}
-
-.guests:active > .dropBlock{
-	display:block;
 }
 
 .dropBlock:hover {
@@ -552,18 +548,6 @@
 }
 #dropItem2 {
 	margin-right:160px;
-}
-
-.guests .dropBlock {
-	position:relative;
-	z-index:1;
-	padding-top:44px;
-	position:absolute;
-	top:0;
-}
-
-.dropBlock {
-	display:none;
 }
 
 .booking_guests input:hover {
@@ -592,7 +576,7 @@
 	height:44px;
 	width:305px;
 	border:1px solid rgba(31, 32, 65, 0.25);
-	border-radius:4px;
+	border-radius: 4px; 
 	padding-left:15px;
 	cursor:pointer;
 }

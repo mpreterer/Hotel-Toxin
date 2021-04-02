@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link href="style.css" rel="stylesheet">
-	<link rel="stylesheet" href="roomDetails.css">
+	<link href="roomDetails.css" rel="stylesheet">
 	<meta charset="URF-8">
 	<link rel="stylesheet" href="fontawesome.min.css">
 	<script type="text/javascript" src="awesome/fontawesome.min.js"></script>
@@ -195,19 +195,143 @@
 					<div class="booking_arrival">
 						<div class="container_arrival">
 							<h2>прибытие</h2>
-							<input class="departure_input" placeholder="19.08.2019" autocomplete="off" readonly="">
+							<div class="date_arrival">
+							ДД.ММ.ГГГГ
+							<div class="arrow">
+							</div>
+							<div class="calendar_main hide">
+								<div class="calendar hide">
+									<div class="container">
+									<div class="month">
+										<h2>Август 2020</h2></div>
+										<div class="date">
+											<div class="day">Пн</div>
+											<div class="day">Вт</div>
+											<div class="day">Ср</div>
+											<div class="day">Чт</div>
+											<div class="day">Пт</div>
+											<div class="day">Сб</div>
+											<div class="day">Вс</div>
+											<div class="number">29</div>
+											<div class="number">30</div>
+											<div class="number">31</div>
+											<div class="number">1</div>
+											<div class="number">2</div>
+											<div class="number">3</div>
+											<div class="number">4</div>
+											<div class="number">5</div>
+											<div class="number">6</div>
+											<div class="number">7</div>
+											<div class="number">8</div>
+											<div class="number">9</div>
+											<div class="number">10</div>
+											<div class="number">11</div>
+											<div class="number">12</div>
+											<div class="number">13</div>
+											<div class="number">14</div>
+											<div class="number">15</div>
+											<div class="number">16</div>
+											<div class="number">17</div>
+											<div class="number">18</div>
+											<div class="number">19</div>
+											<div class="number">20</div>
+											<div class="number">21</div>
+											<div class="number">22</div>
+											<div class="number">23</div>
+											<div class="number">24</div>
+											<div class="number">25</div>
+											<div class="number">26</div>
+											<div class="number">27</div>
+											<div class="number">28</div>
+											<div class="number">29</div>
+											<div class="number">30</div>
+											<div class="number">31</div>
+											<div class="number">1</div>
+										</div>
+										<div class="function">
+											<div class="clear">Очистить</div>
+											<div class="apply">Применить</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						</div>
 						<div class="container_departure">
 							<h2>выезд</h2>
-							<input class="departure_input" placeholder="19.08.2019" autocomplete="off" readonly="">
+							<div class="date_departure">
+							ДД.ММ.ГГГГ
+							<!-- <input class="departure_input" placeholder="ДД.ММ.ГГГГ" autocomplete="off" readonly=""> -->
+							<div class="arrow">
+							</div>
+							<div class="calendar_main hide" style="left:-184px;">
+								<div class="calendar">
+									<div class="container">
+									<div class="month">
+										<h2>Август 2020</h2></div>
+										<div class="date">
+											<div class="day">Пн</div>
+											<div class="day">Вт</div>
+											<div class="day">Ср</div>
+											<div class="day">Чт</div>
+											<div class="day">Пт</div>
+											<div class="day">Сб</div>
+											<div class="day">Вс</div>
+											<div class="number">29</div>
+											<div class="number">30</div>
+											<div class="number">31</div>
+											<div class="number">1</div>
+											<div class="number">2</div>
+											<div class="number">3</div>
+											<div class="number">4</div>
+											<div class="number">5</div>
+											<div class="number">6</div>
+											<div class="number">7</div>
+											<div class="number">8</div>
+											<div class="number">9</div>
+											<div class="number">10</div>
+											<div class="number">11</div>
+											<div class="number">12</div>
+											<div class="number">13</div>
+											<div class="number">14</div>
+											<div class="number">15</div>
+											<div class="number">16</div>
+											<div class="number">17</div>
+											<div class="number">18</div>
+											<div class="number">19</div>
+											<div class="number">20</div>
+											<div class="number">21</div>
+											<div class="number">22</div>
+											<div class="number">23</div>
+											<div class="number">24</div>
+											<div class="number">25</div>
+											<div class="number">26</div>
+											<div class="number">27</div>
+											<div class="number">28</div>
+											<div class="number">29</div>
+											<div class="number">30</div>
+											<div class="number">31</div>
+											<div class="number">1</div>
+										</div>
+										<div class="function">
+											<div class="clear">Очистить</div>
+											<div class="apply">Применить</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						</div>
 					</div>
 						<!-- <input class="guests_input" placeholder="3 гостя" autocomplete="off" readonly=""> -->
 					<div class="booking_guests">
 						<h2>гости</h2>
 						<div class="guests">
-							<span id="temp">3 гостя</span>
-						<div class="dropBlock">
+							<input placeholder="Сколько Гостей" autocomplete="off" readonly="">
+							<div class="arrow">
+							</div>
+						</div>
+						<div class="dropBlock hide">
 							<div class="drop_block_item">
 								<div class="drop_block_row">
 									<span class="dropItem" id="dropItem1">Взрослые</span>
@@ -240,14 +364,11 @@
 									</button>
 								</div>
 								<div class="drop_function">
-									<a href="#!" id="clear" data-direction="clear" class="link_drop_function">ОЧИСТИТЬ</a>
-									<a href="#!" class="link_drop_function">ПРИМЕНИТЬ</a>
+									<button id = "clear" class="link_drop_function">ОЧИСТИТЬ</button>
+									<button class="link_drop_function" id = "apply">ПРИМЕНИТЬ</button>
 								</div>
 							</div>
 						</div>
-							<div class="arrow">
-							</div>
-					</div>
 					</div>
 
 					<div class="booking_price">
@@ -338,8 +459,10 @@
 </div>
 
 
-<script type="text/javascript" src="js/like.js"></script>
+<script src="js/like.js"></script>
 <script src="js/menu.js"></script> 
 <script src="js/close.js"></script>
+<script src="js/click.js"></script>
+<script src="js/close_calendare.js"></script>
 </body>
 </html>
