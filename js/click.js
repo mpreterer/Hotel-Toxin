@@ -1,8 +1,9 @@
   const conGuests = document.querySelector('.counte_guests');
   const c1 = document.querySelector('#counter1');
+  const c2 = document.querySelector('#counter2');
+
 
   var old = 0;
-  var young = 0;
   var both = 0;
 
   var strOld = '';
@@ -29,23 +30,23 @@
 
       // Для взрослых
       if ( c1.value > 0 && direction === 'plus' ) {
-          conGuests.value = `${young + strYoung + both + strBoth}`;
-          strOld = 'взрослых'
+          conGuests.value = '';
+          strOld = 'гостя'
           old += 1;
 
           conGuests.value +=
-          `${old} ${strOld
-           + young + strYoung 
-           + both + strBoth}
-          `;
+          `${old} ${strOld} ${both} ${strBoth}`;
       } else if ( c1.value <= 0 ) {
           conGuests.value = '';
           old = 0;
-
       } else {
           conGuests.value = '';
           old -= 1;
-          conGuests.value += `${old} ${strOld + strYoung + strBoth}`;
+          if ( both === 0) {
+            conGuests.value += `${old} ${strOld} ${strBoth}`;
+          } else {
+            conGuests.value += `${old} ${strOld} ${strBoth}`;
+          }
       }
 
       //
