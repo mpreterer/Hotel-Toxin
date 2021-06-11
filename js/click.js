@@ -5,6 +5,10 @@
   var young = 0;
   var both = 0;
 
+  var strOld = '';
+  var strYoung = '';
+  var strBoth = '';
+
   const drop_block_row = function () {
   const btns = document.querySelectorAll('.circle_drop_item');
 
@@ -24,19 +28,27 @@
 
 
       // Для взрослых
-      if (c1.value > 0 && direction === 'plus') {
-        conGuests.value = '';
-        old += 1;
-        conGuests.value += `${old} взрослый`;
-      } else if (c1.value <= 0) {
-        conGuests.value = '';
-        old = 0;
+      if ( c1.value > 0 && direction === 'plus' ) {
+          conGuests.value = `${young + strYoung + both + strBoth}`;
+          strOld = 'взрослых'
+          old += 1;
+
+          conGuests.value +=
+          `${old} ${strOld
+           + young + strYoung 
+           + both + strBoth}
+          `;
+      } else if ( c1.value <= 0 ) {
+          conGuests.value = '';
+          old = 0;
+
       } else {
-        conGuests.value = '';
-        old -= 1;
-        conGuests.value += `${old} взрослый`;
+          conGuests.value = '';
+          old -= 1;
+          conGuests.value += `${old} ${strOld + strYoung + strBoth}`;
       }
 
+      //
     })
   })
 
