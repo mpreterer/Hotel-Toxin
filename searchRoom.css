@@ -74,16 +74,18 @@
 
 .guests{
 	width:266px;
-	margin-bottom:20px;
-	padding:10px 0;
+	padding:10px 10px;
+
 }
 
+.counte_guests {
+	border: none;
+}
 
 .guests .dropBlock{
-	display:none;
 	z-index:1;
 	position:relative;
-	top:0;
+	top:12px;
 	cursor:pointer;
 	width:266px;
 }
@@ -104,24 +106,10 @@
 	margin-right:75px;
 }
 
-.guests .dropBlock input {
-	border:none;
-}
-
 #temp {
 	position:absolute;
 	left:20px;
 }
-
-
-.guests:active > .dropBlock {
-	display:block;
-}
-
-.dropBlock:hover {
-	display:block;
-}
-
 
 .content_search_room i {
 	position:absolute;
@@ -135,7 +123,7 @@
 
 .content_search_room .price_hotel {
 	width:266px;
-	margin-bottom:30px;
+	margin:20px 0 30px 0;
 	z-index:-1;
 }
 

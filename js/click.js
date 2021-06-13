@@ -184,8 +184,6 @@ function plusBoth(directMinus) {
       if ( both === 1 || both === 21 ) {
         strBoth = 'младенец';
         counter.value = ` ${both} ${strBoth}`;
-      } else if ( young + old === 0 ) {
-        counter.value = `${both} ${strBoth}`;
       } else if ( both >= 2 && both <= 4 || both >= 22 && both <= 24 ) {
         strBoth = 'младенеца';
         counter.value = ` ${both} ${strBoth}`;
@@ -198,17 +196,15 @@ function plusBoth(directMinus) {
       if ( both === 1 || both === 21 ) {
         strBoth = 'младенец';
         counter.value = `${old + young} ${strGuest}`;
-        counter.value += `${both} ${strBoth}`;
-      } else if ( young + old === 0 ) {
-        counter.value = `${both} ${strBoth}`;
+        counter.value += ` ${both} ${strBoth}`;
       } else if ( both >= 2 && both <= 4 || both >= 22 && both <= 24 ) {
         strBoth = 'младенеца';
         counter.value = `${old + young} ${strGuest}`;
-        counter.value += `${both} ${strBoth}`;
+        counter.value += ` ${both} ${strBoth}`;
       } else {
         strBoth = 'младенецев';
         counter.value = `${old + young} ${strGuest}`;
-        counter.value += `${both} ${strBoth}`;
+        counter.value += ` ${both} ${strBoth}`;
       }
     }
 

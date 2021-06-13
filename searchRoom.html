@@ -24,7 +24,7 @@
 <nav class="header">
 	<a href="index.html">
 		<div class="logo">
-			<img src="image/Logo.svg" width="106px" 	height="40px">
+			<img src="image/Logo.svg" width="106px" height="40px">
 		</div>
 	</a>
 <div class="right_Part_Header">
@@ -676,48 +676,47 @@
 				
 			</div>
 					<div class="guests">
-						<!-- input type="text" autocomplete="off" placeholder="3 гостя, 1 младенец" readonly="" class="input_favorite">
-						<i class="fas fa-angle-down"></i> -->
-						<span id="temp">3 гостя, 1 младенец</span>
-						<div class="dropBlock">
+
+						<input placeholder="Сколько Гостей" autocomplete="off" readonly="" class="counte_guests">
+					</div>
+						<div class="dropBlock hide">
 							<div class="drop_block_item">
 								<div class="drop_block_row">
 									<span class="dropItem" id="dropItem1">Взрослые</span>
-									<button class="circle_drop_item circle_drop_minus" data-direction="minus">
+									<button class="circle_drop_item circle_drop_minus1">
 										-
 									</button>
-										<input type="text" class="counter" value="0">
-									<button class="circle_drop_item circle_drop_plus" data-direction="plus" onclick="backCircle()">
+										<input type="text" id="counter1" value="0">
+									<button class="circle_drop_item circle_drop_plus1">
 										+
 									</button>
 								</div>
 								<div class="drop_block_row">
 									<span class="dropItem" id="dropItem2">Дети</span>
-									<button class="circle_drop_item circle_drop_minus" data-direction="minus">
+									<button class="circle_drop_item circle_drop_minus2" >
 										-
 									</button>
-										<input class="counter" value="0">
-									<button class="circle_drop_item circle_drop_plus"data-direction="plus">
+										<input id="counter2" value="0">
+									<button class="circle_drop_item circle_drop_plus2">
 										+
 									</button>
 								</div>
 								<div class="drop_block_row">
 									<span class="dropItem" id="dropItem3">Младенцы</span>
-									<button class="circle_drop_item circle_drop_minus" data-direction="minus">
+									<button class="circle_drop_item circle_drop_minus3">
 										-
 									</button>
-										<input class="counter" value="0">
-									<button class="circle_drop_item circle_drop_plus" data-direction="plus">
+										<input id="counter3" value="0">
+									<button class="circle_drop_item circle_drop_plus3">
 										+
 									</button>
 								</div>
 								<div class="drop_function">
-									<a href="#!" id="clear" data-direction="clear" class="link_drop_function">ОЧИСТИТЬ</a>
-									<a href="#!" class="link_drop_function">ПРИМЕНИТЬ</a>
+									<button id="clear" class="link_drop_function">ОЧИСТИТЬ</button>
+									<button class="link_drop_function" id="apply">ПРИМЕНИТЬ</button>
 								</div>
 							</div>
 						</div>
-					</div>
 
 			<div class="price_hotel">
 				<div class="middle">
@@ -875,8 +874,8 @@
 <script src="js/nouislider.min.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/click.js"></script>
-<script src="js/close__dropBlock.js"></script>
 <script src="js/value.js"></script>
 <script src="js/range.js"></script>
+<script src="js/close.js"></script>
 </body>
 </html>

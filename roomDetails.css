@@ -539,9 +539,6 @@
 	margin-left:20px;
 }
 
-.dropBlock:hover {
-	display:block;
-}
 
 #dropItem1 {
 	margin-right:124px;
@@ -659,6 +656,15 @@
 	right:-12px;
 }
 
+.guests {
+	border: none;
+}
+
+.guests:hover {
+	border: none;
+}
+
+.drop
 
 
 

@@ -5,8 +5,8 @@
 	<link href="roomDetails.css" rel="stylesheet">
 	<meta charset="URF-8">
 	<link rel="stylesheet" href="fontawesome.min.css">
-	<script type="text/javascript" src="awesome/fontawesome.min.js"></script>
-	<script src="https://kit.fontawesome.com/bc390f5649.js" crossorigin="anonymous"></script>
+	<!-- <script type="text/javascript" src="awesome/fontawesome.min.js"></script> -->
+	<!-- <script src="https://kit.fontawesome.com/bc390f5649.js" crossorigin="anonymous"></script> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="shortcut icon" href="image/Logo.png" type="image/png">
@@ -327,39 +327,38 @@
 					<div class="booking_guests">
 						<h2>гости</h2>
 						<div class="guests">
-							<input placeholder="Сколько Гостей" autocomplete="off" readonly="">
-							<div class="arrow">
-							</div>
+							<input placeholder="Сколько Гостей" autocomplete="off" readonly="" class="counte_guests">
+						<div class="arrow"></div>
 						</div>
 						<div class="dropBlock hide">
 							<div class="drop_block_item">
 								<div class="drop_block_row">
 									<span class="dropItem" id="dropItem1">Взрослые</span>
-									<button class="circle_drop_item circle_drop_minus" data-direction="minus">
+									<button class="circle_drop_item circle_drop_minus1">
 										-
 									</button>
-										<input type="text" class="counter" value="0">
-									<button class="circle_drop_item circle_drop_plus" data-direction="plus" onclick="backCircle()">
+										<input type="text" id="counter1" value="0">
+									<button class="circle_drop_item circle_drop_plus1">
 										+
 									</button>
 								</div>
 								<div class="drop_block_row">
 									<span class="dropItem" id="dropItem2">Дети</span>
-									<button class="circle_drop_item circle_drop_minus" data-direction="minus">
+									<button class="circle_drop_item circle_drop_minus2">
 										-
 									</button>
-										<input class="counter" value="0">
-									<button class="circle_drop_item circle_drop_plus"data-direction="plus">
+										<input id="counter2" value="0">
+									<button class="circle_drop_item circle_drop_plus2">
 										+
 									</button>
 								</div>
 								<div class="drop_block_row">
 									<span class="dropItem" id="dropItem3">Младенцы</span>
-									<button class="circle_drop_item circle_drop_minus" data-direction="minus">
+									<button class="circle_drop_item circle_drop_minus3">
 										-
 									</button>
-										<input class="counter" value="0">
-									<button class="circle_drop_item circle_drop_plus" data-direction="plus">
+										<input id="counter3" value="0">
+									<button class="circle_drop_item circle_drop_plus3">
 										+
 									</button>
 								</div>
