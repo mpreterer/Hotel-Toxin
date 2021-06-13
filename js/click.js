@@ -16,38 +16,107 @@ const minus3 = document.querySelector('.circle_drop_minus3');
 var both = 0;
 var old = 0;
 var young = 0;
+var strGuest = '';
+var strBoth = '';
 
 function plus(directPlus) {
   directPlus.addEventListener('click', () => {
     old += 1;
-    let val1 = +counter.value.substr(0,1)
 
-    if ( val1 === 1 || val1 === 21 )
+    if ( old + young === 1 || old + young === 21 )
     {
-      counter.value = old + young + ' гость';
-    } else if ( val1 >= 2 && val1 <= 4 || val1 >= 22 && val1 <= 24) {
-      counter.value = old + young + ' гостя';
+      strGuest = 'гость';
+      counter.value = `${old + young} ${strGuest}`;
+    } else if ( old + young >= 2 && old + young <= 4 || old + young >= 22 && old + young <= 24) {
+      strGuest = 'гостя'
+      counter.value = `${old + young} ${strGuest}`;
+    } else if ( both === 0 ) {
+      strGuest = 'гостей';
+      counter.value = `${old + young} ${strGuest}`;
     } else {
-      counter.value = old + young + ' гостей';
+      counter.value = `${old + young} ${strGuest} ${both} ${strBoth}`;
     }
 
     c1.value = old;
   })
 }
 
+function minus(directMinus) {
+  directMinus.addEventListener('click', () => {
+    old -= 1;
+
+    if (old<0) {
+      old = 0;
+    }
+
+    if ( old + young === 1 || old + young === 21 )
+    {
+      strGuest = 'гость';
+      counter.value = `${old + young} ${strGuest}`;
+    } else if ( old + young >= 2 && old + young <= 4 || old + young >= 22 && old + young <= 24) {
+      strGuest = 'гостя'
+      counter.value = `${old + young} ${strGuest}`;
+    } else if ( old + young <= 0 ) {
+      counter.value = '';
+      c1.value = 0;
+    } else if ( both === 0 ) {
+      strGuest = 'гостей';
+      counter.value = `${old + young} ${strGuest}`;
+    } else {
+      counter.value = `${old + young} ${strGuest} ${both} ${strBoth}`;
+    }
+
+    c1.value = old;
+  })
+}
+
+
+
 function plusYoung(directPlus) {
   directPlus.addEventListener('click', () => {
     young += 1;
 
-   if ( value === 1 || value === 21 )
+   if ( old + young === 1 || old + young === 21 )
     {
-      counter.value = old + young + ' гость';
-    } else if ( value >= 2 && value <= 4 || value >= 22 && value <= 24) {
-      counter.value = old + young + ' гостя';
+      strGuest = 'гость';
+      counter.value = `${old + young} ${strGuest}`;
+    } else if ( old + young >= 2 && old + young <= 4 || old + young >= 22 && old + young <= 24) {
+      strGuest = 'гостя'
+      counter.value = `${old + young} ${strGuest}`;
     } else if (both === 0) {
-      counter.value = `${old + young} гостей`;
+      strGuest = 'гостей';
+      counter.value = `${old + young} ${strGuest}`;
     } else {
-      counter.value = `${old + young} гостей ${plusBoth(plus3)}`;
+      counter.value = `${old + young} ${strGuest} ${both} ${strBoth}`;
+    }
+
+    c2.value = young;
+  })
+}
+
+function minusYoung(directMinus) {
+  directMinus.addEventListener('click', () => {
+    young -= 1;
+
+    if ( young < 0 ) {
+      young = 0;
+    }
+
+    if ( old + young === 1 || old + young === 21 )
+    {
+      strGuest = 'гость';
+      counter.value = `${old + young} ${strGuest}`;
+    } else if ( old + young >= 2 && old + young <= 4 || old + young >= 22 && old + young <= 24) {
+      strGuest = 'гостя'
+      counter.value = `${old + young} ${strGuest}`;
+    } else if ( old + young <= 0) {
+      counter.value = '';
+      c2.value = 0;
+    } else if ( both === 0 ) {
+      strGuest = 'гостей';
+      counter.value = `${old + young} ${strGuest}`;
+    } else {
+      counter.value = `${old + young} ${strGuest} ${both} ${strBoth}`;
     }
 
     c2.value = young;
@@ -57,16 +126,32 @@ function plusYoung(directPlus) {
 function plusBoth(directPlus) {
   directPlus.addEventListener('click', () => {
     both += 1;
+
+
     if ( both === 1 || both === 21 ) {
-      counter.value += ` ${both} младенец`;
-    } else if ( both >= 2 && both <= 4 || both >= 22 && both <= 24) {
-      counter.value = ` ${both} младенеца`;
+      strBoth = 'младенец';
+      counter.value = `${old + young} ${strGuest}`;
+      counter.value += ` ${both} ${strBoth}`;
+    } else if ( young + old === 0 ) {
+      counter.value = `${both} ${strBoth}`;
+    } else if ( both >= 2 && both <= 4 || both >= 22 && both <= 24 ) {
+      strBoth = 'младенеца';
+      counter.value = `${old + young} ${strGuest}`;
+      counter.value += ` ${both} ${strBoth}`;
     } else {
-      counter.value = ` ${both} младенецев`;
+      strBoth = 'младенецев';
+      counter.value = `${old + young} ${strGuest}`;
+      counter.value += ` ${both} ${strBoth}`;
     }
+
+    c3.value = both;
   })
 }
 
 plus(plus1);
+minus(minus1);
+
 plusYoung(plus2);
+minusYoung(minus2);
+
 plusBoth(plus3);
