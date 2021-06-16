@@ -1,8 +1,8 @@
-var inputLeft = document.getElementById("input-left");
-var inputRight = document.getElementById("input-right");
-var thumbLeft = document.querySelector(".slider > .thumb.left");
-var thumbRight = document.querySelector(".slider > .thumb.right");
-var range = document.querySelector(".slider > .range");
+const inputLeft = document.getElementById("input-left");
+const inputRight = document.getElementById("input-right");
+const thumbLeft = document.querySelector(".slider > .thumb.left");
+const thumbRight = document.querySelector(".slider > .thumb.right");
+const range = document.querySelector(".slider > .range");
 
 
 function setLeftValue() {

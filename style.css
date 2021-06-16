@@ -391,6 +391,16 @@ button {
 	margin-top: 50px;
 }
 
+#dateCalendare {
+	position: absolute;
+	z-index: 4;
+	width: 270px;
+	left:0;
+	border: 1px solid #000;
+	opacity: 0;
+
+}
+
 .calendar h2 {
 	margin:0 0 30px 0;
 	color:#000;
