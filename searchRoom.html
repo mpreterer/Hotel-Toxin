@@ -784,7 +784,45 @@
 
 			<span class="h_span_block_hotel">удобства номера</span>
 			<div class="conveniences">
-				<input type="text" name="block_6" id="block_6" placeholder="2 спальни, 2 кровати..." autocomplete="off" readonly="">
+				<input type="text" name="block_6" id="block_6" placeholder="2 спальни, 2 кровати..." autocomplete="off" readonly="" class="counte_conveniences">
+				<div class="dropBlockCon dropBlock hide">
+							<div class="drop_block_item">
+								<div class="drop_block_row">
+									<span class="dropItem" id="dropItem1">спальни</span>
+									<button class="circle_drop_item circle_con_minus1" data-direction="minus">
+										-
+									</button>
+										<input type="text" id ="counter1" value="0">
+									<button class="circle_drop_item circle_con_plus1" data-direction="plus">
+										+
+									</button>
+								</div>
+								<div class="drop_block_row">
+									<span class="dropItem dropItemCon2" id="dropItem2">кровати</span>
+									<button class="circle_drop_item circle_con_minus2" data-direction="minus">
+										-
+									</button>
+										<input id ="counter2" value="0">
+									<button class="circle_drop_item circle_con_plus2"data-direction="plus">
+										+
+									</button>
+								</div>
+								<div class="drop_block_row">
+									<span class="dropItem dropItemCon3" id="dropItem3">ванные комнаты</span>
+									<button class="circle_drop_item circle_con_minus3" data-direction="minus">
+										-
+									</button>
+										<input id ="counter3" value="0">
+									<button class="circle_drop_item circle_con_plus1" data-direction="plus">
+										+
+									</button>
+								</div>
+								<div class="drop_function">
+									<button id = "clear" class="link_drop_function">ОЧИСТИТЬ</button>
+									<button class="link_drop_function" id = "apply">ПРИМЕНИТЬ</button>
+								</div>
+							</div>
+						</div>
 			</div>
 
 			<div class="convenience">
@@ -877,5 +915,7 @@
 <script src="js/value.js"></script>
 <script src="js/range.js"></script>
 <script src="js/close.js"></script>
+<script src="js/close__dropBlock.js"></script>
+<script src="js/conveniences.js"></script>
 </body>
 </html>
