@@ -95,15 +95,15 @@
 }
 
 #dropItem1 {
-	margin-right:80px;
+	margin-right:70px;
 }
 
 #dropItem2 {
-	margin-right:115px;
+	margin-right:112px;
 }
 
 #dropItem3 {
-	margin-right:75px;
+	margin-right:63px;
 }
 
 #temp {
@@ -291,7 +291,7 @@
 
 .conveniences input {
 	border:none;
-	width:150px;
+	width:200px;
 	cursor:pointer;
 }
 
@@ -685,10 +685,10 @@
 	width: 266px;
 	position: relative;
 	z-index: 3;
-	top:12px;
-	left:-16px;
-	border-radius: 4px;
-	border-top:1px solid rgba(31, 32, 65, 0.5);
+}
+
+.dropItemCon1 {
+	margin-right: 78px !important;
 }
 
 .dropItemCon2 {
@@ -696,7 +696,7 @@
 }
 
 .dropItemCon3 {
-	margin-right: 20px !important;
+	margin-right: 9px !important;
 }
 
 .drop_item_convenience {

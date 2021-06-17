@@ -578,6 +578,7 @@ button {
 	display:flex;
 	flex-wrap:wrap;
 	font-size: 12px;
+	text-transform: uppercase;
 }
 
 

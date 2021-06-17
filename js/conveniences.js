@@ -1,23 +1,8 @@
-const conv = document.querySelector('.conveniences');
-const dropCon = document.querySelector('.dropBlockCon');
-
-conv.onclick = () => {
-  if ( dropCon.classList.contains('hide') ) {
-    dropCon.classList.remove('hide');
-  } else {
-    dropCon.classList.add('hide');
-  }
-}
-
-
-
-
-
 const counterCon = document.querySelector('.counte_conveniences');
 
-const Con1 = document.querySelector('#counter1');
-const Con2 = document.querySelector('#counter2');
-const Con3 = document.querySelector('#counter3');
+const Con1 = document.querySelector('#counterCon1');
+const Con2 = document.querySelector('#counterCon2');
+const Con3 = document.querySelector('#counterCon3');
 
 const plusCon1 = document.querySelector('.circle_con_plus1');  
 const plusCon2 = document.querySelector('.circle_con_plus2');  
@@ -29,39 +14,69 @@ const minusCon3 = document.querySelector('.circle_con_minus3');
 
 var bathrooms = 0;
 var bedrooms = 0;
-var young = 0;
-var strGuest = '';
-var strBoth = '';
+var bed = 0;
+var strSpa = '';
+var strBed = '';
+var strVan = '';
 
 
-function plus(directPlus) {
+function plusBedr(directPlus) {
   directPlus.addEventListener('click', () => {
     bedrooms += 1;
 
-    if ( bathrooms === 0 ) {
-      if ( bedrooms + young === 1 || bedrooms + young === 21 )
+    if ( bed > 0 && bathrooms > 0 ) {
+      if ( bedrooms === 1 || bedrooms === 21 )
         {
-          strGuest = 'гость';
-          counter.value = `${bedrooms + young} ${strGuest}`;
-      } else if ( bedrooms + young >= 2 && bedrooms + young <= 4 || bedrooms + young >= 22 && bedrooms + young <= 24) {
-          strGuest = 'гостя'
-          counter.value = `${bedrooms + young} ${strGuest}`;
+          strSpa = 'спальня';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
+      } else if ( bedrooms >= 2 && bedrooms <= 4 || bedrooms >= 22 && bedrooms <= 24) {
+          strSpa = 'спальни'
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else {
-          strGuest = 'гостей';
-          counter.value = `${bedrooms + young} ${strGuest}`;
+          strSpa = 'спален';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
       }
 
-    } else {
-      if ( bedrooms + young === 1 || bedrooms + young === 21 )
+    } else if ( bed > 0 ) {
+
+      if ( bedrooms === 1 || bedrooms === 21 )
         {
-          strGuest = 'гость';
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
-      } else if ( bedrooms + young >= 2 && bedrooms + young <= 4 || bedrooms + young >= 22 && bedrooms + young <= 24) {
-          strGuest = 'гостя'
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
+          strSpa = 'спальня';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed}`;
+      } else if ( bedrooms >= 2 && bedrooms <= 4 || bedrooms >= 22 && bedrooms <= 24) {
+          strSpa = 'спальни'
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed}`;
       } else {
-          strGuest = 'гостей';
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
+          strSpa = 'спален';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed}`;
+      }
+
+    } else if ( bathrooms > 0) {
+
+      if ( bedrooms === 1 || bedrooms === 21 )
+        {
+          strSpa = 'спальня';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${bathrooms} ${strVan}`;
+      } else if ( bedrooms >= 2 && bedrooms <= 4 || bedrooms >= 22 && bedrooms <= 24) {
+          strSpa = 'спальни'
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${bathrooms} ${strVan}`;
+      } else {
+          strSpa = 'спален';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${bathrooms} ${strVan}`;
+      }
+    }
+
+    else {
+      if ( bedrooms === 1 || bedrooms === 21 )
+        {
+          strSpa = 'спальня';
+          counterCon.value = `${bedrooms} ${strSpa}`;
+      } else if ( bedrooms >= 2 && bedrooms <= 4 || bedrooms >= 22 && bedrooms <= 24) {
+          strSpa = 'спальни'
+          counterCon.value = `${bedrooms} ${strSpa}`;
+      } else {
+          strSpa = 'спален';
+          counterCon.value = `${bedrooms} ${strSpa}`;
       }
 
     }
@@ -70,7 +85,7 @@ function plus(directPlus) {
   })
 }
 
-function minus(directMinus) {
+function minusBedr(directMinus) {
   directMinus.addEventListener('click', () => {
     bedrooms -= 1;
 
@@ -78,36 +93,61 @@ function minus(directMinus) {
       bedrooms = 0;
     }
 
-    if ( bathrooms === 0 ) {
-      if ( bedrooms + young === 1 || bedrooms + young === 21 ) {
-          strGuest = 'гость';
-          counter.value = `${bedrooms + young} ${strGuest}`;
-      } else if ( bedrooms + young >= 2 && bedrooms + young <= 4 || bedrooms + young >= 22 && bedrooms + young <= 24) {
-          strGuest = 'гостя'
-          counter.value = `${bedrooms + young} ${strGuest}`;
-      } else if ( bedrooms + young <= 0 ) {
-          counter.value = '';
-        c1.value = 0;
+    if ( bed > 0 && bathrooms > 0 ) {
+      if ( bedrooms === 1 || bedrooms === 21 )
+        {
+          strSpa = 'спальня';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
+      } else if ( bedrooms >= 2 && bedrooms <= 4 || bedrooms >= 22 && bedrooms <= 24) {
+          strSpa = 'спальни'
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else {
-          strGuest = 'гостей';
-          counter.value = `${bedrooms + young} ${strGuest}`;
+          strSpa = 'спален';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
       }
 
-    } else {
-      if ( bedrooms + young === 1 || bedrooms + young === 21 ) {
-          strGuest = 'гость';
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
-      } else if ( bedrooms + young >= 2 && bedrooms + young <= 4 || bedrooms + young >= 22 && bedrooms + young <= 24) {
-          strGuest = 'гостя'
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
-      } else if ( bedrooms + young <= 0 ) {
-          strGuest = '';
-          counter.value = `${bathrooms} ${strBoth}`
-          c1.value = 0;
+    } else if ( bed > 0 ) {
+
+      if ( bedrooms === 1 || bedrooms === 21 )
+        {
+          strSpa = 'спальня';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed}`;
+      } else if ( bedrooms >= 2 && bedrooms <= 4 || bedrooms >= 22 && bedrooms <= 24) {
+          strSpa = 'спальни'
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed}`;
       } else {
-          strGuest = 'гостей';
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
+          strSpa = 'спален';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed}`;
       }
+
+    } else if ( bathrooms > 0) {
+
+      if ( bedrooms === 1 || bedrooms === 21 )
+        {
+          strSpa = 'спальня';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${bathrooms} ${strVan}`;
+      } else if ( bedrooms >= 2 && bedrooms <= 4 || bedrooms >= 22 && bedrooms <= 24) {
+          strSpa = 'спальни'
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${bathrooms} ${strVan}`;
+      } else {
+          strSpa = 'спален';
+          counterCon.value = `${bedrooms} ${strSpa} ${bed} ${bathrooms} ${strVan}`;
+      }
+    }
+
+    else {
+      if ( bedrooms === 1 || bedrooms === 21 )
+        {
+          strSpa = 'спальня';
+          counterCon.value = `${bedrooms} ${strSpa}`;
+      } else if ( bedrooms >= 2 && bedrooms <= 4 || bedrooms >= 22 && bedrooms <= 24) {
+          strSpa = 'спальни'
+          counterCon.value = `${bedrooms} ${strSpa}`;
+      } else {
+          strSpa = 'спален';
+          counterCon.value = `${bedrooms} ${strSpa}`;
+      }
+
     }
 
     Con1.value = bedrooms;
@@ -116,110 +156,110 @@ function minus(directMinus) {
 
 
 
-function plusYoung(directPlus) {
+function plusBed(directPlus) {
   directPlus.addEventListener('click', () => {
-    young += 1;
+    bed += 1;
 
    if ( bathrooms === 0 ) {
-     if ( bedrooms + young === 1 || bedrooms + young === 21 ) {
-          strGuest = 'гость';
-          counter.value = `${bedrooms + young} ${strGuest}`;
-     } else if ( bedrooms + young >= 2 && bedrooms + young <= 4 || bedrooms + young >= 22 && bedrooms + young <= 24) {
-          strGuest = 'гостя';
-          counter.value = `${bedrooms + young} ${strGuest}`;
+     if ( bedrooms === 1 || bedrooms === 21 ) {
+          strBed = 'кровать';
+          counterCon.value = `${bed} ${strBed}`;
+     } else if ( bed >= 2 && bed <= 4 || bed >= 22 && bed <= 24) {
+          strBed = 'кровати';
+          counterCon.value = `${bed} ${strBed}`;
      } else {
-          strGuest = 'гостей';
-          counter.value = `${bedrooms + young} ${strGuest}`;
+          strBed = 'кроватей';
+          counterCon.value = `${bed} ${strBed}`;
      }
 
    } else {
-      if ( bedrooms + young === 1 || bedrooms + young === 21 ) {
-          strGuest = 'гость';
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
-     } else if ( bedrooms + young >= 2 && bedrooms + young <= 4 || bedrooms + young >= 22 && bedrooms + young <= 24) {
-          strGuest = 'гостя';
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
+      if ( bed === 1 || bed === 21 ) {
+          strBed = 'кровать';
+          counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
+     } else if ( bed >= 2 && bed <= 4 || bed >= 22 && bed <= 24) {
+          strBed = 'кровати';
+          counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
      } else {
-          strGuest = 'гостей';
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
+          strBed = 'кроватей';
+          counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
      }
    }
 
-    Con2.value = young;
+    Con2.value = bed;
   })
 }
 
-function minusYoung(directMinus) {
+function minusBed(directMinus) {
   directMinus.addEventListener('click', () => {
-    young -= 1;
+    bed -= 1;
 
-    if ( young < 0 ) {
-      young = 0;
+    if ( bed < 0 ) {
+      bed = 0;
     }
 
     if ( bathrooms === 0 ) {
-      if ( bedrooms + young === 1 || bedrooms + young === 21 ) {
-          strGuest = 'гость';
-          counter.value = `${bedrooms + young} ${strGuest}`;
-      } else if ( bedrooms + young >= 2 && bedrooms + young <= 4 || bedrooms + young >= 22 && bedrooms + young <= 24) {
-          strGuest = 'гостя'
-          counter.value = `${bedrooms + young} ${strGuest}`;
-      } else if ( bedrooms + young <= 0) {
-          counter.value = '';
+      if ( bed === 1 || bed === 21 ) {
+          strBed = 'кровать';
+          counterCon.value = `${bed} ${strBed}`;
+      } else if ( bed >= 2 && bed <= 4 || bed >= 22 && bed <= 24) {
+          strBed = 'кровати'
+          counterCon.value = `${bed} ${strBed}`;
+      } else if ( bed <= 0) {
+          counterCon.value = '';
           c2.value = 0;
       } else {
-          counter.value = `${bedrooms + young} ${strGuest}`;
+          counterCon.value = `${bed} ${strBed}`;
       }
     } else {
-      if ( bedrooms + young === 1 || bedrooms + young === 21 ) {
-          strGuest = 'гость';
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
-      } else if ( bedrooms + young >= 2 && bedrooms + young <= 4 || bedrooms + young >= 22 && bedrooms + young <= 24) {
-          strGuest = 'гостя'
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
-      } else if ( bedrooms + young <= 0) {
-          strGuest = '';
-          counter.value = `${bathrooms} ${strBoth}`
+      if ( bed === 1 || bed === 21 ) {
+          strBed = 'кровать';
+          counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
+      } else if ( bed >= 2 && bed <= 4 || bed >= 22 && bed <= 24) {
+          strBed = 'кровати'
+          counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
+      } else if ( bed <= 0) {
+          strBed = '';
+          counterCon.value = `${bathrooms} ${strVan}`
           c2.value = 0;
       } else {
-          strGuest = 'гостей'
-          counter.value = `${bedrooms + young} ${strGuest} ${bathrooms} ${strBoth}`;
+          strBed = 'кроватей'
+          counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
       }
     }
 
-    Con2.value = young;
+    Con2.value = bed;
   })
 }
 
-function plusBoth(directMinus) {
-  directMinus.addEventListener('click', () => {
+function plusBath(directPlus) {
+  directPlus.addEventListener('click', () => {
     bathrooms += 1;
 
-    if ( bedrooms + young === 0 ) {
+    if ( bedrooms === 0 ) {
       if ( bathrooms === 1 || bathrooms === 21 ) {
-        strBoth = 'младенец';
-        counter.value = ` ${bathrooms} ${strBoth}`;
+        strVan = 'ванная';
+        counterCon.value = ` ${bathrooms} ${strVan}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24 ) {
-        strBoth = 'младенеца';
-        counter.value = ` ${bathrooms} ${strBoth}`;
+        strVan = 'ванные';
+        counterCon.value = ` ${bathrooms} ${strVan}`;
       } else {
-        strBoth = 'младенецев';
-        counter.value = ` ${bathrooms} ${strBoth}`;
+        strVan = 'ванных';
+        counterCon.value = ` ${bathrooms} ${strVan}`;
       }
     }
     else { 
       if ( bathrooms === 1 || bathrooms === 21 ) {
-        strBoth = 'младенец';
-        counter.value = `${bedrooms + young} ${strGuest}`;
-        counter.value += ` ${bathrooms} ${strBoth}`;
+        strVan = 'ванная';
+        counterCon.value = `${bedrooms} ${strSpa}`;
+        counterCon.value += ` ${bathrooms} ${strVan}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24 ) {
-        strBoth = 'младенеца';
-        counter.value = `${bedrooms + young} ${strGuest}`;
-        counter.value += ` ${bathrooms} ${strBoth}`;
+        strVan = 'ванные';
+        counterCon.value = `${bedrooms} ${strSpa}`;
+        counterCon.value += ` ${bathrooms} ${strVan}`;
       } else {
-        strBoth = 'младенецев';
-        counter.value = `${bedrooms + young} ${strGuest}`;
-        counter.value += ` ${bathrooms} ${strBoth}`;
+        strVan = 'ванных';
+        counterCon.value = `${bedrooms} ${strSpa}`;
+        counterCon.value += ` ${bathrooms} ${strVan}`;
       }
     }
 
@@ -227,7 +267,7 @@ function plusBoth(directMinus) {
   })
 }
 
-function minusBoth(directMinus) {
+function minusBath(directMinus) {
   directMinus.addEventListener('click', () => {
     bathrooms -= 1;
 
@@ -235,44 +275,44 @@ function minusBoth(directMinus) {
       bathrooms = 0;
     }
 
-    if ( bedrooms + young === 0 ) {
+    if ( bedrooms === 0 ) {
       if ( bathrooms === 1 || bathrooms === 21 ) {
-        strBoth = 'младенец';
-        counter.value = ` ${bathrooms} ${strBoth}`;
-      } else if ( young + bedrooms === 0 ) {
-        counter.value = `${bathrooms} ${strBoth}`;
+        strVan = 'ванная';
+        counterCon.value = ` ${bathrooms} ${strVan}`;
+      } else if ( bedrooms === 0 ) {
+        counterCon.value = `${bathrooms} ${strVan}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24 ) {
-        strBoth = 'младенеца';
-        counter.value = ` ${bathrooms} ${strBoth}`;
+        strVan = 'ванные';
+        counterCon.value = ` ${bathrooms} ${strVan}`;
       } else if ( bathrooms <= 0 ) {
         bathrooms = 0;
-        strBoth = '';
-        counter.value = '';
+        strVan = '';
+        counterCon.value = '';
         c3.value = bathrooms;
       } else {
-        strBoth = 'младенецев';
-        counter.value = ` ${bathrooms} ${strBoth}`;
+        strVan = 'ванных';
+        counterCon.value = ` ${bathrooms} ${strVan}`;
       }
     }
 
     else {
       if ( bathrooms === 1 || bathrooms === 21 ) {
-        strBoth = 'младенец';
-        counter.value = `${bedrooms + young} ${strGuest}`;
-        counter.value += ` ${bathrooms} ${strBoth}`;
-      } else if ( young + bedrooms === 0 ) {
-        counter.value = `${bathrooms} ${strBoth}`;
+        strVan = 'ванная';
+        counterCon.value = `${bedrooms} ${strSpa}`;
+        counterCon.value += ` ${bathrooms} ${strVan}`;
+      } else if ( bedrooms === 0 ) {
+        counterCon.value = `${bathrooms} ${strVan}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24 ) {
-        strBoth = 'младенеца';
-        counter.value = `${bedrooms + young} ${strGuest}`;
-        counter.value += ` ${bathrooms} ${strBoth}`;
+        strVan = 'ванные';
+        counterCon.value = `${bedrooms} ${strSpa}`;
+        counterCon.value += ` ${bathrooms} ${strVan}`;
       } else if ( bathrooms <= 0 ) {
-        counter.value = `${bedrooms + young} ${strGuest}`;
+        counterCon.value = `${bedrooms} ${strSpa}`;
         c3.value = 0;
       } else {
-        strBoth = 'младенецев';
-        counter.value = `${bedrooms + young} ${strGuest}`;
-        counter.value += ` ${bathrooms} ${strBoth}`;
+        strVan = 'ванных';
+        counterCon.value = `${bedrooms} ${strSpa}`;
+        counterCon.value += ` ${bathrooms} ${strVan}`;
       }
     }
     
@@ -281,11 +321,11 @@ function minusBoth(directMinus) {
   })
 }
 
-plus(plus1);
-minus(minus1);
+plusBedr(plusCon1);
+minusBedr(minusCon1);
 
-plusYoung(plus2);
-minusYoung(minus2);
+plusBed(plusCon2);
+minusBed(minusCon2);
 
-plusBoth(plus3);
-minusBoth(minus3)
+plusBath(plusCon3);
+minusBath(minusCon3);
