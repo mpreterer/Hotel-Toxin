@@ -784,15 +784,16 @@
 
 			<span class="h_span_block_hotel">удобства номера</span>
 			<div class="conveniences">
-				<input type="text" name="block_6" id="block_6" placeholder="2 спальни, 2 кровати..." autocomplete="off" readonly="" class="counte_conveniences">
+				<input type="text" name="block_6" id="block_6" placeholder="2 спальни, 2 кровати" autocomplete="off" readonly="" class="counte_conveniences">
+			</div>
 				<div class="dropBlockCon dropBlock hide">
 							<div class="drop_block_item">
 								<div class="drop_block_row">
-									<span class="dropItem" id="dropItem1">спальни</span>
+									<span class="dropItem dropItemCon1" id="dropItem1">спальни</span>
 									<button class="circle_drop_item circle_con_minus1" data-direction="minus">
 										-
 									</button>
-										<input type="text" id ="counter1" value="0">
+										<input type="text" id ="counterCon1" value="0">
 									<button class="circle_drop_item circle_con_plus1" data-direction="plus">
 										+
 									</button>
@@ -802,7 +803,7 @@
 									<button class="circle_drop_item circle_con_minus2" data-direction="minus">
 										-
 									</button>
-										<input id ="counter2" value="0">
+										<input id ="counterCon2" value="0">
 									<button class="circle_drop_item circle_con_plus2"data-direction="plus">
 										+
 									</button>
@@ -812,8 +813,8 @@
 									<button class="circle_drop_item circle_con_minus3" data-direction="minus">
 										-
 									</button>
-										<input id ="counter3" value="0">
-									<button class="circle_drop_item circle_con_plus1" data-direction="plus">
+										<input id ="counterCon3" value="0">
+									<button class="circle_drop_item circle_con_plus3" data-direction="plus">
 										+
 									</button>
 								</div>
@@ -823,7 +824,6 @@
 								</div>
 							</div>
 						</div>
-			</div>
 
 			<div class="convenience">
 				<span>дополнительные удобства</span>
@@ -917,5 +917,6 @@
 <script src="js/close.js"></script>
 <script src="js/close__dropBlock.js"></script>
 <script src="js/conveniences.js"></script>
+<script src="js/close_conveniences.js"></script>
 </body>
 </html>
