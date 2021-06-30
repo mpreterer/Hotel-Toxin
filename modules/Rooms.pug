@@ -1,0 +1,31 @@
+block variables
+
+block room
+    #{classRoom}
+        div.container
+            div.move_arrow.arrow_left
+                a(href="roomDetails.html")
+                    div.container_a
+                        div.icon
+            div.move_arrow.arrow_right
+                a(href="roomDetails.html")
+                    div.container_a
+                        div.icon
+            div.in_circle
+                a.circle.circle_1(href="roomDetails.html")
+                a.circle.circle_1(href="roomDetails.html")
+                a.circle.circle_1(href="roomDetails.html")
+                a.circle.circle_1(href="roomDetails.html")
+        div.head_room
+            p(style="font-size:18px; color:#1F2041; font-weight:bold;") #{numberRoom}
+            span #{level}
+            p(style="font-size:12.5px;line-height: 16px;margin-top:3px;") #{price}
+        div.rating
+            div.star
+                div.stars#star1
+                div.stars#star2
+                div.stars#star3
+                div.stars#star4
+                div.stars#star5
+            div.feedbackspan
+                b #{review}

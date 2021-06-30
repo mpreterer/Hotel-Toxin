@@ -1,7 +1,7 @@
 extends includes/main_index.pug
 
 block header
-    include includes/header1.pug
+    include includes/header.pug
 block content
     div.content
         div.search_room
@@ -144,9 +144,9 @@ block content
                                     div.drop_function
                                         button#clear.link_drop_function ОЧИСТИТЬ
                                         button#apply.link_drop_function ПРИМЕНИТЬ
-                    a(href="searchRoom.html")
+                    a(href="layout/searchRoom.html")
                         div.block4
                             p(style="padding-top:15px") подобрать номер
                             div.arrow_right
 block footer
-    include includes/footer1.pug
+    include includes/footer.pug

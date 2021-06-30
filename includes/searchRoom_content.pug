@@ -1,0 +1,12 @@
+include ../includes/main.pug
+
+block variables
+    - var classRoom = ""
+
+div.content_search_room
+        div.main_content_search_room
+            h2 Номера, которые мы для вас подобрали 
+            div.container_in_hotel
+
+            includes ../modules/Rooms.pug
+            
