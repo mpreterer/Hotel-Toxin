@@ -40,7 +40,7 @@
 	right:15px;
 	width:12px;
 	height:8px;
-	background-image:url(image/expand_more.svg);
+	background-image:url(../image/expand_more.svg);
 }
 
 .conveniences:after {
@@ -51,7 +51,7 @@
 	right:13px;
 	width:12px;
 	height:8px;
-	background-image:url(image/expand_more.svg);
+	background-image:url(../image/expand_more.svg);
 }
 
 .guests:after {
@@ -62,7 +62,7 @@
 	right:13px;
 	width:12px;
 	height:8px;
-	background-image:url(image/expand_more.svg);
+	background-image:url(../image/expand_more.svg);
 }
 
 .data_arrival_in_otel input:hover, .guests_in_hotel input:hover {
@@ -337,40 +337,40 @@
 
 
 .room1{
-	background:url(image/room_1.png);
+	background:url(../image/room_1.png);
 }
 .room2{
-	background:url(image/room_2.png);
+	background:url(../image/room_2.png);
 }
 .room3{
-	background:url(image/room_3.png);
+	background:url(../image/room_3.png);
 }
 .room4{
-	background:url(image/room_4.png);
+	background:url(../image/room_4.png);
 }
 .room5{
-	background:url(image/room_5.png);
+	background:url(../image/room_5.png);
 }
 .room6{
-	background:url(image/room_6.png);
+	background:url(../image/room_6.png);
 }
 .room7{
-	background:url(image/room_7.png);
+	background:url(../image/room_7.png);
 }
 .room8{
-	background:url(image/room_8.png);
+	background:url(../image/room_8.png);
 }
 .room9{
-	background:url(image/room_9.png);
+	background:url(../image/room_9.png);
 }
 .room10{
-	background:url(image/room_10.png);
+	background:url(../image/room_10.png);
 }
 .room11{
-	background:url(image/room_11.png);
+	background:url(../image/room_11.png);
 }
 .room12{
-	background:url(image/room_12.png);
+	background:url(../image/room_12.png);
 }
 /*Перелистывания картинок комнат (стрелки)*/
 
@@ -396,7 +396,7 @@
 .move_arrow .icon {
 	width:10px;
 	height:13px;
-	background-image:url(image/expand_more_left.svg);
+	background-image:url(../image/expand_more_left.svg);
 	background-position:center;
 	background-repeat:no-repeat;
 	position:absolute;
@@ -515,7 +515,7 @@
 	width:20px;
 	height:20px;
 	padding-right:22px;
-	background-image:url(image/star.svg);
+	background-image:url(../image/star.svg);
 	background-repeat:no-repeat;
 }
 
@@ -524,18 +524,18 @@
 	width:20px;
 	height:20px;
 	padding-right:22px;
-	background-image:url(image/star_border.svg);
+	background-image:url(../image/star_border.svg);
 	background-repeat:no-repeat;
 	cursor:pointer;
 }
 
 .stars_border:hover {
-	background-image:url(image/star.svg);
+	background-image:url(../image/star.svg);
 }
 
 
 #star5:hover > #star4 {
-	background-image:url(image/star.svg);
+	background-image:url(../image/star.svg);
 }
 
 /*Отзывы*/
@@ -665,11 +665,11 @@
 }
 
 .active {
-	background-image:url(image/expand_more_up.svg);
+	background-image:url(../image/expand_more_up.svg);
 }
 
 .not_active {
-	background-image:url(image/expand_more.svg);
+	background-image:url(../image/expand_more.svg);
 }
 
 /*Дроп блок*/
