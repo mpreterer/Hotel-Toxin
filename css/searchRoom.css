@@ -208,7 +208,7 @@
  .custom-checkbox:checked+label::before {
   border-color:#BC9CFF;
   background-color:#FFF;
-  background-image:url("image/gal.png");
+  background-image:url("../image/gal.png");
  }
 
 /* стили при наведении курсора на checkbox */
@@ -747,7 +747,7 @@
 .convenience-checkbox:checked+label::before {
   border-color:#BC9CFF;
   background-color:#FFF;
-  background-image:url("image/gal.png");
+  background-image:url(../image/gal.png);
   background-size:50% 50%;
   background-position:center;
   background-repeat:no-repeat;

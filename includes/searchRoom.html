@@ -12,7 +12,7 @@
     <script type="text/javascript" src="awesome/fontawesome.min.js"></script>
     <script src="https://kit.fontawesome.com/bc390f5649.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <title>Главная «Toxin» | Отели</title>
+    <title>«Toxin» | Лучшие номера для вас</title>
   </head>
   <body>
     <nav class="header"><a href="../index.html">
@@ -382,28 +382,143 @@
             </div>
           </div class="room12 room_in_hotel">
         </div>
+        <div class="switch">
+          <div class="container">
+            <div class="circle circle_1">
+              <p style="color:#fff;"><b>1</b></p>
+            </div>
+            <div class="circle circle_2">
+              <p>2</p>
+            </div>
+            <div class="circle circle_3">
+              <p>3</p>
+            </div>
+            <div class="circle circle_4">
+              <p>...</p>
+            </div>
+            <div class="circle circle_5">
+              <p>15</p>
+            </div>
+            <div class="circle circle_6"><i class="fas fa-arrow-right"></i></div>
+          </div>
+          <p style="font-size: 14px;line-height: 24px;margin:11px 0 0 0;">1 – 12 из 100+ вариантов аренды</p>
+        </div>
       </div>
-    </div>
-    <div class="switch">
-      <div class="container">
-        <div class="circle circle_1">
-          <p style="color:#fff;"><b>1</b></p>
+      <div class="left_bar" style="width:266px;">
+        <div class="data_arrival_in_otel">
+          <pan class="h_span_block_hotel">даты пребывания в отеле</pan>
+          <input type="text" autocomplete="off" placeholder="19 авг - 23 авг" readonly="">
         </div>
-        <div class="circle circle_2">
-          <p>2</p>
+        <div class="guests">
+          <input class="counte_guests" placeholder="Сколько Гостей" autocomplete="off" readonly="">
         </div>
-        <div class="circle circle_3">
-          <p>3</p>
+        <div class="dropBlock hide">
+          <div class="drop_block_item">
+            <div class="drop_block_row"><span class="dropItem" id="dropItem1">Взрослые</span>
+              <button class="circle_drop_item circle_drop_minus1">-</button>
+              <input id="counter1" type="text" value="0">
+              <button class="circle_drop_item circle_drop_plus1">+</button>
+            </div>
+            <div class="drop_block_row"><span class="dropItem" id="dropItem2">Дети</span>
+              <button class="circle_drop_item circle_drop_minus2">-</button>
+              <input id="counter2" value="0">
+              <button class="circle_drop_item circle_drop_plus2">+</button>
+            </div>
+            <div class="drop_block_row"><span class="dropItem" id="dropItem3">Младенцы</span>
+              <button class="circle_drop_item circle_drop_minus3">-</button>
+              <input id="counter3" value="0">
+              <button class="circle_drop_item circle_drop_plus3">+</button>
+            </div>
+            <div class="drop_function">
+              <button class="link_drop_function" id="clear">ОЧИСТИТЬ</button>
+              <button class="link_drop_function" id="apply">ПРИМЕНИТЬ</button>
+            </div>
+          </div>
         </div>
-        <div class="circle circle_4">
-          <p>...</p>
+        <div class="price_hotel">
+          <div class="middle">
+            <div class="container_price">
+              <div class="price_title">Диапозон Цен:</div>
+              <div class="price"><span id="minValue"></span><span>₽</span><span>-</span><span id="maxValue"></span><span>₽</span></div>
+            </div>
+            <div class="multi-range-slider">
+              <input id="input-left" type="range" min="0" max="15000" value="1000">
+              <input id="input-right" type="range" min="0" max="15000" value="3000">
+              <div class="slider">
+                <div class="track"></div>
+                <div class="range"></div>
+                <div class="thumb left"></div>
+                <div class="thumb right"></div>
+              </div>
+            </div>
+          </div><span style="color:#8E8E9F">Стоимость за сутки пребывания в номере</span>
         </div>
-        <div class="circle circle_5">
-          <p>15</p>
+        <div class="order_in_house"><span class="h_span_block_hotel">правила дома</span>
+          <div class="checkbox_order">
+            <input class="custom-checkbox" id="block_1" type="checkbox" name="block_1">
+            <label for="block_1">Можно курить</label>
+            <input class="custom-checkbox" id="block_2" type="checkbox" name="block_2">
+            <label for="block_2">Можно с питомцами</label>
+            <input class="custom-checkbox" id="block_3" type="checkbox" name="block_3">
+            <label for="block_3">Можно пригласить гостей (до 10 человек)</label>
+          </div>
         </div>
-        <div class="circle circle_6"><i class="fas fa-arrow-right"></i></div>
+        <div class="availability"><span class="h_span_block_hotel">доступность</span>
+          <input class="custom-checkbox" id="block_4" type="checkbox" name="block_4">
+          <label for="block_4"><span><b style="color:#575870; font-size:14px;">Широкий коридор</b></span>
+            <p>Ширина коридоров в номере не менее 91 см.</p>
+          </label>
+          <input class="custom-checkbox" id="block_5" type="checkbox" name="block_5">
+          <label for="block_5"><b style="color:#575870; font-size:14px;">Помощник для инвалидов</b>
+            <p>На 1 этаже вас встретит специалист  и  проводит до номера.</p>
+          </label>
+        </div><span class="h_span_block_hotel">удобства номера</span>
+        <div class="conveniences">
+          <input class="counte_conveniences" id="block_6" type="text" name="block_6" placeholder="2 спальни, 2 кровати" autocomplete="off" readonly="">
+        </div>
+        <div class="dropBlockCon dropBlock hide">
+          <div class="drop_block_item">
+            <div class="drop_block_row"><span class="dropItem dropItemCon1" id="dropItem">спальни</span>
+              <button class="circle_drop_item circle_con_minus1" data-direction="minus">-</button>
+              <input id="counterCon1" type="text" value="0">
+              <button class="circle_drop_item circle_con_plus1" data-direction="plus">+</button>
+            </div>
+            <div class="drop_block_row"><span class="dropItem dropItemCon2" id="dropItem2">кровати</span>
+              <button class="circle_drop_item circle_con_minus2" data-direction="minus">-</button>
+              <input id="counterCon2" value="0">
+              <button class="circle_drop_item circle_con_plus2" data-direction="plus">+</button>
+            </div>
+            <div class="drop_block_row"><span class="dropItem dropItemCon3" id="dropItem3">ванные комнаты</span>
+              <button class="circle_drop_item circle_con_minus3" data-direction="minus">-</button>
+              <input id="counterCon3" value="0">
+              <button class="circle_drop_item circle_con_plus3" data-direction="plus">+</button>
+            </div>
+            <div class="drop_function">
+              <button class="link_drop_function" id="clear">ОЧИСТИТЬ</button>
+              <button class="link_drop_function" id="apply">ПРИМЕНИТЬ</button>
+            </div>
+          </div>
+        </div>
+        <div class="convenience"><span>дополнительные удобства</span>
+          <div class="not_active arrow_convenience"></div>
+          <div class="drop_block_convenience hide">
+            <div class="drop_item_convenience">
+              <input class="convenience-checkbox" id="drop_1" type="checkbox" name="drop_1">
+              <label for="drop_1">Завтрак</label>
+              <input class="convenience-checkbox" id="drop_2" type="checkbox" name="drop_2">
+              <label for="drop_2">Письменный стол</label>
+              <input class="convenience-checkbox" id="drop_3" type="checkbox" name="drop_3">
+              <label for="drop_3">Стул для кормления</label>
+              <input class="convenience-checkbox" id="drop_4" type="checkbox" name="drop_4">
+              <label for="drop_4">Кроватка</label>
+              <inputdrop_5 class="convenience-checkbox" type="checkbox" name="drop_5"></inputdrop_5>
+              <label for="drop_5">Телевизор</label>
+              <input class="convenience-checkbox" id="drop_6" type="checkbox" name="drop_6">
+              <label for="drop_6">Шампунь</label>
+            </div>
+          </div>
+        </div>
       </div>
-      <p style="font-size: 14px;line-height: 24px;margin:11px 0 0 0;">1 – 12 из 100+ вариантов аренды</p>
     </div>
     <footer class="footer">
       <div class="footer_list">
