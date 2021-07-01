@@ -906,6 +906,10 @@ button {
 	padding:0;
 }
 
+.footer_sub_container p {
+	margin-top: 0;
+}
+
 /*Адаптивная верстка (для смартфонов)*/
 @media all and (max-width:480px ) and (min-width:320px) {
 	h1 {
@@ -1019,9 +1023,6 @@ button {
 	#dropItem3 {
 		margin-right:10px;
 	}
-
-
-
 }
 
 @keyframes lir {
