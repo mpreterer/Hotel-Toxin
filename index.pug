@@ -124,26 +124,7 @@ block content
                         div.guests
                             input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
                             div.arrow
-                        div.dropBlock.hide
-                            div.drop_block_item
-                                div.drop_block_row
-                                    span#dropItem1.dropItem Взрослые
-                                    button.circle_drop_item.circle_drop_minus1(data-direction="minus") -
-                                    input#counter1.counter(type="text" value="0")
-                                    button.circle_drop_item.circle_drop_plus1(data-direction="plus") +
-                                    div.drop_block_row
-                                        span#dropItem2.dropItem Дети
-                                        button.circle_drop_item.circle_drop_minus2(data-direction="minus") -
-                                        input#counter2.counter(value="0")
-                                        button.circle_drop_item.circle_drop_plus2(data-direction="plus") +
-                                    div.drop_block_row
-                                        span#dropItem3.dropItem Младенцы
-                                        button.circle_drop_item.circle_drop_minus3(data-direction="minus") -
-                                        input#counter3.counter(value="0")
-                                        button.circle_drop_item.circle_drop_plus3(data-direction="plus") +
-                                    div.drop_function
-                                        button#clear.link_drop_function ОЧИСТИТЬ
-                                        button#apply.link_drop_function ПРИМЕНИТЬ
+                        include modules/dropBlock.pug
                     a(href="layout/searchRoom.html")
                         div.block4
                             p(style="padding-top:15px") подобрать номер
