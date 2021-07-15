@@ -544,9 +544,12 @@
 	margin-right:124px;
 }
 #dropItem2 {
-	margin-right:160px;
+	margin-right:165px;
 }
 
+#dropItem3 {
+	margin-right: 116px;
+}
 .booking_guests input:hover {
 	border-color:#8C8C92;
 	transition:0.3s;
