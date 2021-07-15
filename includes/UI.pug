@@ -1,8 +1,14 @@
-extends ../template-head/ui_main.pug
+extends ../template-head/main.pug
+
+block variables 
+    - var pageTitle = 'Цвета и Типы'
+    - var linkStyle =  '../css/UI.css'
+
 
 block header
     a(href="../index.html")
         div.logo
+block content
     div.container-blocks
         div.left-block
             ul.left-block__list-color
@@ -55,3 +61,5 @@ block header
                 li
                     span#p.right-block__h Body
                     p.right-block__text This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+

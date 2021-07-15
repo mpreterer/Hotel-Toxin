@@ -1,0 +1,34 @@
+extends ../template-head/main.pug
+
+block variables
+    - var pageTitle = 'Элементы'
+    - var linkStyle = '../css/elements.css'
+
+block header
+    a(href="../index.html")
+        div.logo
+block content
+    div.elements-left
+        div.elements-left__input
+            h2.elemets-left__title Text Field
+            p.option Default
+            div.elements-left__input-elements
+        div.elements-left__input
+            h2.elemets-left__title Text Field
+            p.option Hover / Focus
+            div.elements-left__input-elements
+        div.elements-left__input
+            h2.elemets-left__title Dropdown
+            div.elements-left__input-elements
+        div.elements-left__input
+            h2.elemets-left__title masked text field
+            div.elements-left__input-elements
+        div.elements-left__input
+            
+        div.elements-left__input
+            h2.elemets-left__title filter date dropdown
+            div.elements-left__input-elements
+        div.elements-left__input
+            h2.elemets-left__title subscription text field
+            div.elements-left__input-elements
+
