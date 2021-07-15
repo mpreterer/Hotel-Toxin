@@ -160,6 +160,9 @@
 	width:266px;
 }
 
+.data_arrival_in_otel input {
+	padding-right: 92px;
+}
 /*Чекбокс*/
 
 .order_in_house .checkbox_order {

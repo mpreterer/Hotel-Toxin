@@ -1,0 +1,129 @@
+.logo {
+  width: 48px;
+  height: 48px;
+  margin: 30px;
+  background: url("../image/Group.svg");
+}
+
+.container-blocks {
+  width: 80%;
+  margin: 0 158px 0 149.74px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-block {
+  width: 281.36px;
+  height: 610px;
+}
+.left-block ul {
+  margin: 0;
+  padding: 0;
+}
+.left-block li {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.left-block__square {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  background: #1f2041;
+  margin-right: 40px;
+}
+.left-block #square2 {
+  background: rgba(31, 32, 65, 0.75);
+}
+.left-block #square3 {
+  background: rgba(31, 32, 65, 0.5);
+}
+.left-block #square4 {
+  background: rgba(31, 32, 65, 0.25);
+}
+.left-block #square5 {
+  background: rgba(31, 32, 65, 0.05);
+}
+.left-block #square6 {
+  background: #BC9CFF;
+}
+.left-block #square7 {
+  background: #6FCF97;
+}
+.left-block__text {
+  width: 171px;
+  height: 56px;
+}
+.left-block__text h2 {
+  margin: 0;
+  line-height: 28px;
+  font-size: 19px;
+}
+.left-block__text p {
+  margin: 0;
+}
+
+.right-block {
+  width: 436px;
+  height: 321px;
+  display: flex;
+}
+.right-block__list {
+  margin: 0;
+  padding: 0;
+}
+.right-block li {
+  list-style: none;
+  display: flex;
+  margin-bottom: 50px;
+}
+.right-block h1 {
+  font-size: 24px;
+  line-height: 29px;
+}
+.right-block #h1 {
+  font-size: 24px;
+  line-height: 29px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.right-block h2 {
+  font-size: 19px;
+  line-height: 23px;
+}
+.right-block #h2 {
+  font-size: 19px;
+  line-height: 23px;
+  margin-left: 3px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.right-block h3 {
+  font-size: 12px;
+  line-height: 15px;
+}
+.right-block #h3 {
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 10px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.right-block p {
+  font-size: 14px;
+  line-height: 24px;
+}
+.right-block #p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-right: 20px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.right-block__h {
+  margin-right: 30px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.right-block__text {
+  color: #1F2041;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0px;
+}
