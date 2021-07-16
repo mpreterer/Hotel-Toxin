@@ -20,7 +20,6 @@
 	position:relative;
 }
 /*Левый бар*/
-
 .data_arrival_in_otel input, .guests_in_hotel input{
 	padding:12px 110px 14.4px 15px;
 	box-sizing:border-box;
@@ -161,7 +160,7 @@
 }
 
 .data_arrival_in_otel input {
-	padding-right: 92px;
+	padding-right: 110px;
 }
 /*Чекбокс*/
 

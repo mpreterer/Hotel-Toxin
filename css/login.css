@@ -1,4 +1,7 @@
 /*Блок с авторизацией пользователя*/
+p {
+	font-size: 12px;
+}
 .block_login {
 	height:684px;
 	background-image:url(../image/registration_bg.jpg);
