@@ -9,6 +9,7 @@ block variables
     - var linkStyle3 = '../css/range.css'
 
 
+
 block header
     a(href="../index.html")
         div.logo
@@ -291,14 +292,57 @@ block content
                                     button.circle_drop_item.circle_drop_plus3 +
                             div.drop_function
                                 button#apply.link_drop_function ПРИМЕНИТЬ
-            div.elements-center2__drops.elements-center2__drop1
+            div.elements-center2__drops.elements-center2__drop2
                 h3.elements-center2__title rich Checkbox Buttons
                 div.elements-center2__dropElmenet
+                    div.availability
+                        input#block_4.custom-checkbox(type="checkbox" name="block_4")
+                        label(for="block_4")
+                            span
+                                b(style="color:#575870; font-size:14px;") Широкий коридор
+                            p Ширина коридоров в номере не менее 91 см.
+                        input#block_5.custom-checkbox(type="checkbox" name="block_5")
+                        label(for="block_5")
+                            b(style="color:#575870; font-size:14px;") Помощник для инвалидов
+                            p На 1 этаже вас встретит специалист  и  проводит до номера.
         div.elements-right2
             div.elements-right2__drops.elements-right2__drop1
                 h3.elements-right2__title dropdown
-            div.elements-right2__drops.elements-right2__drop1
+                div.guests
+                    input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
+                    div.arrow
+                div.dropBlock
+                    div.drop_block_item
+                        div.drop_block_row
+                            h3#dropItem1.dropItem Взрослые
+                            div.db1
+                                button.circle_drop_item.circle_drop_minus1 -
+                                input#counter1(type="text" value="2")
+                                button.circle_drop_item.circle_drop_plus1 +
+                        div.drop_block_row
+                            h3#dropItem2.dropItem Дети
+                            div.db2
+                                button.circle_drop_item.circle_drop_minus2 -
+                                input#counter2(value="1")
+                                button.circle_drop_item.circle_drop_plus2 +
+                        div.drop_block_row
+                            h3#dropItem3.dropItem Младенцы
+                            div.db3
+                                button.circle_drop_item.circle_drop_minus3 -
+                                input#counter3(value="0")
+                                button.circle_drop_item.circle_drop_plus3 +
+                        div.drop_function
+                            button#clear.link_drop_function ОЧИСТИТЬ
+                            button#apply.link_drop_function ПРИМЕНИТЬ
+            div.elements-right2__drops.elements-right2__drop2
                 h3.elements-right2__title bullet list
+                div.order
+                    ul.ul_order
+                        li.li_order1 Нельзя с питомцами 
+                        li.li_order2 Без вечеринок и мероприятий
+                        li.li_order3
+                            span Время прибытия — после 13:00
+                                span а выезд до 12:00  
         
 
                 
