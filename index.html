@@ -18,7 +18,7 @@
         <div class="list">
           <ul class="menu_list">
             <li>
-              <u><a href="layout/UI.html">UI Компоненты</a></u>
+              <u><a href="layout/site-pages.html">UI Компоненты</a></u>
             </li>
             <li><a href="#">О нас</a></li>
             <li><a class="arrow_list_li" id="arrow_li_left" href="#">Услуги</a>
@@ -68,7 +68,7 @@
         <div class="residence">
           <div class="block_date">
             <div class="block1">
-              <p>Прибытие</p>
+              <h3>Прибытие</h3>
               <div class="date_arrival">ДД.ММ.ГГГГ
                 <div class="arrow"></div>
                 <div class="calendar_main hide">
@@ -131,7 +131,7 @@
               </div>
             </div>
             <div class="block2" style="margin-left:18px;">
-              <p>Выезд</p>
+              <h3>Выезд</h3>
               <div class="date_departure">ДД.ММ.ГГГГ
                 <div class="arrow"></div>
                 <div class="calendar_main hide" style="left:-184px;">
@@ -194,27 +194,36 @@
               </div>
             </div>
             <div class="block3">
-              <p>Гости</p>
+              <h3>Гости</h3>
               <div class="guests">
                 <input class="counte_guests" placeholder="Сколько Гостей" autocomplete="off" readonly="">
                 <div class="arrow"></div>
               </div>
               <div class="dropBlock hide">
                 <div class="drop_block_item">
-                  <div class="drop_block_row"><span class="dropItem" id="dropItem1">Взрослые</span>
-                    <button class="circle_drop_item circle_drop_minus1">-</button>
-                    <input id="counter1" type="text" value="0">
-                    <button class="circle_drop_item circle_drop_plus1">+</button>
+                  <div class="drop_block_row">
+                    <h3 class="dropItem" id="dropItem1">Взрослые</h3>
+                    <div class="db1"> 
+                      <button class="circle_drop_item circle_drop_minus1">-</button>
+                      <input id="counter1" type="text" value="0">
+                      <button class="circle_drop_item circle_drop_plus1">+</button>
+                    </div>
                   </div>
-                  <div class="drop_block_row"><span class="dropItem" id="dropItem2">Дети</span>
-                    <button class="circle_drop_item circle_drop_minus2">-</button>
-                    <input id="counter2" value="0">
-                    <button class="circle_drop_item circle_drop_plus2">+</button>
+                  <div class="drop_block_row">
+                    <h3 class="dropItem" id="dropItem2">Дети</h3>
+                    <div class="db2"> 
+                      <button class="circle_drop_item circle_drop_minus2">-</button>
+                      <input id="counter2" value="0">
+                      <button class="circle_drop_item circle_drop_plus2">+</button>
+                    </div>
                   </div>
-                  <div class="drop_block_row"><span class="dropItem" id="dropItem3">Младенцы</span>
-                    <button class="circle_drop_item circle_drop_minus3">-</button>
-                    <input id="counter3" value="0">
-                    <button class="circle_drop_item circle_drop_plus3">+</button>
+                  <div class="drop_block_row">
+                    <h3 class="dropItem" id="dropItem3">Младенцы</h3>
+                    <div class="db3"> 
+                      <button class="circle_drop_item circle_drop_minus3">-</button>
+                      <input id="counter3" value="0">
+                      <button class="circle_drop_item circle_drop_plus3">+</button>
+                    </div>
                   </div>
                   <div class="drop_function">
                     <button class="link_drop_function" id="clear">ОЧИСТИТЬ</button>

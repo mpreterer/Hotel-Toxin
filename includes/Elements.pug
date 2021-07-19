@@ -30,10 +30,9 @@ block content
                     div.residence
                         div.block3
                             h3.elemets-left__title Text Field
-                            div.guests
+                            div.guests1
                                 input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
                                 div.arrow
-                            include ../modules/dropBlock.pug
             div.elements-left__input
                 h3.elements-left__title masked text field
                 input.elements-left__input-element(placeholder="Email")
@@ -149,36 +148,34 @@ block content
                 div.elements-right__buttons.elements-right__buttons1
                     div.elements-right__btn1
                         div.if_have_account
-                            a(href="login.html")
+                            a(href="#")
                                 div.login
                                     p CLICK ME
                     div.elements-right__btn2
                         div.if_have_account
-                            a(href="login.html")
+                            a(href="#")
                                 div.login
                                     p CLICK ME
                 div.elements-right__buttons.elements-right__buttons2
                     div.elements-right__btn1
                         div.if_have_account
-                            a(href="login.html")
+                            a(href="#")
                                 div.login
                                     p CLICK ME
                     div.elements-right__btn2
                         div.if_have_account
-                            a(href="login.html")
+                            a(href="#")
                                 div.login
                                     p CLICK ME
                 div.elements-right__buttons.elements-right__buttons3
                     div.elements-right__btn1
                         div.if_have_account
-                            a(href="login.html")
-                                div.login
-                                    p CLICK ME
+                            a(href="#")
+                                p CLICK ME
                     div.elements-right__btn2
                         div.if_have_account
-                            a(href="login.html")
-                                div.login
-                                    p CLICK ME
+                            a(href="#")
+                                p CLICK ME
                 div.elements-right__buttons.elements-right__buttons4
                     div.buy
                         p перейти к оплате
@@ -200,6 +197,114 @@ block content
                         div.circle.circle_6
                             i.fas.fa-arrow-right
                     p(style="font-size: 14px;line-height: 24px;margin:11px 0 0 0;") 1 – 12 из 100+ вариантов аренды
+    div.con-elements2
+        div.elements-left2
+            div.elements-left2__drops.elements-left2__drop1
+                div.elements-left2__head-drop
+                    h3.elements-left2__title dropdown
+                    p.elements-left2__option Default
+                div.elements-left2__dropElmenet
+                    div.conveniences1
+                        input(placeholder="2 спальни, 2 кровати" autocomplete="off" readonly="")
+            div.elements-left2__drops.elements-left2__drop2
+                div.elements-left2__head-drop
+                    h3.elements-left2__title dropdown
+                    p.elements-left2__option expanded
+                div.elements-left2__dropElmenet
+                    div.conveniences
+                        input#block_6.counte_conveniences(type="text" name="block_6" placeholder="2 спальни, 2 кровати" autocomplete="off" readonly="")
+                    div.dropBlockCon.dropBlock
+                        div.drop_block_item
+                            div.drop_block_row
+                                h3#dropItem.dropItem.dropItemCon1 спальни
+                                button.circle_drop_item.circle_con_minus1(data-direction="minus") -
+                                input#counterCon1(type="text" value="0")
+                                button.circle_drop_item.circle_con_plus1(data-direction="plus") +
+                            div.drop_block_row
+                                h3#dropItem2.dropItem.dropItemCon2 кровати
+                                button.circle_drop_item.circle_con_minus2(data-direction="minus") -
+                                input#counterCon2(value="2")
+                                button.circle_drop_item.circle_con_plus2(data-direction="plus") +
+                            div.drop_block_row
+                                h3#dropItem3.dropItem.dropItemCon3 ванные комнаты
+                                button.circle_drop_item.circle_con_minus3(data-direction="minus") -
+                                input#counterCon3(value="2")
+                                button.circle_drop_item.circle_con_plus3(data-direction="plus") +
+                            div.drop_function
+                                button#clear.link_drop_function ОЧИСТИТЬ
+                                button#apply.link_drop_function ПРИМЕНИТЬ
+            div.elements-left2__drops.elements-left2__drop3
+                div.elements-left2__dropElmenet
+                    div.convenience1
+                        span expandable checkbox list
+                        div.arrow_convenience1
+            div.elements-left2__drops.elements-left2__drop4
+                div.elements-left2__dropElmenet
+                    div.convenience
+                        span expandable checkbox list
+                        div.active.arrow_convenience
+                        div.drop_block_convenience
+                            div.drop_item_convenience
+                                input#drop_1.convenience-checkbox(type="checkbox" name="drop_1")
+                                label(for="drop_1") Завтрак
+
+                                input#drop_2.convenience-checkbox(type="checkbox" name="drop_2" checked="checked")
+                                label(for="drop_2") Письменный стол
+
+                                input#drop_3.convenience-checkbox(type="checkbox" name="drop_3" checked="checked")
+                                label(for="drop_3") Стул для кормления
+
+                                input#drop_4.convenience-checkbox(type="checkbox" name="drop_4" checked="checked")
+                                label(for="drop_4") Кроватка
+
+                                inputdrop_5.convenience-checkbox(type="checkbox" name="drop_5")
+                                label(for="drop_5") Телевизор
+
+                                input#drop_6.convenience-checkbox(type="checkbox" name="drop_6")
+                                label(for="drop_6") Шампунь
+        div.elements-center2
+            div.elements-center2__drops.elements-center2__drop1
+                h3.elements-center2__title dropdown
+                div.elements-center2__dropElmenet
+                    div.guests
+                        input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
+                        div.arrow
+                    div.dropBlock
+                        div.drop_block_item
+                            div.drop_block_row
+                                h3#dropItem1.dropItem Взрослые
+                                div.db1
+                                    button.circle_drop_item.circle_drop_minus1 -
+                                    input#counter1(type="text" value="0")
+                                    button.circle_drop_item.circle_drop_plus1 +
+                            div.drop_block_row
+                                h3#dropItem2.dropItem Дети
+                                div.db2
+                                    button.circle_drop_item.circle_drop_minus2 -
+                                    input#counter2(value="0")
+                                    button.circle_drop_item.circle_drop_plus2 +
+                            div.drop_block_row
+                                h3#dropItem3.dropItem Младенцы
+                                div.db3
+                                    button.circle_drop_item.circle_drop_minus3 -
+                                    input#counter3(value="0")
+                                    button.circle_drop_item.circle_drop_plus3 +
+                            div.drop_function
+                                button#apply.link_drop_function ПРИМЕНИТЬ
+            div.elements-center2__drops.elements-center2__drop1
+                h3.elements-center2__title rich Checkbox Buttons
+                div.elements-center2__dropElmenet
+        div.elements-right2
+            div.elements-right2__drops.elements-right2__drop1
+                h3.elements-right2__title dropdown
+            div.elements-right2__drops.elements-right2__drop1
+                h3.elements-right2__title bullet list
+        
+
+                
+
+            
+
 
                 
 

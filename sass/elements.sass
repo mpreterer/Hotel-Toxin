@@ -1,6 +1,6 @@
 .container-elements1
     width: 80%
-    margin: 85px
+    margin: 85px 140px
     display: flex
 
 h3
@@ -36,6 +36,9 @@ h3
     &__input
         margin-bottom: 20px
         height: 64.4px
+    &__input:nth-child(7)
+        margin-top: 40px
+        
 
 .content_search_room
     margin: 0 !important
@@ -106,6 +109,10 @@ h3
         display: flex
         justify-content: space-between
         margin-top: 16px
+        
+.if_have_account
+    margin: 0   
+    width: 100px
 
 .elements-right
     margin-left: 132px
@@ -122,8 +129,65 @@ h3
             color: #FFF !important
         & .login
             background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+        & .elements-right__btn2 .login
+            opacity: 0.5
+    &__buttons2
+        & .elements-right__btn2 .login
+            border-color: #DDCDFF
+    &__buttons3
+        font-weight: bold
+        & .elements-right__btn1 
+            width: 61px
+        & .elements-right__btn2 .if_have_account a
+            width: 61px
+            color: rgba(31, 32, 65, 0.5) !important
 
-        
-.if_have_account
-    margin: 0
-    width: 100px
+.con-elements2
+    width: 90%
+    display: flex
+    margin: 100px 140px
+
+.elements-left2
+    &__drops
+        width: 266px
+        margin-bottom: 20px
+    &__head-drop
+        display: flex
+        justify-content: space-between
+    & p
+        margin: 0
+
+.elements-center2
+    width: 320px
+    margin-left: 180px
+
+.elements-right2
+    width: 320px
+    margin-left: 72px
+
+.conveniences1
+    margin-top: 5px
+    width: 266px
+    height: 44px
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    box-sizing: border-box
+    border-radius: 4px
+    padding: 12px 91px 8px 15px
+    position: relative
+    cursor: pointer
+.conveniences1 input
+    border: none
+    width: 200px
+    cursor: pointer
+.conveniences1:after
+    content: ''
+    display: inline-block
+    position: absolute
+    top: 18px
+    right: 13px
+    width: 12px
+    height: 8px
+    background-image: url(../image/expand_more.svg)
+
+.drop_block_row h3
+    padding: 15px 0 0 15px

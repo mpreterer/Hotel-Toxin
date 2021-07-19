@@ -40,32 +40,9 @@
             <div class="residence">
               <div class="block3">
                 <h3 class="elemets-left__title">Text Field</h3>
-                <div class="guests">
+                <div class="guests1">
                   <input class="counte_guests" placeholder="Сколько Гостей" autocomplete="off" readonly="">
                   <div class="arrow"></div>
-                </div>
-                <div class="dropBlock hide">
-                  <div class="drop_block_item">
-                    <div class="drop_block_row"><span class="dropItem" id="dropItem1">Взрослые</span>
-                      <button class="circle_drop_item circle_drop_minus1">-</button>
-                      <input id="counter1" type="text" value="0">
-                      <button class="circle_drop_item circle_drop_plus1">+</button>
-                    </div>
-                    <div class="drop_block_row"><span class="dropItem" id="dropItem2">Дети</span>
-                      <button class="circle_drop_item circle_drop_minus2">-</button>
-                      <input id="counter2" value="0">
-                      <button class="circle_drop_item circle_drop_plus2">+</button>
-                    </div>
-                    <div class="drop_block_row"><span class="dropItem" id="dropItem3">Младенцы</span>
-                      <button class="circle_drop_item circle_drop_minus3">-</button>
-                      <input id="counter3" value="0">
-                      <button class="circle_drop_item circle_drop_plus3">+</button>
-                    </div>
-                    <div class="drop_function">
-                      <button class="link_drop_function" id="clear">ОЧИСТИТЬ</button>
-                      <button class="link_drop_function" id="apply">ПРИМЕНИТЬ</button>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -335,13 +312,13 @@
           <h3 class="elements-right__title">buttons</h3>
           <div class="elements-right__buttons elements-right__buttons1">
             <div class="elements-right__btn1">
-              <div class="if_have_account"><a href="login.html">
+              <div class="if_have_account"><a href="#">
                   <div class="login">
                     <p>CLICK ME</p>
                   </div></a></div>
             </div>
             <div class="elements-right__btn2">
-              <div class="if_have_account"><a href="login.html">
+              <div class="if_have_account"><a href="#">
                   <div class="login">
                     <p>CLICK ME</p>
                   </div></a></div>
@@ -349,13 +326,13 @@
           </div>
           <div class="elements-right__buttons elements-right__buttons2">
             <div class="elements-right__btn1">
-              <div class="if_have_account"><a href="login.html">
+              <div class="if_have_account"><a href="#">
                   <div class="login">
                     <p>CLICK ME</p>
                   </div></a></div>
             </div>
             <div class="elements-right__btn2">
-              <div class="if_have_account"><a href="login.html">
+              <div class="if_have_account"><a href="#">
                   <div class="login">
                     <p>CLICK ME</p>
                   </div></a></div>
@@ -363,16 +340,12 @@
           </div>
           <div class="elements-right__buttons elements-right__buttons3">
             <div class="elements-right__btn1">
-              <div class="if_have_account"><a href="login.html">
-                  <div class="login">
-                    <p>CLICK ME</p>
-                  </div></a></div>
+              <div class="if_have_account"><a href="#">
+                  <p>CLICK ME</p></a></div>
             </div>
             <div class="elements-right__btn2">
-              <div class="if_have_account"><a href="login.html">
-                  <div class="login">
-                    <p>CLICK ME</p>
-                  </div></a></div>
+              <div class="if_have_account"><a href="#">
+                  <p>CLICK ME</p></a></div>
             </div>
           </div>
           <div class="elements-right__buttons elements-right__buttons4">
@@ -407,6 +380,142 @@
         </div>
       </div>
     </div>
+    <div class="con-elements2">
+      <div class="elements-left2">
+        <div class="elements-left2__drops elements-left2__drop1">
+          <div class="elements-left2__head-drop">
+            <h3 class="elements-left2__title">dropdown</h3>
+            <p class="elements-left2__option">Default</p>
+          </div>
+          <div class="elements-left2__dropElmenet">
+            <div class="conveniences1">
+              <input placeholder="2 спальни, 2 кровати" autocomplete="off" readonly="">
+            </div>
+          </div>
+        </div>
+        <div class="elements-left2__drops elements-left2__drop2">
+          <div class="elements-left2__head-drop">
+            <h3 class="elements-left2__title">dropdown</h3>
+            <p class="elements-left2__option">expanded</p>
+          </div>
+          <div class="elements-left2__dropElmenet">
+            <div class="conveniences">
+              <input class="counte_conveniences" id="block_6" type="text" name="block_6" placeholder="2 спальни, 2 кровати" autocomplete="off" readonly="">
+            </div>
+            <div class="dropBlockCon dropBlock">
+              <div class="drop_block_item">
+                <div class="drop_block_row">
+                  <h3 class="dropItem dropItemCon1" id="dropItem">спальни</h3>
+                  <button class="circle_drop_item circle_con_minus1" data-direction="minus">-</button>
+                  <input id="counterCon1" type="text" value="0">
+                  <button class="circle_drop_item circle_con_plus1" data-direction="plus">+</button>
+                </div>
+                <div class="drop_block_row">
+                  <h3 class="dropItem dropItemCon2" id="dropItem2">кровати</h3>
+                  <button class="circle_drop_item circle_con_minus2" data-direction="minus">-</button>
+                  <input id="counterCon2" value="2">
+                  <button class="circle_drop_item circle_con_plus2" data-direction="plus">+</button>
+                </div>
+                <div class="drop_block_row">
+                  <h3 class="dropItem dropItemCon3" id="dropItem3">ванные комнаты</h3>
+                  <button class="circle_drop_item circle_con_minus3" data-direction="minus">-</button>
+                  <input id="counterCon3" value="2">
+                  <button class="circle_drop_item circle_con_plus3" data-direction="plus">+</button>
+                </div>
+                <div class="drop_function">
+                  <button class="link_drop_function" id="clear">ОЧИСТИТЬ</button>
+                  <button class="link_drop_function" id="apply">ПРИМЕНИТЬ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="elements-left2__drops elements-left2__drop3">
+          <div class="elements-left2__dropElmenet">
+            <div class="convenience1"><span>expandable checkbox list</span>
+              <div class="arrow_convenience1"></div>
+            </div>
+          </div>
+        </div>
+        <div class="elements-left2__drops elements-left2__drop4">
+          <div class="elements-left2__dropElmenet">
+            <div class="convenience"><span>expandable checkbox list</span>
+              <div class="active arrow_convenience"></div>
+              <div class="drop_block_convenience">
+                <div class="drop_item_convenience">
+                  <input class="convenience-checkbox" id="drop_1" type="checkbox" name="drop_1">
+                  <label for="drop_1">Завтрак</label>
+                  <input class="convenience-checkbox" id="drop_2" type="checkbox" name="drop_2" checked="checked">
+                  <label for="drop_2">Письменный стол</label>
+                  <input class="convenience-checkbox" id="drop_3" type="checkbox" name="drop_3" checked="checked">
+                  <label for="drop_3">Стул для кормления</label>
+                  <input class="convenience-checkbox" id="drop_4" type="checkbox" name="drop_4" checked="checked">
+                  <label for="drop_4">Кроватка</label>
+                  <inputdrop_5 class="convenience-checkbox" type="checkbox" name="drop_5"></inputdrop_5>
+                  <label for="drop_5">Телевизор</label>
+                  <input class="convenience-checkbox" id="drop_6" type="checkbox" name="drop_6">
+                  <label for="drop_6">Шампунь</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elements-center2">
+        <div class="elements-center2__drops elements-center2__drop1">
+          <h3 class="elements-center2__title">dropdown</h3>
+          <div class="elements-center2__dropElmenet">
+            <div class="guests">
+              <input class="counte_guests" placeholder="Сколько Гостей" autocomplete="off" readonly="">
+              <div class="arrow"></div>
+            </div>
+            <div class="dropBlock">
+              <div class="drop_block_item">
+                <div class="drop_block_row">
+                  <h3 class="dropItem" id="dropItem1">Взрослые</h3>
+                  <div class="db1">
+                    <button class="circle_drop_item circle_drop_minus1">-</button>
+                    <input id="counter1" type="text" value="0">
+                    <button class="circle_drop_item circle_drop_plus1">+</button>
+                  </div>
+                </div>
+                <div class="drop_block_row">
+                  <h3 class="dropItem" id="dropItem2">Дети</h3>
+                  <div class="db2">
+                    <button class="circle_drop_item circle_drop_minus2">-</button>
+                    <input id="counter2" value="0">
+                    <button class="circle_drop_item circle_drop_plus2">+</button>
+                  </div>
+                </div>
+                <div class="drop_block_row">
+                  <h3 class="dropItem" id="dropItem3">Младенцы</h3>
+                  <div class="db3">
+                    <button class="circle_drop_item circle_drop_minus3">-</button>
+                    <input id="counter3" value="0">
+                    <button class="circle_drop_item circle_drop_plus3">+</button>
+                  </div>
+                </div>
+                <div class="drop_function">
+                  <button class="link_drop_function" id="apply">ПРИМЕНИТЬ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="elements-center2__drops elements-center2__drop1">
+          <h3 class="elements-center2__title">rich Checkbox Buttons</h3>
+          <div class="elements-center2__dropElmenet"></div>
+        </div>
+      </div>
+      <div class="elements-right2">
+        <div class="elements-right2__drops elements-right2__drop1">
+          <h3 class="elements-right2__title">dropdown</h3>
+        </div>
+        <div class="elements-right2__drops elements-right2__drop1">
+          <h3 class="elements-right2__title">bullet list</h3>
+        </div>
+      </div>
+    </div>
     <script src="../js/click.js"></script>
     <script src="../js/menu.js"> </script>
     <script src="../js/close.js"></script>
@@ -416,5 +525,7 @@
     <script src="../js/slider.js"></script>
     <script src="../js/value.js"></script>
     <script src="../js/close__dropBlock.js"></script>
+    <script src="../js/conveniences.js"></script>
+    <script src="../js/close_conveniences.js"></script>
   </body>
 </html>
