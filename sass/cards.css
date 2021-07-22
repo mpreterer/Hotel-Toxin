@@ -1,3 +1,7 @@
+body {
+  background: #E5E5E5;
+}
+
 .container-cards {
   width: 100%;
   margin: 0 140px;
@@ -8,6 +12,60 @@
   position: relative !important;
   top: 0px !important;
   left: 0px !important;
+}
+
+.block3 .guests {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+.search_room .residence input {
+  padding: 0px 0px 0px 5px !important;
+}
+
+.dropBlock .drop_block_item {
+  width: 320px !important;
+}
+
+.dropBlock .circle_drop_item {
+  margin: 0px !important;
+}
+
+.guests:hover {
+  border: 1px solid rgba(31, 32, 65, 0.75) !important;
+}
+
+.guests::after {
+  content: none !important;
+}
+
+.db1, .db2, .db3 {
+  width: 101px;
+}
+
+.booking {
+  background: #FFF;
+}
+
+.container_in_hotel .room_in_hotel {
+  background: #FFF;
+}
+
+.room1 .container {
+  background: url(../image/room_1.png);
+}
+
+.room2 .container {
+  background: url(../image/room_2.png);
+}
+
+.calendar h2::after {
+  top: 0px !important;
+  background-position: top !important;
+}
+
+.calendar h2::before {
+  top: 0px !important;
+  background-position: top !important;
 }
 
 .content {
