@@ -39,10 +39,12 @@ body {
   background: #FFF; }
 
 .room1 .container {
-  background: url(../image/room_1.png); }
+  background: url(../image/room_1.png);
+  border-radius: 4px; }
 
 .room2 .container {
-  background: url(../image/room_2.png); }
+  background: url(../image/room_2.png);
+  border-radius: 4px; }
 
 .calendar h2::after {
   top: 0px !important;
@@ -51,6 +53,26 @@ body {
 .calendar h2::before {
   top: 0px !important;
   background-position: top !important; }
+
+.container_arrival::after, .container_departure::after {
+  top: 36px !important; }
+
+.booking_guests .guests {
+  width: 320px;
+  padding: 0px !important; }
+
+.booking_guests.guests.counte_guests:hover {
+  border: none !important; }
+
+.booking_guests.guests:hover {
+  border: none !important; }
+
+.booking_guests input {
+  height: 44px !important; }
+
+.center-cards__blocks1 .head h2 {
+  font-size: 19px !important;
+  margin: 0 0 24px 0 !important; }
 
 .content {
   height: 380px !important;
@@ -90,9 +112,13 @@ body {
   .right-cards__blocks3 {
     margin-top: 40px; }
 
-.calendar_main {
+.right-cards__blocks1 .calendar_main {
   top: 0px !important;
   left: 0px !important; }
+
+.search_room .calendar_main {
+  top: 16px !important;
+  left: -16px !important; }
 
 .calendar {
   margin-top: 0px !important;
