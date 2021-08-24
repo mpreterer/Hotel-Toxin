@@ -59,6 +59,7 @@ button {
 	display:flex;
 	justify-content:space-around;
 	align-items:center;
+	background: #FFFFFF;
 }
 
 /*Бургер*/
@@ -226,12 +227,8 @@ button {
 	display:block;
 }
 
-.list ul li:hover > a{
-	opacity: 0.5;
-}
-
-.list ul li:hover {
-	opacity: 0.5;
+.list ul li a:hover{
+	color: rgba(31, 32, 65, 0.75);
 }
 
 /*#arrow_list_li:after {
@@ -786,6 +783,7 @@ button {
 	height:392px;
 	box-shadow: 0 1px 0px rgba(31, 32, 65, 0.1);
 	border-top:1px solid #D0D0D5;
+	background: #FFFFFF;
 }
 
 /*Список блоков*/

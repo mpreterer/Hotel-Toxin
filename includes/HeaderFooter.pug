@@ -1,0 +1,15 @@
+extends ../template-head/main.pug
+
+block variables
+    - var pageTitle = 'Футеры и '
+    - var linkStyle1 = '../css/headerFooter.css'
+
+block header
+    a(href="../index.html")
+        div.logo
+    div.header1
+        include headerHF.pug
+    div.header2
+        include headerAuthorized.pug
+    div.footer1
+        include footer_all.pug

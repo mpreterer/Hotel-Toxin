@@ -325,6 +325,7 @@
 	width:270px;
 	height:257px;
 	margin:0 12px 12px 0;
+	background: #FFF;
 	background-repeat:no-repeat;
 	box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
 	border-radius:4px;
@@ -338,40 +339,40 @@
 }
 
 
-.room1{
+.room1 .container {
 	background:url(../image/room_1.png);
 }
-.room2{
+.room2 .container{
 	background:url(../image/room_2.png);
 }
-.room3{
+.room3 .container{
 	background:url(../image/room_3.png);
 }
-.room4{
+.room4 .container{
 	background:url(../image/room_4.png);
 }
-.room5{
+.room5 .container{
 	background:url(../image/room_5.png);
 }
-.room6{
+.room6 .container{
 	background:url(../image/room_6.png);
 }
-.room7{
+.room7 .container{
 	background:url(../image/room_7.png);
 }
-.room8{
+.room8 .container{
 	background:url(../image/room_8.png);
 }
-.room9{
+.room9 .container{
 	background:url(../image/room_9.png);
 }
-.room10{
+.room10 .container{
 	background:url(../image/room_10.png);
 }
-.room11{
+.room11 .container{
 	background:url(../image/room_11.png);
 }
-.room12{
+.room12 .container{
 	background:url(../image/room_12.png);
 }
 /*Перелистывания картинок комнат (стрелки)*/
