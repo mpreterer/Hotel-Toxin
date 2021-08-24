@@ -231,16 +231,6 @@ button {
 	color: rgba(31, 32, 65, 0.75);
 }
 
-/*#arrow_list_li:after {
-	content:'';
-	width:15px;
-	height:10px;
-	display:inline-block;
-	background:url(image/expand_more.svg);
-	background-repeat:no-repeat;
-	margin:2px 0 0 2px;
-}*/
-
 .menu_list {
 	margin:0;
 	padding:0;
@@ -256,10 +246,10 @@ button {
 	align-items: center;
 	text-align: center;
 }
-
+/* 
 .header img {
 	padding-left:10px;
-}
+} */
 
 
 /*панель входа и регистрации*/
@@ -781,7 +771,7 @@ button {
 
 .footer {
 	height:392px;
-	box-shadow: 0 1px 0px rgba(31, 32, 65, 0.1);
+	box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
 	border-top:1px solid #D0D0D5;
 	background: #FFFFFF;
 }
@@ -889,9 +879,10 @@ button {
 
 /*Под футером*/
 .footer_sub {
-	box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
-	padding:26px 0 15px 0;
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	padding:25px 0 15px 0;
 	color:rgba(31, 32, 65, 0.75);
+	background: #FFFFFF;
 }
 
 .footer_sub_container {
@@ -925,6 +916,39 @@ button {
 .footer_sub_container p {
 	margin-top: 0;
 }
+
+.footer-mobile {
+	width: 560px;
+	height: 127px;
+	background: #FFFFFF;
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	margin: 0 auto;
+	padding: 120px 104px;
+	text-align: center;
+}
+
+.footer-mobile .footer_sub {
+	box-shadow: none;
+	width: 112px;
+}
+
+.footer-mobile .sub_icons {
+	width: 100%;
+}
+
+.footer-mobile .logo{
+	margin: 0 auto;
+	width: auto;
+}
+
+.footer-mobile p {
+	margin: 20px auto 0 auto;
+}
+
+.footer-mobile .footer_sub {
+	margin: 0 auto;
+}
+
 
 /*Адаптивная верстка (для смартфонов)*/
 @media all and (max-width:480px ) and (min-width:320px) {

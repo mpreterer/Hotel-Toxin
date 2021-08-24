@@ -1,7 +1,7 @@
 extends ../template-head/main.pug
 
 block variables
-    - var pageTitle = 'Футеры и '
+    - var pageTitle = 'Footer & Header'
     - var linkStyle1 = '../css/headerFooter.css'
 
 block header
@@ -13,3 +13,16 @@ block header
         include headerAuthorized.pug
     div.footer1
         include footer_all.pug
+    div.footer-mobile
+        a(href="index.html")
+            div.logo
+                img(src="../image/Logo.svg" width="106px" height="40px")
+        p Copyright © 2018 Toxin отель. Все права защищены.
+        div.footer_sub
+            div.sub_icons
+                a(href="#")
+                    i.fab.fa-twitter(aria-hidden="true")
+                a(href="#")
+                    i.fab.fa-facebook-square(aria-hidden="true")
+                a(href="#")
+                    i.fab.fa-instagram(aria-hidden="true")
