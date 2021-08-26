@@ -32,9 +32,11 @@ block content
                     div.impressions_room
                         h2 Впечатления от номера
                         div.container_impressions
-                            div.rating_impressions
-                                p 260 
-                                p Голосов 
+                            div.container_donut
+                                canvas#chart(width="120" height="120")
+                                div.comments-count 
+                                    p 260
+                                    p Голосов
                             div.impressions_list
                                 ul.ul_impressions
                                     li#li_impressions1 Великолепно 

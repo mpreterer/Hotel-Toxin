@@ -667,13 +667,43 @@
 	border: none;
 }
 
+.container_donut {
+	width: 120px;
+	height: 120px;
+	position: relative;
+	margin-right: 25px;
+}
 
+.container_donut .comments-count {
+	height: 50px;
+	position: absolute;
+	top: 28px;
+	left: 24px;
+	color: #BC9CFF;
+	text-align: center;
+	z-index: -3;
+}
 
+.container_donut .comments-count p {
+	margin: 0;
+}
 
+.container_donut .comments-count p:first-child {
+	font-family: 'Quicksand', 'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 1.714rem;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 2.143rem;
+	text-transform: uppercase;
+}
+.container_donut .comments-count p:last-child {
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-size: 0.857rem;
+	font-weight: bold;
+	line-height: 1.071rem;
+	text-transform: uppercase;
+}
 
-
-
-
-
-
-
+.container_expend_details {
+	z-index: -1;
+}
