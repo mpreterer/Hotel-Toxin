@@ -1,11 +1,9 @@
-const ONE = 1;
 var numForCount = 1;
 
 $(document).ready(function(stopNumber) {
     $('.room_in_hotel').click(function(event){
         let tarName = event.currentTarget.className;
         let targetImage = `${'.'+tarName.slice(0, tarName.indexOf(' ')) + ' .container'}`;
-        let images = `${'.'+tarName.slice(0, tarName.indexOf(' ')) + ' .container' + ' .images-for-room'}`;
 
         // Достаем путь до картинки
         let G = $(`${targetImage}`).css('background-image');
@@ -20,22 +18,40 @@ $(document).ready(function(stopNumber) {
             if (numForCount === 4) {
                 // вернуть изначальную юкратинку
                 i -= 3;
-                $(`${targetImage}`).css('background', `url(${'../image/' + i + '_room' + '.png'})`)
+                $(`${targetImage}`).css('background', `url(${'../image/' + i + '_room' + '.png'})`);
+                // возвращаем кружок на первую позицию
+                $(`${'.'+tarName.slice(0, tarName.indexOf(' ')) + ' .circle_' + numForCount}`).css('background-color','rgba(255,255,255,0');
                 numForCount = 1;
-                console.log(numForCount)
-                
+                $(`${'.'+tarName.slice(0, tarName.indexOf(' ')) + ' .circle_' + numForCount}`).css('background-color','#fff');
+                // переключение кружков (счет изображений)
             } else {
-                i += ONE;
-                $(`${targetImage}`).css('background', `url(${'../image/' + i + '_room' + '.png'})`)
+                i += 1;
+                $(`${targetImage}`).css('background', `url(${'../image/' + i + '_room' + '.png'})`);
+                // очищаем предыдущий кружок
+                $(`${'.'+tarName.slice(0, tarName.indexOf(' ')) + ' .circle_' + numForCount}`).css('background-color','rgba(255,255,255,0');
                 numForCount += 1;
-
-                console.log(numForCount)
-                console.log(i)
+                // переключение кружков (счет изображений)
+                $(`${'.'+tarName.slice(0, tarName.indexOf(' ')) + ' .circle_' + numForCount}`).css('background-color','#fff');
             }
         }
         else if (event.target.classList.contains('arrow_left')) {
-            i -= 1;
-            $(`${targetImage}`).css('background', `url(${'../image/' + i + '_room' + '.png'})`)
+            if (numForCount === 1) {
+                // вернуть изначальную кратинку
+                i += 3;
+                $(`${targetImage}`).css('background', `url(${'../image/' + i + '_room' + '.png'})`)
+                // очищаем предыдущий кружок
+                $(`${'.'+tarName.slice(0, tarName.indexOf(' ')) + ' .circle_' + numForCount}`).css('background-color','rgba(255,255,255,0');
+                numForCount = 4;
+                // переключение кружков (счет изображений)
+                $(`${'.'+tarName.slice(0, tarName.indexOf(' ')) + ' .circle_' + numForCount}`).css('background-color','#fff');
+            } else {
+                i -= 1;
+                $(`${targetImage}`).css('background', `url(${'../image/' + i + '_room' + '.png'})`)
+                // переключение кружков (счет изображений)
+                $(`${'.'+tarName.slice(0, tarName.indexOf(' ')) + ' .circle_' + numForCount}`).css('background-color','rgba(255,255,255,0');
+                numForCount -= 1;
+                $(`${'.'+tarName.slice(0, tarName.indexOf(' ')) + ' .circle_' + numForCount}`).css('background-color','#fff');
+            }
         }
     })
 })
