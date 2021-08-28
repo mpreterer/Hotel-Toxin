@@ -25,6 +25,13 @@ dropB.addEventListener('click', function() {
         coun1.value = 0;
         coun2.value = 0;
         coun3.value = 0;
+
+        both = 0;
+        old = 0;
+        young = 0;
+        strGuest = '';
+        strBoth = '';
+
         counterClear.value = '';
 
         clear.classList.add('hiden_clear');

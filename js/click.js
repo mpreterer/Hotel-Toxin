@@ -18,7 +18,6 @@ var young = 0;
 var strGuest = '';
 var strBoth = '';
 
-
 function plus(directPlus) {
   directPlus.addEventListener('click', () => {
     old += 1;

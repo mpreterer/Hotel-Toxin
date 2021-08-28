@@ -121,12 +121,13 @@ block content
                     div.block3
                         h3 Гости
                         div.guests
-                            input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="" value="0")
+                            input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="" value="")
                             div.arrow
                         include modules/dropBlock.pug
                     a(href="layout/searchRoom.html")
                         div.block4
                             p(style="padding-top:15px") подобрать номер
                             div.arrow_right
+                        <input type='text' class="datepicker-here" data-position="right top" />
 block footer
     include includes/footer.pug
