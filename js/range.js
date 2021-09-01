@@ -3,6 +3,8 @@ const inputRight = document.getElementById("input-right");
 const thumbLeft = document.querySelector(".slider > .thumb.left");
 const thumbRight = document.querySelector(".slider > .thumb.right");
 const range = document.querySelector(".slider > .range");
+const minSpanInput = document.querySelector("#minValue");
+const maxSpanInput = document.querySelector("#maxValue");
 
 
 function setLeftValue() {
@@ -12,10 +14,17 @@ function setLeftValue() {
 
 	_this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
 
-	var percent = ((_this.value - min) / (max - min)) * 100;
+	var percentLeft = ((_this.value - min) / (max - min)) * 100;
 
-	thumbLeft.style.left = percent + "%";
-	range.style.left = percent + "%";
+	if (parseInt(minSpanInput.textContent) > parseInt(maxSpanInput.textContent)) {
+		minSpanInput.textContent = maxSpanInput.textContent;
+	}
+
+	thumbLeft.style.left = percentLeft + "%";
+	range.style.left = percentLeft + "%";
+
+	thumbRight.style.zIndex = '9'
+	thumbLeft.style.zIndex = '10'
 }
 setLeftValue();
 
@@ -26,10 +35,17 @@ function setRightValue() {
 
 	_this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
 
-	var percent = ((_this.value - min) / (max - min)) * 100;
+	var percentRight = ((_this.value - min) / (max - min)) * 100;
 
-	thumbRight.style.right = (100 - percent) + "%";
-	range.style.right = (100 - percent) + "%";
+	if (parseInt(maxSpanInput.textContent) < parseInt(minSpanInput.textContent)) {
+		maxSpanInput.textContent = minSpanInput.textContent;
+	}
+
+	thumbRight.style.right = (100 - percentRight) + "%";
+	range.style.right = (100 - percentRight) + "%";
+
+	thumbLeft.style.zIndex = '9'
+	thumbRight.style.zIndex = '10'
 }
 setRightValue();
 
