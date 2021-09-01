@@ -14,16 +14,17 @@ block room
                 a.circle.circle_2(href="../layout/roomDetails.html")
                 a.circle.circle_3(href="../layout/roomDetails.html")
                 a.circle.circle_4(href="../layout/roomDetails.html")
-        div.head_room
-            p(style="font-size:18px; color:#1F2041; font-weight:bold;") #{numberRoom}
-            span #{level}
-            p(style="font-size:12.5px;line-height: 16px;margin-top:3px;") #{price}
-        div.rating
-            div.star
-                div.stars#star1
-                div.stars#star2
-                div.stars#star3
-                div.stars#star4
-                div.stars#star5
-            div.feedbackspan
-                b #{review}
+        a.link-for-room(href=linkRoom)
+            div.head_room
+                p(style="font-size:18px; color:#1F2041; font-weight:bold;") #{numberRoom}
+                span #{level}
+                p(style="font-size:12.5px;line-height: 16px;margin-top:3px;") #{price}
+            div.rating
+                div.star
+                    div.stars#star1
+                    div.stars#star2
+                    div.stars#star3
+                    div.stars#star4
+                    div.stars#star5
+                div.feedbackspan
+                    b #{review}
