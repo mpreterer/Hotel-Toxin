@@ -523,6 +523,16 @@
 	cursor: pointer;
 }
 
+.link-for-room {
+	width: 100%;
+	height: 105px;
+	display: block;
+}
+
+.link-for-room:hover {
+	color: #BC9CFF;
+}
+
 /*Звезды без оценки*/
 .stars_border {
 	width:20px;
