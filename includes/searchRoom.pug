@@ -39,7 +39,11 @@ block content
         div.left_bar(style="width:266px;")
             div.data_arrival_in_otel
                 pan.h_span_block_hotel даты пребывания в отеле
-                input(type="text" autocomplete="off" placeholder="19 авг - 23 авг" readonly="")
+                input.datepicker-here.field-date-right(type="text" 
+                                                      data-range="true" 
+                                                      data-multiple-dates-separator=" - " 
+                                                      data-language="ru" 
+                                                      placeholder="ДД.ММ.ГГГГ")
             div.guests
                 input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
             div.dropBlock.hide

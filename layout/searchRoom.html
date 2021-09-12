@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/searchRoom.css">
     <link rel="stylesheet" href="../css/range.css">
     <link rel="stylesheet" href="../fontawesome.min.css">
+    <link rel="stylesheet" href="../css/datepicker.min.css">
     <link rel="shortcut icon" href="../image/Logo.png" type="image/png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -443,7 +444,7 @@
       <div class="left_bar" style="width:266px;">
         <div class="data_arrival_in_otel">
           <pan class="h_span_block_hotel">даты пребывания в отеле</pan>
-          <input type="text" autocomplete="off" placeholder="19 авг - 23 авг" readonly="">
+          <input class="datepicker-here field-date-right" type="text" data-range="true" data-multiple-dates-separator=" - " data-language="ru" placeholder="ДД.ММ.ГГГГ">
         </div>
         <div class="guests">
           <input class="counte_guests" placeholder="Сколько Гостей" autocomplete="off" readonly="">
@@ -623,6 +624,7 @@
       </div>
     </div>
     <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/datepicker.min.js"> </script>
     <script src="../js/jquery.slider.js"></script>
     <script src="../js/nouislider.min.js"></script>
     <script src="../js/slider.js"></script>

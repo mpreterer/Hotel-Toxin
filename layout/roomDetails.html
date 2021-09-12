@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../image/Logo.png" type="image/png">
     <link rel="stylesheet" href="../css/roomDetails.css">
-    <link rel="stylesheet" href="../css/air-datepicker.css">
+    <link rel="stylesheet" href="../css/datepicker.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="awesome/fontawesome.min.js"></script>
@@ -157,12 +157,12 @@
               <div class="booking_arrival">
                 <div class="container_arrival">
                   <h2>прибытие</h2>
-                  <div class="date_arrival">ДД.ММ.ГГГГ</div>
+                  <input class="datepicker-here field-date-left" type="text" data-range="true" data-multiple-dates-separator=" - " data-language="ru" placeholder="ДД.ММ.ГГГГ">
                   <div class="arrow"></div>
                 </div>
                 <div class="container_departure">
                   <h2>выезд</h2>
-                  <div class="date_departure">ДД.ММ.ГГГГ</div>
+                  <input class="datepicker-here field-date-left" type="text" data-range="true" data-multiple-dates-separator=" - " data-language="ru" placeholder="ДД.ММ.ГГГГ">
                   <div class="arrow"></div>
                 </div>
               </div>
@@ -270,6 +270,8 @@
         <div class="sub_icons"><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook-square"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
       </div>
     </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/datepicker.min.js"> </script>
     <script src="../js/like.js"></script>
     <script src="../js/menu.js"> </script>
     <script src="../js/close.js"></script>
@@ -277,7 +279,6 @@
     <script src="../js/click.js"></script>
     <script src="../js/Chart.js"></script>
     <script src="../js/scriptChart.js"></script>
-    <script src="../js/close_calendare.js">       </script>
     <script src="../js/datepicker.min.js"></script>
   </body>
 </html>

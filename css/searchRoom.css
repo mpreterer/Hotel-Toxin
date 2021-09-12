@@ -705,11 +705,11 @@
 	background-position:4px 4px;
 }
 
-.active {
+.convenience .active {
 	background-image:url(../image/expand_more_up.svg);
 }
 
-.not_active {
+.convenience .not_active {
 	background-image:url(../image/expand_more.svg);
 }
 

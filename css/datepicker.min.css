@@ -363,11 +363,15 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    padding: 4px;
-    border-top: 1px solid #efefef; }
+    transform: translateY(-45px);
+   }
   
   .datepicker--button {
-    color: #4EB5E6;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #BC9CFF;
     cursor: pointer;
     border-radius: 4px;
     -webkit-flex: 1;
@@ -385,7 +389,7 @@
     height: 32px; }
     .datepicker--button:hover {
       color: #4a4a4a;
-      background: #f0f0f0; }
+       }
   
   .datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
     color: #dedede; }
