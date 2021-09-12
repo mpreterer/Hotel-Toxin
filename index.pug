@@ -10,16 +10,24 @@ block content
                 div.block_date
                     div.block1
                         h3 Прибытие
-                        div.date_arrival ДД.ММ.ГГГГ
+                        div.date_arrival 
                             div.arrow
                             div.text-field-calendar
-                                include modules/calendar.pug
+                               input.datepicker-here.field-date-left(type="text" 
+                                                      data-range="true" 
+                                                      data-multiple-dates-separator=" - " 
+                                                      data-language="ru" 
+                                                      placeholder="ДД.ММ.ГГГГ")
                     div.block2(style="margin-left:18px;")
                         h3 Выезд
-                        div.date_departure ДД.ММ.ГГГГ
+                        div.date_departure
                             div.arrow
                             div.text-field-calendar
-                                include modules/calendar.pug
+                                input.datepicker-here.field-date-right(type="text" 
+                                                      data-range="true" 
+                                                      data-multiple-dates-separator=" - " 
+                                                      data-language="ru" 
+                                                      placeholder="ДД.ММ.ГГГГ")
                     div.block3
                         h3 Гости
                         div.guests

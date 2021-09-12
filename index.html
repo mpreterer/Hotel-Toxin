@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/datepicker.min.css">
     <link rel="shortcut icon" href="image/Logo.png" type="image/png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,127 +70,19 @@
           <div class="block_date">
             <div class="block1">
               <h3>Прибытие</h3>
-              <div class="date_arrival">ДД.ММ.ГГГГ
+              <div class="date_arrival"> 
                 <div class="arrow"></div>
-                <div class="calendar_main hide">
-                  <div class="calendar hide">
-                    <div class="container">
-                      <div class="month">
-                        <h2>Август 2020</h2>
-                        <div class="date">
-                          <div class="day">Пн </div>
-                          <div class="day">Вт </div>
-                          <div class="day">Ср </div>
-                          <div class="day">Чт </div>
-                          <div class="day">Пт </div>
-                          <div class="day">Сб </div>
-                          <div class="day">Вс </div>
-                          <div class="number">29 </div>
-                          <div class="number">30 </div>
-                          <div class="number">31 </div>
-                          <div class="number">1 </div>
-                          <div class="number">2 </div>
-                          <div class="number">3 </div>
-                          <div class="number">4 </div>
-                          <div class="number">5 </div>
-                          <div class="number">6 </div>
-                          <div class="number">7 </div>
-                          <div class="number">8 </div>
-                          <div class="number">9 </div>
-                          <div class="number">10 </div>
-                          <div class="number">11 </div>
-                          <div class="number">12 </div>
-                          <div class="number">13 </div>
-                          <div class="number">14 </div>
-                          <div class="number">15 </div>
-                          <div class="number">16 </div>
-                          <div class="number">17 </div>
-                          <div class="number">18 </div>
-                          <div class="number">19 </div>
-                          <div class="number">20 </div>
-                          <div class="number">21 </div>
-                          <div class="number">22 </div>
-                          <div class="number">23 </div>
-                          <div class="number">24 </div>
-                          <div class="number">25 </div>
-                          <div class="number">26 </div>
-                          <div class="number">27 </div>
-                          <div class="number">28 </div>
-                          <div class="number">29 </div>
-                          <div class="number">30 </div>
-                          <div class="number">31 </div>
-                          <div class="number">1</div>
-                        </div>
-                      </div>
-                      <div class="function">
-                        <div class="clear">Очистить</div>
-                        <div class="apply">Применить</div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="text-field-calendar">
+                  <input class="datepicker-here field-date-left" type="text" data-range="true" data-multiple-dates-separator=" - " data-language="ru" placeholder="ДД.ММ.ГГГГ">
                 </div>
               </div>
             </div>
             <div class="block2" style="margin-left:18px;">
               <h3>Выезд</h3>
-              <div class="date_departure">ДД.ММ.ГГГГ
+              <div class="date_departure">
                 <div class="arrow"></div>
-                <div class="calendar_main hide" style="left:-184px;">
-                  <div class="calendar">
-                    <div class="container">
-                      <div class="month">
-                        <h2>Август 2020</h2>
-                        <div class="date">
-                          <div class="day">Пн</div>
-                          <div class="day">Вт</div>
-                          <div class="day">Ср</div>
-                          <div class="day">Чт</div>
-                          <div class="day">Пт</div>
-                          <div class="day">Сб</div>
-                          <div class="day">Вс</div>
-                          <div class="number">29</div>
-                          <div class="number">30</div>
-                          <div class="number">31</div>
-                          <div class="number">1</div>
-                          <div class="number">2</div>
-                          <div class="number">3</div>
-                          <div class="number">4</div>
-                          <div class="number">5</div>
-                          <div class="number">6</div>
-                          <div class="number">7</div>
-                          <div class="number">8</div>
-                          <div class="number">9</div>
-                          <div class="number">10</div>
-                          <div class="number">11</div>
-                          <div class="number">12</div>
-                          <div class="number">13</div>
-                          <div class="number">14</div>
-                          <div class="number">15</div>
-                          <div class="number">16</div>
-                          <div class="number">17</div>
-                          <div class="number">18</div>
-                          <div class="number">19</div>
-                          <div class="number">20</div>
-                          <div class="number">21</div>
-                          <div class="number">22</div>
-                          <div class="number">23</div>
-                          <div class="number">24</div>
-                          <div class="number">25</div>
-                          <div class="number">26</div>
-                          <div class="number">27</div>
-                          <div class="number">28</div>
-                          <div class="number">29</div>
-                          <div class="number">30</div>
-                          <div class="number">31</div>
-                          <div class="number">1</div>
-                        </div>
-                        <div class="function">
-                          <div class="clear">Очистить</div>
-                          <div class="apply">Применить</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="text-field-calendar">
+                  <input class="datepicker-here field-date-right" type="text" data-range="true" data-multiple-dates-separator=" - " data-language="ru" placeholder="ДД.ММ.ГГГГ">
                 </div>
               </div>
             </div>
@@ -288,10 +181,13 @@
         <div class="sub_icons"><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook-square"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
       </div>
     </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script-datepicker.js"></script>
     <script src="js/click.js"></script>
     <script src="js/clear.js"></script>
     <script src="js/menu.js"> </script>
     <script src="js/close.js"></script>
-    <script src="js/close_calendare.js"></script>
+    <script src="js/datepicker.min.js"> </script>
+    <script src="js/date-field.js"></script>
   </body>
 </html>
