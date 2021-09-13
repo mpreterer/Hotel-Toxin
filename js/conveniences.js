@@ -19,6 +19,10 @@ var strSpa = '';
 var strBed = '';
 var strVan = '';
 
+Con1.value = 0;
+Con2.value = 0;
+Con3.value = 0;
+
 
 function plusBedr(directPlus) {
   directPlus.addEventListener('click', () => {
@@ -427,8 +431,8 @@ function minusBath(directMinus) {
           strVan = 'ванная комната';
           counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else if ( bathrooms <= 0 ) {
-        strBed = '';
-        counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
+        strVan = '';
+        counterCon.value = `${bed} ${strBed}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24) {
           strVan = 'ванные комнаты'
           counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
