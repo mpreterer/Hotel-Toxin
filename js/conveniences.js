@@ -321,13 +321,13 @@ function plusBath(directPlus) {
     if ( bed > 0 && bedrooms > 0 ) {
       if ( bathrooms === 1 || bathrooms === 21 )
         {
-          strVan = 'ванная';
+          strVan = 'ванная комната';
           counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24) {
-          strVan = 'ванные'
+          strVan = 'ванные комнаты'
           counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else {
-          strVan = 'ванных';
+          strVan = 'ванных комнат';
           counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
       }
 
@@ -335,13 +335,13 @@ function plusBath(directPlus) {
 
       if ( bed === 1 || bed === 21 )
         {
-          strVan = 'ванная';
+          strVan = 'ванная комната';
           counterCon.value = `${bedrooms} ${strSpa} ${bathrooms} ${strVan}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24) {
-          strVan = 'ванные'
+          strVan = 'ванные комнаты'
           counterCon.value = `${bedrooms} ${strSpa} ${bathrooms} ${strVan}`;
       } else {
-          strVan = 'ванных';
+          strVan = 'ванных комнат';
           counterCon.value = `${bedrooms} ${strSpa} ${bathrooms} ${strVan}`;
       }
 
@@ -349,13 +349,13 @@ function plusBath(directPlus) {
 
       if ( bathrooms === 1 || bathrooms === 21 )
         {
-          strVan = 'ванная';
+          strVan = 'ванная комната';
           counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24) {
-          strVan = 'ванные'
+          strVan = 'ванные комнаты'
           counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else {
-          strVan = 'ванных';
+          strVan = 'ванных комнат';
           counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
       }
     }
@@ -363,13 +363,13 @@ function plusBath(directPlus) {
     else {
       if ( bathrooms === 1 || bathrooms === 21 )
         {
-          strVan = 'ванная';
+          strVan = 'ванная комната';
           counterCon.value = `${bathrooms} ${strVan}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24) {
-          strVan = 'ванные'
+          strVan = 'ванные комнаты'
           counterCon.value = `${bathrooms} ${strVan}`;
       } else {
-          strVan = 'ванных';
+          strVan = 'ванных комнат';
           counterCon.value = `${bathrooms} ${strVan}`;
       }
 
@@ -390,16 +390,16 @@ function minusBath(directMinus) {
     if ( bed > 0 && bedrooms > 0 ) {
       if ( bathrooms === 1 || bathrooms === 21 )
         {
-          strVan = 'ванная';
+          strVan = 'ванная комната';
           counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else if ( bathrooms <= 0) {
         strBed = '';
         counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24) {
-          strVan = 'ванные'
+          strVan = 'ванные комнаты'
           counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else {
-          strVan = 'ванных';
+          strVan = 'ванных комнат';
           counterCon.value = `${bedrooms} ${strSpa} ${bed} ${strBed} ${bathrooms} ${strVan}`;
       }
 
@@ -407,16 +407,16 @@ function minusBath(directMinus) {
 
       if ( bed === 1 || bed === 21 )
         {
-          strVan = 'ванная';
+          strVan = 'ванная комната';
           counterCon.value = `${bedrooms} ${strSpa} ${bathrooms} ${strVan}`;
       } else if ( bathrooms <= 0 ) {
         strBed = '';
         counterCon.value = `${bedrooms} ${strSpa} ${bathrooms} ${strVan}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24) {
-          strVan = 'ванные'
+          strVan = 'ванные комнаты'
           counterCon.value = `${bedrooms} ${strSpa} ${bathrooms} ${strVan}`;
       } else {
-          strVan = 'ванных';
+          strVan = 'ванных комнат';
           counterCon.value = `${bedrooms} ${strSpa} ${bathrooms} ${strVan}`;
       }
 
@@ -424,16 +424,16 @@ function minusBath(directMinus) {
 
       if ( bathrooms === 1 || bathrooms === 21 )
         {
-          strVan = 'ванная';
+          strVan = 'ванная комната';
           counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else if ( bathrooms <= 0 ) {
         strBed = '';
         counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24) {
-          strVan = 'ванные'
+          strVan = 'ванные комнаты'
           counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
       } else {
-          strVan = 'ванных';
+          strVan = 'ванных комнат';
           counterCon.value = `${bed} ${strBed} ${bathrooms} ${strVan}`;
       }
     }
@@ -441,16 +441,16 @@ function minusBath(directMinus) {
     else {
       if ( bathrooms === 1 || bathrooms === 21 )
         {
-          strVan = 'ванная';
+          strVan = 'ванная комната';
           counterCon.value = `${bathrooms} ${strVan}`;
       } else if ( bathrooms <= 0 ) {
         strBed = '';
         counterCon.value = '';
       } else if ( bathrooms >= 2 && bathrooms <= 4 || bathrooms >= 22 && bathrooms <= 24) {
-          strVan = 'ванные'
+          strVan = 'ванные комнаты'
           counterCon.value = `${bathrooms} ${strVan}`;
       } else {
-          strVan = 'ванных';
+          strVan = 'ванных комнат';
           counterCon.value = `${bathrooms} ${strVan}`;
       }
 
