@@ -12,6 +12,17 @@ const minusCon1 = document.querySelector('.circle_con_minus1');
 const minusCon2 = document.querySelector('.circle_con_minus2');
 const minusCon3 = document.querySelector('.circle_con_minus3');
 
+const dropBlockCon = document.querySelector('.dropBlockCon');
+const apply_conv = document.querySelector('#apply_conv');
+
+apply_conv.addEventListener('click', () => {
+  if (dropBlockCon.classList.contains('hide')) {
+    dropBlockCon.classList.remove('hide')
+  }
+  dropBlockCon.classList.add('hide')
+
+});
+
 var bathrooms = 0;
 var bedrooms = 0;
 var bed = 0;
@@ -22,6 +33,8 @@ var strVan = '';
 Con1.value = 0;
 Con2.value = 0;
 Con3.value = 0;
+
+
 
 
 function plusBedr(directPlus) {
