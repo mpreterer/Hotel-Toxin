@@ -1,0 +1,30 @@
+block variables
+
+block room
+    #{classRoom}
+        div.container
+            div.move_arrow.arrow_left
+                div.container_a_l
+                    div.icon
+            div.move_arrow.arrow_right
+                div.container_a_r
+                    div.icon
+            div.in_circle
+                a.circle.circle_1(href="../layout/roomDetails.html" count="1" fill="yes")
+                a.circle.circle_2(href="../layout/roomDetails.html" count="2" fill="no")
+                a.circle.circle_3(href="../layout/roomDetails.html" count="3" fill="no")
+                a.circle.circle_4(href="../layout/roomDetails.html" count="4" fill="no")
+        a.link-for-room(href=linkRoom)
+            div.head_room
+                p(style="font-size:18px; color:#1F2041; font-weight:bold;") #{numberRoom}
+                span #{level}
+                p(style="font-size:12.5px;line-height: 16px;margin-top:3px;") #{price}
+            div.rating
+                div.star
+                    div.stars#star1
+                    div.stars#star2
+                    div.stars#star3
+                    div.stars#star4
+                    div.stars#star5
+                div.feedbackspan
+                    b #{review}
