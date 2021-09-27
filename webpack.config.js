@@ -1,37 +1,21 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const {CleanWebpackPlugin} = requier('clean-webpack-plugin');
+const path = require('path')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-    entry: {
-        context: path.resolve(__dirname,'src'),
-        mode: 'development',
-        main: ['./index.js']
-    },
+    entry: './src/index.js',
     output: {
-        filename: filename('js'),
-        path: path.resolve(__dirname, 'dist')
+        filename: 'bundle.js',
+        path: path.resolve(__dirname,'dist')
     },
     resolve: {
-        extensions: ['js','json']
+        extentions: ['js','json']
     },
-    plugins: [
-        new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin()
-    ],
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: ['css-loader']
-            },
-            {
-                test: /\.sass/,
-                use: ['sass-loader']
-            },
-            {
-                test: /\.jpg|webp|svg$/,
-                use: ['file-loader']
-            }
-        ]
-    }
+    watchOptions: {
+        ignored: /node_modules/,
+    },
+    mode: 'development',
+
+    
 }
