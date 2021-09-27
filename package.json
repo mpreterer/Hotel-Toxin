@@ -1,0 +1,26 @@
+{
+  "name": "hotel",
+  "version": "1.2.0",
+  "description": "---\r ### Распаковка\r Клонировать\r >```git clone https://github.com/iammumhacker/Toxin_Hotel.git```",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://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@github.com//mpreterer/FSD-2-Task.git"
+  },
+  "author": "fermanachi",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.3.0",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.3.0",
+    "sass-loader": "^12.1.0",
+    "scss-loader": "0.0.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
