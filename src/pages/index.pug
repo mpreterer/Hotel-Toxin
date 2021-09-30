@@ -1,7 +1,7 @@
-extends template-head/main_index.pug
+extends ../template-head/main_index.pug
 
 block header
-    include includes/header.pug
+    include ../includes/header.pug
 block content
     div.content
         div.search_room
@@ -33,7 +33,7 @@ block content
                         div.guests
                             input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="" value="")
                             div.arrow
-                        include modules/dropBlock.pug
+                        include ../includes/dropBlock.pug
                     a(href="layout/searchRoom.html")
                         div.block4
                             p(style="padding-top:15px") подобрать номер
@@ -41,4 +41,4 @@ block content
     
                             
 block footer
-    include includes/footer.pug
+    include ../includes/footer.pug
