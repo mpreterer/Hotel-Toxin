@@ -21,7 +21,7 @@ module.exports = () => {
 
     return {
         mode: 'development',
-        entry: './src/index.js',
+        entry: `${PATHS.src}/js/index.js`,
         output: {
             filename: `./${filename('js')}`,
             path: path.resolve(__dirname,'dist')
@@ -37,6 +37,38 @@ module.exports = () => {
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/search-room/searchRoom.pug`,
                 filename: './website-pages/search-room/searchRoom.html'
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/website-pages/room-details/roomDetails.pug`,
+                filename: './website-pages/room-details/roomDetails.html'
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/website-pages/login/login.pug`,
+                filename: './website-pages/login/login.html'
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/website-pages/registration/Registration.pug`,
+                filename: './website-pages/registration/Registration.html'
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/website-pages/search-room/searchRoom.pug`,
+                filename: './website-pages/search-room/searchRoom.html'
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/ui-kit/cards/Cards.pug`,
+                filename: './ui-kit/cards/Cards.html'
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/ui-kit/colors-type/colors-type.pug`,
+                filename: './ui-kit/colors-type/colors-type.html'
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/ui-kit/elements/Elements.pug`,
+                filename: './ui-kit/elements/Elements.html'
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/ui-kit/header-footer/HeaderFooter.pug`,
+                filename: './ui-kit/header-footer/HeaderFooter.html'
             }),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
