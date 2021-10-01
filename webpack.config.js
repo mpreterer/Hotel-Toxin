@@ -5,6 +5,11 @@ const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = !isDev;
+
+const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+
 module.exports = () => {
 
     const PATHS = {
@@ -18,7 +23,7 @@ module.exports = () => {
         mode: 'development',
         entry: './src/index.js',
         output: {
-            filename: 'bundle.js',
+            filename: `./${filename('js')}`,
             path: path.resolve(__dirname,'dist')
         },
         // watchOptions: {
@@ -29,7 +34,14 @@ module.exports = () => {
                 template: `${PAGES_DIR}/index.pug`,
                 filename: './index.html'
             }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/website-pages/search-room/searchRoom.pug`,
+                filename: './website-pages/search-room/searchRoom.html'
+            }),
             new CleanWebpackPlugin(),
+            new MiniCssExtractPlugin({
+                filename: ('./pages/[name][hash].css')
+            })
             // new MiniCssExtractPlugin({
             //     filename: './css/[name].[hash].css',
             // })
@@ -44,12 +56,19 @@ module.exports = () => {
                     use: ['css-loader'] 
                 },
                 {
-                    test:/\.s[ac]ss$/,
+                    test:/\.sass$/,
                     use: [
                         'style-loader',
                         'css-loader',
                         'sass-loader',
-                        'scss-loader'
+                    ]
+                },
+                {
+                    test:/\.scss$/,  
+                    use: [
+                        'style-loader',
+                        'css-loader',
+                        'sass-loader',
                     ]
                 },
                 {
