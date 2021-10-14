@@ -1,5 +1,8 @@
-input.datepicker-here(type="text" 
-                      data-range="true" 
-                      data-multiple-dates-separator=" - " 
-                      data-language="ru" 
-                      placeholder="ДД.ММ.ГГГГ")
+mixin calendar({ isOpen = false, placeholder='ДД.ММ.ГГГГ', arr = 'прибытие', dep = 'выезд' }={})
+    input.datepicker-here(type="text" 
+                        data-range="true" 
+                        data-multiple-dates-separator=" - " 
+                        data-language="ru" 
+                        placeholder=`${placeholder}`
+                        calendar-isOpen=`${isOpen}`
+                        )
