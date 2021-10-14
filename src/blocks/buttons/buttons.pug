@@ -1,0 +1,7 @@
+mixin button({ href = '/mock-address/change-me', group = 'default', small = false, text = 'click me', tittle }={})
+  .button
+    if tittle
+      span.button__title !{tittle}
+    a.button__link(href=href class=['button__link_type_'+group, small ? 'button__link_custom-size_'+group+'-small' : '']) #{text}
+      if group == 'long'
+        i.material-icons.button__icon arrow_forward
