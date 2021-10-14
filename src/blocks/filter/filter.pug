@@ -1,0 +1,30 @@
+include ../buttons/buttons.pug
+include ../calendar/calendar.pug
+
+mixin filter({ title = 'Найдём номера под ваши пожелания' }={})
+    div.filter__search-room
+        h1 #{title}
+        div.filter__residence
+            div.filter__block-date
+                div.filter__block1
+                    h3 Прибытие
+                    div.filter__date-arrival 
+                        div.filter__arrow
+                        div.filter__text-field-calendar
+                            +calendar
+                div.filter__block2(style="margin-left:18px;")
+                    h3 Выезд
+                    div.filter__date-departure
+                        div.filter__arrow
+                        div.filter__text-field-calendar
+                            +calendar
+                div.filter__block3
+                    h3 Гости
+                    div.filter__guests
+                        input.filter__counte-guests(placeholder="Сколько Гостей" autocomplete="off" readonly="" value="")
+                        div.filter__arrow
+                    include ../includes/dropBlock.pug
+                a(href="website-pages/search-room/searchRoom.html")
+                    div.filter__block4
+                        p(style="padding-top:15px") подобрать номер
+                        div.filter__arrow-right
