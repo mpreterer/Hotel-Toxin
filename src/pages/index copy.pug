@@ -2,41 +2,43 @@ extends ../template-head/main_index.pug
 
 block header
     include ../includes/header.pug
+    
 block content
     div.content
-        div.content__search-room
-            h1 Найдём номера под ваши пожелания
-            div.content__residence
-                div.content__block-date
-                    div.content__block1
-                        h3 Прибытие
-                        div.content__date-arrival 
-                            div.content__arrow
-                            div.content__text-field-calendar
-                               input.datepicker-here.field-date-left(type="text" 
-                                                      data-range="true" 
-                                                      data-multiple-dates-separator=" - " 
-                                                      data-language="ru" 
-                                                      placeholder="ДД.ММ.ГГГГ")
-                    div.content__block2(style="margin-left:18px;")
-                        h3 Выезд
-                        div.content__date-departure
-                            div.content__arrow
-                            div.content__text-field-calendar
-                                input.datepicker-here.field-date-right(type="text" 
-                                                      data-range="true" 
-                                                      data-multiple-dates-separator=" - " 
-                                                      data-language="ru" 
-                                                      placeholder="ДД.ММ.ГГГГ")
-                    div.content__block3
-                        h3 Гости
-                        div.content__guests
-                            input.content__counte-guests(placeholder="Сколько Гостей" autocomplete="off" readonly="" value="")
-                            div.content__arrow
-                        include ../includes/dropBlock.pug
-                    a(href="website-pages/search-room/searchRoom.html")
-                        div.content__block4
-                            p(style="padding-top:15px") подобрать номер
-                            div.content__arrow-right
+        div.content__container
+            div.content__search-room
+                h1 Найдём номера под ваши пожелания
+                div.content__residence
+                    div.content__block-date
+                        div.content__block1
+                            h3 Прибытие
+                            div.content__date-arrival 
+                                div.content__arrow
+                                div.content__text-field-calendar
+                                input.datepicker-here.field-date-left(type="text" 
+                                                        data-range="true" 
+                                                        data-multiple-dates-separator=" - " 
+                                                        data-language="ru" 
+                                                        placeholder="ДД.ММ.ГГГГ")
+                        div.content__block2(style="margin-left:18px;")
+                            h3 Выезд
+                            div.content__date-departure
+                                div.content__arrow
+                                div.content__text-field-calendar
+                                    input.datepicker-here.field-date-right(type="text" 
+                                                        data-range="true" 
+                                                        data-multiple-dates-separator=" - " 
+                                                        data-language="ru" 
+                                                        placeholder="ДД.ММ.ГГГГ")
+                        div.content__block3
+                            h3 Гости
+                            div.content__guests
+                                input.content__counte-guests(placeholder="Сколько Гостей" autocomplete="off" readonly="" value="")
+                                div.content__arrow
+                            include ../includes/dropBlock.pug
+                        a(href="website-pages/search-room/searchRoom.html")
+                            div.content__block4
+                                p(style="padding-top:15px") подобрать номер
+                                div.content__arrow-right
 block footer
     include ../includes/footer.pug
