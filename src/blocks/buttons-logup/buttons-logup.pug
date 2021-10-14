@@ -1,0 +1,7 @@
+mixin button-logup({ href = '/mock-address/change-me', group = 'default', small = false, text = 'click me', tittle }={})
+  .button-logup
+    if tittle
+      span.button-logup__title !{tittle}
+    a.button-logup__link(href=href class=['button-logup__link_type_'+group, small ? 'button-logup__link_custom-size_'+group+'-small' : '']) #{text}
+      if group == 'long'
+        i.material-icons.button-logup__icon arrow_forward
