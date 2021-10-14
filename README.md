@@ -9,6 +9,14 @@
 >```npm i```
 ---
 
+Запустить webpack server
+>```npm run dev```
+---
+
+Запустить production build
+>```npm run build```
+---
+
 ## Использованные библиотеки
 [jQuery](https://github.com/jquery/jquery),
 [air-datepicker](https://github.com/t1m0n/air-datepicker),

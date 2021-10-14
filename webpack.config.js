@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -55,6 +56,10 @@ module.exports = () => {
                 filename: './website-pages/search-room/searchRoom.html'
             }),
             new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/ui-kit/site-pages.pug`,
+                filename: './ui-kit/site-pages.html'
+            }),
+            new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/ui-kit/cards/Cards.pug`,
                 filename: './ui-kit/cards/Cards.html'
             }),
@@ -73,7 +78,15 @@ module.exports = () => {
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
                 filename: ('./pages/[name][hash].css')
-            })
+            }),
+            new CopyWebpackPlugin({
+                patterns: [
+                    {
+                      from: path.resolve(__dirname, './src/assets/image'),
+                      to:   path.resolve(__dirname, './dist/assets/image')
+                    }
+                  ]
+                })
             // new MiniCssExtractPlugin({
             //     filename: './css/[name].[hash].css',
             // })
@@ -83,6 +96,10 @@ module.exports = () => {
         },
         module: {
             rules: [
+                {
+                    test:/\.html$/,
+                    use: ['html-loader']
+                },
                 {
                     test:/\.css$/,
                     use: ['css-loader'] 
@@ -104,8 +121,8 @@ module.exports = () => {
                     ]
                 },
                 {
-                    test:/\.png|svg|jpg$/,
-                    use: ['file-loader'] 
+                    test:/\.(png|svg|jpg)$/,
+                    type: 'asset/resource'
                 },
                 {
                     test:/\.pug$/,

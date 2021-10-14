@@ -120,7 +120,7 @@ button {
 	right: -18px;
 	width: 12px;
 	height: 8px;
-	background-image: url(../assets/image/expand_more.svg);
+	background-image: url(../image/expand_more.svg);
 }
 
 #arrow_li_left {
@@ -308,7 +308,7 @@ button {
 /*блок контента*/
 .content {
 	height:1022px;
-	background-image:url(../assets/image/content.jpg);
+	background-image:url(../image/content.jpg);
 	background-repeat:no-repeat;
 }
 
@@ -401,7 +401,7 @@ button {
 	right: 15px;
 	width: 12px;
 	height: 8px;
-	background-image: url(../assets/image/expand_more.svg);
+	background-image: url(../image/expand_more.svg);
 	z-index: 5;
 	pointer-events: none;
 }
@@ -447,7 +447,7 @@ button {
 	position:absolute;
 	top:18px;
 	right:20px;
-	background-image:url(../assets/image/arrow_forward.svg);
+	background-image:url(../image/arrow_forward.svg);
 	background-position:center;
 	background-repeat:no-repeat;
 }
@@ -460,7 +460,7 @@ button {
 	position:absolute;
 	top:18px;
 	left:20px;
-	background-image:url(../assets/image/arrow_back.svg);
+	background-image:url(../image/arrow_back.svg);
 	background-position:center;
 	background-repeat:no-repeat;
 }
@@ -554,7 +554,7 @@ button {
 }
 
 .search_room .residence input {
-	// padding:12px 32px 8.44px 15px;
+	padding:12px 32px 8.44px 15px;
 	cursor:pointer;
 	border:none;
 	border-radius:3px;
@@ -769,7 +769,7 @@ button {
 	background-repeat:no-repeat;
 	right:15px;
 	top:17px;
-	background-image:url(../assets/image/expand_more.svg);
+	background-image:url(../image/expand_more.svg);
 }
 
 .search_room .block1 .arrow, .block2, .arrow {
@@ -911,7 +911,7 @@ button {
 	position:absolute;
 	top:12px;
 	right:12px;
-	background-image:url(../assets/image/arrow_forward.svg);
+	background-image:url(../image/arrow_forward.svg);
 	background-repeat:no-repeat;
 }
 

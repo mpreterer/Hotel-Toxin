@@ -1,7 +1,7 @@
-extends ../../template-head/main_roomDetails.pug
+extends ../../../template-head/main_roomDetails.pug
 
 block header
-    include header-all.pug
+    include ../../../includes/header-all.pug
 block content
     div.content_room_details
         div.container_room_loop
@@ -107,7 +107,7 @@ block content
                                 input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
                             div.arrow
 
-                            include ../../includes/dropBlock.pug
+                            include ../../../includes/dropBlock.pug
 
                         div.booking_price
                             div.container_block1
@@ -126,4 +126,4 @@ block content
                             div.to_book
                                 p забронировать 
 block footer
-    include footer_all.pug
+    include ../../../includes/footer_all.pug

@@ -1,4 +1,4 @@
-extends ../template-head/main.pug
+extends ../../../template-head/main.pug
 
 block variables 
     - var pageTitle = 'Карточки'
@@ -138,7 +138,7 @@ block content
                                     div.guests
                                         input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
                                         div.arrow
-                                    include ../modules/dropBlock.pug
+                                    include ../../../includes/dropBlock.pug
                                 a(href="layout/searchRoom.html")
                                     div.block4
                                         p(style="padding-top:15px") подобрать номер
@@ -188,14 +188,14 @@ block content
                                 div.date_arrival ДД.ММ.ГГГГ
                                 div.arrow
 
-                                include ../modules/calendar.pug
+                                include ../../../includes/calendar.pug
 
                             div.container_departure
                                 h2 выезд
                                 div.date_departure ДД.ММ.ГГГГ
                                 div.arrow
                                 
-                                include ../modules/calendar.pug
+                                include ../../../includes/calendar.pug
 
                         div.booking_guests
                             h2 гости
@@ -203,7 +203,7 @@ block content
                                 input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
                             div.arrow
 
-                            include ../modules/dropBlock.pug
+                            include ../../../includes/dropBlock.pug
 
                         div.booking_price
                             div.container_block1

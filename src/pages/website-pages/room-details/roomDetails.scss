@@ -7,7 +7,7 @@
 .room_loop1 {
 	width:981px;
 	height:485px;
-	background-image:url(../image/room_loop1.jpg);
+	background-image:url(../../../image/room_loop1.jpg);
 	background-repeat:no-repeat;
 	background-size:100%;
 	transition:0.4s;
@@ -30,7 +30,7 @@
 .room_loop2 {
 	width:538px;
 	height:243px;
-	background-image:url(../image/room_loop2.jpg);
+	background-image:url(../../../image/room_loop2.jpg);
 	background-repeat:no-repeat;
 	background-size:100%;
 	transition:0.4s;
@@ -46,7 +46,7 @@
 .room_loop3 {
 	width:538px;
 	height:242px;
-	background-image:url(../image/room_loop3.jpg);
+	background-image:url(../../../image/room_loop3.jpg);
 	background-repeat:no-repeat;
 	background-size:100%;
 	transition:0.4s;
@@ -135,7 +135,7 @@
 
 /*Расположение блоков до li*/
 #li_room1:before {
-	background-image:url(../image/insert_emoticon.svg);
+	background-image:url(../../../image/insert_emoticon.svg);
 	background-repeat:no-repeat;
 	background-size:90%;
 	margin:2px 5px 0 0;
@@ -143,14 +143,14 @@
 
 /*Расположение блоков до li*/
 #li_room2:before {
-	background-image:url(../image/location_city.svg);
+	background-image:url(../../../image/location_city.svg);
 	background-repeat:no-repeat;
 	background-size:80%;
 }
 
 /*Расположение блоков до li*/
 #li_room3:before {
-	background-image:url(../image/whatshot.svg);
+	background-image:url(../../../image/whatshot.svg);
 	background-repeat:no-repeat;
 	background-size:77%;
 }
@@ -170,7 +170,7 @@
 	width:120px;
 	height:120px;
 	border-radius:50%;
-	background:url(../image/Ellipse.jpg);
+	// background-image:url(../../../image/Ellipse.jpg);
 	margin-right:30px;
 }
 
@@ -276,11 +276,11 @@
 }
 
 .avatar_1:before {
-	background-image:url(../image/user_1.png);
+	background-image:url(../../../image/user_1.png);
 }
 
 .avatar_2:before {
-	background-image:url(../image/user_2.png);
+	background-image:url(../../../image/user_2.png);
 }
 
 .avatars span {
@@ -318,7 +318,7 @@
 .fa_heart {
 	width:14px;
 	height:12px;
-	background:url(../image/favorite_border.png);
+	background-image:url(../../../image/favorite_border.png);
 	background-repeat:no-repeat;
 	position:absolute;
 	top:3.5px;
@@ -326,11 +326,11 @@
 }
 
 .fill_heart {
-	background:url(../image/favorite.png);
+	background-image:url(../../../image/favorite.png);
 }
 
 .border_heart {
-	background:url(../image/favorite_border.png);
+	background-image:url(../../../image/favorite_border.png);
 }
 
 #span_heart {
@@ -497,7 +497,7 @@
 	position:absolute;
 	top:44px;
 	right:10px;
-	background-image:url(../image/expand_more.svg);
+	background-image:url(../../../image/expand_more.svg);
 	background-repeat:no-repeat;
 }
 
@@ -564,7 +564,7 @@
 	position:absolute;
 	top:44px;
 	right:10px;
-	background-image:url(../image/expand_more.svg);
+	background-image:url(../../../image/expand_more.svg);
 	background-repeat:no-repeat;
 }
 
@@ -608,7 +608,7 @@
 	position:absolute;
 	top:0;
 	right:-30px;
-	background-image:url(../image/i.svg);
+	background-image:url(../../../image/i.svg);
 	background-repeat:no-repeat;
 	background-position:center;
 	cursor:pointer;
@@ -652,7 +652,7 @@
 	content:'';
 	width:44px;
 	height:44px;
-	background-image:url(../image/arrow_forward.png);
+	background-image:url(../../../image/arrow_forward.png);
 	display:inline-block;
 	background-repeat:no-repeat;
 	position:absolute;

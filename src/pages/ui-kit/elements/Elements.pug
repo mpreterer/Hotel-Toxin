@@ -1,4 +1,4 @@
-extends ../template-head/main.pug
+extends ../../../template-head/main.pug
 
 block variables
     - var pageTitle = 'Элементы'
@@ -47,7 +47,7 @@ block content
                                     div.block1
                                         div.date_arrival ДД.ММ.ГГГГ
                                             div.arrow
-                                            include ../modules/calendar.pug
+                                            include ../../../includes/calendar.pug
                     div.elements-left__left-block
                         h3.elements-left__sub-title date Dropdown
                         div.search_room
@@ -56,7 +56,7 @@ block content
                                     div.block2(style="margin-left:18px;")
                                         div.date_departure ДД.ММ.ГГГГ
                                             div.arrow
-                                            include ../modules/calendar.pug
+                                            include ../../../includes/calendar.pug
             div.elements-left__input
                 h3.elements-left__title filter date dropdown
                 div.content_search_room

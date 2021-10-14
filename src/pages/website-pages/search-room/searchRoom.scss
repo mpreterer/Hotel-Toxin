@@ -39,7 +39,7 @@
 	right:15px;
 	width:12px;
 	height:8px;
-	background-image:url(../../../assets/image/expand_more.svg);
+	background-image:url(../../../image/expand_more.svg);
 }
 
 .conveniences:after {
@@ -50,7 +50,7 @@
 	right:13px;
 	width:12px;
 	height:8px;
-	background-image:url(../../../assets/image/expand_more.svg);
+	background-image:url(../../../image/expand_more.svg);
 }
 
 .guests:after {
@@ -61,7 +61,7 @@
 	right:13px;
 	width:12px;
 	height:8px;
-	background-image:url(../../../assets/image/expand_more.svg);
+	background-image:url(../../../image/expand_more.svg);
 }
 
 .data_arrival_in_otel input:hover, .guests_in_hotel input:hover {
@@ -210,7 +210,7 @@
  .custom-checkbox:checked+label::before {
   border-color:#BC9CFF;
   background-color:#FFF;
-  background-image:url(../../../assets/image/gal.png);
+  background-image:url(../../../image/gal.png);
  }
 
 /* стили при наведении курсора на checkbox */
@@ -340,40 +340,40 @@
 
 
 .room1 .container {
-	background-image:url(../../../assets/image/1_room.png);
+	background-image:url(../../../image/1_room.png);
 }
 .room2 .container{
-	background-image:url(../../../assets/image/2_room.png);
+	background-image:url(../../../image/2_room.png);
 }
 .room3 .container{
-	background-image:url(../../../assets/image/3_room.png);
+	background-image:url(../../../image/3_room.png);
 }
 .room4 .container{
-	background-image:url(../../../assets/image/4_room.png);
+	background-image:url(../../../image/4_room.png);
 }
 .room5 .container{
-	background-image:url(../../../assets/image/5_room.png);
+	background-image:url(../../../image/5_room.png);
 }
 .room6 .container{
-	background-image:url(../../../assets/image/6_room.png);
+	background-image:url(../../../image/6_room.png);
 }
 .room7 .container{
-	background-image:url(../../../assets/image/7_room.png);
+	background-image:url(../../../image/7_room.png);
 }
 .room8 .container{
-	background-image:url(../../../assets/image/8_room.png);
+	background-image:url(../../../image/8_room.png);
 }
 .room9 .container{
-	background-image:url(../../../assets/image/9_room.png);
+	background-image:url(../../../image/9_room.png);
 }
 .room10 .container{
-	background-image:url(../../../assets/image/10_room.png);
+	background-image:url(../../../image/10_room.png);
 }
 .room11 .container{
-	background-image:url(../../../assets/image/11_room.png);
+	background-image:url(../../../image/11_room.png);
 }
 .room12 .container{
-	background-image:url(../../../assets/image/12_room.png);
+	background-image:url(../../../image/12_room.png);
 }
 /*Перелистывания картинок комнат (стрелки)*/
 
@@ -399,7 +399,7 @@
 .move_arrow .icon {
 	width:10px;
 	height:13px;
-	background-image:url(../../../assets/image/expand_more_left.svg);
+	background-image:url(../../../image/expand_more_left.svg);
 	background-position:center;
 	background-repeat:no-repeat;
 	position:absolute;
@@ -518,7 +518,7 @@
 	width:20px;
 	height:20px;
 	padding-right:22px;
-	background-image:url(../../../assets/image/star.svg);
+	background-image:url(../../../image/star.svg);
 	background-repeat:no-repeat;
 	cursor: pointer;
 }
@@ -538,45 +538,45 @@
 	width:20px;
 	height:20px;
 	padding-right:22px;
-	background-image:url(../../../assets/image/star_border.svg);
+	background-image:url(../../../image/star_border.svg);
 	background-repeat:no-repeat;
 	cursor:pointer;
 }
 
 .room_in_hotel .stars:hover {
-	background-image:url(../../../assets/image/star.svg);
+	background-image:url(../../../image/star.svg);
 }
 
 .room2 #star5 {
-	background-image: url(../../../assets/image/star_border.svg)
+	background-image: url(../../../image/star_border.svg)
 }
 
 .room3 #star5,.room3 #star4 {
-	background-image: url(../../../assets/image/star_border.svg)
+	background-image: url(../../../image/star_border.svg)
 }
 
 .room5 #star5 {
-	background-image: url(../../../assets/image/star_border.svg)
+	background-image: url(../../../image/star_border.svg)
 }
 
 .room6 #star5,.room6 #star4 {
-	background-image: url(../../../assets/image/star_border.svg)
+	background-image: url(../../../image/star_border.svg)
 }
 
 .room8 #star5 {
-	background-image: url(../../../assets/image/star_border.svg)
+	background-image: url(../../../image/star_border.svg)
 }
 
 .room9 #star5,.room9 #star4 {
-	background-image: url(../../../assets/image/star_border.svg)
+	background-image: url(../../../image/star_border.svg)
 }
 
 .room11 #star5,.room11 #star4 {
-	background-image: url(../../../assets/image/star_border.svg)
+	background-image: url(../../../image/star_border.svg)
 }
 
 .room12 #star5,.room12 #star4 {
-	background-image: url(../../../assets/image/star_border.svg)
+	background-image: url(../../../image/star_border.svg)
 }
 
 /*Отзывы*/
@@ -706,11 +706,11 @@
 }
 
 .convenience .active {
-	background-image:url(../../../assets/image/expand_more_up.svg);
+	background-image:url(../../../image/expand_more_up.svg);
 }
 
 .convenience .not_active {
-	background-image:url(../../../assets/image/expand_more.svg);
+	background-image:url(../../../image/expand_more.svg);
 }
 
 /*Дроп блок*/
@@ -788,7 +788,7 @@
 .convenience-checkbox:checked+label::before {
   border-color:#BC9CFF;
   background-color:#FFF;
-  background-image:url(../../../assets/image/gal.png);
+  background-image:url(../../../image/gal.png);
   background-size:50% 50%;
   background-position:center;
   background-repeat:no-repeat;

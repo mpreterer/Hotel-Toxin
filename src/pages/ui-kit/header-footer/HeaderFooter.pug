@@ -1,4 +1,4 @@
-extends ../template-head/main.pug
+extends ../../../template-head/main.pug
 
 block variables
     - var pageTitle = 'Footer & Header'
@@ -8,11 +8,11 @@ block header
     a(href="../index.html")
         div.logo
     div.header1
-        include headerHF.pug
+        include ../../../includes/headerHF.pug
     div.header2
-        include headerAuthorized.pug
+        include ../../../includes/headerAuthorized.pug
     div.footer1
-        include footer_all.pug
+        include ../../../includes/footer_all.pug
     div.footer-mobile
         a(href="index.html")
             div.logo
