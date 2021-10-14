@@ -1,5 +1,5 @@
 include ../logo/logotype.pug
-include ../buttons-logup/buttons-logup.pug
+include ../buttons/buttons.pug
 
 mixin header({ } = {})
     .header
@@ -26,14 +26,14 @@ mixin header({ } = {})
                     })
                 .header__container-logup
                     .header__btn-login
-                        +button-logup({
+                        +button({
                             group: 'border',
                             text: 'Войти',
                             href: 'sign-in.html',
                             small: true
                         })
                         .header__btn-registration
-                        +button-logup({
+                        +button({
                             group: 'background',
                             text: 'Зарегистрироваться',
                             href: 'sign-up.html',
