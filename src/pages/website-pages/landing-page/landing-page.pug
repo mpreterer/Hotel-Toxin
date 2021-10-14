@@ -1,0 +1,13 @@
+extends ../template.pug
+
+block variables
+    - var pageTitle = 'Landing page'
+
+block content
+
+    include 
+
+    main.landing-page(style="background-image: url('.')")
+        section.landing-page__filter
+            +filter()
+        p.landing-page__quote Лучшие номера для вашей работы, отдыха и просто вдохновения
