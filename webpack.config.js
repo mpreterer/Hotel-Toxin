@@ -30,7 +30,7 @@ module.exports = () => {
             'registration': [`${PATHS.src}/pages/website-pages/registration/index.js`],
         },
         output: {
-            filename: 'js/[name].[contenthash].js',
+            filename: 'js/[name].js',
             path: path.resolve(__dirname,'dist')
         },
         watchOptions: {
