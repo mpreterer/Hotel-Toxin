@@ -4,7 +4,7 @@ block header
     include ../includes/header.pug
 block content
     div.content
-        div.content__search-room
+        div.search_room
             h1 Найдём номера под ваши пожелания
             div.residence
                 div.block_date
@@ -33,7 +33,7 @@ block content
                         div.guests
                             input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="" value="")
                             div.arrow
-                        include ../includes/dropBlock.pug
+                        include ../blocks/dropBlock/dropBlock.pug
                     a(href="website-pages/search-room/searchRoom.html")
                         div.block4
                             p(style="padding-top:15px") подобрать номер

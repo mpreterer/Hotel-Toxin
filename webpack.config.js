@@ -22,62 +22,58 @@ module.exports = () => {
 
     return {
         mode: 'development',
-        entry: `${PATHS.src}/js/index.js`,
+        entry: {
+            index: [`${PATHS.src}/pages/index.js`],
+            search_room: [`${PATHS.src}/pages/website-pages/search-room/index.js`],
+            room_details: [`${PATHS.src}/pages/website-pages/room-details/index.js`],
+            login: [`${PATHS.src}/pages/website-pages/login/index.js`],
+            registration: [`${PATHS.src}/pages/website-pages/registration/index.js`],
+        },
         output: {
-            filename: `./${filename('js')}`,
+            filename: 'js/[name].[contenthash].js',
             path: path.resolve(__dirname,'dist')
         },
-        // watchOptions: {
-        //     ignored: /node_modules/,
-        // },
+        watchOptions: {
+            ignored: /node_modules/,
+        },
         plugins: [
+            new CleanWebpackPlugin(),
+            new CopyWebpackPlugin({
+                patterns: [
+                  {
+                    from: path.resolve(__dirname, 'src/assets'),
+                    to: path.resolve(__dirname, 'dist/assets'),
+                  },
+                ],
+              }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/index.pug`,
-                filename: './index.html'
+                filename: './index.html',
+                chunks: ['index']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/search-room/searchRoom.pug`,
-                filename: './website-pages/search-room/searchRoom.html'
+                filename: './website-pages/search-room/searchRoom.html',
+                chunks: [search_room]
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/room-details/roomDetails.pug`,
-                filename: './website-pages/room-details/roomDetails.html'
+                filename: './website-pages/room-details/roomDetails.html',
+                chunks: [room_details]
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/login/login.pug`,
-                filename: './website-pages/login/login.html'
+                filename: './website-pages/login/login.html',
+                chunks: [login]
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/registration/Registration.pug`,
-                filename: './website-pages/registration/Registration.html'
-            }),
-            new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/website-pages/search-room/searchRoom.pug`,
-                filename: './website-pages/search-room/searchRoom.html'
-            }),
-            new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/ui-kit/site-pages.pug`,
-                filename: './ui-kit/site-pages.html'
-            }),
-            new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/ui-kit/cards/Cards.pug`,
-                filename: './ui-kit/cards/Cards.html'
-            }),
-            new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/ui-kit/colors-type/colors-type.pug`,
-                filename: './ui-kit/colors-type/colors-type.html'
-            }),
-            new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/ui-kit/elements/Elements.pug`,
-                filename: './ui-kit/elements/Elements.html'
-            }),
-            new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/ui-kit/header-footer/HeaderFooter.pug`,
-                filename: './ui-kit/header-footer/HeaderFooter.html'
+                filename: './website-pages/registration/Registration.html',
+                chunks: [registration]
             }),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
-                filename: ('./pages/[name][hash].css')
+                filename: ('./pages/[name].[contenthash].css')
             }),
             new CopyWebpackPlugin({
                 patterns: [
@@ -86,10 +82,10 @@ module.exports = () => {
                       to:   path.resolve(__dirname, './dist/assets/image')
                     }
                   ]
-                })
-            // new MiniCssExtractPlugin({
-            //     filename: './css/[name].[hash].css',
-            // })
+                }),
+            new MiniCssExtractPlugin({
+                filename: './css/[name].[hash].css',
+            })
         ],
         stats: {
             children: true
@@ -127,7 +123,6 @@ module.exports = () => {
                 {
                     test:/\.pug$/,
                     use: ['pug-loader'],
-                    // include: path.join(__dirname,`${PAGES_DIR}/index.pug`)
                 }
             ]
         },

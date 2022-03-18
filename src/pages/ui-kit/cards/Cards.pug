@@ -138,7 +138,7 @@ block content
                                     div.guests
                                         input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
                                         div.arrow
-                                    include ../../../includes/dropBlock.pug
+                                    include ../../../blocks/dropBlock/dropBlock.pug
                                 a(href="layout/searchRoom.html")
                                     div.block4
                                         p(style="padding-top:15px") подобрать номер
@@ -188,14 +188,14 @@ block content
                                 div.date_arrival ДД.ММ.ГГГГ
                                 div.arrow
 
-                                include ../../../includes/calendar.pug
+                                include ../../../blocks/calendar/calendar.pug
 
                             div.container_departure
                                 h2 выезд
                                 div.date_departure ДД.ММ.ГГГГ
                                 div.arrow
                                 
-                                include ../../../includes/calendar.pug
+                                include ../../../blocks/calendar/calendar.pug
 
                         div.booking_guests
                             h2 гости
@@ -203,7 +203,7 @@ block content
                                 input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
                             div.arrow
 
-                            include ../../../includes/dropBlock.pug
+                            include ../../../blocks/dropBlock/dropBlock.pug
 
                         div.booking_price
                             div.container_block1

@@ -5,7 +5,7 @@ p {
 
 .block_registration {
 	height:684px;
-	background-image:url(../../../image/registration_bg.jpg);
+	background-image:url(../../../assets/image/registration_bg.jpg);
 	background-repeat:no-repeat;
 	background-position:center;
 }
@@ -97,7 +97,7 @@ p {
 
 /*Нажал на чекбокс*/
 .gender_checkbox:checked+label::before {
-	background-image:url(../../../image/Rectangle.svg);
+	background-image:url(../../../assets/image/Rectangle.svg);
 	background-position:center;
 	background-repeat:no-repeat;
 	border-color:#BC9CFF;
@@ -149,7 +149,7 @@ p {
 	border-radius:10px;
 	position:absolute;
 	left:0;
-	background-image:url(../../../image/Rectangle_2.svg);
+	background-image:url(../../../assets/image/Rectangle_2.svg);
 	background-repeat:no-repeat;
 	background-position:4px 4px;
 	transition:0.3s;
@@ -158,7 +158,7 @@ p {
 
 /*Нажал на кнопку*/
 .offer_checkbox:checked+label::before {
-	background-image:url(../../../image/Rectangle.svg);
+	background-image:url(../../../assets/image/Rectangle.svg);
 	background-position:right;
 	background-position:23px 4px;
 	border-color:#BC9CFF;
@@ -189,7 +189,7 @@ p {
 	content:'';
 	width:18px;
 	height:18px;
-	background:url(../../../image/arrow_forward.png);
+	background:url(../../../assets/image/arrow_forward.png);
 	display:inline-block;
 	position:absolute;
 	top:12px;
