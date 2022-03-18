@@ -24,10 +24,10 @@ module.exports = () => {
         mode: 'development',
         entry: {
             index: [`${PATHS.src}/pages/index.js`],
-            search_room: [`${PATHS.src}/pages/website-pages/search-room/index.js`],
-            room_details: [`${PATHS.src}/pages/website-pages/room-details/index.js`],
-            login: [`${PATHS.src}/pages/website-pages/login/index.js`],
-            registration: [`${PATHS.src}/pages/website-pages/registration/index.js`],
+            'search_room': [`${PATHS.src}/pages/website-pages/search-room/index.js`],
+            'room_details': [`${PATHS.src}/pages/website-pages/room-details/index.js`],
+            'login': [`${PATHS.src}/pages/website-pages/login/index.js`],
+            'registration': [`${PATHS.src}/pages/website-pages/registration/index.js`],
         },
         output: {
             filename: 'js/[name].[contenthash].js',
@@ -54,22 +54,22 @@ module.exports = () => {
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/search-room/searchRoom.pug`,
                 filename: './website-pages/search-room/searchRoom.html',
-                chunks: [search_room]
+                chunks: ['search_room']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/room-details/roomDetails.pug`,
                 filename: './website-pages/room-details/roomDetails.html',
-                chunks: [room_details]
+                chunks: ['room_details']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/login/login.pug`,
                 filename: './website-pages/login/login.html',
-                chunks: [login]
+                chunks: ['login']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/registration/Registration.pug`,
                 filename: './website-pages/registration/Registration.html',
-                chunks: [registration]
+                chunks: ['registration']
             }),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
