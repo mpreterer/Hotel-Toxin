@@ -1,4 +1,8 @@
 doctype html
+
+block variables
+    - pageTitle = 'Главная «Toxin» | Отели'
+
 html
     head
         meta(charset="UTF-8")
@@ -10,16 +14,8 @@ html
         script(type="text/javascript" src="awesome/fontawesome.min.js")
         script(src="https://kit.fontawesome.com/bc390f5649.js" crossorigin="anonymous")
         script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
-        title Главная «Toxin» | Отели
+        title=pageTitle
     body
         block header
         block content
         block footer
-        script(src="../js/jquery-3.6.0.min.js")
-        script(src="../js/click.js")
-        script(src="../js/clear.js")
-        script(src="../js/close.js")
-        script(src="../js/datepicker.min.js") 
-        script(src="../js/date-field.js")
-            
-
