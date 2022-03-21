@@ -1,12 +1,13 @@
 extends ../template-head/main_index.pug
 include ../blocks/dropBlock/dropBlock.pug
+include ../blocks/header/header.pug
 
 
 block variables
     - pageTitle = 'Главная «Toxin» | Отели'
 
 block header
-    include ../includes/header.pug
+    +header
 block content
     div.content
         div.search_room
