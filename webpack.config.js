@@ -53,22 +53,22 @@ module.exports = () => {
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/search-room/searchRoom.pug`,
-                filename: './website-pages/search-room/searchRoom.html',
+                filename: './searchRoom.html',
                 chunks: ['search_room']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/room-details/roomDetails.pug`,
-                filename: './website-pages/room-details/roomDetails.html',
+                filename: './roomDetails.html',
                 chunks: ['room_details']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/login/login.pug`,
-                filename: './website-pages/login/login.html',
+                filename: './login.html',
                 chunks: ['login']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/registration/Registration.pug`,
-                filename: './website-pages/registration/Registration.html',
+                filename: './Registration.html',
                 chunks: ['registration']
             }),
             new CleanWebpackPlugin(),
