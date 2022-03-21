@@ -1,10 +1,12 @@
 extends ../../../template-head/main_index.pug
+include ../../../blocks/header/header.pug
+
 
 block variables
     - pageTitle = '«Toxin» | Вход'
 
 block header
-    include ../../../includes/header-all.pug
+    +header
 block content
     div.block_login
         div.container
