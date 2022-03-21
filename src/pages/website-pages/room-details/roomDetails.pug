@@ -1,10 +1,12 @@
 extends ../../../template-head/main_index.pug
+include ../../../blocks/header/header.pug
+include ../../../blocks/dropBlock/dropBlock.pug
 
 block variables 
     - pageTitle = '«Toxin» | Номер для вас'
 
 block header
-    include ../../../includes/header-all.pug
+    +header
 block content
     div.content_room_details
         div.container_room_loop
@@ -36,7 +38,7 @@ block content
                         h2 Впечатления от номера
                         div.container_impressions
                             div.container_donut
-                                canvas#chart(width="120" height="120")
+                                canvas#chart(width="150" height="150" style="width: 120px; height: 120px;")
                                 div.comments-count 
                                     p 260
                                     p Голосов
@@ -103,14 +105,12 @@ block content
                                                     data-language="ru" 
                                                     placeholder="ДД.ММ.ГГГГ")
                                 div.arrow
-                                
                         div.booking_guests
                             h2 гости
                             div.guests
                                 input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
                             div.arrow
-
-                            include ../../../blocks/dropBlock/dropBlock.pug
+                            +dropBlock
 
                         div.booking_price
                             div.container_block1

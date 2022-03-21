@@ -1,11 +1,12 @@
 extends ../../../template-head/main_index.pug
+include ../../../blocks/header/header.pug
 
 
 block variables
     - pageTitle = '«Toxin» | Лучшие номера для вас'
 
 block header
-    include ../../../includes/header-all.pug
+    +header
 block content
     div.content_search_room
         div.main_content_search_room
