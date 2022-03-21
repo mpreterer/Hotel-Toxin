@@ -1,15 +1,8 @@
-extends ../../../template-head/main.pug
+extends ../../../template-head/main_index.pug
+include ../../../blocks/dropBlock/dropBlock.pug
 
 block variables 
     - pageTitle = 'Карточки'
-    - linkStyle = '../css/cards.css'
-    - linkStyle1 = '../css/searchRoom.css'
-    - linkStyle2 = '../css/Registration.css'
-    - linkStyle3 = '../css/roomDetails.css'
-    - linkStyle4 = '../css/range.css'
-    - linkStyle5 = '../css/login.css'
-
-    
 
 block header
     a(href="../index.html")
@@ -25,120 +18,30 @@ block content
                             div.block_date
                                 div.block1
                                     h3 Прибытие
-                                    div.date_arrival ДД.ММ.ГГГГ
+                                    div.date_arrival
                                         div.arrow
-                                        div.calendar_main.hide
-                                            div.calendar.hide
-                                                div.container
-                                                    div.month
-                                                        h2 Август 2020
-                                                        div.date
-                                                            div.day Пн 
-                                                            div.day Вт 
-                                                            div.day Ср 
-                                                            div.day Чт 
-                                                            div.day Пт 
-                                                            div.day Сб 
-                                                            div.day Вс 
-                                                            div.number 29 
-                                                            div.number 30 
-                                                            div.number 31 
-                                                            div.number 1 
-                                                            div.number 2 
-                                                            div.number 3 
-                                                            div.number 4 
-                                                            div.number 5 
-                                                            div.number 6 
-                                                            div.number 7 
-                                                            div.number 8 
-                                                            div.number 9 
-                                                            div.number 10 
-                                                            div.number 11 
-                                                            div.number 12 
-                                                            div.number 13 
-                                                            div.number 14 
-                                                            div.number 15 
-                                                            div.number 16 
-                                                            div.number 17 
-                                                            div.number 18 
-                                                            div.number 19 
-                                                            div.number 20 
-                                                            div.number 21 
-                                                            div.number 22 
-                                                            div.number 23 
-                                                            div.number 24 
-                                                            div.number 25 
-                                                            div.number 26 
-                                                            div.number 27 
-                                                            div.number 28 
-                                                            div.number 29 
-                                                            div.number 30 
-                                                            div.number 31 
-                                                            div.number 1
-                                                    div.function
-                                                        div.clear Очистить
-                                                        div.apply Применить
+                                        div.text-field-calendar
+                                            input.datepicker-here.field-date-left(type="text" 
+                                                      data-range="true" 
+                                                      data-multiple-dates-separator=" - " 
+                                                      data-language="ru" 
+                                                      placeholder="ДД.ММ.ГГГГ")
                                 div.block2(style="margin-left:18px;")
                                     h3 Выезд
-                                    div.date_departure ДД.ММ.ГГГГ
+                                    div.date_departure
                                         div.arrow
-                                        div.calendar_main.hide(style="left:-184px;")
-                                            div.calendar
-                                                div.container
-                                                    div.month
-                                                        h2 Август 2020
-                                                        div.date
-                                                            div.day Пн
-                                                            div.day Вт
-                                                            div.day Ср
-                                                            div.day Чт
-                                                            div.day Пт
-                                                            div.day Сб
-                                                            div.day Вс
-                                                            div.number 29
-                                                            div.number 30
-                                                            div.number 31
-                                                            div.number 1
-                                                            div.number 2
-                                                            div.number 3
-                                                            div.number 4
-                                                            div.number 5
-                                                            div.number 6
-                                                            div.number 7
-                                                            div.number 8
-                                                            div.number 9
-                                                            div.number 10
-                                                            div.number 11
-                                                            div.number 12
-                                                            div.number 13
-                                                            div.number 14
-                                                            div.number 15
-                                                            div.number 16
-                                                            div.number 17
-                                                            div.number 18
-                                                            div.number 19
-                                                            div.number 20
-                                                            div.number 21
-                                                            div.number 22
-                                                            div.number 23
-                                                            div.number 24
-                                                            div.number 25
-                                                            div.number 26
-                                                            div.number 27
-                                                            div.number 28
-                                                            div.number 29
-                                                            div.number 30
-                                                            div.number 31
-                                                            div.number 1
-                                                        div.function
-                                                            div.clear Очистить
-                                                            div.apply Применить
+                                        div.text-field-calendar
+                                            input.datepicker-here.field-date-right(type="text" 
+                                                      data-range="true" 
+                                                      data-multiple-dates-separator=" - " 
+                                                      data-language="ru" 
+                                                      placeholder="ДД.ММ.ГГГГ")
                                 div.block3
                                     h3 Гости
                                     div.guests
                                         input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
                                         div.arrow
-                                    include ../../../blocks/dropBlock/dropBlock.pug
+                                    +dropBlock
                                 a(href="layout/searchRoom.html")
                                     div.block4
                                         p(style="padding-top:15px") подобрать номер
@@ -243,57 +146,12 @@ block content
                     div.block_date
                         div.block1
                                 div.arrow
-                                div.calendar_main
-                                    div.calendar
-                                        div.container
-                                            div.month
-                                                h2 Август 2020
-                                                div.date
-                                                    div.day Пн 
-                                                    div.day Вт 
-                                                    div.day Ср 
-                                                    div.day Чт 
-                                                    div.day Пт 
-                                                    div.day Сб 
-                                                    div.day Вс 
-                                                    div.number 29 
-                                                    div.number 30 
-                                                    div.number 31 
-                                                    div.number 1 
-                                                    div.number 2 
-                                                    div.number 3 
-                                                    div.number 4 
-                                                    div.number 5 
-                                                    div.number 6 
-                                                    div.number 7 
-                                                    div.number 8 
-                                                    div.number 9 
-                                                    div.number 10 
-                                                    div.number 11 
-                                                    div.number 12 
-                                                    div.number 13 
-                                                    div.number 14 
-                                                    div.number 15 
-                                                    div.number 16 
-                                                    div.number 17 
-                                                    div.number 18 
-                                                    div.number 19 
-                                                    div.number 20 
-                                                    div.number 21 
-                                                    div.number 22 
-                                                    div.number 23 
-                                                    div.number 24 
-                                                    div.number 25 
-                                                    div.number 26 
-                                                    div.number 27 
-                                                    div.number 28 
-                                                    div.number 29 
-                                                    div.number 30 
-                                                    div.number 31 
-                                                    div.number 1
-                                            div.function
-                                                div.clear Очистить
-                                                div.apply Применить
+                                div.text-field-calendar
+                                    input.datepicker-here.field-date-left(type="text" 
+                                                      data-range="true" 
+                                                      data-multiple-dates-separator=" - " 
+                                                      data-language="ru" 
+                                                      placeholder="ДД.ММ.ГГГГ")
             div.right-cards__blocks2
                 div.content_search_room
                     div.main_content_search_room
