@@ -12,6 +12,8 @@ const minus1 = document.querySelector('.circle_drop_minus1');
 const minus2 = document.querySelector('.circle_drop_minus2');
 const minus3 = document.querySelector('.circle_drop_minus3');
 
+const clear = document.getElementById('clear');
+
 var both = 0;
 var old = 0;
 var young = 0;
@@ -261,6 +263,14 @@ function minusBoth(directMinus) {
 
     c3.value = both;
   })
+}
+
+clear.onclick = function() {
+  old = 0;
+  young = 0;
+  both = 0;
+  strGuest = '';
+  strBoth = '';
 }
 
 plus(plus1);

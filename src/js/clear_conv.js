@@ -26,13 +26,6 @@ dropConv.addEventListener('click', function() {
         con2.value = 0;
         con3.value = 0;
 
-        bathrooms = 0;
-        bedrooms = 0;
-        bed = 0;
-        strSpa = '';
-        strBed = '';
-        strVan = '';
-
         count_conv.value = '';
 
         clear_con.classList.add('hiden_clear');

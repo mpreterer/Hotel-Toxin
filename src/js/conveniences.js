@@ -14,6 +14,7 @@ const minusCon3 = document.querySelector('.circle_con_minus3');
 
 const dropBlockCon = document.querySelector('.dropBlockCon');
 const apply_conv = document.querySelector('#apply_conv');
+const clear_conv = document.getElementById('clear_conv');
 
 apply_conv.addEventListener('click', () => {
   if (dropBlockCon.classList.contains('hide')) {
@@ -33,9 +34,6 @@ var strVan = '';
 Con1.value = 0;
 Con2.value = 0;
 Con3.value = 0;
-
-
-
 
 function plusBedr(directPlus) {
   directPlus.addEventListener('click', () => {
@@ -476,6 +474,15 @@ function minusBath(directMinus) {
 
     Con3.value = bathrooms;
   })
+}
+
+clear_conv.onclick = function() {
+  bathrooms = 0;
+  bedrooms = 0;
+  bed = 0;
+  strSpa = '';
+  strBed = '';
+  strVan = '';
 }
 
 plusBedr(plusCon1);
