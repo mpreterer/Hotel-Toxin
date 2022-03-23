@@ -78,6 +78,7 @@
 
 .counte_guests {
 	border: none;
+	cursor: pointer;
 }
 
 .guests .dropBlock{
@@ -715,7 +716,6 @@
 /*Дроп блок*/
 .drop_block_convenience {
 	width:266px;
-	height:131px;
 	padding-top:34px;
 	position:absolute;
 	top:0;
@@ -741,7 +741,6 @@
 
 .drop_item_convenience {
 	width:266px;
-	height:171px;
 	user-select:none;
 }
 

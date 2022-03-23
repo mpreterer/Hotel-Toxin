@@ -1,5 +1,6 @@
 extends ../../../template-head/main_index.pug
 include ../../../blocks/dropBlock/dropBlock.pug
+include ../../../blocks/calendar/calendar.pug
 
 block variables 
     - pageTitle = 'Карточки'
@@ -21,21 +22,13 @@ block content
                                     div.date_arrival
                                         div.arrow
                                         div.text-field-calendar
-                                            input.datepicker-here.field-date-left(type="text" 
-                                                      data-range="true" 
-                                                      data-multiple-dates-separator=" - " 
-                                                      data-language="ru" 
-                                                      placeholder="ДД.ММ.ГГГГ")
+                                            +calendar
                                 div.block2(style="margin-left:18px;")
                                     h3 Выезд
                                     div.date_departure
                                         div.arrow
                                         div.text-field-calendar
-                                            input.datepicker-here.field-date-right(type="text" 
-                                                      data-range="true" 
-                                                      data-multiple-dates-separator=" - " 
-                                                      data-language="ru" 
-                                                      placeholder="ДД.ММ.ГГГГ")
+                                            +calendar
                                 div.block3
                                     h3 Гости
                                     div.guests
@@ -151,7 +144,8 @@ block content
                                                       data-range="true" 
                                                       data-multiple-dates-separator=" - " 
                                                       data-language="ru" 
-                                                      placeholder="ДД.ММ.ГГГГ")
+                                                      placeholder="ДД.ММ.ГГГГ"
+                                                      readonly)
             div.right-cards__blocks2
                 div.content_search_room
                     div.main_content_search_room

@@ -1,6 +1,7 @@
 extends ../../../template-head/main_index.pug
 include ../../../blocks/header/header.pug
 include ../../../blocks/footer/footer.pug
+include ../../../blocks/calendar/calendar.pug
 
 block variables
     - pageTitle = '«Toxin» | Лучшие номера для вас'
@@ -43,11 +44,7 @@ block content
         div.left_bar(style="width:266px;")
             div.data_arrival_in_otel
                 span.h_span_block_hotel даты пребывания в отеле
-                input.datepicker-here.field-date-left(type="text" 
-                                                      data-range="true" 
-                                                      data-multiple-dates-separator=" - " 
-                                                      data-language="ru" 
-                                                      placeholder="ДД.ММ.ГГГГ")
+                +calendar
             div.guests
                 input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
             div.dropBlock.hide
@@ -115,7 +112,7 @@ block content
                     b(style="color:#575870; font-size:14px;") Помощник для инвалидов
                     p На 1 этаже вас встретит специалист  и  проводит до номера.
             span.h_span_block_hotel удобства номера
-            div.conveniences
+            div.conveniences.conveniences1
                 input#block_6.counte_conveniences(type="text" name="block_6" placeholder="2 спальни, 2 кровати" autocomplete="off" readonly="")
             div.dropBlockCon.dropBlock.hide
                 div.drop_block_item
@@ -157,7 +154,7 @@ block content
                         input#drop_4.convenience-checkbox(type="checkbox" name="drop_4")
                         label(for="drop_4") Кроватка
 
-                        inputdrop_5.convenience-checkbox(type="checkbox" name="drop_5")
+                        input#drop_5.convenience-checkbox(type="checkbox" name="drop_5")
                         label(for="drop_5") Телевизор
 
                         input#drop_6.convenience-checkbox(type="checkbox" name="drop_6")

@@ -2,6 +2,7 @@ extends ../template-head/main_index.pug
 include ../blocks/dropBlock/dropBlock.pug
 include ../blocks/header/header.pug
 include ../blocks/footer/footer.pug
+include ../blocks/calendar/calendar.pug
 
 
 block variables
@@ -20,11 +21,7 @@ block content
                         div.date_arrival 
                             div.arrow
                             div.text-field-calendar
-                               input.datepicker-here.field-date-left(type="text" 
-                                                      data-range="true" 
-                                                      data-multiple-dates-separator=" - " 
-                                                      data-language="ru" 
-                                                      placeholder="ДД.ММ.ГГГГ")
+                               +calendar
                     div.block2(style="margin-left:18px;")
                         h3 Выезд
                         div.date_departure
@@ -34,7 +31,8 @@ block content
                                                       data-range="true" 
                                                       data-multiple-dates-separator=" - " 
                                                       data-language="ru" 
-                                                      placeholder="ДД.ММ.ГГГГ")
+                                                      placeholder="ДД.ММ.ГГГГ"
+                                                      readonly)
                     div.block3
                         h3 Гости
                         div.guests

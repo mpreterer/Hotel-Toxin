@@ -411,6 +411,10 @@ button {
 	padding: 12px 12px 8.44px 15px;
 }
 
+input.datepicker {
+	user-select: none;
+}
+
 .search_room .datepicker {
 	width: 320px;
 }
@@ -566,10 +570,8 @@ button {
 	color: rgba(31, 32, 65, 0.75);
 }
 
-
 /*выпадающее меню счетчик*/
 .dropBlock {
-	width:320px;
 	height:159px; 
 }
 
@@ -587,7 +589,6 @@ button {
 	display:flex;
 	flex-direction:column;
 	flex-wrap:wrap;
-	width:320px;
 	height:159px;
 	cursor:default;
 	font-size: 12px !important;
@@ -698,7 +699,7 @@ button {
 	display:block;
 }
 
-.search_room .guests {
+.guests {
 	cursor:pointer;
 }
 

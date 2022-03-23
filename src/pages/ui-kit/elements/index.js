@@ -1,0 +1,17 @@
+import './elements.sass'
+import '../../style.scss'
+import '../colors-type/colors-type.sass'
+import '../../website-pages/search-room/searchRoom.scss'
+import '../../website-pages/registration/Registration.scss'
+import '../../../assets/scss/range.scss'
+
+
+import '../../../js/click.js'
+import '../../../js/close.js'
+import '../../../js/like.js'
+import '../../../js/range.js'
+import '../../../js/value.js'
+import '../../../js/close__conveniences1.js'
+import '../../../js/conveniences.js'
+import '../../../js/close_conveniences.js'
+import '../../../js/date-field.js'
