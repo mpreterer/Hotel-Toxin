@@ -14,11 +14,3 @@ valueLeft.oninput = function() {
 valueRight.oninput = function() {
 	outputMax.innerHTML = this.value;
 }
-
-
-
-
-
-
-
-

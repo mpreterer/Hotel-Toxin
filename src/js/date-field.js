@@ -1,15 +1,11 @@
-// var dateLR = document.querySelector('.datepicker-here')
-var leftDate = document.querySelector('.datepicker-here.field-date-left');
-var rightDate = document.querySelector('.datepicker-here.field-date-right');
+const element = document.querySelector('.datepicker-here');
+const left = document.querySelector('.date_departure .datepicker-here');
 
-if (leftDate.value !== "" || leftDate.value !== NaN) {
-    let tempdateLeft = leftDate.value;
+document.addEventListener('click', function() {
 
-    leftDate.value = tempdateLeft.slice(0,10);
-    rightDate.value = tempdateLeft.slice(12);
-} else {
-    let tempdateRight = rightDate.value;
+    var date = document.querySelector('.datepicker-here').value;
+    document.querySelector('.date_arrival .datepicker-here').value = date.slice(0,10);
+    document.querySelector('.date_departure .datepicker-here').value = date.slice(13);
+})
 
-    leftDate.value = tempdateRight.slice(0,10);
-    rightDate.value = tempdateRight.slice(12);
-}
+    
