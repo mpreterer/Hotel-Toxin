@@ -1,6 +1,6 @@
 extends ../../../template-head/main_index.pug
 include ../../../blocks/header/header.pug
-
+include ../../../blocks/footer/footer.pug
 
 block variables
     - pageTitle = '«Toxin» | Лучшие номера для вас'
@@ -163,5 +163,5 @@ block content
                         input#drop_6.convenience-checkbox(type="checkbox" name="drop_6")
                         label(for="drop_6") Шампунь
 block footer
-    include ../../../includes/footer_all.pug
+    +footer
 

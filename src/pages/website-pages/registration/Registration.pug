@@ -1,5 +1,6 @@
 extends ../../../template-head/main_index.pug
 include ../../../blocks/header/header.pug
+include ../../../blocks/footer/footer.pug
 
 block variables
     - var pageTitle = '«Toxin» | Регистрация'
@@ -42,4 +43,5 @@ block content
                                 div.login
                                     p войти
 block footer
-    include ../../../includes/footer_all.pug
+    +footer
+    

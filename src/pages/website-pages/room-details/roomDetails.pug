@@ -1,6 +1,7 @@
 extends ../../../template-head/main_index.pug
 include ../../../blocks/header/header.pug
 include ../../../blocks/dropBlock/dropBlock.pug
+include ../../../blocks/footer/footer.pug
 
 block variables 
     - pageTitle = '«Toxin» | Номер для вас'
@@ -129,4 +130,5 @@ block content
                             div.to_book
                                 p забронировать 
 block footer
-    include ../../../includes/footer_all.pug
+    +footer
+    
