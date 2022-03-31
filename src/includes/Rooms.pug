@@ -3,17 +3,11 @@ block variables
 block room
     #{classRoom}
         div.container
-            div.move_arrow.arrow_left
-                div.container_a_l
-                    div.icon
-            div.move_arrow.arrow_right
-                div.container_a_r
-                    div.icon
-            div.in_circle
-                a.circle.circle_1(href="./roomDetails.html" count="1" fill="yes")
-                a.circle.circle_2(href="./roomDetails.html" count="2" fill="no")
-                a.circle.circle_3(href="./roomDetails.html" count="3" fill="no")
-                a.circle.circle_4(href="./roomDetails.html" count="4" fill="no")
+            div.slider-rooms
+                #{room_photo1}
+                #{room_photo2}
+                #{room_photo3}
+                #{room_photo4}
         a.link-for-room(href=linkRoom)
             div.head_room
                 p(style="font-size:18px; color:#1F2041; font-weight:bold;") #{numberRoom}
