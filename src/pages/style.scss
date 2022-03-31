@@ -781,25 +781,31 @@ input.datepicker {
 /* Блок с подбором номера*/
 .search_room .block4{
 	width:320px;
-	height:44px;
+	height:100%;
 	border-radius:22px;
 	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 	color:white;
 	text-align:center;
 }
 
-.search_room .residence .block4 {
-	transition:1s;
-}
-
 .search_room .residence .block4:hover {
 	background:linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
-	transition:1s;
 	border-radius:40px;
 }
 
-.search_room .block4 {
+.search-room_link {
+	height: 44px;
 	margin-top:32px;
+}
+
+.search-room_link .block4 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.search-room_link .block4 p {
+	margin: 0;
 }
 
 /*низ странички*/
@@ -1038,10 +1044,10 @@ input.datepicker {
 		margin:5px 0 0 0 !important;
 	}
 
-	.search_room .block4 {
-		margin:10px 0 0 0;
-		max-width:250px;
-	}
+	// .search_room .block4 {
+	// 	margin:10px 0 0 0;
+	// 	max-width:250px;
+	// }
 
 	.date_arrival, .date_departure {
 		width:220px;
