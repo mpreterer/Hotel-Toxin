@@ -6,8 +6,6 @@ import '../../../assets/scss/datepicker.min.scss'
 
 import '../../../js/jquery-3.6.0.min.js'
 import '../../../js/datepicker.min.js'
-// import '../../../js/date-field.js'
-import '../../../js/jquery.slider.js'
 import '../../../js/click.js'
 import '../../../js/value.js'
 import '../../../js/range.js'
@@ -17,3 +15,14 @@ import '../../../js/clear_conv.js'
 import '../../../js/close__conveniences1.js'
 import '../../../js/conveniences.js'
 import '../../../js/close_conveniences.js'
+import 'slick-carousel/slick/slick.min.js';
+import 'slick-carousel/slick/slick.scss';
+import 'slick-carousel/slick/slick-theme.scss';
+
+
+$(function(){
+  $('.slider-rooms').slick({
+    dots: true,
+  })
+});
+
