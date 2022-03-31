@@ -305,6 +305,10 @@
 }
 
 .heart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
 	width:40px;
 	height:20px;
 	border-radius:22px;
@@ -313,7 +317,6 @@
 	position:relative;
 	cursor:pointer;
 }
-
 
 .fa_heart {
 	width:14px;
@@ -333,20 +336,10 @@
 	background-image:url(../../../assets/image/favorite_border.png);
 }
 
-#span_heart {
-	padding:0;
-	margin:0;
-	width:10px;
-	height:14px;
-	position:absolute;
-	top:-2.5px;
-	right:4.5px;
-}
-
-.heart_1 span {
-	margin-left:5px;
+span.span_heart {
 	font-size:11px;
-	width:10px;
+	margin-left: 5px;
+	user-select: none;
 }
 
 .heart_1 {
@@ -356,10 +349,13 @@
 
 .heart_2 {
 	border:1px solid rgba(31, 32, 65, 0.25);
-	box-sizing:border-box;
 	color:#C7C7CF;
 }
 
+#chart {
+	width: 120px;
+	height: 120px;
+}
 
 /*Правила номера и отмена*/
 .order_rooms .container {
@@ -499,6 +495,7 @@
 	right:10px;
 	background-image:url(../../../assets/image/expand_more.svg);
 	background-repeat:no-repeat;
+	pointer-events: none;
 }
 
 .booking_arrival input {
@@ -566,6 +563,7 @@
 	right:10px;
 	background-image:url(../../../assets/image/expand_more.svg);
 	background-repeat:no-repeat;
+	pointer-events: none;
 }
 
 .booking_guests h2 {
