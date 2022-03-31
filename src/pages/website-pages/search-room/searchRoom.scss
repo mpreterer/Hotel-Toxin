@@ -397,45 +397,14 @@
 	opacity:1;
 }
 
-.move_arrow .icon {
-	width:10px;
-	height:13px;
-	background-image:url(../../../assets/image/expand_more_left.svg);
-	background-position:center;
-	background-repeat:no-repeat;
-	position:absolute;
-	top:75.5px;
-	left:12px;
-	color:white;
-}
-/*стрелка слева*/
-
-.arrow_left {
-	top:0;
-	left:0;
-	transition:0.3s;
-	background:transparent;
-	cursor:pointer;
-}
 /*стрелка справа*/
 
-.arrow_right {
-	top:0;
-	left:228px;
-	transform:matrix(-1, 0, 0, 1, 0, 0);
-	transition:0.3s;
-	cursor:pointer;
-	background:transparent;
-}
-
 .arrow_right:hover {
-	background:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
 	transition:0.3s;
 }
 
 .arrow_left:hover{
 	color:white;
-	background:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
 	transition:0.3s;
 }
 
@@ -586,24 +555,54 @@
 	outline: 1px solid #000;
 }
 
-.slick-arrow {
-	width:42px;
-	height:151px;
-	cursor:pointer;
-	position:absolute;
-	transition:0.3s;
-	border-radius:4px;
-}
-
-.slick-prev.slick-arrow {
-	top: 55%;
-	left: 3%;
+button.slick-prev.slick-arrow {
+	height: 151px;
+	width: 42px;
+	background:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+	top: 50%;
+	left: 0%;
 	z-index: 10;
+	opacity: 0;
+	transition: .3s;
 }
 
-.slick-next.slick-arrow {
-	top: 55%;
-	right: 3%;
+button.slick-next.slick-arrow {
+	width: 42px;
+	height: 151px;
+	background:linear-gradient(-90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+	top: 50%;
+	right: 0%;
+	z-index: 10;
+	opacity: 0;
+	transition: .3s;
+}
+
+.slider-rooms:hover > button.slick-prev.slick-arrow {
+	opacity: 1;
+	transition: .3s;
+}
+
+.slider-rooms:hover > button.slick-next.slick-arrow {
+	opacity: 1;
+	transition: .3s;
+}
+
+button.slick-next.slick-arrow::before, button.slick-prev.slick-arrow::before {
+	content: '';
+	display: inline-block;
+	height: 12px;
+	width: 8px;
+	font-size: 15px;
+	background:url(../../../assets/image/expand_more_left.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: translateX(-80%);
+}
+
+button.slick-next.slick-arrow::before {
+	background:url(../../../assets/image/expand_more_right.svg);
+	transform: rotate(180deg);
+	transform: translate(80%);
 }
 
 /*Отзывы*/
@@ -722,6 +721,7 @@ ul.slick-dots {
 	bottom:15px;
 	width:45px;
 	height:8px;
+	z-index: 99;
 }
 
 ul.slick-dots li.slick-active button:before {
