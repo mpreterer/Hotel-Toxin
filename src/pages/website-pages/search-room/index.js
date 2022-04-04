@@ -26,3 +26,6 @@ $(function(){
   })
 });
 
+$("#date-words").datepicker({
+  dateFormat: 'd MM'
+})
