@@ -19,18 +19,17 @@ block content
                     div.block1
                         h3 Прибытие
                         div.date_arrival 
-                            div.arrow
                             div.text-field-calendar
-                               +calendar
+                               input.datepicker-here#first_date(type="text"
+                                                        data-range="true" 
+                                                        data-multiple-dates-separator=" - "
+                                                        placeholder="ДД.ММ.ГГГГ")
                     div.block2(style="margin-left:18px;")
                         h3 Выезд
                         div.date_departure
-                            div.arrow
                             div.text-field-calendar
-                                input.datepicker-here.field-date-right(type="text" 
-                                                      data-range="true" 
-                                                      data-multiple-dates-separator=" - " 
-                                                      data-language="ru" 
+                                input#second_date(type="text" 
+                                                      data-language="ru"
                                                       placeholder="ДД.ММ.ГГГГ"
                                                       readonly)
                     div.block3
@@ -39,9 +38,8 @@ block content
                             input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="" value="")
                             div.arrow
                         +dropBlock
-                    a(href="./searchRoom.html")
+                    a.search-room_link(href="./searchRoom.html")
                         div.block4
-                            p(style="padding-top:15px") подобрать номер
-                            div.arrow_right
+                            p подобрать номер
 block footer
     +footer

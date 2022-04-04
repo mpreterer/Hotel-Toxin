@@ -6,4 +6,10 @@ import '../js/datepicker.min.js'
 import '../js/click.js'
 import '../js/clear.js'
 import '../js/close.js'
-import '../js/date-field.js'
+
+$('#first_date').datepicker({ 
+    onSelect: function (fd, d, picker) { 
+      $("#first_date").val(fd.split("-")[0]);
+      $("#second_date").val(fd.split("-")[1]);
+    }
+});
