@@ -16,11 +16,11 @@ h3 {
 a {
 	text-decoration:none;
 	cursor:pointer;
-	color:#BC9CFF;
+	color: rgba(31,32,65,0.75);
 }
 
 a:hover {
-	color:#E6D2FF;
+	font-weight: bold;
 }	
 
 input:active, input:focus {
@@ -388,9 +388,6 @@ button {
 
 .text-field-calendar {
 	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
 }
 
 .text-field-calendar:after {
@@ -554,11 +551,9 @@ input.datepicker {
 }
 
 .search_room .residence input {
-	padding:12px 32px 8.44px 15px;
 	cursor:pointer;
 	border:none;
 	border-radius:3px;
-	width:268px;
 }
 
 .search_room .residence .guests p{
@@ -741,7 +736,9 @@ input.datepicker {
 }
 
 .search_room .block3 .guests {
-	height:44px;
+	height: 23px; 
+	width: 268px; 
+	padding: 12px 32px 8.44px 15px;
 }
 
 .search_room .arrow {
@@ -764,14 +761,15 @@ input.datepicker {
 	right:15px;
 	top:17px;
 }
-/* Блок с подбором номера*/
+
 .search_room .block4{
 	width:320px;
-	height:100%;
+	height:19px;
 	border-radius:22px;
 	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 	color:white;
 	text-align:center;
+	padding: 15px 0 10px 0;
 }
 
 .search_room .residence .block4:hover {
@@ -784,21 +782,18 @@ input.datepicker {
 	margin-top:32px;
 }
 
-.search-room_link .block4 {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#second_date {
+#second_date,#first_date {
 	width:100px;
+	padding: 12px 32px 14px 15px;
 }
 
 .search-room_link .block4 p {
 	margin: 0;
 }
 
-/*низ странички*/
+.footer_container {
+	width: 100%;
+}
 
 .footer {
 	height:392px;
@@ -809,29 +804,23 @@ input.datepicker {
 
 /*Список блоков*/
 .footer .footer_list {
-	height:168px;
 	display:flex;
-	font-style:normal;
+	justify-content: space-between;
 	line-height:15px;
-	padding:86.571px 179.286px 116.571px 168.286px;
+	padding:86px 178px 116px 168px;
 }
 
 .footer .footer_list li {
+	width: 150px;
 	margin-top:20px;
-	font-size:14px;
-	font-weight:400;
-	line-height:17px;
 	text-align:left;
-	color: rgba(31, 32, 65, 0.5);
-
+	white-space: nowrap;
 }
 
 .footer .text_block1_f {
 	height:72px;
 	width:260px;
 	margin-top:10px;
-	color:rgba(31, 32, 65, 0.75);
-	line-height: 24px;
 }
 
 .footer .footer_list ul {
@@ -844,17 +833,11 @@ input.datepicker {
 .footer .footer_list h3 {
 	text-transform:uppercase;
 	font-weight:bold;
-	font-size:14px;
 }
 
 .footer .footer_list .block5{
 	height:168px;
 	width:260px;
-}
-
-.footer .footer_list .block5 p {
-	color: rgba(31, 32, 65, 0.75);
-	line-height:24px;
 }
 
 .footer .footer_list .email {
@@ -877,18 +860,6 @@ input.datepicker {
 
 .footer .footer_list .email input:focus {
 	color:#000;
-}
-
-.footer .block1 {
-	margin-right:60px;
-}
-
-.footer .block3 {
-	margin:0 90px 0 70px;
-}
-
-.footer .block5 {
-	margin-left:60px;
 }
 
 .block5 .email {
@@ -1033,11 +1004,6 @@ input.datepicker {
 	.content .search_room .residence .block2 {
 		margin:5px 0 0 0 !important;
 	}
-
-	// .search_room .block4 {
-	// 	margin:10px 0 0 0;
-	// 	max-width:250px;
-	// }
 
 	.date_arrival, .date_departure {
 		width:220px;

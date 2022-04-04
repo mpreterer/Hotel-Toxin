@@ -1,44 +1,58 @@
 include ../logotype/logotype.pug
 
 mixin footer({ }={})
-    footer.footer
-        div.footer_list
-            div.block1
-                +logotype
-                div.text_block1_f
-                    p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-            div.block2
-                h3 навигация
-                ul.ul_block2
-                    li О нас
-                    li Новости
-                    li Служба поддержки
-                    li Услуги
-            div.block3
-                h3 о нас
-                ul.ul_block3
-                    li О сервисе
-                    li Наша команда
-                    li Вакансии
-                    li Инвесторы
-            div.block4
-                h3 Служба поддержки
-                ul.ul_block4
-                    li Соглашения
-                    li Сообщества
-                    li Связь с нами
-            div.block5
-                h3 Подписка
-                p Получайте специальные предложения и новости сервиса
-                div.email
-                    input(placeholder="Email")
-    div.footer_sub
-        div.footer_sub_container
-            p Copyright © 2018 Toxin отель. Все правазачищены.
-            div.sub_icons
-                a(href="#")
-                    i.fab.fa-twitter
-                a(href="#")
-                    i.fab.fa-facebook-square
-                a(href="#")
-                    i.fab.fa-instagram
+    div.footer_container
+        footer.footer
+            div.footer_list
+                div.block1
+                    +logotype
+                    div.text_block1_f
+                        p Бронирование номеров в лучшем  
+                        p отеле 2019 года по версии 
+                        p ассоциации «Отельные взгляды»
+                div.block2
+                    h3 навигация
+                    ul.ul_block2
+                        li
+                            a(href="/mock-address/change-me") О нас
+                        li 
+                            a(href="/mock-address/change-me") Новости
+                        li
+                            a(href="/mock-address/change-me") Служба поддержки
+                        li
+                            a(href="/mock-address/change-me") Услуги
+                div.block3
+                    h3 о нас
+                    ul.ul_block3
+                        li
+                            a(href="/mock-address/change-me") О сервисе
+                        li 
+                            a(href="/mock-address/change-me") Наша команда
+                        li
+                            a(href="/mock-address/change-me") Вакансии
+                        li 
+                            a(href="/mock-address/change-me") Инвесторы
+                div.block4
+                    h3 Служба поддержки
+                    ul.ul_block4
+                        li
+                            a(href="/mock-address/change-me") Соглашения
+                        li 
+                            a(href="/mock-address/change-me") Сообщества
+                        li
+                            a(href="/mock-address/change-me") Связь с нами
+                div.block5
+                    h3 Подписка
+                    p Получайте специальные предложения и новости сервиса
+                    div.email
+                        input(placeholder="Email")
+        div.footer_sub
+            div.footer_sub_container
+                p Copyright © 2018 Toxin отель. Все правазачищены.
+                div.sub_icons
+                    a(href="#")
+                        i.fab.fa-twitter
+                    a(href="#")
+                        i.fab.fa-facebook-square
+                    a(href="#")
+                        i.fab.fa-instagram
