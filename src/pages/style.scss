@@ -41,7 +41,6 @@ button {
 	border-radius:4px;
 	margin-bottom:10px;
 	padding-left:15px;
-	color: rgba(31, 32, 65, 0.25);
 	cursor:pointer;
 }
 
@@ -421,12 +420,7 @@ input.datepicker {
 }
 
 .search_room .date_departure {
-	padding: 12px 12px 8.44px 15px;
 	width: 150px;
-}
-
-.search_room .date_arrival {
-	padding: 12px 35px 8px 12px;
 }
 
 #dateCalendare {
@@ -731,16 +725,6 @@ input.datepicker {
 	cursor: pointer;
 	user-select: none;
 }
-
-/*ВРЕМЕННО*/
-.date_arrival {
-	padding: 12px 32px 8.44px 15px;
-}
-
-.date_departure {
-	padding: 12px 32px 8.44px 15px;
-}
-/*ВРЕМЕННО*/
 
 .date_arrival p, .date_departure p, .guests p {
 	margin:0;

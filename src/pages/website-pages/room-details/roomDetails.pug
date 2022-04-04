@@ -40,7 +40,7 @@ block content
                         h2 Впечатления от номера
                         div.container_impressions
                             div.container_donut
-                                canvas#chart(width="150" height="150" style="width: 120px; height: 120px;")
+                                <canvas id="myChart" width="120px" height="120px"></canvas>                 
                                 div.comments-count 
                                     p 260
                                     p Голосов
@@ -60,7 +60,7 @@ block content
                         li.text_reviews_1.text_reviews
                             div.heart.heart_1
                                 div.fa_heart
-                                span 12 
+                                span.span_heart 12 
                             span Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей. 
                         li.avatars.avatar_2
                             span.head Патрисия Стёклышкова 
@@ -69,7 +69,7 @@ block content
                         li.text_reviews_2.text_reviews
                             div.heart.heart_2
                                 div.fa_heart.fa_heart2
-                                span#span_heart 2 
+                                span.span_heart 2
                             span Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент 
                 div.order_rooms
                     div.container

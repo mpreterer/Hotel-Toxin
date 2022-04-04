@@ -26,7 +26,10 @@ block content
                                 label(for="block_checkbox_2") Женщина
                         div.date_birthday
                             h4(style="margin:0 0 5px 0;") дата рождения
-                            input.input_favorite(placeholder="ДД.ММ.ГГГГ" autocomplete="off" readonly="")
+                            input.datepicker-here.input_favorite(placeholder="ДД.ММ.ГГГГ" 
+                                                    data-range="true" 
+                                                    data-multiple-dates-separator=" - "
+                                                    readonly)
                         div.data_login
                             h4(style="margin:0 0 5px 0;") данные для входа в сервис
                             input.input_favorite(placeholder="Email" autocomplete="off")
