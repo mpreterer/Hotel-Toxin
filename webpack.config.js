@@ -1,9 +1,9 @@
-const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const webpack = require('webpack')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -23,11 +23,16 @@ module.exports = () => {
     return {
         mode: 'development',
         entry: {
-            index: [`${PATHS.src}/pages/index.js`],
-            'search_room': [`${PATHS.src}/pages/website-pages/search-room/index.js`],
-            'room_details': [`${PATHS.src}/pages/website-pages/room-details/index.js`],
-            'login': [`${PATHS.src}/pages/website-pages/login/index.js`],
-            'registration': [`${PATHS.src}/pages/website-pages/registration/index.js`],
+            index: [`${PAGES_DIR}/index.js`],
+            'search_room': [`${PAGES_DIR}/website-pages/search-room/index.js`],
+            'room_details': [`${PAGES_DIR}/website-pages/room-details/index.js`],
+            'login': [`${PAGES_DIR}/website-pages/login/index.js`],
+            'registration': [`${PAGES_DIR}/website-pages/registration/index.js`],
+            'site-pages': [`${PAGES_DIR}/ui-kit/index.js`],
+            'cards': [`${PAGES_DIR}/ui-kit/cards/index.js`],
+            'colors-type': [`${PAGES_DIR}/ui-kit/colors-type/index.js`],
+            'elements': [`${PAGES_DIR}/ui-kit/elements/index.js`],
+            'header-footer': [`${PAGES_DIR}/ui-kit/header-footer/index.js`],
         },
         output: {
             filename: 'js/[name].js',
@@ -37,6 +42,11 @@ module.exports = () => {
             ignored: /node_modules/,
         },
         plugins: [
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery',
+              }),
             new CleanWebpackPlugin(),
             new CopyWebpackPlugin({
                 patterns: [
@@ -70,6 +80,31 @@ module.exports = () => {
                 template: `${PAGES_DIR}/website-pages/registration/Registration.pug`,
                 filename: './Registration.html',
                 chunks: ['registration']
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/ui-kit/site-pages.pug`,
+                filename: './ui-kit/site-pages.html',
+                chunks: ['site-pages']
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/ui-kit/cards/cards.pug`,
+                filename: './ui-kit/cards.html',
+                chunks: ['cards']
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/ui-kit/colors-type/colors-type.pug`,
+                filename: './ui-kit/colors-type.html',
+                chunks: ['colors-type']
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/ui-kit/elements/elements.pug`,
+                filename: './ui-kit/elements.html',
+                chunks: ['elements']
+            }),
+            new HTMLWebpackPlugin({
+                template: `${PAGES_DIR}/ui-kit/header-footer/header-footer.pug`,
+                filename: './ui-kit/header-footer.html',
+                chunks: ['header-footer']
             }),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
