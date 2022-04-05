@@ -281,9 +281,10 @@
 	padding:12px 91px 8px 15px;
 	position:relative;
 	transition:0.2s;
+	cursor: pointer;
 }
 
-.convenience label {
+.conveniences label {
 	cursor: pointer;
 }
 
@@ -295,7 +296,6 @@
 .conveniences input {
 	border:none;
 	width:200px;
-	cursor:pointer;
 }
 
 .conveniences i {
@@ -822,15 +822,13 @@ ul.slick-dots li {
 }
 
 .drop_item_convenience label {
-	cursor:pointer;
 	margin-top:10px;
 	position:relative;
 	display:flex;
-	cursor:pointer;
 	font-weight:normal;
 	user-select:none;
 	color:rgba(31, 32, 65, 0.5);
-	cursor:default;
+	cursor:pointer;
 }
 
 /*Чекбокс мнимый*/
