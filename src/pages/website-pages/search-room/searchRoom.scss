@@ -499,10 +499,6 @@
 	display: block;
 }
 
-.link-for-room:hover {
-	color: #BC9CFF;
-}
-
 /*Звезды без оценки*/
 .stars_border {
 	width:20px;
@@ -678,7 +674,8 @@ button.slick-next.slick-arrow::before {
 	width:40px;
 	height:40px;
 	border-radius:22px;
-	box-shadow:none;	
+	box-shadow:none;
+	cursor: pointer;
 }
 
 .switch .circle:first-child {
@@ -690,13 +687,17 @@ button.slick-next.slick-arrow::before {
 	position:relative;
 }
 
-.switch .container .circle_6 i {
-	font-size:24px;
-	line-height:20px;
-	color:white;
-	position:absolute;
-	top:11px;
-	right:9px;
+.switch .container .circle:last-child:after {
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(../../../assets/image/arrow_link.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	left: 30%;
+	top: 30%;
 }
 
 /*Дополниетльыне удобства*/

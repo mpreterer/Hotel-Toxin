@@ -19,10 +19,6 @@ a {
 	color: rgba(31,32,65,0.75);
 }
 
-a:hover {
-	font-weight: bold;
-}	
-
 input:active, input:focus {
 	outline:none;
 }
@@ -815,6 +811,10 @@ input.datepicker {
 	margin-top:20px;
 	text-align:left;
 	white-space: nowrap;
+}
+
+.footer .footer_list li a:hover {
+	font-weight: bold;
 }
 
 .footer .text_block1_f {
