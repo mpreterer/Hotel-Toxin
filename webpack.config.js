@@ -24,7 +24,7 @@ module.exports = () => {
         mode: 'development',
         entry: {
             index: [`${PAGES_DIR}/index.js`],
-            'search_room': [`${PAGES_DIR}/website-pages/search-room/index.js`],
+            'search-room': [`${PAGES_DIR}/website-pages/search-room/index.js`],
             'room_details': [`${PAGES_DIR}/website-pages/room-details/index.js`],
             'login': [`${PAGES_DIR}/website-pages/login/index.js`],
             'registration': [`${PAGES_DIR}/website-pages/registration/index.js`],
@@ -64,7 +64,7 @@ module.exports = () => {
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/search-room/searchRoom.pug`,
                 filename: './searchRoom.html',
-                chunks: ['search_room']
+                chunks: ['search-room']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/room-details/roomDetails.pug`,

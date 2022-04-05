@@ -4,60 +4,59 @@ include ../nav-menu/nav-menu.pug
 
 mixin header({ } = {})
     nav.header
-        +logotype
-        .header__rightPartHeader.rightPartHeader
-            +nav-menu({
-                    listMenu: [
-                    {name: 'О нас', href: '/mock-address/change-me'},
-                    {name: 'Услуги', href: '/mock-address/change-me', submenu: [
-                        {name: 'Услуга 1', href: '/mock-address/change-me'},
-                        {name: 'Услуга 2', href: '/mock-address/change-me'}
-                    ]},
-                    {name: 'Вакансии', href: '/mock-address/change-me'},
-                    {name: 'Новости', href: '/mock-address/change-me'},
-                    {name: 'Соглашения', href: '/mock-address/change-me', submenu: [
-                        {name: 'Соглашение 1', href: '/mock-address/change-me'},
-                        {name: 'Соглашение 2', href: '/mock-address/change-me'}
-                    ]},
-                ]
-            })
-            .header__container-logup.logup
-                .header__btn-login.login
-                    +button({
-                        group: 'border',
-                        text: 'Войти',
-                        href: 'login.html',
-                        small: true
-                    })
-                .header__btn-registration.registration
-                    +button({
-                        group: 'background',
-                        text: 'Зарегистрироваться',
-                        href: 'Registration.html',
-                        small: true
-                    })
-
-
-        //- div.navbar__burger.navbar__menu-burger-active
-        //-     button.border1.border
-        //-     button.border2.border
-        //-     button.border3.border
-        //-     ul.navbar__menu-burger
-        //-         a(href="#")
-        //-             li.navbar__li-burger.navbar__li-burger1 Главная
-        //-         a(href="#")
-        //-             li.navbar__li-burger.navbar__li-burger1 О Нас
-        //-         a(href="#")
-        //-             li.navbar__li-burger Услуги
-        //-         a(href="#")
-        //-             li.navbar__li-burger Вакансии
-        //-         a(href="#")
-        //-             li.navbar__li-burger Новости
-        //-         a(href="#")
-        //-             li.navbar__li-burger Соглашения
-        //-         a(href="./website-pages/login/login.html")
-        //-             li.navbar__li-burger
-        //-                 b Войти
-        //-         a(href="./website-pages/Registration/Registration.html")
-        //-             li.navbar__li-burger.navbar__li-burger7
-        //-                 b Регистрация
+        div.header__container
+            +logotype
+            .header__right-part
+                +nav-menu({
+                        listMenu: [
+                        {name: 'О нас', href: '/mock-address/change-me'},
+                        {name: 'Услуги', href: '/mock-address/change-me', submenu: [
+                            {name: 'Услуга 1', href: '/mock-address/change-me'},
+                            {name: 'Услуга 2', href: '/mock-address/change-me'}
+                        ]},
+                        {name: 'Вакансии', href: '/mock-address/change-me'},
+                        {name: 'Новости', href: '/mock-address/change-me'},
+                        {name: 'Соглашения', href: '/mock-address/change-me', submenu: [
+                            {name: 'Соглашение 1', href: '/mock-address/change-me'},
+                            {name: 'Соглашение 2', href: '/mock-address/change-me'}
+                        ]},
+                    ]
+                })
+                .header__container-logup.logup
+                    .header__btn-login.login
+                        +button({
+                            group: 'border',
+                            text: 'Войти',
+                            href: 'login.html',
+                            small: true
+                        })
+                    .header__btn-registration.registration
+                        +button({
+                            group: 'background',
+                            text: 'Зарегистрироваться',
+                            href: 'Registration.html',
+                            small: true
+                        })
+            div.burger.burger_menu_active
+                    button.border1.border
+                    button.border2.border
+                    button.border3.border
+                    ul.menu_burger
+                        a(href="../../index.html")
+                            li.li_burger.li_burger1 Главная
+                        a(href="#")
+                            li.li_burger.li_burger1 О Нас
+                        a(href="#")
+                            li.li_burger Услуги
+                        a(href="#")
+                            li.li_burger Вакансии
+                        a(href="#")
+                            li.li_burger Новости
+                        a(href="#")
+                            li.li_burger Соглашения
+                        a(href="login.html")
+                            li.li_burger
+                                b Войти
+                        a(href="Registration.html")
+                            li.li_burger.li_burger7
+                                b Регистрация

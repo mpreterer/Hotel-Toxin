@@ -33,6 +33,7 @@ button {
 	height:44px;
 	width:320px;
 	border:1px solid rgba(31, 32, 65, 0.25);
+	color: rgba(31, 32, 65, 0.25);
 	box-sizing:border-box;
 	border-radius:4px;
 	margin-bottom:10px;
@@ -50,11 +51,18 @@ button {
 /*верхушка сайта*/
 .header {
 	height:70px;
+	width: 100%;
 	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-	display:flex;
-	justify-content:space-around;
-	align-items:center;
 	background: #FFFFFF;
+}
+
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1160px;
+	min-height: 70px;
+	margin: 0 auto;
 }
 
 /*Бургер*/
@@ -174,39 +182,49 @@ button {
 	animation:lir 2s infinite;
 }
 
+.list {
+	margin-right: 20px;
+}
+
 .list ul {
 	display:flex;
+	width: 100%;
 	font-weight:400;
 	list-style:normal;
 	font-size:14px;
-	line-height:17,07px;
 	color:rgba(31, 32, 65, 0.5);
-	height:35px;
 	align-items: center;
-	margin-right: 44px;
+	padding: 0;
+	margin: 0;
+	position: relative;
 }
+
 
 .list li {
 	list-style:none;
 	cursor:pointer;
-	padding-left: 24px;
+	margin-left: 24px;
+}
+
+.list li:first-child {
+	margin-left: 0;
 }
 
 .list a {
 	color: rgba(31, 32, 65, 0.5);
-}
-
-
-.list ul li a {
-	display:block;
-	background:white;
+	display: block;
+	position: relative;
+	text-align: center;
 }
 
 .list ul ul {
+	width: 100%;
 	display:none;
 	position:absolute;
-	padding:25px 35px 0 0;
+	padding-top: 25px;
 	text-align: center;
+	width: 150px;
+	background-color: #fff;
 }
 
 .button:hover {
@@ -214,12 +232,15 @@ button {
 }
 
 .list ul li ul li {
-	border:1px solid grey;
-	background:white;
-	width:100%;
-	height:100%;
-	border-radius: 5px;
-	font-size: 16px;
+	padding: 5px;
+}
+
+.list ul li ul li:hover {
+	font-weight: bold;
+}
+
+.nav-menu__item:hover {
+	font-weight: bold;
 }
 
 .list ul li:hover ul {
@@ -227,6 +248,10 @@ button {
 }
 
 .list ul li a:hover{
+	color: rgba(31, 32, 65, 0.75);
+}
+
+.list ul li span:hover{
 	color: rgba(31, 32, 65, 0.75);
 }
 
@@ -238,20 +263,14 @@ button {
 
 
 /*панель входа и список*/
-.rightPartHeader{
+.header__right-part{
 	display:flex;
 	justify-content:space-around;
 	height:35px;
 	align-items: center;
 	text-align: center;
 }
-/* 
-.header img {
-	padding-left:10px;
-} */
 
-
-/*панель входа и регистрации*/
 .logup {
 	display:flex;
 	text-transform:uppercase;
@@ -308,7 +327,7 @@ button {
 }
 
 /*блок в контенте с временем выезда и прибытия*/
-.content .search_room {
+.content .search-room {
 	height:374px;
 	width:380px;
 	background:#fff;
@@ -328,12 +347,12 @@ button {
 	flex-direction:column;
 }
 
-.content .search_room h1 {
+.content .search-room h1 {
 	font-size: 24px;
 	margin:0;
 }
 
-.content .search_room p {
+.content .search-room p {
 	margin-bottom: 5.44px;
 }
 
@@ -399,7 +418,7 @@ button {
 	pointer-events: none;
 }
 
-.search_room .text-field-calendar .datepicker-here {
+.search-room .text-field-calendar .datepicker-here {
 	width: 120px;
 	padding: 12px 12px 8.44px 15px;
 }
@@ -408,11 +427,11 @@ input.datepicker {
 	user-select: none;
 }
 
-.search_room .datepicker {
+.search-room .datepicker {
 	width: 320px;
 }
 
-.search_room .date_departure {
+.search-room .date_departure {
 	width: 150px;
 }
 
@@ -484,14 +503,11 @@ input.datepicker {
 	padding-left:10px;
 }
 
-
-/*Месяц*/
 .month {
 	font-weight:bold;
 	text-align:center;
 }
 
-/*Числа*/
 .calendar .container .date .number {
 	color:#8F8FA0;
 	height:40px;
@@ -546,13 +562,13 @@ input.datepicker {
 	margin: 0
 }
 
-.search_room .residence input {
+.search-room .residence input {
 	cursor:pointer;
 	border:none;
 	border-radius:3px;
 }
 
-.search_room .residence .guests p{
+.search-room .residence .guests p{
 	padding:10px;
 	color: rgba(31, 32, 65, 0.75);
 }
@@ -690,7 +706,7 @@ input.datepicker {
 	cursor:pointer;
 }
 
-.search_room .guests .dropBlock {
+.search-room .guests .dropBlock {
 	position:absolute;
 	z-index:0;
 }
@@ -721,23 +737,23 @@ input.datepicker {
 	margin:0;
 }
 
-.search_room .date_arrival, .date_departure, .guests {
+.search-room .date_arrival, .date_departure, .guests {
 	position:relative;
 	border-radius: 4px;
 	border:1px solid rgba(31, 32, 65, 0.25);
 }
 
-.search_room .date_arrival:hover, .date_departure:hover, .guests:hover {
+.search-room .date_arrival:hover, .date_departure:hover, .guests:hover {
 	border:1px solid #787878;
 }
 
-.search_room .block3 .guests {
+.search-room .block3 .guests {
 	height: 23px; 
 	width: 268px; 
 	padding: 12px 32px 8.44px 15px;
 }
 
-.search_room .arrow {
+.search-room .arrow {
 	position:absolute;
 	width:15px;
 	height:9px;
@@ -748,11 +764,11 @@ input.datepicker {
 	background-image:url(../assets/image/expand_more.svg);
 }
 
-.search_room .block2 {
+.search-room .block2 {
 	margin-left: 18px;
 }
 
-.search_room .block4{
+.search-room .block4{
 	width:320px;
 	height:19px;
 	border-radius:22px;
@@ -762,7 +778,7 @@ input.datepicker {
 	padding: 15px 0 10px 0;
 }
 
-.search_room .residence .block4:hover {
+.search-room .residence .block4:hover {
 	background:linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
 	border-radius:40px;
 }
@@ -786,6 +802,7 @@ input.datepicker {
 }
 
 .footer {
+	outline: 1px solid #D1D1D4;
 	height:392px;
 	box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
 	border-top:1px solid #D0D0D5;
@@ -797,7 +814,7 @@ input.datepicker {
 	display:flex;
 	justify-content: space-between;
 	line-height:15px;
-	padding:86px 178px 116px 168px;
+	padding:86px 175px 116px 182px;
 }
 
 .footer .footer_list li {
@@ -835,42 +852,42 @@ input.datepicker {
 }
 
 .footer .footer_list .email {
+	display: flex;
 	height:44px;
 	width:255px;
 	border:1px solid rgba(31, 32, 65, 0.25);
 	box-sizing: border-box;
 	border-radius: 4px;
-	color:rgba(31, 32, 65, 0.5);
+	position: relative;
 }
 
 .footer .footer_list .email input {
 	padding:10px 37px 10px 10px;
 	font-size:1rem;
 	border:none;
-	color:rgba(31, 32, 65, 0.25);
 	border-radius:3px;
 	cursor:pointer;
+	color: rgba(31,32,65,0.25);
 }
+
 
 .footer .footer_list .email input:focus {
-	color:#000;
+	color:#000
 }
 
-.block5 .email {
-	position:relative;
-}
-
-/*Стрелка в блоке email*/
-.block5 .email:after {
-	content:'';
+.email_button-link {
 	width:18px;
 	height:18px;
-	display:inline-block;
 	position:absolute;
-	top:12px;
-	right:12px;
+	background: none;
 	background-image:url(../assets/image/arrow_forward.svg);
-	background-repeat:no-repeat;
+	cursor: pointer;
+	right: 10px;
+	top: 12px;
+}
+
+.email_button-link:active {
+	opacity: 0.8;
 }
 
 /*Под футером*/
@@ -960,7 +977,7 @@ input.datepicker {
 		display:flex;
 		justify-content:space-between;
 	}
-	.rightPartHeader {
+	.header__right-part {
 		display:none;
 		justify-content:space-between;
 	}
@@ -973,29 +990,29 @@ input.datepicker {
 		left:0;
 		top:15px;
 	}
-	.content .search_room {
+	.content .search-room {
 		position:relative;
 		top:50px;
 		left:20px;
 		max-width:320px; 
 	}
-	.content .search_room .block_date {
+	.content .search-room .block_date {
 		max-width:320px;
 		max-height:150px;
 		justify-content:flex-start;
 	}
 
-	.search_room .block3,.guests {
+	.search-room .block3,.guests {
 		max-width:220px;
 		margin:5px 0 0 0;
 	}
 
-	.search_room .block_date p {
+	.search-room .block_date p {
 		margin:2px 0 2px 0;
 		padding:0;
 	}
 
-	.content .search_room .residence .block2 {
+	.content .search-room .residence .block2 {
 		margin:5px 0 0 0 !important;
 	}
 

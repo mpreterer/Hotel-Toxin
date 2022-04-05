@@ -4,7 +4,7 @@ mixin nav-menu({ listMenu = [] }={})
       each item in listMenu
         li.nav-menu__item
           if item.submenu
-            a#arrow_li_left.arrow_list_li.nav-menu__link.nav-menu__link--submenu(href=item.href title=item.name) !{item.name}
+            span#arrow_li_left.arrow_list_li.nav-menu__link.nav-menu__link--submenu(href=item.href title=item.name) !{item.name}
             ul.submenu
               each itemSubmenu in item.submenu
                 li.submenu__item
