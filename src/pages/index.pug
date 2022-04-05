@@ -1,9 +1,8 @@
 extends ../template-head/main_index.pug
-include ../blocks/dropBlock/dropBlock.pug
 include ../blocks/header/header.pug
 include ../blocks/footer/footer.pug
 include ../blocks/calendar/calendar.pug
-
+include ../blocks/filter/filter.pug
 
 block variables
     - pageTitle = 'Главная «Toxin» | Отели'
@@ -11,35 +10,6 @@ block variables
 block header
     +header
 block content
-    div.content
-        div.search_room
-            h1 Найдём номера под ваши пожелания
-            div.residence
-                div.block_date
-                    div.block1
-                        h3 Прибытие
-                        div.date_arrival 
-                            div.text-field-calendar
-                               input#first_date(type="text"
-                                                        data-range="true" 
-                                                        data-multiple-dates-separator=" - "
-                                                        placeholder="ДД.ММ.ГГГГ")
-                    div.block2(style="margin-left:18px;")
-                        h3 Выезд
-                        div.date_departure
-                            div.text-field-calendar
-                                input#second_date(type="text" 
-                                                      data-language="ru"
-                                                      placeholder="ДД.ММ.ГГГГ"
-                                                      readonly)
-                    div.block3
-                        h3 Гости
-                        div.guests
-                            input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="" value="")
-                            div.arrow
-                        +dropBlock
-                    a.search-room_link(href="./searchRoom.html")
-                        div.block4
-                            p подобрать номер
+    +filter
 block footer
     +footer

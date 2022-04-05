@@ -209,7 +209,7 @@ button {
 	text-align: center;
 }
 
-.list ul li ul li:hover {
+.button:hover {
 	opacity: 0.8;
 }
 
@@ -748,14 +748,8 @@ input.datepicker {
 	background-image:url(../assets/image/expand_more.svg);
 }
 
-.search_room .block1 .arrow, .block2, .arrow {
-	top:16px;
-	right:15px;
-}
-
-.search_room .block3 .arrow {
-	right:15px;
-	top:17px;
+.search_room .block2 {
+	margin-left: 18px;
 }
 
 .search_room .block4{
