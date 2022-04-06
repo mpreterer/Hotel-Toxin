@@ -1,25 +1,18 @@
+
 const like = document.querySelector('.fa_heart')
 const like2 = document.querySelector('.fa_heart2')
 const numb_like = document.querySelector('#span_heart')
-const heart = document.querySelector('.heart_1')
+const heart = document.querySelector('.heart')
 const heart2 = document.querySelector('.heart_2')
 
 
-heart.onclick = () => {
-	if(like.classList.contains('fill_heart') ) {
-		like.classList.toggle('border_heart')
+heart.addEventListener('click', ({ target: t }) => {
+	if (t.classList.contains('heart')) {
+	  const index = [...document.querySelectorAll('.heart')].indexOf(t);
+	  const count = document.querySelectorAll('.span_heart')[index];
+	  const heart = document.querySelectorAll('.fa_heart')[index];
+	  count.classList.toggle('active');
+	  heart.classList.toggle('fill_heart');
+	  count.innerText -= [ 1, -1 ][+count.classList.contains('active')];
 	}
-	else {
-		like.classList.toggle('fill_heart')
-	}
-}
-
-heart2.onclick = () => {
-	if(like2.classList.contains('fill_heart') ) {
-		like2.classList.toggle('border_heart')
-	}
-	else {
-		like2.classList.toggle('fill_heart')
-	}
-}
-
+});
