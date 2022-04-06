@@ -579,6 +579,7 @@ input.datepicker {
 /*выпадающее меню счетчик*/
 .dropBlock {
 	height:159px; 
+	width: 100%;
 }
 
 .dropBlock input {
@@ -712,6 +713,16 @@ input.datepicker {
 .search-room .guests .dropBlock {
 	position:absolute;
 	z-index:0;
+}
+
+.fa-twitter {
+	width: 24px;
+	height: 24px;
+}
+
+input.counte_guests {
+	border: none;
+	pointer-events: none;
 }
 
 .hide {
@@ -912,13 +923,6 @@ input.datepicker {
 .footer_sub .sub_icons{
 	width:150px;
 	text-align:center;
-}
-
-.footer_sub i {
-	font-size:24px;
-	background:-webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
-  	-webkit-background-clip:text;
-  	-webkit-text-fill-color:transparent;
 }
 
 .footer_sub a {
