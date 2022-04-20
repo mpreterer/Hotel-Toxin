@@ -40,7 +40,7 @@ block content
                         h2 Впечатления от номера
                         div.container_impressions
                             div.container_donut
-                                <canvas id="myChart" width="120px" height="120px"></canvas>                 
+                                canvas#myChart
                                 div.comments-count 
                                     p 260
                                     p Голосов
@@ -58,7 +58,7 @@ block content
                             span.head Мурад Сарафанов 
                             span 5 дней назад 
                         li.text_reviews_1.text_reviews
-                            div.heart.heart_1
+                            button.heart
                                 div.fa_heart
                                 span.span_heart 12 
                             span Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей. 
@@ -67,8 +67,8 @@ block content
                             span Неделю назад 
                         
                         li.text_reviews_2.text_reviews
-                            div.heart.heart_2
-                                div.fa_heart.fa_heart2
+                            button.heart
+                                div.fa_heart
                                 span.span_heart 2
                             span Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент 
                 div.order_rooms
@@ -92,18 +92,23 @@ block content
                         div.booking_arrival
                             div.container_arrival
                                 h2 прибытие
-                                +calendar
-                                div.arrow
-
+                                input#first_date2(type="text"
+                                                        data-range="true" 
+                                                        data-multiple-dates-separator=" - "
+                                                        placeholder="ДД.ММ.ГГГГ"
+                                                        readonly)
                             div.container_departure
                                 h2 выезд
-                                +calendar
+                                input#second_date2(type="text" 
+                                                    data-language="ru"
+                                                    placeholder="ДД.ММ.ГГГГ"
+                                                    readonly)
                                 div.arrow
                         div.booking_guests
                             h2 гости
                             div.guests
-                                input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
-                            div.arrow
+                                input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly value="")
+                                div.arrow
                             +dropBlock
 
                         div.booking_price
