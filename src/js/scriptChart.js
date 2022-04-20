@@ -1,5 +1,5 @@
 // $(document).ready(function(){
-//     var ctx = $('#chart').get(0).getContext('2d');
+//     var ctx = $('#myChart').get(0).getContext('2d');
 
 //     var data = [
 //         {
@@ -23,14 +23,4 @@
 //     var chart = new Chart(ctx).Doughnut(data);
 // })
 
-// // tooltipFontSize: 6,
-new DonutChart(document.getElementById('myChart'), {
-    data: [
-      { label: 'red', value: 120, color: '#F15F5F' },
-      { label: 'green', value: 250, color: '#BCE55C' },
-      { label: 'blue', value: 180, color: '#B2CCFF' },
-      { label: 'yellow', value: 70, color: '#FFE08C' },
-    ],
-    holeSize: 0.6,
-    animationSpeed: 0.5,
-  });
+// tooltipFontSize: 6,
