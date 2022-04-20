@@ -15,9 +15,11 @@ import '../../../js/clear_conv.js'
 import '../../../js/close__conveniences1.js'
 import '../../../js/conveniences.js'
 import '../../../js/close_conveniences.js'
+import '../../../js/scriptChart.js'
 import 'slick-carousel/slick/slick.min.js';
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
+import 'chart.js'
 
 
 $(function(){

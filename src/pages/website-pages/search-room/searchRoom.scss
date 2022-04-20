@@ -80,21 +80,12 @@
 	height: 20px;
 }
 
-.counte_guests {
-	border: none;
-	cursor: pointer;
-}
-
 .guests .dropBlock{
 	z-index:1;
 	position:relative;
 	top:12px;
 	cursor:pointer;
 	width:266px;
-}
-
-.drop_block_item {
-	width:266px !important;
 }
 
 #dropItem1 {
@@ -632,56 +623,62 @@ button.slick-next.slick-arrow::before {
 }
 
 
-/*Переключатель номеров*/
+// .pagination .container .switch-circle_active p {
+// 	color: #fff;
+// }
 
-.switch {
-	height:82px;
-	width:260px;
-	margin:41px auto 0 auto;
-}
+// .pagination .container .switch-circle_active {
+// 	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+// }
 
-.switch .container {
-	display:flex;
-	box-shadow:none;
-}
+// .switch {
+// 	height:82px;
+// 	width:260px;
+// 	margin:41px auto 0 auto;
+// }
 
-.switch .container p{
-	color:rgba(31, 32, 65, 0.5);
-	text-align:center;
-	font-size:12px;
-	line-height:15px;
-}
+// .switch .container {
+// 	display:flex;
+// 	box-shadow:none;
+// }
 
-/*Круги с нумерацией*/
-.switch .circle {
-	width:40px;
-	height:40px;
-	border-radius:22px;
-	box-shadow:none;
-	cursor: pointer;
-}
+// .switch .container p{
+// 	color:rgba(31, 32, 65, 0.5);
+// 	text-align:center;
+// 	font-size:12px;
+// 	line-height:15px;
+// }
 
-.switch .circle:first-child {
-	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
+// /*Круги с нумерацией*/
+// .switch .circle {
+// 	width:40px;
+// 	height:40px;
+// 	border-radius:22px;
+// 	box-shadow:none;
+// 	cursor: pointer;
+// }
 
-.switch .container .circle:last-child {
-	background:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
-	position:relative;
-}
+// .switch .container .circle:first-child,.switch .container .circle:last-child {
+// 	background:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
+// 	position:relative;
+// }
 
-.switch .container .circle:last-child:after {
-	content: '';
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	background: url(../../../assets/image/arrow_link.svg);
-	background-repeat: no-repeat;
-	background-position: center;
-	position: absolute;
-	left: 30%;
-	top: 30%;
-}
+// .switch .container .circle:first-child:after {
+// 	transform: rotate(180deg);
+// }
+
+// .switch .container .circle:last-child:after,.switch .container .circle:first-child:after {
+// 	content: '';
+// 	display: inline-block;
+// 	width: 15px;
+// 	height: 15px;
+// 	background: url(../../../assets/image/arrow_link.svg);
+// 	background-repeat: no-repeat;
+// 	background-position: center;
+// 	position: absolute;
+// 	left: 30%;
+// 	top: 30%;
+// }
 
 /*Дополниетльыне удобства*/
 .convenience {
@@ -804,6 +801,7 @@ ul.slick-dots li {
 	cursor:pointer;
 }
 
+
 .drop_item_convenience label {
 	margin-top:10px;
 	position:relative;
@@ -835,6 +833,7 @@ ul.slick-dots li {
   background-position:center;
   background-repeat:no-repeat;
  }
+
 
 /* стили при наведении курсора на checkbox */
 .convenience-checkbox:not(:disabled):not(:checked)+label:hover::before {

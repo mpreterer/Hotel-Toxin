@@ -27,21 +27,15 @@ block content
                 include ../../../includes/Room10.pug
                 include ../../../includes/Room11.pug
                 include ../../../includes/Room12.pug
-            div.switch
-                div.container
-                    div.circle.circle_1
-                        p(style="color:#fff;") 1
-                    div.circle.circle_2
-                        p 2
-                    div.circle.circle_3
-                        p 3
-                    div.circle.circle_4
-                        p ...
-                    div.circle.circle_5
-                        p 15
-                    div.circle.circle_6
-                        i.fas.fa-arrow-right
-                p(style="font-size: 14px;line-height: 24px;margin:11px 0 0 0;") 1 – 12 из 100+ вариантов аренды
+            div.pagination__container
+                div.pagination
+                p 
+                    span.pagination-min 1
+                    span.pagination-cur -
+                    span.pagination-max 12
+                    span.pagination-txt из
+                    span.pagination-all-option 100+
+                    span.pagination-txt вариантов аренды
         div.left_bar(style="width:266px;")
             div.data_arrival_in_otel
                 span.h_span_block_hotel даты пребывания в отеле
