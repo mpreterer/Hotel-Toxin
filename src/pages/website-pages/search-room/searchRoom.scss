@@ -622,41 +622,72 @@ button.slick-next.slick-arrow::before {
 	margin:0;
 }
 
+.pagination__container {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+}
 
-// .pagination .container .switch-circle_active p {
-// 	color: #fff;
-// }
+#pagination {
+	margin:41px auto 0 auto;
+	user-select: none;
+}
 
-// .pagination .container .switch-circle_active {
-// 	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-// }
+#pagination ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+}
 
-// .switch {
-// 	height:82px;
-// 	width:260px;
-// 	margin:41px auto 0 auto;
-// }
+#pagination li a {
+	color: rgba(31,32,65,.5);
+	padding: 20px;
+}
 
-// .switch .container {
-// 	display:flex;
-// 	box-shadow:none;
-// }
+#pagination li.active {
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
 
-// .switch .container p{
-// 	color:rgba(31, 32, 65, 0.5);
-// 	text-align:center;
-// 	font-size:12px;
-// 	line-height:15px;
-// }
+#pagination li.active span {
+	color: #fff;
+}
 
-// /*Круги с нумерацией*/
-// .switch .circle {
-// 	width:40px;
-// 	height:40px;
-// 	border-radius:22px;
-// 	box-shadow:none;
-// 	cursor: pointer;
-// }
+#pagination ul li {
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	box-shadow:none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#pagination ul li:first-child, #pagination ul li:last-child {
+	background:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
+	position: relative;
+}
+
+#pagination ul li:first-child:after, #pagination ul li:last-child:after {
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(../../../assets/image/arrow_link.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	left: 30%;
+	top: 30%;
+	pointer-events: none;
+}
+
+#pagination ul li:first-child:after {
+	transform: rotate(180deg);
+}
+
 
 // .switch .container .circle:first-child,.switch .container .circle:last-child {
 // 	background:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
