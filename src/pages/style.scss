@@ -331,7 +331,6 @@ button {
 
 /*блок в контенте с временем выезда и прибытия*/
 .content .search-room {
-	height:374px;
 	width:380px;
 	background:#fff;
 	color:#1F2041;
@@ -582,10 +581,6 @@ input.datepicker {
 	width: 100%;
 }
 
-.dropBlock input {
-	border:none !important;
-}
-
 .dropBlock .drop_block_item {
 	border:1px solid rgba(31, 32, 65, 0.5);
 	box-sizing:border-box;
@@ -598,7 +593,6 @@ input.datepicker {
 	flex-wrap:wrap;
 	height:159px;
 	cursor:default;
-	font-size: 12px !important;
 	line-height: 15px;
 }
 
@@ -674,6 +668,9 @@ input.datepicker {
 	opacity:0.5;
 }
 
+.drop_block_item input {
+	border: none;
+}
 
 #counter {
 	padding-top:12px;
@@ -780,6 +777,12 @@ input.counte_guests {
 
 .search-room .block2 {
 	margin-left: 18px;
+}
+
+.block_date-calnedar {
+	width: 320px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .search-room .block4{
@@ -913,7 +916,6 @@ input.counte_guests {
 }
 
 .footer_sub_container {
-	width:1190px;
 	height:35px;
 	margin:0 auto;
 	display:flex;
@@ -976,13 +978,12 @@ input.counte_guests {
 }
 
 /*Адаптивная верстка (для смартфонов)*/
-@media all and (max-width:480px ) and (min-width:320px) {
-	h1 {
-		font-size:20px;
+@media all and (max-width:1200px ) and (min-width:320px) {
+	p {
+		font-size: 12px;
 	}
-	.header {
-		display:flex;
-		justify-content:space-between;
+	.logotype {
+		margin-left: 10px;
 	}
 	.header__right-part {
 		display:none;
@@ -997,98 +998,46 @@ input.counte_guests {
 		left:0;
 		top:15px;
 	}
+
 	.content .search-room {
-		position:relative;
-		top:50px;
-		left:20px;
-		max-width:320px; 
-	}
-	.content .search-room .block_date {
-		max-width:320px;
-		max-height:150px;
-		justify-content:flex-start;
+		padding: 15px;
 	}
 
-	.search-room .block3,.guests {
-		max-width:220px;
-		margin:5px 0 0 0;
+	.search-room .block2 {
+		margin-left: 0;
 	}
 
-	.search-room .block_date p {
-		margin:2px 0 2px 0;
-		padding:0;
-	}
-
-	.content .search-room .residence .block2 {
-		margin:5px 0 0 0 !important;
-	}
-
-	.date_arrival, .date_departure {
-		width:220px;
+	.content .search-room {
+		left: 10px;
+		width: 350px;
 	}
 
 	.footer {
-		box-shadow:none;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	.footer_list {
-		padding:0;
-		flex-direction:column;
+	.footer_sub .sub_icons {
+		display: flex;
+		justify-content: space-around;
 	}
-	.footer_sub {
-		margin-top:650px;
-		border-top:1px solid #E8E8EC;
+
+	.footer_sub a {
+		padding-left: 0;
 	}
-	.footer_sub_container {
-		width:330px;
-		font-size:12px;
-	}
-	.footer_sub_container a {
-		padding-left:5px;
-	}
+
 	.footer .footer_list {
-		padding:30px;
-	}
-	.footer .block1 {
-		margin:0;
-	}
-	.footer .block2 {
-		margin:0;
-	}.footer .block3 {
-		margin:0;
-	}.footer .block4 {
-		margin:0;
-	}.footer .block5 {
-		margin:0;
-	}
-	.dropBlock, .drop_block_row {
-		width:220px;
+		display: inline-block;
+		padding: 0;
 	}
 
-	.drop_block_item {
-		height:180px !important;
-		width:220px !important;
+	footer .footer_list div {
+		margin-top: 30px;
 	}
 
-	.drop_function {
-		padding-top:30px;
+	.footer_sub_container {
+		padding: 0 15px;
 	}
-
-	#dropItem1 {
-		margin-right:18px;
-	}
-	#dropItem2 {
-		margin-right:60px;
-	}
-	#dropItem3 {
-		margin-right:10px;
-	}
-}
-
-@keyframes lir {
-	from {background:#BC9CFF;}
-	30% {background:#A176FF;}
-	50% {background:#874FFF;}
-	80% {background:#436EF9;}
-	to {background:#8BA4F9;}
 }
