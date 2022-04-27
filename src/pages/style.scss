@@ -327,6 +327,7 @@ button {
 	height:1022px;
 	background-image:url(../assets/image/content.jpg);
 	background-repeat:no-repeat;
+	background-position: center;
 }
 
 /*блок в контенте с временем выезда и прибытия*/
@@ -816,13 +817,13 @@ input.counte_guests {
 
 .footer_container {
 	width: 100%;
+	border-top: 1px solid rgba(31,32,65,0.25);
 }
 
 .footer {
-	outline: 1px solid #D1D1D4;
-	height:392px;
+	max-width: 1160px;
+	margin: 0 auto;
 	box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
-	border-top:1px solid #D0D0D5;
 	background: #FFFFFF;
 }
 
@@ -831,7 +832,7 @@ input.counte_guests {
 	display:flex;
 	justify-content: space-between;
 	line-height:15px;
-	padding:86px 175px 116px 182px;
+	padding: 116px 0;
 }
 
 .footer .footer_list li {
@@ -909,14 +910,17 @@ input.counte_guests {
 
 /*Под футером*/
 .footer_sub {
-	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	width: 100%;
+	margin: 0 auto;
 	padding:25px 0 15px 0;
 	color:rgba(31, 32, 65, 0.75);
 	background: #FFFFFF;
+	border-top: 1px solid #e5e5e5 ;
 }
 
 .footer_sub_container {
 	height:35px;
+	max-width: 1160px;
 	margin:0 auto;
 	display:flex;
 	justify-content:space-between;
@@ -978,7 +982,7 @@ input.counte_guests {
 }
 
 /*Адаптивная верстка (для смартфонов)*/
-@media all and (max-width:1200px ) and (min-width:320px) {
+@media all and (max-width:1200px ) {
 	p {
 		font-size: 12px;
 	}

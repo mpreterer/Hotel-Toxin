@@ -1,13 +1,13 @@
 /*Блок с контентом*/
 .content_search-room {
-	margin:30px 120px 70px 175px;
+	max-width: 1175px;
+	margin: 30px auto 0 auto;
 	line-height:15px;
 	font-size:12px;
 	display:flex;
-	flex-direction:row-reverse;
 	justify-content:space-between;
-
 }
+
 .content_search-room .h_span_block_hotel {
 	font-weight:bold;
 	text-transform:uppercase;
@@ -281,8 +281,6 @@
 
 .main_content_search-room{
 	width:853px;
-	height:1140px;
-	margin-right:50px;
 }
 
 .main_content_search-room h2 {
@@ -294,6 +292,9 @@
 .container_in_hotel {
 	display:flex;
 	flex-wrap:wrap;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
 }
 
 .container_in_hotel .room_in_hotel{
@@ -622,11 +623,19 @@ button.slick-next.slick-arrow::before {
 	margin:0;
 }
 
+.pagination__container p {
+	user-select: none;
+}
+
 .pagination__container {
 	display: flex;
 	justify-content: center;
 	text-align: center;
 	flex-direction: column;
+}
+
+.pagination__container p {
+	font-size: 14px;
 }
 
 #pagination {
@@ -688,30 +697,6 @@ button.slick-next.slick-arrow::before {
 	transform: rotate(180deg);
 }
 
-
-// .switch .container .circle:first-child,.switch .container .circle:last-child {
-// 	background:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
-// 	position:relative;
-// }
-
-// .switch .container .circle:first-child:after {
-// 	transform: rotate(180deg);
-// }
-
-// .switch .container .circle:last-child:after,.switch .container .circle:first-child:after {
-// 	content: '';
-// 	display: inline-block;
-// 	width: 15px;
-// 	height: 15px;
-// 	background: url(../../../assets/image/arrow_link.svg);
-// 	background-repeat: no-repeat;
-// 	background-position: center;
-// 	position: absolute;
-// 	left: 30%;
-// 	top: 30%;
-// }
-
-/*Дополниетльыне удобства*/
 .convenience {
 	width:266px;
 	height:14px;
@@ -760,6 +745,12 @@ ul.slick-dots li button {
 	height:7.5px;
 }
 
+.left_bar {
+	max-width: 266px;
+	height: 100%;
+	margin: 0 auto ;
+}
+
 ul.slick-dots li button, ul.slick-dots li {
 	width:7.5px;
 	height:7.49px;
@@ -793,6 +784,7 @@ ul.slick-dots li {
 	padding-top:34px;
 	position:absolute;
 	top:0;
+	z-index: 99;
 }
 
 .dropBlockCon {
@@ -816,6 +808,8 @@ ul.slick-dots li {
 .drop_item_convenience {
 	width:266px;
 	user-select:none;
+	background-color: #fff;
+	padding: 5px;
 }
 
 /*Список удобств*/
@@ -871,40 +865,22 @@ ul.slick-dots li {
   border-color:#BC9CFF;
 }
 
-.footer {
-	margin-top:255px;
+@media screen and (max-width:1500px) {
+	.main_content_search-room {
+		margin-left: 20px;
+		text-align: center;
+	}
+
+	.content_search-room {
+		width: 80%;
+		height: 100%;
+	}
 }
 
-
-@media screen and (max-width:480px) and (min-width:320px) {
-	.content_search-room h2 {
-		font-size:16px;
-		margin-left:40px;
-	}
+@media screen and (max-width:1065px) {
+	
 	.content_search-room {
-		margin:0 0 10px 0;
-		display:inline-block;
-		max-width:320px;
+		display: flex;
+		flex-wrap: wrap;
 	}
-	.main_content_search-room {
-		height:3354px;
-		width:320px;
-		margin:0;
-		margin-top:900px;
-	}
-	.container_in_hotel {
-		display:inline-block;
-		margin-left:40px;
-	}
-	.switch {
-		margin:0 0 0 45px;
-	}
-	.left_bar {
-		position:absolute;
-		top:100px;
-		left:10px;
-	}
-	.footer .block2 {
-		margin-top:15px;
-	}
-} 
+}

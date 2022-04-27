@@ -12,31 +12,7 @@ block content
     div#timeSpanFrom
     div#timeSpanTo
     div.content_search-room
-        div.main_content_search-room
-            h2 Номера, которые мы для вас подобрали 
-            div.container_in_hotel
-                include ../../../includes/Room1.pug
-                include ../../../includes/Room2.pug
-                include ../../../includes/Room3.pug
-                include ../../../includes/Room4.pug
-                include ../../../includes/Room5.pug
-                include ../../../includes/Room6.pug
-                include ../../../includes/Room7.pug
-                include ../../../includes/Room8.pug
-                include ../../../includes/Room9.pug
-                include ../../../includes/Room10.pug
-                include ../../../includes/Room11.pug
-                include ../../../includes/Room12.pug
-            div.pagination__container
-                div#pagination
-                p 
-                    span.pagination-min 1
-                    span.pagination-cur -
-                    span.pagination-max 12
-                    span.pagination-txt из
-                    span.pagination-all-option 100+
-                    span.pagination-txt вариантов аренды
-        div.left_bar(style="width:266px;")
+        div.left_bar
             div.data_arrival_in_otel
                 span.h_span_block_hotel даты пребывания в отеле
                 input#date-words(data-range="true"
@@ -157,6 +133,30 @@ block content
 
                         input#drop_6.convenience-checkbox(type="checkbox" name="drop_6")
                         label(for="drop_6") Шампунь
+        div.main_content_search-room
+            h2 Номера, которые мы для вас подобрали 
+            div.container_in_hotel
+                include ../../../includes/Room1.pug
+                include ../../../includes/Room2.pug
+                include ../../../includes/Room3.pug
+                include ../../../includes/Room4.pug
+                include ../../../includes/Room5.pug
+                include ../../../includes/Room6.pug
+                include ../../../includes/Room7.pug
+                include ../../../includes/Room8.pug
+                include ../../../includes/Room9.pug
+                include ../../../includes/Room10.pug
+                include ../../../includes/Room11.pug
+                include ../../../includes/Room12.pug
+            div.pagination__container
+                div#pagination
+                p 
+                    span.pagination-min 1
+                    span.pagination-cur  -
+                    span.pagination-max  12
+                    span.pagination-txt  из
+                    span.pagination-all-option  100+
+                    span.pagination-txt  вариантов аренды
 block footer
     +footer
 
