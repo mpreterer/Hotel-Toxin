@@ -61,18 +61,14 @@
 }
 
 
-/*Блок с подробной информацией*/
-
-.expend_details_room {
-	height:866px;
-	display:block;
-}
-
 .container_expend_details_room {
 	width:1179px;
-	height:796px;
 	margin:70px auto;
-	position:relative;
+}
+
+.container_split {
+	display: flex;
+	justify-content: space-between;
 }
 /*Контейнер для блоков сведения и впечатлений*/
 .container_expend_details {
@@ -193,6 +189,10 @@
 	font-size:12px;
 	line-height:15px;
 	margin:0;
+}
+
+.container_split_details {
+	width: 672px;
 }
 
 .impressions_list {
@@ -415,13 +415,9 @@ span.span_heart {
 .booking {
 	height:511px;
 	width:380px;
-	position:absolute;
-	top:0px;
-	right:0;
 	border:1px solid rgba(0, 0, 0, 0.12);
 	box-shadow:0px 0px 25px rgba(0, 0, 0, 0.2);
 	border-radius:4px;
-
 }
 
 .booking .container {
@@ -688,4 +684,36 @@ span.span_heart {
 
 .container_expend_details {
 	z-index: -1;
+}
+
+
+@media all and (max-width:1500px) {
+	.room_loop1 {
+		background-size: auto;
+	}
+}
+
+@media all and (max-width: 920px) {
+
+	.container_room_loop {
+		height: auto;
+		padding: 0 20px;
+		flex-direction: column;
+	}
+
+	.room_loop1,.room_loop2,.room_loop3 {
+		width: 100%;
+		margin: 10px auto;
+	}
+
+	.room_loop1 {
+		margin-bottom: 0;
+	}
+
+	.room_loop_head {
+		margin: 0 auto;
+	}
+
+	.room_loop1,.room_loop2,.room_loop3 {
+	}
 }
