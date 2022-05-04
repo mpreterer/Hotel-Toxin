@@ -674,7 +674,7 @@ button.slick-next.slick-arrow::before {
 	justify-content: center;
 }
 
-#pagination ul li:first-child, #pagination ul li:last-child {
+#pagination ul li:last-child {
 	background:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
 	position: relative;
 }

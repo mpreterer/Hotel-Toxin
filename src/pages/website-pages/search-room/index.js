@@ -27,7 +27,7 @@ $(function(){
       itemsOnPage: 4,
       displayedPages: 3,
       edges: 1,
-      prevText: ' ',
+      prevText: '',
       nextText: ' '
   });
 });
