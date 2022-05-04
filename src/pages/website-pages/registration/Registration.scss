@@ -18,7 +18,6 @@ p {
 }
 
 .registration_user {
-	height:646px;
 	width:380px;
 	background-color:#fff;
 	border:1px solid rgba(0, 0, 0, 0.12);
@@ -58,6 +57,7 @@ p {
 }
 
 .gender .gender_checkbox {
+	width: 50px;
 	display:inline-flex;
 	align-items:center;
 	user-select:none;
@@ -229,27 +229,18 @@ p {
 
 /*Адаптивная верстка (дял смартфона)*/
 
-@media screen and (min-width:320px) and (max-width:480px) {
+@media screen and (max-width:480px) {
 	.registration_user .head h1 {
 		font-size:20px;
-	}
-	.block_registration .container {
-		padding:20px 0 0 30px;
 	}
 	.registration_user {
 		max-width:320px;
 	}
 
-	.registration_user input {
-		width:260px;
-	}
 	.buy {
-		width:260px;
 		margin-top:30px;
 	}
-	.if_have_account {
-		width:260px;
-	}
+	
 	.special_offer {
 		margin-bottom:10px;
 		width:260px;
@@ -257,6 +248,14 @@ p {
 	.special_offer label {
 		margin:0 0 0 55px;
 		font-size:12px;
+	}
+
+	.registration_user .container_user {
+		padding: 0;
+	}
+
+	.registration_user {
+		padding: 20px 10px;
 	}
 
 }
