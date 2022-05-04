@@ -29,7 +29,7 @@
 
 .room_loop2 {
 	width:538px;
-	height:243px;
+	height: 243px;
 	background-image:url(../../../assets/image/room_loop2.jpg);
 	background-repeat:no-repeat;
 	background-size:100%;
@@ -62,21 +62,20 @@
 
 
 .container_expend_details_room {
-	width:1179px;
+	max-width:1179px;
 	margin:70px auto;
 }
 
 .container_split {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom:30px;
 }
 /*Контейнер для блоков сведения и впечатлений*/
 .container_expend_details {
 	display:flex;
-	width:672px;
-	height:273px;
+	max-width:672px;
 	margin-bottom:20px
-
 }
 
 /*Блок сведение о номере*/
@@ -192,7 +191,7 @@
 }
 
 .container_split_details {
-	width: 672px;
+	max-width: 672px;
 }
 
 .impressions_list {
@@ -238,13 +237,11 @@
 
 /*Отзывы посетителей*/
 .user_reviews {
-	height:306px;
-	width:711px;
+	max-width:711px;
 	color:rgba(31, 32, 65, 0.75);
 	font-size:14px;
 	line-height:24px;
 	position:relative;
-	margin-bottom:30px;
 }
 
 .user_reviews .otziv {
@@ -356,8 +353,6 @@ span.span_heart {
 
 /*Правила номера и отмена*/
 .order_rooms .container {
-	width:711px;
-	height:160px;
 	display:flex;
 }
 
@@ -413,7 +408,6 @@ span.span_heart {
 
 /*Забронировать*/
 .booking {
-	height:511px;
 	width:380px;
 	border:1px solid rgba(0, 0, 0, 0.12);
 	box-shadow:0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -445,7 +439,6 @@ span.span_heart {
 /*Прибытие и отъезд*/
 .booking_arrival {
 	width:320px;
-	height:64.4px;
 	display:flex;
 	text-transform:uppercase;
 }
@@ -623,17 +616,6 @@ span.span_heart {
 
 }
 
-.to_book p:after {
-	content:'';
-	width:44px;
-	height:44px;
-	background-image:url(../../../assets/image/arrow_forward.svg);
-	display:inline-block;
-	background-repeat:no-repeat;
-	position:absolute;
-	right:-12px;
-}
-
 .guests {
 	border: none;
 }
@@ -693,11 +675,37 @@ span.span_heart {
 	}
 }
 
+@media all and (max-width: 1200px) {
+
+	.container_split {
+		justify-content: center;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.container_expend_details {
+		margin-top: 60px;
+	}
+
+	.order_rooms .container {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.order_rooms {
+		margin: 0 10px;
+	}
+
+	.user_reviews {
+		margin: 10px;
+	}
+}
+
 @media all and (max-width: 920px) {
 
 	.container_room_loop {
 		height: auto;
-		padding: 0 20px;
+		padding: 0 10px;
 		flex-direction: column;
 	}
 
@@ -706,14 +714,97 @@ span.span_heart {
 		margin: 10px auto;
 	}
 
+	.room_loop2,.room_loop3 {
+		height: 420px;
+	}
+
 	.room_loop1 {
 		margin-bottom: 0;
+		background-size: 100%;
 	}
 
 	.room_loop_head {
+		width: 100%;
+		height: auto;
 		margin: 0 auto;
 	}
+}
 
-	.room_loop1,.room_loop2,.room_loop3 {
+@media all and (max-width: 793px) {
+
+	.booking {
+		width: 360px;
 	}
+	
+	.booking_arrival {
+		flex-direction: column;
+	}
+
+	.container_departure {
+		margin-top: 10px;
+	}
+
+	.container_arrival,.container_departure 
+	{
+		width: 88%;
+	}
+	
+	.booking_arrival input {
+		width: 100%;
+	}
+
+	.container_arrival:after, .container_departure:after {
+		right: 0;
+	}
+
+	.order_rooms .container .order {
+		margin-right: 0;
+	}
+}
+
+@media all and (max-width: 693px) {
+
+	.container_expend_details {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.order_rooms .container {
+		flex-direction: column;
+	}
+
+	.order_rooms .container .order, .order_rooms .container .cancel {
+		width: 100%;
+	}
+
+	.room_loop1,.room_loop2, .room_loop3 {
+		height: 243px;
+	}
+
+}
+
+@media all and (max-width: 440px) {
+	.room_loop1,.room_loop2, .room_loop3 {
+		height: 180px;
+	}
+}
+
+@media all and (max-width: 360px) {
+	.room_information {
+		margin-right: 0;
+	}
+
+	.booking {
+		width: 100%;
+	}
+
+	.booking .container {
+		margin: 10px 0 10px 10px;
+		width: 100%;
+	}
+
+	.booking_guests {
+		width: 300px;
+	}
+
 }
