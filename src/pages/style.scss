@@ -330,14 +330,15 @@ button {
 	background-position: center;
 }
 
+.content .container-search-room {
+	padding: 70px 0 0 140px;
+}
+
 /*блок в контенте с временем выезда и прибытия*/
 .content .search-room {
 	width:380px;
 	background:#fff;
 	color:#1F2041;
-	position:absolute;
-	left:180px;
-	top:140px;
 	font-weight:bold;
 	font-style:normal;
 	font-family:Montserrat,sans-serif;
@@ -349,6 +350,7 @@ button {
 	display:flex;
 	flex-direction:column;
 }
+
 
 .content .search-room h1 {
 	font-size: 24px;
@@ -445,7 +447,6 @@ input.datepicker {
 	left:0;
 	border: 1px solid #000;
 	opacity: 0;
-
 }
 
 .calendar h2 {
@@ -564,6 +565,7 @@ input.datepicker {
     padding: 15px 0 0 15px;
 	margin: 0
 }
+
 
 .search-room .residence input {
 	cursor:pointer;
@@ -1003,8 +1005,13 @@ input.counte_guests {
 		top:15px;
 	}
 
+	.content .container-search-room {
+		padding-left: 0;
+	}
+	
 	.content .search-room {
 		padding: 15px;
+		margin: 0 auto;
 	}
 
 	.search-room .block2 {
@@ -1043,5 +1050,28 @@ input.counte_guests {
 
 	.footer_sub_container {
 		padding: 0 15px;
+	}
+}
+
+@media all and (max-width:425px) {
+	.header__container {
+		margin-bottom: 50px;
+	}
+
+	.block_date-calnedar {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.date_arrival, .search-room .date_departure {
+		width: 100%;
+	}
+
+	.content .search-room, .search-room .block3 .guests {
+		width: auto;
+	}
+
+	.block3 {
+		width: 100%;
 	}
 }

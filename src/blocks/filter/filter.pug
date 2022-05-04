@@ -3,34 +3,35 @@ include ../dropBlock/dropBlock.pug
 
 mixin filter({ title = 'Найдём номера под ваши пожелания' }={})
     div.content
-        div.search-room
-            h1 #{title}
-            div.residence
-                div.block_date
-                    div.block_date-calnedar
-                        div.block1
-                            h3 Прибытие
-                            div.date_arrival 
-                                div.text-field-calendar
-                                input#first_date(type="text"
-                                                            data-range="true" 
-                                                            data-multiple-dates-separator=" - "
+        div.container-search-room
+            div.search-room
+                h1 #{title}
+                div.residence
+                    div.block_date
+                        div.block_date-calnedar
+                            div.block1
+                                h3 Прибытие
+                                div.date_arrival 
+                                    div.text-field-calendar
+                                    input#first_date(type="text"
+                                                                data-range="true" 
+                                                                data-multiple-dates-separator=" - "
+                                                                placeholder="ДД.ММ.ГГГГ"
+                                                                readonly)
+                            div.block2
+                                h3 Выезд
+                                div.date_departure
+                                    div.text-field-calendar
+                                        input#second_date(type="text" 
+                                                            data-language="ru"
                                                             placeholder="ДД.ММ.ГГГГ"
                                                             readonly)
-                        div.block2
-                            h3 Выезд
-                            div.date_departure
-                                div.text-field-calendar
-                                    input#second_date(type="text" 
-                                                        data-language="ru"
-                                                        placeholder="ДД.ММ.ГГГГ"
-                                                        readonly)
-                    div.block3
-                        h3 Гости
-                        div.guests
-                            input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly value="")
-                            div.arrow
-                        +dropBlock
-                    a.search-room_link(href="./searchRoom.html")
-                        div.block4.button
-                            p подобрать номер
+                        div.block3
+                            h3 Гости
+                            div.guests
+                                input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly value="")
+                                div.arrow
+                            +dropBlock
+                        a.search-room_link(href="./searchRoom.html")
+                            div.block4.button
+                                p подобрать номер
