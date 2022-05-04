@@ -1025,7 +1025,6 @@ input.counte_guests {
 
 	.footer {
 		height: 100%;
-		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
@@ -1040,8 +1039,8 @@ input.counte_guests {
 	}
 
 	.footer .footer_list {
-		display: inline-block;
-		padding: 0;
+		justify-content: space-between;
+		padding: 0 15px;
 	}
 
 	footer .footer_list div {
@@ -1051,7 +1050,42 @@ input.counte_guests {
 	.footer_sub_container {
 		padding: 0 15px;
 	}
+
+	.footer .block2,.footer .block3,.footer .block4 {
+		display: none;
+	}
 }
+
+@media all and (max-width:650px) {
+	.text_block1_f, .footer .block5 {
+		display: none;
+	}
+
+	.footer {
+		display: flex;
+	}
+
+	.footer_container {
+		padding: 80px 0 100px 0;
+	}
+
+	.footer_sub {
+		border: none;
+	}
+
+	.footer_sub_container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer_sub_container p {
+		margin-bottom: 25px;
+		text-align: center;
+	}
+
+}
+
 
 @media all and (max-width:425px) {
 	.header__container {
