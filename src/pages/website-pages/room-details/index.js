@@ -3,18 +3,14 @@ import '../../../assets/scss/datepicker.min.scss'
 import '../../../assets/scss/Chart.min.css'
 import '../../style.scss'
 
-
 import '../../../js/jquery-3.6.0.min.js'
 import '../../../js/datepicker.min.js' 
 import '../../../js/like.js'
 import '../../../js/close.js'
 import '../../../js/clear.js'
 import '../../../js/click.js'
-// import '../../../js/Chart.js'
-import '../../../js/scriptChart.js'
 import '../../../js/datepicker.min.js'
 import '../../../js/Chart.min.js'
-// const Chart = require('chart.js');
 
 let ctx = document.getElementById('myChart');
 ctx.height = 120;

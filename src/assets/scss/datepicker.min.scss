@@ -223,8 +223,7 @@
     font-family: Tahoma, sans-serif;
     font-size: 14px;
     color: #4a4a4a;
-    width: 320px;
-    height: 369px;
+    max-width: 320px;
     position: absolute;
     left: -100000px;
     opacity: 0;
@@ -277,7 +276,7 @@
       display: block;
       width: 279px;
       font-size: 12px;
-      margin: 34px 20px 50px 20px;
+      margin: 34px 20px 0 20px;
     }
   
   .datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
@@ -363,7 +362,7 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    transform: translateY(-45px);
+    padding: 10px 0 15px 0;
    }
   
   .datepicker--button {
