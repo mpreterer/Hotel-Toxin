@@ -1,7 +1,7 @@
 /*Блок с контентом*/
 .content_search-room {
 	max-width: 1175px;
-	margin: 30px auto 0 auto;
+	margin: 30px auto 60px auto;
 	line-height:15px;
 	font-size:12px;
 	display:flex;
@@ -117,7 +117,7 @@
 
 .content_search-room .price_hotel {
 	width:266px;
-	margin:20px 0 30px 0;
+	margin:35px 0 40px 0;
 	z-index:-1;
 }
 
@@ -217,7 +217,7 @@
 .availability {
 	height:148px;
 	width:266px;
-	margin-top:40px;
+	margin: 40px 0 25px 0;
 	display:flex;
 	flex-direction:column;
 	user-select:none;
@@ -639,7 +639,7 @@ button.slick-next.slick-arrow::before {
 }
 
 #pagination {
-	margin:41px auto 0 auto;
+	margin:55px auto 0 auto;
 	user-select: none;
 }
 
@@ -748,7 +748,6 @@ ul.slick-dots li button {
 .left_bar {
 	max-width: 266px;
 	height: 100%;
-	margin: 0 auto ;
 }
 
 ul.slick-dots li button, ul.slick-dots li {
@@ -882,6 +881,10 @@ ul.slick-dots li {
 	.content_search-room {
 		display: flex;
 		flex-wrap: wrap;
+	}
+
+	.left_bar {
+		margin: 0 auto;
 	}
 
 }

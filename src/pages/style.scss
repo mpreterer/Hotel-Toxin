@@ -324,14 +324,14 @@ button {
 
 /*блок контента*/
 .content {
-	height:1022px;
+	height:830px;
 	background-image:url(../assets/image/content.jpg);
 	background-repeat:no-repeat;
 	background-position: center;
 }
 
 .content .container-search-room {
-	padding: 70px 0 0 140px;
+	padding: 70px 0 0 180px;
 }
 
 /*блок в контенте с временем выезда и прибытия*/
@@ -834,7 +834,7 @@ input.counte_guests {
 	display:flex;
 	justify-content: space-between;
 	line-height:15px;
-	padding: 116px 0;
+	padding: 100px 0;
 }
 
 .footer .footer_list li {
@@ -879,6 +879,11 @@ input.counte_guests {
 	box-sizing: border-box;
 	border-radius: 4px;
 	position: relative;
+	margin-top: 30px;
+}
+
+.footer .footer_list .block5 p {
+	margin-top: 30px;
 }
 
 .footer .footer_list .email input {
@@ -914,22 +919,21 @@ input.counte_guests {
 .footer_sub {
 	width: 100%;
 	margin: 0 auto;
-	padding:25px 0 15px 0;
+	padding:15px 0 15px 0;
 	color:rgba(31, 32, 65, 0.75);
 	background: #FFFFFF;
 	border-top: 1px solid #e5e5e5 ;
 }
 
 .footer_sub_container {
-	height:35px;
 	max-width: 1160px;
 	margin:0 auto;
 	display:flex;
 	justify-content:space-between;
+	align-items: center;
 }
 
 .footer_sub .sub_icons{
-	width:150px;
 	text-align:center;
 }
 
@@ -942,7 +946,7 @@ input.counte_guests {
 }
 
 .footer_sub_container p {
-	margin-top: 0;
+	margin: 0;
 }
 
 .footer-mobile {
