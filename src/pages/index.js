@@ -1,10 +1,11 @@
 import './style.scss'
+import '../blocks/filter/filter.scss'
 import '../assets/scss/datepicker.min.scss'
 
 import '../js/jquery-3.6.0.min.js'
 import '../js/datepicker.min.js' 
-import '../blocks/dropBlock/dropBlock.js'
-import '../blocks/dropBlock/dropBlock.scss'
+import '../blocks/dropDown/dropDown.js'
+import '../blocks/dropDown/dropDown.scss'
 import '../js/clear.js'
 import '../js/close.js'
 

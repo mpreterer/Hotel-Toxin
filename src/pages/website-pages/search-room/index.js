@@ -5,11 +5,13 @@ import '../../style.scss';
 import '../../../assets/scss/range.scss';
 import '../../../assets/scss/datepicker.min.scss';
 import '../../../assets/scss/simplePagination.css';
-import '../../../blocks/dropBlock/dropBlock.scss';
+import '../../../blocks/dropDown/dropDown.scss';
+import '../../../blocks/filter/filter.scss';
+
 
 import '../../../js/jquery-3.6.0.min.js';
 import '../../../js/datepicker.min.js';
-import '../../../blocks/dropBlock/dropBlock.js';
+import '../../../blocks/dropDown/dropDown.js';
 import '../../../js/value.js';
 import '../../../js/range.js';
 import '../../../js/close.js';

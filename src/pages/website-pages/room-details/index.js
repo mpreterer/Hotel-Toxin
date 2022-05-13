@@ -1,6 +1,8 @@
 import './roomDetails.scss'
 import '../../../assets/scss/datepicker.min.scss'
 import '../../../assets/scss/Chart.min.css'
+import '../../../blocks/filter/filter.scss'
+import '../../../blocks/dropDown/dropDown.scss'
 import '../../style.scss'
 
 import '../../../js/jquery-3.6.0.min.js'
@@ -8,7 +10,7 @@ import '../../../js/datepicker.min.js'
 import '../../../js/like.js'
 import '../../../js/close.js'
 import '../../../js/clear.js'
-import '../../../blocks/dropBlock/dropBlock.js'
+import '../../../blocks/dropDown/dropDown.js'
 import '../../../js/datepicker.min.js'
 import '../../../js/Chart.min.js'
 

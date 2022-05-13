@@ -57,48 +57,12 @@
 	background-image:url(../../../assets/image/expand_more.svg);
 }
 
-.guests:after {
-	content:'';
-	display:inline-block;
-	position:absolute;
-	top:18px;
-	right:13px;
-	width:12px;
-	height:8px;
-	background-image:url(../../../assets/image/expand_more.svg);
-}
-
 .data_arrival_in_otel input:hover, .guests_in_hotel input:hover {
 	border-color:#848489;
 	transition:0.2s;
 }
 
 /*Гости*/
-
-.guests{
-	padding:10px 10px;
-	height: 20px;
-}
-
-.guests .dropBlock{
-	z-index:1;
-	position:relative;
-	top:12px;
-	cursor:pointer;
-	width:266px;
-}
-
-#dropItem1 {
-	margin-right:70px;
-}
-
-#dropItem2 {
-	margin-right:112px;
-}
-
-#dropItem3 {
-	margin-right:63px;
-}
 
 #temp {
 	position:absolute;

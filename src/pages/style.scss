@@ -322,57 +322,6 @@ button {
 	margin:7px 0;
 }
 
-/*блок контента*/
-.content {
-	height:830px;
-	background-image:url(../assets/image/content.jpg);
-	background-repeat:no-repeat;
-	background-position: center;
-}
-
-.content .container-search-room {
-	padding: 70px 0 0 180px;
-}
-
-/*блок в контенте с временем выезда и прибытия*/
-.content .search-room {
-	width:380px;
-	background:#fff;
-	color:#1F2041;
-	font-weight:bold;
-	font-style:normal;
-	font-family:Montserrat,sans-serif;
-	padding:40px 30px 30px 30px;
-	border:1px solid rgba(0, 0, 0, 0.12);
-	box-sizing:border-box;
-	box-shadow:0px 0px 25px rgba(0, 0, 0, 0.2);
-	border-radius:4px;
-	display:flex;
-	flex-direction:column;
-}
-
-
-.content .search-room h1 {
-	font-size: 24px;
-	margin:0;
-}
-
-.content .search-room p {
-	margin-bottom: 5.44px;
-}
-
-
-.content_page {
-	width:297px; 
-	height:48px;
-	position:absolute;
-	text-align:right;
-	bottom:-310px;
-	right:175px;
-	line-height:24px;
-	color:rgba(31, 32, 65, 0.75);
-}
-
 .residence {
 	font-family:Montserrat;
 	font-size:13px;
@@ -423,21 +372,9 @@ button {
 	pointer-events: none;
 }
 
-.search-room .text-field-calendar .datepicker-here {
-	width: 120px;
-	padding: 12px 12px 8.44px 15px;
-}
 
 input.datepicker {
 	user-select: none;
-}
-
-.search-room .datepicker {
-	width: 320px;
-}
-
-.search-room .date_departure {
-	width: 150px;
 }
 
 #dateCalendare {
@@ -544,6 +481,7 @@ input.datepicker {
 .block_date {
 	display:flex;
 	justify-content:space-around;
+	flex-direction: column;
 	text-align:left;
 	flex-wrap:wrap;
 	margin:0;
@@ -566,7 +504,7 @@ input.datepicker {
 	height: 24px;
 }
 
-input.counte_guests {
+input.dropDown__counte-guests {
 	border: none;
 	pointer-events: none;
 }
@@ -593,41 +531,11 @@ input.counte_guests {
 	user-select: none;
 }
 
-.date_arrival p, .date_departure p, .guests p {
+.date_arrival p, .date_departure p, .dropDown__name p {
 	margin:0;
 }
 
-.search-room .date_arrival, .date_departure, .guests {
-	position:relative;
-	border-radius: 4px;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	cursor: pointer;
-}
 
-.search-room .date_arrival:hover, .date_departure:hover, .guests:hover {
-	border:1px solid #787878;
-}
-
-.search-room .residence input {
-	cursor:pointer;
-	border:none;
-	border-radius:3px;
-}
-
-.search-room .arrow {
-	position:absolute;
-	width:15px;
-	height:9px;
-	background-position:4px 4px 0 0;
-	background-repeat:no-repeat;
-	right:15px;
-	top:17px;
-	background-image:url(../assets/image/expand_more.svg);
-}
-
-.search-room .block2 {
-	margin-left: 18px;
-}
 
 .block_date-calnedar {
 	width: 320px;
@@ -635,33 +543,9 @@ input.counte_guests {
 	justify-content: space-between;
 }
 
-.search-room .block4{
-	width:320px;
-	height:19px;
-	border-radius:22px;
-	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-	color:white;
-	text-align:center;
-	padding: 15px 0 10px 0;
-}
-
-.search-room .residence .block4:hover {
-	background:linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
-	border-radius:40px;
-}
-
-.search-room_link {
-	height: 44px;
-	margin-top:32px;
-}
-
 #second_date,#first_date {
 	width:100px;
 	padding: 12px 32px 14px 15px;
-}
-
-.search-room_link .block4 p {
-	margin: 0;
 }
 
 .footer_container {
@@ -832,6 +716,7 @@ input.counte_guests {
 	opacity: 0;
 	cursor: default;
 	user-select: none;
+	pointer-events: none;
 }
 
 /*Адаптивная верстка (для смартфонов)*/
@@ -856,22 +741,8 @@ input.counte_guests {
 		top:15px;
 	}
 
-	.content .container-search-room {
-		padding-left: 0;
-	}
-	
-	.content .search-room {
-		padding: 15px;
-		margin: 0 auto;
-	}
-
 	.search-room .block2 {
 		margin-left: 0;
-	}
-
-	.content .search-room {
-		left: 10px;
-		width: 350px;
 	}
 
 	.footer {
@@ -948,12 +819,8 @@ input.counte_guests {
 		flex-direction: column;
 	}
 
-	.date_arrival, .search-room .date_departure {
+	.date_arrival {
 		width: 100%;
-	}
-
-	.content .search-room, .search-room .block3 .guests {
-		width: auto;
 	}
 
 	.block3 {

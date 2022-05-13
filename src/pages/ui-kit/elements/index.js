@@ -6,7 +6,7 @@ import '../../website-pages/registration/Registration.scss'
 import '../../../assets/scss/range.scss'
 
 
-import '../../../blocks/dropBlock/dropBlock.js'
+import '../../../blocks/dropDown/dropDown.js'
 import '../../../js/close.js'
 import '../../../js/like.js'
 import '../../../js/range.js'

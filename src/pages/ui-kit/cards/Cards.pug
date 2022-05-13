@@ -1,5 +1,5 @@
 extends ../../../template-head/main_index.pug
-include ../../../blocks/dropBlock/dropBlock.pug
+include ../../../blocks/dropDown/dropDown.pug
 include ../../../blocks/calendar/calendar.pug
 
 block variables 
@@ -34,7 +34,7 @@ block content
                                     div.guests
                                         input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
                                         div.arrow
-                                    +dropBlock
+                                    +dropDown
                                 a(href="layout/searchRoom.html")
                                     div.block4
                                         p(style="padding-top:15px") подобрать номер
@@ -99,7 +99,7 @@ block content
                                 input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
                             div.arrow
 
-                            include ../../../blocks/dropBlock/dropBlock.pug
+                            include ../../../blocks/dropDown/dropDown.pug
 
                         div.booking_price
                             div.container_block1
