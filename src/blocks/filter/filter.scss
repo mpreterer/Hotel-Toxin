@@ -1,84 +1,68 @@
-.content {
+.filter {
 	height:830px;
 	background-image:url(../../assets/image/content.jpg);
 	background-repeat:no-repeat;
 	background-position: center;
+
+	&__container-search-room {
+		padding: 70px 0 0 180px;
+	}
+
+	&__search-room {
+		width:380px;
+		background:#fff;
+		color:#1F2041;
+		font-weight:bold;
+		font-style:normal;
+		font-family:Montserrat,sans-serif;
+		padding:40px 30px 30px 30px;
+		border:1px solid rgba(0, 0, 0, 0.12);
+		box-sizing:border-box;
+		box-shadow:0px 0px 25px rgba(0, 0, 0, 0.2);
+		border-radius:4px;
+		display:flex;
+		flex-direction:column;
+
+		& h1 {
+			font-size: 24px;
+			margin:0;
+		}
+
+		& p {
+			margin-bottom: 5.44px;
+		}
+
+		& .filter__text-field-calendar .datepicker-here {
+			width: 320px;
+			padding: 12px 12px 8.44px 15px;
+		}
+
+	}
+
+	&__date_departure {
+		width: 150px;
+	}
+
 }
 
-.content .container-search-room {
-	padding: 70px 0 0 180px;
-}
-
-/*блок в контенте с временем выезда и прибытия*/
-.content .search-room {
-	width:380px;
-	background:#fff;
-	color:#1F2041;
-	font-weight:bold;
-	font-style:normal;
-	font-family:Montserrat,sans-serif;
-	padding:40px 30px 30px 30px;
-	border:1px solid rgba(0, 0, 0, 0.12);
-	box-sizing:border-box;
-	box-shadow:0px 0px 25px rgba(0, 0, 0, 0.2);
-	border-radius:4px;
-	display:flex;
-	flex-direction:column;
-}
-
-
-.content .search-room h1 {
-	font-size: 24px;
-	margin:0;
-}
-
-.content .search-room p {
-	margin-bottom: 5.44px;
-}
-
-
-.content_page {
-	width:297px; 
-	height:48px;
-	position:absolute;
-	text-align:right;
-	bottom:-310px;
-	right:175px;
-	line-height:24px;
-	color:rgba(31, 32, 65, 0.75);
-}
-
-.search-room .text-field-calendar .datepicker-here {
-	width: 120px;
-	padding: 12px 12px 8.44px 15px;
-}
-
-.search-room .datepicker {
-	width: 320px;
-}
-
-.search-room .date_departure {
-	width: 150px;
-}
-
-.search-room .date_arrival, .date_departure, .dropDown__name {
+.filter__search-room .filter__date-arrival, .filter__date_departure, .dropDown__name {
 	position:relative;
 	border-radius: 4px;
 	border:1px solid rgba(31, 32, 65, 0.25);
 	cursor: pointer;
 }
 
-.search-room .date_arrival:hover, .date_departure:hover, .dropDown__name:hover {
+.filter__search-room .filter__date-arrival:hover, .filter__date_departure:hover, .dropDown__name:hover {
 	border:1px solid #787878;
 }
 
-.search-room .residence input {
+.filter__search-room .filter__residence input {
 	cursor:pointer;
 	border:none;
 	border-radius:3px;
 }
 
-.search-room .arrow {
+.filter__search-room .arrow {
 	position:absolute;
 	width:15px;
 	height:9px;
@@ -89,11 +73,11 @@
 	background-image:url(../../assets/image/expand_more.svg);
 }
 
-.search-room .block2 {
+.filter__search-room .filter__container-date-departure {
 	margin-left: 18px;
 }
 
-.search-room .block4{
+.filter__search-room .filter__button-pay{
 	width:320px;
 	height:19px;
 	border-radius:22px;
@@ -103,46 +87,79 @@
 	padding: 15px 0 10px 0;
 }
 
-.search-room .residence .block4:hover {
+.filter__search-room .filter__residence .filter__button-pay:hover {
 	background:linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
 	border-radius:40px;
 }
 
-.search-room_link {
+.filter__search-room-link {
 	height: 44px;
 	margin-top:32px;
 }
 
-.search-room_link .block4 p {
+.filter__search-room-link .filter__button-pay p {
 	margin: 0;
 }
 
+.filter__block-date {
+	display:flex;
+	justify-content:space-around;
+	flex-direction: column;
+	text-align:left;
+	flex-wrap:wrap;
+	margin:0;
+	padding:0;
+	color:rgba(31, 32, 65, 0.75);
+}
+
+.filter__block-date p {
+	margin-top: 21.7px;
+	font-size: 12px;
+}
+
+.filter__block-date h3 {
+	margin-top: 21.7px;
+	font-size: 12px;
+}
+
+.filter__block-date-calnedar {
+	width: 320px;
+	display: flex;
+	justify-content: space-between;
+}
+
+
 @media all and (max-width:1200px ) {
-    .content .container-search-room {
+    .filter .filter__container-search-room {
 		padding-left: 0;
 	}
 	
-	.content .search-room {
+	.filter .filter__search-room {
 		padding: 15px;
 		margin: 0 auto;
 	}
 
-    .content .search-room {
+    .filter .filter__search-room {
 		left: 10px;
 		width: 350px;
 	}
 }
 
 @media all and (max-width:425px) {
-    .content .search-room {
+    .filter .filter__search-room {
 		width: auto;
     }
 
-    .search-room .date_departure {
+    .filter__search-room .filter__date_departure {
 		width: 100%;
 	}
 
-    .search-room .block3 .dropDown__name {
+    .filter__search-room .filter__container-dropDown .dropDown__name {
 		width: auto;
+	}
+
+	.filter__block-date-calnedar {
+		width: 100%;
+		flex-direction: column;
 	}
 }

@@ -1,34 +1,33 @@
 include ../dropDown/dropDown.pug
 
-
 mixin filter({ title = 'Найдём номера под ваши пожелания' }={})
-    div.content
-        div.container-search-room
-            div.search-room
+    div.filter
+        div.filter__container-search-room
+            div.filter__search-room
                 h1 #{title}
-                div.residence
-                    div.block_date
-                        div.block_date-calnedar
-                            div.block1
+                div.filter__residence
+                    div.filter__block-date
+                        div.filter__block-date-calnedar
+                            div.filter__container-date-arrival
                                 h3 Прибытие
-                                div.date_arrival 
-                                    div.text-field-calendar
+                                div.filter__date-arrival 
+                                    div.filter__text-field-calendar
                                     input#first_date(type="text"
-                                                                data-range="true" 
-                                                                data-multiple-dates-separator=" - "
-                                                                placeholder="ДД.ММ.ГГГГ"
-                                                                readonly)
-                            div.block2
+                                                    data-range="true" 
+                                                    data-multiple-dates-separator=" - "
+                                                    placeholder="ДД.ММ.ГГГГ"
+                                                    readonly)
+                            div.filter__container-date-departure
                                 h3 Выезд
-                                div.date_departure
-                                    div.text-field-calendar
+                                div.filter__date_departure
+                                    div.filter__text-field-calendar
                                         input#second_date(type="text" 
                                                             data-language="ru"
                                                             placeholder="ДД.ММ.ГГГГ"
                                                             readonly)
-                        div.block3
+                        div.filter__container-dropDown
                             h3 Гости
                             +dropDown
-                        a.search-room_link(href="./searchRoom.html")
-                            div.block4.button
+                        a.filter__search-room-link(href="./searchRoom.html")
+                            div.filter__button-pay.button
                                 p подобрать номер
