@@ -1,6 +1,6 @@
 const clear = document.querySelector('#clear');
-const counterClear = document.querySelector('.counte_guests');
-const gst = document.querySelector('.guests');
+const counterClear = document.querySelector('.dropDown__counte-guests');
+const gst = document.querySelector('.dropDown');
 const dropB = document.querySelector('.dropBlock');
 
 var coun1 = document.querySelector('#counter1');

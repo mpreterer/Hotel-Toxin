@@ -1,4 +1,4 @@
-const guest = document.querySelector('.guests');
+const guest = document.querySelector('.dropDown__name');
 const drop = document.getElementById('apply');
 const dropBlock = document.querySelector('.dropBlock');
 const block4 = document.querySelector('.block4');
