@@ -1,24 +1,24 @@
 mixin dropBlock()
     div.dropBlock.hide
-        div.drop_block_item
-            div.drop_block_row
+        div.dropBlock__items
+            div.dropBlock__row
                 h3#dropItem1.dropItem Взрослые
-                div.db1  
-                    button.circle_drop_item.circle_drop_minus1 -
-                    input#counter1(type="text" value="0" readonly)
-                    button.circle_drop_item.circle_drop_plus1 +
-            div.drop_block_row
+                div.dropBlock__block-input.dropBlock__block-input1  
+                    button.dropBlock__circle.dropBlock__circle-minus1 -
+                    input#counter1.dropBlock__counter(type="text" value="0" readonly)
+                    button.dropBlock__circle.dropBlock__circle-plus1 +
+            div.dropBlock__row
                 h3#dropItem2.dropItem Дети
-                div.db2 
-                    button.circle_drop_item.circle_drop_minus2 -
-                    input#counter2(type="text" value="0" readonly)
-                    button.circle_drop_item.circle_drop_plus2 +
-            div.drop_block_row
+                div.dropBlock__block-input.dropBlock__block-input2 
+                    button.dropBlock__circle.dropBlock__circle-minus2 -
+                    input#counter2.dropBlock__counter(type="text" value="0" readonly)
+                    button.dropBlock__circle.dropBlock__circle-plus2 +
+            div.dropBlock__row
                 h3#dropItem3.dropItem Младенцы
-                div.db3 
-                    button.circle_drop_item.circle_drop_minus3 -
-                    input#counter3(type="text" value="0" readonly)
-                    button.circle_drop_item.circle_drop_plus3 +
-            div.drop_function
-                button#clear.link_drop_function ОЧИСТИТЬ
-                button#apply.link_drop_function ПРИМЕНИТЬ
+                div.dropBlock__block-input.dropBlock__block-input3 
+                    button.dropBlock__circle.dropBlock__circle-minus3 -
+                    input#counter3.dropBlock__counter(type="text" value="0" readonly)
+                    button.dropBlock__circle.dropBlock__circle-plus3 +
+            div.dropBlock__function
+                button#clear.dropBlock__function-link ОЧИСТИТЬ
+                button#apply.dropBlock__function-link ПРИМЕНИТЬ
