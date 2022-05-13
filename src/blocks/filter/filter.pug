@@ -1,4 +1,4 @@
-include ../dropBlock/dropBlock.pug
+include ../dropDown/dropDown.pug
 
 
 mixin filter({ title = 'Найдём номера под ваши пожелания' }={})
@@ -28,10 +28,7 @@ mixin filter({ title = 'Найдём номера под ваши пожелан
                                                             readonly)
                         div.block3
                             h3 Гости
-                            div.guests
-                                input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly value="")
-                                div.arrow
-                            +dropBlock
+                            +dropDown
                         a.search-room_link(href="./searchRoom.html")
                             div.block4.button
                                 p подобрать номер
