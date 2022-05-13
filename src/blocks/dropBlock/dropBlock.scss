@@ -1,8 +1,8 @@
 .dropBlock {
 	height:159px; 
-	width: 100%;
+	width: 317px;
     position:absolute;
-	z-index:0;
+	z-index:99;
 
     &__items {
         border:1px solid rgba(31, 32, 65, 0.5);
@@ -110,19 +110,8 @@
 	padding: 12px 32px 8.44px 15px;
 }
 
-.circle_drop_minus {
-	color:rgba(31, 32, 65, 0.25);
-	border-color:rgba(31, 32, 65, 0.25);
-}
-
 .circle_opacity {
 	opacity:1;
-}
-
-.circle_drop_plus {
-	margin-right:0;
-	margin-left:4px;
-	border-color:#9393A3;
 }
 
 #counter {
