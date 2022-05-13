@@ -2,6 +2,7 @@ extends ../../../template-head/main_index.pug
 include ../../../blocks/header/header.pug
 include ../../../blocks/footer/footer.pug
 include ../../../blocks/calendar/calendar.pug
+include ../../../blocks/dropBlock/dropBlock.pug
 
 block variables
     - pageTitle = '«Toxin» | Лучшие номера для вас'
@@ -23,29 +24,7 @@ block content
                 span.h_span_block_hotel Гости
                 div.guests
                     input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
-            div.dropBlock.hide
-                div.drop_block_item
-                    div.drop_block_row
-                        h3#dropItem1.dropItem Взрослые
-                        div.db1
-                            button.circle_drop_item.circle_drop_minus1 -
-                            input#counter1(type="text" value="0")
-                            button.circle_drop_item.circle_drop_plus1 +
-                    div.drop_block_row
-                        h3#dropItem2.dropItem Дети
-                        div.db2
-                            button.circle_drop_item.circle_drop_minus2 -
-                            input#counter2(value="0")
-                            button.circle_drop_item.circle_drop_plus2 +
-                    div.drop_block_row
-                        h3#dropItem3.dropItem Младенцы
-                        div.db3
-                            button.circle_drop_item.circle_drop_minus3 -
-                            input#counter3(value="0")
-                            button.circle_drop_item.circle_drop_plus3 +
-                    div.drop_function
-                        button#clear.link_drop_function ОЧИСТИТЬ
-                        button#apply.link_drop_function ПРИМЕНИТЬ
+            +dropBlock
             div.price_hotel
                 div.middle
                     div.container_price

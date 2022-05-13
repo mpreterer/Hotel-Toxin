@@ -8,7 +8,7 @@ import '../../../js/datepicker.min.js'
 import '../../../js/like.js'
 import '../../../js/close.js'
 import '../../../js/clear.js'
-import '../../../js/click.js'
+import '../../../blocks/dropBlock/dropBlock.js'
 import '../../../js/datepicker.min.js'
 import '../../../js/Chart.min.js'
 

@@ -7,6 +7,6 @@ import '../../website-pages/room-details/roomDetails.scss'
 import '../../../assets/scss/datepicker.min.scss'
 import '../../../assets/scss/range.scss'
 
-import '../../../js/click.js'
+import '../../../blocks/dropBlock/dropBlock.js'
 import '../../../js/close.js'
 import '../../../js/datepicker.min.js' 

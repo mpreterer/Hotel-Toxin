@@ -561,160 +561,6 @@ input.datepicker {
 	font-size: 12px;
 }
 
-.drop_block_row h3 {
-    padding: 15px 0 0 15px;
-	margin: 0
-}
-
-
-.search-room .residence input {
-	cursor:pointer;
-	border:none;
-	border-radius:3px;
-}
-
-.search-room .residence .guests p{
-	padding:10px;
-	color: rgba(31, 32, 65, 0.75);
-}
-
-/*выпадающее меню счетчик*/
-.dropBlock {
-	height:159px; 
-	width: 100%;
-}
-
-.dropBlock .drop_block_item {
-	border:1px solid rgba(31, 32, 65, 0.5);
-	box-sizing:border-box;
-	box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
-	border-radius:4px;
-	background:white;
-	border-top:none;
-	display:flex;
-	flex-direction:column;
-	flex-wrap:wrap;
-	height:159px;
-	cursor:default;
-	line-height: 15px;
-}
-
-.dropBlock .drop_block_item span {
-	padding:15px 0 0 15px;
-	font-weight:bold;
-	font-size:13px;
-	user-select:none;
-}
-
-
-/*Выравнивание кругов счетчика и названий*/
-
-.dropBlock .drop_block_row {
-	display:flex;
-	justify-content: space-between;
-	flex-wrap:wrap;
-	font-size: 12px;
-	width: 100%;
-	height: 38px;
-	text-transform: uppercase;
-}
-
-
-/*Выравнивание кругов*/
-.dropBlock .circle_drop_item {
-	border:1px solid;
-	box-sizing:border-box;
-	border-radius:22px;
-	width:30px;
-	height:30px;
-	margin:7px 10px 0 0px;
-	font-size:16px;
-	text-align:center;
-	cursor:pointer;
-	background:white;
-	transition:0.1s;
-}
-
-.dropBlock .circle_drop_minus {
-	color:rgba(31, 32, 65, 0.25);
-	border-color:rgba(31, 32, 65, 0.25);
-}
-
-.circle_opacity {
-	opacity:1;
-}
-
-.dropBlock .circle_drop_plus {
-	margin-right:0;
-	margin-left:4px;
-	border-color:#9393A3;
-}
-
-/*анимация кнопки по нажатию плюса и минуса*/
-.dropBlock .circle_drop_item:active{
-	color:white;
-	border-color:white;
-	background:#C8AEFF;
-	transition:0.1s;
-	font-weight:bold;
-}
-
-.link_drop_function {
-	border:none;
-	background-color:#fff;
-	color:#BC9CFF;
-	font-weight:bold;
-	cursor:pointer;
-}
-
-.dropBlock .circle_drop_item {
-	opacity:0.5;
-}
-
-.drop_block_item input {
-	border: none;
-}
-
-#counter {
-	padding-top:12px;
-	margin:0;
-}
-
-/*функции dropItem*/
-.dropBlock .drop_function {
-	display:flex;
-	justify-content:space-between;
-	padding:10px 7px 13px 10px;
-	font-weight:bold;
-	color:#1F2041;
-	width: 95%;
-}
-
-.dropBlock .drop_function button {
-	font-size: 12px;
-}
-
-.dropBlock .drop_block_item .drop_block_row input {
-	margin:0;
-	padding:0;
-	margin-top:15px;
-	width:15px;
-	height:12px;
-}
-
-#clear {
-	display:block;
-}
-
-.guests {
-	cursor:pointer;
-}
-
-.search-room .guests .dropBlock {
-	position:absolute;
-	z-index:0;
-}
-
 .fa-twitter {
 	width: 24px;
 	height: 24px;
@@ -755,16 +601,17 @@ input.counte_guests {
 	position:relative;
 	border-radius: 4px;
 	border:1px solid rgba(31, 32, 65, 0.25);
+	cursor: pointer;
 }
 
 .search-room .date_arrival:hover, .date_departure:hover, .guests:hover {
 	border:1px solid #787878;
 }
 
-.search-room .block3 .guests {
-	height: 23px; 
-	width: 268px; 
-	padding: 12px 32px 8.44px 15px;
+.search-room .residence input {
+	cursor:pointer;
+	border:none;
+	border-radius:3px;
 }
 
 .search-room .arrow {

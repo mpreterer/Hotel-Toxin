@@ -3,7 +3,8 @@ import '../assets/scss/datepicker.min.scss'
 
 import '../js/jquery-3.6.0.min.js'
 import '../js/datepicker.min.js' 
-import '../js/click.js'
+import '../blocks/dropBlock/dropBlock.js'
+import '../blocks/dropBlock/dropBlock.scss'
 import '../js/clear.js'
 import '../js/close.js'
 
