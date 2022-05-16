@@ -110,9 +110,12 @@ block content
                             div.result
                                 h2 Итого
                                 h2 38 081₽
-                            a(href="login.html")
-                                div.to_book
-                                    p забронировать 
+                            div.to_book
+                                +button({
+                                    text: 'Забронировать',
+                                    href: 'Registration.html',
+                                    type: 'long'
+                                })
                 div.order_rooms
                     div.container
                         div.order

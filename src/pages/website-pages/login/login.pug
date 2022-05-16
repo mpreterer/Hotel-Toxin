@@ -1,6 +1,7 @@
 extends ../../../template-head/main_index.pug
 include ../../../blocks/header/header.pug
 include ../../../blocks/footer/footer.pug
+include ../../../blocks/button/button.pug
 
 
 block variables
@@ -16,13 +17,19 @@ block content
                     h1(style="margin:0; margin-bottom:20px;") Войти
                     input.input_favorite(placeholder="Email" autocomplete="off" required="")
                     input.input_favorite(placeholder="Пароль" autocomplete="off" type="password" required="")
-                    div.btn_login.button
-                        p войти
+                    div.btn_login
+                        +button({
+                            text: 'Войти',
+                            type: 'long',
+                            href: 'searchRoom.html'
+                        })
                     div.if_have_account
                             div.question
                                 p Нет аккаунта на Toxin?
-                            a(href="Registration.html")
-                                div.login.button
-                                    p создать
+                            +button({
+                                text: 'Содать',
+                                type: 'border',
+                                href: 'Registration.html'
+                            })
 block footer
     +footer

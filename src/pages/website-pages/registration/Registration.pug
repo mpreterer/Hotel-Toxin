@@ -1,6 +1,7 @@
 extends ../../../template-head/main_index.pug
 include ../../../blocks/header/header.pug
 include ../../../blocks/footer/footer.pug
+include ../../../blocks/button/button.pug
 
 block variables
     - var pageTitle = '«Toxin» | Регистрация'
@@ -37,14 +38,20 @@ block content
                         div.special_offer
                             input#block_checkbox_3.offer_checkbox(type="checkbox" name="block_checkbox")
                             label(for="block_checkbox_3") Получать спецпредложения
-                        div.buy.button
-                            p перейти к оплате
+                        div.buy-button
+                            +button({
+                                text:'перейти к оплате',
+                                href: 'searchRoom.html',
+                                type: 'long'
+                            })
                         div.if_have_account
                             div.question
                                 p Уже есть аккаунт на Toxin
-                            a(href="login.html")
-                                div.login.button
-                                    p войти
+                            +button({
+                                text: 'Войти',
+                                href: 'login.html',
+                                type: 'border',
+                            })
 block footer
     +footer
     

@@ -7,6 +7,7 @@ import '../../../assets/scss/datepicker.min.scss';
 import '../../../assets/scss/simplePagination.css';
 import '../../../blocks/dropDown/dropDown.scss';
 import '../../../blocks/filter/filter.scss';
+import '../../../blocks/button/button.scss';
 
 
 import '../../../js/jquery-3.6.0.min.js';

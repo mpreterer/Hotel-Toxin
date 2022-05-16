@@ -3,7 +3,9 @@ import '../../../assets/scss/datepicker.min.scss'
 import '../../../assets/scss/Chart.min.css'
 import '../../../blocks/filter/filter.scss'
 import '../../../blocks/dropDown/dropDown.scss'
+import '../../../blocks/button/button.scss';
 import '../../style.scss'
+
 
 import '../../../js/jquery-3.6.0.min.js'
 import '../../../js/datepicker.min.js' 

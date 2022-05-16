@@ -36,9 +36,9 @@ button {
 	color: rgba(31, 32, 65, 0.25);
 	box-sizing:border-box;
 	border-radius:4px;
-	margin-bottom:10px;
 	padding-left:15px;
 	cursor:pointer;
+	margin-bottom: 10px;
 }
 
 .input_favorite:hover {
@@ -124,6 +124,17 @@ button {
 	width: 12px;
 	height: 8px;
 	background-image: url(../assets/image/expand_more.svg);
+}
+
+.dropdown-arrow {
+	position:absolute;
+	width:15px;
+	height:9px;
+	background-position:4px 4px 0 0;
+	background-repeat:no-repeat;
+	right:15px;
+	top:17px;
+	background-image:url(../assets/image/expand_more.svg);
 }
 
 #arrow_li_left {
@@ -230,9 +241,7 @@ button {
 	background-color: #fff;
 }
 
-.button:hover {
-	opacity: 0.8;
-}
+
 
 .list ul li ul li {
 	padding: 5px;
@@ -283,12 +292,7 @@ button {
 	text-align:center;
 }
 
-.logup .login .button a {
-	color:#BC9CFF;
-	padding: 7px 20px;
-	border:3px solid #BC9CFF;
-	border-radius:22px;
-}
+
 
 .logup .login:hover {
 	opacity: 0.5;
@@ -300,7 +304,6 @@ button {
 }
 
 .logup .registration a {
-	padding: 7px 20px;
 	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 	color:#fff;
 	border-radius:22px;
@@ -477,28 +480,6 @@ input.datepicker {
 	font-weight:bold;
 }
 
-
-.block_date {
-	display:flex;
-	justify-content:space-around;
-	flex-direction: column;
-	text-align:left;
-	flex-wrap:wrap;
-	margin:0;
-	padding:0;
-	color:rgba(31, 32, 65, 0.75);
-}
-
-.block_date p {
-	margin-top: 21.7px;
-	font-size: 12px;
-}
-
-.block_date h3 {
-	margin-top: 21.7px;
-	font-size: 12px;
-}
-
 .fa-twitter {
 	width: 24px;
 	height: 24px;
@@ -533,14 +514,6 @@ input.dropDown__counte-guests {
 
 .date_arrival p, .date_departure p, .dropDown__name p {
 	margin:0;
-}
-
-
-
-.block_date-calnedar {
-	width: 320px;
-	display: flex;
-	justify-content: space-between;
 }
 
 #second_date,#first_date {
@@ -814,10 +787,7 @@ input.dropDown__counte-guests {
 		margin-bottom: 50px;
 	}
 
-	.block_date-calnedar {
-		width: 100%;
-		flex-direction: column;
-	}
+	
 
 	.date_arrival {
 		width: 100%;

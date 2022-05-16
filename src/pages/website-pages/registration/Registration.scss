@@ -29,9 +29,13 @@ p {
 
 /*Отцентровка панели регистрации*/
 .registration_user .container_user {
-	height:576px;
 	width:320px;
 	padding:40px 30px 30px 30px;
+}
+
+
+.buy-button {
+	margin-top: 24px;
 }
 
 /*Заголовок*/
@@ -170,36 +174,6 @@ p {
 }
 
 /*Перейти к оплате (кнопка входа в login.html)*/
-.buy, .btn_login {
-	width:320px;
-	height:44px;
-	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-	border-radius:22px;
-	margin-top:20px;
-	text-align:center;
-	text-transform:uppercase;
-	color:#fff;
-	font-weight:bold;
-	cursor:pointer;
-}
-
-.buy p,.btn_login p {
-	margin:0;
-	padding-top:12px;
-	position:relative;
-}
-
-.buy p:after,.btn_login p:after {
-	content:'';
-	width:18px;
-	height:18px;
-	background:url(../../../assets/image/arrow_forward.svg);
-	display:inline-block;
-	position:absolute;
-	top:12px;
-	right:15px;
-}
-
 
 /*Если есть аакаунт*/
 .if_have_account {
@@ -222,10 +196,13 @@ p {
 
 .if_have_account .question {
 	width:186px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .if_have_account .question p,.if_have_account .login p{
-	margin:12px 0 0 0;
+	margin: 0;
 }
 
 /*Адаптивная верстка (дял смартфона)*/

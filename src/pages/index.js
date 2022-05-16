@@ -1,5 +1,6 @@
 import './style.scss'
 import '../blocks/filter/filter.scss'
+import '../blocks/button/button.scss'
 import '../assets/scss/datepicker.min.scss'
 
 import '../js/jquery-3.6.0.min.js'

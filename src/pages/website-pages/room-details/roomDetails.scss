@@ -409,6 +409,7 @@ span.span_heart {
 /*Забронировать*/
 .booking {
 	width:380px;
+	height: 100%;
 	border:1px solid rgba(0, 0, 0, 0.12);
 	box-shadow:0px 0px 25px rgba(0, 0, 0, 0.2);
 	border-radius:4px;
@@ -591,29 +592,8 @@ span.span_heart {
 	border-bottom:1px dashed rgba(31, 32, 65, 0.25);
 }
 
-/*Кнопка забронировать*/
 .to_book {
-	width:320px;
-	height:44px;
-	background:linear-gradient(180deg,#BC9CFF 0%, #8BA4F9 100%);
-	border-radius:22px;
-	margin-top:25px;
-	text-transform:uppercase;
-	text-align:center;
-	color:#fff;
-	cursor:pointer;
-}
-
-.to_book:hover {
-	background:linear-gradient(45deg,#BC9CFF 0%, #8BA4F9 100%);
-}
-
-.to_book p {
-	padding-top:14px;
-	font-weight:bold;
-	position:relative;
-	user-select:none;
-
+	margin-top: 20px;
 }
 
 .guests {

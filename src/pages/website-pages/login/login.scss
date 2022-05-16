@@ -2,6 +2,7 @@
 p {
 	font-size: 12px;
 }
+
 .block_login {
 	height:684px;
 	background-image:url(../../../assets/image/registration_bg.jpg);
@@ -32,18 +33,13 @@ p {
 /*Инпуты*/
 
 
-/*Внопка входа*/
-.container_user .btn_login {
-	margin-top:10px;
-}
-
 /*Если нет аккаунта*/
 .container_user .if_have_account {
 	margin-top:25px;
 }
 
-.container_user .btn_login:focus {
-	color:red;
+.btn_login {
+	margin-top: 20px;
 }
 
 @media screen and (min-width:320px) and (max-width:480px) {

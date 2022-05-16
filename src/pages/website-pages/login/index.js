@@ -1,3 +1,5 @@
 import './login.scss'
 import '../registration/Registration.scss'
+import '../../../blocks/button/button.pug'
+import '../../../blocks/button/button.scss'
 import '../../style.scss'

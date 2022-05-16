@@ -1,33 +1,34 @@
 include ../dropDown/dropDown.pug
+include ../button/button.pug
 
-mixin filter({ title = 'Найдём номера под ваши пожелания' }={})
+mixin filter(options={})
+    - const {title,buttonOptions} = options;
+
     div.filter
         div.filter__container-search-room
             div.filter__search-room
-                h1 #{title}
+                h1 !{title}
                 div.filter__residence
                     div.filter__block-date
                         div.filter__block-date-calnedar
                             div.filter__container-date-arrival
-                                h3 Прибытие
+                                h3.filter__search-room-title Прибытие
                                 div.filter__date-arrival 
-                                    div.filter__text-field-calendar
+                                    div.filter__text-field-calendar.dropdown-arrow
                                     input#first_date(type="text"
-                                                    data-range="true" 
-                                                    data-multiple-dates-separator=" - "
-                                                    placeholder="ДД.ММ.ГГГГ"
-                                                    readonly)
+                                                        data-range="true" 
+                                                        data-multiple-dates-separator=" - "
+                                                        placeholder="ДД.ММ.ГГГГ"
+                                                        readonly)
                             div.filter__container-date-departure
                                 h3 Выезд
                                 div.filter__date_departure
-                                    div.filter__text-field-calendar
-                                        input#second_date(type="text" 
-                                                            data-language="ru"
-                                                            placeholder="ДД.ММ.ГГГГ"
-                                                            readonly)
+                                    div.filter__text-field-calendar.dropdown-arrow
+                                    input#second_date(type="text" 
+                                                        data-language="ru"
+                                                        placeholder="ДД.ММ.ГГГГ"
+                                                        readonly)
                         div.filter__container-dropDown
                             h3 Гости
                             +dropDown
-                        a.filter__search-room-link(href="./searchRoom.html")
-                            div.filter__button-pay.button
-                                p подобрать номер
+                        +button(buttonOptions)

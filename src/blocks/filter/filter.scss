@@ -37,6 +37,12 @@
 			padding: 12px 12px 8.44px 15px;
 		}
 
+		
+
+	}
+
+	&__search-room-title {
+		text-transform: uppercase;
 	}
 
 	&__date_departure {
@@ -44,6 +50,8 @@
 	}
 
 }
+
+
 
 .filter__search-room .filter__date-arrival, .filter__date_departure, .dropDown__name {
 	position:relative;
@@ -62,19 +70,9 @@
 	border-radius:3px;
 }
 
-.filter__search-room .arrow {
-	position:absolute;
-	width:15px;
-	height:9px;
-	background-position:4px 4px 0 0;
-	background-repeat:no-repeat;
-	right:15px;
-	top:17px;
-	background-image:url(../../assets/image/expand_more.svg);
-}
-
 .filter__search-room .filter__container-date-departure {
 	margin-left: 18px;
+	position: relative;
 }
 
 .filter__search-room .filter__button-pay{
@@ -128,6 +126,9 @@
 	justify-content: space-between;
 }
 
+.filter__container-dropDown {
+	margin-bottom: 31px;
+}
 
 @media all and (max-width:1200px ) {
     .filter .filter__container-search-room {

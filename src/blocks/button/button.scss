@@ -1,0 +1,50 @@
+.button {
+	text-transform: uppercase;
+    position: relative;
+    border-radius:22px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 14px 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_type_long {
+        padding: 14px 44px;
+        color: #fff;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        text-align: center;
+    }
+
+    &_type_border {
+        color:#BC9CFF;
+        border:3px solid #BC9CFF;
+        padding: 12px 20px 12px 20px;
+    }
+
+    &_type_backgroud {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+
+    &_size_small {
+        padding: 7px 20px;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+}
+
+.button-arrow {
+    width: 44px;
+    height: 44px;
+    background-image: url(../../assets/image/arrow_forward.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+}
