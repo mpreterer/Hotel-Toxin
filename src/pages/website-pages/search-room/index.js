@@ -16,7 +16,6 @@ import '../../../blocks/dropDown/dropDown.js';
 import '../../../js/value.js';
 import '../../../js/range.js';
 import '../../../js/close.js';
-import '../../../js/clear.js';
 import '../../../js/clear_conv.js';
 import '../../../js/close__conveniences1.js';
 import '../../../js/conveniences.js';
