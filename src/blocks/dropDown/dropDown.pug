@@ -7,21 +7,21 @@ mixin dropDown({itemNameTop='Взрослые', itemNameMiddle='Дети', itemN
             div.dropBlock__items
                 div.dropBlock__row
                     h3#dropItem1.dropItem #{itemNameTop}
-                    div.dropBlock__block-input.dropBlock__block-input1(count="")  
+                    div.dropBlock__block-input.dropBlock__block-input1(count=0)  
                         button.dropBlock__circle.dropBlock__circle-minus1 -
-                        input#counter1.dropBlock__counter(type="text" value="0" readonly)
+                        input#counter1.dropBlock__counter(type="text" value=0 readonly)
                         button.dropBlock__circle.dropBlock__circle-plus1 +
                 div.dropBlock__row
                     h3#dropItem2.dropItem #{itemNameMiddle}
-                    div.dropBlock__block-input.dropBlock__block-input2(count="")
+                    div.dropBlock__block-input.dropBlock__block-input2(count=0)
                         button.dropBlock__circle.dropBlock__circle-minus2 -
-                        input#counter2.dropBlock__counter(type="text" value="0" readonly)
+                        input#counter2.dropBlock__counter(type="text" value=0 readonly)
                         button.dropBlock__circle.dropBlock__circle-plus2 +
                 div.dropBlock__row
                     h3#dropItem3.dropItem #{itemNameBottom}
-                    div.dropBlock__block-input.dropBlock__block-input3(count="") 
+                    div.dropBlock__block-input.dropBlock__block-input3(count=0) 
                         button.dropBlock__circle.dropBlock__circle-minus3 -
-                        input#counter3.dropBlock__counter(type="text" value="0" readonly)
+                        input#counter3.dropBlock__counter(type="text" value=0 readonly)
                         button.dropBlock__circle.dropBlock__circle-plus3 +
                 div.dropBlock__function
                     button#clear.dropBlock__function-link ОЧИСТИТЬ
