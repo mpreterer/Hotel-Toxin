@@ -1,29 +1,11 @@
-const guest = document.querySelector('.dropDown__name');
+const DROP_DOWN = document.querySelector('.dropDown__name');
 const drop = document.getElementById('apply');
 const dropBlock = document.querySelector('.dropBlock');
-const block4 = document.querySelector('.block4');
 
-
-drop.onclick = () => {
-	if(dropBlock.classList.contains('hide') ) {
-		dropBlock.classList.remove('hide');
-		block4.classList.add('hide');
-	}
-	else {
-		dropBlock.classList.add('hide');
-		block4.classList.remove('hide');
-	}
-}
-
-guest.onclick = () => {
-	if(dropBlock.classList.contains('hide') ) {
-		dropBlock.classList.toggle('hide');
-		block4.classList.add('hide');
-	}
-	else {
-		dropBlock.classList.toggle('hide');
-		block4.classList.remove('hide');
-	}
-}
-
-
+$(document).ready(function() {  
+	$('.dropDown').click(function(event){
+		if (event.target.className == DROP_DOWN.className) {
+			event.currentTarget.querySelector('.dropBlock').classList.toggle('hide');
+		}
+	})
+})
