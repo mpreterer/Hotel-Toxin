@@ -22,7 +22,7 @@ block content
                                       readonly)
             div.guests-container
                 span.h_span_block_hotel Гости
-                +dropDown
+                +dropDown()
             div.price_hotel
                 div.middle
                     div.container_price
@@ -65,31 +65,8 @@ block content
                     b(style="color:#575870; font-size:14px;") Помощник для инвалидов
                     p На 1 этаже вас встретит специалист  и  проводит до номера.
             span.h_span_block_hotel удобства номера
-            div.conveniences.conveniences1
-                input#block_6.counte_conveniences(type="text" name="block_6" placeholder="2 спальни, 2 кровати" autocomplete="off" readonly="")
-            div.dropBlockCon.dropBlock.hide
-                div.drop_block_item
-                    div.drop_block_row
-                        h3#dropItem.dropItem.dropItemCon1 спальни
-                        div.db1
-                            button.circle_drop_item.circle_con_minus1(data-direction="minus") -
-                            input#counterCon1(type="text" value="0")
-                            button.circle_drop_item.circle_con_plus1(data-direction="plus") +
-                    div.drop_block_row
-                        h3#dropItem2.dropItem.dropItemCon2 кровати
-                        div.db2
-                            button.circle_drop_item.circle_con_minus2(data-direction="minus") -
-                            input#counterCon2(value="0")
-                            button.circle_drop_item.circle_con_plus2(data-direction="plus") +
-                    div.drop_block_row
-                        h3#dropItem3.dropItem.dropItemCon3 ванные комнаты
-                        div.db3
-                            button.circle_drop_item.circle_con_minus3(data-direction="minus") -
-                            input#counterCon3(value="0")
-                            button.circle_drop_item.circle_con_plus3(data-direction="plus") +
-                    div.drop_function
-                        button#clear_conv.link_drop_function ОЧИСТИТЬ
-                        button#apply_conv.link_drop_function ПРИМЕНИТЬ
+            div.conveniences1
+                +dropDown()
             div.convenience
                 span дополнительные удобства
                 div.not_active.arrow_convenience
