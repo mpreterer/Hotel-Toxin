@@ -6,14 +6,13 @@
     &__name {
         padding: 12px 32px 14px 15px;
     }
-    
-}
 
-.dropBlock {
-	height:159px; 
-	width: 100%;
-    position:absolute;
-	z-index:99;
+    &__drop-block {
+        height:159px; 
+        width: 100%;
+        position:absolute;
+        z-index:99;
+    }
 
     &__items {
         border:1px solid rgba(31, 32, 65, 0.5);
