@@ -1,18 +1,18 @@
-mixin dropDown({showFunction, list = []}={})
-    div.dropDown
-        div.dropDown__name
-            input.dropDown__counte-guests(placeholder="Сколько Гостей" autocomplete="off" readonly value="")
-            div.dropDown__arrow.dropdown-arrow
-        div.dropDown__drop-block.hide
-            div.dropDown__items
+mixin dropDown({placeholder = 'Сколько Гостей',isOpen, showFunction, list = []}={})
+    .dropDown.js-dropDown
+        .dropDown__name
+            input.dropDown__counte-guests.js-dropDown__counte-guests(placeholder=placeholder readonly value="")
+            .dropDown__arrow.dropdown-arrow
+        .dropDown__drop-block(data-is-open= isOpen)
+            .dropDown__items
                 each element in list
-                    div.dropDown__row
-                        h3#dropItem1.dropItem #{element.name}
-                        div.dropDown__block-input.dropDown__block-input
-                            button.dropDown__circle.dropDown__circle-minus -
-                            input#counter.dropDown__counter(value="0" readonly)
-                            button.dropDown__circle.dropDown__circle-plus +
+                    .dropDown__row.js-dropDown__row(data-item-name=element.name)
+                        h3.dropDown__dropItem(data-type="name-counter") #{element.name}
+                        .dropDown__block-input.dropDown__block-input
+                            button.dropDown__circle.dropDown__circle-minus(data-button="data-button-minus") -
+                            input.dropDown__counter(data-type="counter-value" value= element.value || 0 readonly) 
+                            button.dropDown__circle.dropDown__circle-plus(data-button="data-button-plus") +
                     if showFunction
-                        div.dropDown__function
-                            button#clear.dropDown__function-link ОЧИСТИТЬ
-                            button#apply.dropDown__function-link ПРИМЕНИТЬ
+                        .dropDown__function
+                            button.dropDown__function-clear(data-button="clear") Очистить
+                            button.dropDown__function-apply(data-button="apply") Применить

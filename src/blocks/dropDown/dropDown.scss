@@ -106,6 +106,15 @@
             font-size: 12px;
         }
     }
+
+    &__counter {
+        padding-top:12px;
+	    margin:0;
+    }
+
+    &__dropDown__function-clear {
+        display: block;
+    }
     
 }
 
@@ -122,13 +131,4 @@
 
 .circle_opacity {
 	opacity:1;
-}
-
-#counter {
-	padding-top:12px;
-	margin:0;
-}
-
-#clear {
-	display:block;
 }
