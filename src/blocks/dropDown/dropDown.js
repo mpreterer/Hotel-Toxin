@@ -34,9 +34,11 @@ class dropDown {
             if (this.counterPanel.classList.contains('js-drop-close')) {
                 this.counterPanel.classList.toggle('js-drop-close');
                 this.counterPanel.classList.add('js-drop-open');
+                this.open.classList.toggle('dropDown__name_active');
             } else {
                 this.counterPanel.classList.toggle('js-drop-open');
                 this.counterPanel.classList.add('js-drop-close');
+                this.open.classList.toggle('dropDown__name_active');
             }
         })
 
@@ -52,6 +54,9 @@ class dropDown {
             if (!this.container.contains(event.target)) {
                 this.counterPanel.classList.remove('js-drop-open');
                 this.counterPanel.classList.add('js-drop-close');
+                if (this.open.classList.contains('dropDown__name_active')) {
+                    this.open.classList.remove('dropDown__name_active');
+                }
             }
         })
     }

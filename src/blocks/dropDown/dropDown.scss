@@ -5,27 +5,39 @@
 
     &__name {
         padding: 12px 32px 14px 15px;
+        border: 1px solid #1F204140;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &_active {
+            border:1px solid #1F204180;
+            border-radius: 4px 4px 0 0;
+        }
+
+        &:hover {
+            border:1px solid #1F204180;
+        }
     }
 
     &__drop-block {
-        height:159px; 
         width: 100%;
         position:absolute;
         z-index:99;
     }
 
     &__items {
-        border:1px solid rgba(31, 32, 65, 0.5);
-        box-sizing:border-box;
-        box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
-        border-radius:4px;
-        background:white;
-        border-top:none;
         display:flex;
         flex-direction:column;
         flex-wrap:wrap;
+        border:1px solid rgba(31, 32, 65, 0.5);
+        box-sizing:border-box;
+        box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
+        border-radius:0 0 4px 4px;
+        background:white;
+        border-top:none;
         cursor:default;
         line-height: 15px;
+        padding: 0 7px 7px 15px;
 
         & span {
             padding:15px 0 0 15px;
@@ -36,29 +48,28 @@
 
         & input {
             border: none;
+            text-align: center;
         }
+    }
+
+    &__block-input {
+        width: 92px;
+        display: flex;
+        justify-content: space-between;
     }
 
     &__row {
         display:flex;
         justify-content: space-between;
+        align-items: center;
         flex-wrap:wrap;
         font-size: 12px;
         width: 100%;
-        height: 38px;
         text-transform: uppercase;
+        margin-top: 7px;
 
         & input {
-            margin:0;
-            padding:0;
-            margin-top:15px;
-            width:15px;
-            height:12px;
-        }
-
-        & h3 {
-            padding: 15px 0 0 15px;
-            margin: 0
+            width:30px;
         }
     }
 
@@ -68,7 +79,6 @@
         border-radius:22px;
         width:30px;
         height:30px;
-        margin:7px 10px 0 0px;
         font-size:16px;
         text-align:center;
         cursor:pointer;
@@ -78,6 +88,8 @@
     }
 
     &__circle-plus {
+        border-color: #1F204180;
+
         &:active{
             color:white;
             border-color:white;
@@ -88,6 +100,8 @@
     }
 
     &__circle-minus {
+        border-color: #1F204180;
+
         &:active{
             color:white;
             border-color:white;
@@ -110,20 +124,16 @@
     &__function {
         display:flex;
         justify-content:space-between;
-        padding:10px 7px 13px 10px;
+        padding:19px 7px 7px 0;
         font-weight:bold;
         color:#1F2041;
-        width: 95%;
+        width: 100%
 
-    }
-
-    &__counter {
-        padding-top:12px;
-	    margin:0;
     }
 
     &__counte-guests {
         width: 100%;
+        color:#1F2041BF;
     }
 
     &__function-clear {

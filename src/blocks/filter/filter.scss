@@ -53,15 +53,23 @@
 
 
 
-.filter__search-room .filter__date-arrival, .filter__date_departure, .dropDown__name {
+.filter__search-room .filter__date-arrival, .filter__date_departure {
 	position:relative;
 	border-radius: 4px;
 	border:1px solid rgba(31, 32, 65, 0.25);
 	cursor: pointer;
 }
 
-.filter__search-room .filter__date-arrival:hover, .filter__date_departure:hover, .dropDown__name:hover {
+.filter__search-room .filter__date-arrival:hover, .filter__date_departure:hover {
 	border:1px solid #787878;
+}
+
+.filter__residence {
+	margin-top: 21px;
+}
+
+.filter__search-room-title {
+	margin-bottom: 5px;
 }
 
 .filter__search-room .filter__residence input {
@@ -116,8 +124,8 @@
 }
 
 .filter__block-date h3 {
-	margin-top: 21.7px;
 	font-size: 12px;
+	text-transform: uppercase;
 }
 
 .filter__block-date-calnedar {
@@ -127,7 +135,7 @@
 }
 
 .filter__container-dropDown {
-	margin-bottom: 31px;
+	margin: 21px 0 31px 0;
 }
 
 @media all and (max-width:1200px ) {

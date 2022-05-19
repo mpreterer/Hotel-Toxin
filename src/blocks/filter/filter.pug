@@ -21,7 +21,7 @@ mixin filter(options={})
                                                         placeholder="ДД.ММ.ГГГГ"
                                                         readonly)
                             div.filter__container-date-departure
-                                h3 Выезд
+                                h3.filter__search-room-title Выезд
                                 div.filter__date_departure
                                     div.filter__text-field-calendar.dropdown-arrow
                                     input#second_date(type="text" 
@@ -29,6 +29,6 @@ mixin filter(options={})
                                                         placeholder="ДД.ММ.ГГГГ"
                                                         readonly)
                         div.filter__container-dropDown
-                            h3 Гости
+                            h3.filter__search-room-title Гости
                             +dropDown(dropDownOptions)
                         +button(buttonOptions)
