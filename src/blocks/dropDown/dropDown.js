@@ -145,10 +145,10 @@ class dropDown {
 
         if (checkCount > 0) {
             this.btnClear.classList.remove('js-clear-none');
-            this.btnClear.removeEventListener('click', this._clear_all_counter.bind(this))
+            this.btnClear.addEventListener('click', this._clear_all_counter.bind(this))
         } else {
             this.btnClear.classList.add('js-clear-none');
-            this.btnClear.addEventListener('click', this._clear_all_counter.bind(this))
+            this.btnClear.removeEventListener('click', this._clear_all_counter.bind(this))
         }
     }
 
