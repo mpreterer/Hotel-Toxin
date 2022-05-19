@@ -7,10 +7,7 @@ import '../../../assets/scss/range.scss'
 
 
 import '../../../blocks/dropDown/dropDown.js'
-import '../../../js/close.js'
+
 import '../../../js/like.js'
 import '../../../js/range.js'
 import '../../../js/value.js'
-import '../../../js/close__conveniences1.js'
-import '../../../js/conveniences.js'
-import '../../../js/close_conveniences.js'

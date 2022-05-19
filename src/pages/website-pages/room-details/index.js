@@ -6,11 +6,10 @@ import '../../../blocks/dropDown/dropDown.scss'
 import '../../../blocks/button/button.scss';
 import '../../style.scss'
 
-
 import '../../../js/jquery-3.6.0.min.js'
 import '../../../js/datepicker.min.js' 
 import '../../../js/like.js'
-import '../../../js/close.js'
+
 import '../../../blocks/dropDown/dropDown.js'
 import '../../../js/datepicker.min.js'
 import '../../../js/Chart.min.js'

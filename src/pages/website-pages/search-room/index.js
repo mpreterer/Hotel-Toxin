@@ -15,13 +15,11 @@ import '../../../js/datepicker.min.js';
 import '../../../blocks/dropDown/dropDown.js';
 import '../../../js/value.js';
 import '../../../js/range.js';
-import '../../../js/close.js';
-import '../../../js/clear_conv.js';
 import '../../../js/close__conveniences1.js';
-import '../../../js/conveniences.js';
 import '../../../js/close_conveniences.js';
+import '../../../blocks/dropDown/dropDownInit.js'
 import 'slick-carousel/slick/slick.min.js';
-import '../../../js/jquery.simplePagination.js'
+import '../../../js/jquery.simplePagination.js';
 
 $(function(){
   $('#pagination').pagination({

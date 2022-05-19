@@ -8,5 +8,5 @@ import '../../../assets/scss/datepicker.min.scss'
 import '../../../assets/scss/range.scss'
 
 import '../../../blocks/dropDown/dropDown.js'
-import '../../../js/close.js'
+
 import '../../../js/datepicker.min.js' 
