@@ -2,13 +2,12 @@ include ../dropDown/dropDown.pug
 include ../button/button.pug
 
 mixin filter(options={})
-    - const {title,buttonOptions} = options;
+    - const {title,buttonOptions,dropDownOptions} = options;
 
     div.filter
         div.filter__container-search-room
             div.filter__search-room
                 h1 !{title}
-                +dropDown
                 div.filter__residence
                     div.filter__block-date
                         div.filter__block-date-calnedar
@@ -31,5 +30,5 @@ mixin filter(options={})
                                                         readonly)
                         div.filter__container-dropDown
                             h3 Гости
-                            +dropDown
+                            +dropDown(dropDownOptions)
                         +button(buttonOptions)
