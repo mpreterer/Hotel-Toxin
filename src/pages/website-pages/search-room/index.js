@@ -15,8 +15,6 @@ import '../../../js/datepicker.min.js';
 import '../../../blocks/dropDown/dropDown.js';
 import '../../../js/value.js';
 import '../../../js/range.js';
-import '../../../js/close__conveniences1.js';
-import '../../../js/close_conveniences.js';
 import '../../../blocks/dropDown/dropDownInit.js'
 import 'slick-carousel/slick/slick.min.js';
 import '../../../js/jquery.simplePagination.js';

@@ -22,7 +22,15 @@ block content
                                       readonly)
             div.guests-container
                 span.h_span_block_hotel Гости
-                +dropDown()
+                +dropDown({
+                    list: [
+                        { name: 'взрослые', val: 2 },
+                        { name: 'дети', val: 1 },
+                        { name: 'младенцы', val: 1 }
+                    ],
+                    appointment: 'guests',
+                    showFunction: true
+                })
             div.price_hotel
                 div.middle
                     div.container_price
@@ -66,7 +74,16 @@ block content
                     p На 1 этаже вас встретит специалист  и  проводит до номера.
             span.h_span_block_hotel удобства номера
             div.conveniences1
-                +dropDown()
+                +dropDown({
+                    appointment: 'furniture',
+                    list: [
+                        { name: 'спальни', val: 0 },
+                        { name: 'кровати', val: 0 },
+                        { name: 'ванные комнаты', val: 0 }
+                    ],
+                    showFunction: false,
+                    placeholder: 'Выберите удобства'
+                })
             div.convenience
                 span дополнительные удобства
                 div.not_active.arrow_convenience
