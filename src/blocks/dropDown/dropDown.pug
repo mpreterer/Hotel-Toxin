@@ -1,5 +1,5 @@
-mixin dropDown({placeholder = 'Сколько Гостей',isOpen = false, showFunction,btnTypeMinus, list = []}={})
-    .dropDown.js-dropDown
+mixin dropDown({placeholder = 'Сколько Гостей',appointment,isOpen = false, showFunction, list = []}={})
+    .dropDown.js-dropDown(data-attribute-appointment =appointment, data-attribute-function=functionPanel)
         .dropDown__name.js-dropDown__name
             input.dropDown__counte-guests.js-dropDown__counte-guests(placeholder=placeholder readonly value="")
             .dropDown__arrow.dropdown-arrow
@@ -8,11 +8,11 @@ mixin dropDown({placeholder = 'Сколько Гостей',isOpen = false, show
                 each element in list
                     .dropDown__row
                         h3.dropDown__dropItem #{element.name}
-                        .dropDown__block-input.js-dropDown__block-input
-                            button.dropDown__circle.dropDown__circle-minus.js-dropDown-minus(data-button-type=element.btnTypeMinus) -
-                            input.dropDown__counter(value= element.value || 0 readonly) 
+                        .dropDown__block-input
+                            button.dropDown__circle.js-dropDown-minus -
+                            input.dropDown__counter.js-dropDown__counter(value= element.val || 0 readonly) 
                             button.dropDown__circle.dropDown__circle-plus.js-dropDown-plus +
-                    if showFunction
-                        .dropDown__function
-                            button.dropDown__function-clear Очистить
-                            button.dropDown__function-apply Применить
+                if showFunction
+                    .dropDown__function
+                        button.dropDown__function-btn.js-dropDown_clear Очистить
+                        button.dropDown__function-btn.js-dropDown_apply Применить
