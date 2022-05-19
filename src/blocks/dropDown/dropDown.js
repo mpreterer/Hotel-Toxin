@@ -17,15 +17,13 @@ class dropDown {
         this.btnPlus = this.container.querySelectorAll('.dropDown__circle-plus');
         this.btnMinus = this.container.querySelectorAll('.dropDown__circle-minus');
         this.controlPanel = this.container.querySelector('.dropDown__function');
-        this.hasControlPanel = this.controlPanel !== null || this.controlPanel !== undefined;
-        
+        this.hasControlPanel = this.controlPanel !== null && this.controlPanel !== undefined;
+
         if (this.hasControlPanel) {
             this.btnApply = this.container.querySelector('.js-dropDown_apply');
             this.btnClear = this.container.querySelector('.js-dropDown_clear');
         }
-
-        console.log(this.btnClear);
-
+        
         this._check_options();
         this._open_drop_down();
         this._drop_down_counter();
@@ -42,7 +40,7 @@ class dropDown {
             }
         })
 
-        if (this.controlPanel) {
+        if (this.hasControlPanel) {
             this._btn_apply();
         }
 
@@ -64,10 +62,29 @@ class dropDown {
 
     _check_options() {
         this._check_btn_minus();
+        this._check_input_name();
         
         if (this.hasControlPanel) {
             this._check_btn_clear();
-            this._btn_apply();
+        }
+    }
+
+    _check_input_name() {
+        let checkCount = [];
+        let tempArray = []
+
+        this.counterNumber.forEach(element => {
+            checkCount += Number(element.value);
+            tempArray.push(element.value);
+        });
+
+        if (checkCount > 0) {
+            if (this.appointment == 'guests') {
+                this._counter_guests(tempArray);
+            }
+            else if (this.appointment == 'furniture') {
+                this._counter_furniture(tempArray);
+            }
         }
     }
 
@@ -114,7 +131,9 @@ class dropDown {
             }
         });
         
-        this._check_btn_clear();
+        if (this.hasControlPanel) {
+            this._check_btn_clear();
+        }
     }
 
     _check_btn_clear() {
@@ -124,13 +143,13 @@ class dropDown {
             checkCount += Number(element.value);
         });
 
-        // if (checkCount > 0) {
-        //     this.btnClear.classList.remove('js-clear-none');
-        //     this.btnClear.removeEventListener('click', this._clear_all_counter.bind(this))
-        // } else {
-        //     this.btnClear.classList.add('js-clear-none');
-        //     this.btnClear.addEventListener('click', this._clear_all_counter.bind(this))
-        // }
+        if (checkCount > 0) {
+            this.btnClear.classList.remove('js-clear-none');
+            this.btnClear.removeEventListener('click', this._clear_all_counter.bind(this))
+        } else {
+            this.btnClear.classList.add('js-clear-none');
+            this.btnClear.addEventListener('click', this._clear_all_counter.bind(this))
+        }
     }
 
     _clear_all_counter() {
@@ -162,10 +181,10 @@ class dropDown {
     }
 
     _btn_apply() {
-        // this.btnApply.addEventListener('click', () => {
-        //     this.counterPanel.classList.remove('js-drop-open');
-        //     this.counterPanel.classList.add('js-drop-close');
-        // })
+        this.btnApply.addEventListener('click', () => {
+            this.counterPanel.classList.remove('js-drop-open');
+            this.counterPanel.classList.add('js-drop-close');
+        })
     }
 
     _counter_guests(countArray) {
