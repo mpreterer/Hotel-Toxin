@@ -1,9 +1,11 @@
-mixin calendar({ isOpen = false, placeholder='ДД.ММ.ГГГГ', arr = 'прибытие', dep = 'выезд' }={})
-    input.datepicker-here(type="text" 
-                        data-range="true" 
-                        data-multiple-dates-separator=" - " 
-                        data-language="ru" 
-                        placeholder=`${placeholder}`
-                        calendar-isOpen=`${isOpen}`
-                        readonly
-                        )
+mixin calendar({ isOpen = false, placeholder='ДД.ММ.ГГГГ', range="true", lang, separator=" - ", moving, format}={})
+    .calendar-container.js-calendar-container(
+            data-range= range
+            data-multiple-dates-separator= separator 
+            data-language= lang
+            placeholder= placeholder
+            data-moving= moving
+            data-is-open= isOpen
+            data-format= format
+            readonly
+            )
