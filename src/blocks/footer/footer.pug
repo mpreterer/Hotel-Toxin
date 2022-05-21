@@ -1,49 +1,29 @@
 include ./footer-nav-menu/footer-nav-menu.pug
 include ../logotype/logotype.pug
+include ../input-text-field/input-text-field.pug
 
-mixin footer({desc, menuList}={})
-    div.footer_container
+mixin footer({desc, menuList, copyright}={})
+    .footer_container
         footer.footer
-            div.footer_list
-                div.block1
+            .footer_list
+                .footer__about-company
                     +logotype
-                    div.text_block1_f
+                    .footer__description-container
                         span.footer__description= desc
-                div.block2
+                .footer__navigation
                     +footer-nav-menu({navList: menuList})
-                div.block3
-                    h3 о нас
-                    ul.ul_block3
-                        li
-                            a(href="/mock-address/change-me") О сервисе
-                        li 
-                            a(href="/mock-address/change-me") Наша команда
-                        li
-                            a(href="/mock-address/change-me") Вакансии
-                        li 
-                            a(href="/mock-address/change-me") Инвесторы
-                div.block4
-                    h3 Служба поддержки
-                    ul.ul_block4
-                        li
-                            a(href="/mock-address/change-me") Соглашения
-                        li 
-                            a(href="/mock-address/change-me") Сообщества
-                        li
-                            a(href="/mock-address/change-me") Связь с нами
-                div.block5
-                    h3 Подписка
-                    p Получайте специальные предложения и новости сервиса
-                    div.email
-                        input(placeholder="Email")
-                        a(href="/mock-address/change-me").email_button-link
-        div.footer_sub
-            div.footer_sub_container
-                p Copyright © 2018 Toxin отель. Все права зачищены.
-                div.sub_icons
-                    a(href="/mock-address/change-me")
-                        img(src="../assets/image/twitter.svg").fa-twitter
-                    a(href="/mock-address/change-me")
-                        img(src="../assets/image/facebook.svg").fa-facebook
-                    a(href="/mock-address/change-me")
-                        img(src="../assets/image/insta.svg").fa-instagram
+                .footer__description
+                    h3.footer__description-title Подписка
+                    p.footer__description-special-title Получайте специальные предложения и новости сервиса
+                    .footer__description-email
+                        +input-text-field({placeholder: 'Email', link: 'change-me/mock-adress'})
+        .footer__sub-container
+            .footer__sub
+                p.footer__sub-copytight= copyright
+                .footer__sub-icons
+                    a.footer__sub-links(href="/mock-address/change-me" target="_blank" rel="noopener noreferrer")
+                        img(src="../assets/image/twitter.svg" alt="twitter").fa-twitter
+                    a.footer__sub-links(href="/mock-address/change-me" target="_blank" rel="noopener noreferrer")
+                        img(src="../assets/image/facebook.svg" alt="facebook").fa-facebook
+                    a.footer__sub-links(href="/mock-address/change-me" target="_blank" rel="noopener noreferrer")
+                        img(src="../assets/image/insta.svg" alt="instagram").fa-instagram
