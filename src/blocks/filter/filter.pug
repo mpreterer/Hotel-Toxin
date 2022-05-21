@@ -14,20 +14,13 @@ mixin filter(options={})
                             div.filter__container-date-arrival
                                 h3.filter__search-room-title Прибытие
                                 div.filter__date-arrival 
-                                    div.filter__text-field-calendar.dropdown-arrow
-                                    input#first_date(type="text"
-                                                        data-range="true" 
-                                                        data-multiple-dates-separator=" - "
-                                                        placeholder="ДД.ММ.ГГГГ"
-                                                        readonly)
+                                    div.filter__text-field-calendar
+                                        +calendar
                             div.filter__container-date-departure
                                 h3.filter__search-room-title Выезд
                                 div.filter__date_departure
-                                    div.filter__text-field-calendar.dropdown-arrow
-                                    input#second_date(type="text" 
-                                                        data-language="ru"
-                                                        placeholder="ДД.ММ.ГГГГ"
-                                                        readonly)
+                                    div.filter__text-field-calendar
+                                        +calendar
                         div.filter__container-dropDown
                             h3.filter__search-room-title Гости
                             +dropDown(dropDownOptions)
