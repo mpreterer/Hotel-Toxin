@@ -1,0 +1,8 @@
+mixin footer-nav-menu({ navList = [] }={})
+    .footer-nav-menu
+        each list in navList
+            h3.footer-nav-menu__title-list= list.title
+                ul.ul_block2.footer-nav-menu__list
+                    each link in list.links
+                        li.footer-nav-menu__li
+                            a(href= link.href)= link.title

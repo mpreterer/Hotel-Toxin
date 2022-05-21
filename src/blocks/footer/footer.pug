@@ -1,26 +1,16 @@
+include ./footer-nav-menu/footer-nav-menu.pug
 include ../logotype/logotype.pug
 
-mixin footer({ }={})
+mixin footer({desc, menuList}={})
     div.footer_container
         footer.footer
             div.footer_list
                 div.block1
                     +logotype
                     div.text_block1_f
-                        p Бронирование номеров в лучшем  
-                        p отеле 2019 года по версии 
-                        p ассоциации «Отельные взгляды»
+                        span.footer__description= desc
                 div.block2
-                    h3 навигация
-                    ul.ul_block2
-                        li
-                            a(href="/mock-address/change-me") О нас
-                        li 
-                            a(href="/mock-address/change-me") Новости
-                        li
-                            a(href="/mock-address/change-me") Служба поддержки
-                        li
-                            a(href="/mock-address/change-me") Услуги
+                    +footer-nav-menu({navList: menuList})
                 div.block3
                     h3 о нас
                     ul.ul_block3
