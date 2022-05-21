@@ -1,10 +1,12 @@
 import './roomDetails.scss'
-import '../../../assets/scss/datepicker.min.scss'
+import '../../../blocks/calendar/calendar.scss'
 import '../../../assets/scss/Chart.min.css'
 import '../../../blocks/filter/filter.scss'
 import '../../../blocks/dropDown/dropDown.scss'
 import '../../../blocks/button/button.scss';
 import '../../style.scss'
+import '../../../blocks/footer/footer.scss'
+import '../../../blocks/header/header.scss';
 
 import '../../../js/jquery-3.6.0.min.js'
 import '../../../js/datepicker.min.js' 

@@ -3,11 +3,13 @@ import 'slick-carousel/slick/slick-theme.scss';
 import './searchRoom.scss';
 import '../../style.scss';
 import '../../../assets/scss/range.scss';
-import '../../../assets/scss/datepicker.min.scss';
+import '../../../blocks/calendar/calendar.scss';
 import '../../../assets/scss/simplePagination.css';
 import '../../../blocks/dropDown/dropDown.scss';
 import '../../../blocks/filter/filter.scss';
 import '../../../blocks/button/button.scss';
+import '../../../blocks/footer/footer.scss';
+import '../../../blocks/header/header.scss';
 
 
 import '../../../js/jquery-3.6.0.min.js';
