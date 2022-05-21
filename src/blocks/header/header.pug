@@ -1,6 +1,7 @@
 include ../logotype/logotype.pug
 include ../button/button.pug
 include ../nav-menu/nav-menu.pug
+include ./nav-burger/nav-burger.pug
 
 mixin header({ } = {})
     nav.header
@@ -37,26 +38,13 @@ mixin header({ } = {})
                             href: 'Registration.html',
                             small: true
                         })
-            div.burger.burger_menu_active
-                    button.border1.border
-                    button.border2.border
-                    button.border3.border
-                    ul.menu_burger
-                        a(href="../../index.html")
-                            li.li_burger.li_burger1 Главная
-                        a(href="#")
-                            li.li_burger.li_burger1 О Нас
-                        a(href="#")
-                            li.li_burger Услуги
-                        a(href="#")
-                            li.li_burger Вакансии
-                        a(href="#")
-                            li.li_burger Новости
-                        a(href="#")
-                            li.li_burger Соглашения
-                        a(href="login.html")
-                            li.li_burger
-                                b Войти
-                        a(href="Registration.html")
-                            li.li_burger.li_burger7
-                                b Регистрация
+            +nav-burger({
+                navLinks: [
+                    { title: 'Главная', link: 'index.html' },
+                    { title: 'Главная', link: 'index.html' },
+                    { title: 'Главная', link: 'index.html' },
+                    { title: 'Главная', link: 'index.html' },
+                    { title: 'Главная', link: 'index.html' },
+                    { title: 'Главная', link: 'index.html' },
+                ]
+            })
