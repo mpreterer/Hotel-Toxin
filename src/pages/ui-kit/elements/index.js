@@ -10,4 +10,3 @@ import '../../../blocks/dropDown/dropDown.js'
 
 import '../../../js/like.js'
 import '../../../js/range.js'
-import '../../../js/value.js'

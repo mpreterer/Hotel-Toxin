@@ -1,14 +1,10 @@
 extends ../template-head/main_index.pug
-include ../blocks/header/header.pug
-include ../blocks/footer/footer.pug
 include ../blocks/calendar/calendar.pug
 include ../blocks/filter/filter.pug
 
 block variables
     - pageTitle = 'Главная «Toxin» | Отели'
 
-block header
-    +header
 block content
     +filter({
         title:'Найдём номера под ваши пожелания',

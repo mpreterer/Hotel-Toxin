@@ -10,14 +10,13 @@ import '../../../blocks/filter/filter.scss';
 import '../../../blocks/button/button.scss';
 import '../../../blocks/footer/footer.scss';
 import '../../../blocks/header/header.scss';
-
+import '../../../blocks/slider-range/slider-range.scss';
 
 import '../../../js/jquery-3.6.0.min.js';
 import '../../../js/datepicker.min.js';
 import '../../../blocks/dropDown/dropDown.js';
-import '../../../js/value.js';
-import '../../../js/range.js';
 import '../../../blocks/dropDown/dropDownInit.js'
+import '../../../blocks/slider-range/slider-range-init.js'
 import 'slick-carousel/slick/slick.min.js';
 import '../../../js/jquery.simplePagination.js';
 
