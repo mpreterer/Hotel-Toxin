@@ -1,0 +1,69 @@
+@import '~nouislider/dist/nouislider.min.css';
+
+.slider-range {
+    width: 266px;
+
+    &__slider {
+        width: 100%;
+        margin: 20px 0 15px 0;
+    }
+
+    &__name {
+        font-weight: bold;
+        color: #1f2041;
+    }
+
+    &__values {
+        font-size: 12px;
+        color: #8F8FA0;
+    }
+
+    &__container-title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__sub-title {
+        width: 100%;
+        font-size: 12px;
+        margin: 0;
+        color: #8F8FA0;
+    }
+
+    .noUi-horizontal .noUi-handle {
+        width: 14px;
+        height: 14px;
+        right: -9px;
+        top: -5px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .noUi-target {
+        background: #fff;
+        border: 1px solid #C7C7CF;
+        border-radius: 3px;
+        box-shadow: none;
+    }
+    
+    .noUi-connect {
+        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+
+    .noUi-horizontal {
+        height: 6px;
+    }
+    
+    .noUi-handle {
+        border: 2px solid #fff;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+        box-shadow: none;   
+    }
+    
+    .noUi-handle::after,
+    .noUi-handle::before {
+        display: none;
+    }
+}
