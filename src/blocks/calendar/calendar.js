@@ -1,3 +1,5 @@
+import 'air-datepicker'
+
 class Calendar {
     constructor(domParent) {
         this.$container = domParent;
@@ -16,10 +18,16 @@ class Calendar {
     }
 
     check_options() {
-
     }
 
     create_calendar() {
+       $('.js-calendar-container').datepicker({
+            language: 'ru',
+            inline: false,
+            toggleSelected: true,
+            range: true,
+            multipleDates: 2,
+        })
     }
 }
 
