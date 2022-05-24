@@ -38,8 +38,10 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "donut-chart-js": "^1.0.1",
     "jquery": "^3.6.0",
+    "nouislider": "^15.6.0",
     "slick-carousel": "^1.8.1"
   }
 }
