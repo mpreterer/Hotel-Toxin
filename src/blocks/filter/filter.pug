@@ -1,5 +1,6 @@
 include ../dropDown/dropDown.pug
 include ../button/button.pug
+include ../range-date-calendar/range-date-calendar.pug
 
 mixin filter(options={})
     - const {title,buttonOptions,dropDownOptions} = options;
@@ -11,16 +12,7 @@ mixin filter(options={})
                 div.filter__residence
                     div.filter__block-date
                         div.filter__block-date-calnedar
-                            div.filter__container-date-arrival
-                                h3.filter__search-room-title Прибытие
-                                div.filter__date-arrival 
-                                    div.filter__text-field-calendar
-                                        +calendar
-                            div.filter__container-date-departure
-                                h3.filter__search-room-title Выезд
-                                div.filter__date_departure
-                                    div.filter__text-field-calendar
-                                        +calendar
+                            +range-date-calendar
                         div.filter__container-dropDown
                             h3.filter__search-room-title Гости
                             +dropDown(dropDownOptions)

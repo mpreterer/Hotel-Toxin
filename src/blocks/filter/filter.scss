@@ -115,7 +115,6 @@
 	flex-wrap:wrap;
 	margin:0;
 	padding:0;
-	color:rgba(31, 32, 65, 0.75);
 }
 
 .filter__block-date p {
@@ -126,12 +125,6 @@
 .filter__block-date h3 {
 	font-size: 12px;
 	text-transform: uppercase;
-}
-
-.filter__block-date-calnedar {
-	width: 320px;
-	display: flex;
-	justify-content: space-between;
 }
 
 .filter__container-dropDown {
@@ -167,8 +160,4 @@
 		width: auto;
 	}
 
-	.filter__block-date-calnedar {
-		width: 100%;
-		flex-direction: column;
-	}
 }
