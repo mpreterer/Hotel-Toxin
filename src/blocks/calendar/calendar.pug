@@ -1,10 +1,8 @@
-mixin calendar({ isOpen = false, placeholder='ДД.ММ.ГГГГ', range="true", lang, separator=" - ", moving, format}={})
-    input.calendar-container.js-calendar-container(
+mixin calendar({ isOpen = false, range="true", lang, separator=" - ", inputFormat, format}={})
+    .calendar-container.js-calendar-container(
             data-range= range
             data-multiple-dates-separator= separator 
             data-language= lang
-            placeholder= placeholder
-            data-moving= moving
             data-is-open= isOpen
             data-format= format
             readonly

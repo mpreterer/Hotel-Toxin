@@ -1,5 +1,12 @@
 .calendar-container {
   background-color: #fff;
+  position: absolute;
+  z-index: 99;
+  transform: translateY(5px);
+}
+
+.calendar-container__hidden {
+  display: none;
 }
 
 .datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
@@ -103,7 +110,7 @@
       cursor: default; }
       .datepicker--cell.-range-from-.-selected-:after {
         content: '';
-        width: 40px;
+        width: 39px;
         height: 40px;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         opacity: 0.25;

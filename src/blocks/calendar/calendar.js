@@ -1,33 +1,30 @@
 import 'air-datepicker'
 
 class Calendar {
-    constructor(domParent) {
-        this.$container = domParent;
+    constructor(params) {
+        this.$body = $(params.body).find('.js-calendar-container');
+        this.options = params.options || {};
 
-        this.init();
+        this.init(this.options);
     }
 
-    init() {
-        this.hasOpen = this.$container.hasAttribute('data-is-open');
-        this.hasRange = this.$container.hasAttribute('data-range');
-        this.moving = this.$container.hasAttribute('data-moving');
-        this.format = this.$container.hasAttribute('data-format');
-
-        this.check_options();
-        this.create_calendar();
-    }
-
-    check_options() {
-    }
-
-    create_calendar() {
-       $('.js-calendar-container').datepicker({
+    init(options) {
+        const optionDefault = {
             language: 'ru',
             inline: false,
             toggleSelected: true,
             range: true,
             multipleDates: 2,
-        })
+            multipleDatesSeparator: '-',
+            dateFormat: 'dd.mm.yyyy',
+        }
+
+        const mergedOptions = $.extend({}, optionDefault, options);
+        this.$body.datepicker(mergedOptions).data('datepicker');
+    }
+
+    create_calendar(options) {
+       
     }
 }
 

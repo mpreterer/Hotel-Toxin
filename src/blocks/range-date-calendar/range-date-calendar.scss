@@ -1,0 +1,44 @@
+.range-date-calendar {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__element {
+        width: 150px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    &__input {
+        height: 22px;
+        border: 1px solid rgba(31,32,65,0.25);
+        padding: 12px 0 8px 15px;
+        margin-top: 5px;
+        color: rgba(31,32,65,0.75);
+        border-radius: 4px;
+        font-weight: normal;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &__arrow {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 9px;
+        background-position: 4px 4px 0 0;
+        background-repeat: no-repeat;
+        right: 15px;
+        top: 17px;
+        background-image: url(../../assets/image/expand_more.svg);
+    }
+}

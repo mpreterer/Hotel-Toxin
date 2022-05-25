@@ -1,0 +1,18 @@
+include ../calendar/calendar.pug
+
+mixin range-date-calendar({ isOpen = false, placeholder='ДД.ММ.ГГГГ', range="true", lang, separator=" - ", format}={})
+    .range-date-calendar.js-range-date-calendar(data-is-open= isOpen data-date-format= format)
+        .range-date-calendar__list
+            .range-date-calendar__element
+                span.range-date-calendar__title Прибытие
+                .range-date-calendar__input.js-range-date-calendar__input(data-mov="arrival")
+                    span.range-date-calendar__placeholder= placeholder
+                    .range-date-calendar__arrow
+            .range-date-calendar__element
+                span.range-date-calendar__title Выезд
+                .range-date-calendar__input.js-range-date-calendar__input(data-mov="departure")
+                    span.range-date-calendar__placeholder= placeholder
+                    .range-date-calendar__arrow
+        .range-date-calendar__container-calendar
+            .range-date-calendar__calendar.js-range-date-calendar__calendar
+                +calendar
