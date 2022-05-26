@@ -9,6 +9,16 @@
   display: none;
 }
 
+.calendar__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    color: #BC9CFF;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 .datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
     color: #dedede; }
     .datepicker--cell-day.-other-month-:hover, .datepicker--cell-year.-other-decade-:hover {
