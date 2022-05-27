@@ -2,7 +2,6 @@ import Calendar from '../calendar/calendar.js'
 
 class rangeDateCalendar {
     constructor(domParent) {
-        this.body = document.querySelector('body');
         this.$container = domParent;
         this.$inputArrival = this.$container.querySelector('[data-mov="arrival"]');
         this.$inputDeparture = this.$container.querySelector('[data-mov="departure"]');
@@ -52,7 +51,7 @@ class rangeDateCalendar {
         if (hasClickOutSideCalendar) {
           this.calendar.hiden_calendar();
         }
-      }
+    }
     
     _handle_input_click() {
         this.calendar.check_is_open();
