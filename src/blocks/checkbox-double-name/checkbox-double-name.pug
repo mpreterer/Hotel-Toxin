@@ -1,0 +1,9 @@
+include ../custom-checkbox/custom-checkbox
+
+mixin checkbox-double-name({ list = [] }={})
+    .checkbox-double-name
+        each item in list
+            label.checkbox-double-name__container
+                span.checkbox-double-name__title= item.title
+                span.checkbox-double-name__description= item.desc
+                input.checkbox-double-name__checkbox(type="checkbox" checked= isCheck)

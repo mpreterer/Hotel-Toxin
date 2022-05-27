@@ -115,68 +115,6 @@
 	width:266px;
 }
 
-/*Чекбокс*/
-
-.order_in_house .checkbox_order {
-	color:rgba(31, 32, 65, 0.5);
-	font-size:14px;
-	display:flex;
-	flex-direction:column;
-	padding-top:6px;
-}
-
- .checkbox_order label {
-	padding-top:11px;
-	cursor:pointer;
-	user-select:none;
-}
-
- .custom-checkbox {
-	position:absolute;
-	z-index:-1;
-	opacity:0;
-}
-
- .custom-checkbox {
-  display:inline-flex;
-  align-items:center;
-  user-select:none;
-}
-
- .custom-checkbox+label::before {
-  content:'';
-  display:inline-block;
-  width:18px;
-  height:18px;
-  flex-shrink:0;
-  flex-grow:0;
-  border:2px solid rgba(31, 32, 65, 0.25);
-  border-radius:4px;
-  margin-right:0.5em;
-  background-repeat:no-repeat;
-  background-position:center center;
-  background-size:50% 50%;
-  float:left;
-
-}
-
- .custom-checkbox:checked+label::before {
-  border-color:#BC9CFF;
-  background-color:#FFF;
-  background-image:url(../../../assets/image/gal.png);
- }
-
-/* стили при наведении курсора на checkbox */
-.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
-  border-color:#BC9CFF;
-}
-
-/* стили для чекбокса, находящегося в состоянии disabled */
-.custom-checkbox:disabled+label::before {
-  background-color:#FFF;
-  border-color:#C7C7CF;
-}
-
 /*блок доступность*/
 .availability {
 	height:148px;
@@ -193,13 +131,6 @@
 	font-weight:bold;
 }
 
-.availability label {
-	cursor:pointer;
-	padding-top:13px;
-	color:#8F8FA0;
-	font-size:12px;
-	line-height:14px;
-}
 
 .availability p {
 	margin:5px 0 0 28px;
@@ -816,7 +747,7 @@ ul.slick-dots li {
 .convenience-checkbox:checked+label::before {
   border-color:#BC9CFF;
   background-color:#FFF;
-  background-image:url(../../../assets/image/gal.png);
+  background-image:url(../../../assets/image/checked.svg);
   background-size:50% 50%;
   background-position:center;
   background-repeat:no-repeat;

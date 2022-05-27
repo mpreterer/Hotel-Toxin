@@ -1,0 +1,33 @@
+.checkbox-list {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1F2041;
+    user-select: none;
+
+    &__container {
+        position: absolute;
+        top: 50px;
+        background-color: #FFF;
+        width: fit-content;
+        max-width: 266px;
+        width: 266px;
+        text-transform: none;
+        color: #1F204180;
+    }
+
+    &__menu {
+        font-weight: normal;
+    }
+
+    &__name {
+        &_hide {
+            display: none;
+        }
+    }
+}

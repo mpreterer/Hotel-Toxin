@@ -461,6 +461,10 @@ input.dropDown__counte-guests {
 	right: 15px;
 	top: 17px;
 	background-image: url(../assets/image/expand_more.svg);
+
+	&_active {
+		transform: rotate(-180deg);
+	}
 }
   
 .arrow-next-btn {

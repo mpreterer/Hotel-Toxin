@@ -12,6 +12,10 @@ import '../../../blocks/footer/footer.scss';
 import '../../../blocks/header/header.scss';
 import '../../../blocks/slider-range/slider-range.scss';
 import '../../../blocks/alone-calendar/alone-calendar.scss';
+import '../../../blocks/custom-checkbox/custom-checkbox.scss'
+import '../../../blocks/checkbox-double-name/checkbox-double-name.scss'
+import '../../../blocks/checkbox-list/checkbox-list.scss'
+
 
 import '../../../js/jquery-3.6.0.min.js';
 import '../../../blocks/dropDown/dropDown.js';
@@ -21,6 +25,8 @@ import 'slick-carousel/slick/slick.min.js';
 import '../../../js/jquery.simplePagination.js';
 import '../../../blocks/alone-calendar/alone-calendar-init.js';
 import '../../../blocks/alone-calendar/alone-calendar.js';
+import '../../../blocks/checkbox-list/checkbox-list.js'
+import '../../../blocks/checkbox-list/checkbox-list-init.js'
 
 $(function(){
   $('#pagination').pagination({
