@@ -442,6 +442,36 @@ input.dropDown__counte-guests {
 	padding: 12px 32px 14px 15px;
 }
 
+.arrow-back-btn {
+	content: '';
+	width: 40px;
+	height: 40px;
+	background-image: url('../assets/image/arrow_back.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.arrow-expend-btn {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 9px;
+	background-position: 4px 4px 0 0;
+	background-repeat: no-repeat;
+	right: 15px;
+	top: 17px;
+	background-image: url(../assets/image/expand_more.svg);
+}
+  
+.arrow-next-btn {
+	content: '';
+	width: 40px;
+	height: 40px;
+	background-image: url('../assets/image/arrow_back.svg');
+	transform: rotate(180deg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
 
 
 .email_button-link {

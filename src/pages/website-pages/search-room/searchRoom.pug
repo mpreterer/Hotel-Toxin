@@ -4,6 +4,7 @@ include ../../../blocks/footer/footer.pug
 include ../../../blocks/calendar/calendar.pug
 include ../../../blocks/dropDown/dropDown.pug
 include ../../../blocks/slider-range/slider-range.pug
+include ../../../blocks/alone-calendar/alone-calendar.pug
 
 
 block variables
@@ -14,12 +15,9 @@ block content
     div#timeSpanTo
     div.content_search-room
         div.left_bar
-            div.data_arrival_in_otel
+            div.content__arrival-in-hotel
                 span.h_span_block_hotel даты пребывания в отеле
-                input#date-words(data-range="true"
-                                      data-multiple-dates-separator=" - "
-                                      placeholder="ММ.ДД.ГГГГ"
-                                      readonly)
+                +alone-calendar
             div.guests-container
                 span.h_span_block_hotel Гости
                 +dropDown({

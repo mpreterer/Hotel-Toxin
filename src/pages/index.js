@@ -14,12 +14,3 @@ import '../blocks/dropDown/dropDownInit.js'
 import '../blocks/dropDown/dropDown.js'
 import '../blocks/range-date-calendar/range-date-calendar-init.js'
 import '../blocks/range-date-calendar/range-date-calendar.js'
-
-// $('.js-range-date-calendar__calendar').datepicker({
-//     onRenderCell: function (date, cellType) {
-//         console.log(2)
-//     },
-//     onSelect: function onSelect(fd, date) {
-//         console.log(1)
-//     }
-// })

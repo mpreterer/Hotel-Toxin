@@ -11,14 +11,16 @@ import '../../../blocks/button/button.scss';
 import '../../../blocks/footer/footer.scss';
 import '../../../blocks/header/header.scss';
 import '../../../blocks/slider-range/slider-range.scss';
+import '../../../blocks/alone-calendar/alone-calendar.scss';
 
 import '../../../js/jquery-3.6.0.min.js';
-import '../../../js/datepicker.min.js';
 import '../../../blocks/dropDown/dropDown.js';
 import '../../../blocks/dropDown/dropDownInit.js'
 import '../../../blocks/slider-range/slider-range-init.js'
 import 'slick-carousel/slick/slick.min.js';
 import '../../../js/jquery.simplePagination.js';
+import '../../../blocks/alone-calendar/alone-calendar-init.js';
+import '../../../blocks/alone-calendar/alone-calendar.js';
 
 $(function(){
   $('#pagination').pagination({
@@ -38,9 +40,4 @@ $(function(){
     dots: true,
   })
 });
-
-$('#date-words').datepicker({
-  dateFormat: 'd MM'
-})
-
 
