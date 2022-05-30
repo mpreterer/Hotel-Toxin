@@ -1,32 +1,18 @@
-block variables
+include ../stars-rating/stars-rating.pug
 
-classRoom = 'div class="room1 room_in_hotel"'
-    - numberRoom = '№888'
-    - level = 'Люкс'
-    - price = '9 990₽ в сутки'
-    - review = '145 Отзывов'
-    - linkRoom = './roomDetails.html'
-    - linkRoom = './roomDetails.html'
-    - room_photo1 = 'img class="slider__photo" src="../assets/image/1_room.png"'
-    - room_photo2 = 'img class="slider__photo" src="../assets/image/2_room.png"'
-    - room_photo3 = 'img class="slider__photo" src="../assets/image/3_room.png"'
-    - room_photo4 = 'img class="slider__photo" src="../assets/image/4_room.png"'
-
-mixin room-info({ link = 'room-details.html', numberRoom = 888, level = 'Люкс', price = '9 990', stars = 5, review = 145, photo = [{src: 'assets/img/rooms/room-888.png', alt: 'room №888'}, {src: 'assets/img/rooms/room-888.png', alt: 'room №888'}, {src: 'assets/img/rooms/room-888.png', alt: 'room №888'}] }={} )
-    .room-info
-        .room-info__contianer
-            .room-info__slider-rooms
+mixin room-info({ link = 'roomDetails.html', number = 888, level = 'Люкс', price = '9 990', stars = 5, review = 145, sliders = [{src: 'assets/img/rooms/room-888.png', alt: 'room №888'}, {src: 'assets/img/rooms/room-888.png', alt: 'room №888'}, {src: 'assets/img/rooms/room-888.png', alt: 'room №888'}] }={} )
+    .room-info.js-room-info
+        .room-info__contianer.js-room-info__contianer
+            .room-info__slider-rooms.js-room-info__slider-rooms
                 each slider in sliders 
                     img.room-info__photo(src= slider.src, alt= slider.alt)
         a.room-info__link(href= link)
             .room-info__head-room
-                p.room-info__number-room #{numberRoom}
+                p.room-info__number-room №#{number}
                 span.room-info__level #{level}
-                p.room-info__price #{price}₽
+                p.room-info__price #{price}₽ в сутки
             .room-info__rating
                 .room-info__star
-                    +stars-rating({
-
-                    })                    
+                    +stars-rating({})                    
                 .room-info__feedback
-                    b #{review}
+                    b #{review} Отзывов

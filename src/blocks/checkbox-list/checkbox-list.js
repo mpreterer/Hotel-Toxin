@@ -11,7 +11,6 @@ class CheckboxList {
         this.$menu = this.$container.querySelector('.js-checkbox-list__menu');
         this.isOpen = this.$container.classList.contains('js-checkbox-list-open');
 
-        console.log(this.isOpen)
         this._event_open();
     }
 

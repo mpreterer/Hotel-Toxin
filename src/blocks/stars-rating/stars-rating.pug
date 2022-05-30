@@ -1,0 +1,6 @@
+mixin stars-rating({ stars = 3 }={})
+  - let n = 0;
+  .stars-rating.js-stars-rating
+    select(data-rating= stars)
+      while n < 5
+        option(value=n+=1)= n

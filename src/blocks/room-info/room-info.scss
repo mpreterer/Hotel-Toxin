@@ -1,4 +1,4 @@
-.room-info{
+.room-info {
 	width:270px;
 	height:257px;
 	margin:0 12px 12px 0;
@@ -81,4 +81,115 @@
 	background-image:url(../../assets/image/star_border.svg);
 	background-repeat:no-repeat;
 	cursor:pointer;
+}
+
+.container_in_hotel {
+	display:flex;
+	flex-wrap:wrap;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.room-info__slider-rooms:hover > button.slick-prev.slick-arrow {
+	opacity: 1;
+	transition: .3s;
+}
+
+.room-info__slider-rooms:hover > button.slick-next.slick-arrow {
+	opacity: 1;
+	transition: .3s;
+}
+
+.room-info__slider-rooms {
+	width: 100%;
+	height: 100%;
+}
+
+button.slick-prev.slick-arrow {
+	height: 151px;
+	width: 42px;
+	background:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+	top: 50%;
+	left: 0%;
+	z-index: 10;
+	opacity: 0;
+	transition: .3s;
+}
+
+button.slick-next.slick-arrow {
+	width: 42px;
+	height: 151px;
+	background:linear-gradient(-90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+	top: 50%;
+	right: 0%;
+	z-index: 10;
+	opacity: 0;
+	transition: .3s;
+}
+
+
+
+button.slick-next.slick-arrow::before, button.slick-prev.slick-arrow::before {
+	content: '';
+	display: inline-block;
+	height: 12px;
+	width: 8px;
+	font-size: 15px;
+	background:url(../../assets/image/expand_more_left.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: translateX(-80%);
+}
+
+button.slick-next.slick-arrow::before {
+	background:url(../../assets/image/expand_more_right.svg);
+	transform: rotate(180deg);
+	transform: translate(80%);
+}
+
+.room-info__level {
+	color:#BC9CFF;
+	text-transform:uppercase;
+	line-height:15px;
+	padding:0 30px 0 4px;
+	font-weight:bold;
+	margin-top:3px;
+}
+
+.room-info__link {
+	width: 100%;
+	height: 100%;
+	width: 100%;
+	height: 105px;
+	display: block;
+}
+
+.room-info__head-room {
+	height:24px;
+	width:230px;
+	display:flex;
+	position:absolute;
+	bottom:62px;
+	right:20px;
+	font-family:montserrat;
+}
+
+.room-info__head-room p {
+	margin:0;
+	font-style:normal;
+	line-height:18px;
+	color: rgba(31, 32, 65, 0.5);
+	line-height:18px;
+}
+
+.room-info__head-room p, h2, h3{
+	margin:0;
+	padding:0;
+}
+
+.room-info__number-room {
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
 }
