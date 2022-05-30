@@ -9,4 +9,3 @@ import '../../../assets/scss/range.scss'
 import '../../../blocks/dropDown/dropDown.js'
 
 import '../../../js/like.js'
-import '../../../js/range.js'

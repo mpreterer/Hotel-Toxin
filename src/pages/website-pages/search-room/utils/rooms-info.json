@@ -1,0 +1,303 @@
+[
+    {
+      "number": 888,
+      "level": "Люкс",
+      "price": "9 990",
+      "stars": 5,
+      "review": 145,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_888.jpg",
+          "alt": "room №888"
+        },
+        {
+          "src": "assets/image/rooms/room_888.jpg",
+          "alt": "room №888"
+        },
+        {
+          "src": "assets/image/rooms/room_888.jpg",
+          "alt": "room №888"
+        },
+        {
+          "src": "assets/image/rooms/room_888.jpg",
+          "alt": "room №888"
+        }
+      ]
+    },
+    {
+      "number": 840,
+      "level": "Люкс",
+      "price": "9 990",
+      "stars": 4,
+      "review": 65,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_840.jpg",
+          "alt": "room №840"
+        },
+        {
+          "src": "assets/image/rooms/room_840.jpg",
+          "alt": "room №840"
+        },
+        {
+          "src": "assets/image/rooms/room_840.jpg",
+          "alt": "room №840"
+        },
+        {
+          "src": "assets/image/rooms/room_840.jpg",
+          "alt": "room №840"
+        }
+      ]
+    },
+    {
+      "number": 980,
+      "level": "Люкс",
+      "price": "8 500",
+      "stars": 3,
+      "review": 35,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_980.jpg",
+          "alt": "room №980"
+        },
+        {
+          "src": "assets/image/rooms/room_980.jpg",
+          "alt": "room №980"
+        },
+        {
+          "src": "assets/image/rooms/room_980.jpg",
+          "alt": "room №980"
+        },
+        {
+          "src": "assets/image/rooms/room_980.jpg",
+          "alt": "room №980"
+        }
+      ]
+    },
+    {
+      "number": 856,
+      "level": "Люкс",
+      "price": "7 300",
+      "stars": 5,
+      "review": 19,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_856.jpg",
+          "alt": "room №856"
+        },
+        {
+          "src": "assets/image/rooms/room_856.jpg",
+          "alt": "room №856"
+        },
+        {
+          "src": "assets/image/rooms/room_856.jpg",
+          "alt": "room №856"
+        },
+        {
+          "src": "assets/image/rooms/room_856.jpg",
+          "alt": "room №856"
+        }
+      ]
+    },
+    {
+      "number": 740,
+      "level": "Люкс",
+      "price": "6 000",
+      "stars": 4,
+      "review": 44,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_740.jpg",
+          "alt": "room №740"
+        },
+        {
+          "src": "assets/image/rooms/room_740.jpg",
+          "alt": "room №740"
+        },
+        {
+          "src": "assets/image/rooms/room_740.jpg",
+          "alt": "room №740"
+        },
+        {
+          "src": "assets/image/rooms/room_740.jpg",
+          "alt": "room №740"
+        }
+      ]
+    },
+    {
+      "number": 982,
+      "level": "Люкс",
+      "price": "5 800",
+      "stars": 3,
+      "review": 56,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_982.jpg",
+          "alt": "room №982"
+        },
+        {
+          "src": "assets/image/rooms/room_982.jpg",
+          "alt": "room №982"
+        },
+        {
+          "src": "assets/image/rooms/room_982.jpg",
+          "alt": "room №982"
+        },
+        {
+          "src": "assets/image/rooms/room_982.jpg",
+          "alt": "room №982"
+        }
+      ]
+    },
+    {
+      "number": 678,
+      "level": "Люкс",
+      "price": "5 500",
+      "stars": 5,
+      "review": 45,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_678.jpg",
+          "alt": "room №678"
+        },
+        {
+          "src": "assets/image/rooms/room_678.jpg",
+          "alt": "room №678"
+        },
+        {
+          "src": "assets/image/rooms/room_678.jpg",
+          "alt": "room №678"
+        },
+        {
+          "src": "assets/image/rooms/room_678.jpg",
+          "alt": "room №678"
+        }
+      ]
+    },
+    {
+      "number": 450,
+      "level": "Люкс",
+      "price": "5 300",
+      "stars": 4,
+      "review": 39,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_450.jpg",
+          "alt": "room №450"
+        },
+        {
+          "src": "assets/image/rooms/room_450.jpg",
+          "alt": "room №450"
+        },
+        {
+          "src": "assets/image/rooms/room_450.jpg",
+          "alt": "room №450"
+        },
+        {
+          "src": "assets/image/rooms/room_450.jpg",
+          "alt": "room №450"
+        }
+      ]
+    },
+    {
+      "number": 350,
+      "level": "Люкс",
+      "price": "5 000",
+      "stars": 3,
+      "review": 77,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_350.jpg",
+          "alt": "room №350"
+        },
+        {
+          "src": "assets/image/rooms/room_350.jpg",
+          "alt": "room №350"
+        },
+        {
+          "src": "assets/image/rooms/room_350.jpg",
+          "alt": "room №350"
+        },
+        {
+          "src": "assets/image/rooms/room_350.jpg",
+          "alt": "room №350"
+        }
+      ]
+    },
+    {
+      "number": 666,
+      "level": "Люкс",
+      "price": "5 000",
+      "stars": 5,
+      "review": 25,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_666.jpg",
+          "alt": "room №666"
+        },
+        {
+          "src": "assets/image/rooms/room_666.jpg",
+          "alt": "room №666"
+        },
+        {
+          "src": "assets/image/rooms/room_666.jpg",
+          "alt": "room №666"
+        },
+        {
+          "src": "assets/image/rooms/room_666.jpg",
+          "alt": "room №666"
+        }
+      ]
+    },
+    {
+      "number": 444,
+      "level": "Люкс",
+      "price": "5 000",
+      "stars": 3,
+      "review": 15,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_444.jpg",
+          "alt": "room №444"
+        },
+        {
+          "src": "assets/image/rooms/room_444.jpg",
+          "alt": "room №444"
+        },
+        {
+          "src": "assets/image/rooms/room_444.jpg",
+          "alt": "room №444"
+        },
+        {
+          "src": "assets/image/rooms/room_444.jpg",
+          "alt": "room №444"
+        }
+      ]
+    },
+    {
+      "number": 352,
+      "level": "Люкс",
+      "price": "5 000",
+      "stars": 3,
+      "review": 55,
+      "sliders": [
+        {
+          "src": "assets/image/rooms/room_352.jpg",
+          "alt": "room №352"
+        },
+        {
+          "src": "assets/image/rooms/room_352.jpg",
+          "alt": "room №352"
+        },
+        {
+          "src": "assets/image/rooms/room_352.jpg",
+          "alt": "room №352"
+        },
+        {
+          "src": "assets/image/rooms/room_352.jpg",
+          "alt": "room №352"
+        }
+      ]
+    }
+  ]
+  

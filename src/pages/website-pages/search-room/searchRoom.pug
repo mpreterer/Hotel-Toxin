@@ -8,10 +8,12 @@ include ../../../blocks/alone-calendar/alone-calendar.pug
 include ../../../blocks/custom-checkbox/custom-checkbox.pug
 include ../../../blocks/checkbox-double-name/checkbox-double-name.pug
 include ../../../blocks/checkbox-list/checkbox-list.pug
+include ../../../blocks/room-info/room-info.pug
 
 
 block variables
     - pageTitle = '«Toxin» | Лучшие номера для вас'
+    - roomsList = require('./utils/rooms-info.json');
 
 block content
     div#timeSpanFrom
@@ -77,22 +79,18 @@ block content
                         { text: 'Шампунь', isChecked: false },
                     ]
                 })
-                    
         div.main_content_search-room
             h2 Номера, которые мы для вас подобрали 
-            div.container_in_hotel
-                include ../../../includes/Room1.pug
-                include ../../../includes/Room2.pug
-                include ../../../includes/Room3.pug
-                include ../../../includes/Room4.pug
-                include ../../../includes/Room5.pug
-                include ../../../includes/Room6.pug
-                include ../../../includes/Room7.pug
-                include ../../../includes/Room8.pug
-                include ../../../includes/Room9.pug
-                include ../../../includes/Room10.pug
-                include ../../../includes/Room11.pug
-                include ../../../includes/Room12.pug
+            .container_in_hotel
+                each room in roomsList
+                    +room-info({
+                        number: room.number,
+                        level: room.level,
+                        price: room.price,
+                        stars: room.start,
+                        review: room.review,
+                        sliders: room.sliders,
+                    })
             div.pagination__container
                 div#pagination
                 p 
