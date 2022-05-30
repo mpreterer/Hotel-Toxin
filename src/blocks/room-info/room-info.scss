@@ -1,0 +1,84 @@
+.room-info{
+	width:270px;
+	height:257px;
+	margin:0 12px 12px 0;
+	background: #FFF;
+	background-repeat:no-repeat;
+	box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
+	border-radius:4px;
+	position:relative;
+	user-select:none;
+}
+
+.room-info__contianer {
+	height:151px;
+	width:270px;
+}
+
+.room-info__contianer:hover > .move_arrow {
+	opacity:1;
+}
+
+.room-info__contianer .circle {
+	width:7.5px;
+	height:7.49px;
+	border: 1px solid #FFFFFF;
+	box-sizing: border-box;
+	filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+	box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+	margin-right:3.75px;
+	border-radius:50%;
+}
+
+.room-info__contianer .circle:last-child {
+	margin:0;
+}
+
+.room-info__contianer .circle a {
+	padding:0;
+	margin:0;
+}
+
+.room-info__rating {
+	width:230px;
+	height:32px;
+	border-top:1px solid #E8E8EC;
+	position:absolute;
+	bottom:15px;
+	right:20px;
+	display:flex;
+	justify-content:space-between;
+	padding-top:8px;
+}
+/*Звезды оценки*/
+.room-info__star {
+	width:120px;
+	height:24px;
+	display:flex;
+	overflow:hidden;
+}
+
+.room-info__rating ul {
+	list-style:none;
+	display:flex;
+	margin:0;
+	padding:0;
+}
+
+.room-info__star {
+	width:20px;
+	height:20px;
+	padding-right:22px;
+	background-image:url(../../assets/image/star.svg);
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+
+.stars_border {
+	width:20px;
+	height:20px;
+	padding-right:22px;
+	background-image:url(../../assets/image/star_border.svg);
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
