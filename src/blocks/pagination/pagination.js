@@ -1,21 +1,24 @@
 import '../../js/jquery.simplePagination.js';
 
 class Pagination {
-    constructor(domParent) {
+    constructor(domParent, options) {
         this.$body = $(domParent).find('.js-pagination__container');
         this.$container = this.$body.find('.js-pagination__pagination-init');
-        this.$max = this.$body.find('.pagination-max');
-        this.$min = this.$body.find('.pagination-min');
+        this.$maxValue = this.$body.find('.pagination-max');
+        this.$minValue = this.$body.find('.pagination-min');
+        this.$allOption = this.$body.find('.pagination-all-option');
+        this.options = options;
 
         this._init();
-        this._count_pagination();
     }
 
     _init() {
+        const { items, itemsOnPage, displayedPages } = this.options;
+        
         this.$container.pagination({
-            items: 57,
-            itemsOnPage: 4,
-            displayedPages: 3,
+            items: items,
+            itemsOnPage: itemsOnPage,
+            displayedPages: displayedPages,
             edges: 1,
             prevText: '',
             nextText: ' ',
@@ -24,12 +27,12 @@ class Pagination {
     }
 
     _count_pagination(page) {
-        // this.$container.addEventListener('click', () => {
-        //     this.$max.textContent = this.$container.querySelector('ul li.active span').textContent * 12;
-        //     let temp = Number(this.$max.textContent);
-        //     this.$min.textContent = temp - 11;
-        // })
-        console.log(page)
+        const { itemsOnPage } = this.options;
+        const max = page * itemsOnPage;
+        const min = max - (itemsOnPage - 1);
+
+        this.$minValue.html(min);
+        this.$maxValue.html(max);
     }
 }
 
