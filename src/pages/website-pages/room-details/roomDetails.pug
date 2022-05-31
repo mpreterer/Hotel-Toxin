@@ -3,6 +3,8 @@ include ../../../blocks/header/header.pug
 include ../../../blocks/dropDown/dropDown.pug
 include ../../../blocks/footer/footer.pug
 include ../../../blocks/calendar/calendar.pug
+include ../../../blocks/about-room/about-room.pug
+include ../../../blocks/impressions-room/impressions-room.pug
 
 block variables 
     - pageTitle = '«Toxin» | Номер для вас'
@@ -19,37 +21,27 @@ block content
                 div.container_split
                     div.container_split_details
                         div.container_expend_details
-                            div.room_information
-                                h2 Сведения о номере
-                                ul.ul_room
-                                    li#li_room1
-                                        p
-                                            b Комфорт
-                                        p Шумопоглощающие стены 
-                                    hr 
-                                    li#li_room2
-                                        p
-                                            b Удобство 
-                                        p Окно в каждой из спален 
-                                    hr 
-                                    li#li_room3
-                                        p
-                                            b Уют  
-                                        p Номер оснащён камином 
+                            +about-room({
+                               list: [
+                                   {
+                                        firstAdvantage: 'Комфорт',
+                                        secondAdvantage: 'Шумоподавляющие стены',
+                                        src: '../../assets/image/insert_emoticon.svg'
+                                   },
+                                   {
+                                        firstAdvantage: 'Удобство',
+                                        secondAdvantage: 'Окно в каждой из спален',
+                                        src: '../../assets/image/location_city.svg'
+                                   },
+                                   {
+                                        firstAdvantage: 'Уют',
+                                        secondAdvantage: 'Номер оснащён камином',
+                                        src: '../../assets/image/whatshot.svg'
+                                   }
+                               ]
+                            })
                             div.impressions_room
-                                h2 Впечатления от номера
-                                div.container_impressions
-                                    div.container_donut
-                                        canvas#myChart
-                                        div.comments-count 
-                                            p 260
-                                            p Голосов
-                                    div.impressions_list
-                                        ul.ul_impressions
-                                            li#li_impressions1 Великолепно 
-                                            li#li_impressions2 Хорошо 
-                                            li#li_impressions3 Удовлетворительно 
-                                            li#li_impressions4 Разочарован 
+                               +impressions-room
                         div.user_reviews
                             h2 Отзывы посетителей номера
                             span.otziv 2 отзыва 

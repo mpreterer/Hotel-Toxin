@@ -30,4 +30,3 @@ import '../../../blocks/room-info/room-info.js'
 import '../../../blocks/room-info/room-info-init.js'
 import '../../../blocks/pagination/pagination.js'
 import '../../../blocks/pagination/pagination-init.js'
-
