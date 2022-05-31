@@ -1,0 +1,10 @@
+mixin about-room({ list=[] }={})
+    .about-room
+        h2.about-room__title Сведения о номере
+        each item in list
+            ul.about-room__list
+                li.about-room__item
+                    img.about-room__icon(src= item.src)
+                    .about-room__desc
+                        p.about-room__advantage.about-room__advantage-title= item.firstAdvantage
+                        p.about-room__advantage= item.secondAdvantage

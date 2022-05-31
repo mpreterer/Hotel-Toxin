@@ -1,0 +1,47 @@
+.about-room {
+	width: 283px;
+    display: flex;
+    flex-direction: column;
+	margin-right:81px;
+}
+
+.about-room p {
+	margin:0 0 5px 0;
+}
+
+.about-room__list {
+	padding:0;
+}
+
+.about-room__desc {
+	width: 233px;
+}
+
+.about-room__item {
+	width: 100%;
+	display: flex;
+    justify-content: space-between;
+	height: 48px;
+    border-bottom: 1px solid #1F20411A;
+    padding-bottom: 17px;
+}
+
+.about-room__list:last-child li {
+    padding-bottom: 0;
+    border: none;
+}
+
+.about-room__advantage-title {
+    font-weight: bold;
+}
+
+.about-room__icon {
+    width: 40px;
+    height: 40px;
+}
+
+@media all and (max-width: 360px) {
+	.about-room {
+		margin-right: 0;
+	}
+}
