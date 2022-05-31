@@ -1,0 +1,11 @@
+mixin pagination({ minValue = 1, maxValue = 12, allOption = '100+' }={})
+    .pagination.js-pagination
+        .pagination__container.js-pagination__container
+            .pagination__pagination-init.js-pagination__pagination-init
+            p.pagination__description
+                span.pagination-min= minValue
+                span.pagination-cur -
+                span.pagination-max=  maxValue
+                span.pagination-txt  из 
+                span.pagination-all-option=  allOption
+                span.pagination-txt  вариантов аренды
