@@ -9,6 +9,7 @@ include ../../../blocks/custom-checkbox/custom-checkbox.pug
 include ../../../blocks/checkbox-double-name/checkbox-double-name.pug
 include ../../../blocks/checkbox-list/checkbox-list.pug
 include ../../../blocks/room-info/room-info.pug
+include ../../../blocks/pagination/pagination.pug
 
 
 block variables
@@ -92,11 +93,4 @@ block content
                         sliders: room.sliders,
                     })
             div.pagination__container
-                div#pagination
-                p 
-                    span.pagination-min 1
-                    span.pagination-cur  -
-                    span.pagination-max  12
-                    span.pagination-txt  из
-                    span.pagination-all-option  100+
-                    span.pagination-txt  вариантов аренды
+                +pagination
