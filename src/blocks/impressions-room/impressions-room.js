@@ -22,9 +22,9 @@ class Doughnut {
             datasets: [
                 {
                     backgroundColor: ['#93A3FA','#69D1CF','#FFCA9C', '#3D4975'],
-                    data: [260, 260, 520, 0],
+                    data: [65, 65, 130, 0],
                 }
-            ]
+            ],
         }
     
         const chart = new Chart(ctx, {
@@ -33,11 +33,11 @@ class Doughnut {
             options: {
                 legend: {
                     display: false,
-                    font: {
-                        size: 20
-                    },
                 },
-               
+                tooltips: {
+                    bodyFontSize: 10,
+                    displayColors: false
+                },
                 cutoutPercentage: 90,
             },
         });
