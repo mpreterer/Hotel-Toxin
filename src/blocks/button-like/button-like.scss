@@ -1,0 +1,44 @@
+.button-like {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width:auto;
+	height:20px;
+	border-radius:22px;
+	margin-left:3px;
+	background-color: #fff;
+	position:relative;
+	cursor:pointer;
+	border:1px solid rgba(31, 32, 65, 0.25);
+	color:#C7C7CF;
+}
+
+.button-like__heart {
+	width:14px;
+	height:12px;
+	background-image:url(../../assets/image/favorite_border.png);
+	background-repeat:no-repeat;
+	position:absolute;
+	top:3.5px;
+	left:3px;
+	pointer-events: none;
+}
+
+.fill_heart {
+	background-image:url(../../assets/image/favorite.png);
+}
+
+.border_heart {
+	background-image:url(../../assets/image/favorite_border.png);
+}
+
+span.button-like__txt {
+	font-size:11px;
+	user-select: none;
+	pointer-events: none;
+}
+
+.active_heart {
+	border:1px solid #B59DFF;
+	color:#BC9CFF;
+}
