@@ -92,15 +92,6 @@
 }
 
 
-
-
-
-/*Расположение блоков до li*/
-
-
-
-
-
 /*Блок с рейтингом впечатления*/
 .rating_impressions {
 	width:120px;
@@ -133,121 +124,7 @@
 	max-width: 672px;
 }
 
-/*Отзывы посетителей*/
-.user_reviews {
-	max-width:711px;
-	color:rgba(31, 32, 65, 0.75);
-	font-size:14px;
-	line-height:24px;
-	position:relative;
-}
 
-.user_reviews .otziv {
-	position:absolute;
-	top:0;
-	right:0;
-	color:rgba(31, 32, 65, 0.5);
-}
-
-.ul_reviews {
-	list-style:none;
-	padding:0;
-}
-
-.ul_reviews li {
-	margin-bottom:12px;
-}
-
-/*Аватарка пользователя*/
-.avatars:before {
-	content:'';
-	width:48px;
-	height:48px;
-	border:2px solid #FFFFFF;
-	box-sizing:border-box;
-	filter:drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
-	border-radius:32px;
-	border-radius:50%;
-	display:inline-block;
-	float:left;
-}
-
-.avatar_1:before {
-	background-image:url(../../../assets/image/user_1.png);
-}
-
-.avatar_2:before {
-	background-image:url(../../../assets/image/user_2.png);
-}
-
-.avatars span {
-	margin-left:60px;
-	display:block;
-}
-
-.avatars .head {
-	font-weight:bold;
-}
-
-/*Сердечки*/
-.text_reviews {
-	display:flex;
-	justify-content:space-between;
-}
-
-.text_reviews span{
-	display:block;
-	padding-left:15px;
-}
-
-.heart {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	justify-content: space-between;
-	width:auto;
-	height:20px;
-	border-radius:22px;
-	margin-left:3px;
-	background-color: #fff;
-	position:relative;
-	cursor:pointer;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	color:#C7C7CF;
-}
-
-.fa_heart {
-	width:14px;
-	height:12px;
-	background-image:url(../../../assets/image/favorite_border.png);
-	background-repeat:no-repeat;
-	position:absolute;
-	top:3.5px;
-	left:3px;
-	pointer-events: none;
-}
-
-.fill_heart {
-	background-image:url(../../../assets/image/favorite.png);
-}
-
-.border_heart {
-	background-image:url(../../../assets/image/favorite_border.png);
-}
-
-span.span_heart {
-	font-size:11px;
-	user-select: none;
-	pointer-events: none;
-}
-
-.span-heart_active {
-	color:#BC9CFF;
-}
-
-.active_heart {
-	border:1px solid #B59DFF;
-}
 
 /*Правила номера и отмена*/
 .order_rooms .container {
@@ -305,62 +182,12 @@ span.span_heart {
 }
 
 /*Забронировать*/
-.booking {
-	width:380px;
-	height: 100%;
-	border:1px solid rgba(0, 0, 0, 0.12);
-	box-shadow:0px 0px 25px rgba(0, 0, 0, 0.2);
-	border-radius:4px;
-}
 
-.booking .container {
-	margin:50px 30px 30px 30px;
-
-}
-
-/*Заголовок*/
-.booking .container .head {
-	display:flex;
-	justify-content:space-between;
-}
-
-.booking .container .head p {
-	margin:4px 0 0 0;
-	color: rgba(31, 32, 65, 0.5);
-}
-
-.booking .container .head span {
-	margin-left:5px;
-	color:#BC9CFF;
-	font-size:16px;
-}
 
 /*Прибытие и отъезд*/
-.booking_arrival {
-	width:320px;
-	display:flex;
-	text-transform:uppercase;
-}
 
-.booking_arrival h2 {
-	margin-bottom:2px;
-	font-size:14px;
 
-}
 
-.container_arrival {
-	height:64.4px;
-	width:150px;
-	margin-right:20px;
-	position:relative;
-	transition:0.3s;
-}
-
-/*Наведение на инпуты*/
-.container_arrival input:hover {
-	border-color:#8C8C92;
-	transition:0.3s;
-}
 
 .container_departure input:hover {
 	border-color:#8C8C92;
@@ -370,27 +197,8 @@ span.span_heart {
 
 
 /*Стрелка - узнать больше*/
-.container_arrival:after ,.container_departure:after {
-	content:'';
-	width:15px;
-	height:15px;
-	display:inline-block;
-	position:absolute;
-	top:44px;
-	right:10px;
-	background-image:url(../../../assets/image/expand_more.svg);
-	background-repeat:no-repeat;
-	pointer-events: none;
-}
 
-.booking_arrival input {
-	width:135px;
-	height:41px;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	border-radius:4px;
-	padding-left:15px;
-	cursor:pointer;
-}
+
 
 .container_departure {
 	height:64.4px;
@@ -400,15 +208,7 @@ span.span_heart {
 }
 
 /*Блок гости*/
-.booking_guests {
-	margin-top:25px;
-	position:relative;
-}
 
-.booking_guests .guests {
-	padding: 12px 32px 8.44px 15px;
-	height: 22px;
-}
 
 .dropBlock {
 	z-index: 3;
@@ -431,68 +231,8 @@ span.span_heart {
 }
 
 /*Стрелочка - узнать больше*/
-.booking_guests:after {
-	content:'';
-	width:15px;
-	height:15px;
-	display:inline-block;
-	position:absolute;
-	top:44px;
-	right:10px;
-	background-image:url(../../../assets/image/expand_more.svg);
-	background-repeat:no-repeat;
-	pointer-events: none;
-}
 
-.booking_guests h2 {
-	margin:0;
-}
-/*блок с ценами*/
-.booking_price {
-	height:104px;
-	width:319px;
-	margin-top:30px;
-	color:rgba(31, 32, 65, 0.75);
-}
 
-.booking_price .container_block1,.container_block2,.container_block3 {
-	display:flex;
-	justify-content:space-between;
-	margin-bottom:15px;
-}
-
-.booking_price .span_container {
-	position:relative;
-}
-
-.booking_price .span_container:after {
-	content:'';
-	width:20px;
-	height:20px;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	border-radius:50%;
-	display:inline-block;
-	position:absolute;
-	top:0;
-	right:-30px;
-	background-image:url(../../../assets/image/i.svg);
-	background-repeat:no-repeat;
-	background-position:center;
-	cursor:pointer;
-}
-
-/*Итог ценообразования*/
-.result {
-	width:319px;
-	height:24px;
-	display:flex;
-	justify-content:space-between;
-	border-bottom:1px dashed rgba(31, 32, 65, 0.25);
-}
-
-.to_book {
-	margin-top: 20px;
-}
 
 .guests {
 	border: none;
@@ -501,8 +241,6 @@ span.span_heart {
 .guests:hover {
 	border: none;
 }
-
-
 
 .container_expend_details {
 	z-index: -1;
@@ -534,10 +272,6 @@ span.span_heart {
 
 	.order_rooms {
 		margin: 0 10px;
-	}
-
-	.user_reviews {
-		margin: 10px;
 	}
 }
 
@@ -572,29 +306,8 @@ span.span_heart {
 
 @media all and (max-width: 793px) {
 
-	.booking {
-		width: 360px;
-	}
-	
-	.booking_arrival {
-		flex-direction: column;
-	}
-
 	.container_departure {
 		margin-top: 10px;
-	}
-
-	.container_arrival,.container_departure 
-	{
-		width: 88%;
-	}
-	
-	.booking_arrival input {
-		width: 100%;
-	}
-
-	.container_arrival:after, .container_departure:after {
-		right: 0;
 	}
 
 	.order_rooms .container .order {
@@ -627,20 +340,4 @@ span.span_heart {
 	.room_loop1,.room_loop2, .room_loop3 {
 		height: 180px;
 	}
-}
-
-@media all and (max-width: 360px) {
-	.booking {
-		width: 100%;
-	}
-
-	.booking .container {
-		margin: 10px 0 10px 10px;
-		width: 100%;
-	}
-
-	.booking_guests {
-		width: 300px;
-	}
-
 }
