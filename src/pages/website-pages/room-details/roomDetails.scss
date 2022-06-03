@@ -207,12 +207,16 @@
 	transition:0.3s;
 }
 
-/*Блок гости*/
+.room-details__user-reviews-comments {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
 
-
-.dropBlock {
-	z-index: 3;
-	position: absolute;
+.room-details__title-comment {
+	font-weight: bold;
+	font-size: 19px;
+	color: #1F2041;
 }
 
 #temp {

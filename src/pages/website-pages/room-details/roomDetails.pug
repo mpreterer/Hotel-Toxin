@@ -46,13 +46,14 @@ block content
                                +impressions-room
                         .room-details__user-reviews
                             .room-details__user-reviews-comments
-                                h2 Отзывы посетителей номера
+                                span.room-details__title-comment Отзывы посетителей номера
                                 span.user-reviews__comment 2 отзыва 
-                            +user-reviews({ count: 12 })
+                            +user-reviews({ count: 11 })
                             +user-reviews({ 
                                 count: 2,
                                 username: 'Патрисия Стёклышкова',
                                 dayComment: 'Неделю назад',
+                                src: '../../assets/image/user_2.png',
                                 desc: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
                              })
                     +room-order({
