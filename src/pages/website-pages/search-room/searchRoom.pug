@@ -17,15 +17,13 @@ block variables
     - roomsList = require('./utils/rooms-info.json');
 
 block content
-    div#timeSpanFrom
-    div#timeSpanTo
-    div.content_search-room
-        div.left_bar
-            div.content__arrival-in-hotel
-                span.h_span_block_hotel даты пребывания в отеле
+    .search-room
+        .search-room__left-bar
+            .search-room__arrival-in-hotel
+                span.search-room__title даты пребывания в отеле
                 +alone-calendar
-            div.guests-container
-                span.h_span_block_hotel Гости
+            .search-room__guests-container
+                span.search-room__title Гости
                 +dropDown({
                     list: [
                         { name: 'взрослые', val: 2 },
@@ -35,27 +33,26 @@ block content
                     appointment: 'guests',
                     showFunction: true
                 })
-            div.price_hotel
-                div.middle
-                    +slider-range({
-                        title: 'ДИАПАЗОН ЦЕНЫ',
-                        subTitle: 'Стоимость за сутки пребывания в номере'
-                    })
-            div.order_in_house
-                span.h_span_block_hotel правила дома
+            .search-room__price-hotel
+                +slider-range({
+                    title: 'ДИАПАЗОН ЦЕНЫ',
+                    subTitle: 'Стоимость за сутки пребывания в номере'
+                })
+            .search-room__order-in-room
+                span.search-room__title правила дома
                 +custom-checkbox({text: 'Можно курить'})
                 +custom-checkbox({text: 'Можно с питомцами'})
                 +custom-checkbox({text: 'Можно пригласить гостей (до 10 человек)'})
-            div.availability
-                span.h_span_block_hotel доступность
+            .search-room__availability
+                span.search-room__title доступность
                 +checkbox-double-name({
                     list: [
                         { title: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.' },
                         { title: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.' },
                     ]
                 })
-            span.h_span_block_hotel удобства номера
-            div.conveniences1
+            span.search-room__title удобства номера
+            .search-room__furniture
                 +dropDown({
                     appointment: 'furniture',
                     list: [
@@ -66,7 +63,7 @@ block content
                     showFunction: false,
                     placeholder: 'Выберите удобства'
                 })
-            div.convenienceee
+            .search-room__convenience
                 +checkbox-list({
                     title: 'Дополнительные удобства',
                     list: [
@@ -80,9 +77,9 @@ block content
                         { text: 'Шампунь', isChecked: false },
                     ]
                 })
-        div.main_content_search-room
+        .search-room__rooms-container
             h2 Номера, которые мы для вас подобрали 
-            .container_in_hotel
+            .search-room__rooms
                 each room in roomsList
                     +room-info({
                         number: room.number,
@@ -92,5 +89,5 @@ block content
                         review: room.review,
                         sliders: room.sliders,
                     })
-            div.pagination__container
+            .search-room__pagination-container
                 +pagination

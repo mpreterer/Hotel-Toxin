@@ -1,5 +1,5 @@
 /*Блок с контентом*/
-.content_search-room {
+.search-room {
 	max-width: 1175px;
 	margin: 30px auto 60px auto;
 	line-height:15px;
@@ -8,7 +8,7 @@
 	justify-content:space-between;
 }
 
-.content_search-room .h_span_block_hotel {
+.search-room .search-room__title {
 	font-weight:bold;
 	text-transform:uppercase;
 }
@@ -69,7 +69,7 @@
 	left:20px;
 }
 
-// .content_search-room i {
+// .search-room i {
 // 	position:absolute;
 // 	font-size:18px;
 // 	color:rgba(31, 32, 65, 0.5);
@@ -79,13 +79,13 @@
 // 	cursor:pointer;
 // }
 
-.content_search-room .price_hotel {
+.search-room .search-room__price-hotel {
 	width:266px;
 	margin:35px 0 40px 0;
 	z-index:-1;
 }
 
-.price_hotel .span_price_hotel{
+.search-room__price-hotel .span_price_hotel{
 	color:#8B8B9C;
 }
 
@@ -110,13 +110,13 @@
     margin-bottom: 8px;
 }
 
-.order_in_house {
+.search-room__order-in-room {
 	height:128px;
 	width:266px;
 }
 
 /*блок доступность*/
-.availability {
+.search-room__availability {
 	height:148px;
 	width:266px;
 	margin: 40px 0 25px 0;
@@ -126,13 +126,13 @@
 }
 
 
-.availability .span_availability {
+.search-room__availability .span_availability {
 	color:#575870;
 	font-weight:bold;
 }
 
 
-.availability p {
+.search-room__availability p {
 	margin:5px 0 0 28px;
 }
 
@@ -174,19 +174,15 @@
 
 /*Блок основного контента*/
 
-.main_content_search-room{
+.search-room__rooms-container{
 	width:853px;
 }
 
-.main_content_search-room h2 {
+.search-room__rooms-container h2 {
 	margin:0 0 21px 0;
 	font-size:24px;
 	line-height:30px;
 }
-
-
-
-
 /*Перелистывания картинок комнат (стрелки)*/
 
 .move_arrow {
@@ -203,8 +199,6 @@
 	width:41px;
 	height:151px;
 }
-
-
 /*стрелка справа*/
 
 .arrow_right:hover {
@@ -238,24 +232,20 @@
 	background: #FFF;
 }
 
-
-
-.pagination__container p {
+.search-room__pagination-container p {
 	user-select: none;
 }
 
-.pagination__container {
+.search-room__pagination-container {
 	display: flex;
 	justify-content: center;
 	text-align: center;
 	flex-direction: column;
 }
 
-.pagination__container p {
+.search-room__pagination-container p {
 	font-size: 14px;
 }
-
-
 
 .convenience {
 	width:266px;
@@ -305,7 +295,7 @@ ul.slick-dots li button {
 	height:7.5px;
 }
 
-.left_bar {
+.search-room__left-bar {
 	max-width: 266px;
 	height: 100%;
 }
@@ -425,12 +415,12 @@ ul.slick-dots li {
 }
 
 @media screen and (max-width:1500px) {
-	.main_content_search-room {
+	.search-room__rooms-container {
 		margin: 0 auto;
 		text-align: center;
 	}
 
-	.content_search-room {
+	.search-room {
 		width: 80%;
 		height: 100%;
 	}
@@ -438,12 +428,12 @@ ul.slick-dots li {
 
 @media screen and (max-width:1065px) {
 	
-	.content_search-room {
+	.search-room {
 		display: flex;
 		flex-wrap: wrap;
 	}
 
-	.left_bar {
+	.search-room__left-bar {
 		margin: 0 auto;
 	}
 
@@ -451,13 +441,13 @@ ul.slick-dots li {
 
 @media screen and (max-width:1065px) {
 
-	.content_search-room {
+	.search-room {
 		width: 100%;
 	}
 }
 
 @media screen and (max-width:520px) {
-	.main_content_search-room {
+	.search-room__rooms-container {
 		margin-left: 0;
 	}
 }
