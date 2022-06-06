@@ -1,0 +1,47 @@
+.toggle {
+    display: flex;
+    align-items: center;
+
+    &__text {
+        margin-left: 42px;
+    }
+
+    &__checkbox {
+        appearance: none;
+    }
+
+    &__checkbox:before {
+        content:'';
+        width:40px;
+        height:20px;
+        border:1px solid rgba(31, 32, 65, 0.25);
+        border-radius:10px;
+        position:absolute;
+        left:0;
+        top: 0;
+        background-image:url(../../assets/image/Rectangle_2.svg);
+        background-repeat:no-repeat;
+        background-position:4px 4px;
+        transition:0.3s;
+        cursor:pointer;
+    }
+
+    &__checkbox:checked::before {
+        background-image:url(../../assets/image/Rectangle.svg);
+        background-position:right;
+        background-position:23px 4px;
+        border-color:#BC9CFF;
+        transition:0.3s;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .toggle {
+        margin-bottom:10px;
+        width:260px;
+    }
+    .toggle {
+        margin:0 0 0 55px;
+        font-size:12px;
+    }
+}
