@@ -1,9 +1,12 @@
 import './Registration.scss'
 import '../../style.scss'
-import '../../../blocks/calendar/calendar.scss'
 import '../../../blocks/button/button.scss'
 import '../../../blocks/footer/footer.scss'
 import '../../../blocks/header/header.scss'
+import '../../../blocks/radio-input/radio-input.scss'
+import '../../../blocks/registration-card/registration-card.scss'
+import '../../../blocks/text-input/text-input.scss'
+import '../../../blocks/toggle/toggle.scss'
 
-
-import '../../../js/datepicker.min.js'
+import '../../../blocks/registration-card/registration-card.js'
+import '../../../blocks/registration-card/registration-card-init.js'

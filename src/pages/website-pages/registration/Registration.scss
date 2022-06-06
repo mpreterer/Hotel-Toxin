@@ -3,22 +3,11 @@ p {
 	font-size: 12px;
 }
 
-.block_registration {
-	width: 100%;
-	height:684px;
-	background-image:url(../../../assets/image/registration_bg.jpg);
-	background-repeat:no-repeat;
-	background-position:center;
-	background-size: cover;
+.registration-main-container {
+	padding-top: 19px;
 }
 
-.block_registration .container {
-	width: 100%;
-	height:684px;
-	padding: 17px 0;
-}
-
-.registration_user {
+.registration-card {
 	width:380px;
 	background-color:#fff;
 	border:1px solid rgba(0, 0, 0, 0.12);
@@ -28,40 +17,39 @@ p {
 }
 
 /*Отцентровка панели регистрации*/
-.registration_user .container_user {
+.registration-card .registration-card__container {
 	width:320px;
 	padding:40px 30px 30px 30px;
 }
 
 
-.buy-button {
+.registration-card__buy-btn {
 	margin-top: 24px;
 }
 
 /*Заголовок*/
-.registration_user .head h1{
+.registration-card .registration-card__user-info h1{
 	margin:0;
 	font-size:24px;
 	line-height:30px;
 }
 
 /*Имя и фамилия*/
-.container_name {
+.registration-card__user-about {
 	margin-top:20px;
 }
 
-
-.container_name .user_name input:last-child {
+.registration-card__user-about .registration-card__user-name input:last-child {
 	margin:0;
 }
 
 /*Выбор полна (м/ж)*/
-.gender {
+.registration-card__gender {
 	position:relative;
 	margin-top:11px;
 }
 
-.gender .gender_checkbox {
+.registration-card__gender .registration-card__gender-checkbox {
 	width: 50px;
 	display:inline-flex;
 	align-items:center;
@@ -71,65 +59,31 @@ p {
 	opacity:0;
 }
 
-.gender label {
-	position:relative;
-	font-size:14px;
-	line-height:24px;
-	margin-left:30px;
-	user-select:none;
-	cursor:pointer;
-}
-
-.gender label:last-child {
-	margin-left:50px;
-}
-
-/*Чекбоксы*/
-.gender_checkbox+label::before {
-	content:'';
-	width:20px;
-	height:20px;
-	border-radius:50%;
-	border:1px solid rgba(31, 32, 65, 0.25);;
-	box-sizing:border-box;
-	display:inline-block;
-	position:absolute;
-	left:-30px;
-	top:-0.5px;
-}
-
-/*Наведен на чекбок но не нажал на него*/
-.gender_checkbox:not(:disabled):not(:checked)+label:hover::before {
-  border-color:#BC9CFF;
-}
-
-/*Нажал на чекбокс*/
-.gender_checkbox:checked+label::before {
-	background-image:url(../../../assets/image/Rectangle.svg);
-	background-position:center;
-	background-repeat:no-repeat;
-	border-color:#BC9CFF;
-}
-
-
 /*Дата рождения*/
-.date_birthday{
-	text-transform:uppercase;
-	width:320px;
-	height:64px;
+.registration-card__birthday{
 	line-height:15px;
-	margin-top:20px;
+	margin:20px 0 5px 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.registration-card__sub-title {
+	margin-bottom: 5px;
+	color: #1F2041;
+	text-transform:uppercase;
+	font-weight: bold;
+	font-size: 12px;
 }
 
 /*Данные для входа*/
-.data_login {
+.registration-card__data-login {
 	height:116px;
 	text-transform:uppercase;
 	margin-top:20px;
 }
 
 /*Спеиальное предложение*/
-.special_offer {
+.toggle {
 	height:22px;
 	width:320px;
 	position:relative;
@@ -138,80 +92,16 @@ p {
 	cursor:pointer;
 }
 
-.special_offer label {
-	margin-left:30px;
-	cursor:pointer;
-}
-
-.special_offer input {
-	opacity:0;
-}
-
-/*Чекбокс спецпредложения*/
-.offer_checkbox+label:before {
-	content:'';
-	width:40px;
-	height:20px;
-	display:inline-block;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	border-radius:10px;
-	position:absolute;
-	left:0;
-	background-image:url(../../../assets/image/Rectangle_2.svg);
-	background-repeat:no-repeat;
-	background-position:4px 4px;
-	transition:0.3s;
-	cursor:pointer;
-}
-
-/*Нажал на кнопку*/
-.offer_checkbox:checked+label::before {
-	background-image:url(../../../assets/image/Rectangle.svg);
-	background-position:right;
-	background-position:23px 4px;
-	border-color:#BC9CFF;
-	transition:0.3s;
-}
-
-/*Перейти к оплате (кнопка входа в login.html)*/
-
 /*Если есть аакаунт*/
-.if_have_account {
-	display:flex;
-	justify-content:space-between;
-	margin-top:30px;
-}
 
-.if_have_account .login {
-	height:42.4px;
-	width:97.4px;
-	border:2px solid #BC9CFF;
-	border-radius:22px;
-	text-align:center;
-	text-transform:uppercase;
-	color:#BC9CFF;
-	font-weight:bold;
-	cursor:pointer;
-}
-
-.if_have_account .question {
-	width:186px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.if_have_account .question p,.if_have_account .login p{
-	margin: 0;
-}
 
 /*Адаптивная верстка (дял смартфона)*/
 
 @media screen and (max-width:480px) {
-	.registration_user .head h1 {
+	.registration-card .registration-card__user-info h1 {
 		font-size:20px;
 	}
-	.registration_user {
+	.registration-card {
 		max-width:320px;
 	}
 
@@ -219,20 +109,13 @@ p {
 		margin-top:30px;
 	}
 	
-	.special_offer {
-		margin-bottom:10px;
-		width:260px;
-	}
-	.special_offer label {
-		margin:0 0 0 55px;
-		font-size:12px;
-	}
+	
 
-	.registration_user .container_user {
+	.registration-card .registration-card__container {
 		padding: 0;
 	}
 
-	.registration_user {
+	.registration-card {
 		padding: 20px 10px;
 	}
 

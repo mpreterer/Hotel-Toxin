@@ -2,50 +2,13 @@ extends ../../../template-head/main_index.pug
 include ../../../blocks/header/header.pug
 include ../../../blocks/footer/footer.pug
 include ../../../blocks/button/button.pug
+include ../../../blocks/registration-card/registration-card.pug
 
 block variables
     - var pageTitle = '«Toxin» | Регистрация'
 
 block content
-    div.block_registration
-        div.container
-            div.registration_user
-                div.container_user
-                    div.head
-                        h1 Регистрация аккаунта
-                    div.container_name
-                        div.user_name
-                            input.input_favorite(placeholder="Имя" autocomplete="off")
-                            input.input_favorite(placeholder="Фамилия" autocomplete="off")
-                        div.gender
-                                input#block_checkbox_1.gender_checkbox(type="radio" name="block_checkbox")
-                                label(for="block_checkbox_1") Мужчина
-                                input#block_checkbox_2.gender_checkbox(type="radio" name="block_checkbox")
-                                label(for="block_checkbox_2") Женщина
-                        div.date_birthday
-                            h4(style="margin:0 0 5px 0;") дата рождения
-                            input.datepicker-here.input_favorite(placeholder="ДД.ММ.ГГГГ" 
-                                                    data-range="true" 
-                                                    data-multiple-dates-separator=" - "
-                                                    readonly)
-                        div.data_login
-                            h4(style="margin:0 0 5px 0;") данные для входа в сервис
-                            input.input_favorite(placeholder="Email" autocomplete="off")
-                            input.input_favorite(placeholder="Пароль" autocomplete="off" type="password")
-                        div.special_offer
-                            input#block_checkbox_3.offer_checkbox(type="checkbox" name="block_checkbox")
-                            label(for="block_checkbox_3") Получать спецпредложения
-                        div.buy-button
-                            +button({
-                                text:'перейти к оплате',
-                                href: 'searchRoom.html',
-                                type: 'long'
-                            })
-                        div.if_have_account
-                            div.question
-                                p Уже есть аккаунт на Toxin
-                            +button({
-                                text: 'Войти',
-                                href: 'login.html',
-                                type: 'border',
-                            })
+    .registration-main
+        .registration-main-container
+            +registration-card
+            
