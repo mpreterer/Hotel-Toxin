@@ -7,22 +7,23 @@ include ../../../blocks/about-room/about-room.pug
 include ../../../blocks/impressions-room/impressions-room.pug
 include ../../../blocks/room-order/room-order.pug
 include ../../../blocks/user-reviews/user-reviews.pug
+include ../../../blocks/room-orders/room-orders.pug
 
 block variables 
     - pageTitle = '«Toxin» | Номер для вас'
 
 block content
-    div.content_room_details
-        div.container_room_loop
-            div.room_loop1
-            div.room_loop_head
-                div.room_loop2
-                div.room_loop3
-        div.expend_details_room
-            div.container_expend_details_room
-                div.container_split
-                    div.container_split_details
-                        div.container_expend_details
+    .room-details
+        .room-details__room-loop
+            .room-details__room-loop-big
+            .room-details__room-loop-head
+                .room-details__room-loop-middle-1
+                .room-details__room-loop-middle-2
+        .room-details__expend
+            .room-details__expend-container
+                .room-details__split-container
+                    .room-details__split
+                        .room-details__more-info
                             +about-room({
                                list: [
                                    {
@@ -42,12 +43,12 @@ block content
                                    }
                                ]
                             })
-                            div.impressions_room
+                            .room-details__impressions
                                +impressions-room
                         .room-details__user-reviews
                             .room-details__user-reviews-comments
                                 span.room-details__title-comment Отзывы посетителей номера
-                                span.user-reviews__comment 2 отзыва 
+                                span.room-details__reviews-comments 2 отзыва 
                             +user-reviews({ count: 11 })
                             +user-reviews({ 
                                 count: 2,
@@ -64,16 +65,14 @@ block content
                         discount: '2 179', 
                         services: 300
                     })
-                div.order_rooms
-                    div.container
-                        div.order
-                            h2 Правила
-                            ul.ul_order
-                                li.li_order1 Нельзя с питомцами 
-                                li.li_order2 Без вечеринок и мероприятий
-                                li.li_order3
-                                    span Время прибытия — после 13:00
-                                        span а выезд до 12:00  
-                        div.cancel
-                            h2(style="margin-bottom:19px;") Отмена
-                            p(style="margin-top:0; color:rgba(31,32,65,0.75);") Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги. 
+                .room-details__orders 
+                    +room-orders({
+                        list: [
+                            { txt: 'Нельзя с питомцами' },
+                            { txt: 'Без вечеринок и мероприятий' },
+                            { txt: 'Время прибытия — после 13:00, а выезд до 12:00' }
+                        ]
+                    })
+                    .room-details__cancel
+                        p.room-details__cancel-title Отмена
+                        span.room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги. 

@@ -14,6 +14,7 @@ import '../../../blocks/dropDown/dropDown.scss';
 import '../../../blocks/range-date-calendar/range-date-calendar.scss';
 import '../../../blocks/user-reviews/user-reviews.scss';
 import '../../../blocks/button-like/button-like.scss';
+import '../../../blocks/room-orders/room-orders.scss';
 
 import '../../../js/jquery-3.6.0.min.js'
 import '../../../js/datepicker.min.js' 
