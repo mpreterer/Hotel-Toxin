@@ -8,6 +8,7 @@ class AloneCalendar {
         this.$calendar = this.$container.querySelector('.js-calendar-container');
         this.$inputCalendar = this.$container.querySelector('.js-alone-calendar__calendar-container');
         this.hasOpenCalendar = this.$container.getAttribute('data-is-open');
+        this.dateFormat = this.$container.getAttribute('data-format');
         
         this.observers = [];
 
@@ -23,7 +24,7 @@ class AloneCalendar {
             isOpen,
             options: {
                 onSelect: (formattedDate) => this._set_date(formattedDate),
-                dateFormat: 'd MM',
+                dateFormat: this.dateFormat,
             }
         });
     }
