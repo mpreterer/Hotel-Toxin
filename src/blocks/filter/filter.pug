@@ -5,15 +5,15 @@ include ../range-date-calendar/range-date-calendar.pug
 mixin filter(options={})
     - const {title,buttonOptions,dropDownOptions} = options;
 
-    div.filter
-        div.filter__container-search-room
-            div.filter__search-room
+    .filter
+        .filter__container-search-room
+            .filter__search-room
                 h1 !{title}
-                div.filter__residence
-                    div.filter__block-date
-                        div.filter__block-date-calnedar
+                .filter__residence
+                    .filter__block-date
+                        .filter__block-date-calnedar
                             +range-date-calendar
-                        div.filter__container-dropDown
+                        .filter__container-dropDown
                             h3.filter__search-room-title Гости
                             +dropDown(dropDownOptions)
                         +button(buttonOptions)
