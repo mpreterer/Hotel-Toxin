@@ -1,0 +1,60 @@
+.registration-main {
+	width: 100%;
+	height:684px;
+	background-image:url(../../assets/image/registration_bg.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size: cover;
+}
+
+.registration-main .container {
+	width: 100%;
+	height:684px;
+	padding: 17px 0;
+}
+
+.registration-card__email {
+	margin: 5px 0 10px 0;
+}
+
+.registration-card__first-name {
+	margin-bottom: 10px;
+}
+
+.registration-card__has-account {
+	display:flex;
+	justify-content:space-between;
+	margin-top:30px;
+}
+
+.registration-card__has-account .login {
+	height:42.4px;
+	width:97.4px;
+	border:2px solid #BC9CFF;
+	border-radius:22px;
+	text-align:center;
+	text-transform:uppercase;
+	color:#BC9CFF;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.registration-card__title {
+	color: #1F2041;
+}
+
+.registration-card__question-txt {
+	font-size: 14px;
+	color: #000;
+}
+
+.registration-card__has-account .registration-card__question {
+	width:186px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.registration-card__has-account .registration-card__question p,.registration-card__has-account .login p{
+	margin: 0;
+}
