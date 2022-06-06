@@ -1,0 +1,20 @@
+mixin text-input(options={})
+  -
+    const {
+      name = '',
+      placeholder = '',
+      type = 'text',
+      disabled = false,
+      readonly = false,
+      isMasked = false,
+    } = options;
+
+  label.text-field
+    input.text-field__input(
+      data-masked= isMasked
+      type= type
+      name= name
+      placeholder= isMasked ? 'ДД.ММ.ГГГГ' : placeholder
+      disabled= disabled
+      readonly= readonly
+    )
