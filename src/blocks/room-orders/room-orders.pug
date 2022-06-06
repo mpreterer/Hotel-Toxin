@@ -1,0 +1,9 @@
+mixin room-orders({ list = [] }={})
+    div.room-orders
+        div.room-orders__container
+            div.room-orders__order
+                p.room-orders__title Правила
+                ul.room-orders__list
+                    each element in list
+                        li.room-order__element
+                            span.room-order__text= element.txt
