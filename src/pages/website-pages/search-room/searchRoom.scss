@@ -1,4 +1,3 @@
-/*Блок с контентом*/
 .search-room {
 	max-width: 1175px;
 	margin: 30px auto 60px auto;
@@ -8,9 +7,20 @@
 	justify-content:space-between;
 }
 
-.search-room .search-room__title {
+.search-room__arrival-in-hotel {
+	margin-bottom: 20px;
+}
+
+.search-room__title {
+	display: inline-block;
 	font-weight:bold;
 	text-transform:uppercase;
+	color: #1F2041;
+	margin-bottom: 5px;
+}
+
+.search-room__order-in-room .search-room__title {
+	margin-bottom: 17px;
 }
 
 .data_arrival_in_otel, .guests_in_hotel{
@@ -21,93 +31,10 @@
 }
 /*Левый бар*/
 
-.data_arrival_in_otel input, .guests_in_hotel input{
-	width:100%;
-	padding:12px 0 14.4px 15px;
-	box-sizing:border-box;
-	border-radius:4px;
-	background:#FFF;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	margin-top:5px;
-	cursor:pointer;
-	transition:0.2s;
-}
-
-/*Исправить грешок (parcel or webpack)*/
-.data_arrival_in_otel:after {
-	content:'';
-	display:inline-block;
-	position:absolute;
-	top:38px;
-	right:15px;
-	width:12px;
-	height:8px;
-	background-image:url(../../../assets/image/expand_more.svg);
-    pointer-events: none
-}
-
-.conveniences:after {
-	content:'';
-	display:inline-block;
-	position:absolute;
-	top:18px;
-	right:13px;
-	width:12px;
-	height:8px;
-	background-image:url(../../../assets/image/expand_more.svg);
-}
-
-.data_arrival_in_otel input:hover, .guests_in_hotel input:hover {
-	border-color:#848489;
-	transition:0.2s;
-}
-
-/*Гости*/
-
-#temp {
-	position:absolute;
-	left:20px;
-}
-
-// .search-room i {
-// 	position:absolute;
-// 	font-size:18px;
-// 	color:rgba(31, 32, 65, 0.5);
-// 	position:absolute;
-// 	top:33px;
-// 	right:15px;
-// 	cursor:pointer;
-// }
-
 .search-room .search-room__price-hotel {
 	width:266px;
 	margin:35px 0 40px 0;
 	z-index:-1;
-}
-
-.search-room__price-hotel .span_price_hotel{
-	color:#8B8B9C;
-}
-
-/*Слайдер выбора цен*/
-
-#form {
-    margin:0;
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    max-width:266px;
-    padding:5px 0;
-}
-.bar {
-    margin-bottom:7px;
-    padding:5px 0;
-    position:relative;
-    z-index:0;
-}
-.label {
-    color: #777777;
-    margin-bottom: 8px;
 }
 
 .search-room__order-in-room {
@@ -119,60 +46,24 @@
 .search-room__availability {
 	height:148px;
 	width:266px;
-	margin: 40px 0 25px 0;
+	margin: 30px 0 30px 0;
 	display:flex;
 	flex-direction:column;
 	user-select:none;
 }
 
+.search-room__furniture {
+	margin-bottom: 15px;
+}
 
 .search-room__availability .span_availability {
 	color:#575870;
 	font-weight:bold;
 }
 
-
-.search-room__availability p {
-	margin:5px 0 0 28px;
+.search-room__availability .search-room__title {
+	margin-bottom: 15px;
 }
-
-
-
-/*Выпадающий блок*/
-
-.conveniences {
-	margin-top:5px;
-	width:266px;
-	height:44px;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	box-sizing:border-box;
-	border-radius:4px;
-	padding:12px 91px 8px 15px;
-	position:relative;
-	transition:0.2s;
-	cursor: pointer;
-}
-
-.conveniences label {
-	cursor: pointer;
-}
-
-.conveniences:hover {
-	border-color:#848489;
-	transition:0.2s;
-}
-
-.conveniences input {
-	border:none;
-	width:200px;
-}
-
-.conveniences i {
-	position:absolute;
-	top:12px;
-}
-
-/*Блок основного контента*/
 
 .search-room__rooms-container{
 	width:853px;
