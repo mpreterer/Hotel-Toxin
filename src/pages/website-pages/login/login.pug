@@ -2,30 +2,13 @@ extends ../../../template-head/main_index.pug
 include ../../../blocks/header/header.pug
 include ../../../blocks/footer/footer.pug
 include ../../../blocks/button/button.pug
-
+include ../../../blocks/login-card/login-card.pug
 
 block variables
     - pageTitle = '«Toxin» | Вход'
 
 block content
-    div.block_login
-        div.container
-            div.login_user
-                div.container_user
-                    h1(style="margin:0; margin-bottom:20px;") Войти
-                    input.input_favorite(placeholder="Email" autocomplete="off" required="")
-                    input.input_favorite(placeholder="Пароль" autocomplete="off" type="password" required="")
-                    div.btn_login
-                        +button({
-                            text: 'Войти',
-                            type: 'long',
-                            href: 'searchRoom.html'
-                        })
-                    div.if_have_account
-                            div.question
-                                p Нет аккаунта на Toxin?
-                            +button({
-                                text: 'Содать',
-                                type: 'border',
-                                href: 'Registration.html'
-                            })
+    .login-page
+        .login-page__container
+            +login-card
+            

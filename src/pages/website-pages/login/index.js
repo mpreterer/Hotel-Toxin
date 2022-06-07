@@ -6,3 +6,5 @@ import '../../../blocks/header/header.scss'
 import '../../../blocks/button/button.scss'
 import '../../style.scss'
 
+import '../../../blocks/text-input/text-input.scss'
+import '../../../blocks/login-card/login-card.scss'

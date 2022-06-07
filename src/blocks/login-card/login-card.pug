@@ -1,0 +1,23 @@
+include ../text-input/text-input
+
+mixin login-card({}={})
+    .login-card
+        .login-card__container
+            span.login-card__title Войти
+            .login-card__email
+                +text-input({ placeholder: 'Email' })
+            .login-card__password
+                +text-input({ type: 'password', placeholder: 'Пароль' })
+            .login-card__login-btn
+                +button({
+                    text: 'Войти',
+                    type: 'long',
+                    href: 'searchRoom.html'
+                })
+            .login-card__has-account
+                    p.login-card__question Нет аккаунта на Toxin?
+                    +button({
+                        text: 'Содать',
+                        type: 'border',
+                        href: 'Registration.html'
+                    })

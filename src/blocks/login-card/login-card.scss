@@ -1,0 +1,56 @@
+.login-card {
+	height:358px;
+	width:380px;
+	background-color:#fff;
+	border:1px solid rgba(0, 0, 0, 0.12);
+	border-radius:4px;
+	box-shadow:0px 0px 25px rgba(0,0,0, 0.2);
+	margin: 0 auto;
+
+    &__container {
+        padding:40px 30px 32px 30px;
+        height:286px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        color: #1F2041;
+        margin-bottom: 20px;
+    }
+
+    &__email {
+        margin: 20px 0 10px 0;
+    }
+
+    &__login-btn {
+        margin-top: 20px;
+    }
+
+    &__has-account {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    &__question {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (min-width:320px) and (max-width:480px) {
+	.login-card {
+		max-width:320px;
+	}
+	.login-card input {
+		width:260px;
+	}
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+	.login-card__container .btn_login {
+		width:260px;
+	}
+}
