@@ -1,4 +1,5 @@
 import 'slick-carousel/slick/slick.min.js'
+import StarsRating from '../stars-rating/stars-rating'
 
 class RoomInfo {
     constructor(domParent) {
