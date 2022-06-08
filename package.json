@@ -42,6 +42,7 @@
     "donut-chart-js": "^1.0.1",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
+    "jquery-bar-rating": "^1.2.2",
     "nouislider": "^15.6.0",
     "slick-carousel": "^1.8.1"
   }
