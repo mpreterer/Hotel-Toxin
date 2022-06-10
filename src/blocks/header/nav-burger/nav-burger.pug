@@ -1,8 +1,8 @@
 mixin nav-burger({ navLinks = [] }={})
     div.nav-burger.burger.burger_menu_active
-        button.border1.border
-        button.border2.border
-        button.border3.border
+        button.nav-burger__border1.border
+        button.nav-burger__border2.border
+        button.nav-burger__border3.border
         ul.menu_burger
             each item in navLinks
                 a(href= item.link)

@@ -3,10 +3,10 @@
   position: absolute;
   z-index: 99;
   transform: translateY(5px);
-}
 
-.calendar-container__hidden {
-  display: none;
+  &__hidden {
+    display: none;
+  }
 }
 
 .calendar__buttons {

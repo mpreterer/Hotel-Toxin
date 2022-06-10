@@ -10,23 +10,23 @@
 	cursor:pointer;
 	border:1px solid rgba(31, 32, 65, 0.25);
 	color:#C7C7CF;
-}
 
-span.button-like__txt {
-	font-size:11px;
-	user-select: none;
-	pointer-events: none;
-	margin-left: 15px;
-}
+	&__txt {
+		font-size:11px;
+		user-select: none;
+		pointer-events: none;
+		margin-left: 15px;
+	}
 
-.button-like__heart {
-	position: absolute;
-	width:10px;
-	height:10px;
-	background-position: center;
-	background-image:url(../../assets/image/favorite_border.svg);
-	background-repeat:no-repeat;
-	pointer-events: none;
+	&__heart {
+		position: absolute;
+		width:10px;
+		height:10px;
+		background-position: center;
+		background-image:url(../../assets/image/favorite_border.svg);
+		background-repeat:no-repeat;
+		pointer-events: none;
+	}
 }
 
 .fill_heart {

@@ -1,52 +1,50 @@
-.radio-input__input {
-	appearance: none;
-	margin: 0;
-	padding: 0;
-}
-
-.radio-input__text {
-	padding-left: 10px;
-	color: #1F204180;
-}
-
 .radio-input {
 	display: flex;
-}
 
-.radio-input__label {
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-}
+	&__input {
+		appearance: none;
+		margin: 0;
+		padding: 0;
+	}
 
-.radio-input__label:last-child {
-	margin-left: 20px;
-}
+	&__text {
+		padding-left: 10px;
+		color: #1F204180;
+	}
 
-.radio-input__input::before {
-	content:'';
-	width:20px;
-	height:20px;
-	border-radius:50%;
-	border:1px solid rgba(31, 32, 65, 0.25);;
-	box-sizing:border-box;
-	display:block;
-	cursor: pointer;
-}
+	&__label {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
 
-/*Наведен на чекбок но не нажал на него*/
-.radio-input__input:not(:disabled):not(:checked):hover::before {
-  border-color:#BC9CFF;
-}
+	&__label:last-child {
+		margin-left: 20px;
+	}
 
-/*Нажал на чекбокс*/
-.radio-input__input:checked::before {
-	background-image:url(../../assets/image/radio-chacked.svg);
-	background-repeat:no-repeat;
-	background-position:center;
-	border-color:#BC9CFF;
-}
+	&__input::before {
+		content:'';
+		width:20px;
+		height:20px;
+		border-radius:50%;
+		border:1px solid rgba(31, 32, 65, 0.25);;
+		box-sizing:border-box;
+		display:block;
+		cursor: pointer;
+	}
 
-.radio-input__input:checked + .radio-input__text {
-	color: #1F2041BF;
+	&__input:not(:disabled):not(:checked):hover::before {
+		border-color:#BC9CFF;
+	}
+
+	&__input:checked::before {
+		background-image:url(../../assets/image/radio-chacked.svg);
+		background-repeat:no-repeat;
+		background-position:center;
+		border-color:#BC9CFF;
+	}
+
+	&__input:checked + .radio-input__text {
+		color: #1F2041BF;
+	}
 }

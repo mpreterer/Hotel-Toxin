@@ -4,80 +4,157 @@
 	border:1px solid rgba(0, 0, 0, 0.12);
 	box-shadow:0px 0px 25px rgba(0, 0, 0, 0.2);
 	border-radius:4px;
+
+	&__container {
+		margin:40px 30px 30px 30px;
+	}
+
+	&__head {
+		display:flex;
+		justify-content:space-between;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	&__number-container {
+		font-weight: bold;
+	}
+
+	&__number-room-title {
+		font-size: 24px;
+		color: #1F2041;
+	}
+
+	&__price-for-day {
+		color: rgba(31,32,65,0.5);
+		font-weight: bold;
+	}
+
+	&__price-currency {
+		color: rgba(31,32,65,0.5);
+		font-weight: bold;
+	}
+
+	&__number-num {
+		font-size: 14px;
+		margin-right: 2px;
+		color: #1F2041;
+	}
+
+	&__number-level {
+		margin-left: 8px;
+		font-size: 12px;
+		color: #BC9CFF;
+		text-transform: uppercase;
+	}
+
+	&__arrival {
+		margin-bottom: 20px;
+	}
+
+	&__arrival input {
+		width:135px;
+		height:41px;
+		border:1px solid rgba(31, 32, 65, 0.25);
+		border-radius:4px;
+		padding-left:15px;
+		cursor:pointer;
+	}
+
+	&__container-arrival {
+		height:64.4px;
+		width:150px;
+		margin-right:20px;
+		position:relative;
+		transition:0.3s;
+	}
+
+	&__container-arrival input:hover {
+		border-color:#8C8C92;
+		transition:0.3s;
+	}
+
+	&__container-arrival:after {
+		content:'';
+		width:15px;
+		height:15px;
+		display:inline-block;
+		position:absolute;
+		top:44px;
+		right:10px;
+		background-image:url(../../assets/image/expand_more.svg);
+		background-repeat:no-repeat;
+		pointer-events: none;
+	}
+
+	&__guests {
+		margin-bottom: 20px;
+	}
+
+	&__guests .dropDown {
+		margin-top: 5px;
+	}
+
+	&__fees, &__full-price, &__additional-fees {
+		display:flex;
+		justify-content:space-between;
+		margin-bottom:15px;
+	}
+
+	&__additional-fees-title, &__fees-container {
+		position:relative;
+	}
+
+	&__additional-fees-title {
+		width: 214px;
+	}
+
+	&__result-price {
+		display:flex;
+		justify-content:space-between;
+		margin-bottom: 20px;
+	}
+
+	&__all-result-price-container {
+		color: #1F2041;
+		font-weight: bold;
+		font-size: 19px;
+	}
+
+	&__all-result-price {
+		color: #1F2041;
+		font-weight: bold;
+		font-size: 19px;
+	}
+
+	&__all-result-price-hr {
+		width: 100%;
+		border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
+	}
+
+	&__fees-container:after, &__additional-fees-title:after {
+		content:'';
+		width:20px;
+		height:20px;
+		border:1px solid rgba(31, 32, 65, 0.25);
+		border-radius:50%;
+		display:inline-block;
+		position:absolute;
+		top:0;
+		right:-30px;
+		background-image:url(../../assets/image/i.svg);
+		background-repeat:no-repeat;
+		background-position:center;
+		cursor:pointer;
+	}
+
+	&__title-guest {
+		font-weight: bold;
+		color: #1F2041;
+	}
 }
 
-.room-order .room-order__container {
-	margin:40px 30px 30px 30px;
-}
-
-/*Заголовок*/
-.room-order__head {
-	display:flex;
-	justify-content:space-between;
-	align-items: center;
-	margin-bottom: 20px;
-}
-
-.room-order__number-container {
-	font-weight: bold;
-}
-
-.room-order__number-room-title {
-	font-size: 24px;
-	color: #1F2041;
-}
-
-.room-order__price-for-day {
-	color: rgba(31,32,65,0.5);
-	font-weight: bold;
-}
-
-.room-order__price-currency {
-	color: rgba(31,32,65,0.5);
-	font-weight: bold;
-}
-
-.room-order__number-num {
-	font-size: 14px;
-	margin-right: 2px;
-	color: #1F2041;
-}
-
-.order__number-level {
-	margin-left: 8px;
-	font-size: 12px;
-	color: #BC9CFF;
-	text-transform: uppercase;
-}
-
-.room-order__arrival {
-	margin-bottom: 20px;
-}
-
-.room-order__arrival input {
-	width:135px;
-	height:41px;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	border-radius:4px;
-	padding-left:15px;
-	cursor:pointer;
-}
-
-.room-order__container-arrival {
-	height:64.4px;
-	width:150px;
-	margin-right:20px;
-	position:relative;
-	transition:0.3s;
-}
-
-/*Наведение на инпуты*/
-.room-order__container-arrival input:hover {
-	border-color:#8C8C92;
-	transition:0.3s;
-}
-
-.room-order__container-arrival:after ,.container_departure:after {
+.container_departure:after {
 	content:'';
 	width:15px;
 	height:15px;
@@ -90,79 +167,13 @@
 	pointer-events: none;
 }
 
-.room-order__guests {
-	margin-bottom: 20px;
-}
-
-.room-order__guests .dropDown {
-	margin-top: 5px;
-}
-
-.room-order__price .room-order__full-price,.room-order__fees,.room-order__additional-fees {
-	display:flex;
-	justify-content:space-between;
-	margin-bottom:15px;
-}
-
-.room-order__fees-container, .room-order__additional-fees-title {
-	position:relative;
-}
-
-.room-order__additional-fees-title {
-	width: 214px;
-}
-
-.room-order__result-price {
-	display:flex;
-	justify-content:space-between;
-	margin-bottom: 20px;
-}
-
-.room-order__all-result-price-container {
-	color: #1F2041;
-	font-weight: bold;
-	font-size: 19px;
-}
-
-.room-order__all-result-price {
-	color: #1F2041;
-	font-weight: bold;
-	font-size: 19px;
-}
-
-.room-order__all-result-price-hr {
-	width: 100%;
-	border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
-}
-
 .to_book {
 	margin-top: 20px;
-}
-
-.room-order__fees-container:after, .room-order__additional-fees-title:after {
-	content:'';
-	width:20px;
-	height:20px;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	border-radius:50%;
-	display:inline-block;
-	position:absolute;
-	top:0;
-	right:-30px;
-	background-image:url(../../assets/image/i.svg);
-	background-repeat:no-repeat;
-	background-position:center;
-	cursor:pointer;
 }
 
 .booking_guests {
 	margin-top:25px;
 	position:relative;
-}
-
-.room-order__title-guest {
-	font-weight: bold;
-	color: #1F2041;
 }
 
 .booking_guests .guests {
@@ -175,37 +186,38 @@
 	.booking {
 		width: 360px;
 	}
-	
-	.room-order__arrival {
-		flex-direction: column;
-	}
 
-    .room-order__arrival input {
-		width: 100%;
-	}
+	.room-order {
+		&__arrival {
+			flex-direction: column;
+		}
 
-    .room-order__container-arrival,.container_departure 
-	{
-		width: 88%;
-	}
+		&__arrival input {
+			width: 100%;
+		}
 
-	.room-order__container-arrival:after, .container_departure:after {
-		right: 0;
+		&__container-arrival, .container_departure 
+		{
+			width: 88%;
+		}
+
+		&__container-arrival:after, .container_departure:after {
+			right: 0;
+		}
 	}
 }
 
 @media all and (max-width: 360px) {
 	.booking {
 		width: 100%;
-	}
 
-	.booking .container {
-		margin: 10px 0 10px 10px;
-		width: 100%;
+		& .container {
+			margin: 10px 0 10px 10px;
+			width: 100%;
+		}
 	}
 
 	.booking_guests {
 		width: 300px;
 	}
-
 }

@@ -1,66 +1,64 @@
-.impressions_room {
-	width:311px;
-}
+.impressions-room {
+	&__container {
+		display:flex;
+	}
 
-.impressions-room__container {
-	display:flex;
-}
+	&__container-donut {
+		position: relative;
+		margin-right: 25px;
+	}
 
-.impressions-room__container-donut {
-	position: relative;
-	margin-right: 25px;
-}
+	&__comments-count {
+		height: 50px;
+		position: absolute;
+		top: 28px;
+		left: 24px;
+		color: #BC9CFF;
+		text-align: center;
+		z-index: -3;
+	}
 
-.impressions-room__container-donut .impressions-room__comments-count {
-	height: 50px;
-	position: absolute;
-	top: 28px;
-	left: 24px;
-	color: #BC9CFF;
-	text-align: center;
-	z-index: -3;
-}
+	&__comments-count p {
+		margin: 0;
+	}
 
-.impressions-room__container-donut .impressions-room__comments-count p {
-	margin: 0;
-}
+	&__comments-count p:first-child {
+		font-family: 'Quicksand', 'Open Sans', Arial, Helvetica, sans-serif;
+		font-size: 1.714rem;
+		font-style: normal;
+		font-weight: bold;
+		line-height: 2.143rem;
+		text-transform: uppercase;
+	}
 
-.impressions-room__container-donut .impressions-room__comments-count p:first-child {
-	font-family: 'Quicksand', 'Open Sans', Arial, Helvetica, sans-serif;
-	font-size: 1.714rem;
-	font-style: normal;
-	font-weight: bold;
-	line-height: 2.143rem;
-	text-transform: uppercase;
-}
-.impressions-room__container-donut .impressions-room__comments-count p:last-child {
-	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-	font-size: 0.857rem;
-	font-weight: bold;
-	line-height: 1.071rem;
-	text-transform: uppercase;
-}
+	&__comments-count p:last-child {
+		font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+		font-size: 0.857rem;
+		font-weight: bold;
+		line-height: 1.071rem;
+		text-transform: uppercase;
+	}
 
-.impressions-room__list {
-    width:161px;
-	height:96px;
-	margin-top:15px;
-	padding:0;
-	list-style:none
-}
+	&__list {
+		width:161px;
+		height:96px;
+		margin-top:15px;
+		padding:0;
+		list-style:none
+	}
 
-.impressions-room__list li {
-	margin-bottom:8px;
-}
+	&__list li {
+		margin-bottom:8px;
+	}
 
-/*Блоки круги напротив li*/
-.impressions-room__list li:before {
-	content:'';
-	width:10px;
-	height:10px;
-	display:inline-block;
-	border-radius:50%;
-	margin-right:5px;
+	&__list li:before {
+		content:'';
+		width:10px;
+		height:10px;
+		display:inline-block;
+		border-radius:50%;
+		margin-right:5px;
+	}
 }
 
 #li_impressions1:before {

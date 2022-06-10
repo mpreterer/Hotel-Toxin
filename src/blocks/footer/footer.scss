@@ -169,19 +169,19 @@
 		&__sub {
 			padding: 0 15px;
 		}
-	}
 
-	.footer__navigation, .footer-nav-menu {
-		display: none;
-	}
+		&__navigation, .footer-nav-menu {
+			display: none;
+		}
 
-	.footer .footer_list {
-		justify-content: space-between;
-		padding: 0 15px;
-	}
+		& .footer_list {
+			justify-content: space-between;
+			padding: 0 15px;
+		}
 
-	footer .footer_list div {
-		margin-top: 30px;
+		& .footer_list div {
+			margin-top: 30px;
+		}
 	}
 }
 

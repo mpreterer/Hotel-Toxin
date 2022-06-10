@@ -39,20 +39,17 @@ button {
 	padding-left:15px;
 	cursor:pointer;
 	margin-bottom: 10px;
+
+	&:hover {
+		border-color:#6F6F74;
+	}
+
+	&:focus {
+		color:rgba(31, 32, 65, 0.75);
+	}
 }
 
-.input_favorite:hover {
-	border-color:#6F6F74;
-}
-
-.input_favorite:focus {
-	color:rgba(31, 32, 65, 0.75);
-}
-/*верхушка сайта*/
-
-/*Бургер*/
-
-.border1 {
+.nav-burger__border1 {
 	height:8px;
 	width:50px;
 	background:linear-gradient(180deg, #BC9CFF 0%,#8BA4F9 100%);
@@ -61,7 +58,7 @@ button {
 	left:0;
 	transition:0.2s;
 }
-.border2 {
+.nav-burger__border2 {
 	position:absolute;
 	width:50px;
 	height:8px;
@@ -70,7 +67,7 @@ button {
 	transition:0.2s;
 }
 
-.border3 {
+.nav-burger__border3 {
 	height:8px;
 	width:50px;
 	background:linear-gradient(180deg, #BC9CFF 0%,#8BA4F9 100%);

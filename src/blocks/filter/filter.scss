@@ -47,113 +47,126 @@
 		width: 150px;
 	}
 
-}
+	&__date-arrival {
+		position:relative;
+		border-radius: 4px;
+		border:1px solid rgba(31, 32, 65, 0.25);
+		cursor: pointer;
+	}
 
-.filter__search-room .filter__date-arrival, .filter__date_departure {
-	position:relative;
-	border-radius: 4px;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	cursor: pointer;
-}
+	&__date_departure {
+		position:relative;
+		border-radius: 4px;
+		border:1px solid rgba(31, 32, 65, 0.25);
+		cursor: pointer;
+	}
 
-.filter__search-room .filter__date-arrival:hover, .filter__date_departure:hover {
-	border:1px solid #787878;
-}
+	&__date-arrival:hover {
+		border:1px solid #787878;
+	}
 
-.filter__residence {
-	margin-top: 21px;
-}
+	&__date_departure:hover {
+		border:1px solid #787878;
+	}
 
-.filter__search-room-title {
-	margin-bottom: 5px;
-}
+	&__residence {
+		margin-top: 21px;
+	}
 
-.filter__search-room .filter__residence input {
-	cursor:pointer;
-	border:none;
-	border-radius:3px;
-}
+	&__search-room-title {
+		margin-bottom: 5px;
+	}
 
-.filter__search-room .filter__container-date-departure {
-	margin-left: 18px;
-	position: relative;
-}
+	&__residence input {
+		cursor:pointer;
+		border:none;
+		border-radius:3px;
+	}
 
-.filter__search-room .filter__button-pay{
-	width:320px;
-	height:19px;
-	border-radius:22px;
-	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-	color:white;
-	text-align:center;
-	padding: 15px 0 10px 0;
-}
+	&__container-date-departure {
+		margin-left: 18px;
+		position: relative;
+	}
 
-.filter__search-room .filter__residence .filter__button-pay:hover {
-	background:linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
-	border-radius:40px;
-}
+	&__button-pay{
+		width:320px;
+		height:19px;
+		border-radius:22px;
+		background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+		color:white;
+		text-align:center;
+		padding: 15px 0 10px 0;
+	}
 
-.filter__search-room-link {
-	height: 44px;
-	margin-top:32px;
-}
+	&__button-pay:hover {
+		background:linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
+		border-radius:40px;
+	}
 
-.filter__search-room-link .filter__button-pay p {
-	margin: 0;
-}
+	&__search-room-link {
+		height: 44px;
+		margin-top:32px;
+	}
 
-.filter__block-date {
-	display:flex;
-	justify-content:space-around;
-	flex-direction: column;
-	text-align:left;
-	flex-wrap:wrap;
-	margin:0;
-	padding:0;
-}
+	&__button-pay p {
+		margin: 0;
+	}
 
-.filter__block-date p {
-	margin-top: 21.7px;
-	font-size: 12px;
-}
+	&__block-date {
+		display:flex;
+		justify-content:space-around;
+		flex-direction: column;
+		text-align:left;
+		flex-wrap:wrap;
+		margin:0;
+		padding:0;
+	}
 
-.filter__block-date h3 {
-	font-size: 12px;
-	text-transform: uppercase;
-}
+	&__block-date p {
+		margin-top: 21.7px;
+		font-size: 12px;
+	}
 
-.filter__container-dropDown {
-	margin: 21px 0 31px 0;
+	&__block-date h3 {
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+
+	&__container-dropDown {
+		margin: 21px 0 31px 0;
+	}
 }
 
 @media all and (max-width:1200px ) {
-    .filter .filter__container-search-room {
-		padding-left: 0;
-	}
-	
-	.filter .filter__search-room {
-		padding: 15px;
-		margin: 0 auto;
-	}
+    .filter {
+		&__container-search-room {
+			padding-left: 0;
+		}
 
-    .filter .filter__search-room {
-		left: 10px;
-		width: 350px;
+		&__search-room {
+			padding: 15px;
+			margin: 0 auto;
+		}
+
+		&__search-room {
+			left: 10px;
+			width: 350px;
+		}
 	}
 }
 
 @media all and (max-width:425px) {
-    .filter .filter__search-room {
-		width: auto;
-    }
+    .filter {
+		&__search-room {
+			width: auto;
+		}
 
-    .filter__search-room .filter__date_departure {
-		width: 100%;
+		&__date_departure {
+			width: 100%;
+		}
+
+		& .dropDown__name {
+			width: auto;
+		}
 	}
-
-    .filter__search-room .filter__container-dropDown .dropDown__name {
-		width: auto;
-	}
-
 }

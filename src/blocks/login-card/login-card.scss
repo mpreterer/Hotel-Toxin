@@ -43,9 +43,10 @@
 @media screen and (min-width:320px) and (max-width:480px) {
 	.login-card {
 		max-width:320px;
-	}
-	.login-card input {
-		width:260px;
+
+        & input {
+            width:260px;
+        }
 	}
 }
 
