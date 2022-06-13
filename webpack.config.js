@@ -36,7 +36,7 @@ module.exports = () => {
         output: {
             filename: 'js/[name].js',
             path: path.resolve(__dirname,'dist'),
-            assetModuleFilename: 'assets/images/[name][ext]'
+            assetModuleFilename: 'assets/image/[name][ext]'
         },
         watchOptions: {
             ignored: /node_modules/,
@@ -149,6 +149,12 @@ module.exports = () => {
                         'style-loader',
                         'css-loader',
                         'sass-loader',
+                        {
+                            loader: 'sass-resources-loader',
+                            options: {
+                                resources: [path.resolve(__dirname, 'src/assets/styles/_vars.scss')]
+                            }
+                        }
                     ]
                 },
                 {
