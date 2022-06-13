@@ -28,26 +28,26 @@
         width: 70px;
         height: 70px;
         border-radius: 6px;
-        background: #1f2041;
+        background: #1F2041;
         margin-right: 40px;
     }
     #square2 {
-        background: rgba(31, 32, 65, 0.75);
+        background: $color-shade-secondary;
     }
     #square3 {
-        background: rgba(31, 32, 65, 0.5);
+        background: $color-shade-grey;
     }
     #square4 {
-        background: rgba(31, 32, 65, 0.25);
+        background: $color-shade;
     }
     #square5 {
-        background: rgba(31, 32, 65, 0.05);
+        background: $color-shade-ligth;
     }
     #square6 {
-        background: #BC9CFF;
+        background: $color-purple;
     }
     #square7 {
-        background: #6FCF97;
+        background: $color-green;
     }
     &__text {
         width: 171px;
@@ -55,7 +55,7 @@
         & h2 {
             margin: 0;
             line-height: 28px;
-            font-size: 19px;
+            font-size: $font-size-medium;
         }
         & p {
             margin: 0;
@@ -76,51 +76,51 @@
         margin-bottom: 50px;
     }
     & h1 {
-        font-size: 24px;
+        font-size: $font-size-big;
         line-height: 29px;
     }
     #h1 {
-        font-size: 24px;
+        font-size: $font-size-big;
         line-height: 29px;
-        color: rgba(31, 32, 65, 0.25);
+        color: $color-shade;
     }
     & h2 {
-        font-size: 19px;
+        font-size: $font-size-medium;
         line-height: 23px;
     }
     #h2 {
-        font-size: 19px;
+        font-size: $font-size-medium;
         line-height: 23px;
         margin-left: 3px;
-        color: rgba(31, 32, 65, 0.25);
+        color: $color-shade;
     }
     & h3  {
-        font-size: 12px;
+        font-size: $font-size-small;
         line-height: 15px;
     }
     #h3 {
-        font-size: 12px;
+        font-size: $font-size-small;
         line-height: 15px;
         margin-left: 10px;
-        color: rgba(31, 32, 65, 0.25);
+        color: $color-shade;
     }
     & p {
-        font-size: 14px;
+        font-size: $font-size-main;
         line-height: 24px;
     }
     #p {
-        font-size: 14px;
+        font-size: $font-size-main;
         line-height: 24px;
         margin-right: 20px;
-        color: rgba(31, 32, 65, 0.25);
+        color: $color-shade;
     }
     &__h {
         margin-right: 30px;
-        color: rgba(31, 32, 65, 0.25);
+        color: $color-shade;
     }
     &__text {
-        color: #1F2041;
-        font-size: 24px;
+        color: $color-shade-dark;
+        font-size: $font-size-big;
         line-height: 29px;
         margin: 0px;
     }

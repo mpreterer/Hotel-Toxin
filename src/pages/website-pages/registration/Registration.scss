@@ -1,6 +1,6 @@
 /*Блок с регистрацией пользователя*/
 p {
-	font-size: 12px;
+	font-size: $font-size-small;
 }
 
 .registration-main-container {
@@ -30,7 +30,7 @@ p {
 /*Заголовок*/
 .registration-card .registration-card__user-info h1{
 	margin:0;
-	font-size:24px;
+	font-size: $font-size-big;
 	line-height:30px;
 }
 
@@ -69,10 +69,10 @@ p {
 
 .registration-card__sub-title {
 	margin-bottom: 5px;
-	color: #1F2041;
+	color: $color-shade-dark;
 	text-transform:uppercase;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: $font-size-small;
 }
 
 /*Данные для входа*/

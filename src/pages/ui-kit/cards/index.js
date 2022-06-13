@@ -1,4 +1,4 @@
-import './cards.sass'
+import './cards.scss'
 import '../../style.scss'
 import '../../website-pages/search-room/searchRoom.scss'
 import '../../website-pages/registration/Registration.scss'

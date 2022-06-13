@@ -1,1 +1,1 @@
-import './site-pages.sass'
+import './site-pages.scss'

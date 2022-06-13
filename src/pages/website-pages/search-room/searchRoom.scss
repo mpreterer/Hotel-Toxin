@@ -2,7 +2,7 @@
 	max-width: 1175px;
 	margin: 30px auto 60px auto;
 	line-height:15px;
-	font-size:12px;
+	font-size: $font-size-small;
 	display:flex;
 	justify-content:space-between;
 }
@@ -15,7 +15,7 @@
 	display: inline-block;
 	font-weight:bold;
 	text-transform:uppercase;
-	color: #1F2041;
+	color: $color-shade-dark;
 	margin-bottom: 5px;
 }
 
@@ -71,7 +71,7 @@
 
 .search-room__rooms-container h2 {
 	margin:0 0 21px 0;
-	font-size:24px;
+	font-size: $font-size-big;
 	line-height:30px;
 }
 /*Перелистывания картинок комнат (стрелки)*/
@@ -105,10 +105,10 @@
 .feedback {
 	height:18px;
 	width:90px;
-	font-size:14px;
+	font-size: $font-size-main;
 	line-height:18px;
 	text-align:right;
-	color: rgba(31, 32, 65, 0.5);
+	color: $color-shade-grey;
 	margin-top:5px;
 }
 
@@ -135,7 +135,7 @@
 }
 
 .search-room__pagination-container p {
-	font-size: 14px;
+	font-size: $font-size-main;
 }
 
 .convenience {
@@ -273,7 +273,7 @@ ul.slick-dots li {
 	display:flex;
 	font-weight:normal;
 	user-select:none;
-	color:rgba(31, 32, 65, 0.5);
+	color: $color-shade-grey;
 	cursor:pointer;
 }
 
@@ -283,7 +283,7 @@ ul.slick-dots li {
 	width:20px;
 	height:20px;
 	display:inline-block;
-	border:1px solid rgba(31, 32, 65, 0.25);
+	border:1px solid $color-shade;
 	box-sizing:border-box;
 	border-radius:4px;
 	margin-right:10px;
@@ -291,7 +291,7 @@ ul.slick-dots li {
 
 /*Нажал на чекбокс*/
 .convenience-checkbox:checked+label::before {
-  border-color:#BC9CFF;
+  border-color:$color-purple;
   background-color:#FFF;
   background-image:url(../../../assets/image/checked.svg);
   background-size:50% 50%;
@@ -302,7 +302,7 @@ ul.slick-dots li {
 
 /* стили при наведении курсора на checkbox */
 .convenience-checkbox:not(:disabled):not(:checked)+label:hover::before {
-  border-color:#BC9CFF;
+  border-color:$color-purple;
 }
 
 @media screen and (max-width:1500px) {

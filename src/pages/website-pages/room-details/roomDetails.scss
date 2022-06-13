@@ -81,7 +81,7 @@
 
 
 .room-details__expend-container h2 {
-	font-size:19px;
+	font-size: $font-size-medium;
 	line-height:24px;
 	margin:0 0 24px 0;
 }
@@ -104,18 +104,18 @@
 /*Кол-во голосов*/
 .rating_impressions p {
 	text-align:center;
-	color:#BC9CFF;
+	color:$color-purple;
 	font-weight:bold;
 }
 
 .rating_impressions p:first-child{
-	font-size:24px;
+	font-size: $font-size-big;
 	line-height:30px;
 	margin:35px 0 0 0;
 }
 
 .rating_impressions p:last-child{
-	font-size:12px;
+	font-size: $font-size-small;
 	line-height:15px;
 	margin:0;
 }
@@ -143,8 +143,8 @@
 .room-details__cancel-title {
 	margin: 0 0 20px 0;
 	font-weight: bold;
-	color: #1F2041;
-	font-size: 19px;
+	color: $color-shade-dark;
+	font-size: $font-size-medium;
 }
 
 .container_departure input:hover {
@@ -167,8 +167,8 @@
 
 .room-details__title-comment {
 	font-weight: bold;
-	font-size: 19px;
-	color: #1F2041;
+	font-size: $font-size-medium;
+	color: $color-shade-dark;
 }
 
 #temp {

@@ -1,9 +1,9 @@
-import './roomDetails.scss'
-import '../../style.scss'
-import '../../../blocks/calendar/calendar.scss'
-import '../../../assets/scss/Chart.min.css'
-import '../../../blocks/filter/filter.scss'
-import '../../../blocks/dropDown/dropDown.scss'
+import './roomDetails.scss';
+import '../../style.scss';
+import '../../../blocks/calendar/calendar.scss';
+import '../../../assets/scss/Chart.min.css';
+import '../../../blocks/filter/filter.scss';
+import '../../../blocks/dropDown/dropDown.scss';
 import '../../../blocks/button/button.scss';
 import '../../../blocks/footer/footer.scss'
 import '../../../blocks/header/header.scss';
@@ -16,10 +16,10 @@ import '../../../blocks/user-reviews/user-reviews.scss';
 import '../../../blocks/button-like/button-like.scss';
 import '../../../blocks/room-orders/room-orders.scss';
 
-import '../../../js/jquery-3.6.0.min.js'
-import '../../../js/datepicker.min.js' 
-import '../../../blocks/dropDown/dropDown.js'
-import '../../../js/datepicker.min.js'
+import '../../../js/jquery-3.6.0.min.js';
+import '../../../js/datepicker.min.js' ;
+import '../../../blocks/dropDown/dropDown.js';
+import '../../../js/datepicker.min.js';
 import '../../../blocks/about-room/about-room.js';
 import '../../../blocks/impressions-room/impressions-room.js';
 import '../../../blocks/impressions-room/impressions-room-init.js';
