@@ -13,7 +13,7 @@
 		position: absolute;
 		top: 28px;
 		left: 24px;
-		color: #BC9CFF;
+		color: $color-purple;
 		text-align: center;
 		z-index: -3;
 	}
@@ -66,11 +66,11 @@
 }
 
 #li_impressions2:before {
-	background:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+	background:$gradient-secondary;
 }
 
 #li_impressions3:before {
-	background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	background:$gradient-main;
 }
 
 #li_impressions4:before {

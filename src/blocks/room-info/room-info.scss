@@ -4,7 +4,7 @@
 	margin:0 12px 12px 0;
 	background: #FFF;
 	background-repeat:no-repeat;
-	box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
+	box-shadow:0px 10px 20px $color-shade-ligth;
 	border-radius:4px;
 	position:relative;
 	user-select:none;
@@ -74,7 +74,7 @@
 	}
 
 	&__level {
-		color:#BC9CFF;
+		color:$color-purple;
 		text-transform:uppercase;
 		line-height:15px;
 		padding:0 30px 0 4px;
@@ -109,7 +109,7 @@
 	&__number-room {
 		font-size: 18px;
 		font-weight: bold;
-		color: #1F2041;
+		color: $color-shade-dark;
 	}
 
 	&__price {
@@ -128,7 +128,7 @@
 	&__feedback {
 		color: #1F204180;
 		font-weight: bold;
-		font-size: 14px;
+		font-size: $font-size-main;
 		width: 90px;
 	}
 
@@ -183,6 +183,13 @@ button.slick-next.slick-arrow {
 	transition: .3s;
 }
 
+.slick-prev {
+	border-radius: 4px 0 0 4px;
+}
+
+.slick-next {
+	border-radius: 0 4px 4px 0;
+}
 
 button.slick-next.slick-arrow::before, button.slick-prev.slick-arrow::before {
 	content: '';

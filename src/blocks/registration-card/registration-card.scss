@@ -31,21 +31,21 @@
 	&__has-account .login {
 		height:42.4px;
 		width:97.4px;
-		border:2px solid #BC9CFF;
+		border:2px solid $color-purple;
 		border-radius:22px;
 		text-align:center;
 		text-transform:uppercase;
-		color:#BC9CFF;
+		color:$color-purple;
 		font-weight:bold;
 		cursor:pointer;
 	}
 
 	&__title {
-		color: #1F2041;
+		color: $color-shade-dark;
 	}
 
 	&__question-txt {
-		font-size: 14px;
+		font-size: $font-size-main;
 		color: #000;
 	}
 

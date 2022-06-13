@@ -1,20 +1,10 @@
 .filter {
-	height:830px;
-	background-image:url(../../assets/image/content.jpg);
-	background-repeat:no-repeat;
-	background-position: center;
-
-	&__container-search-room {
-		padding: 70px 0 0 180px;
-	}
-
 	&__search-room {
 		width:380px;
 		background:#fff;
 		color:#1F2041;
 		font-weight:bold;
 		font-style:normal;
-		font-family:Montserrat,sans-serif;
 		padding:40px 30px 30px 30px;
 		border:1px solid rgba(0, 0, 0, 0.12);
 		box-sizing:border-box;
@@ -24,7 +14,7 @@
 		flex-direction:column;
 
 		& h1 {
-			font-size: 24px;
+			font-size: $font-size-big;
 			margin:0;
 		}
 
@@ -50,14 +40,14 @@
 	&__date-arrival {
 		position:relative;
 		border-radius: 4px;
-		border:1px solid rgba(31, 32, 65, 0.25);
+		border:1px solid $color-shade;
 		cursor: pointer;
 	}
 
 	&__date_departure {
 		position:relative;
 		border-radius: 4px;
-		border:1px solid rgba(31, 32, 65, 0.25);
+		border:1px solid $color-shade;
 		cursor: pointer;
 	}
 
@@ -92,7 +82,7 @@
 		width:320px;
 		height:19px;
 		border-radius:22px;
-		background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+		background:$gradient-main;
 		color:white;
 		text-align:center;
 		padding: 15px 0 10px 0;
@@ -124,11 +114,11 @@
 
 	&__block-date p {
 		margin-top: 21.7px;
-		font-size: 12px;
+		font-size: $font-size-small;
 	}
 
 	&__block-date h3 {
-		font-size: 12px;
+		font-size: $font-size-small;
 		text-transform: uppercase;
 	}
 

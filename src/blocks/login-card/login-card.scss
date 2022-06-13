@@ -14,8 +14,8 @@
 
     &__title {
         font-weight: bold;
-        font-size: 24px;
-        color: #1F2041;
+        font-size: $font-size-big;
+        color: $color-shade-dark;
         margin-bottom: 20px;
     }
 
@@ -35,7 +35,7 @@
     }
 
     &__question {
-        font-size: 14px;
+        font-size: $font-size-main;
     }
 }
 

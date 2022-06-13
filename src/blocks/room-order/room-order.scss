@@ -21,8 +21,8 @@
 	}
 
 	&__number-room-title {
-		font-size: 24px;
-		color: #1F2041;
+		font-size: $font-size-big;
+		color: $color-shade-dark;
 	}
 
 	&__price-for-day {
@@ -36,15 +36,15 @@
 	}
 
 	&__number-num {
-		font-size: 14px;
+		font-size: $font-size-main;
 		margin-right: 2px;
-		color: #1F2041;
+		color: $color-shade-dark;
 	}
 
 	&__number-level {
 		margin-left: 8px;
-		font-size: 12px;
-		color: #BC9CFF;
+		font-size: $font-size-small;
+		color: $color-purple;
 		text-transform: uppercase;
 	}
 
@@ -55,7 +55,7 @@
 	&__arrival input {
 		width:135px;
 		height:41px;
-		border:1px solid rgba(31, 32, 65, 0.25);
+		border:1px solid $color-shade;
 		border-radius:4px;
 		padding-left:15px;
 		cursor:pointer;
@@ -116,27 +116,27 @@
 	}
 
 	&__all-result-price-container {
-		color: #1F2041;
+		color: $color-shade-dark;
 		font-weight: bold;
-		font-size: 19px;
+		font-size: $font-size-medium;
 	}
 
 	&__all-result-price {
-		color: #1F2041;
+		color: $color-shade-dark;
 		font-weight: bold;
-		font-size: 19px;
+		font-size: $font-size-medium;
 	}
 
 	&__all-result-price-hr {
 		width: 100%;
-		border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
+		border-bottom: 1px dotted $color-shade;
 	}
 
 	&__fees-container:after, &__additional-fees-title:after {
 		content:'';
 		width:20px;
 		height:20px;
-		border:1px solid rgba(31, 32, 65, 0.25);
+		border:1px solid $color-shade;
 		border-radius:50%;
 		display:inline-block;
 		position:absolute;
@@ -150,7 +150,7 @@
 
 	&__title-guest {
 		font-weight: bold;
-		color: #1F2041;
+		color: $color-shade-dark;
 	}
 }
 

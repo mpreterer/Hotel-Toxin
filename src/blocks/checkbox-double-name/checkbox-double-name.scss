@@ -10,13 +10,13 @@
     }
 
     &__title {
-        font-size: 14px;
+        font-size: $font-size-main;
         font-weight: bold;
         margin: 6px 0 5px 0;
     }
 
     &__description {
-        font-size: 12px;
+        font-size: $font-size-small;
     }
 
     &__checkbox {
@@ -34,7 +34,7 @@
           background-image:url(../../assets/image/checked.svg);
           background-repeat: no-repeat;
           background-position: center;
-          border-color: #BC9CFF;
+          border-color: $color-purple;
         }
     }
 }

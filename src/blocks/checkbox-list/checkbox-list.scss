@@ -4,10 +4,10 @@
     height: 44px;
     position: relative;
     cursor: pointer;
-    font-size: 12px;
+    font-size: $font-size-small;
     font-weight: bold;
     text-transform: uppercase;
-    color: #1F2041;;
+    color: $color-shade-dark;
     user-select: none;
 
     &__container {

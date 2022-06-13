@@ -25,7 +25,7 @@
 		display: flex;
 		height:44px;
 		width:255px;
-		border:1px solid rgba(31, 32, 65, 0.25);
+		border:1px solid $color-shade;
 		box-sizing: border-box;
 		border-radius: 4px;
 		position: relative;
@@ -55,7 +55,7 @@
 		&-container {
 			width: 100%;
 			padding:15px 0 15px 0;
-			color:rgba(31, 32, 65, 0.75);
+			color: $color-shade-secondary;
 			background: #FFFFFF;
 			border-top: 1px solid #e5e5e5;
 			box-shadow: none;
@@ -131,7 +131,7 @@
 	width: 560px;
 	height: 127px;
 	background: #FFFFFF;
-	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	box-shadow: 0px 10px 20px $color-shade-ligth;
 	margin: 0 auto;
 	padding: 120px 104px;
 	text-align: center;

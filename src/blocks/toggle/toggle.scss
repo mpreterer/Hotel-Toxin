@@ -14,7 +14,7 @@
         content:'';
         width:40px;
         height:20px;
-        border:1px solid rgba(31, 32, 65, 0.25);
+        border:1px solid $color-shade;
         border-radius:10px;
         position:absolute;
         left:0;
@@ -30,7 +30,7 @@
         background-image:url(../../assets/image/Rectangle.svg);
         background-position:right;
         background-position:23px 4px;
-        border-color:#BC9CFF;
+        border-color:$color-purple;
         transition:0.3s;
     }
 }
@@ -38,7 +38,7 @@
 @media screen and (max-width:480px) {
     .toggle {
         width:260px;
-        font-size:12px;
+        font-size: $font-size-small;
         margin:0 10px 0 55px;
     }
 }

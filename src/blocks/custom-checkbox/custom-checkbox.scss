@@ -4,7 +4,7 @@
   max-width: 216px;
   position: relative;
   align-items: center;
-  font-size: 14px;
+  font-size: $font-size-main;
   margin-bottom: 15px;
   cursor: pointer;
   user-select: none;
@@ -24,7 +24,7 @@
       background-image:url(../../assets/image/checked.svg);
       background-repeat: no-repeat;
       background-position: center;
-      border-color: #BC9CFF;
+      border-color: $color-purple;
     }
   }
 

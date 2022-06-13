@@ -27,21 +27,21 @@
 		width:20px;
 		height:20px;
 		border-radius:50%;
-		border:1px solid rgba(31, 32, 65, 0.25);;
+		border:1px solid $color-shade;;
 		box-sizing:border-box;
 		display:block;
 		cursor: pointer;
 	}
 
 	&__input:not(:disabled):not(:checked):hover::before {
-		border-color:#BC9CFF;
+		border-color:$color-purple;
 	}
 
 	&__input:checked::before {
 		background-image:url(../../assets/image/radio-chacked.svg);
 		background-repeat:no-repeat;
 		background-position:center;
-		border-color:#BC9CFF;
+		border-color:$color-purple;
 	}
 
 	&__input:checked + .radio-input__text {
