@@ -1,14 +1,11 @@
-body {
-	font-family:'Montserrat',sans-serif;
-	margin:0;
-	padding:0;
-	font-size:14px;
-	color: rgba(31,32,65,.75);
-}
+@import '../assets/styles/global.scss';
+@import '../blocks/filter/filter.scss';
+@import '../blocks/header/header.scss';
+@import '../blocks/footer/footer.scss';
 
 h3 {
-    color: #1F2041;
-    font-size: 12px;
+    color: $color-shade-dark;
+    font-size: $font-size-small;
     line-height: 15px;
 	margin: 0;
 }
@@ -16,7 +13,7 @@ h3 {
 a {
 	text-decoration:none;
 	cursor:pointer;
-	color: rgba(31,32,65,0.75);
+	color: $color-shade-secondary;
 }
 
 input:active, input:focus {
@@ -28,12 +25,30 @@ button {
 	outline:none;
 }
 
-/*Инпуты*/
+.index-main {
+	height:830px;
+	background-repeat:no-repeat;
+	background-position: center;
+	position: relative;
+
+	&__container {
+		padding: 70px 0 0 180px;
+	}
+
+	&__description {
+		width: 297px;
+		text-align: right;
+		position: absolute;
+		right: 150px;
+		bottom: 0;
+	}
+}
+
 .input_favorite {
 	height:44px;
 	width:320px;
-	border:1px solid rgba(31, 32, 65, 0.25);
-	color: rgba(31, 32, 65, 0.25);
+	border:1px solid $color-shade;
+	color: $color-shade;
 	box-sizing:border-box;
 	border-radius:4px;
 	padding-left:15px;
@@ -45,7 +60,7 @@ button {
 	}
 
 	&:focus {
-		color:rgba(31, 32, 65, 0.75);
+		color: $color-shade-secondary;
 	}
 }
 
@@ -77,24 +92,6 @@ button {
 	transition:0.2s;
 }
 
-
-
-
-.arrow_list_li {
-	position: relative;
-}
-
-.arrow_list_li:after {
-	content: '';
-	display: inline-block;
-	position: absolute;
-	top: 5px;
-	right: -18px;
-	width: 12px;
-	height: 8px;
-	background-image: url(../assets/image/expand_more.svg);
-}
-
 .dropdown-arrow {
 	position:absolute;
 	width:15px;
@@ -106,17 +103,6 @@ button {
 	background-image:url(../assets/image/expand_more.svg);
 }
 
-#arrow_li_left {
-	margin-right: 18px;
-}
-
-
-
-
-
-/*Появление бургера*/
-
-
 .list {
 	margin-right: 20px;
 }
@@ -126,14 +112,13 @@ button {
 	width: 100%;
 	font-weight:400;
 	list-style:normal;
-	font-size:14px;
-	color:rgba(31, 32, 65, 0.5);
+	font-size: $font-size-main;
+	color: $color-shade-grey;
 	align-items: center;
 	padding: 0;
 	margin: 0;
 	position: relative;
 }
-
 
 .list li {
 	list-style:none;
@@ -149,7 +134,7 @@ button {
 }
 
 .list a {
-	color: rgba(31, 32, 65, 0.5);
+	color: $color-shade-grey;
 	display: block;
 	position: relative;
 	text-align: center;
@@ -164,8 +149,6 @@ button {
 	width: 150px;
 	background-color: #fff;
 }
-
-
 
 .list ul li ul li {
 	padding: 5px;
@@ -184,11 +167,11 @@ button {
 }
 
 .list ul li a:hover{
-	color: rgba(31, 32, 65, 0.75);
+	color: $color-shade-secondary;
 }
 
 .list ul li span:hover{
-	color: rgba(31, 32, 65, 0.75);
+	color: $color-shade-secondary;
 }
 
 .menu_list {
@@ -197,48 +180,44 @@ button {
 	height:70px;
 }
 
-
-/*панель входа и список*/
-
-
-.logup {
+.header__container-logup {
 	display:flex;
 	text-transform:uppercase;
 	font-weight:bold;
-	font-size:12px;
+	font-size: $font-size-small;
 	line-height:15px;
 	text-align:center;
 }
 
 
 
-.logup .login:hover {
+.header__container-logup .header__btn-login:hover {
 	opacity: 0.5;
 }
 
 
-.logup .login a{
-	color:#BC9CFF;
+.header__container-logup .header__btn-login a{
+	color:$color-purple;
 }
 
-.logup .registration a {
-	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+.header__container-logup .header__btn-registration a {
+	background: $gradient-main;
 	color:#fff;
 	border-radius:22px;
 	margin-left:20px;
 	border:3px solid transparent;
 }
 
-.logup .registration a {
+.header__container-logup .header__btn-registration a {
 	color:#fff;
 }
 
-.logup .registration:hover {
+.header__container-logup .header__btn-registration:hover {
 	opacity: 0.5;
 }
 
 
-.logup p {
+.header__container-logup p {
 	padding:0;
 	margin:7px 0;
 }
@@ -261,20 +240,6 @@ button {
 	top: 2px;
 	left: 0;
 }
-
-// .calendar {
-// 	width:320px;
-// 	height:389px;
-// 	box-sizing:border-box;
-// 	background:#fff;
-// 	padding:20px 0 20px 25px;
-// 	border:1px solid rgba(31, 32, 65, 0.25);
-// 	border-radius:4px;
-// 	font-size:12px;
-// 	line-height:15px;
-// 	box-shadow:0px 10px 20px rgba(31, 32, 65, 0.05);
-// 	margin-top: 50px;
-// }
 
 .text-field-calendar {
 	width: 100%;
@@ -307,105 +272,14 @@ input.datepicker {
 	opacity: 0;
 }
 
-.calendar h2 {
-	margin:0 0 30px 0;
-	color:#000;
-	text-transform:capitalize;
-}
-
-.calendar h2:after {
-	content:'';
-	width:23px;
-	height:24px;
-	display:inline-block;
-	position:absolute;
-	top:18px;
-	right:20px;
-	background-image:url(../assets/image/arrow_forward.svg);
-	background-position:center;
-	background-repeat:no-repeat;
-}
-
-.calendar h2:before {
-	content:'';
-	width:23px;
-	height:24px;
-	display:inline-block;
-	position:absolute;
-	top:18px;
-	left:20px;
-	background-image:url(../assets/image/arrow_back.svg);
-	background-position:center;
-	background-repeat:no-repeat;
-}
-
-/*Сделать блок в виде таблицы*/
-.calendar .container {
-	width:260px;
-	height:280px;
-}
-.calendar .container .date {
-	display:grid;
-	grid-template-columns:repeat(auto-fit, minmax(25px, 1fr));
-	grid-gap:10px;
-	box-sizing:border-box;
-	text-transform:capitalize;
-}
-
-.calendar .container .date div {
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	color:green;
-}
-
-.calendar .container .date div.day {
-	font-weight:bold;
-	color:#BC9CFF;
-	padding-left:10px;
-}
-
-.month {
-	font-weight:bold;
-	text-align:center;
-}
-
-.calendar .container .date .number {
-	color:#8F8FA0;
-	height:40px;
-	width:40px;
-}
-
-/*функции календаря*/
-.calendar .container .function {
-	width:280px;
-	height:15px;
-	display:flex;
-	justify-content:space-between;
-	color:#BC9CFF;
-	font-weight:bold;
-	margin-top:20px;
-}
-
-/*Выпадение календаря*/
-.calendar_main:hover {
-	display:block;
-}
-.calendar .container .date .number:hover {
-	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-	border-radius:22px;
-	color:white;
-	font-weight:bold;
-}
-
 .fa-twitter {
 	width: 24px;
 	height: 24px;
 }
 
-input.dropDown__counte-guests {
+input {
 	border: none;
-	pointer-events: none;
+	outline: none;
 }
 
 .hide {
@@ -417,11 +291,11 @@ input.dropDown__counte-guests {
 	height:44px;
 	width:150px;
 	background:#FFFFFF;
-	border:1px solid rgba(31, 32, 65, 0.25);
+	border:1px solid $color-shade;
 	box-sizing:border-box;
 	border-radius:4px;
 	font-family:Montserrat;
-	font-size:14px;
+	font-size: $font-size-main;
 	font-style:normal;
 	font-weight:400;
 	line-height:18px;
@@ -474,22 +348,6 @@ input.dropDown__counte-guests {
 	background-repeat: no-repeat;
 }
 
-
-.email_button-link {
-	width:18px;
-	height:18px;
-	position:absolute;
-	background: none;
-	background-image:url(../assets/image/arrow_forward.svg);
-	cursor: pointer;
-	right: 10px;
-	top: 12px;
-}
-
-.email_button-link:active {
-	opacity: 0.8;
-}
-
 .hiden_clear {
 	opacity: 0;
 	cursor: default;
@@ -500,7 +358,7 @@ input.dropDown__counte-guests {
 /*Адаптивная верстка (для смартфонов)*/
 @media all and (max-width:1200px ) {
 	p {
-		font-size: 12px;
+		font-size: $font-size-small;
 	}
 	.logotype {
 		margin-left: 10px;
@@ -518,7 +376,6 @@ input.dropDown__counte-guests {
 	}
 
 }
-
 
 @media all and (max-width:425px) {
 	.date_arrival {

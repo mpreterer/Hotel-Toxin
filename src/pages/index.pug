@@ -6,21 +6,25 @@ block variables
     - pageTitle = 'Главная «Toxin» | Отели'
 
 block content
-    +filter({
-        title:'Найдём номера под ваши пожелания',
-        buttonOptions: {
-            href:'searchRoom.html',
-            type:'long',
-            text:'Подобрать номер'
-        },
-        dropDownOptions: {
-            isOpen: false,
-            list: [
-              { name: 'взрослые', val: 0 },
-              { name: 'дети', val: 0 },
-              { name: 'младенцы', val: 0 }
-            ],
-            appointment: 'guests',
-            showFunction: true,
-        },
-    })
+    main.index-main(style="background-image: url('assets/image/content.jpg')")
+        .index-main__container
+            .index-main__filter-item
+                +filter({
+                    title:'Найдём номера под ваши пожелания',
+                    buttonOptions: {
+                        href:'searchRoom.html',
+                        type:'long',
+                        text:'Подобрать номер'
+                    },
+                    dropDownOptions: {
+                        isOpen: false,
+                        list: [
+                        { name: 'взрослые', val: 0 },
+                        { name: 'дети', val: 0 },
+                        { name: 'младенцы', val: 0 }
+                        ],
+                        appointment: 'guests',
+                        showFunction: true,
+                    },
+                })
+            p.index-main__description Лучшие номера для вашей работы, отдыха и просто вдохновения
