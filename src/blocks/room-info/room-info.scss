@@ -88,6 +88,7 @@
 		width: 100%;
 		height: 105px;
 		display: block;
+		border-radius: 0 0 4px 4px;
 	}
 	
 	&__head-room {
@@ -199,4 +200,8 @@ button.slick-next.slick-arrow::before {
 	background:url(../../assets/image/expand_more_right.svg);
 	transform: rotate(180deg);
 	transform: translate(80%);
+}
+
+.slick-list {
+	border-radius: 4px 4px 0 0;
 }
