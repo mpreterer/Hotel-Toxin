@@ -1,0 +1,44 @@
+.sub-text-input {
+    user-select: none;
+    width: 100%;
+    color: $color-shade;
+    position: relative;
+    
+    &__input {
+        user-select: none;
+        height: 44px;
+        width: 100%;
+        border: 1px solid $color-shade;
+        border-radius: 4px;
+        padding: 0 15px;
+        color: $color-shade;
+    }
+
+    &__input:hover {
+       color: rgba(31,32,65,0.75);
+       border-color: rgba(31,32,65,0.5);
+    }
+
+    &__input::placeholder {
+        color: $color-shade;
+    }
+
+    &__input::-webkit-input-placeholder {
+        color: $color-shade;
+    }
+
+    &__input::-moz-placeholder {
+        color: $color-shade;
+    }
+
+    &__arrow-link {
+        width: 44px;
+        height: 44px;
+        background-image: url(../assets/image/arrow_back.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: rotate(180deg);
+        position: absolute;
+        right: 0;
+    }
+}

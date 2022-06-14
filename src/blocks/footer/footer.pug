@@ -1,6 +1,6 @@
 include ./footer-nav-menu/footer-nav-menu.pug
 include ../logotype/logotype.pug
-include ../input-text-field/input-text-field.pug
+include ../sub-text-input/sub-text-input.pug
 
 mixin footer({desc, menuList, copyright}={})
     .footer_container
@@ -16,7 +16,7 @@ mixin footer({desc, menuList, copyright}={})
                     h3.footer__description-title Подписка
                     p.footer__description-special-title Получайте специальные предложения и новости сервиса
                     .footer__description-email
-                        +input-text-field({placeholder: 'Email', link: 'change-me/mock-adress'})
+                        +sub-text-input({ name: 'email', placeholder: 'Email', link: 'change-me/mock-adress' })
         .footer__sub-container
             .footer__sub
                 p.footer__sub-copytight= copyright
