@@ -1,0 +1,104 @@
+.nav-menu {
+	margin-right: 20px;
+
+    &__container {
+        display:flex;
+        width: 100%;
+        font-weight:400;
+        list-style:normal;
+        font-size: $font-size-main;
+        color: $color-shade-grey;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+
+    & li {
+        list-style:none;
+        cursor:pointer;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__item {
+        margin-left: 24px;
+        display: flex;
+        align-items: center;
+
+        &_active > .nav-menu__sublist:before {
+            overflow: visible;
+            visibility: visible;
+        }
+    }
+
+    &__sublist {
+        color: $color-shade-secondary;
+
+        &:hover > .nav-menu__sublist:before {
+            overflow: visible;
+            visibility: visible;
+        }
+
+        &:hover {
+            font-weight: bold;
+        }
+
+        &:before {
+            display: block;
+            content: attr(title);
+            font-weight: 700;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+
+    &__link {
+        text-align: center;
+
+        &:hover > .nav-menu__link:before {
+            overflow: visible;
+            visibility: visible;
+        }
+
+        &:hover {
+            font-weight: bold;
+        }
+
+        &:before {
+            display: block;
+            content: attr(title);
+            font-weight: 700;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+
+    &__submenu {
+        width: 100%;
+        display:none;
+        top: 45px;
+        position:absolute;
+        text-align: center;
+        max-width: 150px;
+        z-index: 5;
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__submenu-item {
+        background-color: #fff;
+        vertical-align: center;
+        padding-bottom: 5px;
+
+        &:hover {
+            font-weight: bold;
+        }
+    }
+}

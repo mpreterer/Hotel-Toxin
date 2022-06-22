@@ -1,13 +1,14 @@
 mixin nav-menu({ listMenu = [] }={})
-  div.list
-    ul.nav-menu.menu-list
+  div.nav-menu.js-nav-menu
+    ul.nav-menu__container.menu-list
       each item in listMenu
-        li.nav-menu__item
+        li.nav-menu__item.js-nav-menu__item
           if item.submenu
-            span#arrow_li_left.arrow_list_li.nav-menu__link.nav-menu__link--submenu(href=item.href title=item.name) !{item.name}
-            ul.submenu
+            span.nav-menu__sublist.js-nav-menu__sublist(href=item.href title=item.name) !{item.name}
+            span.arrow-expend-more-btn
+            ul.nav-menu__submenu.js-nav-menu__submenu
               each itemSubmenu in item.submenu
-                li.submenu__item
-                  a.submenu__link(href=itemSubmenu.href title=itemSubmenu.name) !{itemSubmenu.name}
+                li.nav-menu__submenu-item
+                  a.nav-menu__submenu-link(href=itemSubmenu.href title=itemSubmenu.name) !{itemSubmenu.name}
           else
             a.nav-menu__link(href= item.href title= item.name) !{item.name}
