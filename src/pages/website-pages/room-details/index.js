@@ -24,12 +24,9 @@ import '../../../blocks/about-room/about-room.js';
 import '../../../blocks/impressions-room/impressions-room.js';
 import '../../../blocks/impressions-room/impressions-room-init.js';
 import '../../../blocks/dropDown/dropDown.js';
-import '../../../blocks/dropDown/dropDownInit.js';
 import '../../../blocks/range-date-calendar/range-date-calendar.js';
-import '../../../blocks/range-date-calendar/range-date-calendar-init.js';
 import '../../../blocks/room-order/room-order.js';
 import '../../../blocks/room-order/room-order-init.js';
 import '../../../blocks/button-like/button-like-init.js';
 import '../../../blocks/button-like/button-like.js';
-import '../../../blocks/nav-menu/nav-menu-init.js'
 import '../../../blocks/nav-menu/nav-menu.js'

@@ -20,7 +20,6 @@ import '../../../blocks/pagination/pagination.scss'
 
 import '../../../js/jquery-3.6.0.min.js';
 import '../../../blocks/dropDown/dropDown.js';
-import '../../../blocks/dropDown/dropDownInit.js'
 import '../../../blocks/slider-range/slider-range-init.js'
 import '../../../blocks/alone-calendar/alone-calendar-init.js';
 import '../../../blocks/alone-calendar/alone-calendar.js';
@@ -32,5 +31,4 @@ import '../../../blocks/pagination/pagination.js'
 import '../../../blocks/pagination/pagination-init.js'
 import '../../../blocks/stars-rating/stars-rating-init.js'
 import '../../../blocks/stars-rating/stars-rating.js'
-import '../../../blocks/nav-menu/nav-menu-init.js'
 import '../../../blocks/nav-menu/nav-menu.js'

@@ -1,7 +1,6 @@
 class NavMenu{
     constructor(domParent) {
-        this.$container = domParent;
-
+        this.$container = domParent.querySelector('.js-nav-menu');
         this._init();
     }
 

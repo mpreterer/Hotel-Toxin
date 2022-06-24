@@ -10,5 +10,4 @@ import '../../../blocks/toggle/toggle.scss'
 
 import '../../../blocks/registration-card/registration-card.js'
 import '../../../blocks/registration-card/registration-card-init.js'
-import '../../../blocks/nav-menu/nav-menu-init.js'
 import '../../../blocks/nav-menu/nav-menu.js'

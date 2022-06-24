@@ -1,13 +1,26 @@
-import './style.scss'
-import '../blocks/button/button.scss'
-import '../blocks/dropDown/dropDown.scss'
-import '../blocks/calendar/calendar.scss'
-import '../blocks/range-date-calendar/range-date-calendar.scss'
+import './style.scss';
+import Filter from '../blocks/filter/filter.js'
+import NavMenu from '../blocks/nav-menu/nav-menu.js';
 
-import '../js/jquery-3.6.0.min.js'
-import '../blocks/dropDown/dropDownInit.js'
-import '../blocks/dropDown/dropDown.js'
-import '../blocks/range-date-calendar/range-date-calendar-init.js'
-import '../blocks/range-date-calendar/range-date-calendar.js'
-import '../blocks/nav-menu/nav-menu-init.js'
-import '../blocks/nav-menu/nav-menu.js'
+class Index {
+    constructor() {
+      this._init();
+    }
+  
+    _init() {
+      const { filter } = this._get_elements();
+
+      new NavMenu(document);
+      filter.forEach((item) => new Filter(item));
+    }
+  
+    _get_elements() {
+      return {
+        filter: document.querySelectorAll('.js-filter-item'),
+      };
+    }
+}
+  
+export default Index;
+
+new Index();

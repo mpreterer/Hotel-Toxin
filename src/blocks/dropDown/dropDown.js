@@ -1,6 +1,6 @@
 class dropDown {
     constructor(domParemt) {
-        this.container = domParemt;
+        this.container = domParemt.querySelector('.js-dropDown');
 
         this._init();
     }

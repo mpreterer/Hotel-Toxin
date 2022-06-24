@@ -2,7 +2,7 @@ import Calendar from '../calendar/calendar.js'
 
 class rangeDateCalendar {
     constructor(domParent) {
-        this.$container = domParent;
+        this.$container = domParent.querySelector('.js-range-date-calendar');
         this.$inputArrival = this.$container.querySelector('[data-mov="arrival"]');
         this.$inputDeparture = this.$container.querySelector('[data-mov="departure"]');
         this.$inputOpen = this.$container.querySelectorAll('.js-range-date-calendar__input');
