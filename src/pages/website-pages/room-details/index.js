@@ -31,3 +31,5 @@ import '../../../blocks/room-order/room-order.js';
 import '../../../blocks/room-order/room-order-init.js';
 import '../../../blocks/button-like/button-like-init.js';
 import '../../../blocks/button-like/button-like.js';
+import '../../../blocks/nav-menu/nav-menu-init.js'
+import '../../../blocks/nav-menu/nav-menu.js'

@@ -8,3 +8,5 @@ import '../../style.scss'
 
 import '../../../blocks/text-input/text-input.scss'
 import '../../../blocks/login-card/login-card.scss'
+import '../../../blocks/nav-menu/nav-menu-init.js'
+import '../../../blocks/nav-menu/nav-menu.js'
