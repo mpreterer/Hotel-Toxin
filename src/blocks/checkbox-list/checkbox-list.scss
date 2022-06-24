@@ -9,6 +9,7 @@
     text-transform: uppercase;
     color: $color-shade-dark;
     user-select: none;
+    z-index: 999;
 
     &__container {
         position: absolute;

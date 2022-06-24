@@ -92,6 +92,10 @@
         }
     }
 
+    &__submenu-link {
+        word-wrap: break-word;
+    }
+
     &__submenu-item {
         background-color: #fff;
         vertical-align: center;

@@ -26,6 +26,7 @@
 		display:flex;
 		justify-content:space-between;
 		margin-top:30px;
+		height: 44px;
 	}
 
 	&__has-account .login {
@@ -62,5 +63,11 @@
 
 	&__has-account .login p {
 		margin: 0;
+	}
+}
+
+@media all and (max-width: 340px) {
+	.registration-card  {
+		width: auto;
 	}
 }

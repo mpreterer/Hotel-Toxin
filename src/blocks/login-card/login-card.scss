@@ -32,10 +32,18 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 30px;
+        height: 44px;
+        align-items: center;
+
+        .button_type_border {
+            height: 40px;
+            padding: 0 20px;
+        }
     }
 
     &__question {
         font-size: $font-size-main;
+        margin: 0;
     }
 }
 

@@ -1,5 +1,4 @@
 .range-date-calendar {
-    width: 320px;
     display: flex;
     flex-direction: column;
 
@@ -48,5 +47,17 @@
 
     &__placeholder {
         display: inline-block;
+    }
+}
+
+@media all and (max-width:380px) {
+    .range-date-calendar {
+        &__list {
+           flex-direction: column;
+        }
+
+        &__element {
+            width: 100%;
+        }
     }
 }

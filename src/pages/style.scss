@@ -104,76 +104,7 @@ button {
 	background-image:url(../assets/image/expand_more.svg);
 }
 
-.list {
-	margin-right: 20px;
-}
 
-.list ul {
-	display:flex;
-	width: 100%;
-	font-weight:400;
-	list-style:normal;
-	font-size: $font-size-main;
-	color: $color-shade-grey;
-	align-items: center;
-	padding: 0;
-	margin: 0;
-	position: relative;
-}
-
-.list li {
-	list-style:none;
-	cursor:pointer;
-}
-
-.nav-menu__item {
-	margin-left: 24px;
-}
-
-.list li:first-child {
-	margin-left: 0;
-}
-
-.list a {
-	color: $color-shade-grey;
-	display: block;
-	position: relative;
-	text-align: center;
-}
-
-.list ul ul {
-	width: 100%;
-	display:none;
-	position:absolute;
-	padding-top: 25px;
-	text-align: center;
-	width: 150px;
-	background-color: #fff;
-}
-
-.list ul li ul li {
-	padding: 5px;
-}
-
-.list ul li ul li:hover {
-	font-weight: bold;
-}
-
-.nav-menu__item:hover {
-	font-weight: bold;
-}
-
-.list ul li:hover ul {
-	display:block;
-}
-
-.list ul li a:hover{
-	color: $color-shade-secondary;
-}
-
-.list ul li span:hover{
-	color: $color-shade-secondary;
-}
 
 .menu_list {
 	margin:0;
@@ -189,8 +120,6 @@ button {
 	line-height:15px;
 	text-align:center;
 }
-
-
 
 .header__container-logup .header__btn-login:hover {
 	opacity: 0.5;
@@ -287,33 +216,6 @@ input {
 	display:none;
 }
 
-/*блоки с прибытием отправкой и гостями */
-.date_arrival, .date_departure  {
-	height:44px;
-	width:150px;
-	background:#FFFFFF;
-	border:1px solid $color-shade;
-	box-sizing:border-box;
-	border-radius:4px;
-	font-family:Montserrat;
-	font-size: $font-size-main;
-	font-style:normal;
-	font-weight:400;
-	line-height:18px;
-	text-align:left;
-	cursor: pointer;
-	user-select: none;
-}
-
-.date_arrival p, .date_departure p, .dropDown__name p {
-	margin:0;
-}
-
-#second_date,#first_date {
-	width:100px;
-	padding: 12px 32px 14px 15px;
-}
-
 .arrow-back-btn {
 	content: '';
 	width: 40px;
@@ -337,6 +239,15 @@ input {
 	&_active {
 		transform: rotate(-180deg);
 	}
+}
+
+.arrow-expend-more-btn {
+	display: inline-block;
+	width: 24px;
+	height: 21px;
+	background-image: url(../assets/image/expand_more.svg);
+	background-repeat: no-repeat;
+	background-position: center;
 }
   
 .arrow-next-btn {
@@ -376,14 +287,15 @@ input {
 		margin-left: 0;
 	}
 
+	.index-main {
+		&__container {
+			padding: 70px 0 0 0;
+		}
+	}
 }
 
-@media all and (max-width:425px) {
-	.date_arrival {
-		width: 100%;
-	}
-
-	.block3 {
-		width: 100%;
+@media all and (max-width:650px ) {
+	.index-main__description {
+		display: none;
 	}
 }

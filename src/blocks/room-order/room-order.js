@@ -32,7 +32,7 @@ class RoomOrder {
         let resultWithFees = (priceDay * days) - fees + servicesCount;
         let resultWithoutFees = (priceDay * days);
 
-        if (resultWithFees !== NaN) {
+        if (resultWithFees !== NaN && resultWithFees > 0) {
             this.$sumCountFees.textContent = resultWithFees.toLocaleString();
             this.$sumWithoutFees.textContent = resultWithoutFees.toLocaleString();
         }

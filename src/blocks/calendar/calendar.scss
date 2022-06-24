@@ -657,3 +657,12 @@
     .datepicker--cell-day.-other-month-:empty, .datepicker--cell-year.-other-decade-:empty {
       background: none;
       border: none; }
+
+@media all and (max-width: 350px) {
+  .datepicker { 
+    width: 320px;
+  }
+  .calendar-container {
+    transform: translateX(-15px);
+  }
+}

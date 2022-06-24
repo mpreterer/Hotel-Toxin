@@ -221,7 +221,13 @@
 		margin-top: 60px;
 	}
 
+	.room-details__orders {
+		justify-content: center;
+	}
 
+	.room-orders__order {
+		margin-right: 0 !important;
+	}
 }
 
 @media all and (max-width: 920px) {
@@ -258,8 +264,6 @@
 	.container_departure {
 		margin-top: 10px;
 	}
-
-	
 }
 
 @media all and (max-width: 693px) {
@@ -269,10 +273,18 @@
 		align-items: center;
 	}
 
+	.room-details__orders {
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.room-details__room-loop-big,.room-details__room-loop-middle-1, .room-details__room-loop-middle-2 {
 		height: 243px;
 	}
 
+	.room-details__split-container {
+		margin: 5px;
+	}
 }
 
 @media all and (max-width: 440px) {

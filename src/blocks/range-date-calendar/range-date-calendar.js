@@ -71,7 +71,7 @@ class rangeDateCalendar {
 
     _set_date(date) {
         let dates = date.split(' - ');
-        let hasDates = dates !== undefined && dates !== null;
+        let hasDates = dates !== undefined && dates !== null && date !== '';
         this.$inputArrival.innerHTML = dates[0];
 
         if (hasDates) {
