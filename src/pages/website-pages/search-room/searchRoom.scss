@@ -1,3 +1,16 @@
+@import '../../../assets/scss/range.scss';
+@import '../../../blocks/calendar/calendar.scss';
+@import '../../../blocks/dropDown/dropDown.scss';
+@import '../../../blocks/footer/footer.scss';
+@import '../../../blocks/header/header.scss';
+@import '../../../blocks/room-info/room-info.scss';
+@import '../../../blocks/pagination/pagination.scss';
+@import '../../../blocks/checkbox-list/checkbox-list.scss';
+@import '../../../blocks/checkbox-double-name/checkbox-double-name.scss';
+@import '../../../blocks/custom-checkbox/custom-checkbox.scss';
+@import '../../../blocks/alone-calendar/alone-calendar.scss';
+@import '../../../blocks/slider-range/slider-range.scss';
+
 .search-room {
 	max-width: 1175px;
 	margin: 30px auto 60px auto;

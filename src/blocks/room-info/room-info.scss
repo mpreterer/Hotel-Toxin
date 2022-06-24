@@ -140,7 +140,7 @@
 .br-selected {
 	overflow:hidden;
 	padding-right:22px;
-	background-image:url(../../assets/image/star.svg);
+	background-image:url('../../../assets/image/star.svg');
 	background-repeat:no-repeat;
 }
 
@@ -148,7 +148,7 @@
 	width:20px;
 	height:20px;
 	padding-right:22px;
-	background-image:url(../../assets/image/star_border.svg);
+	background-image:url('../../../assets/image/star_border.svg');
 	background-repeat:no-repeat;
 	cursor:pointer;
 }
@@ -197,14 +197,14 @@ button.slick-next.slick-arrow::before, button.slick-prev.slick-arrow::before {
 	height: 12px;
 	width: 8px;
 	font-size: 15px;
-	background:url(../../assets/image/expand_more_left.svg);
+	background:url('../../../assets/image/expand_more_left.svg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	transform: translateX(-80%);
 }
 
 button.slick-next.slick-arrow::before {
-	background:url(../../assets/image/expand_more_right.svg);
+	background:url('../../../assets/image/expand_more_right.svg');
 	transform: rotate(180deg);
 	transform: translate(80%);
 }

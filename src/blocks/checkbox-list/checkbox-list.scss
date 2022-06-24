@@ -9,7 +9,6 @@
     text-transform: uppercase;
     color: $color-shade-dark;
     user-select: none;
-    z-index: 999;
 
     &__container {
         position: absolute;
@@ -20,6 +19,7 @@
         width: 266px;
         text-transform: none;
         color: #1F204180;
+        z-index: 999;
     }
 
     &__menu {

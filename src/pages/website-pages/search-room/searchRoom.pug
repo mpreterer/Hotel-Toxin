@@ -11,7 +11,6 @@ include ../../../blocks/checkbox-list/checkbox-list.pug
 include ../../../blocks/room-info/room-info.pug
 include ../../../blocks/pagination/pagination.pug
 
-
 block variables
     - pageTitle = '«Toxin» | Лучшие номера для вас'
     - roomsList = require('./utils/rooms-info.json');
@@ -22,7 +21,7 @@ block content
             .search-room__arrival-in-hotel
                 span.search-room__title даты пребывания в отеле
                 +alone-calendar
-            .search-room__guests-container
+            .search-room__guests-container(data-component-js="js-dropDown")
                 span.search-room__title Гости
                 +dropDown({
                     list: [
@@ -52,7 +51,7 @@ block content
                     ]
                 })
             span.search-room__title удобства номера
-            .search-room__furniture
+            .search-room__furniture(data-component-js="js-dropDown")
                 +dropDown({
                     appointment: 'furniture',
                     list: [
