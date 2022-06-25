@@ -4,14 +4,13 @@ import '../../../blocks/calendar/calendar.scss';
 import '../../../assets/scss/Chart.min.css';
 import '../../../blocks/filter/filter.scss';
 import '../../../blocks/dropDown/dropDown.scss';
-import '../../../blocks/button/button.scss';
 import '../../../blocks/footer/footer.scss'
 import '../../../blocks/header/header.scss';
 import '../../../blocks/about-room/about-room.scss';
 import '../../../blocks/impressions-room/impressions-room.scss';
 import '../../../blocks/room-order/room-order.scss';
 import '../../../blocks/dropDown/dropDown.scss';
-import '../../../blocks/range-date-calendar/range-date-calendar.scss';
+// import '../../../blocks/range-date-calendar/range-date-calendar.scss';
 import '../../../blocks/user-reviews/user-reviews.scss';
 import '../../../blocks/button-like/button-like.scss';
 import '../../../blocks/room-orders/room-orders.scss';

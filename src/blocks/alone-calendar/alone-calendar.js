@@ -2,7 +2,7 @@ import Calendar from '../calendar/calendar.js'
 
 class AloneCalendar {
     constructor(domParent) {
-        this.$container = domParent;
+        this.$container = domParent.querySelector('.js-alone-calendar');
         this.$placeholder = this.$container.querySelector('.js-alone-calendar__placeholder');
         this.$calendarBody = this.$container.querySelector('.js-alone-calendar__calendar');
         this.$calendar = this.$container.querySelector('.js-calendar-container');

@@ -2,7 +2,7 @@ import '../../js/jquery.simplePagination.js';
 
 class Pagination {
     constructor(domParent, options) {
-        this.$body = $(domParent).find('.js-pagination__container');
+        this.$body = $(domParent).find('.js-pagination');
         this.$container = this.$body.find('.js-pagination__pagination-init');
         this.$maxValue = this.$body.find('.pagination-max');
         this.$minValue = this.$body.find('.pagination-min');

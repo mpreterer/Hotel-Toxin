@@ -1,4 +1,4 @@
-import 'jquery-bar-rating/dist/jquery.barrating.min';
+import 'jquery-bar-rating/dist/jquery.barrating.min.js';
 
 class StarsRating {
   constructor(domParent) {

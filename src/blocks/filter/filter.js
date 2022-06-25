@@ -1,10 +1,6 @@
 import dropDown from '../dropDown/dropDown.js';
 import rangeDateCalendar from '../range-date-calendar/range-date-calendar.js';
 
-import '../dropDown/dropDown.scss';
-import '../button/button.scss';
-import '../range-date-calendar/range-date-calendar.scss';
-import '../calendar/calendar.scss';
 
 class Filter {
     constructor(domParent) {

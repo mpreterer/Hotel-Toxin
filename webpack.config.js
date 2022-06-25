@@ -23,7 +23,7 @@ module.exports = () => {
         mode: 'development',
         entry: {
             index: [`${PAGES_DIR}/index.js`],
-            'search-room': [`${PAGES_DIR}/website-pages/search-room/index.js`],
+            'search-room': [`${PAGES_DIR}/website-pages/search-room/searchRoom.js`],
             'room_details': [`${PAGES_DIR}/website-pages/room-details/index.js`],
             'login': [`${PAGES_DIR}/website-pages/login/index.js`],
             'registration': [`${PAGES_DIR}/website-pages/registration/index.js`],
@@ -158,7 +158,7 @@ module.exports = () => {
                     ]
                 },
                 {
-                    test:/\.(png|svg|jpg)$/i,
+                    test:/\.(png|svg|jpg|jpeg|gif)$/i,
                     type: 'asset/resource'
                 },
                 {

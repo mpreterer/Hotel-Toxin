@@ -1,6 +1,5 @@
 import './Registration.scss'
 import '../../style.scss'
-import '../../../blocks/button/button.scss'
 import '../../../blocks/footer/footer.scss'
 import '../../../blocks/header/header.scss'
 import '../../../blocks/radio-input/radio-input.scss'

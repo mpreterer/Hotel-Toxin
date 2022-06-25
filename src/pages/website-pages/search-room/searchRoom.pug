@@ -18,7 +18,7 @@ block variables
 block content
     .search-room
         .search-room__left-bar
-            .search-room__arrival-in-hotel
+            .search-room__arrival-in-hotel(data-components-js="js-alone-calendares")
                 span.search-room__title даты пребывания в отеле
                 +alone-calendar
             .search-room__guests-container(data-component-js="js-dropDown")
@@ -32,7 +32,7 @@ block content
                     appointment: 'guests',
                     showFunction: true
                 })
-            .search-room__price-hotel
+            .search-room__price-hotel(data-component-js="js-slider")
                 +slider-range({
                     title: 'ДИАПАЗОН ЦЕНЫ',
                     subTitle: 'Стоимость за сутки пребывания в номере'
@@ -62,7 +62,7 @@ block content
                     showFunction: false,
                     placeholder: 'Выберите удобства'
                 })
-            .search-room__convenience
+            .search-room__convenience(data-component-js="js-checkbox-lists")
                 +checkbox-list({
                     title: 'Дополнительные удобства',
                     list: [
@@ -78,15 +78,15 @@ block content
                 })
         .search-room__rooms-container
             h2 Номера, которые мы для вас подобрали 
-            .search-room__rooms
+            .search-room__rooms(data-component-js="js-rooms")
                 each room in roomsList
                     +room-info({
                         number: room.number,
                         level: room.level,
                         price: room.price,
-                        stars: room.start,
+                        stars: room.stars,
                         review: room.review,
                         sliders: room.sliders,
                     })
-            .search-room__pagination-container
+            .search-room__pagination-container(data-component-js="js-pagination")
                 +pagination
