@@ -23,7 +23,7 @@ block content
             .room-details__expend-container
                 .room-details__split-container
                     .room-details__split
-                        .room-details__more-info
+                        .room-details__more-info(data-component-js="js-about-room")
                             +about-room({
                                list: [
                                    {
@@ -43,9 +43,9 @@ block content
                                    }
                                ]
                             })
-                            .room-details__impressions
+                            .room-details__impressions(data-component-js="js-impressions")
                                +impressions-room
-                        .room-details__user-reviews
+                        .room-details__user-reviews(data-comment-js="js-user-reviews")
                             .room-details__user-reviews-comments
                                 span.room-details__title-comment Отзывы посетителей номера
                                 span.room-details__reviews-comments 2 отзыва 
@@ -57,14 +57,15 @@ block content
                                 src: 'assets/image/user_2.png',
                                 desc: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
                              })
-                    +room-order({
-                        numberRoom: 888, 
-                        level: 'люкс', 
-                        priceDay: '9 990', 
-                        currency: '₽', 
-                        discount: '2 179', 
-                        services: 300
-                    })
+                    .room-details__room-order(data-comment-js="js-room-order")
+                        +room-order({
+                            numberRoom: 888, 
+                            level: 'люкс', 
+                            priceDay: '9 990', 
+                            currency: '₽', 
+                            discount: '2 179', 
+                            services: 300
+                        })
                 .room-details__orders 
                     +room-orders({
                         list: [

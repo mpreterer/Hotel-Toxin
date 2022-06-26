@@ -24,7 +24,7 @@ module.exports = () => {
         entry: {
             index: [`${PAGES_DIR}/index.js`],
             'search-room': [`${PAGES_DIR}/website-pages/search-room/searchRoom.js`],
-            'room_details': [`${PAGES_DIR}/website-pages/room-details/index.js`],
+            'room_details': [`${PAGES_DIR}/website-pages/room-details/RoomDetails.js`],
             'login': [`${PAGES_DIR}/website-pages/login/index.js`],
             'registration': [`${PAGES_DIR}/website-pages/registration/index.js`],
             'site-pages': [`${PAGES_DIR}/ui-kit/index.js`],

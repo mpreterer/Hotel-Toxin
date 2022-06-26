@@ -16,7 +16,6 @@ class ButtonLike {
     }
 
     _count_like() {
-
         if ( this.$heart.classList.contains('fill_heart') ) {
             this.$heart.classList.remove('fill_heart');
             this.$container.classList.remove('active_heart');

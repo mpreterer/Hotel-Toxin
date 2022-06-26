@@ -1,20 +1,30 @@
+import dropDown from '../dropDown/dropDown';
+import rangeDateCalendar from '../range-date-calendar/range-date-calendar';
+
 class RoomOrder {
     constructor(domParent) {
-        this.$container = domParent;
-        this.$datepicker = this.$container.querySelector('.datepicker');
-        this.$arrival = this.$container.querySelector('[data-mov="arrival"]');
-        this.$departure = this.$container.querySelector('[data-mov="departure"]');
-        this.$priceDay = this.$container.querySelector('[data-price="priceDay"]');
-        this.$sumCountFees = this.$container.querySelector('[data-price="resultPrice"]');
-        this.$sumWithoutFees = this.$container.querySelector('[data-price="priceWithoutFees"]');
-        this.fees = this.$container.querySelector('[data-price="feesPrice"]');
-        this.services = this.$container.querySelector('[data-price="services"]');
+        this.container = domParent.querySelector('.js-room-order');
+        this.$datepicker = this.container.querySelector('.js-range-date-calendar__calendar');
+        this.$arrival = this.container.querySelector('[data-mov="arrival"]');
+        this.$departure = this.container.querySelector('[data-mov="departure"]');
+        this.$priceDay = this.container.querySelector('[data-price="priceDay"]');
+        this.$sumCountFees = this.container.querySelector('[data-price="resultPrice"]');
+        this.$sumWithoutFees = this.container.querySelector('[data-price="priceWithoutFees"]');
+        this.fees = this.container.querySelector('[data-price="feesPrice"]');
+        this.services = this.container.querySelector('[data-price="services"]');
 
         this._init();
+        this._init_components();
     }
 
     _init() {
         this._event_count();
+    }
+
+    _init_components() {
+        const { container } = this;
+        this.dropDowns = new dropDown(container);
+        this.calendar = new rangeDateCalendar(container);
     }
 
     _event_count() {

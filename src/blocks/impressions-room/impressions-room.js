@@ -2,7 +2,7 @@ import '../../js/Chart.min.js'
 
 class Doughnut {
     constructor(domParent) {
-        this.$container = domParent;
+        this.$container = domParent.querySelector('.js-impressions-room');
         this.$doughnut = this.$container.querySelector('.impressions-room__donut');
 
         this._init();
