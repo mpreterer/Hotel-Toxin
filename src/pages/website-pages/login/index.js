@@ -1,10 +1,27 @@
-import './login.scss'
-import '../registration/Registration.scss'
-import '../../../blocks/button/button.pug'
-import '../../../blocks/footer/footer.scss'
-import '../../../blocks/header/header.scss'
-import '../../style.scss'
+import './login.scss';
+import '../../style.scss';
 
-import '../../../blocks/text-input/text-input.scss'
-import '../../../blocks/login-card/login-card.scss'
-import '../../../blocks/nav-menu/nav-menu.js'
+import NavMenu from '../../../blocks/nav-menu/nav-menu.js';
+
+class Login {
+    constructor() {
+        this._init();
+      }
+      
+    _init() {
+        const { 
+            registratonCard,
+        } = this._get_elements();
+
+        new NavMenu(document);
+        registratonCard.forEach((item) => new RegistrationCard(item));
+    }   
+
+    _get_elements() {
+        return {
+            registratonCard: document.querySelectorAll('[data-component-js="js-registration-card"]'),
+        };
+    }
+}
+
+new Login();
