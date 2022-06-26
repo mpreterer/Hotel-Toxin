@@ -1,0 +1,39 @@
+.cards {
+
+    &__container {
+        display: flex;
+        padding: 150px 140px;
+    }
+
+    &__filters {
+        width: 380px;
+    }
+
+    &__filter {
+        margin-bottom: 40px;
+    }
+
+    &__dates {
+        width: 380px;
+        margin: 0 40px;
+    }
+
+    &__range-dates {
+        margin-bottom: 40px;
+    }
+
+    &__rooms {
+        width: 320px;
+    }
+
+    &__calendar-open {
+        height: 400px;
+        margin-bottom: 40px;
+    }
+
+    &__room-card-first {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+

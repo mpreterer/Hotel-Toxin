@@ -28,7 +28,7 @@ module.exports = () => {
             'login': [`${PAGES_DIR}/website-pages/login/index.js`],
             'registration': [`${PAGES_DIR}/website-pages/registration/Registration.js`],
             'site-pages': [`${PAGES_DIR}/ui-kit/index.js`],
-            'cards': [`${PAGES_DIR}/ui-kit/cards/index.js`],
+            'cards': [`${PAGES_DIR}/ui-kit/cards/Cards.js`],
             'colors-type': [`${PAGES_DIR}/ui-kit/colors-type/index.js`],
             'elements': [`${PAGES_DIR}/ui-kit/elements/index.js`],
             'header-footer': [`${PAGES_DIR}/ui-kit/header-footer/index.js`],

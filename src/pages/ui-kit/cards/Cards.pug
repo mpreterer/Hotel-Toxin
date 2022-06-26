@@ -1,209 +1,103 @@
-include ../../../blocks/dropDown/dropDown.pug
+extends ../../../template-head/main.pug
+include ../../../blocks/filter/filter.pug
+include ../../../blocks/registration-card/registration-card.pug
+include ../../../blocks/room-order/room-order.pug
+include ../../../blocks/login-card/login-card.pug
 include ../../../blocks/calendar/calendar.pug
+include ../../../blocks/room-info/room-info.pug
 
 block variables 
     - pageTitle = 'Карточки'
 
 block content
-    div.container-cards
-        div.left-cards
-            div.left-cards__blocks1
-                div.content
-                    div.search-room
-                        h1 Найдём номера под ваши пожелания
-                        div.residence
-                            div.block_date
-                                div.block1
-                                    h3 Прибытие
-                                    div.date_arrival
-                                        div.arrow
-                                        div.text-field-calendar
-                                            +calendar
-                                div.block2(style="margin-left:18px;")
-                                    h3 Выезд
-                                    div.date_departure
-                                        div.arrow
-                                        div.text-field-calendar
-                                            +calendar
-                                div.block3
-                                    h3 Гости
-                                    div.guests
-                                        input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
-                                        div.arrow
-                                    +dropDown
-                                a(href="layout/searchRoom.html")
-                                    div.block4
-                                        p(style="padding-top:15px") подобрать номер
-                                        div.arrow_right
-            div.left-cards__blocks2
-                div.registration_user
-                    div.container_user
-                        div.head
-                            h1 Регистрация аккаунта
-                        div.container_name
-                            div.user_name
-                                input.input_favorite(placeholder="Имя" autocomplete="off")
-                                input.input_favorite(placeholder="Фамилия" autocomplete="off")
-                            div.gender
-                                    input#block_checkbox_1.gender_checkbox(type="radio" name="block_checkbox")
-                                    label(for="block_checkbox_1") Мужчина
-                                    input#block_checkbox_2.gender_checkbox(type="radio" name="block_checkbox")
-                                    label(for="block_checkbox_2") Женщина
-                            div.date_birthday
-                                h4(style="margin:0 0 5px 0;") дата рождения
-                                input.input_favorite(placeholder="ДД.ММ.ГГГГ" autocomplete="off" readonly="")
-                            div.data_login
-                                h4(style="margin:0 0 5px 0;") данные для входа в сервис
-                                input.input_favorite(placeholder="Email" autocomplete="off")
-                                input.input_favorite(placeholder="Пароль" autocomplete="off" type="password")
-                            div.special_offer
-                                input#block_checkbox_3.offer_checkbox(type="checkbox" name="block_checkbox")
-                                label(for="block_checkbox_3") Получать спецпредложения
-                            div.buy
-                                p перейти к оплате
-                            div.if_have_account
-                                div.question
-                                    p Уже есть аккаунт на Toxin
-                                a(href="login.html")
-                                    div.login
-                                        p войти
-        div.center-cards
-            div.center-cards__blocks1
-                div.booking
-                    div.container
-                        div.head
-                            h2 № 888 люкс 
-                            p 9 990₽ в сутки 
-                        div.booking_arrival
-                            div.container_arrival
-                                h2 прибытие
-                                div.date_arrival ДД.ММ.ГГГГ
-                                div.arrow
-
-                                include ../../../blocks/calendar/calendar.pug
-
-                            div.container_departure
-                                h2 выезд
-                                div.date_departure ДД.ММ.ГГГГ
-                                div.arrow
-                                
-                                include ../../../blocks/calendar/calendar.pug
-
-                        div.booking_guests
-                            h2 гости
-                            div.guests
-                                input.counte_guests(placeholder="Сколько Гостей" autocomplete="off" readonly="")
-                            div.arrow
-
-                            include ../../../blocks/dropDown/dropDown.pug
-
-                        div.booking_price
-                            div.container_block1
-                                span 9 990₽ х 4 суток 
-                                span 39 960₽ 
-                            div.container_block2
-                                span.span_container Сбор за услуги: скидка 2 179₽ 
-                                span 0₽ 
-                            div.container_block3
-                                span.span_container(style="width:214px;") Сбор за дополнительные услуги.
-                                span 300₽ 
-                        div.result
-                            h2 Итого
-                            h2 38 081₽
-                        a(href="login.html")
-                            div.to_book
-                                p забронировать  
-            div.center-cards__blocks2
-                div.block_login
-                    div.container
-                        div.login_user
-                            div.container_user
-                                h1(style="margin:0; margin-bottom:20px;") Войти
-                                input.input_favorite(placeholder="Email" autocomplete="off" required="")
-                                input.input_favorite(placeholder="Пароль" autocomplete="off" type="password" required="")
-                                div.btn_login
-                                    p войти
-                                div.if_have_account
-                                        div.question
-                                            p Нет аккаунта на Toxin?
-                                        a(href="Registration.html")
-                                            div.login
-                                                p создать
-        div.right-cards
-            div.right-cards__blocks1
-                div.residence
-                    div.block_date
-                        div.block1
-                                div.arrow
-                                div.text-field-calendar
-                                    input.datepicker-here.field-date-left(type="text" 
-                                                      data-range="true" 
-                                                      data-multiple-dates-separator=" - " 
-                                                      data-language="ru" 
-                                                      placeholder="ДД.ММ.ГГГГ"
-                                                      readonly)
-            div.right-cards__blocks2
-                div.content_search-room
-                    div.main_content_search-room
-                        div.container_in_hotel
-                            div.room1.room_in_hotel
-                                div.container
-                                    div.move_arrow.arrow_left
-                                        a(href="../layout/roomDetails.html")
-                                            div.container_a
-                                                div.icon
-                                    div.move_arrow.arrow_right
-                                        a(href="../layout/roomDetails.html")
-                                            div.container_a
-                                                div.icon
-                                    div.in_circle
-                                        a.circle.circle_1(href="../layout/roomDetails.html")
-                                        a.circle.circle_1(href="../layout/roomDetails.html")
-                                        a.circle.circle_1(href="../layout/roomDetails.html")
-                                        a.circle.circle_1(href="../layout/roomDetails.html")
-                                div.head_room
-                                    p(style="font-size:18px; color:#1F2041; font-weight:bold;") №888
-                                    span Люкс
-                                    p(style="font-size:12.5px;line-height: 16px;margin-top:3px;") 9 990₽ в сутки
-                                div.rating
-                                    div.star
-                                        div.stars#star1
-                                        div.stars#star2
-                                        div.stars#star3
-                                        div.stars#star4
-                                        div.stars#star5
-                                    div.feedbackspan
-                                        b 145 Отзывов
-            div.right-cards__blocks3
-                div.content_search-room
-                    div.main_content_search-room
-                        div.container_in_hotel
-                            div.room2.room_in_hotel
-                                div.container
-                                    div.move_arrow.arrow_left
-                                        a(href="../layout/roomDetails.html")
-                                            div.container_a
-                                                div.icon
-                                    div.move_arrow.arrow_right
-                                        a(href="../layout/roomDetails.html")
-                                            div.container_a
-                                                div.icon
-                                    div.in_circle
-                                        a.circle.circle_1(href="../layout/roomDetails.html")
-                                        a.circle.circle_1(href="../layout/roomDetails.html")
-                                        a.circle.circle_1(href="../layout/roomDetails.html")
-                                        a.circle.circle_1(href="../layout/roomDetails.html")
-                                div.head_room
-                                    p(style="font-size:18px; color:#1F2041; font-weight:bold;") №840
-                                    span Люкс
-                                    p(style="font-size:12.5px;line-height: 16px;margin-top:3px;") 9 990₽ в сутки
-                                div.rating
-                                    div.star
-                                        div.stars#star1
-                                        div.stars#star2
-                                        div.stars#star3
-                                        div.stars#star4
-                                        div.stars#star5
-                                    div.feedbackspan
-                                        b 65 Отзывов
-
+    .cards
+        .cards__container
+            .cards__filters
+                .cards__filter(data-component-js="js-cards-filter")
+                    +filter({
+                        title:'Найдём номера под ваши пожелания',
+                        buttonOptions: {
+                            href:'searchRoom.html',
+                            type:'long',
+                            text:'Подобрать номер'
+                        },
+                        dropDownOptions: {
+                            isOpen: false,
+                            list: [
+                            { name: 'взрослые', val: 0 },
+                            { name: 'дети', val: 0 },
+                            { name: 'младенцы', val: 0 }
+                            ],
+                            appointment: 'guests',
+                            showFunction: true,
+                        },
+                    })
+                .cards__registration(data-component-js="js-cards-registration")
+                    +registration-card
+            .cards__dates
+                .cards__range-dates(data-component-js="js-cards-range-dates")
+                    +room-order({
+                            numberRoom: 888, 
+                            level: 'люкс', 
+                            priceDay: '9 990', 
+                            currency: '₽', 
+                            discount: '2 179', 
+                            services: 300
+                        })
+                .cards__login-card(data-component-js="js-cards-login")
+                    +login-card
+            .cards__rooms
+                .cards__calendar-open(data-component-js="js-calendar-open")
+                    +calendar
+                .cards__room-card-first(data-component-js="js-card-room")
+                    +room-info({
+                        number: 888,
+                        level: 'Люкс',
+                        price: '9 990',
+                        stars: 5,
+                        review: 145,
+                        sliders: [
+                                    {
+                                    "src": "../../../assets/image/rooms/room_888.jpg",
+                                    "alt": "room №888"
+                                    },
+                                    {
+                                    "src": "../../../assets/image/rooms/room_888.jpg",
+                                    "alt": "room №888"
+                                    },
+                                    {
+                                    "src": "../../../assets/image/rooms/room_888.jpg",
+                                    "alt": "room №888"
+                                    },
+                                    {
+                                    "src": "../../../assets/image/rooms/room_888.jpg",
+                                    "alt": "room №888"
+                                    }
+                                ],
+                    })
+                .cards__room-card-second(data-component-js="js-card-room")
+                    +room-info({
+                        number: 840,
+                        level: '',
+                        price: '9 990',
+                        stars: 4,
+                        review: 65,
+                        sliders: [
+                                    {
+                                    "src": "../../../assets/image/rooms/room_840.jpg",
+                                    "alt": "room №840"
+                                    },
+                                    {
+                                    "src": "../../../assets/image/rooms/room_840.jpg",
+                                    "alt": "room №840"
+                                    },
+                                    {
+                                    "src": "../../../assets/image/rooms/room_840.jpg",
+                                    "alt": "room №840"
+                                    },
+                                    {
+                                    "src": "../../../assets/image/rooms/room_840.jpg",
+                                    "alt": "room №840"
+                                    }
+                                ],
+                    })
