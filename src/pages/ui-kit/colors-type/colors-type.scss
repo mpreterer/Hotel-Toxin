@@ -1,3 +1,11 @@
+@import '../blocks/ui-header.scss';
+
+body {
+    font-family: 'Montserrat', 'sans-serif';
+    padding: 0;
+    margin: 0;
+}
+
 .logo {
     width: 48px;
     height: 48px;
@@ -11,6 +19,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .left-block {
     width: 281.36px;
     height: 610px;
@@ -69,7 +78,14 @@
     &__list {
         margin: 0;
         padding: 0;
+        width: 436px;
     }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+
     & li {
         list-style: none;
         display: flex;
@@ -91,7 +107,6 @@
     #h2 {
         font-size: $font-size-medium;
         line-height: 23px;
-        margin-left: 3px;
         color: $color-shade;
     }
     & h3  {
@@ -111,11 +126,9 @@
     #p {
         font-size: $font-size-main;
         line-height: 24px;
-        margin-right: 20px;
         color: $color-shade;
     }
     &__h {
-        margin-right: 30px;
         color: $color-shade;
     }
     &__text {
@@ -123,6 +136,7 @@
         font-size: $font-size-big;
         line-height: 29px;
         margin: 0px;
+        width: 369px;
     }
 }
     

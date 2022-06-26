@@ -1,3 +1,5 @@
+include ../pages/ui-kit/blocks/ui-header.pug
+
 block variables
     - var pageTitle = 'Главная «Toxin» | Отели'
 
@@ -9,4 +11,5 @@ html
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title=pageTitle
     body
+        +ui-header()
         block content
