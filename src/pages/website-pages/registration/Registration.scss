@@ -1,4 +1,8 @@
-/*Блок с регистрацией пользователя*/
+@import '../../../blocks/radio-input/radio-input.scss';
+@import '../../../blocks/toggle/toggle.scss';
+@import '../../../blocks/text-input/text-input.scss';
+@import '../../../blocks/registration-card/registration-card.scss';
+
 p {
 	font-size: $font-size-small;
 }
@@ -16,7 +20,6 @@ p {
 	margin: 0 auto;
 }
 
-/*Отцентровка панели регистрации*/
 .registration-card .registration-card__container {
 	padding:40px 30px 30px 30px;
 }

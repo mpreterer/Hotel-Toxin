@@ -26,7 +26,7 @@ module.exports = () => {
             'search-room': [`${PAGES_DIR}/website-pages/search-room/searchRoom.js`],
             'room_details': [`${PAGES_DIR}/website-pages/room-details/RoomDetails.js`],
             'login': [`${PAGES_DIR}/website-pages/login/index.js`],
-            'registration': [`${PAGES_DIR}/website-pages/registration/index.js`],
+            'registration': [`${PAGES_DIR}/website-pages/registration/Registration.js`],
             'site-pages': [`${PAGES_DIR}/ui-kit/index.js`],
             'cards': [`${PAGES_DIR}/ui-kit/cards/index.js`],
             'colors-type': [`${PAGES_DIR}/ui-kit/colors-type/index.js`],
