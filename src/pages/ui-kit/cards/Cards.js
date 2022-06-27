@@ -1,6 +1,7 @@
 import './cards.scss';
 import '../ui-kit.scss';
 import '../../style.scss';
+import '../blocks/ui-header.scss';
 import '../../website-pages/search-room/searchRoom.scss';
 import '../../website-pages/room-details/roomDetails.scss';
 import '../../website-pages/registration/Registration.scss';

@@ -23,6 +23,21 @@
 		align-items: center;
 		text-align: center;
 	}
+
+	&__user {
+		padding-left: 20px;
+		border-left: 1px solid rgba(31, 32, 65, 0.1);
+		height: 30px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__user-name {
+		color: $color-shade-grey;
+		text-transform: none;
+		font-size: $font-size-main;
+		font-weight: 400;
+	}
 }
 
 @media all and (max-width:1200px ) {
@@ -46,6 +61,7 @@
 	flex-direction:row;
 	width:320px;
 	position:relative;
+	z-index: 99;
 	right:260px;
 	background:#fff;
 	border-bottom:1px solid #E8E8EC;	
@@ -102,7 +118,6 @@
 	width:50px;
 	height:50px;
 	display:none;
-	z-index:99;
 	position:relative;
 }
 

@@ -31,7 +31,7 @@ module.exports = () => {
             'cards': [`${PAGES_DIR}/ui-kit/cards/Cards.js`],
             'colors-type': [`${PAGES_DIR}/ui-kit/colors-type/index.js`],
             'elements': [`${PAGES_DIR}/ui-kit/elements/index.js`],
-            'header-footer': [`${PAGES_DIR}/ui-kit/header-footer/index.js`],
+            'header-footer': [`${PAGES_DIR}/ui-kit/header-footer/HeaderFooter.js`],
         },
         output: {
             filename: 'js/[name].js',

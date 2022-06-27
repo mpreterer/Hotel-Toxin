@@ -28,6 +28,7 @@
 
 	&__sub {
 		max-width: 1160px;
+		height: 70px;
 		margin:0 auto;
 		display:flex;
 		justify-content:space-between;
@@ -39,7 +40,6 @@
 
 		&-container {
 			width: 100%;
-			padding:15px 0 15px 0;
 			color: $color-shade-secondary;
 			background: #FFFFFF;
 			border-top: 1px solid #e5e5e5;
@@ -78,6 +78,7 @@
 .footer_container {
 	width: 100%;
 	border-top: 1px solid rgba(31,32,65,0.25);
+	background-color: #FFFFFF;
 }
 
 /*Список блоков*/
@@ -173,7 +174,7 @@
 	
 }
 
-@media all and (max-width:650px) {
+@media all and (max-width:768px) {
 	.footer {
 		display: flex;
 
