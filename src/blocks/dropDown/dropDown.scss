@@ -138,6 +138,13 @@
         user-select: none;
     }
 
+    &__counter {
+        color: $color-shade-dark;
+        font-weight: bold;
+        line-height: 12px;
+        text-transform: uppercase;
+    }
+
     &__function-clear {
         display: block;
     }

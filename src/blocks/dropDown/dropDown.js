@@ -1,4 +1,4 @@
-class dropDown {
+class DropDown {
     constructor(domParent) {
         this.container = domParent.querySelector('.js-dropDown');
 
@@ -291,4 +291,4 @@ class dropDown {
 
 }
 
-export default dropDown;
+export default DropDown;

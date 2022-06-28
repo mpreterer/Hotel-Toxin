@@ -1,4 +1,4 @@
-import './roomDetails.scss';
+import './room-details.scss';
 import '../../style.scss';
 import '../../../assets/scss/Chart.min.css';
 

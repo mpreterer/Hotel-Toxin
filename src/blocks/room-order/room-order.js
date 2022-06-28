@@ -1,4 +1,4 @@
-import dropDown from '../dropDown/dropDown';
+import DropDown from '../dropDown/DropDown';
 import rangeDateCalendar from '../range-date-calendar/range-date-calendar';
 
 class RoomOrder {
@@ -23,7 +23,7 @@ class RoomOrder {
 
     _init_components() {
         const { container } = this;
-        this.dropDowns = new dropDown(container);
+        this.dropDowns = new DropDown(container);
         this.calendar = new rangeDateCalendar(container);
     }
 

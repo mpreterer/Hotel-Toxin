@@ -1,6 +1,6 @@
 class ButtonLike {
     constructor(domParent) {
-        this.$container = domParent;
+        this.$container = domParent.querySelector('.js-button-like');
         this.$heart = this.$container.querySelector('.js-button-like__heart');
         this.count = this.$container.querySelector('.js-button-like__txt');
 

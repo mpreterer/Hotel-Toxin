@@ -1,10 +1,10 @@
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
-import './searchRoom.scss';
+import './search-room.scss';
 import '../../style.scss';
 import '../../../assets/scss/simplePagination.css';
 
-import dropDown from '../../../blocks/dropDown/dropDown.js';
+import DropDown from '../../../blocks/dropDown/DropDown.js';
 import SliderRange from '../../../blocks/slider-range/slider-range.js'
 import AloneCalendar from '../../../blocks/alone-calendar/alone-calendar.js';
 import CheckboxList from '../../../blocks/checkbox-list/checkbox-list.js'
@@ -28,7 +28,7 @@ class SearchRoom {
        } = this._get_elements();
 
       new NavMenu(document);
-      dropDowns.forEach((item) => new dropDown(item));
+      dropDowns.forEach((item) => new DropDown(item));
       sliders.forEach((item) => new SliderRange(item));
       aloneCalendares.forEach((item) => new AloneCalendar(item));
       checkboxLists.forEach((item) => new CheckboxList(item));

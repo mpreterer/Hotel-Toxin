@@ -1,4 +1,4 @@
-import dropDown from '../dropDown/dropDown.js';
+import DropDown from '../dropDown/DropDown.js';
 import rangeDateCalendar from '../range-date-calendar/range-date-calendar.js';
 
 
@@ -10,7 +10,7 @@ class Filter {
 
     _init() {
         const { container } = this;
-        this.dropDown = new dropDown(container);
+        this.dropDown = new DropDown(container);
         this.rangeDateCalendar = new rangeDateCalendar(container);
     }
 }
