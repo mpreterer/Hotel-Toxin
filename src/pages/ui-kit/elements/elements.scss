@@ -1,0 +1,139 @@
+@import '../blocks/ui-header.scss';
+
+body {
+    font-family: 'Montserrat', 'sans-serif';
+    padding: 0;
+    margin: 0;
+}
+
+.ui-cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 140px 140px 140px;
+    line-height: 14px;
+
+    &__left-blocks {
+        width: 320px;
+    }
+
+    &__rigth-blocks{
+        width: 711px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__first {
+        width: 320px;
+    }
+
+    &__second {
+        width: 320px;
+    }
+
+    &__titles {
+        font-size: 12px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        line-height: 12px;
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        font-weight: bold;
+    }
+
+    &__text {
+        font-weight: 400;
+        color: $color-shade-grey;
+    }
+
+    &__default-field, &__drop-down {
+        margin-bottom: 20px;
+    }
+
+    &__masked-field, &__range-dates, &__filter-date {
+        margin-bottom: 40px;
+    }
+
+    &__subscribe-field {
+        margin-bottom: 100px;
+    }
+
+    &__checkbox-list {
+        margin-bottom: 100px;
+    }
+
+    &__like-buttons {
+        display: flex;
+    }
+
+    &__like-button-second {
+        margin-left: 10px;
+    }
+
+    &__checkbox-buttons {
+        margin: 17px 0 40px 0;
+    }
+
+    &__drop-down-not-panel-def {
+        margin-bottom: 50px;
+    }
+
+    &__radio-buttons {
+        margin: 16px 0 37px 0;
+    }
+
+    &__toggles, &__like-buttons {
+        margin: 16px 0 40px 0;
+    }
+
+    &__rate-buttons {
+        margin: 16px 0 80px 0;
+    }
+
+    &__drop-down-with-panel {
+        margin-bottom: 100px;
+    }
+
+    &__buttons-top {
+        width: 101px;
+        margin: 16px 0 30px 0;
+    }
+
+    &__buttons-bottum {
+        width: 101px;
+        margin-bottom: 30px;
+    }
+
+    &__buttons-center {
+        width: 105px;
+        margin-bottom: 30px;
+    }
+
+    &__pay-button {
+        margin-bottom: 30px;
+    }
+
+    &__pagination {
+        margin-bottom: 100px;
+    }
+
+    &__dropdown-with-guests {
+        margin-bottom: 95px;
+    }
+
+    &__rigth-blocks-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__rigth-blocks {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.alone-calendar__calendar {
+	transform: translateX(0);
+}

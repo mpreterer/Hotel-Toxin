@@ -10,6 +10,7 @@
 @import '../../../blocks/custom-checkbox/custom-checkbox.scss';
 @import '../../../blocks/alone-calendar/alone-calendar.scss';
 @import '../../../blocks/slider-range/slider-range.scss';
+@import '../../../blocks/stars-rating/stars-rating.scss';
 
 .search-room {
 	max-width: 1175px;
@@ -22,6 +23,10 @@
 
 .search-room__arrival-in-hotel {
 	margin-bottom: 20px;
+}
+
+.alone-calendar__calendar {
+	transform: translateX(-30px);
 }
 
 .search-room__title {

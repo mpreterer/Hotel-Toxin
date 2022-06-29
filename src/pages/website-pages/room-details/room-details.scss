@@ -82,7 +82,6 @@
 
 .room-details__expend-container h2 {
 	font-size: $font-size-medium;
-	line-height:24px;
 	margin:0 0 24px 0;
 }
 
@@ -134,7 +133,6 @@
 
 .room-details__cancel {
 	width:341px;
-	line-height:24px;
 	margin-bottom:19px;
 }
 
@@ -167,6 +165,11 @@
 	font-weight: bold;
 	font-size: $font-size-medium;
 	color: $color-shade-dark;
+}
+
+.user-reviews__button-like {
+	position: absolute;
+	top: 62px;
 }
 
 #temp {
