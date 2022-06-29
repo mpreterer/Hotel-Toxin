@@ -1,11 +1,12 @@
 include ../button-like/button-like.pug
 
-mixin user-reviews({ src="assets/image/user_1.png", count= 12, username= 'Мурад Сарафанов', dayComment= '5 дней назад', desc="Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей." }={})
+mixin user-reviews({ src="../../assets/image/user_1.png", count= 12, username= 'Мурад Сарафанов', dayComment= '5 дней назад', desc="Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей." }={})
     .user-reviews
         .user-reviews__comment
             .user-reviews__avatar-container
                 img.user-reviews__avatar(src= src)
-                +button-like({ count: count })
+                .user-reviews__button-like
+                    +button-like({ count: count })
             .user-reviews__text-reviews
                 span.user-reviews__username= username 
                 span.user-reviews__day-comment= dayComment

@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     user-select: none;
+    line-height: 15px;
 
     &_type_long {
         height: 44px;
@@ -24,7 +25,13 @@
     }
 
     &_type_backgroud {
-        background: $gradient-main;;
+        background: $gradient-main;
+        color: #fff;
+        padding: 14px 20px 14px 20px;
+    }
+
+    &_type_empty {
+        border: none;
     }
 
     &_size_small {

@@ -14,10 +14,12 @@
         font-weight: bold;
         margin: 6px 0 5px 0;
         color: $color-shade-secondary;
+        line-height: 18px;
     }
 
     &__description {
         font-size: $font-size-small;
+        line-height: 14px;
     }
 
     &__checkbox {

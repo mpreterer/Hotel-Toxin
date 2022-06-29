@@ -1,8 +1,9 @@
-mixin room-orders({ list = [] }={})
+mixin room-orders({ list = [], title = 'Правила' }={})
     div.room-orders
         div.room-orders__container
             div.room-orders__order
-                p.room-orders__title Правила
+                if title
+                    span.room-orders__title= title
                 ul.room-orders__list
                     each element in list
                         li.room-orders__element

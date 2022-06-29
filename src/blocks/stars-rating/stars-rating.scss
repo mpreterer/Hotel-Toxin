@@ -1,0 +1,45 @@
+.stars-rating {
+    .br-widget {
+      display: flex;
+  
+      a {
+        width: 24px;
+        height: 24px;
+        font-size: 26px;
+        line-height: 20px;
+  
+        &::after {
+          content: '☆';
+          width: 24px;
+          height: 24px;
+          background: $gradient-main;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+  
+      .br-active::after {
+        content: '★';
+        width: 24px;
+        height: 24px;
+      }
+
+      .br-selected {
+        padding-right: 0;
+      }
+
+      .br-selected::after {
+        content: '★';
+        width: 24px;
+        height: 24px;
+      }
+    }
+    
+    &_readonly {
+      .br-widget a {
+        cursor: default;
+      }
+    }
+  }
+  
