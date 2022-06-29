@@ -20,6 +20,7 @@ class SearchRoom {
     _init() {
       const { 
         dropDowns,
+        dropDownNoPanel,
         sliders,
         aloneCalendares,
         checkboxLists,
@@ -28,7 +29,8 @@ class SearchRoom {
        } = this._get_elements();
 
       new NavMenu(document);
-      dropDowns.forEach((item) => new DropDown(item));
+      dropDowns.forEach((item) => new DropDown(item, ['гость', 'гостя', 'гостей']));
+      dropDownNoPanel.forEach((item) => new DropDown(item));
       sliders.forEach((item) => new SliderRange(item));
       aloneCalendares.forEach((item) => new AloneCalendar(item));
       checkboxLists.forEach((item) => new CheckboxList(item));
@@ -48,6 +50,7 @@ class SearchRoom {
         checkboxLists: document.querySelectorAll('[data-component-js="js-checkbox-lists"]'),
         rooms: document.querySelectorAll('[data-component-js="js-rooms"]'),
         pagination: document.querySelectorAll('[data-component-js="js-pagination"]'),
+        dropDownNoPanel: document.querySelectorAll('[data-component-js="js-dropDown-without-panel"]'),
       };
     }
 }

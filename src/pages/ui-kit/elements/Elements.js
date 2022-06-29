@@ -22,6 +22,7 @@ class Elements {
     _init() {
         const { 
             dropDown,
+            dropDownNoPanel,
             textFiled,
             aloneCalendar,
             checkboxList,
@@ -31,7 +32,8 @@ class Elements {
             pagination
          } = this._get_elements();
 
-        dropDown.forEach((item) => new DropDown(item));
+        dropDown.forEach((item) => new DropDown(item, ['гость', 'гостя', 'гостей']));
+        dropDownNoPanel.forEach((item) => new DropDown(item));
         textFiled.forEach((item) => new TextField(item));
         aloneCalendar.forEach((item) => new AloneCalendar(item));
         checkboxList.forEach((item) => new CheckboxList(item));
@@ -48,6 +50,7 @@ class Elements {
     _get_elements() {
         return {
             dropDown: document.querySelectorAll('[data-component-js="js-dropDown"]'),
+            dropDownNoPanel: document.querySelectorAll('[data-component-js="js-dropDown-without-panel"]'),
             textFiled: document.querySelectorAll('[data-component-js="js-text-field"]'),
             aloneCalendar: document.querySelectorAll('[data-component-js="js-alone-calendar"]'),
             checkboxList: document.querySelectorAll('[data-component-js="js-checkbox-list"]'),

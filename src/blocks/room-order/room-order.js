@@ -23,7 +23,7 @@ class RoomOrder {
 
     _init_components() {
         const { container } = this;
-        this.dropDowns = new DropDown(container);
+        this.dropDowns = new DropDown(container, ['гость', 'гостя', 'гостей']);
         this.calendar = new rangeDateCalendar(container);
     }
 
