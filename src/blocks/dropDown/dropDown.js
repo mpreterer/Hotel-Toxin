@@ -1,5 +1,4 @@
 class DropDown {
-<<<<<<< HEAD
   constructor(domParent, keyWords) {
     this.container = domParent.querySelector('.js-dropDown');
     this.keyWords = keyWords;
@@ -25,56 +24,6 @@ class DropDown {
     if (this.hasControlPanel) {
       this.btnApply = this.container.querySelector('.js-dropDown_apply');
       this.btnClear = this.container.querySelector('.js-dropDown_clear');
-=======
-    constructor(domParent) {
-        this.container = domParent.querySelector('.js-dropDown');
-
-        this._init();
-    }
-
-    _init() {
-        this.body = document.querySelector('body');
-        this.inputName = this.container.querySelector('.js-dropDown__counte-guests');
-        this.open = this.container.querySelector('.js-dropDown__name');
-        this.counterPanel = this.container.querySelector('.js-dropDown__drop-block');
-        this.counterContext = this.container.querySelector('.js-dropDown__items');
-        this.counterNumber = this.container.querySelectorAll('.js-dropDown__counter');
-        this.counterName = this.container.querySelectorAll('.dropDown__dropItem');
-        this.appointment = this.container.getAttribute('data-attribute-appointment');
-        this.btnPlus = this.container.querySelectorAll('.dropDown__circle-plus');
-        this.btnMinus = this.container.querySelectorAll('.dropDown__circle-minus');
-        this.controlPanel = this.container.querySelector('.dropDown__function');
-        this.hasControlPanel = this.controlPanel !== null && this.controlPanel !== undefined;
-
-        if (this.hasControlPanel) {
-            this.btnApply = this.container.querySelector('.js-dropDown_apply');
-            this.btnClear = this.container.querySelector('.js-dropDown_clear');
-        }
-        
-        this._check_options();
-        this._open_drop_down();
-        this._drop_down_counter();
-    }
-
-    _open_drop_down() {
-        this.open.addEventListener('click', () => {
-            if (this.counterPanel.classList.contains('js-drop-close')) {
-                this.counterPanel.classList.toggle('js-drop-close');
-                this.counterPanel.classList.add('js-drop-open');
-                this.open.classList.toggle('dropDown__name_active');
-            } else {
-                this.counterPanel.classList.toggle('js-drop-open');
-                this.counterPanel.classList.add('js-drop-close');
-                this.open.classList.toggle('dropDown__name_active');
-            }
-        })
-
-        if (this.hasControlPanel) {
-            this._btn_apply();
-        }
-
-        this._close_drop_down_global();
->>>>>>> d6ffc2df42e9cdc20583dc04fde4bf6679dd073a
     }
     
     this._checkOptions();
@@ -312,8 +261,4 @@ class DropDown {
   }
 }
 
-<<<<<<< HEAD
 export default DropDown;
-=======
-export default DropDown;
->>>>>>> d6ffc2df42e9cdc20583dc04fde4bf6679dd073a
