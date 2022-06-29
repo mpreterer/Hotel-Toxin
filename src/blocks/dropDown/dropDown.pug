@@ -7,7 +7,7 @@ mixin dropDown({placeholder = 'Сколько Гостей',appointment,isOpen =
             .dropDown__items.js-dropDown__items
                 each element in list
                     .dropDown__row
-                        h3.dropDown__dropItem #{element.name}
+                        h3.dropDown__dropItem(data-item-name= element.name) #{element.name}
                         .dropDown__block-input
                             button.dropDown__circle.js-dropDown-minus -
                             input.dropDown__counter.js-dropDown__counter(value= element.val || 0 readonly) 

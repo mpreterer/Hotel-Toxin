@@ -1,6 +1,7 @@
-class dropDown {
-    constructor(domParent) {
+class DropDown {
+    constructor(domParent, keyWords) {
         this.container = domParent.querySelector('.js-dropDown');
+        this.keyWords = keyWords;
 
         this._init();
     }
@@ -10,6 +11,7 @@ class dropDown {
         this.inputName = this.container.querySelector('.js-dropDown__counte-guests');
         this.open = this.container.querySelector('.js-dropDown__name');
         this.counterPanel = this.container.querySelector('.js-dropDown__drop-block');
+        this.itenName = this.container.querySelectorAll('[data-item-name]');
         this.counterContext = this.container.querySelector('.js-dropDown__items');
         this.counterNumber = this.container.querySelectorAll('.js-dropDown__counter');
         this.counterName = this.container.querySelectorAll('.dropDown__dropItem');
@@ -196,77 +198,47 @@ class dropDown {
         let adults = Number(countArray.slice(0,1).join());
         let youngs = Number(countArray.slice(1,2).join());
         let child = Number(countArray.slice(2,3).join());
-        let guests = adults + youngs;
+        let guests = adults + youngs + child;
 
         let strGuests = '';
-        let strChild = '';
 
         if (guests > 0) {
             if (guests == 1 || guests == 21) {
-                strGuests = `${guests} гость`;
+                strGuests = `${guests} ${this.keyWords[0]}`;
             } else if (guests > 1 && guests < 5) {
-                strGuests = `${guests} гостя`;
+                strGuests = `${guests} ${this.keyWords[1]}`;
             } else {
-                strGuests = `${guests} гостей`;
+                strGuests = `${guests} ${this.keyWords[2]}`;
             }
         }
 
-        if (child > 0) {
-            if (child == 1 || child == 21) {
-                strChild = `${child} младенец`;
-            } else if (child > 1 && child <= 5) {
-                strChild = `${child} младенца`;
-            } else {
-                strChild = `${child} младенцев`;
-            }
-        } 
-
-        if (strGuests != '' && strChild != '') {
-            this.inputName.value = `${strGuests}, ${strChild}`;
-        } else if (strGuests != '') {
-            this.inputName.value = `${strGuests}`;
-        } else {
-            this.inputName.value = `${strChild}`;
-        }
+        this.inputName.value = `${strGuests}`;
     }
 
     _counter_furniture(countArray) {
         let bedRooms = Number(countArray.slice(0,1).join());
         let bed = Number(countArray.slice(1,2).join());
         let bathRoom = Number(countArray.slice(2,3).join());
+        let arrayName = [];
 
+        this.itenName.forEach((item)=>{
+            arrayName.push(item);
+        })
+        
         let strBedRooms = '';
         let strBed = '';
         let strBathRoom = '';
 
         if (bedRooms > 0) {
-            if (bedRooms == 1 || bedRooms == 21) {
-                strBedRooms = `${bedRooms} спальня`;
-            } else if (bedRooms > 1 & bedRooms < 5) {
-                strBedRooms = `${bedRooms} спальни`;
-            } else {
-                strBedRooms = `${bedRooms} спален`;
-            }
+            strBedRooms = `${bedRooms} ${arrayName[0].textContent}`;
         }
 
         if (bed > 0) {
-            if (bed == 1 || bed == 21) {
-                strBed = `${bed} кровать`;
-            } else if (bed > 1 & bed < 5) {
-                strBed = `${bed} кровати`;
-            } else {
-                strBed = `${bed} кроватей`;
-            }
+            strBed = `${bed} ${arrayName[1].textContent}`;
         }
 
         if (bathRoom > 0) {
-            if (bathRoom == 1 || bathRoom == 21) {
-                strBathRoom = `${bathRoom} ванная комната`;
-            } else if (bathRoom > 1 & bathRoom < 5) {
-                strBathRoom = `${bathRoom} ванные комнаты`;
-            } else {
-                strBathRoom = `${bathRoom} ванных комнат`;
-            }
+            strBathRoom = `${bathRoom} ${arrayName[2].textContent}`;
         }
 
         if (strBedRooms != '' && strBed != '' && strBathRoom != '') {
@@ -291,4 +263,4 @@ class dropDown {
 
 }
 
-export default dropDown;
+export default DropDown;
