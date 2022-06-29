@@ -1,28 +1,28 @@
-import './Registration.scss'
-import '../../style.scss'
+import './Registration.scss';
+import '../../style.scss';
 
-import RegistrationCard from '../../../blocks/registration-card/registration-card.js'
-import NavMenu from '../../../blocks/nav-menu/nav-menu.js'
+import RegistrationCard from '../../../blocks/registration-card/registration-card';
+import NavMenu from '../../../blocks/nav-menu/nav-menu';
 
 class Registration {
-    constructor() {
-        this._init();
-      }
-      
-    _init() {
-        const { 
-            registratonCard,
-        } = this._get_elements();
+  constructor() {
+    this._init();
+  }
+    
+  _init() {
+    const {
+      registratonCard,
+    } = this._getElements();
 
-        new NavMenu(document);
-        registratonCard.forEach((item) => new RegistrationCard(item));
-    }   
+    new NavMenu(document);
+    registratonCard.forEach((item) => new RegistrationCard(item));
+  }
 
-    _get_elements() {
-        return {
-            registratonCard: document.querySelectorAll('[data-component-js="js-registration-card"]'),
-        };
-    }
+  _getElements() {
+    return {
+      registratonCard: document.querySelectorAll('[data-component-js="js-registration-card"]'),
+    };
+  }
 }
 
 new Registration();

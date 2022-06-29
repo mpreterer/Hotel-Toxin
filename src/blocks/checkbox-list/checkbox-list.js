@@ -1,62 +1,62 @@
 class CheckboxList {
-    constructor(domParent) {
-        this.$container = domParent.querySelector('.js-checkbox-list');
+  constructor(domParent) {
+    this.$container = domParent.querySelector('.js-checkbox-list');
 
-        this._init();
+    this._init();
+  }
+
+  _init() {
+    this.$input = this.$container.querySelector('.js-checkbox-list__name');
+    this.$arrow = this.$container.querySelector('.arrow-expend-btn');
+    this.$menu = this.$container.querySelector('.js-checkbox-list__menu');
+    this.isOpen = this.$container.classList.contains('js-checkbox-list-open');
+
+    this._eventOpen();
+  }
+
+  _eventOpen() {
+    if (this.isOpen) {
+      this.$menu.classList.remove('checkbox-list__name_hide');
+    } else {
+      this.$menu.classList.add('checkbox-list__name_hide');
     }
 
-    _init() {
-        this.$input = this.$container.querySelector('.js-checkbox-list__name');
-        this.$arrow = this.$container.querySelector('.arrow-expend-btn');
-        this.$menu = this.$container.querySelector('.js-checkbox-list__menu');
-        this.isOpen = this.$container.classList.contains('js-checkbox-list-open');
+    this.$input.addEventListener('click', this._openList.bind(this));
+    document.addEventListener('click', this._globalOpen.bind(this), true);
+  }
 
-        this._event_open();
+  _globalOpen(event) {
+    const { target } = event;
+    const isClickOnList = this.$container.contains(target);
+    const hasClickOutSideList = !isClickOnList;
+    
+    if (hasClickOutSideList) {
+      this._hideList();
     }
+  }
 
-    _event_open() { 
-        if (this.isOpen) {
-            this.$menu.classList.remove('checkbox-list__name_hide');
-        } else {
-            this.$menu.classList.add('checkbox-list__name_hide');
-        }
-
-        this.$input.addEventListener('click', this._open_list.bind(this));
-        document.addEventListener('click', this._global_open.bind(this), true);
+  _openList() {
+    if (this.$menu.classList.contains('checkbox-list__name_hide')) {
+      this.$menu.classList.remove('checkbox-list__name_hide');
+      this._rotateArrow(true);
+    } else {
+      this.$menu.classList.toggle('checkbox-list__name_hide');
+      this._rotateArrow(false);
     }
+  }
 
-    _global_open(event) {
-        const { target } = event;
-        const isClickOnList = this.$container.contains(target);
-        const hasClickOutSideList = !isClickOnList;
-        
-        if (hasClickOutSideList) {
-          this._hide_list();
-        }
-    }
+  _hideList() {
+    this.$menu.classList.add('checkbox-list__name_hide');
+    this.$arrow.classList.remove('arrow-expend-btn_active');
+  }
 
-    _open_list() {
-        if (this.$menu.classList.contains('checkbox-list__name_hide')) {
-            this.$menu.classList.remove('checkbox-list__name_hide');
-            this._rotate_arrow(true);
-        } else {
-            this.$menu.classList.toggle('checkbox-list__name_hide');
-            this._rotate_arrow(false);
-        }
+  _rotateArrow(sideTop) {
+    if (sideTop) {
+      this.$arrow.classList.add('arrow-expend-btn_active');
+    } else {
+      this.$arrow.classList.toggle('arrow-expend-btn_active');
     }
-
-    _hide_list() {
-        this.$menu.classList.add('checkbox-list__name_hide');
-        this.$arrow.classList.remove('arrow-expend-btn_active');
-    }
-
-    _rotate_arrow(side_top) {
-        if (side_top) {
-            this.$arrow.classList.add('arrow-expend-btn_active');
-        } else {
-            this.$arrow.classList.toggle('arrow-expend-btn_active');
-        }
-    }
+  }
 }
 
 export default CheckboxList;

@@ -1,14 +1,14 @@
-import 'jquery-bar-rating/dist/jquery.barrating.min.js';
+import 'jquery-bar-rating/dist/jquery.barrating.min';
 
 class StarsRating {
   constructor(domParent) {
     this.$container = $(domParent).find('.js-stars-rating');
 
-    this._find_dom_elements();
+    this._findDomElements();
     this._init();
   }
 
-  _find_dom_elements() {
+  _findDomElements() {
     this.$starsBtn = this.$container.find('[data-rating-stars]');
     this.valueRating = this.$starsBtn.attr('data-rating');
     this.valueReadonly = this.$starsBtn.attr('data-readonly');
