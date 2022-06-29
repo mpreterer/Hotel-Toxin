@@ -23,14 +23,13 @@ module.exports = () => {
         mode: 'development',
         entry: {
             index: [`${PAGES_DIR}/index.js`],
-            'search-room': [`${PAGES_DIR}/website-pages/search-room/searchRoom.js`],
+            'search-room': [`${PAGES_DIR}/website-pages/search-room/SearchRoom.js`],
             'room_details': [`${PAGES_DIR}/website-pages/room-details/RoomDetails.js`],
-            'login': [`${PAGES_DIR}/website-pages/login/index.js`],
+            'login': [`${PAGES_DIR}/website-pages/login/Login.js`],
             'registration': [`${PAGES_DIR}/website-pages/registration/Registration.js`],
-            'site-pages': [`${PAGES_DIR}/ui-kit/index.js`],
             'cards': [`${PAGES_DIR}/ui-kit/cards/Cards.js`],
-            'colors-type': [`${PAGES_DIR}/ui-kit/colors-type/index.js`],
-            'elements': [`${PAGES_DIR}/ui-kit/elements/index.js`],
+            'colors-type': [`${PAGES_DIR}/ui-kit/colors-type/colors-types.js`],
+            'elements': [`${PAGES_DIR}/ui-kit/elements/Elements.js`],
             'header-footer': [`${PAGES_DIR}/ui-kit/header-footer/HeaderFooter.js`],
         },
         output: {
@@ -62,13 +61,13 @@ module.exports = () => {
                 chunks: ['index']
             }),
             new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/website-pages/search-room/searchRoom.pug`,
-                filename: './searchRoom.html',
+                template: `${PAGES_DIR}/website-pages/search-room/search-room.pug`,
+                filename: './search-room.html',
                 chunks: ['search-room']
             }),
             new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/website-pages/room-details/roomDetails.pug`,
-                filename: './roomDetails.html',
+                template: `${PAGES_DIR}/website-pages/room-details/room-details.pug`,
+                filename: './room-details.html',
                 chunks: ['room_details']
             }),
             new HTMLWebpackPlugin({
@@ -80,11 +79,6 @@ module.exports = () => {
                 template: `${PAGES_DIR}/website-pages/registration/Registration.pug`,
                 filename: './Registration.html',
                 chunks: ['registration']
-            }),
-            new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/ui-kit/site-pages.pug`,
-                filename: './ui-kit/site-pages.html',
-                chunks: ['site-pages']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/ui-kit/cards/cards.pug`,
