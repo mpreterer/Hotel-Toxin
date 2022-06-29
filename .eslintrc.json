@@ -1,0 +1,31 @@
+{
+    "root": true,
+    "extends": ["airbnb-base"],
+    "rules": {
+        "linebreak-style": 0,
+        "operator-linebreak": 0,
+        "no-underscore-dangle": 0,
+        "class-methods-use-this": 0,
+        "object-curly-newline": ["error", {
+        "consistent": true
+        }],
+        "no-new": 0,
+        "one-var": 0,
+        "func-names": ["error", "as-needed"],
+        "no-trailing-spaces": ["error", {
+        "skipBlankLines": true,
+        "ignoreComments": true
+        }],
+        "radix": ["error", "as-needed"]
+    },
+    "globals": {
+        "window": true,
+        "document": true,
+        "$": true,
+        "localStorage": true,
+        "sessionStorage": true
+    },
+    "env": {
+        "browser": true
+    }
+}
