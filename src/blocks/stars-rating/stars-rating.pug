@@ -1,6 +1,6 @@
 mixin stars-rating({ stars = 3, readonly= true }={})
   - let n = 0;
   .stars-rating.js-stars-rating
-    select(data-rating-stars data-rating= stars data-readonly= readonly)
+    select(data-rating-stars data-rating= `${stars}` data-readonly= `${readonly}`)
       while n < 5
         option(value=n+=1)= n

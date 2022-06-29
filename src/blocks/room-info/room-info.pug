@@ -14,7 +14,10 @@ mixin room-info({ link = 'room-details.html', number = 888, level = 'Люкс', 
                     span.room-info__price-day !{' в сутки'}
             .room-info__rating
                 .room-info__star
-                    +stars-rating({})                  
+                    +stars-rating({ 
+                        stars: stars,
+                        readonly: true 
+                    })         
                 span.room-info__feedback #{review} 
                     span.room-info__feedback-txt Отзывов
                      

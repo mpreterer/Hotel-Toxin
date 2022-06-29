@@ -25,7 +25,7 @@ class StarsRating {
     });
 
     if (isReadonly) {
-      this.$container.addClass('rate-button_readonly');
+      this.$container.addClass('stars-rating_readonly');
     }
   }
 }

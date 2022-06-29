@@ -5,20 +5,20 @@ import '../../../pages/style.scss';
 import NavMenu from '../../../blocks/nav-menu/nav-menu';
 
 class HeaderFooter {
-    constructor() {
-        this._init();
-    }
+  constructor() {
+    this._init();
+  }
 
-    _init() {
-        const { navMenu } = this._get_element();
-        navMenu.forEach((item) => new NavMenu(item));
-    }
+  _init() {
+    const { navMenu } = this._getElement();
+    navMenu.forEach((item) => new NavMenu(item));
+  }
 
-    _get_element() {
-        return {
-            navMenu: document.querySelectorAll('[data-component-js="js-header"]'),
-        };
-    }
+  _getElement() {
+    return {
+      navMenu: document.querySelectorAll('[data-component-js="js-header"]'),
+    };
+  }
 }
 
 export default HeaderFooter;

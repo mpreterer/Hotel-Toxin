@@ -15,35 +15,35 @@ import Calendar from '../../../blocks/calendar/calendar';
 import RoomInfo from '../../../blocks/room-info/room-info';
 
 class Cards {
-    constructor() {
-        this._init();
-    }
+  constructor() {
+    this._init();
+  }
 
-    _init() {
-        const { 
-            filter,
-            roomOrder,
-            calendar,
-            roomInfo
-        } = this._get_elements();
+  _init() {
+    const {
+      filter,
+      roomOrder,
+      calendar,
+      roomInfo,
+    } = this._getElements();
 
-        filter.forEach((item) => new Filter(item));
-        calendar.forEach((item) => new Calendar({
-            body: item,
-            isOpen: true,
-        }));    
-        roomOrder.forEach((item) => new RoomOrder(item));
-        roomInfo.forEach((item) => new RoomInfo(item));
-    }
+    filter.forEach((item) => new Filter(item));
+    calendar.forEach((item) => new Calendar({
+      body: item,
+      isOpen: true,
+    }));
+    roomOrder.forEach((item) => new RoomOrder(item));
+    roomInfo.forEach((item) => new RoomInfo(item));
+  }
 
-    _get_elements() {
-        return {
-            filter: document.querySelectorAll('[data-component-js="js-cards-filter"]'),
-            roomOrder: document.querySelectorAll('[data-component-js="js-cards-range-dates"]'),
-            calendar: document.querySelectorAll('[data-component-js="js-calendar-open"]'),
-            roomInfo: document.querySelectorAll('[data-component-js="js-card-room"]'),
-        };
-    }
+  _getElements() {
+    return {
+      filter: document.querySelectorAll('[data-component-js="js-cards-filter"]'),
+      roomOrder: document.querySelectorAll('[data-component-js="js-cards-range-dates"]'),
+      calendar: document.querySelectorAll('[data-component-js="js-calendar-open"]'),
+      roomInfo: document.querySelectorAll('[data-component-js="js-card-room"]'),
+    };
+  }
 }
 
-new Cards;
+new Cards();
