@@ -3,14 +3,14 @@
 ---
 ### Распаковка
 Клонировать
->```git clone https://github.com/iammumhacker/Toxin_Hotel.git```
+>```git clone https://github.com/mpreterer/Hotel-Toxin.git```
 
 Установить
 >```npm i```
 ---
 
 Запустить webpack server
->```npm run dev```
+>```npm run start```
 ---
 
 Запустить production build
@@ -18,22 +18,27 @@
 ---
 
 ## Использованные библиотеки
-[jQuery](https://github.com/jquery/jquery),
-[air-datepicker](https://github.com/t1m0n/air-datepicker),
-[Chart.js](https://www.chartjs.org/docs/latest/)
+[jQuery ^3.6.0](https://github.com/jquery/jquery),
+[air-datepicker ^2.2.3](https://github.com/t1m0n/air-datepicker),
+[Chart.js](https://www.chartjs.org/docs/latest/),
+[inputmask ^5.0.7](https://www.npmjs.com/package/inputmask),
+[jquery-bar-rating ^1.2.2](https://www.npmjs.com/package/jquery-bar-rating),
+[slick-carousel ^1.8.1](https://www.npmjs.com/package/slick-carousel/v/1.8.1),
+[nouislider ^15.6.0](https://github.com/leongersen/noUiSlider/releases),
+[donut-chart-js ^1.0.1](https://www.npmjs.com/package/donut-chart-js)
 
 ---
 ## Website pages
 
-### [Landing page](https://iammumhacker.github.io/Toxin_Hotel/index.html)
-### [Search room](https://iammumhacker.github.io/Toxin_Hotel/searchRoom.html)
-### [Room details](https://iammumhacker.github.io/Toxin_Hotel/roomDetails.html)
-### [Registration](https://iammumhacker.github.io/Toxin_Hotel/Registration.html)
-### [Sign in](https://iammumhacker.github.io/Toxin_Hotel/login.html)
+### [Landing page](https://mpreterer.github.io/Hotel-Toxin/index.html)
+### [Search room](https://mpreterer.github.io/Hotel-Toxin/search-room.html)
+### [Room details](https://mpreterer.github.io/Hotel-Toxin/room-details.html)
+### [Registration](https://mpreterer.github.io/Hotel-Toxin/Registration.html)
+### [Sign in](https://mpreterer.github.io/Hotel-Toxin/login.html)
 ---
 ## UI kit
 
-### [Colors & type](https://iammumhacker.github.io/Toxin_Hotel/CT.html)
-### [Form elements](https://iammumhacker.github.io/Toxin_Hotel/Elements.html)
-### [Cards](https://iammumhacker.github.io/Toxin_Hotel/Cards.html)
-### [Headers and footers](https://iammumhacker.github.io/Toxin_Hotel/HeaderFooter.html)
+### [Colors & type](https://mpreterer.github.io/Hotel-Toxin/colors-type.html)
+### [Form elements](https://mpreterer.github.io/Hotel-Toxin/elements.html)
+### [Cards](https://mpreterer.github.io/Hotel-Toxin/cards.html)
+### [Headers and footers](https://mpreterer.github.io/Hotel-Toxin/header-footer.html)
