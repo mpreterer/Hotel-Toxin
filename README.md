@@ -18,14 +18,14 @@
 ---
 
 ## Использованные библиотеки
-[jQuery ^3.6.0](https://github.com/jquery/jquery),
-[air-datepicker ^2.2.3](https://github.com/t1m0n/air-datepicker),
-[Chart.js](https://www.chartjs.org/docs/latest/),
-[inputmask ^5.0.7](https://www.npmjs.com/package/inputmask),
-[jquery-bar-rating ^1.2.2](https://www.npmjs.com/package/jquery-bar-rating),
-[slick-carousel ^1.8.1](https://www.npmjs.com/package/slick-carousel/v/1.8.1),
-[nouislider ^15.6.0](https://github.com/leongersen/noUiSlider/releases),
-[donut-chart-js ^1.0.1](https://www.npmjs.com/package/donut-chart-js)
+* [jQuery ^3.6.0](https://github.com/jquery/jquery),
+* [air-datepicker ^2.2.3](https://github.com/t1m0n/air-datepicker),
+* [Chart.js](https://www.chartjs.org/docs/latest/),
+* [inputmask ^5.0.7](https://www.npmjs.com/package/inputmask),
+* [jquery-bar-rating ^1.2.2](https://www.npmjs.com/package/jquery-bar-rating),
+* [slick-carousel ^1.8.1](https://www.npmjs.com/package/slick-carousel/v/1.8.1),
+* [nouislider ^15.6.0](https://github.com/leongersen/noUiSlider/releases),
+* [donut-chart-js ^1.0.1](https://www.npmjs.com/package/donut-chart-js)
 
 ---
 ## Website pages
