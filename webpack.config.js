@@ -82,22 +82,22 @@ module.exports = () => {
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/ui-kit/cards/cards.pug`,
-                filename: './ui-kit/cards.html',
+                filename: './cards.html',
                 chunks: ['cards']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/ui-kit/colors-type/colors-type.pug`,
-                filename: './ui-kit/colors-type.html',
+                filename: './colors-type.html',
                 chunks: ['colors-type']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/ui-kit/elements/elements.pug`,
-                filename: './ui-kit/elements.html',
+                filename: './elements.html',
                 chunks: ['elements']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/ui-kit/header-footer/header-footer.pug`,
-                filename: './ui-kit/header-footer.html',
+                filename: './header-footer.html',
                 chunks: ['header-footer']
             }),
             new CleanWebpackPlugin(),
