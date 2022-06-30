@@ -1,4 +1,4 @@
-import DropDown from '../dropDown/DropDown';
+import DropDown from '../dropDown/dropDown';
 import RangeDateCalendar from '../range-date-calendar/rangeDateCalendar';
 
 class RoomOrder {

@@ -4,7 +4,7 @@ import './search-room.scss';
 import '../../style.scss';
 import '../../../assets/styles/simplePagination.css';
 
-import DropDown from '../../../blocks/dropDown/DropDown';
+import DropDown from '../../../blocks/dropDown/dropDown';
 import SliderRange from '../../../blocks/slider-range/slider-range';
 import AloneCalendar from '../../../blocks/alone-calendar/alone-calendar';
 import CheckboxList from '../../../blocks/checkbox-list/checkbox-list';

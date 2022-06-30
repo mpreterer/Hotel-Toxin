@@ -5,7 +5,7 @@ import '../../website-pages/room-details/room-details.scss';
 import '../../website-pages/registration/Registration.scss';
 import '../../website-pages/login/login.scss';
 
-import DropDown from '../../../blocks/dropDown/DropDown';
+import DropDown from '../../../blocks/dropDown/dropDown';
 import TextField from '../../../blocks/text-input/text-input';
 import AloneCalendar from '../../../blocks/alone-calendar/alone-calendar';
 import CheckboxList from '../../../blocks/checkbox-list/checkbox-list';
