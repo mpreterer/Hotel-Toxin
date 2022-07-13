@@ -9,6 +9,13 @@
 		margin:40px 30px 30px 30px;
 	}
 
+	&__level {
+		color: $color-purple;
+		margin-left: 8px;
+		text-transform: uppercase;
+		font-size: $font-size-small;
+	}
+
 	&__head {
 		display:flex;
 		justify-content:space-between;
@@ -23,6 +30,10 @@
 	&__number-room-title {
 		font-size: $font-size-big;
 		color: $color-shade-dark;
+	}
+
+	&__in-day {
+		color: $color-shade-grey;
 	}
 
 	&__price-for-day {
