@@ -83,6 +83,10 @@
 	padding-left:-20px;
 	display:none;
 	user-select:none;
+
+	.nav-burger__link {
+		width: 100%;
+	}
 }
 
 .menu_burger a {

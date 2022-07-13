@@ -5,5 +5,5 @@ mixin nav-burger({ navLinks = [] }={})
         button.nav-burger__border3.border
         ul.menu_burger
             each item in navLinks
-                a(href= item.link)
-                    li.li_burger= item.title
+                li.li_burger
+                    a(href= item.link).nav-burger__link= item.title
