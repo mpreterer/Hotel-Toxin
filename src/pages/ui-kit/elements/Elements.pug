@@ -28,7 +28,7 @@ block content
                 .ui-cards__title text field
                 .ui-cards__text Default
             .ui-cards__default-field
-                +text-input({ placeholder: 'Email' })
+                +text-input({ placeholder: 'Email', name: 'email' })
             .ui-cards__titles
                 .ui-cards__title Dropdown
             .ui-cards__drop-down(data-component-js="js-dropDown")
@@ -44,7 +44,7 @@ block content
             .ui-cards__titles
                 .ui-cards__title masked text field
             .ui-cards__masked-field(data-component-js="js-text-field")
-                +text-input({ isMasked: true })
+                +text-input({ isMasked: true, name: 'birthday' })
             .ui-cards__range-dates
                 +range-date-calendar({
                     titleFirst: 'DATE DROPDOWN',

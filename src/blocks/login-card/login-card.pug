@@ -5,9 +5,9 @@ mixin login-card({}={})
         .login-card__container
             span.login-card__title Войти
             .login-card__email
-                +text-input({ placeholder: 'Email' })
+                +text-input({ placeholder: 'Email', name: 'name' })
             .login-card__password
-                +text-input({ type: 'password', placeholder: 'Пароль' })
+                +text-input({ type: 'password', placeholder: 'Пароль', name: 'password' })
             .login-card__login-btn
                 +button({
                     text: 'Войти',

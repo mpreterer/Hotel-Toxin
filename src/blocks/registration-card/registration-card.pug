@@ -10,20 +10,20 @@ mixin registration-card({ title = 'Регистрация аккаунта' }={}
             .registration-card__user-about
                 .registration-card__user-name
                     .registration-card__first-name
-                        +text-input({ placeholder: 'Имя' })
+                        +text-input({ placeholder: 'Имя', name: 'name' })
                     .registration-card__second-name
-                        +text-input({ placeholder: 'Фамилия' })
+                        +text-input({ placeholder: 'Фамилия', name: 'second name' })
                 .registration-card__gender
                     +radio-input
                 .registration-card__birthday.js-registration-card__input
                     span.registration-card__sub-title дата рождения
-                    +text-input({ isMasked: true })
+                    +text-input({ isMasked: true, name: 'birthday' })
                 .registration-card__data-login
                     span.registration-card__sub-title данные для входа в сервис
                     .registration-card__email
-                        +text-input({ placeholder: 'Email' })
+                        +text-input({ placeholder: 'Email', name: 'email' })
                     .registration-card__password
-                        +text-input({ type: 'password', placeholder: 'Пароль' })
+                        +text-input({ type: 'password', placeholder: 'Пароль', name: 'password' })
                 .registration-card__offer
                     +toggle
                 .registration-card__buy-btn
