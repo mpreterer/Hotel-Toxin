@@ -35,15 +35,17 @@
     }
 
     &__sublist {
-        color: $color-shade-secondary;
+        color: $color-shade-grey;
 
         &:hover > .nav-menu__sublist:before {
             overflow: visible;
             visibility: visible;
+            color: $color-shade-secondary;
         }
 
         &:hover {
             font-weight: bold;
+            color: $color-shade-secondary;
         }
 
         &:before {
@@ -62,10 +64,12 @@
         &:hover > .nav-menu__link:before {
             overflow: visible;
             visibility: visible;
+            color: $color-shade-secondary;
         }
 
         &:hover {
             font-weight: bold;
+            color: $color-shade-secondary;
         }
 
         &:before {
@@ -94,6 +98,11 @@
 
     &__submenu-link {
         word-wrap: break-word;
+
+        &:hover {
+            color: $color-shade-secondary;
+            font-weight: bold;
+        }
     }
 
     &__submenu-item {
@@ -103,6 +112,7 @@
 
         &:hover {
             font-weight: bold;
+            color: $color-shade-secondary;
         }
     }
 }

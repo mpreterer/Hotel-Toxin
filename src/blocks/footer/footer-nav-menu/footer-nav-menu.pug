@@ -6,4 +6,4 @@ mixin footer-nav-menu({ navList = [] }={})
                 ul.ul_block2.footer-nav-menu__list
                     each link in list.links
                         li.footer-nav-menu__li
-                            a(href= link.href)= link.title
+                            a(href= link.href).footer-nav-menu__link= link.title

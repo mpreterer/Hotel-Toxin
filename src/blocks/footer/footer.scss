@@ -66,13 +66,17 @@
 
 }
 
-.footer-nav-menu__list {
-	margin-top: 0;
-}
-
 .footer-nav-menu {
 	display: flex;
 	justify-content: space-around;
+
+	&__link {
+		color: $color-shade-grey;
+	}
+
+	&__list {
+		margin-top: 0;
+	}
 }
 
 .footer_container {
@@ -81,7 +85,6 @@
 	background-color: #FFFFFF;
 }
 
-/*Список блоков*/
 .footer .footer_list {
 	display:flex;
 	justify-content: space-between;

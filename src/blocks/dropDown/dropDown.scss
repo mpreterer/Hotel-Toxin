@@ -4,10 +4,12 @@
     user-select: none;
 
     &__name {
-        padding: 12px 32px 14px 15px;
         border: 1px solid #1F204140;
         border-radius: 4px;
+        height: 44px;
         cursor: pointer;
+        display: flex;
+        align-items: center;
 
         &_active {
             border:1px solid #1F204180;
@@ -132,10 +134,10 @@
     }
 
     &__counte-guests {
-        width: 100%;
         color:#1F2041BF;
         cursor: pointer;
         user-select: none;
+        padding-left: 15px;
     }
 
     &__counter {
