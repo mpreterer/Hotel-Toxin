@@ -8,24 +8,19 @@
 .room-details__room-loop {
 	height:485px;
 	display:flex;
+	justify-content: center;
+
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
 
 .room-details__room-loop-big {
 	width:982px;
 	height:485px;
-	background-image:url(../../../assets/image/room_loop1.jpg);
-	background-repeat:no-repeat;
-	background-size:100%;
-	transition:0.4s;
-	background-position:center;
 }
-
-.room-details__room-loop-big:hover {
-	background-size:115%;
-	transition:0.4s;
-	background-position:center;
-}
-
 
 .room-details__room-loop-head {
 	height:485px;
@@ -35,32 +30,11 @@
 .room-details__room-loop-middle-1 {
 	width:538px;
 	height: 243px;
-	background-image:url(../../../assets/image/room_loop2.jpg);
-	background-repeat:no-repeat;
-	background-size:100%;
-	transition:0.4s;
-	background-position:center;
-}
-
-.room-details__room-loop-middle-1:hover {
-	background-size:115%;
-	transition:0.3s;
 }
 
 .room-details__room-loop-middle-2 {
 	width:538px;
 	height:242px;
-	background-image:url(../../../assets/image/room_loop3.jpg);
-	background-repeat:no-repeat;
-	background-size:100%;
-	transition:0.4s;
-	background-position:center;
-}
-
-.room-details__room-loop-middle-2:hover {
-	background-size:115%;
-	transition:0.3s;
-	background-position:center;
 }
 
 .room-details__expend-container {
@@ -246,7 +220,7 @@
 	}
 
 	.room-details__room-loop-middle-1,.room-details__room-loop-middle-2 {
-		height: 420px;
+		height: auto;
 	}
 
 	.room-details__room-loop-big {
@@ -281,7 +255,7 @@
 	}
 
 	.room-details__room-loop-big,.room-details__room-loop-middle-1, .room-details__room-loop-middle-2 {
-		height: 243px;
+		height: auto;
 	}
 
 	.room-details__split-container {
