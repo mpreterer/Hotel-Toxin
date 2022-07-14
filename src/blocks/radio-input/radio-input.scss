@@ -9,7 +9,7 @@
 
 	&__text {
 		padding-left: 10px;
-		color: #1F204180;
+		color: $color-shade-grey;
 	}
 
 	&__label {
@@ -45,6 +45,6 @@
 	}
 
 	&__input:checked + .radio-input__text {
-		color: #1F2041BF;
+		color: $color-shade-secondary;
 	}
 }

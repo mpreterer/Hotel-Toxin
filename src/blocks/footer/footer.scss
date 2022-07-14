@@ -14,8 +14,13 @@
 		height:72px;
 		width:260px;
 		margin-top:20px;
+		line-height: 24px;
 	}
-	
+
+	&__description-special-title {
+		line-height: 24px;
+	}
+
 	&__description-email {
 		width: 260px;
 	}
@@ -23,7 +28,6 @@
 	&__description {
 		height:168px;
 		width:260px;
-		line-height: 24px;
 	}
 
 	&__sub {
