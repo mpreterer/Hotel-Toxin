@@ -234,12 +234,21 @@
 }
 
 @media all and (max-width: 375px) {
-	.room-order__additional-fees-title:after {
-		right: 0;
-	}
-
 	.room-order__container {
 		margin: 15px;
 	}
 }
 
+@media all and (max-width: 380px) {
+	.room-order {
+		width: 100%;
+	}
+
+	.room-order__fees-container:after {
+		right: -20px;
+	}
+
+	.room-order__additional-fees-title:after {
+		right: 0;
+	}
+}

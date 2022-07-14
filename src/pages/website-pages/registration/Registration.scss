@@ -20,7 +20,7 @@ p {
 	margin: 0 auto;
 }
 
-.registration-card .registration-card__container {
+.registration-card__container {
 	padding:40px 30px 30px 30px;
 }
 
@@ -102,25 +102,19 @@ p {
 	.registration-card .registration-card__user-info h1 {
 		font-size:20px;
 	}
-	.registration-card {
-		max-width:320px;
-	}
-
-	.buy {
-		margin-top:30px;
-	}
-	
-	
-
-	.registration-card .registration-card__container {
-		padding: 0;
-	}
-
-	.registration-card {
-		padding: 20px 10px;
-	}
-
 }
+
+@media screen and (max-width:380px) {
+	.registration-card {
+		width: auto;
+	}
+
+	.registration-card__container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
 
 
 

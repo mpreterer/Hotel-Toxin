@@ -20,7 +20,7 @@ class Index {
     };
   }
 }
-  
+
 export default Index;
 
 new Index();

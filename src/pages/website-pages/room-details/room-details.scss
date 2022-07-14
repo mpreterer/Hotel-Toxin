@@ -267,4 +267,15 @@
 	.room-details__room-loop-big,.room-details__room-loop-middle-1, .room-details__room-loop-middle-2 {
 		height: 180px;
 	}
+
+	.room-details__title-comment {
+		width: 220px;
+	}
+	
+}
+
+@media all and (max-width: 341px) {
+	.room-details__cancel {
+		width: 100%;
+	}
 }

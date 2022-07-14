@@ -158,7 +158,18 @@ module.exports = () => {
                 {
                     test:/\.pug$/,
                     use: ['pug-loader'],
-                }
+                },
+                {
+                    test: /\.(eot|svg|ttf|woff|woff2)$/,
+                    exclude: [/image/],
+                    use: {
+                      loader: 'file-loader',
+                      options: {
+                        name: 'assets/fonts/[name].[ext]',
+                        publicPath: '../',
+                      },
+                    },
+                },
             ]
         },
         resolve: {
