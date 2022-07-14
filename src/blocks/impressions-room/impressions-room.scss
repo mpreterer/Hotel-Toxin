@@ -11,8 +11,8 @@
 	&__comments-count {
 		height: 50px;
 		position: absolute;
-		top: 28px;
-		left: 24px;
+		top: 35px;
+		left: 29px;
 		color: $color-purple;
 		text-align: center;
 		z-index: -3;
@@ -23,19 +23,16 @@
 	}
 
 	&__comments-count p:first-child {
-		font-family: 'Quicksand', 'Open Sans', Arial, Helvetica, sans-serif;
 		font-size: 1.714rem;
-		font-style: normal;
-		font-weight: bold;
-		line-height: 2.143rem;
+		font-weight: 700;
+		line-height: 29px;
 		text-transform: uppercase;
 	}
 
 	&__comments-count p:last-child {
-		font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-		font-size: 0.857rem;
-		font-weight: bold;
-		line-height: 1.071rem;
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 15px;
 		text-transform: uppercase;
 	}
 

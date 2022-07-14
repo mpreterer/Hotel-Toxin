@@ -139,13 +139,11 @@
 		}
 
 		&__search-room {
-			padding: 15px;
 			margin: 0 auto;
 		}
 
 		&__search-room {
 			left: 10px;
-			width: 350px;
 		}
 
 		&__title {
@@ -156,9 +154,6 @@
 
 @media all and (max-width:425px) {
     .filter {
-		&__search-room {
-			width: 375px;
-		}
 
 		&__date_departure {
 			width: 100%;
@@ -175,7 +170,6 @@
 	.filter {
 		&__search-room {
 			width: auto;
-			padding: 5px;
 		}
 	}
 }

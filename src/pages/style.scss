@@ -33,18 +33,25 @@ button {
 	height:830px;
 	background-repeat:no-repeat;
 	background-position: center;
-	position: relative;
+	background-size: cover;
 
 	&__container {
-		padding: 70px 0 0 180px;
+		max-width: 1175px;
+		margin: 0 auto;
+		position: relative;
+		min-height: 830px;
 	}
 
 	&__description {
 		width: 297px;
 		text-align: right;
 		position: absolute;
-		right: 150px;
 		bottom: 0;
+		right: 5px;
+	}
+
+	&__filter-item {
+		padding: 70px 5px 0 5px;
 	}
 }
 
@@ -286,12 +293,6 @@ input {
 
 	.search-room .block2 {
 		margin-left: 0;
-	}
-
-	.index-main {
-		&__container {
-			padding: 70px 0 0 0;
-		}
 	}
 }
 
