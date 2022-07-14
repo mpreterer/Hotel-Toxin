@@ -19,6 +19,9 @@
 	font-size: $font-size-small;
 	display:flex;
 	justify-content:space-between;
+
+	&__number-for-user {
+	}
 }
 
 .search-room__arrival-in-hotel {
@@ -356,5 +359,11 @@ ul.slick-dots li {
 @media screen and (max-width:520px) {
 	.search-room__rooms-container {
 		margin-left: 0;
+	}
+}
+
+@media screen and (max-width:520px) {
+	h2.search-room__number-for-user {
+		font-size: 20px;
 	}
 }
