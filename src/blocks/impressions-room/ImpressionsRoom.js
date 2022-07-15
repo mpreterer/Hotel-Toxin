@@ -1,6 +1,6 @@
 import '../../js/Chart.min';
 
-class Doughnut {
+class ImpressionsRoom {
   constructor(domParent) {
     this.$container = domParent.querySelector('.js-impressions-room');
     this.$doughnut = this.$container.querySelector('.impressions-room__donut');
@@ -44,4 +44,4 @@ class Doughnut {
 }
 }
 
-export default Doughnut;
+export default ImpressionsRoom;

@@ -1,27 +1,24 @@
 import './login.scss';
 import '../../style.scss';
 
-import NavMenu from '../../../blocks/nav-menu/nav-menu.js';
+import NavMenu from '../../../blocks/nav-menu/NavMenu';
 
 class Login {
-    constructor() {
-        this._init();
-      }
-      
-    _init() {
-        const { 
-            registratonCard,
-        } = this._get_elements();
+  constructor() {
+    this._init();
+  }
 
-        new NavMenu(document);
-        registratonCard.forEach((item) => new RegistrationCard(item));
-    }   
+  _init() {
+    new NavMenu(document);
+  }
 
-    _get_elements() {
-        return {
-            registratonCard: document.querySelectorAll('[data-component-js="js-registration-card"]'),
-        };
-    }
+  _getElements() {
+    return {
+      registratonCard: document.querySelectorAll(
+        '[data-component-js="js-registration-card"]'
+      )
+    };
+  }
 }
 
 new Login();

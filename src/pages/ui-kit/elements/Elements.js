@@ -2,15 +2,15 @@ import './elements.scss';
 import '../../style.scss';
 import '../../website-pages/search-room/search-room.scss';
 import '../../website-pages/room-details/room-details.scss';
-import '../../website-pages/registration/Registration.scss';
+import '../../website-pages/registration/registration.scss';
 import '../../website-pages/login/login.scss';
 
-import DropDown from '../../../blocks/dropDown/dropDown';
+import DropDown from '../../../blocks/dropDown/DropDown';
 import TextField from '../../../blocks/text-input/text-input';
-import AloneCalendar from '../../../blocks/alone-calendar/alone-calendar';
-import CheckboxList from '../../../blocks/checkbox-list/checkbox-list';
+import AloneCalendar from '../../../blocks/alone-calendar/AloneCalendar';
+import CheckboxList from '../../../blocks/checkbox-list/CheckboxList';
 import StarsRating from '../../../blocks/stars-rating/stars-rating';
-import ButtonLike from '../../../blocks/button-like/button-like';
+import ButtonLike from '../../../blocks/button-like/ButtonLike';
 import SliderRange from '../../../blocks/slider-range/slider-range';
 import Pagination from '../../../blocks/pagination/pagination';
 

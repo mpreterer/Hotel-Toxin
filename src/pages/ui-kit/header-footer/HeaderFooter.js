@@ -2,7 +2,7 @@ import './headerFooter.scss';
 import '../../../blocks/header/header.scss';
 import '../../../blocks/footer/footer.scss';
 import '../../style.scss';
-import NavMenu from '../../../blocks/nav-menu/nav-menu';
+import NavMenu from '../../../blocks/nav-menu/NavMenu';
 
 class HeaderFooter {
   constructor() {

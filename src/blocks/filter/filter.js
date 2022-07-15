@@ -1,4 +1,4 @@
-import DropDown from '../dropDown/dropDown';
+import DropDown from '../dropDown/DropDown';
 import RangeDateCalendar from '../range-date-calendar/rangeDateCalendar';
 
 class Filter {

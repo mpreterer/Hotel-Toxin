@@ -4,13 +4,13 @@ import './search-room.scss';
 import '../../style.scss';
 import '../../../assets/styles/simplePagination.css';
 
-import DropDown from '../../../blocks/dropDown/dropDown';
+import DropDown from '../../../blocks/dropDown/DropDown';
 import SliderRange from '../../../blocks/slider-range/slider-range';
-import AloneCalendar from '../../../blocks/alone-calendar/alone-calendar';
-import CheckboxList from '../../../blocks/checkbox-list/checkbox-list';
+import AloneCalendar from '../../../blocks/alone-calendar/AloneCalendar';
+import CheckboxList from '../../../blocks/checkbox-list/CheckboxList';
 import RoomInfo from '../../../blocks/room-info/room-info';
 import Pagination from '../../../blocks/pagination/pagination';
-import NavMenu from '../../../blocks/nav-menu/nav-menu';
+import NavMenu from '../../../blocks/nav-menu/NavMenu';
 
 class SearchRoom {
   constructor() {

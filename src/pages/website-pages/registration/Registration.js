@@ -1,8 +1,8 @@
-import './Registration.scss';
+import './registration.scss';
 import '../../style.scss';
 
 import RegistrationCard from '../../../blocks/registration-card/registration-card';
-import NavMenu from '../../../blocks/nav-menu/nav-menu';
+import NavMenu from '../../../blocks/nav-menu/NavMenu';
 
 class Registration {
   constructor() {

@@ -1,6 +1,6 @@
 import './style.scss';
-import Filter from '../blocks/filter/filter';
-import NavMenu from '../blocks/nav-menu/nav-menu';
+import Filter from '../blocks/filter/Filter';
+import NavMenu from '../blocks/nav-menu/NavMenu';
 
 class Index {
   constructor() {

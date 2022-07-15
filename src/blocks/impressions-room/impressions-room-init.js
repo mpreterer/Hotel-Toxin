@@ -1,9 +1,9 @@
-import Doughnut from './impressions-room';
+import ImpressionsRoom from './ImpressionsRoom';
 
 document.addEventListener('DOMContentLoaded', () => {
   const doughnuts = document.querySelectorAll('.js-impressions-room');
 
   doughnuts.forEach((domParent) => {
-    const doughnut = new Doughnut(domParent);
+    const doughnut = new ImpressionsRoom(domParent);
   });
 });
