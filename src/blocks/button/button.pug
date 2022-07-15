@@ -1,6 +1,6 @@
-mixin button({ href = '/mock-address/change-me', type = 'default', text = 'click me', small = false,  target }={})
- - var typeButton = 'button_type_' + type;
- - var sizeButton = small && 'button_size_small';
+mixin button({ href = "/mock-address/change-me", type = "default", text = "click me", small = false,  target }={})
+ - var typeButton = "button_type_" + type;
+ - var sizeButton = small && "button_size_small";
 
  a.button(href= href target= target class= [typeButton, sizeButton])
     span.button__title #{text}

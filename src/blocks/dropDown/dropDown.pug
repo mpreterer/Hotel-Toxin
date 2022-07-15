@@ -1,9 +1,9 @@
-mixin dropDown({placeholder = 'Сколько Гостей',appointment,isOpen = false, showFunction, list = []}={})
+mixin dropDown({placeholder = "Сколько Гостей",appointment,isOpen = false, showFunction, list = []}={})
     .dropDown.js-dropDown(data-attribute-appointment =appointment, data-attribute-function=functionPanel)
         .dropDown__name.js-dropDown__name
             input.dropDown__counte-guests.js-dropDown__counte-guests(placeholder=placeholder readonly value="")
             .dropDown__arrow.dropdown-arrow
-        .dropDown__drop-block.js-dropDown__drop-block(class= isOpen ? 'js-drop-open' : 'js-drop-close')
+        .dropDown__drop-block.js-dropDown__drop-block(class= isOpen ? "js-drop-open" : "js-drop-close")
             .dropDown__items.js-dropDown__items
                 each element in list
                     .dropDown__row

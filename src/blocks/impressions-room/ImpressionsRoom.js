@@ -1,4 +1,4 @@
-import '../../js/Chart.min';
+import 'chart.js';
 
 class ImpressionsRoom {
   constructor(domParent) {
