@@ -6,7 +6,7 @@ import '../../website-pages/registration/registration.scss';
 import '../../website-pages/login/login.scss';
 
 import DropDown from '../../../blocks/dropDown/DropDown';
-import TextField from '../../../blocks/text-input/text-input';
+import TextInput from '../../../blocks/text-input/TextInput';
 import '../../../blocks/alone-calendar';
 import CheckboxList from '../../../blocks/checkbox-list/CheckboxList';
 import StarsRating from '../../../blocks/stars-rating/StarsRating';

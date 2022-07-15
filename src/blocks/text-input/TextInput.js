@@ -1,6 +1,6 @@
 import 'inputmask/dist/jquery.inputmask.min';
 
-class TextField {
+class TextInput {
   constructor(domParent) {
     this.$container = $(domParent).find('[data-masked]');
     this._init();
@@ -15,4 +15,4 @@ class TextField {
   }
 }
 
-export default TextField;
+export default TextInput;
