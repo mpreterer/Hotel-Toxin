@@ -1,9 +1,6 @@
 @import '../../../blocks/room-orders/room-orders.scss';
 @import '../../../blocks/user-reviews/user-reviews.scss';
-@import '../../../blocks/room-order/room-order.scss';
 @import '../../../blocks/about-room/about-room.scss';
-@import '../../../blocks/button-like/button-like.scss';
-@import '../../../blocks/impressions-room/impressions-room.scss';
 
 .room-details__room-loop {
 	height:485px;
@@ -68,7 +65,6 @@
 	width:120px;
 	height:120px;
 	border-radius:50%;
-	// background-image:url(../../../assets/image/Ellipse.jpg);
 	margin-right:30px;
 }
 

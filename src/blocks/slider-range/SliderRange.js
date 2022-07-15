@@ -2,7 +2,7 @@ import noUiSlider from 'nouislider';
 
 class SliderRange {
   constructor(domParent) {
-    this.container = domParent.querySelector('.js-slider-range');
+    this.container = domParent;
     this._init();
   }
 

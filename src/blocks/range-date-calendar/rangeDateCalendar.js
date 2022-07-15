@@ -1,8 +1,9 @@
-import Calendar from '../calendar/calendar';
+import Calendar from '../calendar/Calendar';
+import '../calendar';
 
-class rangeDateCalendar {
+class RangeDateCalendar {
   constructor(domParent) {
-    this.$container = domParent.querySelector('.js-range-date-calendar');
+    this.$container = domParent;
     this.$inputArrival = this.$container.querySelector('[data-mov="arrival"]');
     this.$inputDeparture = this.$container.querySelector('[data-mov="departure"]');
     this.$inputOpen = this.$container.querySelectorAll('.js-range-date-calendar__input');
@@ -84,4 +85,4 @@ class rangeDateCalendar {
   }
 }
 
-export default rangeDateCalendar;
+export default RangeDateCalendar;

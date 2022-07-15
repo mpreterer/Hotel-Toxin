@@ -1,9 +1,11 @@
 import DropDown from '../dropDown/DropDown';
-import RangeDateCalendar from '../range-date-calendar/rangeDateCalendar';
+import '../range-date-calendar';
+import '../dropDown';
+import '../button';
 
 class RoomOrder {
   constructor(domParent) {
-    this.container = domParent.querySelector('.js-room-order');
+    this.container = domParent;
     this.$datepicker = this.container.querySelector('.js-range-date-calendar__calendar');
     this.$arrival = this.container.querySelector('[data-mov="arrival"]');
     this.$departure = this.container.querySelector('[data-mov="departure"]');
@@ -25,7 +27,6 @@ class RoomOrder {
   _initComponents() {
     const { container } = this;
     this.dropDowns = new DropDown(container, ['гость', 'гостя', 'гостей']);
-    this.calendar = new RangeDateCalendar(container);
   }
 
   _eventCount() {

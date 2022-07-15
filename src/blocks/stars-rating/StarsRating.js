@@ -2,7 +2,7 @@ import 'jquery-bar-rating/dist/jquery.barrating.min';
 
 class StarsRating {
   constructor(domParent) {
-    this.$container = $(domParent).find('.js-stars-rating');
+    this.$container = $(domParent);
 
     this._findDomElements();
     this._init();

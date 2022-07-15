@@ -1,4 +1,4 @@
-import '../../js/jquery.simplePagination';
+import '../../../libs/jquery.simplePagination';
 
 class Pagination {
   constructor(domParent, options) {

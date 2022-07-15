@@ -10,9 +10,9 @@ import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 
 import Filter from '../../../blocks/filter/Filter';
-import RoomOrder from '../../../blocks/room-order/room-order';
-import Calendar from '../../../blocks/calendar/calendar';
-import RoomInfo from '../../../blocks/room-info/room-info';
+import '../../../blocks/room-order';
+import Calendar from '../../../blocks/calendar/Calendar';
+import RoomInfo from '../../../blocks/room-info/RoomInfo';
 
 class Cards {
   constructor() {
@@ -22,7 +22,6 @@ class Cards {
   _init() {
     const {
       filter,
-      roomOrder,
       calendar,
       roomInfo,
     } = this._getElements();
@@ -32,14 +31,12 @@ class Cards {
       body: item,
       isOpen: true,
     }));
-    roomOrder.forEach((item) => new RoomOrder(item));
     roomInfo.forEach((item) => new RoomInfo(item));
   }
 
   _getElements() {
     return {
       filter: document.querySelectorAll('[data-component-js="js-cards-filter"]'),
-      roomOrder: document.querySelectorAll('[data-component-js="js-cards-range-dates"]'),
       calendar: document.querySelectorAll('[data-component-js="js-calendar-open"]'),
       roomInfo: document.querySelectorAll('[data-component-js="js-card-room"]'),
     };

@@ -1,16 +1,16 @@
 import DropDown from '../dropDown/DropDown';
-import RangeDateCalendar from '../range-date-calendar/rangeDateCalendar';
+import '../dropDown';
+import '../range-date-calendar';
 
 class Filter {
   constructor(domParent) {
-    this.container = domParent.querySelector('.js-filter');
+    this.container = domParent;
     this._init();
   }
 
   _init() {
     const { container } = this;
     this.dropDown = new DropDown(container, ['гость', 'гостя', 'гостей']);
-    this.rangeDateCalendar = new RangeDateCalendar(container);
   }
 }
 

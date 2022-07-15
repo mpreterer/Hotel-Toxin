@@ -1,6 +1,6 @@
 class CheckboxList {
   constructor(domParent) {
-    this.$container = domParent.querySelector('.js-checkbox-list');
+    this.$container = domParent;
 
     this._init();
   }

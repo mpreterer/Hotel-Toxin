@@ -1,4 +1,5 @@
-import Calendar from '../calendar/calendar';
+import Calendar from '../calendar/Calendar';
+import '../calendar';
 
 class AloneCalendar {
   constructor(domParent) {
