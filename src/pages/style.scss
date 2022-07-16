@@ -1,26 +1,6 @@
 @import '../assets/styles/global.scss';
 @import '../blocks/calendar/calendar.scss';
-
-h3 {
-    color: $color-shade-dark;
-    font-size: $font-size-small;
-	margin: 0;
-}
-
-a {
-	text-decoration:none;
-	cursor:pointer;
-	color: $color-shade-grey;
-}
-
-input:active, input:focus {
-	outline:none;
-}
-
-button {
-	border:none;
-	outline:none;
-}
+@import '@variables';
 
 .index-main {
 	height:830px;
