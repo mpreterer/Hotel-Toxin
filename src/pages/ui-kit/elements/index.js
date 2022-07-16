@@ -1,6 +1,7 @@
 import './elements.scss';
 import '../blocks/ui-header.scss';
 import '../../style.scss';
+import '../../../assets/styles/reset.scss';
 
 import '../../../blocks/text-input';
 import '../../../blocks/alone-calendar';

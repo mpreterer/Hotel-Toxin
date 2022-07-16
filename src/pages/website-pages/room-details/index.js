@@ -10,3 +10,4 @@ import '../../../blocks/header';
 import '../../../blocks/footer';
 import '../../../blocks/about-room';
 import '../../../blocks/room-orders';
+import '../../../assets/styles/reset.scss';

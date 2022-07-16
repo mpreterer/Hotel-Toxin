@@ -126,4 +126,13 @@
             color: $color-shade-secondary;
         }
     }
+
+    & .arrow-expend-more-btn {
+        display: inline-block;
+        width: 24px;
+        height: 21px;
+        background-image: url(../../assets/image/expand-more.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }

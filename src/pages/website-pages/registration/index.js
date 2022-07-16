@@ -7,3 +7,4 @@ import '../../../blocks/registration-card';
 import '../../../blocks/nav-menu';
 import '../../../blocks/toggle';
 import '../../../blocks/radio-input';
+import '../../../assets/styles/reset.scss';

@@ -39,6 +39,11 @@
 
     &_type_empty {
         border: none;
+        color: $color-purple;
+
+        &:hover {
+            color: $color-shade-grey;
+        }
     }
 
     &_size_small {

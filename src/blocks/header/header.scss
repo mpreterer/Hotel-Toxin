@@ -96,6 +96,44 @@
 	background:#fff;
 }
 
+.header__container-logup {
+	display:flex;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size: $font-size-small;
+	text-align:center;
+}
+
+.header__container-logup .header__btn-login:hover {
+	opacity: 0.5;
+}
+
+.header__container-logup .header__btn-login a{
+	color:$color-purple;
+}
+
+.header__container-logup .header__btn-registration a {
+	background: $gradient-main;
+	color:#fff;
+	border-radius:22px;
+	margin-left:20px;
+	border:3px solid transparent;
+}
+
+.header__container-logup .header__btn-registration a {
+	color:#fff;
+}
+
+.header__container-logup .header__btn-registration:hover {
+	opacity: 0.5;
+}
+
+
+.header__container-logup p {
+	padding:0;
+	margin:7px 0;
+}
+
 .burger:hover > .menu_burger{
 	display:block;
 }
@@ -126,6 +164,40 @@
 	height:50px;
 	display:none;
 	position:relative;
+}
+
+.nav-burger__border1 {
+	height:8px;
+	width:50px;
+	background:linear-gradient(180deg, #BC9CFF 0%,#8BA4F9 100%);
+	position:absolute;
+	top:4px;
+	left:0;
+	transition:0.2s;
+	outline: none;
+	border: none;
+}
+.nav-burger__border2 {
+	position:absolute;
+	width:50px;
+	height:8px;
+	top:21px;
+	background:linear-gradient(180deg, #BC9CFF 0%,#8BA4F9 100%);
+	transition:0.2s;
+	outline: none;
+	border: none;
+}
+
+.nav-burger__border3 {
+	height:8px;
+	width:50px;
+	background:linear-gradient(180deg, #BC9CFF 0%,#8BA4F9 100%);
+	position:absolute;
+	bottom:4px;
+	left:0;
+	transition:0.2s;
+	outline: none;
+	border: none;
 }
 
 @media all and (max-width:1200px ) {

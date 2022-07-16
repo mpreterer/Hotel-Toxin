@@ -5,10 +5,46 @@
   position: absolute;
   z-index: 99;
   transform: translateY(5px);
+  user-select: none;
 
   &__hidden {
     display: none;
   }
+}
+
+.arrow-back-btn {
+	content: '';
+	width: 40px;
+	height: 40px;
+	background-image: url(../../assets/image/arrow-back.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.arrow-next-btn {
+	content: '';
+	width: 40px;
+	height: 40px;
+	background-image: url(../../assets/image/arrow-back.svg);
+	transform: rotate(180deg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.arrow-expend-btn {
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 9px;
+	background-position: 4px 4px 0 0;
+	background-repeat: no-repeat;
+	right: 15px;
+	top: 17px;
+	background-image: url(../../assets/image/expand-more.svg);
+
+	&_active {
+		transform: rotate(-180deg);
+	}
 }
 
 .calendar__buttons {
