@@ -1,3 +1,4 @@
+@import '@variables';
 
 .footer {
 	max-width: 1160px;
@@ -28,6 +29,13 @@
 	&__description {
 		height:168px;
 		width:260px;
+	}
+
+	&__description-title {
+		color: $color-shade-dark;
+		font-size: $font-size-small;
+		font-weight: bold;
+		text-transform: uppercase;
 	}
 
 	&__sub {
@@ -76,11 +84,20 @@
 
 	&__link {
 		color: $color-shade-grey;
+		text-decoration: none;
 	}
 
 	&__list {
 		margin-top: 0;
 	}
+
+	&__title-list {
+		color: $color-shade-dark;
+		font-size: $font-size-small;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	
 }
 
 .footer_container {

@@ -1,3 +1,5 @@
+@import '@variables';
+
 .nav-menu {
 	margin-right: 20px;
 
@@ -60,6 +62,9 @@
 
     &__link {
         text-align: center;
+        text-decoration:none;
+        color: $color-shade-grey;
+        cursor:pointer;
 
         &:hover > .nav-menu__link:before {
             overflow: visible;
@@ -93,6 +98,12 @@
 
         &_active {
             display: block;
+        }
+
+        &-link {
+            text-decoration:none;
+            cursor:pointer;
+            color: $color-shade-grey;
         }
     }
 

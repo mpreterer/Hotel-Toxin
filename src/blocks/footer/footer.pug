@@ -13,7 +13,7 @@ mixin footer({desc, menuList, copyright}={})
                 .footer__navigation
                     +footer-nav-menu({navList: menuList})
                 .footer__description
-                    h3.footer__description-title Подписка
+                    span.footer__description-title Подписка
                     p.footer__description-special-title Получайте специальные предложения и новости сервиса
                     .footer__description-email
                         +sub-text-input({ name: "email", placeholder: "Email", link: "change-me/mock-adress" })

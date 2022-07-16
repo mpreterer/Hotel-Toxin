@@ -1,4 +1,6 @@
-.stars-rating {
+@import '@variables';
+
+.stars-rating { 
     .br-widget {
       display: flex;
   
@@ -7,6 +9,7 @@
         height: 24px;
         font-size: 26px;
         line-height: 20px;
+        text-decoration: none;
   
         &::after {
           content: '☆';

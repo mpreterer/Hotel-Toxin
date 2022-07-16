@@ -1,4 +1,5 @@
 @import '../nav-menu/nav-menu.scss';
+@import '@variables';
 
 .header {
 	height:70px;
@@ -86,6 +87,8 @@
 
 	.nav-burger__link {
 		width: 100%;
+		text-decoration:none;
+		color: $color-shade-grey;
 	}
 }
 
