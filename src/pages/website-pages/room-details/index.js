@@ -8,3 +8,5 @@ import '../../../blocks/room-order';
 import '../../../blocks/user-reviews';
 import '../../../blocks/header';
 import '../../../blocks/footer';
+import '../../../blocks/about-room';
+import '../../../blocks/room-orders';

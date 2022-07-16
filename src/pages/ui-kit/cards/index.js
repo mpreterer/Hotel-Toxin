@@ -2,8 +2,6 @@ import './cards.scss';
 import '../ui-kit.scss';
 import '../../style.scss';
 import '../blocks/ui-header.scss';
-import 'slick-carousel/slick/slick.scss';
-import 'slick-carousel/slick/slick-theme.scss';
 
 import '../../website-pages/login';
 import '../../website-pages/registration';

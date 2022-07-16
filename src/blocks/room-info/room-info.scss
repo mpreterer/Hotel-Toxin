@@ -213,3 +213,48 @@ button.slick-next.slick-arrow::before {
 .slick-list {
 	border-radius: 4px 4px 0 0;
 }
+
+ul.slick-dots {
+	display: flex;
+	position:absolute;
+	right:15px;
+	bottom:15px;
+	width:45px;
+	height:8px;
+	z-index: 99;
+}
+
+ul.slick-dots li.slick-active button:before {
+	background: #fff;
+	opacity: 1;
+}
+
+ul.slick-dots li button:before {
+	content: '';
+	width:7.5px;
+	height:7.49px;
+	border: 1px solid #FFFFFF;
+	box-sizing: border-box;
+	filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+	box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+	border-radius:50%;
+	opacity: 1;
+	padding: 0;
+	margin: 0;
+}
+
+ul.slick-dots li button {
+	width:7.5px;
+	height:7.5px;
+}
+
+ul.slick-dots li button, ul.slick-dots li {
+	width:7.5px;
+	height:7.49px;
+	padding: 0;
+	margin: 0;
+}
+
+ul.slick-dots li {
+	padding-right: 4px;
+}
