@@ -1,6 +1,5 @@
 import './cards.scss';
 import '../ui-kit.scss';
-import '../../style.scss';
 import '../blocks/ui-header.scss';
 import '../../../assets/styles/reset.scss';
 
