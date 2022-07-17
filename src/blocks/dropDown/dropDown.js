@@ -1,13 +1,12 @@
 class DropDown {
-  constructor(domParent, keyWords) {
+  constructor(domParent) {
     this.container = domParent.querySelector('.js-dropDown');
-    this.keyWords = keyWords;
-
     this._init();
   }
 
   _init() {
     this.body = document.querySelector('body');
+    this.keyWords = this.container.getAttribute('data-key-phrases');
     this.inputName = this.container.querySelector('.js-dropDown__counte-guests');
     this.open = this.container.querySelector('.js-dropDown__name');
     this.counterPanel = this.container.querySelector('.js-dropDown__drop-block');
@@ -200,14 +199,15 @@ class DropDown {
     const guests = adults + youngs + child;
 
     let strGuests = '';
+    const arrayPhrases = this.keyWords.replace(/"/g, "").replace("[", "").replace("]", "").split(',');
 
     if (guests > 0) {
       if (guests === 1 || guests === 21) {
-        strGuests = `${guests} ${this.keyWords[0]}`;
+        strGuests = `${guests} ${arrayPhrases[0]}`;
       } else if (guests > 1 && guests < 5) {
-        strGuests = `${guests} ${this.keyWords[1]}`;
+        strGuests = `${guests} ${arrayPhrases[1]}`;
       } else {
-        strGuests = `${guests} ${this.keyWords[2]}`;
+        strGuests = `${guests} ${arrayPhrases[2]}`;
       }
     }
 
