@@ -13,7 +13,7 @@ block content
     .cards.js-cards
         .cards__container
             .cards__filters
-                .cards__filter(data-component-js="js-cards-filter")
+                .cards__filter
                     +filter({
                         title:'Найдём номера под ваши пожелания',
                         buttonOptions: {
@@ -24,12 +24,13 @@ block content
                         dropDownOptions: {
                             isOpen: false,
                             list: [
-                            { name: 'взрослые', val: 0 },
-                            { name: 'дети', val: 0 },
-                            { name: 'младенцы', val: 0 }
+                                { name: 'взрослые', val: 0 },
+                                { name: 'дети', val: 0 },
+                                { name: 'младенцы', val: 0 }
                             ],
                             appointment: 'guests',
                             showFunction: true,
+                            keyPhrases: ['гость', 'гостя', 'гостей']
                         },
                     })
                 .cards__registration(data-component-js="js-cards-registration")

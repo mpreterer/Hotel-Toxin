@@ -1,6 +1,5 @@
-import DropDown from '../dropDown/DropDown';
-import '../range-date-calendar';
 import '../dropDown';
+import '../range-date-calendar';
 import '../button';
 
 class RoomOrder {
@@ -17,16 +16,10 @@ class RoomOrder {
     this.sumDays = this.container.querySelector('.js-room-order__sum-day');
 
     this._init();
-    this._initComponents();
   }
 
   _init() {
     this._eventCount();
-  }
-
-  _initComponents() {
-    const { container } = this;
-    this.dropDowns = new DropDown(container, ['гость', 'гостя', 'гостей']);
   }
 
   _eventCount() {
