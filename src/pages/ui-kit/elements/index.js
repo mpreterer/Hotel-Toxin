@@ -21,8 +21,3 @@ import '../../../blocks/sub-text-input';
 import '../../../blocks/room-orders';
 import '../../../blocks/about-room';
 import '../../../blocks/user-reviews';
-
-import Elements from './Elements';
-
-const elementsNodes = document.querySelector('.js-ui-card');
-new Elements(elementsNodes);

@@ -90,4 +90,8 @@ block content
                         sliders: room.sliders,
                     })
             .search-room__pagination-container(data-component-js="js-pagination")
-                +pagination
+                +pagination({
+                    items: 180,
+                    itemsOnPage: 12,
+                    displayedPages: 3,
+                })

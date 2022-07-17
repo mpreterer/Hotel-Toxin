@@ -15,8 +15,3 @@ import '../../../blocks/checkbox-list';
 import '../../../blocks/custom-checkbox';
 import '../../../blocks/checkbox-double-name';
 import '../../../blocks/room-info';
-
-import SearchRoom from './SearchRoom';
-
-const searchRoomNode = document.querySelector('.js-search-room');
-new SearchRoom(searchRoomNode);

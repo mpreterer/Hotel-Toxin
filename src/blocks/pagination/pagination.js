@@ -1,24 +1,24 @@
 import '../../../libs/jquery.simplePagination';
 
 class Pagination {
-  constructor(domParent, options) {
-    this.$body = $(domParent).find('.js-pagination');
+  constructor(domParent) {
+    this.$body = $(domParent);
     this.$container = this.$body.find('.js-pagination__pagination-init');
     this.$maxValue = this.$body.find('.pagination-max');
     this.$minValue = this.$body.find('.pagination-min');
     this.$allOption = this.$body.find('.pagination-all-option');
-    this.options = options;
+    this.items = this.$body.attr('data-items');
+    this.itemsOnPage = this.$body.attr('data-items-on-page');
+    this.displayedPages = this.$body.attr('data-displayed-pages');
 
     this._init();
   }
 
   _init() {
-    const { items, itemsOnPage, displayedPages } = this.options;
-    
     this.$container.pagination({
-      items: items,
-      itemsOnPage: itemsOnPage,
-      displayedPages: displayedPages,
+      items: this.items,
+      itemsOnPage: this.itemsOnPage,
+      displayedPages: this.displayedPages,
       edges: 1,
       prevText: '',
       nextText: ' ',
@@ -27,7 +27,7 @@ class Pagination {
 }
 
 _countPagination(page) {
-    const { itemsOnPage } = this.options;
+    const itemsOnPage = this.itemsOnPage;
     const max = page * itemsOnPage;
     const min = max - (itemsOnPage - 1);
 

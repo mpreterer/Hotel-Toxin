@@ -188,7 +188,11 @@ block content
                     .ui-cards__titles
                         .ui-cards__title pagination
                     .ui-cards__pagination(data-component-js="js-pagination")
-                        +pagination
+                        +pagination({
+                            items: 180,
+                            itemsOnPage: 12,
+                            displayedPages: 3,
+                        })
                     .ui-cards__titles
                         .ui-cards__title dropdown
                     .ui-cards__dropdown-with-guests(data-component-js="js-dropDown")
