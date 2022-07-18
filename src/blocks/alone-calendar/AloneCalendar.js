@@ -43,7 +43,7 @@ class AloneCalendar {
     const hasClickOutSideCalendar = !isClickOnDropdown && isOpenCalendar;
     
     if (hasClickOutSideCalendar) {
-      this.calendar.hiden_calendar();
+      this.calendar.hidden_calendar();
     }
   }
 

@@ -30,16 +30,16 @@
         display: flex;
         align-items: center;
 
-        &_active > .nav-menu__sublist:before {
+        &_active > .nav-menu__subList:before {
             overflow: visible;
             visibility: visible;
         }
     }
 
-    &__sublist {
+    &__subList {
         color: $color-shade-grey;
 
-        &:hover > .nav-menu__sublist:before {
+        &:hover > .nav-menu__subList:before {
             overflow: visible;
             visibility: visible;
             color: $color-shade-secondary;

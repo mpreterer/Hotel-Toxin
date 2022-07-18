@@ -4,7 +4,7 @@ class Calendar {
   constructor(params) {
     this.$body = $(params.body).find('.js-calendar-container');
     this.options = params.options || {};
-    this.isOpen = false;
+    this.isOpen = this.$body.attr('data-is-open');
     this.initIsOpen = params.isOpen;
     this.observers = [];
 
@@ -41,7 +41,7 @@ class Calendar {
 
   check_is_open() {
     if (this.isOpen) {
-        this.hiden_calendar();
+        this.hidden_calendar();
     } else {
         this.show_calendar();
     }
@@ -58,7 +58,7 @@ class Calendar {
             Очистить
         </div>
     `;
-    const cofirmButton = `
+    const confirmButton = `
         <div data-button-type="confirm" class="calendar__button">
             Применить
         </div>
@@ -68,12 +68,12 @@ class Calendar {
     const $buttons = $datepicker.find('.calendar__buttons');
 
     $datepicker.append('<div class="calendar__buttons"></div>');
-    this.$body.find('.calendar__buttons').append([clearButton, cofirmButton]);
+    this.$body.find('.calendar__buttons').append([clearButton, confirmButton]);
 
     if (this.initIsOpen) {
         this.show_calendar();
     } else {
-        this.hiden_calendar();
+        this.hidden_calendar();
     }
   }
 
@@ -89,13 +89,13 @@ class Calendar {
     this._resetDate();
   }
 
-  hiden_calendar() {
+  hidden_calendar() {
     this.$body.hide();
     this.isOpen = false;
   }
 
   _handleConfirmClick() {
-    this.hiden_calendar();
+    this.hidden_calendar();
     this._notifyObservers({ isOpen: this.isOpen });
   }
 

@@ -50,7 +50,7 @@ class RangeDateCalendar {
     const hasClickOutSideCalendar = !isClickOnDropdown && isOpenCalendar;
 
     if (hasClickOutSideCalendar) {
-      this.calendar.hiden_calendar();
+      this.calendar.hidden_calendar();
     }
   }
 

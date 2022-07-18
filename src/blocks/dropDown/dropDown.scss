@@ -41,7 +41,7 @@
         flex-wrap:wrap;
         border:1px solid $color-shade-grey;
         box-sizing:border-box;
-        box-shadow:0px 10px 20px $color-shade-ligth;
+        box-shadow:0px 10px 20px $color-shade-light;
         border-radius:0 0 4px 4px;
         background:white;
         border-top:none;
@@ -134,7 +134,7 @@
 
     }
 
-    &__counte-guests {
+    &__counts-guests {
         width: 100%;
         color:#1F2041BF;
         cursor: pointer;

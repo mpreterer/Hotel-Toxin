@@ -16,7 +16,7 @@ body {
         width: 320px;
     }
 
-    &__rigth-blocks{
+    &__right-blocks{
         width: 711px;
         display: flex;
         justify-content: space-between;
@@ -109,7 +109,7 @@ body {
         margin: 16px 0 30px 0;
     }
 
-    &__buttons-bottum {
+    &__buttons-button {
         width: 101px;
         margin-bottom: 30px;
     }
@@ -131,12 +131,12 @@ body {
         margin-bottom: 95px;
     }
 
-    &__rigth-blocks-container {
+    &__right-blocks-container {
         display: flex;
         justify-content: space-between;
     }
 
-    &__rigth-blocks {
+    &__right-blocks {
         display: flex;
         flex-direction: column;
     }

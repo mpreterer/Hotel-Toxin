@@ -16,14 +16,14 @@ mixin footer({desc, menuList, copyright}={})
                     span.footer__description-title Подписка
                     p.footer__description-special-title Получайте специальные предложения и новости сервиса
                     .footer__description-email
-                        +sub-text-input({ name: "email", placeholder: "Email", link: "change-me/mock-adress" })
+                        +sub-text-input({ name: "email", placeholder: "Email", link: "change-me/mock-address" })
         .footer__sub-container
             .footer__sub
-                p.footer__sub-copytight= copyright
+                p.footer__sub-copyright= copyright
                 .footer__sub-icons
                     a.footer__sub-links(href="https://twitter.com/" target="_blank" rel="noopener noreferrer")
                         img(src="assets/image/twitter.svg" alt="twitter").fa-twitter
                     a.footer__sub-links(href="https://facebook.com/" target="_blank" rel="noopener noreferrer")
                         img(src="assets/image/facebook.svg" alt="facebook").fa-facebook
                     a.footer__sub-links(href="https://instagram.com/" target="_blank" rel="noopener noreferrer")
-                        img(src="assets/image/insta.svg" alt="instagram").fa-instagram
+                        img(src="assets/image/instagram.svg" alt="instagram").fa-instagram

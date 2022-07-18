@@ -6,22 +6,22 @@
 	margin:0 12px 12px 0;
 	background: #FFF;
 	background-repeat:no-repeat;
-	box-shadow:0px 10px 20px $color-shade-ligth;
+	box-shadow:0px 10px 20px $color-shade-light;
 	border-radius:4px;
 	position:relative;
 	user-select:none;
     font-size: $font-size-small;
 
-	&__contianer {
+	&__container {
 		height:151px;
 		width:270px;
 	}
 
-	&__contianer:hover > .move_arrow {
+	&__container:hover > .move_arrow {
 		opacity:1;
 	}
 
-	&__contianer .circle {
+	&__container .circle {
 		width:7.5px;
 		height:7.49px;
 		border: 1px solid #FFFFFF;
@@ -32,11 +32,11 @@
 		border-radius:50%;
 	}
 
-	&__contianer .circle:last-child {
+	&__container .circle:last-child {
 		margin:0;
 	}
 
-	&__contianer .circle a {
+	&__container .circle a {
 		padding:0;
 		margin:0;
 	}

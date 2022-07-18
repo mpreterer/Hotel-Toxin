@@ -7,10 +7,10 @@ class DropDown {
   _init() {
     this.body = document.querySelector('body');
     this.keyWords = this.container.getAttribute('data-key-phrases');
-    this.inputName = this.container.querySelector('.js-dropDown__counte-guests');
+    this.inputName = this.container.querySelector('.js-dropDown__counts-guests');
     this.open = this.container.querySelector('.js-dropDown__name');
     this.counterPanel = this.container.querySelector('.js-dropDown__drop-block');
-    this.itenName = this.container.querySelectorAll('[data-item-name]');
+    this.itemName = this.container.querySelectorAll('[data-item-name]');
     this.counterContext = this.container.querySelector('.js-dropDown__items');
     this.counterNumber = this.container.querySelectorAll('.js-dropDown__counter');
     this.counterName = this.container.querySelectorAll('.dropDown__dropItem');
@@ -220,7 +220,7 @@ class DropDown {
     const bathRoom = Number(countArray.slice(2, 3).join());
     const arrayName = [];
 
-    this.itenName.forEach((item) => {
+    this.itemName.forEach((item) => {
       arrayName.push(item);
     });
     

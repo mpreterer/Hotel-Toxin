@@ -4,7 +4,7 @@
 .header {
 	height:70px;
 	width: 100%;
-	box-shadow: 0px 10px 20px $color-shade-ligth;
+	box-shadow: 0px 10px 20px $color-shade-light;
 	background: #FFFFFF;
 
 	&__container {
@@ -97,7 +97,7 @@
 	background:#fff;
 }
 
-.header__container-logup {
+.header__container-login {
 	display:flex;
 	text-transform:uppercase;
 	font-weight:bold;
@@ -105,15 +105,15 @@
 	text-align:center;
 }
 
-.header__container-logup .header__btn-login:hover {
+.header__container-login .header__btn-login:hover {
 	opacity: 0.5;
 }
 
-.header__container-logup .header__btn-login a{
+.header__container-login .header__btn-login a{
 	color:$color-purple;
 }
 
-.header__container-logup .header__btn-registration a {
+.header__container-login .header__btn-registration a {
 	background: $gradient-main;
 	color:#fff;
 	border-radius:22px;
@@ -121,16 +121,16 @@
 	border:3px solid transparent;
 }
 
-.header__container-logup .header__btn-registration a {
+.header__container-login .header__btn-registration a {
 	color:#fff;
 }
 
-.header__container-logup .header__btn-registration:hover {
+.header__container-login .header__btn-registration:hover {
 	opacity: 0.5;
 }
 
 
-.header__container-logup p {
+.header__container-login p {
 	padding:0;
 	margin:7px 0;
 }

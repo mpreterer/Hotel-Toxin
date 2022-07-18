@@ -49,7 +49,9 @@ block content
                     +login-card
             .cards__rooms
                 .cards__calendar-open(data-component-js="js-calendar-open")
-                    +calendar
+                    +calendar({
+                        isOpen: true
+                    })
                 .cards__room-card-first(data-component-js="js-card-room")
                     +room-info({
                         number: 888,
