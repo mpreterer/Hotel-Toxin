@@ -23,14 +23,14 @@ module.exports = () => {
         mode: 'development',
         entry: {
             index: [`${PAGES_DIR}/index.js`],
-            'search-room': [`${PAGES_DIR}/website-pages/search-room/SearchRoom.js`],
-            'room_details': [`${PAGES_DIR}/website-pages/room-details/RoomDetails.js`],
-            'login': [`${PAGES_DIR}/website-pages/login/Login.js`],
-            'registration': [`${PAGES_DIR}/website-pages/registration/Registration.js`],
-            'cards': [`${PAGES_DIR}/ui-kit/cards/Cards.js`],
-            'colors-type': [`${PAGES_DIR}/ui-kit/colors-type/colors-types.js`],
-            'elements': [`${PAGES_DIR}/ui-kit/elements/Elements.js`],
-            'header-footer': [`${PAGES_DIR}/ui-kit/header-footer/HeaderFooter.js`],
+            'search-room': [`${PAGES_DIR}/website-pages/search-room/index.js`],
+            'room_details': [`${PAGES_DIR}/website-pages/room-details/index.js`],
+            'login': [`${PAGES_DIR}/website-pages/login/index.js`],
+            'registration': [`${PAGES_DIR}/website-pages/registration/index.js`],
+            'cards': [`${PAGES_DIR}/ui-kit/cards/index.js`],
+            'colors-type': [`${PAGES_DIR}/ui-kit/colors-type/index.js`],
+            'elements': [`${PAGES_DIR}/ui-kit/elements/index.js`],
+            'header-footer': [`${PAGES_DIR}/ui-kit/header-footer/index.js`],
         },
         output: {
             filename: 'js/[name].js',
@@ -76,8 +76,8 @@ module.exports = () => {
                 chunks: ['login']
             }),
             new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/website-pages/registration/Registration.pug`,
-                filename: './Registration.html',
+                template: `${PAGES_DIR}/website-pages/registration/registration.pug`,
+                filename: './registration.html',
                 chunks: ['registration']
             }),
             new HTMLWebpackPlugin({
@@ -143,12 +143,6 @@ module.exports = () => {
                         'style-loader',
                         'css-loader',
                         'sass-loader',
-                        {
-                            loader: 'sass-resources-loader',
-                            options: {
-                                resources: [path.resolve(__dirname, 'src/assets/styles/_vars.scss')]
-                            }
-                        }
                     ]
                 },
                 {
@@ -173,7 +167,13 @@ module.exports = () => {
             ]
         },
         resolve: {
-            extensions: ['.js','.json','.sass']
+            extensions: ['.js','.json','.sass'],
+            alias: {
+                '@variables': path.resolve(__dirname, './src/assets/styles/variables.scss'),
+                '@mixins': path.resolve(__dirname, './src/assets/styles/mixins.scss'),
+                'src': path.resolve(__dirname, './src'),
+                'blocks': path.resolve(__dirname, './src/blocks'),
+            },
         },
     }
 }
