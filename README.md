@@ -1,5 +1,5 @@
 # MetaLamp Task 2 step
-### Задане выполнено для компании MetaLamp
+### Задание выполнено для компании MetaLamp
 ---
 ### Распаковка
 Клонировать
@@ -33,7 +33,7 @@
 ### [Landing page](https://mpreterer.github.io/Hotel-Toxin/index.html)
 ### [Search room](https://mpreterer.github.io/Hotel-Toxin/search-room.html)
 ### [Room details](https://mpreterer.github.io/Hotel-Toxin/room-details.html)
-### [Registration](https://mpreterer.github.io/Hotel-Toxin/Registration.html)
+### [Registration](https://mpreterer.github.io/Hotel-Toxin/registration.html)
 ### [Sign in](https://mpreterer.github.io/Hotel-Toxin/login.html)
 ---
 ## UI kit
