@@ -104,11 +104,13 @@
 		width: 100%;
 	}
 
-	.room-details__title-comment {
-		font-size: $font-size-main;
-	}
+	.room-details {
+		&__title-comment {
+			font-size: $font-size-main;
+		}
 
-	.room-orders, .room-details__cancel {
-		width: auto;
+		&__cancel {
+			width: auto;
+		}
 	}
 }

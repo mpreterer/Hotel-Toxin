@@ -84,17 +84,15 @@
 			color: $color-shade-secondary;
 		}
 	}
+
+	&__left-bar {
+		max-width: 266px;
+		height: 100%;
+	}
 }
 
 .alone-calendar__calendar {
 	transform: translateX(-30px);
-}
-
-.data_arrival_in_otel, .guests_in_hotel{
-	height:64px;
-	width:266px;
-	margin:0 0 20.44px 0;
-	position:relative;
 }
 
 .move_arrow {
@@ -107,11 +105,6 @@
 	opacity:0;
 }
 
-.container_a {
-	width:41px;
-	height:151px;
-}
-
 .arrow_right:hover {
 	transition:0.3s;
 }
@@ -121,67 +114,39 @@
 	transition:0.3s;
 }
 
-.feedback {
-	height:18px;
-	width:90px;
-	font-size: $font-size-main;
-	line-height:18px;
-	text-align:right;
-	color: $color-shade-grey;
-	margin-top:5px;
-}
-
-.circle_1 {
-	background: #FFF;
-}
-
-.search-room__left-bar {
-	max-width: 266px;
-	height: 100%;
-}
-
-.arrow_convenience {
-	width:20px;
-	height:20px;
-	padding-right: 9px;
-	background-repeat:no-repeat;
-	background-position:4px 4px;
-}
-
 @media screen and (max-width:1500px) {
-	.search-room__rooms-container {
-		margin: 0 auto;
-		text-align: center;
-	}
-
 	.search-room {
 		width: 80%;
+
+		&__rooms-container {
+			margin: 0 auto;
+			text-align: center;
+		}
 	}
 }
 
 @media screen and (max-width:1065px) {
-	
 	.search-room {
 		display: flex;
 		flex-wrap: wrap;
-	}
 
-	.search-room__left-bar {
-		margin: 0 auto;
+		&__left-bar {
+			margin: 0 auto;
+		}
 	}
-
 }
 
 @media screen and (max-width:1065px) {
-
 	.search-room {
 		width: 100%;
 	}
 }
 
 @media screen and (max-width:520px) {
-	.search-room__rooms-container {
-		margin-left: 0;
+	.search-room {
+		&__rooms-container {
+			margin-left: 0;
+		}
 	}
 }
 

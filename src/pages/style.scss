@@ -27,10 +27,6 @@
 	}
 }
 
-.hide {
-	display:none;
-}
-
 @media all and (max-width:1200px ) {
 	.logotype {
 		margin-left: 10px;
@@ -38,7 +34,9 @@
 }
 
 @media all and (max-width:650px ) {
-	.index-main__description {
-		display: none;
+	.index-main {
+		&__description {
+			display: none;
+		}
 	}
 }
