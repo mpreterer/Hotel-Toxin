@@ -2,7 +2,6 @@
 
 .room-orders {
 	&__order {
-		width:292px;
 		margin-right:100px;
 	}
 
@@ -11,13 +10,15 @@
 		color: $color-shade-dark;
 		font-weight: bold;
 		display: block;
-		margin-bottom: 30px;
+		margin-bottom: 25px;
 	}
 
 	&__list {
 		list-style:none;
-		padding:0;
+		padding: 0;
 		margin: 0;
+		margin-left: -20px;
+		margin-bottom: 21px;
 		color: $color-shade-secondary;
 
 		& li {
@@ -102,6 +103,10 @@
 @media all and (max-width: 380px) {
 	.room-order {
 		width: 100%;
+	}
+
+    .room-orders {
+		width: 240px;
 	}
 
 	.room-details {

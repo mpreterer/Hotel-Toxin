@@ -8,7 +8,7 @@
 	background-color: #fff;
 
 	&__container {
-		margin:40px 30px 30px 30px;
+		margin:43px 30px 30px 30px;
 	}
 
 	&__level {
@@ -18,11 +18,20 @@
 		font-size: $font-size-small;
 	}
 
+	&__price-day-title {
+		text-align: bottom;
+	}
+
+	&__all-result-price-title {
+		font-weight: bold;
+		font-size: $font-size-medium;
+	}
+
 	&__head {
 		display:flex;
 		justify-content:space-between;
 		align-items: center;
-		margin-bottom: 20px;
+		margin-bottom: 14px;
 	}
 
 	&__number-container {
@@ -62,7 +71,7 @@
 	}
 
 	&__arrival {
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 	}
 
 	&__arrival input {
@@ -101,17 +110,24 @@
 	}
 
 	&__guests {
-		margin-bottom: 20px;
-	}
-
-	&__guests .dropDown {
-		margin-top: 5px;
+		margin-bottom: 17px;
 	}
 
 	&__fees, &__full-price, &__additional-fees {
 		display:flex;
 		justify-content:space-between;
-		margin-bottom:15px;
+	}
+
+	&__full-price {
+		margin-bottom:11px;
+	}
+
+	&__fees {
+		margin-bottom:10px;
+	}
+
+	&__additional-fees {
+		margin-bottom:18px;
 	}
 
 	&__additional-fees-title, &__fees-container {

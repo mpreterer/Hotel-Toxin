@@ -5,9 +5,15 @@
 		display:flex;
 	}
 
+	&__title {
+		margin-bottom: 20px;
+		margin-top: 0;
+		font-size: $font-size-medium;
+	}
+
 	&__container-donut {
 		position: relative;
-		margin-right: 25px;
+		margin-right: 30px;
 	}
 
 	&__comments-count {
@@ -41,13 +47,9 @@
 	&__list {
 		width:161px;
 		height:96px;
-		margin-top:15px;
+		margin-top:26px;
 		padding:0;
 		list-style:none
-	}
-
-	&__list li {
-		margin-bottom:8px;
 	}
 
 	&__list li:before {

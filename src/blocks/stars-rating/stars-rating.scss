@@ -3,13 +3,16 @@
 .stars-rating { 
     .br-widget {
       display: flex;
-  
+
+      a:first-child {
+        margin-left: 0;
+      }
+      
       a {
-        width: 24px;
-        height: 24px;
         font-size: 26px;
         line-height: 20px;
         text-decoration: none;
+        margin-left: 2px;
   
         &::after {
           content: '☆';

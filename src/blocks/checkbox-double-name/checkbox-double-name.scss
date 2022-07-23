@@ -15,9 +15,12 @@
     &__title {
         font-size: $font-size-main;
         font-weight: bold;
-        margin: 6px 0 5px 0;
         color: $color-shade-secondary;
         line-height: 18px;
+    }
+
+    &__container {
+        margin-bottom: 15px;
     }
 
     &__description {

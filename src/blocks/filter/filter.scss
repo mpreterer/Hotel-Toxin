@@ -3,6 +3,7 @@
 .filter {
 	&__search-room {
 		width:380px;
+		height: 374px;
 		background:#fff;
 		color:#1F2041;
 		font-style:normal;
@@ -25,13 +26,15 @@
 
 	}
 
+	&__guest-title {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: $font-size-small;
+	}
+
 	&__title {
 		font-size: $font-size-big;
 		margin:0;
-	}
-
-	&__search-room-title {
-		text-transform: uppercase;
 	}
 
 	&__container-search-room {
@@ -129,7 +132,7 @@
 	}
 
 	&__container-dropDown {
-		margin: 21px 0 31px 0;
+		margin: 12px 0 31px 0;
 	}
 }
 
@@ -155,6 +158,10 @@
 
 @media all and (max-width:425px) {
     .filter {
+		&__search-room {
+			height: auto;
+		}
+
 		&__date_departure {
 			width: 100%;
 		}
@@ -166,10 +173,23 @@
 
 }
 
-@media all and (max-width:370px) { 
+@media all and (max-width:375px) { 
 	.filter {
 		&__search-room {
 			width: auto;
+		}
+	}
+	.filter {
+		& .calendar-container {
+			transform: translate(-15px, 5px);
+		}
+	}
+}
+
+@media all and (max-width:340px) { 
+	.filter {
+		& .calendar-container {
+			transform: translate(-36px, 5px);
 		}
 	}
 }
