@@ -97,7 +97,7 @@ body {
     }
 
     &__rate-buttons {
-        margin: 16px 0 105px 0;
+        margin: 16px 0 90px 0;
     }
 
     &__drop-down-with-panel {
@@ -124,7 +124,7 @@ body {
     }
 
     &__pagination {
-        margin-bottom: 127px;
+        margin-bottom: 117px;
     }
 
     &__dropdown-with-guests {
@@ -134,6 +134,10 @@ body {
     &__right-blocks-container {
         display: flex;
         justify-content: space-between;
+    }
+
+    &__toggle-2 {
+        margin-top: 10px;
     }
 
     &__right-blocks {

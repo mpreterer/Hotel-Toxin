@@ -50,6 +50,8 @@
 	}
 
 	&__btn-login {
+		margin-right: 7px;
+
 		&:hover {
 			opacity: 0.5;
 		}
@@ -60,12 +62,13 @@
 	}
 
 	&__btn-registration {
+		width: auto;
 		& a {
 			background: $gradient-main;
 			color:#fff;
 			border-radius:22px;
-			margin-left:20px;
-			border:3px solid transparent;
+			margin-left:5px;
+			border:2px solid transparent;
 		}
 		
 		:hover {

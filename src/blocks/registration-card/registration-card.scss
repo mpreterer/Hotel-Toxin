@@ -7,7 +7,6 @@
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size: cover;
-	padding-bottom: 20px;
 
 	& .container {
 		width: 100%;
@@ -17,8 +16,20 @@
 }
 
 .registration-card {
+
+	width:380px;
+	background-color:#fff;
+	border:1px solid rgba(0, 0, 0, 0.12);
+	border-radius:4px;
+	box-shadow:0px 0px 25px rgba(0,0,0, 0.2);
+	margin: 0 auto;
+
 	&__email {
-		margin: 5px 0 10px 0;
+		margin: 0 0 10px 0;
+	}
+
+	&__offer {
+		margin-top: 8px;
 	}
 
 	&__first-name {
@@ -67,16 +78,80 @@
 	&__has-account .login p {
 		margin: 0;
 	}
-}
 
-@media all and (max-width: 340px) {
-	.registration-card  {
-		margin: 0 10px;
+	&__container {
+		padding:40px 30px 30px 30px;
+	}
+
+	&__buy-btn {
+		margin-top: 24px;
+	}
+
+	&__user-info h1 {
+		margin:0;
+		font-size: $font-size-big;
+		line-height:30px;
+	}
+
+	&__gender-checkbox {
+		width: 50px;
+		display:inline-flex;
+		align-items:center;
+		user-select:none;
+		position:absolute;
+		top:0;
+		opacity:0;
+	}
+
+	&__birthday{
+		line-height:15px;
+		margin:23px 0 5px 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__data-login {
+		text-transform:uppercase;
+		margin-top:15px;
+	}
+
+	&__sub-title {
+		margin-bottom: 5px;
+		color: $color-shade-dark;
+		text-transform:uppercase;
+		font-weight: bold;
+		font-size: $font-size-small;
+	}
+
+	&__gender {
+		position:relative;
+		margin-top:7px;
+	}
+
+	&__user-name input:last-child {
+		margin:0;
 	}
 }
 
 @media all and (max-width: 340px) {
 	.registration-card  {
 		width: auto;
+		margin: 0 10px;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.registration-card .registration-card__user-info h1 {
+		font-size:20px;
+	}
+}
+
+@media screen and (max-width:380px) {
+	.registration-card {
+		width: auto;
+
+		&__container {
+			padding-top: 15px;
+		}
 	}
 }

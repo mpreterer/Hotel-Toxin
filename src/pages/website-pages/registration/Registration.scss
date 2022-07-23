@@ -1,92 +1,9 @@
 @import '@variables';
 
-p {
-	font-size: $font-size-small;
-}
-
 .registration-main-container {
 	padding-top: 19px;
 }
 
-.registration-card {
-	width:380px;
-	background-color:#fff;
-	border:1px solid rgba(0, 0, 0, 0.12);
-	border-radius:4px;
-	box-shadow:0px 0px 25px rgba(0,0,0, 0.2);
-	margin: 0 auto;
-}
-
-.registration-card__container {
-	padding:40px 30px 30px 30px;
-}
-
-
-.registration-card__buy-btn {
-	margin-top: 24px;
-}
-
-.registration-card .registration-card__user-info h1{
-	margin:0;
-	font-size: $font-size-big;
-	line-height:30px;
-}
-
 .registration-card__user-about {
-	margin-top:20px;
-}
-
-.registration-card__user-about .registration-card__user-name input:last-child {
-	margin:0;
-}
-
-.registration-card__gender {
-	position:relative;
-	margin-top:11px;
-}
-
-.registration-card__gender .registration-card__gender-checkbox {
-	width: 50px;
-	display:inline-flex;
-	align-items:center;
-	user-select:none;
-	position:absolute;
-	top:0;
-	opacity:0;
-}
-
-.registration-card__birthday{
-	line-height:15px;
-	margin:20px 0 5px 0;
-	display: flex;
-	flex-direction: column;
-}
-
-.registration-card__sub-title {
-	margin-bottom: 5px;
-	color: $color-shade-dark;
-	text-transform:uppercase;
-	font-weight: bold;
-	font-size: $font-size-small;
-}
-
-.registration-card__data-login {
-	text-transform:uppercase;
-	margin-top:20px;
-}
-
-@media screen and (max-width:480px) {
-	.registration-card .registration-card__user-info h1 {
-		font-size:20px;
-	}
-}
-
-@media screen and (max-width:380px) {
-	.registration-card {
-		width: auto;
-
-		&__container {
-			padding-top: 15px;
-		}
-	}
+	margin-top:18px;
 }

@@ -1,7 +1,7 @@
 @import '@variables';
 
 .search-room {
-	max-width: 1175px;
+	max-width: 1180px;
 	margin: 30px auto 60px auto;
 	line-height:15px;
 	font-size: $font-size-small;
@@ -61,11 +61,14 @@
 
 	&__rooms-container{
 		width:853px;
+		& .room-info {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__rooms-container {
 		& h2 {
-			margin:0 0 21px 0;
+			margin:0 0 21px 7px;
 			font-size: $font-size-big;
 			line-height:30px;
 		}
@@ -75,6 +78,7 @@
 		display: flex;
 		justify-content: center;
 		text-align: center;
+		padding: 23px 18px 0 0;
 		flex-direction: column;
 	}
 
@@ -139,6 +143,10 @@
 @media screen and (max-width:1065px) {
 	.search-room {
 		width: 100%;
+
+		&__pagination-container {
+			padding: 23px 0 0 0;
+		}
 	}
 }
 
