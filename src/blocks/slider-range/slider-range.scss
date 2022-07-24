@@ -2,69 +2,69 @@
 @import '@variables';
 
 .slider-range {
-    width: 266px;
+  width: 266px;
 
-    &__slider {
-        width: 100%;
-        margin: 20px 0 15px 0;
-    }
+  &__slider {
+    width: 100%;
+    margin: 20px 0 15px;
+  }
 
-    &__name {
-        font-weight: bold;
-        color: $color-shade-dark;
-    }
+  &__name {
+    color: $color-shade-dark;
+    font-weight: bold;
+  }
 
-    &__values {
-        font-size: $font-size-small;
-        color: $color-shade-grey;
-    }
+  &__values {
+    color: $color-shade-grey;
+    font-size: $font-size-small;
+  }
 
-    &__container-title {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
+  &__container-title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-    &__sub-title {
-        width: 100%;
-        font-size: $font-size-small;
-        margin: 0;
-        color: $color-shade-grey;
-    }
+  &__sub-title {
+    width: 100%;
+    margin: 0;
+    color: $color-shade-grey;
+    font-size: $font-size-small;
+  }
 
-    .noUi-horizontal .noUi-handle {
-        width: 16px;
-        height: 16px;
-        right: -9px;
-        top: -6px;
-        cursor: pointer;
-        outline: none;
-    }
+  .noUi-horizontal .noUi-handle {
+    top: -6px;
+    right: -9px;
+    width: 16px;
+    height: 16px;
+    outline: none;
+    cursor: pointer;
+  }
 
-    .noUi-target {
-        background: #fff;
-        border: 1px solid #C7C7CF;
-        border-radius: 3px;
-        box-shadow: none;
-    }
-    
-    .noUi-connect {
-        background: $gradient-secondary;
-    }
+  .noUi-target {
+    background: #fff;
+    border: 1px solid #c7c7cf;
+    border-radius: 3px;
+    box-shadow: none;
+  }
 
-    .noUi-horizontal {
-        height: 6px;
-    }
-    
-    .noUi-handle {
-        border: 2px solid #fff;
-        border-radius: 10px;
-        background: $gradient-secondary;
-        box-shadow: none;   
-    }
-    
-    .noUi-handle::after,
-    .noUi-handle::before {
-        display: none;
-    }
+  .noUi-connect {
+    background: $gradient-secondary;
+  }
+
+  .noUi-horizontal {
+    height: 6px;
+  }
+
+  .noUi-handle {
+    background: $gradient-secondary;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  .noUi-handle::after,
+  .noUi-handle::before {
+    display: none;
+  }
 }

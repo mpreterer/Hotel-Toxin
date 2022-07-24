@@ -1,73 +1,73 @@
 @import '@variables';
 
 .pagination {
-	user-select: none;
-	font-size: 12px;
+  font-size: 12px;
+  user-select: none;
 
-	&__container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-	&__description {
-		font-size: $font-size-main;
-		color: $color-shade-secondary
-	}
+  &__description {
+    color: $color-shade-secondary;
+    font-size: $font-size-main;
+  }
 
-	& ul {
-		padding: 0;
-		margin: 0;
-		list-style: none;
-		display: flex;
-	}
+  & ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-	& li a {
-		color: rgba(31,32,65,.5);
-		padding: 20px;
-		text-decoration: none;
-	}
+  & li a {
+    padding: 20px;
+    color: rgb(31 32 65 / 50%);
+    text-decoration: none;
+  }
 
-	& li.active {
-		background: $gradient-main;
-	}
+  & li.active {
+    background: $gradient-main;
+  }
 
-	& li.active span {
-		color: #fff;
-		font-weight: bold;
-	}
+  & li.active span {
+    color: #fff;
+    font-weight: bold;
+  }
 
-	& ul li {
-		width:40px;
-		height:40px;
-		border-radius:50%;
-		box-shadow:none;
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+  & ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: none;
+    cursor: pointer;
+  }
 
-	& ul li:last-child {
-		background:linear-gradient(180deg,#6FCF97 0%, #66D2EA 100%);
-		position: relative;
-	}
+  & ul li:last-child {
+    position: relative;
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  }
 
-	& ul li:last-child:after {
-		content: '';
-		display: inline-block;
-		width: 15px;
-		height: 15px;
-		background: url('../../assets/image/arrow-link.svg');
-		background-repeat: no-repeat;
-		background-position: center;
-		position: absolute;
-		left: 30%;
-		top: 30%;
-		pointer-events: none;
-	}
-	
-	& ul li:first-child:after {
-		transform: rotate(180deg);
-	}
+  & ul li:last-child::after {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url('../../assets/image/arrow-link.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    content: '';
+    pointer-events: none;
+  }
+
+  & ul li:first-child::after {
+    transform: rotate(180deg);
+  }
 }

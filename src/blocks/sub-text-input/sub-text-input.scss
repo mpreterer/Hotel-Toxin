@@ -1,48 +1,48 @@
 @import '@variables';
 
 .sub-text-input {
-    user-select: none;
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  color: $color-shade;
+  user-select: none;
+
+  &__input {
     width: 100%;
-    display:inline-flex;
+    height: 44px;
+    padding: 0 15px;
     color: $color-shade;
-    position: relative;
-    
-    &__input {
-        user-select: none;
-        height: 44px;
-        width: 100%;
-        border: 1px solid $color-shade;
-        border-radius: 4px;
-        padding: 0 15px;
-        color: $color-shade;
-        outline: none;
-    }
+    border: 1px solid $color-shade;
+    border-radius: 4px;
+    outline: none;
+    user-select: none;
+  }
 
-    &__input:hover {
-       color: rgba(31,32,65,0.75);
-       border-color: rgba(31,32,65,0.5);
-    }
+  &__input:hover {
+    color: rgb(31 32 65 / 75%);
+    border-color: rgb(31 32 65 / 50%);
+  }
 
-    &__input::placeholder {
-        color: $color-shade;
-    }
+  &__input::placeholder {
+    color: $color-shade;
+  }
 
-    &__input::-webkit-input-placeholder {
-        color: $color-shade;
-    }
+  &__input::input-placeholder {
+    color: $color-shade;
+  }
 
-    &__input::-moz-placeholder {
-        color: $color-shade;
-    }
+  &__input::placeholder {
+    color: $color-shade;
+  }
 
-    &__arrow-link {
-        width: 44px;
-        height: 44px;
-        background-image: url(../../assets/image/arrow-back.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        transform: rotate(180deg);
-        position: absolute;
-        right: 0;
-    }
+  &__arrow-link {
+    position: absolute;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    background-image: url(../../assets/image/arrow-back.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
+  }
 }

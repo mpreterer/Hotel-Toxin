@@ -2,7 +2,7 @@ include ../radio-input/radio-input.pug
 include ../text-input/text-input.pug
 include ../toggle/toggle.pug
 
-mixin registration-card({ title = "Регистрация аккаунта" }={})
+mixin registration-card({ title = 'Регистрация аккаунта' }={})
     .registration-card.js-registration-card
         .registration-card__container
             .registration-card__user-info
@@ -10,33 +10,33 @@ mixin registration-card({ title = "Регистрация аккаунта" }={}
             .registration-card__user-about
                 .registration-card__user-name
                     .registration-card__first-name
-                        +text-input({ placeholder: "Имя", name: "name" })
+                        +text-input({ placeholder: 'Имя', name: 'name' })
                     .registration-card__second-name
-                        +text-input({ placeholder: "Фамилия", name: "second name" })
+                        +text-input({ placeholder: 'Фамилия', name: 'second name' })
                 .registration-card__gender
                     +radio-input
                 .registration-card__birthday.js-registration-card__input
                     span.registration-card__sub-title дата рождения
-                    +text-input({ isMasked: true, name: "birthday" })
+                    +text-input({ isMasked: true, name: 'birthday' })
                 .registration-card__data-login
                     span.registration-card__sub-title данные для входа в сервис
                     .registration-card__email
-                        +text-input({ placeholder: "Email", name: "email" })
+                        +text-input({ placeholder: 'Email', name: 'email' })
                     .registration-card__password
-                        +text-input({ type: "password", placeholder: "Пароль", name: "password" })
+                        +text-input({ type: 'password', placeholder: 'Пароль', name: 'password' })
                 .registration-card__offer
                     +toggle
                 .registration-card__buy-btn
                     +button({
-                        text:"перейти к оплате",
-                        href: "search-room.html",
-                        type: "long"
+                        text:'перейти к оплате',
+                        href: 'search-room.html',
+                        type: 'long'
                     })
                 .registration-card__has-account
                     .registration-card__question
                         p.registration-card__question-txt Уже есть аккаунт на Toxin
                     +button({
-                        text: "Войти",
-                        href: "login.html",
-                        type: "border",
+                        text: 'Войти',
+                        href: 'login.html',
+                        type: 'border',
                     })

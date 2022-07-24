@@ -1,197 +1,195 @@
 @import '@variables';
 
 .filter {
-	&__search-room {
-		width:380px;
-		height: 374px;
-		background:#fff;
-		color:#1F2041;
-		font-style:normal;
-		padding:40px 30px 30px 30px;
-		border:1px solid rgba(0, 0, 0, 0.12);
-		box-sizing:border-box;
-		box-shadow:0px 0px 25px rgba(0, 0, 0, 0.2);
-		border-radius:4px;
-		display:flex;
-		flex-direction:column;
+  &__search-room {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 380px;
+    height: 374px;
+    padding: 40px 30px 30px;
+    color: #1f2041;
+    font-style: normal;
+    background: #fff;
+    border: 1px solid rgb(0 0 0 / 12%);
+    border-radius: 4px;
+    box-shadow: 0 0 25px rgb(0 0 0 / 20%);
 
-		& p {
-			margin-bottom: 5.44px;
-		}
+    & p {
+      margin-bottom: 5.44px;
+    }
 
-		& .filter__text-field-calendar .datepicker-here {
-			width: 320px;
-			padding: 12px 12px 8.44px 15px;
-		}
+    & .filter__text-field-calendar .datepicker-here {
+      width: 320px;
+      padding: 12px 12px 8.44px 15px;
+    }
+  }
 
-	}
+  &__guest-title {
+    font-weight: bold;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+  }
 
-	&__guest-title {
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: $font-size-small;
-	}
+  &__title {
+    margin: 0;
+    font-size: $font-size-big;
+    line-height: 26px;
+  }
 
-	&__title {
-		font-size: $font-size-big;
-		margin:0;
-		line-height: 26px;
-	}
+  &__container-search-room {
+    display: flex;
+    justify-content: flex-start;
+  }
 
-	&__container-search-room {
-		display: flex;
-		justify-content: flex-start;
-	}
+  &__date_departure {
+    width: 150px;
+  }
 
-	&__date_departure {
-		width: 150px;
-	}
+  &__date-arrival {
+    position: relative;
+    border: 1px solid $color-shade;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-	&__date-arrival {
-		position:relative;
-		border-radius: 4px;
-		border:1px solid $color-shade;
-		cursor: pointer;
-	}
+  &__date_departure {
+    position: relative;
+    border: 1px solid $color-shade;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-	&__date_departure {
-		position:relative;
-		border-radius: 4px;
-		border:1px solid $color-shade;
-		cursor: pointer;
-	}
+  &__date-arrival:hover {
+    border: 1px solid #787878;
+  }
 
-	&__date-arrival:hover {
-		border:1px solid #787878;
-	}
+  &__date_departure:hover {
+    border: 1px solid #787878;
+  }
 
-	&__date_departure:hover {
-		border:1px solid #787878;
-	}
+  &__residence {
+    margin-top: 21px;
+  }
 
-	&__residence {
-		margin-top: 21px;
-	}
+  &__search-room-title {
+    margin-bottom: 5px;
+  }
 
-	&__search-room-title {
-		margin-bottom: 5px;
-	}
+  &__residence input {
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
 
-	&__residence input {
-		cursor:pointer;
-		border:none;
-		border-radius:3px;
-	}
+  &__container-date-departure {
+    position: relative;
+    margin-left: 18px;
+  }
 
-	&__container-date-departure {
-		margin-left: 18px;
-		position: relative;
-	}
+  &__button-pay {
+    width: 320px;
+    height: 19px;
+    padding: 15px 0 10px;
+    color: white;
+    text-align: center;
+    background: $gradient-main;
+    border-radius: 22px;
+  }
 
-	&__button-pay {
-		width:320px;
-		height:19px;
-		border-radius:22px;
-		background:$gradient-main;
-		color:white;
-		text-align:center;
-		padding: 15px 0 10px 0;
-	}
+  &__button-pay:hover {
+    background: linear-gradient(90deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 40px;
+  }
 
-	&__button-pay:hover {
-		background:linear-gradient(90deg, #BC9CFF 0%, #8BA4F9 100%);
-		border-radius:40px;
-	}
+  &__search-room-link {
+    height: 44px;
+    margin-top: 32px;
+  }
 
-	&__search-room-link {
-		height: 44px;
-		margin-top:32px;
-	}
+  &__button-pay p {
+    margin: 0;
+  }
 
-	&__button-pay p {
-		margin: 0;
-	}
+  &__block-date {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
 
-	&__block-date {
-		display:flex;
-		justify-content:space-around;
-		flex-direction: column;
-		text-align:left;
-		flex-wrap:wrap;
-		margin:0;
-		padding:0;
-	}
+  &__block-date p {
+    margin-top: 21.7px;
+    font-size: $font-size-small;
+  }
 
-	&__block-date p {
-		margin-top: 21.7px;
-		font-size: $font-size-small;
-	}
+  &__block-date h3 {
+    font-size: $font-size-small;
+    text-transform: uppercase;
+  }
 
-	&__block-date h3 {
-		font-size: $font-size-small;
-		text-transform: uppercase;
-	}
-
-	&__container-dropDown {
-		margin: 12px 0 31px 0;
-	}
+  &__container-dropDown {
+    margin: 12px 0 31px;
+  }
 }
 
-@media all and (max-width:1200px ) {
-    .filter {
-		&__container-search-room {
-			padding-left: 0;
-		}
+@media all and (max-width: 1200px) {
+  .filter {
+    &__container-search-room {
+      padding-left: 0;
+    }
 
-		&__search-room {
-			margin: 0 auto;
-		}
+    &__search-room {
+      margin: 0 auto;
+    }
 
-		&__search-room {
-			left: 10px;
-		}
+    &__search-room {
+      left: 10px;
+    }
 
-		&__title {
-			font-size: $font-size-medium;
-		}
-	}
+    &__title {
+      font-size: $font-size-medium;
+    }
+  }
 }
 
-@media all and (max-width:425px) {
-    .filter {
-		&__search-room {
-			height: auto;
-		}
+@media all and (max-width: 425px) {
+  .filter {
+    &__search-room {
+      height: auto;
+    }
 
-		&__date_departure {
-			width: 100%;
-		}
+    &__date_departure {
+      width: 100%;
+    }
 
-		& .dropDown__name {
-			width: auto;
-		}
-	}
-
+    & .dropDown__name {
+      width: auto;
+    }
+  }
 }
 
-@media all and (max-width:375px) { 
-	.filter {
-		&__search-room {
-			width: auto;
-		}
-	}
-	.filter {
-		& .calendar-container {
-			transform: translate(-15px, 5px);
-		}
-	}
+@media all and (max-width: 375px) {
+  .filter {
+    &__search-room {
+      width: auto;
+    }
+  }
+
+  .filter {
+    & .calendar-container {
+      transform: translate(-15px, 5px);
+    }
+  }
 }
 
-@media all and (max-width:340px) { 
-	.filter {
-		& .calendar-container {
-			transform: translate(-36px, 5px);
-		}
-	}
+@media all and (max-width: 340px) {
+  .filter {
+    & .calendar-container {
+      transform: translate(-36px, 5px);
+    }
+  }
 }
-

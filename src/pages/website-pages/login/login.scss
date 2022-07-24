@@ -1,13 +1,13 @@
 @import '@variables';
 
 .login-page {
-	height:699px;
-	background-image:url(../../../assets/image/registration-bg.jpg);
-	background-repeat:no-repeat;
-	background-position:center;
-	background-size: cover;
+  height: 699px;
+  background-image: url(../../../assets/image/registration-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-	&__container {
-		padding: 172px 0;
-	}
+  &__container {
+    padding: 172px 0;
+  }
 }

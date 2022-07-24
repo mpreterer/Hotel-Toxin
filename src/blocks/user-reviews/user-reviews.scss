@@ -1,66 +1,66 @@
 @import '@variables';
 
 .user-reviews {
-	max-width:711px;
-	color: $color-shade-secondary;
-	font-size: $font-size-main;
-	line-height:24px;
-	margin-bottom: 25px;
+  max-width: 711px;
+  margin-bottom: 25px;
+  color: $color-shade-secondary;
+  font-size: $font-size-main;
+  line-height: 24px;
 
-	&:last-child {
-		margin-bottom: 0;
-	}
+  &:last-child {
+    margin-bottom: 0;
+  }
 
-	&__day-comment {
-		margin-bottom: 10px;
-	}
+  &__day-comment {
+    margin-bottom: 10px;
+  }
 
-	&__avatar-container {
-		display: flex;
-		flex-direction: column;
-		margin-right: 8px;
-		position: relative;
-	}
+  &__avatar-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 8px;
+  }
 
-	&__comment {
-		display: flex;
-		list-style:none;
-		padding:0;
+  &__comment {
+    display: flex;
+    padding: 0;
+    list-style: none;
 
-		& li {
-			margin-bottom:12px;
-		}
-	}
-	
-	&__avatar {
-		width:48px;
-		height:48px;
-		border:2px solid #FFFFFF;
-		box-sizing:border-box;
-		filter:drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
-		border-radius:32px;
-		border-radius:50%;
-		margin-bottom: 14px;
+    & li {
+      margin-bottom: 12px;
+    }
+  }
 
-		& span {
-			margin-left:60px;
-		}
-	}
+  &__avatar {
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+    border: 2px solid #fff;
+    border-radius: 32px;
+    border-radius: 50%;
+    filter: drop-shadow(0 10px 20px rgb(31 32 65 / 10%));
 
-	&__username {
-		font-weight:bold;
-	}
+    & span {
+      margin-left: 60px;
+    }
+  }
 
-	&__text-reviews {
-		display:flex;
-		flex-direction: column;
-		position: relative;
-		z-index: 3;
-	}
+  &__username {
+    font-weight: bold;
+  }
+
+  &__text-reviews {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media all and (max-width: 1200px) {
-    .user-reviews {
-        margin: 10px;
-    }
+  .user-reviews {
+    margin: 10px;
+  }
 }

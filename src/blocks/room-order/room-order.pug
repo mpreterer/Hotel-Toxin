@@ -12,20 +12,20 @@ mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={
                 span.room-order__price-day-title
                     span.room-order__price-for-day(data-price="priceDay" )= priceDay
                     span.room-order__price-currency= currency
-                    span.room-order__in-day !{" в сутки "}
+                    span.room-order__in-day !{' в сутки '}
             div.room-order__arrival
                 +range-date-calendar
             div.room-order__guests
                 span.room-order__title-guest гости
                 +dropDown({
-                    appointment: "guests",
+                    appointment: 'guests',
                     list: [
-                        { name: "взрослые", val: 0 },
-                        { name: "дети", val: 0 },
-                        { name: "младенцы", val: 0 }
+                        { name: 'взрослые', val: 0 },
+                        { name: 'дети', val: 0 },
+                        { name: 'младенцы', val: 0 }
                     ],
                     showFunction: true,
-                    placeholder: "Сколько гостей",
+                    placeholder: 'Сколько гостей',
                     keyPhrases: ['гость', 'гостя', 'гостей']
                 })
             div.room-order__price
@@ -33,14 +33,14 @@ mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={
                     span.room-order__full-price-container
                         span.room-order__price-day= priceDay
                         span.room-order__currency= currency
-                        span.room-order__currency !{" x "} 
+                        span.room-order__currency !{' x '} 
                         span.room-order__sum-day.js-room-order__sum-day 0 
                         span.room-order__days суток
                     span.room-order__result-full-price-container 
                         span.room-order__nofees-result-price(data-price="priceWithoutFees") 0
                         span.room-order__currency= currency
                 div.room-order__fees
-                    span.room-order__fees-container !{"Сбор за услуги: скидка "}
+                    span.room-order__fees-container !{'Сбор за услуги: скидка '}
                         span.room-order__fees-price(data-price="feesPrice")= discount
                         span.room-order__currency= currency
                     span.room-order__fees-result 0
@@ -58,7 +58,7 @@ mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={
                     span.room-order__all-result-price-currency= currency
             div.room-order__to-book
                 +button({
-                    text: "Забронировать",
-                    href: "registration.html",
-                    type: "long"
+                    text: 'Забронировать',
+                    href: 'registration.html',
+                    type: 'long'
                 })

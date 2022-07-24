@@ -1,23 +1,23 @@
 body {
-    background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .header-footer {
-    margin: 62px 0 140px 0;
+  margin: 62px 0 140px;
 
-    &__header {
-        margin-bottom: 40px;
-    }
+  &__header {
+    margin-bottom: 40px;
+  }
 
-    &__header-login {
-        margin-bottom: 40px;
-    }
+  &__header-login {
+    margin-bottom: 40px;
+  }
 
-    &__footer {
-        margin-bottom: 40px;
-    }
+  &__footer {
+    margin-bottom: 40px;
+  }
 
-    &__footer-mobile {
-        width: 768px;
-    }
+  &__footer-mobile {
+    width: 768px;
+  }
 }

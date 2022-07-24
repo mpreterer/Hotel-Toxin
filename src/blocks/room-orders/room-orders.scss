@@ -1,121 +1,121 @@
 @import '@variables';
 
 .room-orders {
-	&__order {
-		margin-right:100px;
-	}
+  &__order {
+    margin-right: 100px;
+  }
 
-	&__title {
-		font-size: $font-size-medium;
-		color: $color-shade-dark;
-		font-weight: bold;
-		display: block;
-		margin-bottom: 25px;
-	}
+  &__title {
+    display: block;
+    margin-bottom: 25px;
+    color: $color-shade-dark;
+    font-weight: bold;
+    font-size: $font-size-medium;
+  }
 
-	&__list {
-		list-style:none;
-		padding: 0;
-		margin: 0;
-		margin-left: -20px;
-		margin-bottom: 21px;
-		color: $color-shade-secondary;
+  &__list {
+    margin: 0;
+    margin-bottom: 21px;
+    margin-left: -20px;
+    padding: 0;
+    color: $color-shade-secondary;
+    list-style: none;
 
-		& li {
-			margin-bottom: 24px;
-		}
+    & li {
+      margin-bottom: 24px;
+    }
 
-		& li:last-child {
-			margin-bottom: 0;
-		}
+    & li:last-child {
+      margin-bottom: 0;
+    }
 
-		& .li_order3 {
-			display:flex;
-			margin-bottom:10px;
-		}
+    & .li_order3 {
+      display: flex;
+      margin-bottom: 10px;
+    }
 
-		& span {
-			padding:0;
-			margin:0;
-			display:block;
-			width:240px;
-		}
+    & span {
+      display: block;
+      width: 240px;
+      margin: 0;
+      padding: 0;
+    }
 
-		& li:before {
-			content:'';
-			width:10px;
-			height:10px;
-			background-color: $color-shade;
-			display:inline-block;
-			margin-right:10px;
-			border-radius:50%;
-		}
-	}
+    & li::before {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 10px;
+      background-color: $color-shade;
+      border-radius: 50%;
+      content: '';
+    }
+  }
 
-	&__element {
-		display: flex;
-		position: relative;
-	}
+  &__element {
+    position: relative;
+    display: flex;
+  }
 
-	&__text {
-		position: absolute;
-		left: 21px;
-		top: -4px;
-		line-height: 24px;
-	}
+  &__text {
+    position: absolute;
+    top: -4px;
+    left: 21px;
+    line-height: 24px;
+  }
 }
 
 @media all and (max-width: 1200px) {
-	.room-orders {
-		margin: 0 10px;
+  .room-orders {
+    margin: 0 10px;
 
-		&__container {
-			justify-content: center;
-			align-items: center;
-		}
-	}
+    &__container {
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
 @media all and (max-width: 793px) {
-    .room-orders {
-		&__order {
-			margin-right: 0;
-		}
-	}
+  .room-orders {
+    &__order {
+      margin-right: 0;
+    }
+  }
 }
 
 @media all and (max-width: 693px) {
-    .room-orders {
-		width: 341px;
-		margin: 20px 10px 50px 0;
+  .room-orders {
+    width: 341px;
+    margin: 20px 10px 50px 0;
 
-		&__container {
-			flex-direction: column;
-		}
+    &__container {
+      flex-direction: column;
+    }
 
-		&__orders {
-			flex-direction: column;
-			align-items: center;
-		}
-	}
+    &__orders {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 
 @media all and (max-width: 380px) {
-	.room-order {
-		width: 100%;
-	}
+  .room-order {
+    width: 100%;
+  }
 
-    .room-orders {
-		width: 240px;
-	}
+  .room-orders {
+    width: 240px;
+  }
 
-	.room-details {
-		&__title-comment {
-			font-size: $font-size-main;
-		}
+  .room-details {
+    &__title-comment {
+      font-size: $font-size-main;
+    }
 
-		&__cancel {
-			width: auto;
-		}
-	}
+    &__cancel {
+      width: auto;
+    }
+  }
 }

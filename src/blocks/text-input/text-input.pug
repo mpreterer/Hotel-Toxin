@@ -1,9 +1,9 @@
 mixin text-input(options={})
   -
     const {
-      name = "",
-      placeholder = "",
-      type = "text",
+      name = '',
+      placeholder = '',
+      type = 'text',
       disabled = false,
       readonly = false,
       isMasked = false,
@@ -14,7 +14,7 @@ mixin text-input(options={})
       data-masked= isMasked
       type= type
       name= name
-      placeholder= isMasked ? "ДД.ММ.ГГГГ" : placeholder
+      placeholder= isMasked ? 'ДД.ММ.ГГГГ' : placeholder
       disabled= disabled
       readonly= readonly
     )

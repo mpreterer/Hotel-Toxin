@@ -2,41 +2,41 @@
 @import '@variables';
 
 .index-main {
-	height:830px;
-	background-repeat:no-repeat;
-	background-position: center;
-	background-size: cover;
+  height: 830px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-	&__container {
-		max-width: 1175px;
-		margin: 0 auto;
-		position: relative;
-		min-height: 830px;
-	}
+  &__container {
+    position: relative;
+    max-width: 1175px;
+    min-height: 830px;
+    margin: 0 auto;
+  }
 
-	&__description {
-		width: 297px;
-		text-align: right;
-		position: absolute;
-		bottom: 8px;
-		right: 1px;
-	}
+  &__description {
+    position: absolute;
+    right: 1px;
+    bottom: 8px;
+    width: 297px;
+    text-align: right;
+  }
 
-	&__filter-item {
-		padding: 70px 5px 0 5px;
-	}
+  &__filter-item {
+    padding: 70px 5px 0;
+  }
 }
 
-@media all and (max-width:1200px ) {
-	.logotype {
-		margin-left: 10px;
-	}
+@media all and (max-width: 1200px) {
+  .logotype {
+    margin-left: 10px;
+  }
 }
 
-@media all and (max-width:650px ) {
-	.index-main {
-		&__description {
-			display: none;
-		}
-	}
+@media all and (max-width: 650px) {
+  .index-main {
+    &__description {
+      display: none;
+    }
+  }
 }

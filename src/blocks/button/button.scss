@@ -1,69 +1,68 @@
 @import '@variables';
 
 .button {
-	text-transform: uppercase;
-    position: relative;
-    border-radius:22px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: $font-size-small;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 22px;
+  user-select: none;
+
+  &_type_long {
+    height: 44px;
+    color: #fff;
     text-align: center;
-    font-weight: bold;
-    font-size: $font-size-small;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    line-height: 15px;
-    text-decoration: none;
+    background: $gradient-main;
+  }
 
-    &_type_long {
-        height: 44px;
-        color: #fff;
-        background: $gradient-main;;
-        text-align: center;
-    }
+  &_type_border {
+    padding: 12px 20px;
+    color: $color-purple;
+    background: $gradient-main;
+    background-position: center center;
+    background-size: 110% 110%;
+    border: 2px solid transparent;
+    box-shadow: inset 0 0 0 100px #fff;
+  }
 
-    &_type_border {
-        color:$color-purple;
-        border: 2px solid transparent;
-        background: $gradient-main;
-        padding: 12px 20px 12px 20px;
-        background-position: center center;
-        box-shadow: inset 0 0 0 100px #fff;
-        background-size: 110% 110%;
-    }
+  &_type_background {
+    padding: 14px 20px;
+    color: #fff;
+    background: $gradient-main;
+  }
 
-    &_type_background {
-        background: $gradient-main;
-        color: #fff;
-        padding: 14px 20px 14px 20px;
-    }
-
-    &_type_empty {
-        border: none;
-        color: $color-purple;
-
-        &:hover {
-            color: $color-shade-grey;
-        }
-    }
-
-    &_size_small {
-        padding: 7px 20px;
-    }
+  &_type_empty {
+    color: $color-purple;
+    border: none;
 
     &:hover {
-        opacity: 0.8;
+      color: $color-shade-grey;
     }
+  }
 
+  &_size_small {
+    padding: 7px 20px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .button-arrow {
-    width: 44px;
-    height: 44px;
-    background-image: url('../../assets/image/arrow-forward.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 9;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  width: 44px;
+  height: 44px;
+  background-image: url('../../assets/image/arrow-forward.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }

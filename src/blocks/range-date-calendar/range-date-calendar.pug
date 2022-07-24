@@ -1,6 +1,6 @@
 include ../calendar/calendar.pug
 
-mixin range-date-calendar({ titleFirst="Прибытие", titleSecond="Выезд", isOpen = false, placeholder="ДД.ММ.ГГГГ", range="true", lang, separator=" - ", format}={})
+mixin range-date-calendar({ titleFirst='Прибытие', titleSecond='Выезд', isOpen = false, placeholder='ДД.ММ.ГГГГ', range='true', lang, separator=' - ', format}={})
     .range-date-calendar.js-range-date-calendar(data-is-open= isOpen data-date-format= format)
         .range-date-calendar__list
             .range-date-calendar__element

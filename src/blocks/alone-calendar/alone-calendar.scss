@@ -1,26 +1,26 @@
 @import '@variables';
 
 .alone-calendar {
-    border: 1px solid rgba(31,32,65,0.25);
-    border-radius: 4px;
-    position: relative;
-    cursor: pointer;
-    user-select: none;
+  position: relative;
+  border: 1px solid rgb(31 32 65 / 25%);
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
 
-    &__calendar-container{
-        display: flex;
-        align-items: center;
-        height: 44px;
-        padding-left: 15px;
-    }
+  &__calendar-container {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding-left: 15px;
+  }
 
-    &__placeholder {
-        font-size: $font-size-main;
-    }
+  &__placeholder {
+    font-size: $font-size-main;
+  }
 
-    &__calendar {
-        position: absolute;
-        left: 0;
-        z-index: 99;
-    }
+  &__calendar {
+    position: absolute;
+    left: 0;
+    z-index: 99;
+  }
 }

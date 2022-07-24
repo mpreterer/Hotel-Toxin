@@ -1,43 +1,43 @@
 @import '@variables';
 
 .button-like {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height:20px;
-	border-radius:22px;
-	background-color: #fff;
-	cursor:pointer;
-	border:1px solid $color-shade;
-	color:#C7C7CF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+  color: #c7c7cf;
+  background-color: #fff;
+  border: 1px solid $color-shade;
+  border-radius: 22px;
+  cursor: pointer;
 
-	&__txt {
-		font-size:11px;
-		user-select: none;
-		pointer-events: none;
-		margin-left: 15px;
-	}
+  &__txt {
+    margin-left: 15px;
+    font-size: 11px;
+    user-select: none;
+    pointer-events: none;
+  }
 
-	&__heart {
-		position: absolute;
-		width:10px;
-		height:10px;
-		background-position: center;
-		background-image:url(../../assets/image/favorite-border.svg);
-		background-repeat:no-repeat;
-		pointer-events: none;
-	}
+  &__heart {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-image: url(../../assets/image/favorite-border.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+  }
 }
 
 .fill_heart {
-	background-image:url(../../assets/image/favorite.svg);
+  background-image: url(../../assets/image/favorite.svg);
 }
 
 .border_heart {
-	background-image:url(../../assets/image/favorite-border.svg);
+  background-image: url(../../assets/image/favorite-border.svg);
 }
 
 .active_heart {
-	border:1px solid #B59DFF;
-	color:$color-purple;
+  color: $color-purple;
+  border: 1px solid #b59dff;
 }

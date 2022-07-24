@@ -1,37 +1,37 @@
 @import '@variables';
 
 .checkbox-list {
-    display: flex;
-    align-items: center;
-    height: 44px;
-    position: relative;
-    cursor: pointer;
-    font-size: $font-size-small;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $color-shade-dark;
-    user-select: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  color: $color-shade-dark;
+  font-weight: bold;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
 
-    &__container {
-        position: absolute;
-        top: 50px;
-        background-color: #FFF;
-        width: fit-content;
-        max-width: 266px;
-        width: 266px;
-        text-transform: none;
-        color: #1F204180;
-        z-index: 999;
-        line-height: 12px;
-    }
+  &__container {
+    position: absolute;
+    top: 50px;
+    z-index: 999;
+    width: fit-content;
+    width: 266px;
+    max-width: 266px;
+    color: #1f204180;
+    line-height: 12px;
+    text-transform: none;
+    background-color: #fff;
+  }
 
-    &__menu {
-        font-weight: normal;
-    }
+  &__menu {
+    font-weight: normal;
+  }
 
-    &__name {
-        &_hide {
-            display: none;
-        }
+  &__name {
+    &_hide {
+      display: none;
     }
+  }
 }

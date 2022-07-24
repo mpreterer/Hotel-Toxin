@@ -1,64 +1,64 @@
 @import '@variables';
 
 .range-date-calendar {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__element {
+    width: 150px;
+  }
+
+  &__title {
+    color: $color-shade-dark;
+    font-weight: bold;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding-left: 15px;
+    color: rgb(31 32 65 / 75%);
+    font-weight: normal;
+    border: 1px solid rgb(31 32 65 / 25%);
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 17px;
+    right: 15px;
+    width: 12px;
+    height: 9px;
+    background-image: url(../../assets/image/expand-more.svg);
+    background-repeat: no-repeat;
+    background-position: 4px 4px 0 0;
+    content: '';
+  }
+
+  &__placeholder {
+    display: inline-block;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .range-date-calendar {
     &__list {
-        display: flex;
-        justify-content: space-between;
+      flex-direction: column;
     }
 
     &__element {
-        width: 150px;
+      width: 100%;
     }
-
-    &__title {
-        text-transform: uppercase;
-        font-size: $font-size-small;
-        font-weight: bold;
-        color: $color-shade-dark;
-    }
-
-    &__input {
-        height: 44px;
-        border: 1px solid rgba(31,32,65,0.25);
-        padding-left: 15px;
-        display: flex;
-        align-items: center;
-        color: rgba(31,32,65,0.75);
-        border-radius: 4px;
-        font-weight: normal;
-        position: relative;
-        cursor: pointer;
-        user-select: none;
-    }
-
-    &__arrow {
-        content: '';
-        position: absolute;
-        width: 12px;
-        height: 9px;
-        background-position: 4px 4px 0 0;
-        background-repeat: no-repeat;
-        right: 15px;
-        top: 17px;
-        background-image: url(../../assets/image/expand-more.svg);
-    }
-
-    &__placeholder {
-        display: inline-block;
-    }
-}
-
-@media all and (max-width:380px) {
-    .range-date-calendar {
-        &__list {
-           flex-direction: column;
-        }
-
-        &__element {
-            width: 100%;
-        }
-    }
+  }
 }

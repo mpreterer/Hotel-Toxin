@@ -1,272 +1,276 @@
 @import '@variables';
 
 .room-order {
-	width:380px;
-	border:1px solid rgba(0, 0, 0, 0.12);
-	box-shadow:0px 0px 25px rgba(0, 0, 0, 0.2);
-	border-radius:4px;
-	background-color: #fff;
+  width: 380px;
+  background-color: #fff;
+  border: 1px solid rgb(0 0 0 / 12%);
+  border-radius: 4px;
+  box-shadow: 0 0 25px rgb(0 0 0 / 20%);
 
-	&__container {
-		margin:43px 30px 30px 30px;
-	}
+  &__container {
+    margin: 43px 30px 30px;
+  }
 
-	&__level {
-		color: $color-purple;
-		margin-left: 8px;
-		text-transform: uppercase;
-		font-size: $font-size-small;
-	}
+  &__level {
+    margin-left: 8px;
+    color: $color-purple;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+  }
 
-	&__price-day-title {
-		text-align: bottom;
-	}
+  &__price-day-title {
+    text-align: bottom;
+  }
 
-	&__all-result-price-title {
-		font-weight: bold;
-		font-size: $font-size-medium;
-	}
+  &__all-result-price-title {
+    font-weight: bold;
+    font-size: $font-size-medium;
+  }
 
-	&__head {
-		display:flex;
-		justify-content:space-between;
-		align-items: center;
-		margin-bottom: 14px;
-	}
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
 
-	&__number-container {
-		font-weight: bold;
-	}
+  &__number-container {
+    font-weight: bold;
+  }
 
-	&__number-room-title {
-		font-size: $font-size-big;
-		color: $color-shade-dark;
-	}
+  &__number-room-title {
+    color: $color-shade-dark;
+    font-size: $font-size-big;
+  }
 
-	&__in-day {
-		color: $color-shade-grey;
-	}
+  &__in-day {
+    color: $color-shade-grey;
+  }
 
-	&__price-for-day {
-		color: rgba(31,32,65,0.5);
-		font-weight: bold;
-	}
+  &__price-for-day {
+    color: rgb(31 32 65 / 50%);
+    font-weight: bold;
+  }
 
-	&__price-currency {
-		color: rgba(31,32,65,0.5);
-		font-weight: bold;
-	}
+  &__price-currency {
+    color: rgb(31 32 65 / 50%);
+    font-weight: bold;
+  }
 
-	&__number-num {
-		font-size: $font-size-main;
-		margin-right: 2px;
-		color: $color-shade-dark;
-	}
+  &__number-num {
+    margin-right: 2px;
+    color: $color-shade-dark;
+    font-size: $font-size-main;
+  }
 
-	&__number-level {
-		margin-left: 8px;
-		font-size: $font-size-small;
-		color: $color-purple;
-		text-transform: uppercase;
-	}
+  &__number-level {
+    margin-left: 8px;
+    color: $color-purple;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+  }
 
-	&__arrival {
-		margin-bottom: 15px;
-	}
+  &__arrival {
+    margin-bottom: 15px;
+  }
 
-	&__arrival input {
-		width:135px;
-		height:41px;
-		border:1px solid $color-shade;
-		border-radius:4px;
-		padding-left:15px;
-		cursor:pointer;
-	}
+  &__arrival input {
+    width: 135px;
+    height: 41px;
+    padding-left: 15px;
+    border: 1px solid $color-shade;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-	&__container-arrival {
-		height:64.4px;
-		width:150px;
-		margin-right:20px;
-		position:relative;
-		transition:0.3s;
-	}
+  &__container-arrival {
+    position: relative;
+    width: 150px;
+    height: 64.4px;
+    margin-right: 20px;
+    transition: 0.3s;
+  }
 
-	&__container-arrival input:hover {
-		border-color:#8C8C92;
-		transition:0.3s;
-	}
+  &__container-arrival input:hover {
+    border-color: #8c8c92;
+    transition: 0.3s;
+  }
 
-	&__container-arrival:after {
-		content:'';
-		width:15px;
-		height:15px;
-		display:inline-block;
-		position:absolute;
-		top:44px;
-		right:10px;
-		background-image:url(../../assets/image/expand-more.svg);
-		background-repeat:no-repeat;
-		pointer-events: none;
-	}
+  &__container-arrival::after {
+    position: absolute;
+    top: 44px;
+    right: 10px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../../assets/image/expand-more.svg);
+    background-repeat: no-repeat;
+    content: '';
+    pointer-events: none;
+  }
 
-	&__guests {
-		margin-bottom: 17px;
-	}
+  &__guests {
+    margin-bottom: 17px;
+  }
 
-	&__fees, &__full-price, &__additional-fees {
-		display:flex;
-		justify-content:space-between;
-	}
+  &__fees,
+  &__full-price,
+  &__additional-fees {
+    display: flex;
+    justify-content: space-between;
+  }
 
-	&__full-price {
-		margin-bottom:11px;
-	}
+  &__full-price {
+    margin-bottom: 11px;
+  }
 
-	&__fees {
-		margin-bottom:10px;
-	}
+  &__fees {
+    margin-bottom: 10px;
+  }
 
-	&__additional-fees {
-		margin-bottom:18px;
-	}
+  &__additional-fees {
+    margin-bottom: 18px;
+  }
 
-	&__additional-fees-title, &__fees-container {
-		position:relative;
-	}
+  &__additional-fees-title,
+  &__fees-container {
+    position: relative;
+  }
 
-	&__additional-fees-title {
-		width: 214px;
-	}
+  &__additional-fees-title {
+    width: 214px;
+  }
 
-	&__result-price {
-		display:flex;
-		justify-content:space-between;
-		margin-bottom: 20px;
-	}
+  &__result-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
 
-	&__all-result-price-container {
-		color: $color-shade-dark;
-		font-weight: bold;
-		font-size: $font-size-medium;
-	}
+  &__all-result-price-container {
+    color: $color-shade-dark;
+    font-weight: bold;
+    font-size: $font-size-medium;
+  }
 
-	&__all-result-price {
-		color: $color-shade-dark;
-		font-weight: bold;
-		font-size: $font-size-medium;
-	}
+  &__all-result-price {
+    color: $color-shade-dark;
+    font-weight: bold;
+    font-size: $font-size-medium;
+  }
 
-	&__all-result-price-hr {
-		width: 100%;
-		border-bottom: 1px dotted $color-shade;
-	}
+  &__all-result-price-hr {
+    width: 100%;
+    border-bottom: 1px dotted $color-shade;
+  }
 
-	&__fees-container:after, &__additional-fees-title:after {
-		content:'';
-		width:20px;
-		height:20px;
-		border:1px solid $color-shade;
-		border-radius:50%;
-		display:inline-block;
-		position:absolute;
-		top:0;
-		right:-30px;
-		background-image:url(../../assets/image/inform-price.svg);
-		background-repeat:no-repeat;
-		background-position:center;
-		cursor:pointer;
-	}
+  &__fees-container::after,
+  &__additional-fees-title::after {
+    position: absolute;
+    top: 0;
+    right: -30px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../assets/image/inform-price.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid $color-shade;
+    border-radius: 50%;
+    cursor: pointer;
+    content: '';
+  }
 
-	&__title-guest {
-		font-weight: bold;
-		color: $color-shade-dark;
-	}
+  &__title-guest {
+    color: $color-shade-dark;
+    font-weight: bold;
+  }
 }
 
-.container_departure:after {
-	content:'';
-	width:15px;
-	height:15px;
-	display:inline-block;
-	position:absolute;
-	top:44px;
-	right:10px;
-	background-image:url(../../assets/image/expand-more.svg);
-	background-repeat:no-repeat;
-	pointer-events: none;
+.container_departure::after {
+  position: absolute;
+  top: 44px;
+  right: 10px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url(../../assets/image/expand-more.svg);
+  background-repeat: no-repeat;
+  content: '';
+  pointer-events: none;
 }
 
 .to_book {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .booking_guests {
-	margin-top:25px;
-	position:relative;
+  position: relative;
+  margin-top: 25px;
 }
 
 .booking_guests .guests {
-	padding: 12px 32px 8.44px 15px;
-	height: 22px;
+  height: 22px;
+  padding: 12px 32px 8.44px 15px;
 }
 
 @media all and (max-width: 793px) {
+  .booking {
+    width: 360px;
+  }
 
-	.booking {
-		width: 360px;
-	}
+  .room-order {
+    &__arrival {
+      flex-direction: column;
+    }
 
-	.room-order {
-		&__arrival {
-			flex-direction: column;
-		}
+    &__arrival input {
+      width: 100%;
+    }
 
-		&__arrival input {
-			width: 100%;
-		}
+    &__container-arrival,
+    .container_departure {
+      width: 88%;
+    }
 
-		&__container-arrival, .container_departure 
-		{
-			width: 88%;
-		}
-
-		&__container-arrival:after, .container_departure:after {
-			right: 0;
-		}
-	}
+    &__container-arrival::after,
+    .container_departure::after {
+      right: 0;
+    }
+  }
 }
 
 @media all and (max-width: 360px) {
-	.booking {
-		width: 100%;
+  .booking {
+    width: 100%;
 
-		& .container {
-			margin: 10px 0 10px 10px;
-			width: 100%;
-		}
-	}
+    & .container {
+      width: 100%;
+      margin: 10px 0 10px 10px;
+    }
+  }
 
-	.booking_guests {
-		width: 300px;
-	}
+  .booking_guests {
+    width: 300px;
+  }
 }
 
 @media all and (max-width: 375px) {
-	.room-order__container {
-		margin: 15px;
-	}
+  .room-order__container {
+    margin: 15px;
+  }
 }
 
 @media all and (max-width: 380px) {
-	.room-order {
-		width: 100%;
-	}
+  .room-order {
+    width: 100%;
+  }
 
-	.room-order__fees-container:after {
-		right: -20px;
-	}
+  .room-order__fees-container::after {
+    right: -20px;
+  }
 
-	.room-order__additional-fees-title:after {
-		right: 0;
-	}
+  .room-order__additional-fees-title::after {
+    right: 0;
+  }
 }
