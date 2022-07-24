@@ -5,7 +5,7 @@
 	color: $color-shade-secondary;
 	font-size: $font-size-main;
 	line-height:24px;
-	margin-bottom: 22px;
+	margin-bottom: 25px;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -40,7 +40,7 @@
 		filter:drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
 		border-radius:32px;
 		border-radius:50%;
-		margin-bottom: 12px;
+		margin-bottom: 14px;
 
 		& span {
 			margin-left:60px;

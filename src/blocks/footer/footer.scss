@@ -63,6 +63,7 @@
 	&__description {
 		height:168px;
 		width:260px;
+		margin-top: 4px;
 	}
 
 	&__description-title {
@@ -118,6 +119,7 @@
 .footer-nav-menu {
 	display: flex;
 	justify-content: space-evenly;
+	margin-top: 4px;
 
 	&__link {
 		color: $color-shade-grey;
