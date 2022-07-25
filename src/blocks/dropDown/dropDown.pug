@@ -3,15 +3,15 @@ mixin dropDown({placeholder = 'Сколько Гостей',appointment,isOpen =
         .dropDown__name.js-dropDown__name
             input.dropDown__counts-guests.js-dropDown__counts-guests(placeholder=placeholder readonly value="")
             .dropDown__arrow.dropdown-arrow
-        .dropDown__drop-block.js-dropDown__drop-block(class= isOpen ? "js-drop-open" : "js-drop-close")
+        .dropDown__drop-block.js-dropDown__drop-block(class= isOpen ? "js-drop_open" : "js-drop_close")
             .dropDown__items.js-dropDown__items
                 each element in list
                     .dropDown__row
                         span.dropDown__dropItem(data-item-name= element.name) #{element.name}
                         .dropDown__block-input
-                            button.dropDown__circle.js-dropDown-minus -
+                            button.dropDown__circle.js-dropDown__minus -
                             input.dropDown__counter.js-dropDown__counter(value= element.val || 0 readonly) 
-                            button.dropDown__circle.dropDown__circle-plus.js-dropDown-plus +
+                            button.dropDown__circle.dropDown__circle-plus.js-dropDown__plus +
                 if showFunction
                     .dropDown__function
                         button.dropDown__function-btn.js-dropDown_clear Очистить

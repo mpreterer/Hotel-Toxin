@@ -1,6 +1,6 @@
 mixin nav-menu({ listMenu = [] }={})
   div.nav-menu.js-nav-menu
-    ul.nav-menu__container.menu-list
+    ul.nav-menu__container
       each item in listMenu
         li.nav-menu__item.js-nav-menu__item
           if item.submenu

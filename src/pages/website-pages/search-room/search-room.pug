@@ -18,10 +18,10 @@ block variables
 block content
     .search-room.js-search-room
         .search-room__left-bar
-            .search-room__arrival-in-hotel(data-components-js="js-alone-calendares")
+            .search-room__arrival-in-hotel
                 span.search-room__title даты пребывания в отеле
                 +alone-calendar
-            .search-room__guests-container(data-component-js="js-dropDown")
+            .search-room__guests-container
                 span.search-room__title Гости
                 +dropDown({
                     list: [
@@ -33,7 +33,7 @@ block content
                     showFunction: true,
                     keyPhrases: ['гость', 'гостя', 'гостей']
                 })
-            .search-room__price-hotel(data-component-js="js-slider")
+            .search-room__price-hotel
                 +slider-range({
                     title: 'ДИАПАЗОН ЦЕНЫ',
                     subTitle: 'Стоимость за сутки пребывания в номере'
@@ -52,7 +52,7 @@ block content
                     ]
                 })
             span.search-room__title удобства номера
-            .search-room__furniture(data-component-js="js-dropDown-without-panel")
+            .search-room__furniture
                 +dropDown({
                     appointment: 'furniture',
                     list: [
@@ -63,7 +63,7 @@ block content
                     showFunction: false,
                     placeholder: 'Выберите удобства'
                 })
-            .search-room__convenience(data-component-js="js-checkbox-lists")
+            .search-room__convenience
                 +checkbox-list({
                     title: 'Дополнительные удобства',
                     list: [
@@ -79,7 +79,7 @@ block content
                 })
         .search-room__rooms-container
             h2.search-room__number-for-user Номера, которые мы для вас подобрали 
-            .search-room__rooms(data-component-js="js-rooms")
+            .search-room__rooms
                 each room in roomsList
                     +room-info({
                         number: room.number,
@@ -89,7 +89,7 @@ block content
                         review: room.review,
                         sliders: room.sliders,
                     })
-            .search-room__pagination-container(data-component-js="js-pagination")
+            .search-room__pagination-container
                 +pagination({
                     items: 180,
                     itemsOnPage: 12,

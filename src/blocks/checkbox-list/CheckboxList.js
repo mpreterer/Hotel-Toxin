@@ -9,7 +9,7 @@ class CheckboxList {
     this.$input = this.$container.querySelector('.js-checkbox-list__name');
     this.$arrow = this.$container.querySelector('.arrow-expend-btn');
     this.$menu = this.$container.querySelector('.js-checkbox-list__menu');
-    this.isOpen = this.$container.classList.contains('js-checkbox-list-open');
+    this.isOpen = this.$container.classList.contains('js-checkbox-list_open');
 
     this._eventOpen();
   }

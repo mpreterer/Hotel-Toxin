@@ -26,7 +26,7 @@ block content
             .room-details__expend-container
                 .room-details__split-container
                     .room-details__split
-                        .room-details__more-info(data-component-js="js-about-room")
+                        .room-details__more-info
                             +about-room({
                                list: [
                                    {
@@ -49,9 +49,9 @@ block content
                                    }
                                ]
                             })
-                            .room-details__impressions(data-component-js="js-impressions")
+                            .room-details__impressions
                                +impressions-room
-                        .room-details__user-reviews(data-comment-js="js-user-reviews")
+                        .room-details__user-reviews
                             .room-details__user-reviews-comments
                                 span.room-details__title-comment Отзывы посетителей номера
                                 span.room-details__reviews-comments 2 отзыва 
@@ -64,7 +64,7 @@ block content
                                 desc: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
                                 alt: 'Патрисия Стёклышкова'
                              })
-                    .room-details__room-order(data-comment-js="js-room-order")
+                    .room-details__room-order
                         +room-order({
                             numberRoom: 888, 
                             level: 'люкс', 

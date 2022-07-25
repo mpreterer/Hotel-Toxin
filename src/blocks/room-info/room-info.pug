@@ -6,8 +6,8 @@ mixin room-info({ link = 'room-details.html', number = 888, level = 'Люкс', 
             .room-info__slider-rooms.js-room-info__slider-rooms
                 each slider in sliders 
                     img.room-info__photo(src= slider.src, alt= slider.alt)
-        a.room-info__link(href= link)
-            .room-info__head-room
+        .room-info__link
+            a.room-info__head-room(href= link)
                 p.room-info__number-room №#{number}
                 span.room-info__level #{level}
                 p.room-info__price #{price}₽

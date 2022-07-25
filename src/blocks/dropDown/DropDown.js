@@ -32,13 +32,13 @@ class DropDown {
 
   _openDropDown() {
     this.open.addEventListener('click', () => {
-      if (this.counterPanel.classList.contains('js-drop-close')) {
-        this.counterPanel.classList.toggle('js-drop-close');
-        this.counterPanel.classList.add('js-drop-open');
+      if (this.counterPanel.classList.contains('js-drop_close')) {
+        this.counterPanel.classList.toggle('js-drop_close');
+        this.counterPanel.classList.add('js-drop_open');
         this.open.classList.toggle('dropDown__name_active');
       } else {
-        this.counterPanel.classList.toggle('js-drop-open');
-        this.counterPanel.classList.add('js-drop-close');
+        this.counterPanel.classList.toggle('js-drop_open');
+        this.counterPanel.classList.add('js-drop_close');
         this.open.classList.toggle('dropDown__name_active');
       }
     });
@@ -53,8 +53,8 @@ class DropDown {
   _closeDropDownGlobal() {
     this.body.addEventListener('click', (event) => {
       if (!this.container.contains(event.target)) {
-        this.counterPanel.classList.remove('js-drop-open');
-        this.counterPanel.classList.add('js-drop-close');
+        this.counterPanel.classList.remove('js-drop_open');
+        this.counterPanel.classList.add('js-drop_close');
         if (this.open.classList.contains('dropDown__name_active')) {
           this.open.classList.remove('dropDown__name_active');
         }
@@ -96,9 +96,9 @@ class DropDown {
   _dropDownCounterHandler(event) {
     const target = event.target;
 
-    if (target.classList.contains('js-dropDown-plus')) {
+    if (target.classList.contains('js-dropDown__plus')) {
       this._buttonPlus(target);
-    } else if (target.classList.contains('js-dropDown-minus')) {
+    } else if (target.classList.contains('js-dropDown__minus')) {
       this._buttonMinus(target);
     }
 
@@ -149,10 +149,10 @@ class DropDown {
     });
 
     if (checkCount > 0) {
-      this.btnClear.classList.remove('js-clear-none');
+      this.btnClear.classList.remove('js-not-clear');
       this.btnClear.addEventListener('click', this._clearAllCounter.bind(this))
     } else {
-      this.btnClear.classList.add('js-clear-none');
+      this.btnClear.classList.add('js-not-clear');
       this.btnClear.removeEventListener('click', this._clearAllCounter.bind(this))
     }
   }
@@ -187,8 +187,8 @@ class DropDown {
 
   _btnApply() {
     this.btnApply.addEventListener('click', () => {
-      this.counterPanel.classList.remove('js-drop-open');
-      this.counterPanel.classList.add('js-drop-close');
+      this.counterPanel.classList.remove('js-drop_open');
+      this.counterPanel.classList.add('js-drop_close');
     });
   }
 

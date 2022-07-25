@@ -1,6 +1,8 @@
 @import '@variables';
 
 .footer {
+  border-top: 1px solid $color-shade-light;
+
   &__container {
     max-width: 1160px;
     margin: 0 auto;
