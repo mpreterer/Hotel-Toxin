@@ -1,4 +1,4 @@
-import './headerFooter.scss';
+import './header-footer.scss';
 import '../../../blocks/header';
 import '../../../blocks/footer';
 import '../../../blocks/nav-menu';
