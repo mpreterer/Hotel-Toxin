@@ -1,16 +1,16 @@
-$color-shade-dark: #1F2041;
-$color-shade-secondary: rgba(31, 32, 65, 0.75);
-$color-shade-grey: rgba(31, 32, 65, 0.5);
-$color-shade: rgba(31, 32, 65, 0.25);
-$color-shade-light: rgba(31, 32, 65, 0.05);
-$color-purple: #BC9CFF;
-$color-green: #6FCF97;
+$color-shade-dark: #1f2041;
+$color-shade-secondary: rgb(31 32 65 / 75%);
+$color-shade-grey: rgb(31 32 65 / 50%);
+$color-shade: rgb(31 32 65 / 25%);
+$color-shade-light: rgb(31 32 65 / 5%);
+$color-purple: #bc9cff;
+$color-green: #6fcf97;
 
 $gradient-main: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 $gradient-secondary: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 
-$font-family-main: Montserrat, Tahoma, sans-serif;
-$font-family-secondary: Quicksand, Tahoma, sans-serif;
+$font-family-main: montserrat, tahoma, sans-serif;
+$font-family-secondary: quicksand, tahoma, sans-serif;
 
 $font-size-main: 14px;
 $font-size-small: 12px;
