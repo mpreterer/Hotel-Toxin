@@ -1,7 +1,9 @@
 .cards {
+  background-color: #E5E5E5;
+
   &__container {
     display: flex;
-    padding: 72px 140px 150px;
+    padding: 140px 140px 150px;
   }
 
   &__filters {

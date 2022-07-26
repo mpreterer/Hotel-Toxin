@@ -3,6 +3,7 @@
 .range-date-calendar {
   display: flex;
   flex-direction: column;
+  font-size: $font-size-main;
 
   &__list {
     display: flex;

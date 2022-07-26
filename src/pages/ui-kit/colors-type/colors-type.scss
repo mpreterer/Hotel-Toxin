@@ -1,24 +1,11 @@
 @import '../blocks/ui-header.scss';
 @import '@variables';
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Montserrat, sans-serif;
-}
-
-.logo {
-  width: 48px;
-  height: 48px;
-  margin: 30px;
-  background: url('../../../assets/image/group.svg');
-}
-
-.container-blocks {
+.colors-type {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin: 0 158px 0 149.74px;
+  margin: 140px 156px 145px 149.74px;
 }
 
 .left-block {
@@ -85,7 +72,7 @@ body {
   }
 }
 
-.right-block {
+.color-type__right-block {
   display: flex;
   width: 436px;
   height: 321px;

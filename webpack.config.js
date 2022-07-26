@@ -22,15 +22,7 @@ module.exports = () => {
     return {
         mode: 'development',
         entry: {
-            index: [`${PAGES_DIR}/index.js`],
-            'search-room': [`${PAGES_DIR}/website-pages/search-room/index.js`],
-            'room_details': [`${PAGES_DIR}/website-pages/room-details/index.js`],
-            'login': [`${PAGES_DIR}/website-pages/login/index.js`],
-            'registration': [`${PAGES_DIR}/website-pages/registration/index.js`],
-            'cards': [`${PAGES_DIR}/ui-kit/cards/index.js`],
-            'colors-type': [`${PAGES_DIR}/ui-kit/colors-type/index.js`],
-            'elements': [`${PAGES_DIR}/ui-kit/elements/index.js`],
-            'header-footer': [`${PAGES_DIR}/ui-kit/header-footer/index.js`],
+            index: [`${PATHS.src}/index.js`],
         },
         output: {
             filename: 'js/[name].js',
@@ -56,49 +48,40 @@ module.exports = () => {
                 ],
               }),
             new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/index.pug`,
+                template: `${PAGES_DIR}/website-pages/index/index.pug`,
                 filename: './index.html',
-                chunks: ['index']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/search-room/search-room.pug`,
                 filename: './search-room.html',
-                chunks: ['search-room']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/room-details/room-details.pug`,
                 filename: './room-details.html',
-                chunks: ['room_details']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/login/login.pug`,
                 filename: './login.html',
-                chunks: ['login']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/registration/registration.pug`,
                 filename: './registration.html',
-                chunks: ['registration']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/ui-kit/cards/cards.pug`,
                 filename: './cards.html',
-                chunks: ['cards']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/ui-kit/colors-type/colors-type.pug`,
                 filename: './colors-type.html',
-                chunks: ['colors-type']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/ui-kit/elements/elements.pug`,
                 filename: './elements.html',
-                chunks: ['elements']
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/ui-kit/header-footer/header-footer.pug`,
                 filename: './header-footer.html',
-                chunks: ['header-footer']
             }),
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
@@ -170,9 +153,6 @@ module.exports = () => {
             extensions: ['.js','.json','.sass'],
             alias: {
                 '@variables': path.resolve(__dirname, './src/assets/styles/variables.scss'),
-                '@mixins': path.resolve(__dirname, './src/assets/styles/mixins.scss'),
-                'src': path.resolve(__dirname, './src'),
-                'blocks': path.resolve(__dirname, './src/blocks'),
             },
         },
     }

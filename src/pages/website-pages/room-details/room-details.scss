@@ -1,6 +1,10 @@
 @import '@variables';
 
 .room-details {
+  &__cancel-title {
+
+  }
+
   &__room-loop {
     display: flex;
     justify-content: center;
@@ -44,6 +48,10 @@
     margin: 67px auto 72px;
   }
 
+  &__split {
+    margin-top: 4px;
+  }
+
   &__split-container {
     display: flex;
     justify-content: space-between;
@@ -54,10 +62,6 @@
     display: flex;
     max-width: 672px;
     margin-bottom: 20px;
-  }
-
-  &__split {
-    max-width: 672px;
   }
 
   &__orders {
@@ -73,15 +77,19 @@
     padding: 0;
     color: $color-shade-grey;
     list-style: none;
+    font-size: $font-size-main;
   }
 
   &__cancel {
     width: 341px;
     margin-bottom: 19px;
     margin-left: 152px;
+    font-size: $font-size-main;
+    line-height: 24px;
+    color: $color-shade-secondary;
 
     &-title {
-      margin: 0 0 20px;
+      margin: 0 0 15px;
       color: $color-shade-dark;
       font-weight: bold;
       font-size: $font-size-medium;
@@ -89,7 +97,7 @@
   }
 
   &__user-reviews {
-    margin-top: 29px;
+    margin-top: 31px;
     margin-left: 10px;
   }
 
@@ -97,6 +105,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    align-items: center;
   }
 
   &__title-comment {
@@ -216,6 +225,14 @@
 
     &__title-comment {
       width: 220px;
+    }
+  }
+}
+
+@media all and (max-width: 380px) {
+  .room-details {
+    & .calendar-container {
+      transform: translate(-32px, 5px);
     }
   }
 }

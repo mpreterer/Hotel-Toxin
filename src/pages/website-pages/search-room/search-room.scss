@@ -8,6 +8,10 @@
   font-size: $font-size-small;
   line-height: 15px;
 
+  & .alone-calendar__calendar {
+    transform: translateX(-30px);
+  }
+  
   &__arrival-in-hotel {
     margin-bottom: 18px;
   }
@@ -40,12 +44,12 @@
     flex-direction: column;
     width: 266px;
     height: 148px;
-    margin: 35px 0 30px;
+    margin: 34px 0 28px;
     user-select: none;
   }
 
   &__furniture {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   &__availability {
@@ -95,10 +99,6 @@
     height: 100%;
     margin-left: 10px;
   }
-}
-
-.alone-calendar__calendar {
-  transform: translateX(-30px);
 }
 
 .move_arrow {

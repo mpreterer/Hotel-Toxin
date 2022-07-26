@@ -1,12 +1,7 @@
 .ui-header {
-  position: relative;
-  width: 100%;
-  height: 48px;
-  margin-top: 30px;
-
   &__logo {
     position: absolute;
-    bottom: 0;
+    top: 30px;
     left: 30px;
     width: 48px;
     height: 48px;

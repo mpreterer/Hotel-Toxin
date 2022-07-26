@@ -2,6 +2,8 @@
 
 .footer {
   border-top: 1px solid $color-shade-light;
+  font-size: $font-size-main;
+  background-color: #fff;
 
   &__container {
     max-width: 1160px;
@@ -11,11 +13,15 @@
     user-select: none;
   }
 
+  &__subscribe {
+
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 100px 0 85px;
+    padding: 100px 0 88px;
     line-height: 15px;
 
     & li {
@@ -30,7 +36,7 @@
       }
 
       &:first-child {
-        margin-top: 15px;
+        margin-top: 11px;
       }
     }
 
@@ -49,23 +55,27 @@
   &__description-container {
     width: 260px;
     height: 72px;
-    margin-top: 10px;
+    margin-top: 15px;
     line-height: 24px;
+
   }
 
   &__description-special-title {
-    margin-top: 28px;
+    margin-top: 15px;
+    color: $color-shade-secondary;
+    line-height: 24px;
   }
 
   &__description-email {
     width: 260px;
-    margin-top: 30px;
+    margin-top: 21px;
   }
 
   &__description {
     width: 260px;
-    height: 168px;
     margin-top: 4px;
+    margin-bottom: 10px;
+    color: $color-shade-secondary;
   }
 
   &__description-title {
@@ -131,6 +141,10 @@
     margin-left: 10px;
   }
 
+  &__blocks {
+    min-width: 160px;
+  }
+
   &__list {
     margin-top: 0;
   }
@@ -186,7 +200,11 @@
         padding-left: 0;
       }
     }
-
+  
+    &__description {
+      margin-bottom: 10px;
+    }
+    
     &__sub {
       padding: 0 15px;
     }

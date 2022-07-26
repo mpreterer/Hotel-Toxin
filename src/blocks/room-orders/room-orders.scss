@@ -1,13 +1,15 @@
 @import '@variables';
 
 .room-orders {
+  font-size: $font-size-main;
+  
   &__order {
     margin-right: 100px;
   }
 
   &__title {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 19px;
     color: $color-shade-dark;
     font-weight: bold;
     font-size: $font-size-medium;
@@ -62,6 +64,7 @@
     top: -4px;
     left: 21px;
     line-height: 24px;
+    color: $color-shade-secondary;
   }
 }
 

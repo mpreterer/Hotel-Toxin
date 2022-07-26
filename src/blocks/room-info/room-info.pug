@@ -8,9 +8,9 @@ mixin room-info({ link = 'room-details.html', number = 888, level = 'Люкс', 
                     img.room-info__photo(src= slider.src, alt= slider.alt)
         .room-info__link
             a.room-info__head-room(href= link)
-                p.room-info__number-room №#{number}
+                span.room-info__number-room №#{number}
                 span.room-info__level #{level}
-                p.room-info__price #{price}₽
+                span.room-info__price #{price}₽
                     span.room-info__price-day !{' в сутки'}
             .room-info__rating
                 .room-info__star
