@@ -30,7 +30,7 @@
 ---
 ## Website pages
 
-### [Landing page](https://mpreterer.github.io/Hotel-Toxin/index.html)
+### [Landing page](https://mpreterer.github.io/Hotel-Toxin/home.html)
 ### [Search room](https://mpreterer.github.io/Hotel-Toxin/search-room.html)
 ### [Room details](https://mpreterer.github.io/Hotel-Toxin/room-details.html)
 ### [Registration](https://mpreterer.github.io/Hotel-Toxin/registration.html)
