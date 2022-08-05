@@ -42,7 +42,7 @@ module.exports = () => {
             new CopyWebpackPlugin({
                 patterns: [
                   {
-                    from: path.resolve(__dirname, 'src/assets'),
+                    from: path.resolve(__dirname, './assets'),
                     to: path.resolve(__dirname, 'dist/assets'),
                   },
                 ],
@@ -87,14 +87,6 @@ module.exports = () => {
             new MiniCssExtractPlugin({
                 filename: ('./pages/[name].[contenthash].css')
             }),
-            new CopyWebpackPlugin({
-                patterns: [
-                    {
-                      from: path.resolve(__dirname, './src/assets/image'),
-                      to:   path.resolve(__dirname, './dist/assets/image')
-                    }
-                  ]
-                }),
             new MiniCssExtractPlugin({
                 filename: './css/[name].[hash].css',
             })

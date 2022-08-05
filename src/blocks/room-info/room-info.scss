@@ -147,7 +147,7 @@
 .br-selected {
   padding-right: 22px;
   overflow: hidden;
-  background-image: url(../../assets/image/star.svg);
+  background-image: url(../../../assets/image/star.svg);
   background-repeat: no-repeat;
 }
 
@@ -155,7 +155,7 @@
   width: 20px;
   height: 20px;
   padding-right: 22px;
-  background-image: url(../../assets/image/star-border.svg);
+  background-image: url(../../../assets/image/star-border.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -214,7 +214,7 @@ button.slick-prev.slick-arrow::before {
   width: 8px;
   height: 12px;
   font-size: 15px;
-  background: url(../../assets/image/expand-more-left.svg);
+  background: url(../../../assets/image/expand-more-left.svg);
   background-repeat: no-repeat;
   background-size: cover;
   transform: translateX(-80%);
@@ -222,7 +222,7 @@ button.slick-prev.slick-arrow::before {
 }
 
 button.slick-next.slick-arrow::before {
-  background: url(../../assets/image/expand-more-right.svg);
+  background: url(../../../assets/image/expand-more-right.svg);
   transform: rotate(180deg);
   transform: translate(80%);
 }
