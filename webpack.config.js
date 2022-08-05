@@ -152,7 +152,7 @@ module.exports = () => {
         resolve: {
             extensions: ['.js','.json','.sass'],
             alias: {
-                '@variables': path.resolve(__dirname, './src/assets/styles/variables.scss'),
+                '@variables': path.resolve(__dirname, './src/styles/variables.scss'),
             },
         },
     }
