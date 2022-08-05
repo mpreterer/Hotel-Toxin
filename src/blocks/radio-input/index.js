@@ -1,1 +1,0 @@
-import './radio-input.scss';

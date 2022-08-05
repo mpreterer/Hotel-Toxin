@@ -1,7 +1,3 @@
-import '../dropDown';
-import '../range-date-calendar';
-import '../button';
-
 class RoomOrder {
   constructor(domParent) {
     this.container = domParent;
