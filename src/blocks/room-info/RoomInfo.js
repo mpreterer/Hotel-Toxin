@@ -1,7 +1,6 @@
 import 'slick-carousel/slick/slick.min';
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
-import '../stars-rating';
 
 class RoomInfo {
   constructor(domParent) {
