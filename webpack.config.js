@@ -134,8 +134,7 @@ module.exports = () => {
                     use: {
                       loader: 'file-loader',
                       options: {
-                        name: 'assets/fonts/[name].[ext]',
-                        publicPath: './',
+                        name: 'assets/fonts/[name][ext]',
                       },
                     },
                 },
