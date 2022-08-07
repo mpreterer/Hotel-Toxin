@@ -5,6 +5,7 @@ class NavMenu {
   }
 
   _init() {
+    this.body = document.querySelector('body');
     this.$items = this.$container.querySelectorAll('.js-nav-menu__item');
     
     this.$items.forEach((item) => {
@@ -22,6 +23,22 @@ class NavMenu {
         });
       }
     });
+
+    this._globalClose();
+  }
+
+  _globalClose() {
+    this.body.addEventListener('click', (event) => {
+      if (!this.$container.contains(event.target)) {
+        this.$items.forEach((item) => {
+          if (item.classList.contains('nav-menu__item_active')) {
+            item.classList.remove('nav-menu__item_active');
+            item.querySelector('.js-nav-menu__submenu')
+            .classList.remove('nav-menu__submenu_active');
+          }
+        })
+       }
+    })
   }
 }
 
