@@ -24,6 +24,10 @@ class DropDown {
       this.btnApply = this.container.querySelector('.js-dropDown_apply');
       this.btnClear = this.container.querySelector('.js-dropDown_clear');
     }
+
+    if (this.appointment === 'guests') {
+      this._arrayKeyPhrases();
+    }
     
     this._checkOptions();
     this._openDropDown();
@@ -48,6 +52,13 @@ class DropDown {
     }
 
     this._closeDropDownGlobal();
+  }
+
+  _arrayKeyPhrases() {
+    const arrayPhrases = this.keyWords.replace(/"/g, '').replace('[', '').replace(']', '').split(',');
+    const arrayCorrectPhrases = [arrayPhrases[0], arrayPhrases[1], arrayPhrases[2]];
+
+    this.keyWordsArray = arrayCorrectPhrases;
   }
 
   _closeDropDownGlobal() {
@@ -199,19 +210,21 @@ class DropDown {
     const guests = adults + youngs + child;
 
     let strGuests = '';
-    const arrayPhrases = this.keyWords.replace(/"/g, "").replace("[", "").replace("]", "").split(',');
-
+    
     if (guests > 0) {
-      if (guests === 1 || guests === 21) {
-        strGuests = `${guests} ${arrayPhrases[0]}`;
-      } else if (guests > 1 && guests < 5) {
-        strGuests = `${guests} ${arrayPhrases[1]}`;
-      } else {
-        strGuests = `${guests} ${arrayPhrases[2]}`;
-      }
+      strGuests = `${guests} ${this._checkEnding(guests, this.keyWordsArray)}`;
     }
 
     this.inputName.value = `${strGuests}`;
+  }
+
+  _checkEnding(checkEnding, textForms) {
+    const checkEndingValue = Math.abs(checkEnding) % 100;
+    const resEndingNumber = checkEndingValue % 10;
+    if (checkEndingValue > 10 && checkEndingValue < 20) { return textForms[2]; }
+    if (resEndingNumber > 1 && resEndingNumber < 5) { return textForms[1]; }
+    if (resEndingNumber === 1) { return textForms[0]; }
+    return textForms[2];
   }
 
   _counterFurniture(countArray) {
