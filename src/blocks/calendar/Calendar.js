@@ -3,6 +3,8 @@ import 'air-datepicker';
 class Calendar {
   constructor(params) {
     this.$body = $(params.body).find('.js-calendar-container');
+    this.container = document.querySelector('.js-calendar-container');
+    this.bodyPage = document.querySelector('body');
     this.options = params.options || {};
     this.isOpen = this.$body.attr('data-is-open');
     this.initIsOpen = params.isOpen;
@@ -39,15 +41,15 @@ class Calendar {
     }
   }
 
-  check_is_open() {
+  checkIsOpen() {
     if (this.isOpen) {
-        this.hidden_calendar();
+      this.hiddenClear();
     } else {
-        this.show_calendar();
+      this.showCalendar();
     }
   }
 
-  show_calendar() {
+  showCalendar() {
     this.$body.show();
     this.isOpen = true;
   }
@@ -71,9 +73,9 @@ class Calendar {
     this.$body.find('.calendar__buttons').append([clearButton, confirmButton]);
 
     if (this.initIsOpen) {
-        this.show_calendar();
+      this.showCalendar();
     } else {
-        this.hidden_calendar();
+      this.hiddenClear();
     }
   }
 
@@ -89,14 +91,18 @@ class Calendar {
     this._resetDate();
   }
 
-  hidden_calendar() {
+  hiddenClear() {
     this.$body.hide();
     this.isOpen = false;
   }
 
   _handleConfirmClick() {
-    this.hidden_calendar();
+    this.hiddenClear();
     this._notifyObservers({ isOpen: this.isOpen });
+    
+    if (this.container.classList.contains('js-calendar-container_open')) {
+      this.container.classList.remove('js-calendar-container_open');
+    }
   }
 
   _notifyObservers(data) {

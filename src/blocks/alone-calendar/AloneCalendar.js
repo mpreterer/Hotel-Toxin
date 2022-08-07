@@ -3,6 +3,8 @@ import Calendar from '../calendar/Calendar';
 class AloneCalendar {
   constructor(domParent) {
     this.$container = domParent;
+    this.body = document.querySelector('body');
+    this.isOpenContainer = this.$container.querySelector('.js-calendar-container');
     this.$placeholder = this.$container.querySelector('.js-alone-calendar__placeholder');
     this.$calendarBody = this.$container.querySelector('.js-alone-calendar__calendar');
     this.$calendar = this.$container.querySelector('.js-calendar-container');
@@ -27,6 +29,20 @@ class AloneCalendar {
         dateFormat: this.dateFormat,
       },
     });
+
+    this._closeCalendarEsc();
+  }
+
+  _closeCalendarEsc() {
+    this.body.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        this.calendar.hiddenClear();
+
+        if (this.isOpenContainer.classList.contains('js-calendar-container_open')) {
+          this.isOpenContainer.classList.remove('js-calendar-container_open');
+        }
+      }
+    });
   }
 
   _bindEvent() {
@@ -42,12 +58,22 @@ class AloneCalendar {
     const hasClickOutSideCalendar = !isClickOnDropdown && isOpenCalendar;
     
     if (hasClickOutSideCalendar) {
-      this.calendar.hidden_calendar();
+      this.calendar.hiddenClear();
+
+      if (this.isOpenContainer.classList.contains('js-calendar-container_open')) {
+        this.isOpenContainer.classList.remove('js-calendar-container_open');
+      }
     }
   }
 
   _handleInputClick() {
-    this.calendar.check_is_open();
+    if (this.isOpenContainer.classList.contains('js-calendar-container_open')) {
+      this.calendar.hiddenClear();
+      this.isOpenContainer.classList.remove('js-calendar-container_open');
+    } else {
+      this.calendar.showCalendar();
+      this.isOpenContainer.classList.add('js-calendar-container_open');
+    }
   }
 
   _setDate(date) {
