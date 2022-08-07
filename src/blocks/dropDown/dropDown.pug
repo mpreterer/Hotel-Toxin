@@ -1,4 +1,4 @@
-mixin dropDown({placeholder = 'Сколько Гостей',appointment,isOpen = false, showFunction, list = [], keyPhrases=[]}={})
+mixin dropDown({placeholder = 'Сколько гостей',appointment,isOpen = false, showFunction, list = [], keyPhrases=[]}={})
     .dropDown.js-dropDown(data-attribute-appointment =appointment, data-attribute-function=functionPanel, data-key-phrases= keyPhrases)
         .dropDown__name.js-dropDown__name
             input.dropDown__counts-guests.js-dropDown__counts-guests(placeholder=placeholder readonly value="")
