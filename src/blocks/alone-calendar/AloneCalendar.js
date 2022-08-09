@@ -4,7 +4,6 @@ class AloneCalendar {
   constructor(domParent) {
     this.$container = domParent;
     this.body = document.querySelector('body');
-    this.isOpenContainer = this.$container.querySelector('.js-calendar-container');
     this.$placeholder = this.$container.querySelector('.js-alone-calendar__placeholder');
     this.$calendarBody = this.$container.querySelector('.js-alone-calendar__calendar');
     this.$calendar = this.$container.querySelector('.js-calendar-container');
@@ -38,8 +37,8 @@ class AloneCalendar {
       if (event.key === 'Escape') {
         this.calendar.hiddenClear();
 
-        if (this.isOpenContainer.classList.contains('js-calendar-container_open')) {
-          this.isOpenContainer.classList.remove('js-calendar-container_open');
+        if (this.$calendar.classList.contains('js-calendar-container_open')) {
+          this.$calendar.classList.remove('js-calendar-container_open');
         }
       }
     });
@@ -60,20 +59,14 @@ class AloneCalendar {
     if (hasClickOutSideCalendar) {
       this.calendar.hiddenClear();
 
-      if (this.isOpenContainer.classList.contains('js-calendar-container_open')) {
-        this.isOpenContainer.classList.remove('js-calendar-container_open');
+      if (this.$calendar.classList.contains('js-calendar-container_open')) {
+        this.$calendar.classList.remove('js-calendar-container_open');
       }
     }
   }
 
   _handleInputClick() {
-    if (this.isOpenContainer.classList.contains('js-calendar-container_open')) {
-      this.calendar.hiddenClear();
-      this.isOpenContainer.classList.remove('js-calendar-container_open');
-    } else {
-      this.calendar.showCalendar();
-      this.isOpenContainer.classList.add('js-calendar-container_open');
-    }
+    this.calendar.checkIsOpen();
   }
 
   _setDate(date) {

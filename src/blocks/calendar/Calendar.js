@@ -41,14 +41,6 @@ class Calendar {
     }
   }
 
-  checkIsOpen() {
-    if (this.isOpen) {
-      this.hiddenClear();
-    } else {
-      this.showCalendar();
-    }
-  }
-
   showCalendar() {
     this.$body.show();
     this.isOpen = true;
@@ -67,7 +59,6 @@ class Calendar {
     `;
 
     const $datepicker = this.$body.find('.datepicker');
-    const $buttons = $datepicker.find('.calendar__buttons');
 
     $datepicker.append('<div class="calendar__buttons"></div>');
     this.$body.find('.calendar__buttons').append([clearButton, confirmButton]);
@@ -89,6 +80,14 @@ class Calendar {
 
   _handleClearBtnClick() {
     this._resetDate();
+  }
+
+  checkIsOpen() {
+    if (this.isOpen) {
+      this.hiddenClear();
+    } else {
+      this.showCalendar();
+    }
   }
 
   hiddenClear() {
