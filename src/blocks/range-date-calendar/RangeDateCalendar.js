@@ -28,7 +28,7 @@ class RangeDateCalendar {
     
     this.$inputArrival.addEventListener('click', this._handleInputDateClick.bind(this));
     this.$inputDeparture.addEventListener('click', this._handleInputDateClick.bind(this));
-    this.$container.addEventListener('click', this._setDateClick(this));
+    this.$container.addEventListener('keydown', this._setDateClick.bind(this), true);
 
     this.$inputOpen.forEach((el) => {
       el.addEventListener('click', this._handleInputClick.bind(this));
@@ -38,7 +38,31 @@ class RangeDateCalendar {
   }
 
   _setDateClick() {
+    const valueInputDeparture = this.$inputDeparture.value.split('.').join('');
+    const isOnlyNumbersDeparture = /^\d+$/.test(valueInputDeparture);
+    const dateYearsDeparture = this.$inputDeparture.value.split('.')[2];
+    const dateMonthDeparture = this.$inputDeparture.value.split('.')[1] - 1;
+    const dateDayDeparture = this.$inputDeparture.value.split('.')[0];
+
+    const valueInputArrival = this.$inputArrival.value.split('.').join('');
+    const isOnlyNumbersArrival = /^\d+$/.test(valueInputArrival);
+    const dateYearsArrival = this.$inputArrival.value.split('.')[2];
+    const dateMonthArrival = this.$inputArrival.value.split('.')[1] - 1;
+    const dateDayArrival = this.$inputArrival.value.split('.')[0];
     
+    const attributeArrival = this.arrival.getAttribute('data-complete');
+    const attributeDeparture = this.departure.getAttribute('data-complete');
+    const calendarDate = this.calendar.$body.data('datepicker');
+    
+    if (valueInputArrival.length === 8 && this.$inputArrival.value !== '' && isOnlyNumbersArrival && attributeArrival === 'false') {
+      calendarDate.selectDate(new Date(dateYearsArrival, dateMonthArrival, dateDayArrival));
+      this.arrival.setAttribute('data-complete', 'true');
+    }
+
+    if (valueInputDeparture.length === 8 && this.$inputDeparture.value !== '' && isOnlyNumbersDeparture && attributeDeparture === 'false') {
+      calendarDate.selectDate(new Date(dateYearsDeparture, dateMonthDeparture, dateDayDeparture));
+      this.departure.setAttribute('data-complete', 'true');
+    }
   }
 
   _handleInputDateClick() {
@@ -50,12 +74,17 @@ class RangeDateCalendar {
     this.$inputDeparture.value = '';
   }
 
-  _handleGlobalClick() {
-    this.body.addEventListener('click', (event) => {
-      if (!this.$container.contains(event.target)) {
-        this.calendar.hiddenClear();
-      }
-    });
+  _handleGlobalClick(event) {
+    const { target } = event;
+    const isClickOnInput = this.$container.contains(target);
+    const isOpenCalendar = this.calendar.isOpen;
+    const isClickOutsideCalendar = !isClickOnInput && isOpenCalendar;
+
+    if (isClickOutsideCalendar) {
+      this.calendar.hiddenClear();
+      this.departure.setAttribute('data-complete', 'false');
+      this.arrival.setAttribute('data-complete', 'false');
+    }
   }
 
   _closeCalendarEsc() {
