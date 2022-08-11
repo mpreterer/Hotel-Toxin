@@ -31,6 +31,7 @@ class Calendar {
     this.$body.datepicker(mergedOptions).data('datepicker');
 
     this._addButtons();
+    this.checkClearBtn();
   }
 
   observeShowCalendarEvent(observer) {
@@ -63,10 +64,20 @@ class Calendar {
     $datepicker.append('<div class="calendar__buttons"></div>');
     this.$body.find('.calendar__buttons').append([clearButton, confirmButton]);
 
+    this.$body.find('[data-button-type="clear"]').addClass('js-calendar-clear-btn_close');
+
     if (this.initIsOpen) {
       this.showCalendar();
     } else {
       this.hiddenClear();
+    }
+  }
+
+  checkClearBtn(data) {
+    if (data) {
+      this.$body.find('[data-button-type="clear"]').removeClass('js-calendar-clear-btn_close');
+    } else {
+      this.$body.find('[data-button-type="clear"]').addClass('js-calendar-clear-btn_close');
     }
   }
 
@@ -80,6 +91,7 @@ class Calendar {
 
   _handleClearBtnClick() {
     this._resetDate();
+    this.$body.find('[data-button-type="clear"]').addClass('js-calendar-clear-btn_close');
   }
 
   checkIsOpen() {
@@ -98,10 +110,6 @@ class Calendar {
   _handleConfirmClick() {
     this.hiddenClear();
     this._notifyObservers({ isOpen: this.isOpen });
-    
-    if (this.container.classList.contains('js-calendar-container_open')) {
-      this.container.classList.remove('js-calendar-container_open');
-    }
   }
 
   _notifyObservers(data) {

@@ -11,6 +11,7 @@ class RangeDateCalendar {
     this.$inputOpen = this.$container.querySelectorAll('.js-range-date-calendar__input');
     this.$containerCalendar = this.$container.querySelector('.js-range-date-calendar__calendar');
     this.$calendar = this.$container.querySelector('.js-calendar-container');
+    this.$clearButton = $(this.$containerCalendar).find('[data-button-type="clear"]');
     this.hasOpenCalendar = this.$container.getAttribute('data-is-open');
     this.observers = [];
 
@@ -21,6 +22,7 @@ class RangeDateCalendar {
 
   _notifyObservers(data) {
     this.observers.forEach((observer) => observer(data));
+    this.calendar.checkClearBtn(data);
   }
 
   _bindEventListener() {
@@ -39,7 +41,7 @@ class RangeDateCalendar {
 
   _setDateClick(event) {
     const calendarDate = this.calendar.$body.data('datepicker');
-
+    
     const valueInputDeparture = this.$inputDeparture.value.split('.').join('');
     const isOnlyNumbersDeparture = /^\d+$/.test(valueInputDeparture);
     const dateYearsDeparture = this.$inputDeparture.value.split('.')[2];
@@ -54,8 +56,13 @@ class RangeDateCalendar {
     
     const attributeArrival = this.arrival.getAttribute('data-complete');
     const attributeDeparture = this.departure.getAttribute('data-complete');
-
+    
     if (event.key === 'Backspace') {
+      if (isOnlyNumbersDeparture === false && isOnlyNumbersArrival === false) {
+        calendarDate.date = new Date();
+        this.calendar.checkClearBtn();
+      }
+
       if (event.target.name === 'arrival') {
         this.arrival.setAttribute('data-complete', 'false');
       }
@@ -131,7 +138,7 @@ class RangeDateCalendar {
       }
     }
     
-    this._notifyObservers();
+    this._notifyObservers(date);
   }
 }
 
