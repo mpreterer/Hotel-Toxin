@@ -5,6 +5,10 @@
   width: 100%;
   user-select: none;
 
+  & input {
+    font-family: $font-family-main;
+  }
+  
   &__name {
     display: flex;
     align-items: center;
@@ -131,6 +135,16 @@
     padding: 19px 7px 7px 0;
     color: #1f2041;
     font-weight: bold;
+
+    & button.js-dropDown_clear {
+      padding-left: 0;
+      font-family: $font-family-main;
+    }
+
+    & button.js-dropDown_apply {
+      padding-right: 0;
+      font-family: $font-family-main;
+    }
   }
 
   &__counts-guests {
@@ -147,6 +161,7 @@
     color: $color-shade-dark;
     font-weight: bold;
     line-height: 12px;
+    font-size: $font-size-small;
     text-transform: uppercase;
   }
 

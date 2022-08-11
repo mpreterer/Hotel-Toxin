@@ -1,8 +1,7 @@
 @import '@variables';
 
 .room-details {
-  &__cancel-title {
-
+  &__room-secondary-1 {
   }
 
   &__room-loop {
@@ -25,7 +24,7 @@
   }
 
   &__room-loop-head {
-    width: 538px;
+    width: 459px;
     height: 485px;
   }
 
@@ -34,12 +33,10 @@
   }
 
   &__room-loop-middle-1 {
-    width: 538px;
     height: 243px;
   }
 
   &__room-loop-middle-2 {
-    width: 538px;
     height: 242px;
   }
 

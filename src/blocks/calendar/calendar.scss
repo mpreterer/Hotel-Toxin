@@ -149,6 +149,7 @@
 .datepicker--cell.-current- {
   color: #fff;
   background: $gradient-secondary;
+  font-weight: bold;
 }
 
 .datepicker--cell.-current-.-focus- {
@@ -208,14 +209,11 @@
   color: #fff;
   background: $gradient-main;
   border: none;
+  font-weight: bold;
 }
 
 .datepicker--cell.-selected-.-current- {
   color: #fff;
-  background: $gradient-main;
-}
-
-.datepicker--cell.-selected-.-focus- {
   background: $gradient-main;
 }
 
@@ -281,7 +279,7 @@
   margin: 8px 0 3px;
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: $font-size-small;
+  font-size: $font-size-main;
   line-height: 15px;
 }
 
@@ -299,7 +297,6 @@
   color: rgb(188 156 255 / 100%);
   font-size: 0.8em;
   text-align: center;
-  text-transform: uppercase;
   -ms-flex-align: center;
   -ms-flex-pack: center;
 }
@@ -397,7 +394,7 @@
   max-width: 320px;
   color: #4a4a4a;
   font-size: $font-size-main;
-  font-family: Tahoma, sans-serif;
+  font-family: $font-family-main;
   background: #fff;
   border: 1px solid #dbdbdb;
   border-radius: 4px;
@@ -448,6 +445,7 @@
   transform: none;
   transform: none;
   opacity: 1;
+  font-family: $font-family-main;
 }
 
 .datepicker-inline .datepicker--pointer {
@@ -614,7 +612,6 @@
   font-weight: bold;
   font-size: $font-size-small;
   line-height: 15px;
-  text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
   -ms-flex-pack: center;
@@ -762,7 +759,6 @@
   margin-left: 6px;
   color: #9c9c9c;
   font-size: 11px;
-  text-transform: uppercase;
   -ms-flex-item-align: end;
 }
 
