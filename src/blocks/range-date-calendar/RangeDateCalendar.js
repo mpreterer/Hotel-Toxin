@@ -37,7 +37,9 @@ class RangeDateCalendar {
     this.$calendar.querySelector('[data-button-type="clear"]').addEventListener('click', this._checkDate.bind(this));
   }
 
-  _setDateClick() {
+  _setDateClick(event) {
+    const calendarDate = this.calendar.$body.data('datepicker');
+
     const valueInputDeparture = this.$inputDeparture.value.split('.').join('');
     const isOnlyNumbersDeparture = /^\d+$/.test(valueInputDeparture);
     const dateYearsDeparture = this.$inputDeparture.value.split('.')[2];
@@ -52,16 +54,25 @@ class RangeDateCalendar {
     
     const attributeArrival = this.arrival.getAttribute('data-complete');
     const attributeDeparture = this.departure.getAttribute('data-complete');
-    const calendarDate = this.calendar.$body.data('datepicker');
-    
-    if (valueInputArrival.length === 8 && this.$inputArrival.value !== '' && isOnlyNumbersArrival && attributeArrival === 'false') {
-      calendarDate.selectDate(new Date(dateYearsArrival, dateMonthArrival, dateDayArrival));
-      this.arrival.setAttribute('data-complete', 'true');
-    }
 
-    if (valueInputDeparture.length === 8 && this.$inputDeparture.value !== '' && isOnlyNumbersDeparture && attributeDeparture === 'false') {
-      calendarDate.selectDate(new Date(dateYearsDeparture, dateMonthDeparture, dateDayDeparture));
-      this.departure.setAttribute('data-complete', 'true');
+    if (event.key === 'Backspace') {
+      if (event.target.name === 'arrival') {
+        this.arrival.setAttribute('data-complete', 'false');
+      }
+
+      if (event.target.name === 'departure') {
+        this.departure.setAttribute('data-complete', 'false');
+      }
+    } else {
+      if (valueInputArrival.length === 8 && this.$inputArrival.value !== '' && isOnlyNumbersArrival && attributeArrival === 'false') {
+        calendarDate.selectDate(new Date(dateYearsArrival, dateMonthArrival, dateDayArrival));
+        this.arrival.setAttribute('data-complete', 'true');
+      }
+  
+      if (valueInputDeparture.length === 8 && this.$inputDeparture.value !== '' && isOnlyNumbersDeparture && attributeDeparture === 'false') {
+        calendarDate.selectDate(new Date(dateYearsDeparture, dateMonthDeparture, dateDayDeparture));
+        this.departure.setAttribute('data-complete', 'true');
+      }
     }
   }
 
@@ -82,8 +93,6 @@ class RangeDateCalendar {
 
     if (isClickOutsideCalendar) {
       this.calendar.hiddenClear();
-      this.departure.setAttribute('data-complete', 'false');
-      this.arrival.setAttribute('data-complete', 'false');
     }
   }
 
