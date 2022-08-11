@@ -161,29 +161,8 @@
   }
 }
 
-.footer-mobile {
-  width: 560px;
-  height: 127px;
-  margin: 0 auto;
-  padding: 120px 104px;
-  text-align: center;
-  background: #fff;
-  box-shadow: 0 10px 20px $color-shade-light;
-
-  & .logo {
-    width: auto;
-    margin: 0 auto;
-  }
-
-  & p {
-    margin: 20px auto 0;
-  }
-}
-
 @media all and (max-width: 1200px) {
   .footer {
-    padding: 100px 0 0;
-
     &__container {
       align-items: center;
       justify-content: center;
@@ -192,6 +171,10 @@
     &__sub-icons {
       display: flex;
       justify-content: space-around;
+    }
+
+    &__about-company {
+      margin-bottom: 50px;
     }
 
     &__sub-container {
@@ -204,25 +187,17 @@
     }
   
     &__description {
-      margin-bottom: 10px;
+      margin-top: 50px;
     }
     
     &__sub {
       padding: 0 15px;
     }
 
-    &__navigation,
-    .footer-nav-menu {
-      display: none;
-    }
-
     & .footer__list {
       justify-content: space-between;
-      padding: 0 15px;
-    }
-
-    & .footer__list div {
-      margin-top: 30px;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
@@ -235,12 +210,24 @@
       display: flex;
     }
 
+    &__about-company {
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      padding: 0;
+    }
+
     &__description {
       display: none;
 
       &-container {
         display: none;
       }
+    }
+
+    &__navigation {
+      display: none;
     }
 
     &__sub-container {
