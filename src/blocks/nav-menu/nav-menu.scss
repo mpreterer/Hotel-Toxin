@@ -31,9 +31,9 @@
     align-items: center;
     margin-left: 20px;
 
-    &_active > .nav-menu__subList::before {
-      overflow: visible;
-      visibility: visible;
+    &_active > .nav-menu__subList {
+      color: $color-shade-secondary;
+      font-weight: bold;
     }
   }
 
@@ -121,11 +121,6 @@
     padding-bottom: 5px;
     vertical-align: center;
     background-color: #fff;
-
-    &:hover {
-      color: $color-shade-secondary;
-      font-weight: bold;
-    }
   }
 
   & .arrow-expend-more-btn {
