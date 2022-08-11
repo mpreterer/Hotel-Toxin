@@ -245,6 +245,17 @@
   content: '';
 }
 
+.datepicker--cell.-range-from-::after {
+  position: absolute;
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  background: $gradient-main;
+  border-radius: 50% 0 0 50%;
+  opacity: 0.25;
+  content: '';
+}
+
 .datepicker--cell.datepicker--cell-year.-range-from-.-range-to-.-current-.-selected- {
   border-radius: 0;
 }
