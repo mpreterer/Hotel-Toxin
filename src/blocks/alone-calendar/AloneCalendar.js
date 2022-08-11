@@ -52,16 +52,12 @@ class AloneCalendar {
 
   _handleGlobalClick(event) {
     const { target } = event;
-    const isClickOnDropdown = this.$calendar.contains(target);
+    const isClickOnInput = this.$container.contains(target);
     const isOpenCalendar = this.calendar.isOpen;
-    const hasClickOutSideCalendar = !isClickOnDropdown && isOpenCalendar;
-    
-    if (hasClickOutSideCalendar) {
-      this.calendar.hiddenClear();
+    const isClickOutsideCalendar = !isClickOnInput && isOpenCalendar;
 
-      if (this.$calendar.classList.contains('js-calendar-container_open')) {
-        this.$calendar.classList.remove('js-calendar-container_open');
-      }
+    if (isClickOutsideCalendar) {
+      this.calendar.hiddenClear();
     }
   }
 

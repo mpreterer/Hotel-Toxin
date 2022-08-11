@@ -13,8 +13,10 @@
     user-select: none;
   }
 
-  &__subscribe {
-
+  &__sub-links {
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &__list {
