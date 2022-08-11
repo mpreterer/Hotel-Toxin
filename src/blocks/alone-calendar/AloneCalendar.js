@@ -68,6 +68,7 @@ class AloneCalendar {
   _setDate(date) {
     this.$placeholder.innerHTML = date;
     this._notifyObservers();
+    this.calendar.checkClearBtn(date);
   }
 
   _notifyObservers(data) {
