@@ -48,7 +48,11 @@
     text-decoration: none;
   }
 
-  &:hover > .nav-burger__menu-burger {
+  // &:hover > .nav-burger__menu-burger {
+  //   display: block;
+  // }
+
+  .js-nav-burger_open {
     display: block;
   }
 
