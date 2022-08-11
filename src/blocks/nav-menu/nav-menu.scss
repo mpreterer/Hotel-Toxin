@@ -91,10 +91,12 @@
   &__submenu {
     position: absolute;
     top: 45px;
+    transform: translateX(-20px);
     z-index: 5;
     display: none;
-    width: 100%;
-    max-width: 150px;
+    max-width: 140px;
+    min-width: 140px;
+    padding: 0;
     text-align: center;
 
     &_active {
@@ -118,7 +120,7 @@
   }
 
   &__submenu-item {
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     vertical-align: center;
     background-color: #fff;
   }
