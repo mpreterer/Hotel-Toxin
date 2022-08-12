@@ -64,8 +64,6 @@
   }
 
   &__rooms-container {
-    width: 853px;
-
     & .room-info {
       margin-bottom: 20px;
     }
@@ -96,7 +94,6 @@
 
   &__left-bar {
     max-width: 266px;
-    height: 100%;
     margin-left: 10px;
   }
 }
@@ -149,9 +146,13 @@
     &__pagination-container {
       padding: 23px 0 0;
     }
+  }
+}
 
+@media screen and (max-width: 905px) {
+  .search-room {
     &__rooms {
-      margin: 0 25px;
+      margin: 0 50px;
     }
   }
 }
