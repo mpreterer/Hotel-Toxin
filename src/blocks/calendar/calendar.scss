@@ -56,7 +56,7 @@
 .calendar__buttons {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  margin: 15px 20px 15px 20px;
   color: $color-purple;
   font-weight: bold;
   font-size: $font-size-small;
@@ -277,7 +277,7 @@
   flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 8px 0 3px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   font-weight: bold;
   font-size: $font-size-main;
   line-height: 15px;
@@ -467,7 +467,7 @@
 .datepicker--body.active {
   display: block;
   width: 279px;
-  margin: 34px 20px 0;
+  margin: 33px 20px 0;
   font-size: $font-size-small;
 }
 
@@ -524,7 +524,7 @@
   justify-content: space-between;
   justify-content: space-between;
   min-height: 32px;
-  padding: 20px 20px 0;
+  padding: 12px 20px 0;
   color: $color-shade-dark;
   font-weight: bold;
   font-size: $font-size-medium;

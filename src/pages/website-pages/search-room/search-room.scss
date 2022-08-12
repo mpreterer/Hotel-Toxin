@@ -11,6 +11,10 @@
   & .alone-calendar__calendar {
     transform: translateX(-30px);
   }
+
+  &__rooms-container {
+    margin-left: 45px;
+  }
   
   &__arrival-in-hotel {
     margin-bottom: 18px;
