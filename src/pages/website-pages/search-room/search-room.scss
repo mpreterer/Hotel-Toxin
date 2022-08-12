@@ -149,6 +149,16 @@
     &__pagination-container {
       padding: 23px 0 0;
     }
+
+    &__rooms {
+      margin: 0 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .search-room__rooms {
+    margin: 0 70px;
   }
 }
 
@@ -156,6 +166,10 @@
   .search-room {
     &__rooms-container {
       margin-left: 0;
+    }
+
+    &__rooms {
+      margin: 0;
     }
   }
 }
