@@ -27,6 +27,10 @@
 * [nouislider ^15.6.0](https://github.com/leongersen/noUiSlider/releases),
 * [donut-chart-js ^1.0.1](https://www.npmjs.com/package/donut-chart-js)
 
+## Дополнительные используемые технологии
+* [Node.js ^14.17.1](https://nodejs.org),
+* [npm ^6.14.13](https://www.npmjs.com)
+
 ---
 ## Website pages
 
