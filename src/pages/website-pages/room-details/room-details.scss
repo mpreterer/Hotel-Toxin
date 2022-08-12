@@ -19,7 +19,6 @@
   }
 
   &__room-loop-big {
-    width: 982px;
     height: 485px;
   }
 
@@ -238,7 +237,7 @@
 @media all and (max-width: 341px) {
   .room-details {
     &__cancel {
-      width: 100%;
+      width: 300px;
     }
 
     &__orders {
