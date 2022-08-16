@@ -25,6 +25,21 @@ class NavMenu {
     });
 
     this._globalClose();
+    this._eventCloseWithEsc();
+  }
+
+  _eventCloseWithEsc() {
+    this.body.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        this.$items.forEach((item) => {
+          if (item.classList.contains('nav-menu__item_active')) {
+            item.classList.remove('nav-menu__item_active');
+            item.querySelector('.js-nav-menu__submenu')
+            .classList.remove('nav-menu__submenu_active');
+          }
+        })
+      }
+    });
   }
 
   _globalClose() {
