@@ -48,8 +48,8 @@ module.exports = () => {
                 ],
               }),
             new HTMLWebpackPlugin({
-                template: `${PAGES_DIR}/website-pages/home/home.pug`,
-                filename: './home.html',
+                template: `${PAGES_DIR}/website-pages/index/index.pug`,
+                filename: './index.html',
             }),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/search-room/search-room.pug`,
