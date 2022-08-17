@@ -1,8 +1,8 @@
 @import '@variables';
 
 .footer {
-  border-top: 1px solid $color-shade-light;
   font-size: $font-size-main;
+  border-top: 1px solid $color-shade-light;
   background-color: #fff;
 
   &__container {
@@ -139,12 +139,12 @@
     text-decoration: none;
   }
 
-  &__blocks:nth-child(2) {
-    margin-left: 10px;
-  }
-
   &__blocks {
     min-width: 160px;
+
+    &:nth-child(2) {
+      margin-left: 10px;
+    }
   }
 
   &__list {
@@ -180,6 +180,7 @@
     &__sub-container {
       display: flex;
       justify-content: space-around;
+      border: none;
 
       & a {
         padding-left: 0;
@@ -228,10 +229,6 @@
 
     &__navigation {
       display: none;
-    }
-
-    &__sub-container {
-      border: none;
     }
 
     &__sub {

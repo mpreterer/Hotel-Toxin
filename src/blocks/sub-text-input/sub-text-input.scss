@@ -12,28 +12,20 @@
     height: 44px;
     padding: 0 15px;
     color: $color-shade-secondary;
+    font-family: $font-family-main;
     border: 1px solid $color-shade;
     border-radius: 4px;
     outline: none;
     user-select: none;
-    font-family: $font-family-main;
-  }
 
-  &__input:hover {
-    color: rgb(31 32 65 / 75%);
-    border-color: rgb(31 32 65 / 50%);
-  }
+    &:hover {
+      color: rgb(31 32 65 / 75%);
+      border-color: rgb(31 32 65 / 50%);
+    }
 
-  &__input::placeholder {
-    color: $color-shade;
-  }
-
-  &__input::input-placeholder {
-    color: $color-shade;
-  }
-
-  &__input::placeholder {
-    color: $color-shade;
+    &::placeholder {
+      color: $color-shade;
+    }
   }
 
   &__arrow-link {
@@ -41,7 +33,7 @@
     right: 0;
     width: 44px;
     height: 44px;
-    background-image: url(../../../assets/image/arrow-back.svg);
+    background-image: url('../../../assets/image/arrow-back.svg');
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(180deg);

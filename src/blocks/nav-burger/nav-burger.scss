@@ -7,6 +7,19 @@
   height: 50px;
   cursor: pointer;
 
+  &__menu-burger {
+    display: none;
+    margin-top: 50px;
+    padding: 0;
+    padding-left: -20px;
+    list-style: none;
+    user-select: none;
+
+    & a {
+      background: #fff;
+    }
+  }
+  
   &__li-burger {
     position: relative;
     right: 260px;
@@ -30,19 +43,6 @@
     }
   }
 
-  &__menu-burger {
-    display: none;
-    margin-top: 50px;
-    padding: 0;
-    padding-left: -20px;
-    list-style: none;
-    user-select: none;
-
-    & a {
-      background: #fff;
-    }
-  }
-
   &__link {
     width: 100%;
     color: $color-shade-grey;
@@ -60,10 +60,10 @@
     width: 50px;
     height: 8px;
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    cursor: pointer;
     border: none;
     outline: none;
     transition: 0.2s;
-    cursor: pointer;
   }
 
   &__border-2 {
@@ -74,8 +74,8 @@
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     border: none;
     outline: none;
-    transition: 0.2s;
     cursor: pointer;
+    transition: 0.2s;
   }
 
   &__border-3 {
@@ -87,8 +87,8 @@
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     border: none;
     outline: none;
-    transition: 0.2s;
     cursor: pointer;
+    transition: 0.2s;
   }
 }
 

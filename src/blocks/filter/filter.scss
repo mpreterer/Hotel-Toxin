@@ -19,9 +19,13 @@
       margin-bottom: 5.44px;
     }
 
-    & .filter__text-field-calendar .datepicker-here {
-      width: 320px;
-      padding: 12px 12px 8.44px 15px;
+    & .filter {
+      &__text-field-calendar {
+        & .datepicker-here {
+          width: 320px;
+          padding: 12px 12px 8.44px 15px;
+        }
+      }
     }
   }
 
@@ -42,30 +46,11 @@
     justify-content: flex-start;
   }
 
-  &__date_departure {
-    width: 150px;
-  }
-
   &__date-arrival {
     position: relative;
     border: 1px solid $color-shade;
     border-radius: 4px;
     cursor: pointer;
-  }
-
-  &__date_departure {
-    position: relative;
-    border: 1px solid $color-shade;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  &__date-arrival:hover {
-    border: 1px solid #787878;
-  }
-
-  &__date_departure:hover {
-    border: 1px solid #787878;
   }
 
   &__residence {

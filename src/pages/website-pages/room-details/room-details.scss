@@ -1,9 +1,6 @@
 @import '@variables';
 
 .room-details {
-  &__room-secondary-1 {
-  }
-
   &__room-loop {
     display: flex;
     justify-content: center;
@@ -72,17 +69,17 @@
     display: flex;
     padding: 0;
     color: $color-shade-grey;
-    list-style: none;
     font-size: $font-size-main;
+    list-style: none;
   }
 
   &__cancel {
     width: 341px;
     margin-bottom: 19px;
     margin-left: 152px;
+    color: $color-shade-secondary;
     font-size: $font-size-main;
     line-height: 24px;
-    color: $color-shade-secondary;
 
     &-title {
       margin: 0 0 15px;
@@ -99,10 +96,10 @@
 
   &__user-reviews-comments {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
     align-items: center;
+    justify-content: space-between;
     margin-right: 15px;
+    margin-bottom: 20px;
   }
 
   &__title-comment {
@@ -114,10 +111,6 @@
   &__button-like {
     position: absolute;
     top: 62px;
-  }
-
-  &__more-info {
-    z-index: -1;
   }
 }
 

@@ -8,12 +8,18 @@
   font-size: $font-size-small;
   line-height: 15px;
 
-  & .alone-calendar__calendar {
-    transform: translateX(-30px);
+  & .alone-calendar {
+      &__calendar {
+        transform: translateX(-30px);
+      }
   }
 
-  &__rooms-container {
-    margin-left: 45px;
+  &__rooms {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
   }
   
   &__arrival-in-hotel {
@@ -38,8 +44,10 @@
     width: 266px;
     height: 128px;
 
-    & .search-room__title {
-      margin-bottom: 20px;
+    & .search-room {
+      &__title {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -50,30 +58,25 @@
     height: 148px;
     margin: 34px 0 28px;
     user-select: none;
+
+    & .search-room {
+      &__title {
+        margin-bottom: 12px;
+      }
+    }
   }
 
   &__furniture {
     margin-bottom: 12px;
   }
 
-  &__availability {
-    & .span_availability {
-      color: #575870;
-      font-weight: bold;
-    }
-
-    & .search-room__title {
-      margin-bottom: 12px;
-    }
-  }
-
   &__rooms-container {
+    margin-left: 45px;
+
     & .room-info {
       margin-bottom: 20px;
     }
-  }
 
-  &__rooms-container {
     & h2 {
       margin: 0 0 21px 7px;
       font-size: $font-size-big;
@@ -87,9 +90,7 @@
     justify-content: center;
     padding: 23px 18px 0 0;
     text-align: center;
-  }
 
-  &__pagination-container {
     & p {
       color: $color-shade-secondary;
       font-size: $font-size-main;
@@ -100,25 +101,6 @@
     max-width: 266px;
     margin-left: 10px;
   }
-}
-
-.move_arrow {
-  position: absolute;
-  width: 42px;
-  height: 151px;
-  border-radius: 4px;
-  cursor: pointer;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.arrow_right:hover {
-  transition: 0.3s;
-}
-
-.arrow_left:hover {
-  color: white;
-  transition: 0.3s;
 }
 
 @media screen and (max-width: 1355px) {
@@ -162,8 +144,10 @@
 }
 
 @media screen and (max-width: 665px) {
-  .search-room__rooms {
-    margin: 0 70px;
+  .search-room {
+    &__rooms {
+      margin: 0 70px;
+    }
   }
 }
 
@@ -180,7 +164,9 @@
 }
 
 @media screen and (max-width: 520px) {
-  h2.search-room__number-for-user {
-    font-size: 20px;
+  h2.search-room {
+    &__number-for-user {
+      font-size: 20px;
+    }
   }
 }

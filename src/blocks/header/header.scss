@@ -47,6 +47,11 @@
     font-size: $font-size-small;
     text-align: center;
     text-transform: uppercase;
+
+    & p {
+      margin: 7px 0;
+      padding: 0;
+    }
   }
 
   &__btn-login {
@@ -68,15 +73,8 @@
       margin-left: 5px;
       color: #fff;
       background: $gradient-main;
-      border-radius: 22px;
       padding: 9px 22px;
-    }
-  }
-
-  &__container-login {
-    & p {
-      margin: 7px 0;
-      padding: 0;
+      border-radius: 22px;
     }
   }
 }

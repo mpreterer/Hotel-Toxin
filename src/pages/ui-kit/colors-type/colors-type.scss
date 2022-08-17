@@ -72,10 +72,12 @@
   }
 }
 
-.color-type__right-block {
-  display: flex;
-  width: 436px;
-  height: 321px;
+.color-type {
+  &__right-block {
+    display: flex;
+    width: 436px;
+    height: 321px;
+  }
 
   &__list {
     width: 436px;

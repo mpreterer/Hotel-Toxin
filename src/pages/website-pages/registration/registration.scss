@@ -4,6 +4,8 @@
   padding-top: 19px;
 }
 
-.registration-card__user-about {
-  margin-top: 18px;
+.registration-card {
+  &__user-about {
+    margin-top: 18px;
+  }
 }

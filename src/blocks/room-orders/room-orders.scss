@@ -31,11 +31,6 @@
       margin-bottom: 0;
     }
 
-    & .li_order3 {
-      display: flex;
-      margin-bottom: 10px;
-    }
-
     & span {
       display: block;
       width: 240px;
@@ -63,8 +58,8 @@
     position: absolute;
     top: -4px;
     left: 21px;
-    line-height: 24px;
     color: $color-shade-secondary;
+    line-height: 24px;
   }
 }
 

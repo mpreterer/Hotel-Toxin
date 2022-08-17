@@ -1,5 +1,6 @@
 PP/*
 dist/*
+libs/*
 .vscode/*
 node_modules/*
 .babelrc

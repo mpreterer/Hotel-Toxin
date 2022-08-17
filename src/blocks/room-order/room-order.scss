@@ -2,12 +2,12 @@
 
 .room-order {
   width: 380px;
+  font-size: $font-size-main;
   background-color: #fff;
+  line-height: 24px;
   border: 1px solid rgb(0 0 0 / 12%);
   border-radius: 4px;
   box-shadow: 0 0 25px rgb(0 0 0 / 20%);
-  font-size: $font-size-main;
-  line-height: 24px;
 
   &__container {
     margin: 46px 30px 30px;
@@ -98,7 +98,7 @@
     display: inline-block;
     width: 15px;
     height: 15px;
-    background-image: url(../../../assets/image/expand-more.svg);
+    background-image: url('../../../assets/image/expand-more.svg');
     background-repeat: no-repeat;
     content: '';
     pointer-events: none;
@@ -168,7 +168,7 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url(../../../assets/image/inform-price.svg);
+    background-image: url('../../../assets/image/inform-price.svg');
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid $color-shade;
@@ -181,33 +181,6 @@
     color: $color-shade-dark;
     font-weight: bold;
   }
-}
-
-.container_departure::after {
-  position: absolute;
-  top: 44px;
-  right: 10px;
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background-image: url(../../../assets/image/expand-more.svg);
-  background-repeat: no-repeat;
-  content: '';
-  pointer-events: none;
-}
-
-.to_book {
-  margin-top: 20px;
-}
-
-.booking_guests {
-  position: relative;
-  margin-top: 25px;
-}
-
-.booking_guests .guests {
-  height: 22px;
-  padding: 12px 32px 8.44px 15px;
 }
 
 @media all and (max-width: 793px) {
