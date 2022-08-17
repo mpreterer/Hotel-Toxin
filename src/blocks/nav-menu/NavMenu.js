@@ -13,12 +13,10 @@ class NavMenu {
         item.addEventListener('click', (event) => {
           if (event.currentTarget.classList.contains('nav-menu__item_active')) {
             event.currentTarget.classList.remove('nav-menu__item_active');
-            event.currentTarget.querySelector('.js-nav-menu__submenu')
-            .classList.remove('nav-menu__submenu_active');
+            event.currentTarget.querySelector('.js-nav-menu__submenu').classList.remove('nav-menu__submenu_active');
           } else {
             event.currentTarget.classList.add('nav-menu__item_active');
-            event.currentTarget.querySelector('.js-nav-menu__submenu')
-            .classList.add('nav-menu__submenu_active');
+            event.currentTarget.querySelector('.js-nav-menu__submenu').classList.add('nav-menu__submenu_active');
           }
         });
       }
@@ -34,10 +32,9 @@ class NavMenu {
         this.$items.forEach((item) => {
           if (item.classList.contains('nav-menu__item_active')) {
             item.classList.remove('nav-menu__item_active');
-            item.querySelector('.js-nav-menu__submenu')
-            .classList.remove('nav-menu__submenu_active');
+            item.querySelector('.js-nav-menu__submenu').classList.remove('nav-menu__submenu_active');
           }
-        })
+        });
       }
     });
   }
@@ -48,12 +45,11 @@ class NavMenu {
         this.$items.forEach((item) => {
           if (item.classList.contains('nav-menu__item_active')) {
             item.classList.remove('nav-menu__item_active');
-            item.querySelector('.js-nav-menu__submenu')
-            .classList.remove('nav-menu__submenu_active');
+            item.querySelector('.js-nav-menu__submenu').classList.remove('nav-menu__submenu_active');
           }
-        })
-       }
-    })
+        });
+      }
+    });
   }
 }
 

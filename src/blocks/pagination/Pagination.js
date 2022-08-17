@@ -24,10 +24,10 @@ class Pagination {
       nextText: ' ',
       onPageClick: this._countPagination.bind(this),
     });
-}
+  }
 
-_countPagination(page) {
-    const itemsOnPage = this.itemsOnPage;
+  _countPagination(page) {
+    const { itemsOnPage } = this;
     const max = page * itemsOnPage;
     const min = max - (itemsOnPage - 1);
 

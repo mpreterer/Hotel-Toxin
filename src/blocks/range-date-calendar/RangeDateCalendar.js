@@ -128,13 +128,15 @@ class RangeDateCalendar {
   }
 
   _setDate(date) {
-    let dates = date.split(' - ');
-    let hasDates = dates !== undefined && dates !== null && date !== '';
-    this.$inputArrival.value = dates[0];
+    const datesArray = date.split(' - ');
+    const dateFirst = datesArray[0];
+    const dateSecond = datesArray[1];
+    const hasDates = datesArray !== undefined && datesArray !== null && date !== '';
+    this.$inputArrival.value = dateFirst;
 
     if (hasDates) {
-      if (dates.length > 1) {
-        this.$inputDeparture.value = dates[1];
+      if (datesArray.length > 1) {
+        this.$inputDeparture.value = dateSecond;
       }
     }
     

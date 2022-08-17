@@ -29,13 +29,13 @@ class RoomOrder {
     const servicesCount = Number(this.services.textContent.replace(/\s/g, ''));
     const priceDay = Number(this.$priceDay.textContent.replace(/\s/g, ''));
     
-    let arrival = this.$arrival.value.split('.');
-    let departure = this.$departure.value.split('.');
-    let days = Number(departure[0]) - Number(arrival[0]);
-    let resultWithFees = (priceDay * days) - fees + servicesCount;
-    let resultWithoutFees = (priceDay * days);
+    const arrival = this.$arrival.value.split('.');
+    const departure = this.$departure.value.split('.');
+    const days = Number(departure[0]) - Number(arrival[0]);
+    const resultWithFees = (priceDay * days) - fees + servicesCount;
+    const resultWithoutFees = (priceDay * days);
 
-    if (resultWithFees !== NaN && resultWithFees > 0) {
+    if (!(Number.isNaN(resultWithFees)) && resultWithFees > 0) {
       this.$sumCountFees.textContent = resultWithFees.toLocaleString();
       this.$sumWithoutFees.textContent = resultWithoutFees.toLocaleString();
       this.sumDays.textContent = days;

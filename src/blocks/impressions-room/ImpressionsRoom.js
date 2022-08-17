@@ -1,4 +1,4 @@
-import 'chart.js';
+import Chart from 'chart.js';
 
 class ImpressionsRoom {
   constructor(domParent) {
@@ -27,7 +27,7 @@ class ImpressionsRoom {
       ],
     };
 
-    const chart = new Chart(ctx, {
+    new Chart(ctx, {
       type: 'doughnut',
       data: dataDoughnut,
       options: {
@@ -41,7 +41,7 @@ class ImpressionsRoom {
         cutoutPercentage: 90,
       },
     });
-}
+  }
 }
 
 export default ImpressionsRoom;

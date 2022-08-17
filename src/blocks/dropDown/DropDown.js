@@ -105,7 +105,7 @@ class DropDown {
   }
 
   _dropDownCounterHandler(event) {
-    const target = event.target;
+    const { target } = event;
 
     if (target.classList.contains('js-dropDown__plus')) {
       this._buttonPlus(target);
@@ -117,33 +117,36 @@ class DropDown {
   }
 
   _buttonPlus(element) {
-    let counterNumb = Number(element.previousElementSibling.value);
-    counterNumb++;
+    const elementSelector = element;
+    let counterNumb = Number(elementSelector.previousElementSibling.value);
+    counterNumb += 1;
 
-    element.previousElementSibling.value = counterNumb;
+    elementSelector.previousElementSibling.value = counterNumb;
     this._insetCountArray();
   }
 
   _buttonMinus(element) {
-    let counterNumb = Number(element.nextSibling.value);
-    counterNumb--;
+    const elementSelector = element;
+    let counterNumb = Number(elementSelector.nextSibling.value);
+    counterNumb -= 1;
 
     if (counterNumb < 0) {
       counterNumb = 0;
     }
 
-    element.nextSibling.value = counterNumb;
+    elementSelector.nextSibling.value = counterNumb;
     this._insetCountArray();
   }
 
   _checkBtnMinus() {
     this.counterNumber.forEach((element) => {
-      if (Number(element.value) > 0) {
-        element.previousElementSibling.disabled = false;
-        element.previousElementSibling.classList.add('dropDown__circle-minus');
+      const elementSelector = element;
+      if (Number(elementSelector.value) > 0) {
+        elementSelector.previousElementSibling.disabled = false;
+        elementSelector.previousElementSibling.classList.add('dropDown__circle-minus');
       } else {
-        element.previousElementSibling.disabled = true;
-        element.previousElementSibling.classList.remove('dropDown__circle-minus');
+        elementSelector.previousElementSibling.disabled = true;
+        elementSelector.previousElementSibling.classList.remove('dropDown__circle-minus');
       }
     });
     
@@ -161,16 +164,17 @@ class DropDown {
 
     if (checkCount > 0) {
       this.btnClear.classList.remove('js-not-clear');
-      this.btnClear.addEventListener('click', this._clearAllCounter.bind(this))
+      this.btnClear.addEventListener('click', this._clearAllCounter.bind(this));
     } else {
       this.btnClear.classList.add('js-not-clear');
-      this.btnClear.removeEventListener('click', this._clearAllCounter.bind(this))
+      this.btnClear.removeEventListener('click', this._clearAllCounter.bind(this));
     }
   }
 
   _clearAllCounter() {
     this.counterNumber.forEach((element) => {
-      element.value = 0;
+      const elementSelector = element;
+      elementSelector.value = 0;
     });
 
     this.inputName.value = '';
