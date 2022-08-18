@@ -1,6 +1,6 @@
 @import '@variables';
 
-.dropDown {
+.drop-down {
   position: relative;
   width: 100%;
   user-select: none;
@@ -8,7 +8,7 @@
   & input {
     font-family: $font-family-main;
   }
-  
+
   &__name {
     display: flex;
     align-items: center;
@@ -41,8 +41,7 @@
 
   &__items {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     box-sizing: border-box;
     padding: 0 7px 7px 15px;
     line-height: 15px;
@@ -136,14 +135,16 @@
     color: #1f2041;
     font-weight: bold;
 
-    & button.js-dropDown_clear {
-      padding-left: 0;
-      font-family: $font-family-main;
-    }
+    & button.js-drop-down {
+      &_clear {
+        padding-left: 0;
+        font-family: $font-family-main;
+      }
 
-    & button.js-dropDown_apply {
-      padding-right: 0;
-      font-family: $font-family-main;
+      &_apply {
+        padding-right: 0;
+        font-family: $font-family-main;
+      }
     }
   }
 
@@ -160,8 +161,8 @@
   &__counter {
     color: $color-shade-dark;
     font-weight: bold;
-    line-height: 12px;
     font-size: $font-size-small;
+    line-height: 12px;
     text-transform: uppercase;
   }
 
@@ -170,13 +171,13 @@
   }
 }
 
-.dropdown-arrow {
+.drop-down-arrow {
   position: absolute;
   top: 17px;
   right: 15px;
   width: 12px;
   height: 9px;
-  background-image: url(../../../assets/image/expand-more.svg);
+  background-image: url('../../../assets/image/expand-more.svg');
   background-repeat: no-repeat;
   background-position: 4px 4px 0 0;
 }
@@ -186,10 +187,12 @@
   pointer-events: none;
 }
 
-.js-drop_close {
-  display: none;
-}
+.js-drop {
+  &_close {
+    display: none;
+  }
 
-.js-drop_open {
-  display: block;
+  &_open {
+    display: block;
+  }
 }

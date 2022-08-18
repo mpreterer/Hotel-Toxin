@@ -22,22 +22,22 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    background-image: url(../../../assets/image/favorite-border.svg);
+    background-image: url('../../../assets/image/favorite-border.svg');
     background-repeat: no-repeat;
     background-position: center;
     pointer-events: none;
   }
 }
 
-.fill_heart {
-  background-image: url(../../../assets/image/favorite.svg);
+.fill-heart {
+  background-image: url('../../../assets/image/favorite.svg');
 }
 
-.border_heart {
-  background-image: url(../../../assets/image/favorite-border.svg);
+.border-heart {
+  background-image: url('../../../assets/image/favorite-border.svg');
 }
 
-.active_heart {
+.active-heart {
   color: $color-purple;
   border: 1px solid #b59dff;
 }

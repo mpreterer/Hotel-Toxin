@@ -98,8 +98,7 @@
 
   &__block-date {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     justify-content: space-around;
     margin: 0;
     padding: 0;
@@ -116,7 +115,7 @@
     text-transform: uppercase;
   }
 
-  &__container-dropDown {
+  &__container-drop-down {
     margin: 14px 0 31px;
   }
 }
@@ -128,11 +127,8 @@
     }
 
     &__search-room {
-      margin: 0 auto;
-    }
-
-    &__search-room {
       left: 10px;
+      margin: 0 auto;
     }
 
     &__title {
@@ -151,8 +147,10 @@
       width: 100%;
     }
 
-    & .dropDown__name {
-      width: auto;
+    & .drop-down {
+      &__name {
+        width: auto;
+      }
     }
   }
 }
@@ -162,9 +160,7 @@
     &__search-room {
       width: auto;
     }
-  }
 
-  .filter {
     & .calendar-container {
       transform: translate(-15px, 5px);
     }

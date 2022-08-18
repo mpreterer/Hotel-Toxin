@@ -1,0 +1,50 @@
+@import '@variables';
+
+.stars-rating { 
+  .br-widget {
+    display: flex;
+    
+    a {
+      margin-left: 2px;
+      font-size: 26px;
+      line-height: 20px;
+      text-decoration: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &::after {
+        width: 24px;
+        height: 24px;
+        content: '☆';
+        background: $gradient-main;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .br-active::after {
+      width: 24px;
+      height: 24px;
+      content: '★';
+    }
+
+    .br-selected {
+      padding-right: 0;
+    }
+
+    .br-selected::after {
+      width: 24px;
+      height: 24px;
+      content: '★';
+    }
+  }
+  
+  &_readonly {
+    .br-widget a {
+      cursor: default;
+    }
+  }
+}

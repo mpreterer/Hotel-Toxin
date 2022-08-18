@@ -36,9 +36,13 @@
     height: 44px;
     margin-top: 30px;
 
-    .button_type_border {
-      height: 40px;
-      padding: 0 20px;
+    .button {
+      &_type {
+        &_border {
+          height: 40px;
+          padding: 0 20px;
+        }
+      }
     }
   }
 
@@ -59,7 +63,13 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .login-card__container .btn_login {
-    width: 260px;
+  .login-card {
+    &__container {
+      & .btn {
+        &_login {
+          width: 260px;
+        }
+      }
+    }
   }
 }

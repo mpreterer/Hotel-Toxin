@@ -3,7 +3,7 @@
 .ui-cards {
   display: flex;
   justify-content: space-between;
-  padding: 140px 140px 140px;
+  padding: 140px;
   line-height: 14px;
   background-color: #fff;
 
@@ -11,10 +11,13 @@
     width: 320px;
   }
 
-  &__color-type__right-blocks {
-    display: flex;
-    justify-content: space-between;
-    width: 711px;
+  &__color-type {
+    &__right-blocks {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 711px;
+    }
   }
 
   &__first {
@@ -123,11 +126,11 @@
   }
 
   &__pagination {
-    margin-bottom: 151px;
     margin-top: 16px;
+    margin-bottom: 151px;
   }
 
-  &__dropdown-with-guests {
+  &__drop-down-with-guests {
     margin-bottom: 95px;
   }
 
@@ -140,16 +143,13 @@
     margin-top: 10px;
   }
 
-  &__color-type__right-blocks {
-    display: flex;
-    flex-direction: column;
-  }
-
   &__alone-calendar {
     margin-bottom: 30px;
   }
 
-  & .alone-calendar__calendar {
-    transform: translateX(0);
+  & .alone-calendar {
+    &__calendar {
+      transform: translateX(0);
+    }
   }
 }

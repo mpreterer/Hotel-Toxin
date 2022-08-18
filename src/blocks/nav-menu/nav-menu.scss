@@ -31,13 +31,15 @@
     align-items: center;
     margin-left: 20px;
 
-    &_active > .nav-menu__subList {
-      color: $color-shade-secondary;
-      font-weight: bold;
+    &_active > .js-nav-menu {
+      &__sub-list {
+        color: $color-shade-secondary;
+        font-weight: bold;
+      }
     }
   }
 
-  &__subList {
+  &__sub-list {
     color: $color-shade-grey;
 
     &:hover {
@@ -54,10 +56,14 @@
       content: attr(title);
     }
 
-    &:hover > .nav-menu__subList::before {
-      overflow: visible;
-      color: $color-shade-secondary;
-      visibility: visible;
+    &:hover > .nav-menu {
+      &__sub-list {
+        &::before {
+          overflow: visible;
+          color: $color-shade-secondary;
+          visibility: visible;
+        }
+      }
     }
   }
 
@@ -66,7 +72,7 @@
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    
+
     &:hover {
       color: $color-shade-secondary;
       font-weight: bold;
@@ -81,23 +87,25 @@
       content: attr(title);
     }
 
-    &:hover > .nav-menu__link::before {
-      overflow: visible;
-      color: $color-shade-secondary;
-      visibility: visible;
+    &:hover > .nav-menu {
+      &__link::before {
+        overflow: visible;
+        color: $color-shade-secondary;
+        visibility: visible;
+      }
     }
   }
 
   &__submenu {
     position: absolute;
     top: 45px;
-    transform: translateX(-20px);
     z-index: 5;
     display: none;
-    max-width: 140px;
     min-width: 140px;
+    max-width: 140px;
     padding: 0;
     text-align: center;
+    transform: translateX(-20px);
 
     &_active {
       display: block;
@@ -106,8 +114,8 @@
     &-link {
       color: $color-shade-grey;
       text-decoration: none;
-      cursor: pointer;
       word-wrap: break-word;
+      cursor: pointer;
 
       &:hover {
         color: $color-shade-secondary;

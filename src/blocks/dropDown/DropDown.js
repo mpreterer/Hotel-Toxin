@@ -7,22 +7,22 @@ class DropDown {
   _init() {
     this.body = document.querySelector('body');
     this.keyWords = this.container.getAttribute('data-key-phrases');
-    this.inputName = this.container.querySelector('.js-dropDown__counts-guests');
-    this.open = this.container.querySelector('.js-dropDown__name');
-    this.counterPanel = this.container.querySelector('.js-dropDown__drop-block');
+    this.inputName = this.container.querySelector('.js-drop-down__counts-guests');
+    this.open = this.container.querySelector('.js-drop-down__name');
+    this.counterPanel = this.container.querySelector('.js-drop-down__drop-block');
     this.itemName = this.container.querySelectorAll('[data-item-name]');
-    this.counterContext = this.container.querySelector('.js-dropDown__items');
-    this.counterNumber = this.container.querySelectorAll('.js-dropDown__counter');
-    this.counterName = this.container.querySelectorAll('.dropDown__dropItem');
+    this.counterContext = this.container.querySelector('.js-drop-down__items');
+    this.counterNumber = this.container.querySelectorAll('.js-drop-down__counter');
+    this.counterName = this.container.querySelectorAll('.drop-down__dropItem');
     this.appointment = this.container.getAttribute('data-attribute-appointment');
-    this.btnPlus = this.container.querySelectorAll('.dropDown__circle-plus');
-    this.btnMinus = this.container.querySelectorAll('.dropDown__circle-minus');
-    this.controlPanel = this.container.querySelector('.dropDown__function');
+    this.btnPlus = this.container.querySelectorAll('.drop-down__circle-plus');
+    this.btnMinus = this.container.querySelectorAll('.drop-down__circle-minus');
+    this.controlPanel = this.container.querySelector('.drop-down__function');
     this.hasControlPanel = this.controlPanel !== null && this.controlPanel !== undefined;
 
     if (this.hasControlPanel) {
-      this.btnApply = this.container.querySelector('.js-dropDown_apply');
-      this.btnClear = this.container.querySelector('.js-dropDown_clear');
+      this.btnApply = this.container.querySelector('.js-drop-down_apply');
+      this.btnClear = this.container.querySelector('.js-drop-down_clear');
     }
 
     if (this.appointment === 'guests') {
@@ -39,11 +39,11 @@ class DropDown {
       if (this.counterPanel.classList.contains('js-drop_close')) {
         this.counterPanel.classList.toggle('js-drop_close');
         this.counterPanel.classList.add('js-drop_open');
-        this.open.classList.toggle('dropDown__name_active');
+        this.open.classList.toggle('drop-down__name_active');
       } else {
         this.counterPanel.classList.toggle('js-drop_open');
         this.counterPanel.classList.add('js-drop_close');
-        this.open.classList.toggle('dropDown__name_active');
+        this.open.classList.toggle('drop-down__name_active');
       }
     });
 
@@ -66,8 +66,8 @@ class DropDown {
       if (!this.container.contains(event.target)) {
         this.counterPanel.classList.remove('js-drop_open');
         this.counterPanel.classList.add('js-drop_close');
-        if (this.open.classList.contains('dropDown__name_active')) {
-          this.open.classList.remove('dropDown__name_active');
+        if (this.open.classList.contains('drop-down__name_active')) {
+          this.open.classList.remove('drop-down__name_active');
         }
       }
     });
@@ -107,9 +107,9 @@ class DropDown {
   _dropDownCounterHandler(event) {
     const { target } = event;
 
-    if (target.classList.contains('js-dropDown__plus')) {
+    if (target.classList.contains('js-drop-down__plus')) {
       this._buttonPlus(target);
-    } else if (target.classList.contains('js-dropDown__minus')) {
+    } else if (target.classList.contains('js-drop-down__minus')) {
       this._buttonMinus(target);
     }
 
@@ -143,10 +143,10 @@ class DropDown {
       const elementSelector = element;
       if (Number(elementSelector.value) > 0) {
         elementSelector.previousElementSibling.disabled = false;
-        elementSelector.previousElementSibling.classList.add('dropDown__circle-minus');
+        elementSelector.previousElementSibling.classList.add('drop-down__circle-minus');
       } else {
         elementSelector.previousElementSibling.disabled = true;
-        elementSelector.previousElementSibling.classList.remove('dropDown__circle-minus');
+        elementSelector.previousElementSibling.classList.remove('drop-down__circle-minus');
       }
     });
     

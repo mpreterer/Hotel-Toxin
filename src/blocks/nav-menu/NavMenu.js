@@ -9,7 +9,7 @@ class NavMenu {
     this.$items = this.$container.querySelectorAll('.js-nav-menu__item');
     
     this.$items.forEach((item) => {
-      if (item.querySelector('.js-nav-menu__subList')) {
+      if (item.querySelector('.js-nav-menu__sub-list')) {
         item.addEventListener('click', (event) => {
           if (event.currentTarget.classList.contains('nav-menu__item_active')) {
             event.currentTarget.classList.remove('nav-menu__item_active');

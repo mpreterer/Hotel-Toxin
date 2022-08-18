@@ -1,18 +1,18 @@
 mixin dropDown({placeholder = 'Сколько гостей',appointment,isOpen = false, showFunction, list = [], keyPhrases=[]}={})
-    .dropDown.js-dropDown(data-attribute-appointment =appointment, data-attribute-function=functionPanel, data-key-phrases= keyPhrases)
-        .dropDown__name.js-dropDown__name
-            input.dropDown__counts-guests.js-dropDown__counts-guests(placeholder=placeholder readonly value="")
-            .dropDown__arrow.dropdown-arrow
-        .dropDown__drop-block.js-dropDown__drop-block(class= isOpen ? "js-drop_open" : "js-drop_close")
-            .dropDown__items.js-dropDown__items
+    .drop-down.js-drop-down(data-attribute-appointment =appointment, data-attribute-function=functionPanel, data-key-phrases= keyPhrases)
+        .drop-down__name.js-drop-down__name
+            input.drop-down__counts-guests.js-drop-down__counts-guests(placeholder=placeholder readonly value="")
+            .drop-down__arrow.drop-down-arrow
+        .drop-down__drop-block.js-drop-down__drop-block(class= isOpen ? "js-drop_open" : "js-drop_close")
+            .drop-down__items.js-drop-down__items
                 each element in list
-                    .dropDown__row
-                        span.dropDown__dropItem(data-item-name= element.name) #{element.name}
-                        .dropDown__block-input
-                            button.dropDown__circle.js-dropDown__minus -
-                            input.dropDown__counter.js-dropDown__counter(value= element.val || 0 readonly) 
-                            button.dropDown__circle.dropDown__circle-plus.js-dropDown__plus +
+                    .drop-down__row
+                        span.drop-down__dropItem(data-item-name= element.name) #{element.name}
+                        .drop-down__block-input
+                            button.drop-down__circle.js-drop-down__minus -
+                            input.drop-down__counter.js-drop-down__counter(value= element.val || 0 readonly) 
+                            button.drop-down__circle.drop-down__circle-plus.js-drop-down__plus +
                 if showFunction
-                    .dropDown__function
-                        button.dropDown__function-btn.js-dropDown_clear Очистить
-                        button.dropDown__function-btn.js-dropDown_apply Применить
+                    .drop-down__function
+                        button.drop-down__function-btn.js-drop-down_clear Очистить
+                        button.drop-down__function-btn.js-drop-down_apply Применить

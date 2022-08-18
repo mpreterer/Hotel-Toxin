@@ -16,15 +16,15 @@ class ButtonLike {
   }
 
   _countLike() {
-    if (this.$heart.classList.contains('fill_heart')) {
-      this.$heart.classList.remove('fill_heart');
-      this.$container.classList.remove('active_heart');
+    if (this.$heart.classList.contains('fill-heart')) {
+      this.$heart.classList.remove('fill-heart');
+      this.$container.classList.remove('active-heart');
     } else {
-      this.$heart.classList.toggle('fill_heart');
-      this.$container.classList.toggle('active_heart');
+      this.$heart.classList.toggle('fill-heart');
+      this.$container.classList.toggle('active-heart');
     }
     
-    this.count.innerText -= [1, -1][+this.$container.classList.contains('active_heart')];
+    this.count.innerText -= [1, -1][+this.$container.classList.contains('active-heart')];
   }
 }
 

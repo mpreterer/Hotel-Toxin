@@ -18,10 +18,10 @@
 .registration-card {
   width: 380px;
   margin: 0 auto;
+  line-height: 24px;
   background-color: #fff;
   border: 1px solid rgb(0 0 0 / 12%);
   border-radius: 4px;
-  line-height: 24px;
   box-shadow: 0 0 25px rgb(0 0 0 / 20%);
 
   &__email {
@@ -141,8 +141,10 @@
 }
 
 @media screen and (max-width: 480px) {
-  .registration-card .registration-card__user-info h1 {
-    font-size: 20px;
+  .registration-card .registration-card {
+    &__user-info h1 {
+      font-size: 20px;
+    }
   }
 }
 

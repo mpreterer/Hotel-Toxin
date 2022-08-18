@@ -1,6 +1,7 @@
 class RoomOrder {
   constructor(domParent) {
     this.container = domParent;
+    this.body = document.querySelector('body');
     this.$datepicker = this.container.querySelector('.js-range-date-calendar__calendar');
     this.$inputArrival = this.container.querySelector('.js-range-date-calendar__masked-arrival');
     this.$arrival = this.$inputArrival.querySelector('[data-masked]');
@@ -21,7 +22,7 @@ class RoomOrder {
   }
 
   _eventCount() {
-    this.container.addEventListener('click', this._countPrice.bind(this));
+    this.body.addEventListener('click', this._countPrice.bind(this));
   }
 
   _countPrice() {

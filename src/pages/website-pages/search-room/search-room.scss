@@ -9,9 +9,9 @@
   line-height: 15px;
 
   & .alone-calendar {
-      &__calendar {
-        transform: translateX(-30px);
-      }
+    &__calendar {
+      transform: translateX(-30px);
+    }
   }
 
   &__rooms {
@@ -21,7 +21,7 @@
     justify-content: space-evenly;
     margin: 0 auto;
   }
-  
+
   &__arrival-in-hotel {
     margin-bottom: 18px;
   }
