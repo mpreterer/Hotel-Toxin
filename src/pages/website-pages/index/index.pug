@@ -4,9 +4,10 @@ include ../../../blocks/filter/filter.pug
 
 block variables
     - pageTitle = 'Главная «Toxin» | Отели'
+    - roomsList = require('./utils/index-backgrounds.json');
 
 block content
-    main.index-main(style="background-image: url('assets/image/content.jpg')")
+    main.index-main.js-index-main(style="background-image: url('assets/image/background-index-1.jpg');", data-src= roomsList)
         .index-main__container
             .index-main__filter-item.js-filter-item
                 +filter({
