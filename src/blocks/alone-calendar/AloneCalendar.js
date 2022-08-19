@@ -32,6 +32,12 @@ class AloneCalendar {
     this._closeCalendarEsc();
   }
 
+  _eventOpenKeyDown(event) {
+    if (event.key === 'Enter') {
+      this.calendar.checkIsOpen();
+    }
+  }
+
   _closeCalendarEsc() {
     this.body.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
@@ -46,6 +52,7 @@ class AloneCalendar {
 
   _bindEvent() {
     document.addEventListener('click', this._handleGlobalClick.bind(this), true);
+    this.$container.addEventListener('keydown', this._eventOpenKeyDown.bind(this), true);
     this.$inputCalendar.addEventListener('click', this._handleInputClick.bind(this));
     this.$calendar.querySelector('[data-button-type="clear"]').addEventListener('click', this._checkDate.bind(this));
   }

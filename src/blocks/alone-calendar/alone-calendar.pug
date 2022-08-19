@@ -1,7 +1,7 @@
 include ../calendar/calendar.pug
 
 mixin alone-calendar({ title='Даты прибывания в отеле', placeholder='Выберите даты', isOpen = false, dateFormat='d MM' }={})
-  .alone-calendar.js-alone-calendar(data-format =dateFormat, data-is-open =isOpen)
+  .alone-calendar.js-alone-calendar(data-format =dateFormat, data-is-open =isOpen, tabindex="0")
     .alone-calendar__calendar-container.js-alone-calendar__calendar-container
         span.alone-calendar__placeholder.js-alone-calendar__placeholder= placeholder
         .arrow-expend-btn

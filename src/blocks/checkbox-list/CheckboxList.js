@@ -23,6 +23,14 @@ class CheckboxList {
 
     this.$input.addEventListener('click', this._openList.bind(this));
     document.addEventListener('click', this._globalOpen.bind(this), true);
+
+    this.$container.addEventListener('keydown', this._openEventKeyDown.bind(this));
+  }
+
+  _openEventKeyDown(event) {
+    if (event.key === 'Enter') {
+      this._openList();
+    }
   }
 
   _globalOpen(event) {

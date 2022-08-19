@@ -1,7 +1,7 @@
 include ../custom-checkbox/custom-checkbox.pug
 
 mixin checkbox-list({ title = 'Открыть список', list = [], isOpen= false }={})
-  .checkbox-list.js-checkbox-list(class= isOpen ? "js-checkbox-list_open" : "js-checkbox-list_close")
+  .checkbox-list.js-checkbox-list(class= isOpen ? "js-checkbox-list_open" : "js-checkbox-list_close", tabindex="0")
     .checkbox-list__name.js-checkbox-list__name
         span.checkbox-list__title= title
         .arrow-expend-btn

@@ -4,7 +4,7 @@ mixin nav-menu({ listMenu = [] }={})
       each item in listMenu
         li.nav-menu__item.js-nav-menu__item
           if item.submenu
-            span.nav-menu__sub-list.js-nav-menu__sub-list(title=item.name) !{item.name}
+            span.nav-menu__sub-list.js-nav-menu__sub-list(title=item.name tabindex="0") !{item.name}
             span.arrow-expend-more-btn
             ul.nav-menu__submenu.js-nav-menu__submenu
               each itemSubmenu in item.submenu

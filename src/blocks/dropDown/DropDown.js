@@ -31,7 +31,24 @@ class DropDown {
     
     this._checkOptions();
     this._openDropDown();
+    this._openDropDownKeyDown();
     this._dropDownCounter();
+  }
+
+  _openDropDownKeyDown() {
+    this.container.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        if (this.counterPanel.classList.contains('js-drop_close')) {
+          this.counterPanel.classList.toggle('js-drop_close');
+          this.counterPanel.classList.add('js-drop_open');
+          this.open.classList.toggle('drop-down__name_active');
+        } else {
+          this.counterPanel.classList.toggle('js-drop_open');
+          this.counterPanel.classList.add('js-drop_close');
+          this.open.classList.toggle('drop-down__name_active');
+        }
+      }
+    });
   }
 
   _openDropDown() {
