@@ -6,9 +6,10 @@ include ../../../blocks/registration-card/registration-card.pug
 
 block variables
     - var pageTitle = '«Toxin» | Регистрация'
+    - roomsList = require('../login/utils/login-backgrounds.json');
 
 block content
-    .registration-main
+    .registration-main.js-registration-main(style="background-image: url('assets/image/registration-bg.jpg');", data-src= roomsList)
         .registration-main-container
             +registration-card
             

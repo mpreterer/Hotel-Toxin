@@ -6,9 +6,10 @@ include ../../../blocks/login-card/login-card.pug
 
 block variables
     - pageTitle = '«Toxin» | Вход'
+    - roomsList = require('./utils/login-backgrounds.json');
 
 block content
-    .login-page
+    .login-page.js-login-page(style="background-image: url('assets/image/registration-bg.jpg');", data-src= roomsList)
         .login-page__container
             +login-card
             
