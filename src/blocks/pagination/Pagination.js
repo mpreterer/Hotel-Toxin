@@ -1,4 +1,4 @@
-import '../../../libs/jquery.simplePagination';
+import 'paginationjs';
 
 class Pagination {
   constructor(domParent) {
@@ -10,20 +10,23 @@ class Pagination {
     this.items = this.$body.attr('data-items');
     this.itemsOnPage = this.$body.attr('data-items-on-page');
     this.displayedPages = this.$body.attr('data-displayed-pages');
-
+    this.countPages = this.$body.attr('data-count-pages');
+    
     this._init();
   }
 
   _init() {
     this.$container.pagination({
-      items: this.items,
-      itemsOnPage: this.itemsOnPage,
-      displayedPages: this.displayedPages,
-      edges: 1,
-      prevText: '',
-      nextText: ' ',
-      onPageClick: this._countPagination.bind(this),
+      dataSource: this._countingPages(Number(this.countPages)),
+      pageSize: 1,
+      pageRange: 1,
+      autoHidePrevious: true,
     });
+  }
+
+  _countingPages(size) {
+    const filledArray = Array(size).fill().map((e, count) => count + 1);
+    return filledArray;
   }
 
   _countPagination(page) {

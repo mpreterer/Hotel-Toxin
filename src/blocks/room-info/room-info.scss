@@ -56,6 +56,16 @@
     list-style: none;
   }
 
+  .slick-next:focus {
+    opacity: 1;
+    transition: 0.3s;
+  }
+
+  .slick-prev:focus {
+    opacity: 1;
+    transition: 0.3s;
+  }
+
   &__slider-rooms:hover > button.slick-next.slick-arrow {
     opacity: 1;
     transition: 0.3s;

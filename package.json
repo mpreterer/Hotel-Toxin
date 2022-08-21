@@ -68,6 +68,7 @@
     "jquery": "^3.6.0",
     "jquery-bar-rating": "^1.2.2",
     "nouislider": "^15.6.0",
+    "paginationjs": "^2.1.5",
     "slick-carousel": "^1.8.1"
   }
 }

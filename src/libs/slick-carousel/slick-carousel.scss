@@ -41,8 +41,16 @@ button.slick-next.slick-arrow {
   border-radius: 4px 0 0 4px;
 }
 
+.slick-prev:focus {
+  border: 1px solid #000;
+}
+
 .slick-next {
   border-radius: 0 4px 4px 0;
+}
+
+.slick-next:focus {
+  border: 1px solid #000;
 }
 
 button.slick-next.slick-arrow::before,
@@ -100,6 +108,14 @@ ul.slick-dots li.slick-active button::before {
 ul.slick-dots li button {
   width: 7.5px;
   height: 7.5px;
+}
+
+ul.slick-dots li button:focus {
+  border: 1px solid #000;
+}
+
+ul.slick-dots li:focus {
+  border: 1px solid #000;
 }
 
 ul.slick-dots li button,

@@ -9,6 +9,10 @@
   cursor: pointer;
 }
 
+.noUi-horizontal .noUi-handle:focus {
+  outline: 1px solid #000;
+}
+
 .noUi-target {
   background: #fff;
   border: 1px solid #c7c7cf;

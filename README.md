@@ -25,7 +25,8 @@
 * [jquery-bar-rating ^1.2.2](https://www.npmjs.com/package/jquery-bar-rating),
 * [slick-carousel ^1.8.1](https://www.npmjs.com/package/slick-carousel/v/1.8.1),
 * [nouislider ^15.6.0](https://github.com/leongersen/noUiSlider/releases),
-* [donut-chart-js ^1.0.1](https://www.npmjs.com/package/donut-chart-js)
+* [donut-chart-js ^1.0.1](https://www.npmjs.com/package/donut-chart-js),
+* [paginationjs ^2.1.5](https://www.npmjs.com/package/paginationjs)
 
 ## Дополнительные используемые технологии
 * [Node.js ^14.17.1](https://nodejs.org),
