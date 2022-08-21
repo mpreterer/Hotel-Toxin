@@ -16,6 +16,10 @@
 
   &__checkbox {
     appearance: none;
+
+    &:focus::before {
+      outline: 1px solid #000;
+    }
   }
 
   &__checkbox::before {

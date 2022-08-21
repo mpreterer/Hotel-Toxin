@@ -2,7 +2,6 @@ class RoomOrder {
   constructor(domParent) {
     this.container = domParent;
     this.body = document.querySelector('body');
-    this.$datepicker = this.container.querySelector('.js-range-date-calendar__calendar');
     this.$inputArrival = this.container.querySelector('.js-range-date-calendar__masked-arrival');
     this.$arrival = this.$inputArrival.querySelector('[data-masked]');
     this.$inputDeparture = this.container.querySelector('.js-range-date-calendar__masked-departure');
@@ -13,6 +12,7 @@ class RoomOrder {
     this.fees = this.container.querySelector('[data-price="feesPrice"]');
     this.services = this.container.querySelector('[data-price="services"]');
     this.sumDays = this.container.querySelector('.js-room-order__sum-day');
+    this.rangeDateCalendar = this.container.querySelector('.js-range-date-calendar');
 
     this._init();
   }
@@ -22,7 +22,36 @@ class RoomOrder {
   }
 
   _eventCount() {
+    this.container.addEventListener('click', this._countPrice.bind(this));
     this.body.addEventListener('click', this._countPrice.bind(this));
+    this.container.addEventListener('keydown', this._countPrice.bind(this));
+  }
+
+  _getTime(date) {
+    const result = new Date(date);
+    result.setMinutes(result.getMinutes() - result.getTimezoneOffset());
+    return result;
+  }
+
+  _daysBetween(dateFirstCount, dateSecondCount) {
+    const millisecondsPerDay = 24 * 60 * 60 * 1000;
+    const dateFirst = dateFirstCount;
+    const dateSecond = dateSecondCount;
+
+    const arrayFirstDate = dateFirst.split('.');
+    const tempFirstArray = arrayFirstDate[0];
+    arrayFirstDate[0] = arrayFirstDate[2];
+    arrayFirstDate[2] = tempFirstArray;
+    const resulFirstDate = arrayFirstDate.join('-');
+
+    const arraySecondDate = dateSecond.split('.');
+    const tempSecondArray = arraySecondDate[0];
+    arraySecondDate[0] = arraySecondDate[2];
+    arraySecondDate[2] = tempSecondArray;
+    const resulSecondDate = arraySecondDate.join('-');
+
+    return (this._getTime(resulSecondDate) -
+            this._getTime(resulFirstDate)) / millisecondsPerDay;
   }
 
   _countPrice() {
@@ -30,9 +59,8 @@ class RoomOrder {
     const servicesCount = Number(this.services.textContent.replace(/\s/g, ''));
     const priceDay = Number(this.$priceDay.textContent.replace(/\s/g, ''));
     
-    const arrival = this.$arrival.value.split('.');
-    const departure = this.$departure.value.split('.');
-    const days = Number(departure[0]) - Number(arrival[0]);
+    const days = this._daysBetween(this.$arrival.value, this.$departure.value);
+    
     const resultWithFees = (priceDay * days) - fees + servicesCount;
     const resultWithoutFees = (priceDay * days);
 

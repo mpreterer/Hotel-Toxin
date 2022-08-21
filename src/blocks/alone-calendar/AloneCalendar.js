@@ -28,8 +28,6 @@ class AloneCalendar {
         dateFormat: this.dateFormat,
       },
     });
-
-    this._closeCalendarEsc();
   }
 
   _eventOpenKeyDown(event) {
@@ -38,23 +36,10 @@ class AloneCalendar {
     }
   }
 
-  _closeCalendarEsc() {
-    this.body.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        this.calendar.hiddenClear();
-
-        if (this.$calendar.classList.contains('js-calendar-container_open')) {
-          this.$calendar.classList.remove('js-calendar-container_open');
-        }
-      }
-    });
-  }
-
   _bindEvent() {
-    document.addEventListener('click', this._handleGlobalClick.bind(this), true);
+    this.body.addEventListener('click', this._handleGlobalClick.bind(this), true);
     this.$container.addEventListener('keydown', this._eventOpenKeyDown.bind(this), true);
     this.$inputCalendar.addEventListener('click', this._handleInputClick.bind(this));
-    this.$calendar.querySelector('[data-button-type="clear"]').addEventListener('click', this._checkDate.bind(this));
   }
 
   _handleGlobalClick(event) {
@@ -74,16 +59,21 @@ class AloneCalendar {
 
   _setDate(date) {
     this.$placeholder.innerHTML = date;
+    
+    if (this.calendar !== undefined) {
+      if (date) {
+        this.calendar.addClearBtn();
+      } else {
+        this.calendar.deleteClearBtn();
+        this.$placeholder.innerHTML = 'Выберите дату';
+      }
+    }
+  
     this._notifyObservers();
-    this.calendar.checkClearBtn(date);
   }
 
   _notifyObservers(data) {
     this.observers.forEach((observer) => observer(data));
-  }
-
-  _checkDate() {
-    this.$placeholder.innerHTML = 'Выберите дату';
   }
 }
 
