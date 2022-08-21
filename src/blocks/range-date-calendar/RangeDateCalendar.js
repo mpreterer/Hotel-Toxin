@@ -17,12 +17,10 @@ class RangeDateCalendar {
 
     this._init();
     this._bindEventListener();
-    this._closeCalendarEsc();
   }
 
   _notifyObservers(data) {
     this.observers.forEach((observer) => observer(data));
-    this.calendar.checkClearBtn(data);
   }
 
   _bindEventListener() {
@@ -35,8 +33,6 @@ class RangeDateCalendar {
     this.$inputOpen.forEach((el) => {
       el.addEventListener('click', this._handleInputClick.bind(this));
     });
-
-    this.$calendar.querySelector('[data-button-type="clear"]').addEventListener('click', this._checkDate.bind(this));
   }
 
   _setDateClick(event) {
@@ -60,7 +56,6 @@ class RangeDateCalendar {
     if (event.key === 'Backspace') {
       if (isOnlyNumbersDeparture === false && isOnlyNumbersArrival === false) {
         calendarDate.date = new Date();
-        this.calendar.checkClearBtn();
       }
 
       if (event.target.name === 'arrival') {
@@ -87,11 +82,6 @@ class RangeDateCalendar {
     this.calendar.showCalendar();
   }
 
-  _checkDate() {
-    this.$inputArrival.value = '';
-    this.$inputDeparture.value = '';
-  }
-
   _handleGlobalClick(event) {
     const { target } = event;
     const isClickOnInput = this.$container.contains(target);
@@ -103,14 +93,6 @@ class RangeDateCalendar {
     }
   }
 
-  _closeCalendarEsc() {
-    this.body.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        this.calendar.hiddenClear();
-      }
-    });
-  }
-  
   _handleInputClick() {
     this.calendar.checkIsOpen();
   }
@@ -128,6 +110,14 @@ class RangeDateCalendar {
   }
 
   _setDate(date) {
+    if (date) {
+      this.calendar.addClearBtn();
+    } else {
+      this.calendar.deleteClearBtn();
+      this.$inputArrival.value = '';
+      this.$inputDeparture.value = '';
+    }
+
     const datesArray = date.split(' - ');
     const dateFirst = datesArray[0];
     const dateSecond = datesArray[1];
@@ -139,7 +129,7 @@ class RangeDateCalendar {
         this.$inputDeparture.value = dateSecond;
       }
     }
-    
+
     this._notifyObservers(date);
   }
 }

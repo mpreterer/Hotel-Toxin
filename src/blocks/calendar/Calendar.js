@@ -4,10 +4,11 @@ class Calendar {
   constructor(params) {
     this.$body = $(params.body).find('.js-calendar-container');
     this.container = document.querySelector('.js-calendar-container');
-    this.bodyPage = document.querySelector('body');
     this.options = params.options || {};
     this.isOpen = this.$body.attr('data-is-open');
     this.initIsOpen = params.isOpen;
+    this.initDates = this.$body.attr('data-init-dates');
+    this.bodyPage = document.querySelector('body');
     this.observers = [];
 
     this._init(this.options);
@@ -31,7 +32,23 @@ class Calendar {
     this.$body.datepicker(mergedOptions).data('datepicker');
 
     this._addButtons();
-    this.checkClearBtn();
+
+    if (this.initDates !== '' && this.initDates !== undefined) {
+      const parseDate = JSON.parse(this.initDates);
+      this.$body.datepicker().data('datepicker').selectDate(new Date(parseDate[0]));
+      this.$body.datepicker().data('datepicker').selectDate(new Date(parseDate[1]));
+      this.addClearBtn();
+    }
+
+    this._bindEventEsc();
+  }
+
+  _bindEventEsc() {
+    this.bodyPage.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        this.hiddenClear();
+      }
+    });
   }
 
   observeShowCalendarEvent(observer) {
@@ -63,7 +80,6 @@ class Calendar {
 
     $datepicker.append('<div class="calendar__buttons"></div>');
     this.$body.find('.calendar__buttons').append([clearButton, confirmButton]);
-
     this.$body.find('[data-button-type="clear"]').addClass('js-calendar-clear-btn_close');
 
     if (this.initIsOpen) {
@@ -73,12 +89,12 @@ class Calendar {
     }
   }
 
-  checkClearBtn(data) {
-    if (data) {
-      this.$body.find('[data-button-type="clear"]').removeClass('js-calendar-clear-btn_close');
-    } else {
-      this.$body.find('[data-button-type="clear"]').addClass('js-calendar-clear-btn_close');
-    }
+  deleteClearBtn() {
+    this.$body.find('[data-button-type="clear"]').addClass('js-calendar-clear-btn_close');
+  }
+
+  addClearBtn() {
+    this.$body.find('[data-button-type="clear"]').removeClass('js-calendar-clear-btn_close');
   }
 
   _bindEventButtons() {
