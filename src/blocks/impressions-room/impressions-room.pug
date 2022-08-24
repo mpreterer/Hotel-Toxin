@@ -1,14 +1,14 @@
-mixin impressions-room({}={})
+mixin impressions-room({ list=[] }={})
     .impressions-room.js-impressions-room
         h2.impressions-room__title Впечатления от номера
         .impressions-room__container
             .impressions-room__container-donut
                 canvas.impressions-room__donut
                 .impressions-room__comments-count 
-                    p.impressions-room__count 260
+                    p.impressions-room__count
                     p.impressions-room__desc Голосов
             ul.impressions-room__list
-                li.impressions-room__item Великолепно 
-                li.impressions-room__item Хорошо 
-                li.impressions-room__item Удовлетворительно 
-                li.impressions-room__item Разочарован 
+                each element in list
+                    li.impressions-room__item(data-set-comment= element.votes, data-colors= element.colors, tabindex="0")
+                        div.impressions-room__item-color-circle
+                        span.impressions-room__item-title= element.name 

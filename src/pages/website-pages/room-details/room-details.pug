@@ -50,7 +50,30 @@ block content
                                ]
                             })
                             .room-details__impressions
-                               +impressions-room
+                               +impressions-room({
+                                    list: [
+                                        {
+                                            name: 'великолепно',
+                                            votes: 520,
+                                            colors: ['#FFE39C', '#FFBA9C'],
+                                        },
+                                        {
+                                            votes: 260,
+                                            name: 'хорошо',
+                                            colors: ['#6FCF97', '#66D2EA'],
+                                        },
+                                        {
+                                            name: 'удовлетворительно',
+                                            votes: 260,
+                                            colors: ['#BC9CFF', '#8BA4F9'],
+                                        },
+                                        {
+                                            name: 'разочарован',
+                                            votes: 0,
+                                            colors: ['#919191', '#3D4975'],
+                                        },
+                                    ]
+                               })
                         .room-details__user-reviews
                             .room-details__user-reviews-comments
                                 span.room-details__title-comment Отзывы посетителей номера

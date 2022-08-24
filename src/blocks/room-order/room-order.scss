@@ -127,9 +127,63 @@
     margin-bottom: 28px;
   }
 
-  &__additional-fees-title,
+  &__additional-fees-title {
+    position: relative;
+
+    &:focus {
+      outline: none;
+      border: none;
+
+      &::after {
+        outline: 1px solid #000;
+      }
+    }
+  }
+
+  &__additional-fees-title:focus > &__additional-fees-information {
+    display: block;
+  }
+
+  &__additional-fees-title:hover > &__additional-fees-information {
+    display: block;
+  }
+
   &__fees-container {
     position: relative;
+
+    &:focus {
+      outline: none;
+      border: none;
+
+      &:after {
+        outline: 1px solid #000;
+      }
+    }
+  }
+
+  &__fees-container::after,
+  &__additional-fees-title::after {
+    position: absolute;
+    top: 0;
+    right: -30px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../assets/image/inform-price.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid $color-shade;
+    border-radius: 50%;
+    cursor: pointer;
+    content: '';
+  }
+
+  &__fees-container:focus > &__currency-information {
+    display: block;
+  }
+
+  &__fees-container:hover > &__currency-information {
+    display: block;
   }
 
   &__additional-fees-title {
@@ -160,21 +214,20 @@
     border-bottom: 1px dotted $color-shade;
   }
 
-  &__fees-container::after,
-  &__additional-fees-title::after {
+  &__currency-information, &__additional-fees-information {
     position: absolute;
+    border-radius: 4px;
+    padding: 5px;
     top: 0;
-    right: -30px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url('../../../assets/image/inform-price.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 1px solid $color-shade;
-    border-radius: 50%;
-    cursor: pointer;
-    content: '';
+    right: 0;
+    display: none;
+    max-width: 160px;
+    border: 1px dotted #000;
+    background-color: #C3C3C3;
+    color: $color-shade-secondary;
+    font-size: $font-size-small;
+    font-weight: bold;
+    z-index: 99;
   }
 
   &__title-guest {

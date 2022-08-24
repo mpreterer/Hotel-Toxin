@@ -40,13 +40,15 @@ mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={
                         span.room-order__nofees-result-price(data-price="priceWithoutFees") 0
                         span.room-order__currency= currency
                 div.room-order__fees
-                    span.room-order__fees-container !{'Сбор за услуги: скидка '}
+                    span.room-order__fees-container(tabindex="0") !{'Сбор за услуги: скидка '}
                         span.room-order__fees-price(data-price="feesPrice")= discount
                         span.room-order__currency= currency
+                        div.room-order__currency-information Здесь появится ваша доп. информация
                     span.room-order__fees-result 0
                         span.room-order__currency= currency 
                 div.room-order__additional-fees
-                    span.room-order__additional-fees-title Сбор за дополнительные услуги.
+                    span.room-order__additional-fees-title(tabindex="0") Сбор за дополнительные услуги.
+                        div.room-order__additional-fees-information Здесь появится ваша доп. информация
                     span.room-order__additional-fess-price-container
                         span.room-order__additional-fess-price(data-price="services")= services
                         span.room-order__currency= currency 
