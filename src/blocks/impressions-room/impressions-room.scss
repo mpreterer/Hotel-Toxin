@@ -67,6 +67,7 @@
 
   &__item {
     cursor: pointer;
+    user-select: none;
     text-transform: capitalize;
     color: $color-shade-secondary;
     display: flex;
