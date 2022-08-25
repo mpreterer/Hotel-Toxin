@@ -169,17 +169,12 @@
   &__function-clear {
     display: block;
   }
-}
 
-.drop-down-arrow {
-  position: absolute;
-  top: 17px;
-  right: 15px;
-  width: 12px;
-  height: 9px;
-  background-image: url('../../../assets/image/expand-more.svg');
-  background-repeat: no-repeat;
-  background-position: 4px 4px 0 0;
+  &__arrow {
+    position: absolute;
+    top: 17px;
+    right: 15px;
+  }
 }
 
 .js-not-clear {

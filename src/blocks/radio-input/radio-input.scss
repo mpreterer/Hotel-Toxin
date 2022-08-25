@@ -26,7 +26,7 @@
     }
 
     &:checked::before {
-      background-image: url('../../../assets/image/radio-chacked.svg');
+      background-image: url('./images/radio-chacked.svg');
       background-repeat: no-repeat;
       background-position: 3px;
       border-color: $color-purple;

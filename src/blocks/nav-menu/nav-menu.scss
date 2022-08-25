@@ -25,6 +25,12 @@
     }
   }
 
+  &__arrow {
+    margin-left: 5px;
+    margin-top: 2px;
+    width: 16px;
+  }
+
   &__item {
     position: relative;
     display: flex;
@@ -99,7 +105,7 @@
 
   &__submenu {
     position: absolute;
-    top: 45px;
+    top: 40px;
     z-index: 5;
     display: none;
     min-width: 140px;
@@ -127,14 +133,5 @@
   &__submenu-item {
     padding-bottom: 10px;
     background-color: #fff;
-  }
-
-  & .arrow-expend-more-btn {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url('../../../assets/image/expand-more.svg');
-    background-repeat: no-repeat;
-    background-position: center;
   }
 }

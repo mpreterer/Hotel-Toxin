@@ -12,6 +12,12 @@
   cursor: pointer;
   user-select: none;
 
+  &__arrow {
+    position: absolute;
+    top: 17px;
+    right: 15px;
+  }
+  
   &__container {
     position: absolute;
     top: 50px;

@@ -1,3 +1,5 @@
+include ../expand-more-arrow/expand-more-arrow
+
 mixin nav-menu({ listMenu = [] }={})
   div.nav-menu.js-nav-menu
     ul.nav-menu__container
@@ -5,7 +7,8 @@ mixin nav-menu({ listMenu = [] }={})
         li.nav-menu__item.js-nav-menu__item
           if item.submenu
             span.nav-menu__sub-list.js-nav-menu__sub-list(title=item.name tabindex="0") !{item.name}
-            span.arrow-expend-more-btn
+            .nav-menu__arrow
+              +expand-more-arrow
             ul.nav-menu__submenu.js-nav-menu__submenu
               each itemSubmenu in item.submenu
                 li.nav-menu__submenu-item

@@ -91,19 +91,6 @@
     transition: 0.3s;
   }
 
-  &__container-arrival::after {
-    position: absolute;
-    top: 44px;
-    right: 10px;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-image: url('../../../assets/image/expand-more.svg');
-    background-repeat: no-repeat;
-    content: '';
-    pointer-events: none;
-  }
-
   &__guests {
     margin-bottom: 17px;
   }
@@ -138,13 +125,15 @@
         outline: 1px solid #000;
       }
     }
+
+    &::after {
+      &:hover {
+        display: block;
+      }
+    }
   }
 
   &__additional-fees-title:focus > &__additional-fees-information {
-    display: block;
-  }
-
-  &__additional-fees-title:hover > &__additional-fees-information {
     display: block;
   }
 
@@ -155,8 +144,14 @@
       outline: none;
       border: none;
 
-      &:after {
+      &::after {
         outline: 1px solid #000;
+      }
+    }
+
+    &:hover {
+      &::after {
+        display: block;
       }
     }
   }
@@ -169,7 +164,7 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url('../../../assets/image/inform-price.svg');
+    background-image: url('./images/inform-price.svg');
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid $color-shade;
@@ -179,10 +174,6 @@
   }
 
   &__fees-container:focus > &__currency-information {
-    display: block;
-  }
-
-  &__fees-container:hover > &__currency-information {
     display: block;
   }
 

@@ -1,5 +1,6 @@
 include ../calendar/calendar.pug
 include ../text-input/text-input.pug
+include ../expand-more-arrow/expand-more-arrow.pug
 
 mixin range-date-calendar({ titleFirst='Прибытие', titleSecond='Выезд', isOpen = false, range='true', lang, separator=' - ', format}={})
     .range-date-calendar.js-range-date-calendar(data-is-open= isOpen data-date-format= format)
@@ -11,6 +12,7 @@ mixin range-date-calendar({ titleFirst='Прибытие', titleSecond='Выез
                         +text-input({ isMasked: true, name: 'arrival' })
                     .range-date-calendar__container-arrow
                         .range-date-calendar__arrow
+                            +expand-more-arrow
             .range-date-calendar__element
                 span.range-date-calendar__title= titleSecond
                 .range-date-calendar__input.js-range-date-calendar__input
@@ -18,6 +20,7 @@ mixin range-date-calendar({ titleFirst='Прибытие', titleSecond='Выез
                         +text-input({ isMasked: true, name: 'departure' })
                     .range-date-calendar__container-arrow
                         .range-date-calendar__arrow
+                            +expand-more-arrow
         .range-date-calendar__container-calendar
             .range-date-calendar__calendar.js-range-date-calendar__calendar
                 +calendar

@@ -22,7 +22,7 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    background-image: url('../../../assets/image/favorite-border.svg');
+    background-image: url('./images/favorite-border.svg');
     background-repeat: no-repeat;
     background-position: center;
     pointer-events: none;
@@ -30,11 +30,11 @@
 }
 
 .fill-heart {
-  background-image: url('../../../assets/image/favorite.svg');
+  background-image: url('./images/favorite.svg');
 }
 
 .border-heart {
-  background-image: url('../../../assets/image/favorite-border.svg');
+  background-image: url('./images/favorite-border.svg');
 }
 
 .active-heart {

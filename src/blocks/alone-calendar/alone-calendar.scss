@@ -15,8 +15,15 @@
     padding-left: 15px;
   }
 
+  &__arrow {
+    position: absolute;
+    top: 17px;
+    right: 15px;
+  }
+
   &__placeholder {
     font-size: $font-size-main;
+    color: $color-shade-secondary;
   }
 
   &__calendar {

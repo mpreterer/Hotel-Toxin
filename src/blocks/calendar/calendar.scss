@@ -24,7 +24,7 @@
 .arrow-back-btn {
   width: 40px;
   height: 40px;
-  background-image: url('../../../assets/image/arrow-back.svg');
+  background-image: url('./images/arrow-back.svg');
   background-repeat: no-repeat;
   background-position: center;
   content: '';
@@ -33,27 +33,11 @@
 .arrow-next-btn {
   width: 40px;
   height: 40px;
-  background-image: url('../../../assets/image/arrow-back.svg');
+  background-image: url('./images/arrow-back.svg');
   background-repeat: no-repeat;
   background-position: center;
   transform: rotate(180deg);
   content: '';
-}
-
-.arrow-expend-btn {
-  position: absolute;
-  top: 17px;
-  right: 15px;
-  width: 12px;
-  height: 9px;
-  background-image: url('../../../assets/image/expand-more.svg');
-  background-repeat: no-repeat;
-  background-position: 4px 4px 0 0;
-  content: '';
-
-  &_active {
-    transform: rotate(-180deg);
-  }
 }
 
 .calendar {

@@ -43,6 +43,10 @@
     opacity: 0;
   }
 
+  & ul li:last-child a:focus::after {
+    border: 1px solid #000;
+  }
+
   & ul li:last-child::after {
     position: absolute;
     top: 30%;
@@ -50,7 +54,7 @@
     display: inline-block;
     width: 15px;
     height: 15px;
-    background: url('../../../assets/image/arrow-link.svg');
+    background-image: url('./images/arrow-link.svg');
     background-repeat: no-repeat;
     background-position: center;
     content: '';
@@ -73,7 +77,7 @@
     display: inline-block;
     width: 15px;
     height: 15px;
-    background: url('../../../assets/image/arrow-link.svg');
+    background: url('./images/arrow-link.svg');
     background-repeat: no-repeat;
     background-position: center;
     content: '';

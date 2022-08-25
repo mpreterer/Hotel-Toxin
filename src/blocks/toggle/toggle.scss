@@ -28,7 +28,7 @@
     left: 0;
     width: 40px;
     height: 20px;
-    background-image: url('../../../assets/image/toggle.svg');
+    background-image: url('./images/toggle.svg');
     background-repeat: no-repeat;
     background-position: 4px 4px;
     border: 1px solid $color-shade;
@@ -39,7 +39,7 @@
   }
 
   &__checkbox:checked::before {
-    background-image: url('../../../assets/image/toggle-active.svg');
+    background-image: url('./images/toggle-active.svg');
     background-position: right;
     background-position: 23px 4px;
     border-color: $color-purple;
