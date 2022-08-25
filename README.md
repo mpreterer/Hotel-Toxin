@@ -17,6 +17,18 @@
 >```npm run build```
 ---
 
+Запустить eslint
+>```npm run lint```
+---
+
+Запустить stylelint
+>```npm run stylelint```
+---
+
+Запустить фикс для стилей
+>```npm run stylelint:fix```
+---
+
 ## Использованные библиотеки
 * [jQuery ^3.6.0](https://github.com/jquery/jquery),
 * [air-datepicker ^2.2.3](https://github.com/t1m0n/air-datepicker),
