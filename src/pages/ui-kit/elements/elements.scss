@@ -11,20 +11,18 @@
     width: 320px;
   }
 
-  &__color-type {
-    &__right-blocks {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 711px;
-    }
+  &__right-blocks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 711px;
   }
 
-  &__first {
+  &__first-right-block {
     width: 320px;
   }
 
-  &__second {
+  &__second-right-block {
     width: 320px;
   }
 

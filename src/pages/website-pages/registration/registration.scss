@@ -1,11 +1,11 @@
 @import '@variables';
 
-.registration-main-container {
-  padding-top: 19px;
-}
-
 .registration-card {
   &__user-about {
     margin-top: 18px;
+  }
+
+  &__container {
+    padding-top: 19px;
   }
 }
