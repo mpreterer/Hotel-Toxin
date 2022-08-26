@@ -33,7 +33,7 @@
     width: 100%;
   }
 
-  &__dropItem {
+  &__drop-item {
     font-weight: bold;
     font-size: 12px;
     user-select: none;
@@ -117,7 +117,7 @@
     }
   }
 
-  &__function-btn {
+  &__functional-buttons {
     color: $color-purple;
     font-weight: bold;
     font-size: $font-size-small;
@@ -127,7 +127,7 @@
     cursor: pointer;
   }
 
-  &__function {
+  &__control-panel {
     display: flex;
     justify-content: space-between;
     width: 100%;

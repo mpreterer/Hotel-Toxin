@@ -15,7 +15,7 @@ mixin registration-card({ title = 'Регистрация аккаунта' }={}
                         +text-input({ placeholder: 'Фамилия', name: 'second name' })
                 .registration-card__gender
                     +radio-input
-                .registration-card__birthday.js-registration-card__input
+                .registration-card__birthday
                     span.registration-card__sub-title дата рождения
                     +text-input({ isMasked: true, name: 'birthday' })
                 .registration-card__data-login
@@ -32,7 +32,7 @@ mixin registration-card({ title = 'Регистрация аккаунта' }={}
                         href: 'search-room.html',
                         type: 'long'
                     })
-                .registration-card__has-account
+                .registration-card__account
                     .registration-card__question
                         p.registration-card__question-txt Уже есть аккаунт на Toxin
                     +button({

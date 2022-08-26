@@ -8,10 +8,11 @@ class RangeDateCalendar {
     this.$inputArrival = this.arrival.querySelector('[data-masked]');
     this.departure = this.$container.querySelector('.js-range-date-calendar__masked-departure');
     this.$inputDeparture = this.departure.querySelector('[data-masked]');
-    this.$inputOpen = this.$container.querySelectorAll('.js-range-date-calendar__input');
+    this.$inputOpen = this.$container.querySelectorAll('.js-range-date-calendar__field-input');
     this.$containerCalendar = this.$container.querySelector('.js-range-date-calendar__calendar');
     this.$calendar = this.$container.querySelector('.js-calendar-container');
     this.$clearButton = $(this.$containerCalendar).find('[data-button-type="clear"]');
+    this.$arrow = this.$container.querySelectorAll('.js-range-date-calendar__container-arrow');
     this.hasOpenCalendar = this.$container.getAttribute('data-is-open');
     this.observers = [];
 
@@ -30,9 +31,17 @@ class RangeDateCalendar {
     this.$inputDeparture.addEventListener('click', this._handleInputDateClick.bind(this));
     this.$container.addEventListener('keydown', this._setDateClick.bind(this), true);
 
+    this.$arrow.forEach((el) => {
+      el.addEventListener('click', this._handleArrowClick.bind(this));
+    });
+
     this.$inputOpen.forEach((el) => {
       el.addEventListener('click', this._handleInputClick.bind(this));
     });
+  }
+
+  _handleArrowClick() {
+    this.calendar.checkIsOpen();
   }
 
   _setDateClick(event) {

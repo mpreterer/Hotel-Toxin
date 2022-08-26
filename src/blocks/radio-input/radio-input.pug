@@ -2,5 +2,5 @@ mixin radio-input({ groupName='default', list = [{name: 'Мужчина', checke
     .radio-input
         each el in list
             label.radio-input__label
-                input.radio-input__input(type="radio" name= groupName value= el.name checked= el.checked)
+                input.radio-input__button(type="radio" name= groupName value= el.name checked= el.checked)
                 span.radio-input__text= el.name

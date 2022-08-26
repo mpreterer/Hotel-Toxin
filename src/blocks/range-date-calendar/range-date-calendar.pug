@@ -7,18 +7,18 @@ mixin range-date-calendar({ titleFirst='Прибытие', titleSecond='Выез
         .range-date-calendar__list
             .range-date-calendar__element
                 span.range-date-calendar__title= titleFirst
-                .range-date-calendar__input.js-range-date-calendar__input
+                .range-date-calendar__field-input.js-range-date-calendar__input
                     .range-date-calendar__masked-arrival.js-range-date-calendar__masked-arrival(data-complete ="false")
                         +text-input({ isMasked: true, name: 'arrival' })
-                    .range-date-calendar__container-arrow
+                    .range-date-calendar__container-arrow.js-range-date-calendar__container-arrow
                         .range-date-calendar__arrow
                             +expand-more-arrow
             .range-date-calendar__element
                 span.range-date-calendar__title= titleSecond
-                .range-date-calendar__input.js-range-date-calendar__input
+                .range-date-calendar__field-input.js-range-date-calendar__input
                     .range-date-calendar__masked-departure.js-range-date-calendar__masked-departure(data-complete ="false")
                         +text-input({ isMasked: true, name: 'departure' })
-                    .range-date-calendar__container-arrow
+                    .range-date-calendar__container-arrow.js-range-date-calendar__container-arrow
                         .range-date-calendar__arrow
                             +expand-more-arrow
         .range-date-calendar__container-calendar

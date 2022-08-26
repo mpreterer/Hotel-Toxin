@@ -1,0 +1,34 @@
+@import '@variables';
+
+.footer-nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4px;
+  
+    &__link {
+      color: $color-shade-grey;
+      text-decoration: none;
+    }
+  
+    &__blocks {
+      min-width: 160px;
+  
+      &:nth-child(2) {
+        margin-left: 10px;
+      }
+    }
+  
+    &__list {
+      margin-top: 0;
+    }
+  
+    &__title-list {
+      display: block;
+      margin-bottom: 10px;
+      color: $color-shade-dark;
+      font-weight: bold;
+      font-size: $font-size-small;
+      text-transform: uppercase;
+    }
+  }
+  

@@ -35,14 +35,14 @@
     margin-bottom: 10px;
   }
 
-  &__has-account {
+  &__account {
     display: flex;
     justify-content: space-between;
     height: 44px;
     margin-top: 30px;
   }
 
-  &__has-account .login {
+  &__account .login {
     width: 97.4px;
     height: 42.4px;
     color: $color-purple;
@@ -74,7 +74,7 @@
     margin: 0;
   }
 
-  &__has-account .login p {
+  &__account .login p {
     margin: 0;
   }
 

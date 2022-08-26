@@ -17,7 +17,7 @@ class DropDown {
     this.appointment = this.container.getAttribute('data-attribute-appointment');
     this.btnPlus = this.container.querySelectorAll('.drop-down__circle-plus');
     this.btnMinus = this.container.querySelectorAll('.drop-down__circle-minus');
-    this.controlPanel = this.container.querySelector('.drop-down__function');
+    this.controlPanel = this.container.querySelector('.drop-down__control-panel');
     this.hasControlPanel = this.controlPanel !== null && this.controlPanel !== undefined;
 
     if (this.hasControlPanel) {

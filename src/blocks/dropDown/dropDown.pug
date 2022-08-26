@@ -10,12 +10,12 @@ mixin dropDown({placeholder = 'Сколько гостей',appointment,isOpen =
             .drop-down__items.js-drop-down__items
                 each element in list
                     .drop-down__row
-                        span.drop-down__dropItem(data-item-name= element.name) #{element.name}
+                        span.drop-down__drop-item(data-item-name= element.name) #{element.name}
                         .drop-down__block-input
                             button.drop-down__circle.js-drop-down__minus -
                             input.drop-down__counter.js-drop-down__counter(value= element.val || 0 readonly) 
                             button.drop-down__circle.drop-down__circle-plus.js-drop-down__plus +
                 if showFunction
-                    .drop-down__function
-                        button.drop-down__function-btn.js-drop-down_clear Очистить
-                        button.drop-down__function-btn.js-drop-down_apply Применить
+                    .drop-down__control-panel
+                        button.drop-down__functional-buttons.js-drop-down_clear Очистить
+                        button.drop-down__functional-buttons.js-drop-down_apply Применить

@@ -5,5 +5,5 @@ mixin footer-nav-menu({ navList = [] }={})
                 span.footer-nav-menu__title-list= list.title
                 ul.footer-nav-menu__list
                     each link in list.links
-                        li.footer-nav-menu__li
+                        li.footer-nav-menu__item
                             a(href= link.href).footer-nav-menu__link= link.title
