@@ -16,9 +16,9 @@ class CheckboxList {
 
   _eventOpen() {
     if (this.isOpen) {
-      this.$menu.classList.remove('checkbox-list__name_hide');
+      this.$menu.classList.remove('checkbox-list__name_hidden');
     } else {
-      this.$menu.classList.add('checkbox-list__name_hide');
+      this.$menu.classList.add('checkbox-list__name_hidden');
     }
 
     this.$input.addEventListener('click', this._openList.bind(this));
@@ -44,17 +44,17 @@ class CheckboxList {
   }
 
   _openList() {
-    if (this.$menu.classList.contains('checkbox-list__name_hide')) {
-      this.$menu.classList.remove('checkbox-list__name_hide');
+    if (this.$menu.classList.contains('checkbox-list__name_hidden')) {
+      this.$menu.classList.remove('checkbox-list__name_hidden');
       this._rotateArrow(true);
     } else {
-      this.$menu.classList.toggle('checkbox-list__name_hide');
+      this.$menu.classList.toggle('checkbox-list__name_hidden');
       this._rotateArrow(false);
     }
   }
 
   _hideList() {
-    this.$menu.classList.add('checkbox-list__name_hide');
+    this.$menu.classList.add('checkbox-list__name_hidden');
     this.$arrow.classList.remove('arrow-expend-btn_active');
   }
 
