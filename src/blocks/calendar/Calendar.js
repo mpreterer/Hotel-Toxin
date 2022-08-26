@@ -2,8 +2,7 @@ import 'air-datepicker';
 
 class Calendar {
   constructor(params) {
-    this.$body = $(params.body).find('.js-calendar-container');
-    this.container = document.querySelector('.js-calendar-container');
+    this.$body = $(params.body).find('.js-calendar');
     this.options = params.options || {};
     this.isOpen = this.$body.attr('data-is-open');
     this.initIsOpen = params.isOpen;

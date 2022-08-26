@@ -221,7 +221,7 @@
 
 @media all and (max-width: 380px) {
   .room-details {
-    & .calendar-container {
+    & .calendar {
       transform: translate(-32px, 5px);
     }
   }

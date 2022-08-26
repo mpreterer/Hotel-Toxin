@@ -161,7 +161,7 @@
       width: auto;
     }
 
-    & .calendar-container {
+    & .calendar {
       transform: translate(-15px, 5px);
     }
   }
@@ -169,7 +169,7 @@
 
 @media all and (max-width: 340px) {
   .filter {
-    & .calendar-container {
+    & .calendar {
       transform: translate(-36px, 5px);
     }
   }

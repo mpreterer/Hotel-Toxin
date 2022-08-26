@@ -6,7 +6,6 @@ class AloneCalendar {
     this.body = document.querySelector('body');
     this.$placeholder = this.$container.querySelector('.js-alone-calendar__placeholder');
     this.$calendarBody = this.$container.querySelector('.js-alone-calendar__calendar');
-    this.$calendar = this.$container.querySelector('.js-calendar-container');
     this.$inputCalendar = this.$container.querySelector('.js-alone-calendar__calendar-container');
     this.hasOpenCalendar = this.$container.getAttribute('data-is-open');
     this.dateFormat = this.$container.getAttribute('data-format');

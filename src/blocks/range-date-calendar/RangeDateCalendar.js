@@ -10,7 +10,6 @@ class RangeDateCalendar {
     this.$inputDeparture = this.departure.querySelector('[data-masked]');
     this.$inputOpen = this.$container.querySelectorAll('.js-range-date-calendar__field-input');
     this.$containerCalendar = this.$container.querySelector('.js-range-date-calendar__calendar');
-    this.$calendar = this.$container.querySelector('.js-calendar-container');
     this.$clearButton = $(this.$containerCalendar).find('[data-button-type="clear"]');
     this.$arrow = this.$container.querySelectorAll('.js-range-date-calendar__container-arrow');
     this.hasOpenCalendar = this.$container.getAttribute('data-is-open');

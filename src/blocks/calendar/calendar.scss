@@ -1,6 +1,6 @@
 @import '@variables';
 
-.calendar-container {
+.calendar {
   position: absolute;
   z-index: 99;
   background-color: #fff;
@@ -10,6 +10,20 @@
 
   &__hidden {
     display: none;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 20px;
+    color: $color-purple;
+    font-weight: bold;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    cursor: pointer;
   }
 }
 
@@ -38,20 +52,4 @@
   background-position: center;
   transform: rotate(180deg);
   content: '';
-}
-
-.calendar {
-  &__buttons {
-    display: flex;
-    justify-content: space-between;
-    margin: 15px 20px;
-    color: $color-purple;
-    font-weight: bold;
-    font-size: $font-size-small;
-    text-transform: uppercase;
-  }
-
-  &__button {
-    cursor: pointer;
-  }
 }
