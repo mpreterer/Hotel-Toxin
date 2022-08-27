@@ -14,6 +14,40 @@ class Calendar {
     this._bindEventButtons();
   }
 
+  observeShowCalendarEvent(observer) {
+    const isCorrectObserver = observer !== undefined && observer !== null;
+
+    if (isCorrectObserver) {
+      this.observers.push(observer);
+    }
+  }
+
+  showCalendar() {
+    this.$body.show();
+    this.isOpen = true;
+  }
+
+  deleteClearBtn() {
+    this.$body.find('[data-button-type="clear"]').addClass('calendar__clear-btn_close');
+  }
+
+  addClearBtn() {
+    this.$body.find('[data-button-type="clear"]').removeClass('calendar__clear-btn_close');
+  }
+
+  checkIsOpen() {
+    if (this.isOpen) {
+      this.hiddenClear();
+    } else {
+      this.showCalendar();
+    }
+  }
+
+  hiddenClear() {
+    this.$body.hide();
+    this.isOpen = false;
+  }
+
   _init(options) {
     const optionDefault = {
       language: 'ru',
@@ -39,28 +73,13 @@ class Calendar {
       this.addClearBtn();
     }
 
-    this._bindEventEsc();
+    this.bodyPage.addEventListener('keydown', this._bindEventEsc.bind(this));
   }
 
-  _bindEventEsc() {
-    this.bodyPage.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        this.hiddenClear();
-      }
-    });
-  }
-
-  observeShowCalendarEvent(observer) {
-    const isCorrectObserver = observer !== undefined && observer !== null;
-
-    if (isCorrectObserver) {
-      this.observers.push(observer);
+  _bindEventEsc(event) {
+    if (event.key === 'Escape') {
+      this.hiddenClear();
     }
-  }
-
-  showCalendar() {
-    this.$body.show();
-    this.isOpen = true;
   }
 
   _addButtons() {
@@ -88,14 +107,6 @@ class Calendar {
     }
   }
 
-  deleteClearBtn() {
-    this.$body.find('[data-button-type="clear"]').addClass('calendar__clear-btn_close');
-  }
-
-  addClearBtn() {
-    this.$body.find('[data-button-type="clear"]').removeClass('calendar__clear-btn_close');
-  }
-
   _bindEventButtons() {
     const $clearBtn = this.$body.find('[data-button-type="clear"]');
     const $confirmBtn = this.$body.find('[data-button-type="confirm"]');
@@ -107,19 +118,6 @@ class Calendar {
   _handleClearBtnClick() {
     this._resetDate();
     this.$body.find('[data-button-type="clear"]').addClass('calendar__clear-btn_close');
-  }
-
-  checkIsOpen() {
-    if (this.isOpen) {
-      this.hiddenClear();
-    } else {
-      this.showCalendar();
-    }
-  }
-
-  hiddenClear() {
-    this.$body.hide();
-    this.isOpen = false;
   }
 
   _handleConfirmClick() {

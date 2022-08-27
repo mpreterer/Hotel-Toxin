@@ -12,15 +12,13 @@ class NavBurger {
 
   _initEvents() {
     this.container.addEventListener('click', this._eventOpen.bind(this));
-    this._eventGlobalClose();
+    this.body.addEventListener('click', this._eventGlobalClose.bind(this));
   }
 
-  _eventGlobalClose() {
-    this.body.addEventListener('click', (event) => {
-      if (!this.container.contains(event.target)) {
-        this.menu.classList.remove('nav-burger__menu-burger_open');
-      }
-    });
+  _eventGlobalClose(event) {
+    if (!this.container.contains(event.target)) {
+      this.menu.classList.remove('nav-burger__menu-burger_open');
+    }
   }
 
   _eventOpen() {

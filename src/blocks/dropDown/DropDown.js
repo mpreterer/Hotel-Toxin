@@ -30,29 +30,22 @@ class DropDown {
     }
     
     this._checkOptions();
-    this._openDropDown();
-    this._openDropDownKeyDown();
+    this._bindEvents();
     this._dropDownCounter();
   }
 
-  _openDropDownKeyDown() {
-    this.container.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter') {
-        if (this.counterPanel.classList.contains('drop-down__drop-block_close')) {
-          this.counterPanel.classList.remove('drop-down__drop-block_close');
-          this.counterPanel.classList.add('drop-down__drop-block_open');
-          this.open.classList.toggle('drop-down__name_active');
-        } else {
-          this.counterPanel.classList.remove('drop-down__drop-block_open');
-          this.counterPanel.classList.add('drop-down__drop-block_close');
-          this.open.classList.toggle('drop-down__name_active');
-        }
-      }
-    });
+  _bindEvents() {
+    this.open.addEventListener('click', this._openDropDown.bind(this));
+    this.container.addEventListener('keydown', this._openDropDownKeyDown.bind(this));
+    this.body.addEventListener('click', this._closeDropDownGlobal.bind(this));
+
+    if (this.hasControlPanel) {
+      this.btnApply.addEventListener('click', this._btnApply.bind(this));
+    }
   }
 
-  _openDropDown() {
-    this.open.addEventListener('click', () => {
+  _openDropDownKeyDown(event) {
+    if (event.key === 'Enter') {
       if (this.counterPanel.classList.contains('drop-down__drop-block_close')) {
         this.counterPanel.classList.remove('drop-down__drop-block_close');
         this.counterPanel.classList.add('drop-down__drop-block_open');
@@ -62,13 +55,19 @@ class DropDown {
         this.counterPanel.classList.add('drop-down__drop-block_close');
         this.open.classList.toggle('drop-down__name_active');
       }
-    });
-
-    if (this.hasControlPanel) {
-      this._btnApply();
     }
+  }
 
-    this._closeDropDownGlobal();
+  _openDropDown() {
+    if (this.counterPanel.classList.contains('drop-down__drop-block_close')) {
+      this.counterPanel.classList.remove('drop-down__drop-block_close');
+      this.counterPanel.classList.add('drop-down__drop-block_open');
+      this.open.classList.toggle('drop-down__name_active');
+    } else {
+      this.counterPanel.classList.remove('drop-down__drop-block_open');
+      this.counterPanel.classList.add('drop-down__drop-block_close');
+      this.open.classList.toggle('drop-down__name_active');
+    }
   }
 
   _arrayKeyPhrases() {
@@ -78,16 +77,14 @@ class DropDown {
     this.keyWordsArray = arrayCorrectPhrases;
   }
 
-  _closeDropDownGlobal() {
-    this.body.addEventListener('click', (event) => {
-      if (!this.container.contains(event.target)) {
-        this.counterPanel.classList.remove('drop-down__drop-block_open');
-        this.counterPanel.classList.add('drop-down__drop-block_close');
-        if (this.open.classList.contains('drop-down__name_active')) {
-          this.open.classList.remove('drop-down__name_active');
-        }
+  _closeDropDownGlobal(event) {
+    if (!this.container.contains(event.target)) {
+      this.counterPanel.classList.remove('drop-down__drop-block_open');
+      this.counterPanel.classList.add('drop-down__drop-block_close');
+      if (this.open.classList.contains('drop-down__name_active')) {
+        this.open.classList.remove('drop-down__name_active');
       }
-    });
+    }
   }
 
   _dropDownCounter() {
@@ -218,10 +215,8 @@ class DropDown {
   }
 
   _btnApply() {
-    this.btnApply.addEventListener('click', () => {
-      this.counterPanel.classList.remove('drop-down__control-panel_open');
-      this.counterPanel.classList.add('drop-down__control-panel_close');
-    });
+    this.counterPanel.classList.remove('drop-down__control-panel_open');
+    this.counterPanel.classList.add('drop-down__control-panel_close');
   }
 
   _counterGuests(countArray) {

@@ -45,14 +45,15 @@ class ImpressionsRoom {
 
   _setBindItems() {
     this.$items.forEach((el) => {
-      el.addEventListener('focus', () => {
-        const colorComment = JSON.parse(el.getAttribute('data-colors'))[0];
-        
-        this.count.innerHTML = el.getAttribute('data-set-comment');
-        this.count.style.color = colorComment;
-        this.countDesc.style.color = colorComment;
-      });
+      el.addEventListener('focus', this._setCountComment.bind(this));
     });
+  }
+
+  _setCountComment(el) {
+    const colorComment = JSON.parse(el.path[0].getAttribute('data-colors'))[0];
+    this.count.innerHTML = el.path[0].getAttribute('data-set-comment');
+    this.count.style.color = colorComment;
+    this.countDesc.style.color = colorComment;
   }
 
   _setCommentResult() {
