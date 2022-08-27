@@ -6,15 +6,16 @@
   width: 283px;
   margin-right: 87px;
 
+  @media (max-width: 693px) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
   &__title {
     margin-top: 0;
     margin-bottom: 24px;
     padding-left: 12px;
     font-size: $font-size-medium;
-  }
-
-  & p {
-    margin: 0;
   }
 
   &__list {
@@ -31,10 +32,7 @@
     width: 233px;
     margin-left: 17px;
     line-height: 24px;
-
-    & p {
-      font-size: 14px;
-    }
+    font-size: 14px;
   }
 
   &__item {
@@ -46,26 +44,24 @@
     border-bottom: 1px solid #1f20411a;
   }
 
-  &__list:last-child li {
+  &__list:last-child .about-room__item {
     padding-bottom: 0;
     border: none;
   }
 
-  &__advantage-title {
+  &__advantage-title {  
     color: $color-shade-secondary;
     font-weight: bold;
+    margin: 0;
+  }
+
+  &__advantage {
+    margin: 0;
   }
 
   &__icon {
     width: 40px;
     height: 40px;
     margin-left: 14px;
-  }
-}
-
-@media all and (max-width: 693px) {
-  .about-room {
-    margin-right: 0;
-    margin-bottom: 30px;
   }
 }

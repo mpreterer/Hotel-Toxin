@@ -45,10 +45,8 @@
     border-color: $color-purple;
     transition: 0.3s;
   }
-}
 
-@media screen and (max-width: 480px) {
-  .toggle {
+  @media (max-width: 480px) {
     width: 260px;
     font-size: $font-size-small;
   }

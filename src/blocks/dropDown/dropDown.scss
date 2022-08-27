@@ -5,10 +5,6 @@
   width: 100%;
   user-select: none;
 
-  & input {
-    font-family: $font-family-main;
-  }
-
   &__name {
     display: flex;
     align-items: center;
@@ -31,6 +27,14 @@
     position: absolute;
     z-index: 98;
     width: 100%;
+
+    &_close {
+      display: none;
+    }
+
+    &_open {
+      display: block;
+    }
   }
 
   &__drop-item {
@@ -51,11 +55,6 @@
     border-radius: 0 0 4px 4px;
     box-shadow: 0 10px 20px $color-shade-light;
     cursor: default;
-
-    & input {
-      text-align: center;
-      border: none;
-    }
   }
 
   &__block-input {
@@ -73,10 +72,6 @@
     margin-top: 7px;
     font-size: $font-size-small;
     text-transform: uppercase;
-
-    & input {
-      width: 30px;
-    }
   }
 
   &__circle {
@@ -125,6 +120,16 @@
     background-color: #fff;
     border: none;
     cursor: pointer;
+
+    &:nth-child(1) {
+      padding-left: 0;
+      font-family: $font-family-main;
+    }
+
+    &:nth-child(2) {
+      padding-right: 0;
+      font-family: $font-family-main;
+    }
   }
 
   &__control-panel {
@@ -135,16 +140,12 @@
     color: #1f2041;
     font-weight: bold;
 
-    & button.js-drop-down {
-      &_clear {
-        padding-left: 0;
-        font-family: $font-family-main;
-      }
-
-      &_apply {
-        padding-right: 0;
-        font-family: $font-family-main;
-      }
+    &_close {
+      display: none;
+    }
+  
+    &_open {
+      display: block;
     }
   }
 
@@ -156,14 +157,19 @@
     outline: none;
     cursor: pointer;
     user-select: none;
+    font-family: $font-family-main;
   }
 
   &__counter {
+    width: 30px;
     color: $color-shade-dark;
     font-weight: bold;
     font-size: $font-size-small;
     line-height: 12px;
     text-transform: uppercase;
+    font-family: $font-family-main;
+    text-align: center;
+    border: none;
   }
 
   &__function-clear {
@@ -175,19 +181,11 @@
     top: 17px;
     right: 15px;
   }
-}
 
-.js-not-clear {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.js-drop {
-  &_close {
-    display: none;
-  }
-
-  &_open {
-    display: block;
+  &__btn-clear {
+    &_transparent {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }

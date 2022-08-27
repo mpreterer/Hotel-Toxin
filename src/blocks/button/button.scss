@@ -14,35 +14,37 @@
   border-radius: 22px;
   user-select: none;
 
-  &_type_long {
-    height: 44px;
-    color: #fff;
-    text-align: center;
-    background: $gradient-main;
-  }
+  &_type {
+    &_long {
+      height: 44px;
+      color: #fff;
+      text-align: center;
+      background: $gradient-main;
+    }
 
-  &_type_border {
-    padding: 12px 20px;
-    color: $color-purple;
-    background: $gradient-main;
-    background-position: center center;
-    background-size: 110% 110%;
-    border: 2px solid transparent;
-    box-shadow: inset 0 0 0 100px #fff;
-  }
+    &_border {
+      padding: 12px 20px;
+      color: $color-purple;
+      background: $gradient-main;
+      background-position: center center;
+      background-size: 110% 110%;
+      border: 2px solid transparent;
+      box-shadow: inset 0 0 0 100px #fff;
+    }
 
-  &_type_background {
-    padding: 14px 20px;
-    color: #fff;
-    background: $gradient-main;
-  }
+    &_background {
+      padding: 14px 20px;
+      color: #fff;
+      background: $gradient-main;
+    }
 
-  &_type_empty {
-    color: $color-purple;
-    border: none;
-
-    &:hover {
-      color: $color-shade-grey;
+    &_empty {
+      color: $color-purple;
+      border: none;
+  
+      &:hover {
+        color: $color-shade-grey;
+      }
     }
   }
 
@@ -53,16 +55,16 @@
   &:hover {
     opacity: 0.8;
   }
-}
 
-.button-arrow {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 9;
-  width: 44px;
-  height: 44px;
-  background-image: url('./images/arrow-forward.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  &__button-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    width: 44px;
+    height: 44px;
+    background-image: url('./images/arrow-forward.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

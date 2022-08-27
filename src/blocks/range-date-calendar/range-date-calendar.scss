@@ -8,6 +8,10 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 380px) {
+      flex-direction: column;
+    }
   }
 
   &__arrow {
@@ -18,6 +22,10 @@
 
   &__element {
     width: 150px;
+
+    @media (max-width: 380px) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -38,10 +46,10 @@
     border-radius: 4px;
     cursor: pointer;
     user-select: none;
+  }
 
-    & input {
-      border: none;
-    }
+  & .text-field__input-field {
+    border: none;
   }
 
   &__container-arrow {
@@ -51,17 +59,5 @@
 
   &__placeholder {
     display: inline-block;
-  }
-}
-
-@media all and (max-width: 380px) {
-  .range-date-calendar {
-    &__list {
-      flex-direction: column;
-    }
-
-    &__element {
-      width: 100%;
-    }
   }
 }

@@ -27,17 +27,17 @@
     background-position: center;
     pointer-events: none;
   }
-}
 
-.fill-heart {
-  background-image: url('./images/favorite.svg');
-}
+  &_fill-heart {
+    background-image: url('./images/favorite.svg');
+  }
 
-.border-heart {
-  background-image: url('./images/favorite-border.svg');
-}
+  &_border-heart {
+    background-image: url('./images/favorite-border.svg');
+  }
 
-.active-heart {
-  color: $color-purple;
-  border: 1px solid #b59dff;
+  &_active {
+    color: $color-purple;
+    border: 1px solid #b59dff;
+  }
 }

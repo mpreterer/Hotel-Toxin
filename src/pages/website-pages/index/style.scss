@@ -22,23 +22,13 @@
     margin-right: 15px;
     font-size: $font-size-main;
     text-align: right;
+
+    @media (max-width: 650px) {
+      display: none;
+    }
   }
 
   &__filter-item {
     padding: 70px 5px 0;
-  }
-}
-
-@media all and (max-width: 1200px) {
-  .logotype {
-    margin-left: 10px;
-  }
-}
-
-@media all and (max-width: 650px) {
-  .index-main {
-    &__description {
-      display: none;
-    }
   }
 }

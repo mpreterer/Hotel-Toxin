@@ -50,26 +50,8 @@
     margin: 0;
     font-size: $font-size-main;
   }
-}
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .login-card {
+  @media (min-width: 320px) and (max-width: 480px) {
     max-width: 320px;
-
-    & input {
-      width: 260px;
-    }
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .login-card {
-    &__container {
-      & .btn {
-        &_login {
-          width: 260px;
-        }
-      }
-    }
   }
 }

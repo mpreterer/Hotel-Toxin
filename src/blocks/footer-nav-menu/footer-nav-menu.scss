@@ -8,6 +8,11 @@
     &__link {
       color: $color-shade-grey;
       text-decoration: none;
+
+      &:hover {
+        color: $color-shade-secondary;
+        font-weight: bold;
+      }
     }
   
     &__blocks {
@@ -20,15 +25,23 @@
   
     &__list {
       margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      list-style: none;
     }
   
     &__title-list {
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 21px;
       color: $color-shade-dark;
       font-weight: bold;
       font-size: $font-size-small;
       text-transform: uppercase;
+    }
+
+    &__item {
+      margin-bottom: 20px;
     }
   }
   

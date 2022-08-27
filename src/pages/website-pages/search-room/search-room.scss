@@ -20,6 +20,18 @@
     align-items: center;
     justify-content: space-evenly;
     margin: 0 auto;
+
+    @media (max-width: 905px) {
+      margin: 0 50px;
+    }
+
+    @media (max-width: 665px) {
+      margin: 0 70px;
+    }
+    
+    @media (max-width: 520px) {
+      margin: 0;
+    }
   }
 
   &__arrival-in-hotel {
@@ -43,12 +55,6 @@
   &__order-in-room {
     width: 266px;
     height: 128px;
-
-    & .search-room {
-      &__title {
-        margin-bottom: 20px;
-      }
-    }
   }
 
   &__availability {
@@ -58,12 +64,6 @@
     height: 148px;
     margin: 34px 0 28px;
     user-select: none;
-
-    & .search-room {
-      &__title {
-        margin-bottom: 12px;
-      }
-    }
   }
 
   &__furniture {
@@ -77,10 +77,23 @@
       margin-bottom: 20px;
     }
 
-    & h2 {
-      margin: 0 0 21px 7px;
-      font-size: $font-size-big;
-      line-height: 30px;
+    @media (max-width: 1355px) {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      margin-left: 0;
+    }
+  }
+
+  &__number-for-user {
+    margin: 0 0 21px 7px;
+    font-size: $font-size-big;
+    line-height: 30px;
+
+    @media (max-width: 520px) {
+      font-size: 20px;
     }
   }
 
@@ -91,82 +104,28 @@
     padding: 23px 18px 0 0;
     text-align: center;
 
-    & p {
-      color: $color-shade-secondary;
-      font-size: $font-size-main;
+    @media (max-width: 1065px) {
+      padding: 23px 0 0;
     }
   }
 
   &__left-bar {
     max-width: 266px;
     margin-left: 10px;
-  }
-}
 
-@media screen and (max-width: 1355px) {
-  .search-room {
-    width: 80%;
-
-    &__rooms-container {
+    @media (max-width: 1065px) {
       margin: 0 auto;
-      text-align: center;
     }
   }
-}
 
-@media screen and (max-width: 1065px) {
-  .search-room {
+  @media (max-width: 1355px) {
+    width: 80%;
+  }
+
+  
+  @media (max-width: 1065px) {
     display: flex;
     flex-wrap: wrap;
-
-    &__left-bar {
-      margin: 0 auto;
-    }
-  }
-}
-
-@media screen and (max-width: 1065px) {
-  .search-room {
     width: 100%;
-
-    &__pagination-container {
-      padding: 23px 0 0;
-    }
-  }
-}
-
-@media screen and (max-width: 905px) {
-  .search-room {
-    &__rooms {
-      margin: 0 50px;
-    }
-  }
-}
-
-@media screen and (max-width: 665px) {
-  .search-room {
-    &__rooms {
-      margin: 0 70px;
-    }
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .search-room {
-    &__rooms-container {
-      margin-left: 0;
-    }
-
-    &__rooms {
-      margin: 0;
-    }
-  }
-}
-
-@media screen and (max-width: 520px) {
-  h2.search-room {
-    &__number-for-user {
-      font-size: 20px;
-    }
   }
 }

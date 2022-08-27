@@ -73,29 +73,26 @@
 
   &__right-block {
     width: 436px;
+  }
 
-    &-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 50px;
+  &__right-block-list {
+    padding: 0;
+    list-style: none;
+  }
 
-      & p {
-        margin: 0;
-      }
-    }
+  &__right-block-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
 
-    &-item:last-child {
+    &:last-child {
       margin-bottom: 0;
-    }
-
-    &-list {
-      padding: 0;
-      list-style: none;
     }
   }
 
   &__description {
     width: 369px;
+    margin: 0;
   }
 
   &__big-text {
@@ -132,5 +129,6 @@
 
   &__text-size-caption {
     font-weight: bold;
+    margin: 0;
   }
 }

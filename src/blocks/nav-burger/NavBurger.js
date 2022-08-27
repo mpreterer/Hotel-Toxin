@@ -18,16 +18,16 @@ class NavBurger {
   _eventGlobalClose() {
     this.body.addEventListener('click', (event) => {
       if (!this.container.contains(event.target)) {
-        this.menu.classList.remove('js-nav-burger_open');
+        this.menu.classList.remove('nav-burger__menu-burger_open');
       }
     });
   }
 
   _eventOpen() {
-    if (this.menu.classList.contains('js-nav-burger_open')) {
-      this.menu.classList.remove('js-nav-burger_open');
+    if (this.menu.classList.contains('nav-burger__menu-burger_open')) {
+      this.menu.classList.remove('nav-burger__menu-burger_open');
     } else {
-      this.menu.classList.add('js-nav-burger_open');
+      this.menu.classList.add('nav-burger__menu-burger_open');
     }
   }
 }

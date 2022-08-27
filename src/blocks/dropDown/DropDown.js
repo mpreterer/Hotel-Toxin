@@ -21,8 +21,8 @@ class DropDown {
     this.hasControlPanel = this.controlPanel !== null && this.controlPanel !== undefined;
 
     if (this.hasControlPanel) {
-      this.btnApply = this.container.querySelector('.js-drop-down_apply');
-      this.btnClear = this.container.querySelector('.js-drop-down_clear');
+      this.btnApply = this.container.querySelector('.js-drop-down__button-apply');
+      this.btnClear = this.container.querySelector('.js-drop-down__button-clear');
     }
 
     if (this.appointment === 'guests') {
@@ -38,13 +38,13 @@ class DropDown {
   _openDropDownKeyDown() {
     this.container.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
-        if (this.counterPanel.classList.contains('js-drop_close')) {
-          this.counterPanel.classList.toggle('js-drop_close');
-          this.counterPanel.classList.add('js-drop_open');
+        if (this.counterPanel.classList.contains('drop-down__drop-block_close')) {
+          this.counterPanel.classList.remove('drop-down__drop-block_close');
+          this.counterPanel.classList.add('drop-down__drop-block_open');
           this.open.classList.toggle('drop-down__name_active');
         } else {
-          this.counterPanel.classList.toggle('js-drop_open');
-          this.counterPanel.classList.add('js-drop_close');
+          this.counterPanel.classList.remove('drop-down__drop-block_open');
+          this.counterPanel.classList.add('drop-down__drop-block_close');
           this.open.classList.toggle('drop-down__name_active');
         }
       }
@@ -53,13 +53,13 @@ class DropDown {
 
   _openDropDown() {
     this.open.addEventListener('click', () => {
-      if (this.counterPanel.classList.contains('js-drop_close')) {
-        this.counterPanel.classList.toggle('js-drop_close');
-        this.counterPanel.classList.add('js-drop_open');
+      if (this.counterPanel.classList.contains('drop-down__drop-block_close')) {
+        this.counterPanel.classList.remove('drop-down__drop-block_close');
+        this.counterPanel.classList.add('drop-down__drop-block_open');
         this.open.classList.toggle('drop-down__name_active');
       } else {
-        this.counterPanel.classList.toggle('js-drop_open');
-        this.counterPanel.classList.add('js-drop_close');
+        this.counterPanel.classList.remove('drop-down__drop-block_open');
+        this.counterPanel.classList.add('drop-down__drop-block_close');
         this.open.classList.toggle('drop-down__name_active');
       }
     });
@@ -81,8 +81,8 @@ class DropDown {
   _closeDropDownGlobal() {
     this.body.addEventListener('click', (event) => {
       if (!this.container.contains(event.target)) {
-        this.counterPanel.classList.remove('js-drop_open');
-        this.counterPanel.classList.add('js-drop_close');
+        this.counterPanel.classList.remove('drop-down__drop-block_open');
+        this.counterPanel.classList.add('drop-down__drop-block_close');
         if (this.open.classList.contains('drop-down__name_active')) {
           this.open.classList.remove('drop-down__name_active');
         }
@@ -180,10 +180,10 @@ class DropDown {
     });
 
     if (checkCount > 0) {
-      this.btnClear.classList.remove('js-not-clear');
+      this.btnClear.classList.remove('drop-down__btn-clear_transparent');
       this.btnClear.addEventListener('click', this._clearAllCounter.bind(this));
     } else {
-      this.btnClear.classList.add('js-not-clear');
+      this.btnClear.classList.add('drop-down__btn-clear_transparent');
       this.btnClear.removeEventListener('click', this._clearAllCounter.bind(this));
     }
   }
@@ -219,8 +219,8 @@ class DropDown {
 
   _btnApply() {
     this.btnApply.addEventListener('click', () => {
-      this.counterPanel.classList.remove('js-drop_open');
-      this.counterPanel.classList.add('js-drop_close');
+      this.counterPanel.classList.remove('drop-down__control-panel_open');
+      this.counterPanel.classList.add('drop-down__control-panel_close');
     });
   }
 

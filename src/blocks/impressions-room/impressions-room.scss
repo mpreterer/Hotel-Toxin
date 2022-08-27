@@ -5,10 +5,6 @@
     display: flex;
   }
 
-  &__count, &__desc {
-    color: $color-shade-grey;
-  }
-
   &__title {
     margin-top: 0;
     margin-bottom: 24px;
@@ -30,22 +26,22 @@
     text-align: center;
   }
 
-  &__comments-count p {
-    margin: 0;
-  }
-
-  &__comments-count p:first-child {
+  &__count {
     font-weight: 700;
     font-size: 1.714rem;
     line-height: 29px;
     text-transform: uppercase;
+    color: $color-shade-grey;
+    margin: 0;
   }
 
-  &__comments-count p:last-child {
+  &__desc {
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
+    color: $color-shade-grey;
+    margin: 0;
   }
 
   &__list {

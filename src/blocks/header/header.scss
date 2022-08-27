@@ -15,6 +15,10 @@
     min-height: 69.5px;
     margin: 0 auto;
     user-select: none;
+
+    @media (max-width: 425px) {
+      margin-bottom: 50px;
+    }
   }
 
   &__right-part {
@@ -23,6 +27,11 @@
     justify-content: space-around;
     height: 34px;
     text-align: center;
+
+    @media (max-width: 1200px) {
+      display: none;
+      justify-content: space-between;
+    }
   }
 
   &__user {
@@ -47,11 +56,6 @@
     font-size: $font-size-small;
     text-align: center;
     text-transform: uppercase;
-
-    & p {
-      margin: 7px 0;
-      padding: 0;
-    }
   }
 
   &__btn-login {
@@ -60,38 +64,14 @@
     &:hover {
       opacity: 0.5;
     }
-
-    & a {
-      color: $color-purple;
-    }
   }
 
   &__btn-registration {
     width: auto;
 
-    & a {
+    & .button_type_background {
       margin-left: 5px;
       padding: 9px 22px;
-      color: #fff;
-      background: $gradient-main;
-      border-radius: 22px;
-    }
-  }
-}
-
-@media all and (max-width: 1200px) {
-  .header {
-    &__right-part {
-      display: none;
-      justify-content: space-between;
-    }
-  }
-}
-
-@media all and (max-width: 425px) {
-  .header {
-    &__container {
-      margin-bottom: 50px;
     }
   }
 }

@@ -16,26 +16,6 @@
     height: 151px;
   }
 
-  &__container .circle {
-    box-sizing: border-box;
-    width: 7.5px;
-    height: 7.49px;
-    margin-right: 3.75px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    box-shadow: 0 5px 5px rgb(31 32 65 / 30%);
-    filter: drop-shadow(0 5px 5px rgb(31 32 65 / 30%));
-  }
-
-  &__container .circle:last-child {
-    margin: 0;
-  }
-
-  &__container .circle a {
-    margin: 0;
-    padding: 0;
-  }
-
   &__rating {
     position: absolute;
     right: 20px;
@@ -47,23 +27,6 @@
     height: 32px;
     padding-top: 5px;
     border-top: 1px solid #e8e8ec;
-  }
-
-  &__rating ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .slick-next:focus {
-    opacity: 1;
-    transition: 0.3s;
-  }
-
-  .slick-prev:focus {
-    opacity: 1;
-    transition: 0.3s;
   }
 
   &__slider-rooms:hover > button.slick-next.slick-arrow {
@@ -104,18 +67,6 @@
     display: flex;
     font-family: $font-family-main;
     text-decoration: none;
-  }
-
-  &__head-room h2,
-  h3 {
-    margin: 0;
-    padding: 0;
-  }
-
-  & p.room-info {
-    &__price {
-      margin-left: 10px;
-    }
   }
 
   &__number-room {

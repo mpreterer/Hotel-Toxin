@@ -6,7 +6,7 @@ mixin dropDown({placeholder = 'Сколько гостей',appointment,isOpen =
             input.drop-down__counts-guests.js-drop-down__counts-guests(placeholder=placeholder readonly value="")
             .drop-down__arrow
                 +expand-more-arrow
-        .drop-down__drop-block.js-drop-down__drop-block(class= isOpen ? "js-drop_open" : "js-drop_close")
+        .drop-down__drop-block.js-drop-down__drop-block(class= isOpen ? "drop-down__drop-block_open" : "drop-down__drop-block_close")
             .drop-down__items.js-drop-down__items
                 each element in list
                     .drop-down__row
@@ -17,5 +17,5 @@ mixin dropDown({placeholder = 'Сколько гостей',appointment,isOpen =
                             button.drop-down__circle.drop-down__circle-plus.js-drop-down__plus +
                 if showFunction
                     .drop-down__control-panel
-                        button.drop-down__functional-buttons.js-drop-down_clear Очистить
-                        button.drop-down__functional-buttons.js-drop-down_apply Применить
+                        button.drop-down__functional-buttons.js-drop-down__button-clear Очистить
+                        button.drop-down__functional-buttons.js-drop-down__button-apply Применить

@@ -26,10 +26,6 @@
     display: flex;
     padding: 0;
     list-style: none;
-
-    & li {
-      margin-bottom: 12px;
-    }
   }
 
   &__avatar {
@@ -41,10 +37,6 @@
     border-radius: 32px;
     border-radius: 50%;
     filter: drop-shadow(0 10px 20px rgb(31 32 65 / 10%));
-
-    & span {
-      margin-left: 60px;
-    }
   }
 
   &__username {
@@ -57,10 +49,8 @@
     display: flex;
     flex-direction: column;
   }
-}
 
-@media all and (max-width: 1200px) {
-  .user-reviews {
+  @media (max-width: 1200px) {
     margin: 10px;
   }
 }
