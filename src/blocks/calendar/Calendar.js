@@ -1,4 +1,5 @@
 import 'air-datepicker';
+import typeCalendar from'./utils/calendarClassNames';
 
 class Calendar {
   constructor(params) {
@@ -28,11 +29,11 @@ class Calendar {
   }
 
   deleteClearBtn() {
-    this.$body.find('[data-button-type="clear"]').addClass('calendar__clear-btn_close');
+    this.$body.find(typeCalendar.CLEAR_BTN).addClass(typeCalendar.CLEAR_BTN_CLOSE);
   }
 
   addClearBtn() {
-    this.$body.find('[data-button-type="clear"]').removeClass('calendar__clear-btn_close');
+    this.$body.find(typeCalendar.CLEAR_BTN).removeClass(typeCalendar.CLEAR_BTN_CLOSE);
   }
 
   checkIsOpen() {
@@ -97,7 +98,7 @@ class Calendar {
     const $datepicker = this.$body.find('.datepicker');
 
     $datepicker.append('<div class="calendar__buttons"></div>');
-    this.$body.find('.calendar__buttons').append([clearButton, confirmButton]);
+    this.$body.find(typeCalendar.BUTTONS).append([clearButton, confirmButton]);
     this.$body.find('[data-button-type="clear"]').addClass('calendar__clear-btn_close');
 
     if (this.initIsOpen) {

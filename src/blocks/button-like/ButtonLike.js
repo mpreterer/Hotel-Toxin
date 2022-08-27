@@ -1,3 +1,5 @@
+import typeButtonLike from './utils/buttonLikeClassNames';
+
 class ButtonLike {
   constructor(domParent) {
     this.$container = domParent;
@@ -16,15 +18,15 @@ class ButtonLike {
   }
 
   _countLike() {
-    if (this.$heart.classList.contains('button-like_fill-heart')) {
-      this.$heart.classList.remove('button-like_fill-heart');
-      this.$container.classList.remove('button-like_active');
+    if (this.$heart.classList.contains(typeButtonLike.FILL)) {
+      this.$heart.classList.remove(typeButtonLike.FILL);
+      this.$container.classList.remove(typeButtonLike.ACTIVE);
     } else {
-      this.$heart.classList.toggle('button-like_fill-heart');
-      this.$container.classList.toggle('button-like_active');
+      this.$heart.classList.toggle(typeButtonLike.FILL);
+      this.$container.classList.toggle(typeButtonLike.ACTIVE);
     }
     
-    this.count.innerText -= [1, -1][+this.$container.classList.contains('button-like_active')];
+    this.count.innerText -= [1, -1][+this.$container.classList.contains(typeButtonLike.ACTIVE)];
   }
 }
 

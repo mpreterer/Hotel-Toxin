@@ -1,3 +1,5 @@
+import typeCheckbox from './utils/checkboxClassNames';
+
 class CheckboxList {
   constructor(domParent) {
     this.$container = domParent;
@@ -7,7 +9,7 @@ class CheckboxList {
 
   _init() {
     this.$input = this.$container.querySelector('.js-checkbox-list__name');
-    this.$arrow = this.$container.querySelector('.arrow-expend-btn');
+    this.$arrow = this.$container.querySelector('.js-checkbox-list__arrow');
     this.$menu = this.$container.querySelector('.js-checkbox-list__menu');
     this.isOpen = this.$container.classList.contains('js-checkbox-list_open');
 
@@ -16,9 +18,9 @@ class CheckboxList {
 
   _eventOpen() {
     if (this.isOpen) {
-      this.$menu.classList.remove('checkbox-list__name_hidden');
+      this.$menu.classList.remove(typeCheckbox.HIDDEN);
     } else {
-      this.$menu.classList.add('checkbox-list__name_hidden');
+      this.$menu.classList.add(typeCheckbox.HIDDEN);
     }
 
     this.$input.addEventListener('click', this._openList.bind(this));
@@ -44,25 +46,25 @@ class CheckboxList {
   }
 
   _openList() {
-    if (this.$menu.classList.contains('checkbox-list__name_hidden')) {
-      this.$menu.classList.remove('checkbox-list__name_hidden');
+    if (this.$menu.classList.contains(typeCheckbox.HIDDEN)) {
+      this.$menu.classList.remove(typeCheckbox.HIDDEN);
       this._rotateArrow(true);
     } else {
-      this.$menu.classList.toggle('checkbox-list__name_hidden');
+      this.$menu.classList.toggle(typeCheckbox.HIDDEN);
       this._rotateArrow(false);
     }
   }
 
   _hideList() {
-    this.$menu.classList.add('checkbox-list__name_hidden');
-    this.$arrow.classList.remove('arrow-expend-btn_active');
+    this.$menu.classList.add(typeCheckbox.HIDDEN);
+    this.$arrow.classList.remove(typeCheckbox.ARROW_ACTIVE);
   }
 
   _rotateArrow(sideTop) {
     if (sideTop) {
-      this.$arrow.classList.add('arrow-expend-btn_active');
+      this.$arrow.classList.add(typeCheckbox.ARROW_ACTIVE);
     } else {
-      this.$arrow.classList.toggle('arrow-expend-btn_active');
+      this.$arrow.classList.toggle(typeCheckbox.ARROW_ACTIVE);
     }
   }
 }

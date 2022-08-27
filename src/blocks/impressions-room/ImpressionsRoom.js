@@ -3,11 +3,11 @@ import Chart from 'chart.js';
 class ImpressionsRoom {
   constructor(domParent) {
     this.$container = domParent;
-    this.$doughnut = this.$container.querySelector('.impressions-room__donut');
-    this.$items = this.$container.querySelectorAll('.impressions-room__item');
-    this.$itemsCircle = this.$container.querySelectorAll('.impressions-room__item-color-circle');
-    this.count = this.$container.querySelector('.impressions-room__count');
-    this.countDesc = this.$container.querySelector('.impressions-room__desc');
+    this.$doughnut = this.$container.querySelector('.js-impressions-room__donut');
+    this.$items = this.$container.querySelectorAll('.js-impressions-room__item');
+    this.$itemsCircle = this.$container.querySelectorAll('.js-impressions-room__item-color-circle');
+    this.count = this.$container.querySelector('.js-impressions-room__count');
+    this.countDesc = this.$container.querySelector('.js-impressions-room__desc');
 
     this._init();
   }

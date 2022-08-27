@@ -1,3 +1,5 @@
+import typeNavMenu from './utils/navMenuClassNames';
+
 class NavMenu {
   constructor(domParent) {
     this.$container = domParent;
@@ -28,23 +30,23 @@ class NavMenu {
   }
 
   _openSubMenuClick(event) {
-    if (event.currentTarget.classList.contains('nav-menu__item_active')) {
-      event.currentTarget.classList.remove('nav-menu__item_active');
-      event.currentTarget.querySelector('.js-nav-menu__submenu').classList.remove('nav-menu__submenu_active');
+    if (event.currentTarget.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
+      event.currentTarget.classList.remove(typeNavMenu.ITEM_ACTIVE);
+      event.currentTarget.querySelector('.js-nav-menu__submenu').classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
     } else {
-      event.currentTarget.classList.add('nav-menu__item_active');
-      event.currentTarget.querySelector('.js-nav-menu__submenu').classList.add('nav-menu__submenu_active');
+      event.currentTarget.classList.add(typeNavMenu.ITEM_ACTIVE);
+      event.currentTarget.querySelector('.js-nav-menu__submenu').classList.add(typeNavMenu.SUB_MENU_ACTIVE);
     }
   }
 
   _openSubMenuKeyDown(event) {
     if (event.key === 'Enter') {
-      if (event.currentTarget.classList.contains('nav-menu__item_active')) {
-        event.currentTarget.classList.remove('nav-menu__item_active');
-        event.currentTarget.querySelector('.js-nav-menu__submenu').classList.remove('nav-menu__submenu_active');
+      if (event.currentTarget.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
+        event.currentTarget.classList.remove(typeNavMenu.ITEM_ACTIVE);
+        event.currentTarget.querySelector('.js-nav-menu__submenu').classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
       } else {
-        event.currentTarget.classList.add('nav-menu__item_active');
-        event.currentTarget.querySelector('.js-nav-menu__submenu').classList.add('nav-menu__submenu_active');
+        event.currentTarget.classList.add(typeNavMenu.ITEM_ACTIVE);
+        event.currentTarget.querySelector('.js-nav-menu__submenu').classList.add(typeNavMenu.SUB_MENU_ACTIVE);
       }
     }
   }
@@ -52,9 +54,9 @@ class NavMenu {
   _eventCloseWithEsc(event) {
     if (event.key === 'Escape') {
       this.$items.forEach((item) => {
-        if (item.classList.contains('nav-menu__item_active')) {
-          item.classList.remove('nav-menu__item_active');
-          item.querySelector('.js-nav-menu__submenu').classList.remove('nav-menu__submenu_active');
+        if (item.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
+          item.classList.remove(typeNavMenu.ITEM_ACTIVE);
+          item.querySelector('.js-nav-menu__submenu').classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
         }
       });
     }
@@ -63,9 +65,9 @@ class NavMenu {
   _globalClose(event) {
     if (!this.$container.contains(event.target)) {
       this.$items.forEach((item) => {
-        if (item.classList.contains('nav-menu__item_active')) {
-          item.classList.remove('nav-menu__item_active');
-          item.querySelector('.js-nav-menu__submenu').classList.remove('nav-menu__submenu_active');
+        if (item.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
+          item.classList.remove(typeNavMenu.ITEM_ACTIVE);
+          item.querySelector('.js-nav-menu__submenu').classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
         }
       });
     }

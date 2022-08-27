@@ -16,6 +16,10 @@
     position: absolute;
     top: 17px;
     right: 15px;
+
+    &_active {
+      transform: rotate(180deg);
+    }
   }
   
   &__container {

@@ -101,14 +101,16 @@
   }
 
   &__circle-minus {
-    border-color: #1f204180;
-
     &:active {
       color: white;
       font-weight: bold;
       background: #c8aeff;
       border-color: white;
       transition: 0.1s;
+    }
+
+    &_clickble {
+      border-color: #1f204180;
     }
   }
 
