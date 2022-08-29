@@ -1,5 +1,5 @@
 import 'air-datepicker';
-import typeCalendar from'./utils/calendarClassNames';
+import typeCalendar from './utils/calendarClassNames';
 
 class Calendar {
   constructor(params) {
@@ -99,7 +99,7 @@ class Calendar {
 
     $datepicker.append('<div class="calendar__buttons"></div>');
     this.$body.find(typeCalendar.BUTTONS).append([clearButton, confirmButton]);
-    this.$body.find('[data-button-type="clear"]').addClass('calendar__clear-btn_close');
+    this.$body.find(typeCalendar.CLEAR_BTN).addClass(typeCalendar.CLEAR_BTN_CLOSE);
 
     if (this.initIsOpen) {
       this.showCalendar();
@@ -109,8 +109,8 @@ class Calendar {
   }
 
   _bindEventButtons() {
-    const $clearBtn = this.$body.find('[data-button-type="clear"]');
-    const $confirmBtn = this.$body.find('[data-button-type="confirm"]');
+    const $clearBtn = this.$body.find(typeCalendar.CLEAR_BTN);
+    const $confirmBtn = this.$body.find(typeCalendar.APPLY_BTN);
 
     $clearBtn.on('click', this._handleClearBtnClick.bind(this));
     $confirmBtn.on('click', this._handleConfirmClick.bind(this));
@@ -118,7 +118,7 @@ class Calendar {
 
   _handleClearBtnClick() {
     this._resetDate();
-    this.$body.find('[data-button-type="clear"]').addClass('calendar__clear-btn_close');
+    this.$body.find(typeCalendar.CLEAR_BTN).addClass(typeCalendar.CLEAR_BTN_CLOSE);
   }
 
   _handleConfirmClick() {
