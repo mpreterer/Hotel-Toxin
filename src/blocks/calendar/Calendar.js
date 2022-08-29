@@ -29,11 +29,11 @@ class Calendar {
   }
 
   deleteClearBtn() {
-    this.$body.find(typeCalendar.CLEAR_BTN).addClass(typeCalendar.CLEAR_BTN_CLOSE);
+    this.$body.find('[data-button-type="clear"]').addClass(typeCalendar.CLEAR_BTN_CLOSE);
   }
 
   addClearBtn() {
-    this.$body.find(typeCalendar.CLEAR_BTN).removeClass(typeCalendar.CLEAR_BTN_CLOSE);
+    this.$body.find('[data-button-type="clear"]').removeClass(typeCalendar.CLEAR_BTN_CLOSE);
   }
 
   checkIsOpen() {
@@ -99,7 +99,7 @@ class Calendar {
 
     $datepicker.append('<div class="calendar__buttons"></div>');
     this.$body.find(typeCalendar.BUTTONS).append([clearButton, confirmButton]);
-    this.$body.find(typeCalendar.CLEAR_BTN).addClass(typeCalendar.CLEAR_BTN_CLOSE);
+    this.$body.find('[data-button-type="clear"]').addClass(typeCalendar.CLEAR_BTN_CLOSE);
 
     if (this.initIsOpen) {
       this.showCalendar();
@@ -109,8 +109,8 @@ class Calendar {
   }
 
   _bindEventButtons() {
-    const $clearBtn = this.$body.find(typeCalendar.CLEAR_BTN);
-    const $confirmBtn = this.$body.find(typeCalendar.APPLY_BTN);
+    const $clearBtn = this.$body.find('[data-button-type="clear"]');
+    const $confirmBtn = this.$body.find('[data-button-type="confirm"]');
 
     $clearBtn.on('click', this._handleClearBtnClick.bind(this));
     $confirmBtn.on('click', this._handleConfirmClick.bind(this));
@@ -118,7 +118,7 @@ class Calendar {
 
   _handleClearBtnClick() {
     this._resetDate();
-    this.$body.find(typeCalendar.CLEAR_BTN).addClass(typeCalendar.CLEAR_BTN_CLOSE);
+    this.$body.find('[data-button-type="clear"]').addClass(typeCalendar.CLEAR_BTN_CLOSE);
   }
 
   _handleConfirmClick() {
