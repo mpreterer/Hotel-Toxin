@@ -60,9 +60,20 @@ class RangeDateCalendar {
     
     const attributeArrival = this.arrival.getAttribute('data-complete');
     const attributeDeparture = this.departure.getAttribute('data-complete');
-    
+
+    const isEnterArrival = valueInputArrival.length === 8;
+    const isEnterDeparture = valueInputDeparture.length === 8;
+    const isNotEmptyDateArrival = this.$inputArrival.value !== '';
+    const isNotEmptyDateDeparture = this.$inputDeparture.value !== '';
+    const isNotUseArrival = attributeArrival === 'false';
+    const isNotUseDeparture = attributeDeparture === 'false';
+
+    const isNotOnlyNumbersDeparture = !isOnlyNumbersDeparture;
+    const isNotOnlyNumbersArrival = !isOnlyNumbersArrival;
+
+
     if (event.key === 'Backspace') {
-      if (isOnlyNumbersDeparture === false && isOnlyNumbersArrival === false) {
+      if (isNotOnlyNumbersDeparture && isNotOnlyNumbersArrival) {
         calendarDate.date = new Date();
       }
 
@@ -74,12 +85,12 @@ class RangeDateCalendar {
         this.departure.setAttribute('data-complete', 'false');
       }
     } else {
-      if (valueInputArrival.length === 8 && this.$inputArrival.value !== '' && isOnlyNumbersArrival && attributeArrival === 'false') {
+      if (isEnterArrival && isNotEmptyDateArrival && isOnlyNumbersArrival && isNotUseArrival) {
         calendarDate.selectDate(new Date(dateYearsArrival, dateMonthArrival, dateDayArrival));
         this.arrival.setAttribute('data-complete', 'true');
       }
   
-      if (valueInputDeparture.length === 8 && this.$inputDeparture.value !== '' && isOnlyNumbersDeparture && attributeDeparture === 'false') {
+      if (isEnterDeparture && isNotEmptyDateDeparture && isOnlyNumbersDeparture && isNotUseDeparture) {
         calendarDate.selectDate(new Date(dateYearsDeparture, dateMonthDeparture, dateDayDeparture));
         this.departure.setAttribute('data-complete', 'true');
       }
