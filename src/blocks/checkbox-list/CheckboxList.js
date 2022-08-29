@@ -26,7 +26,10 @@ class CheckboxList {
     this.$input.addEventListener('click', this._openList.bind(this));
     document.addEventListener('click', this._globalOpen.bind(this), true);
 
-    this.$container.addEventListener('keydown', this._openEventKeyDown.bind(this));
+    this.$container.addEventListener(
+      'keydown',
+      this._openEventKeyDown.bind(this)
+    );
   }
 
   _openEventKeyDown(event) {
@@ -39,7 +42,7 @@ class CheckboxList {
     const { target } = event;
     const isClickOnList = this.$container.contains(target);
     const hasClickOutSideList = !isClickOnList;
-    
+
     if (hasClickOutSideList) {
       this._hideList();
     }

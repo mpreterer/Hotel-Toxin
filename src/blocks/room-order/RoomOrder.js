@@ -2,17 +2,27 @@ class RoomOrder {
   constructor(domParent) {
     this.container = domParent;
     this.body = document.body;
-    this.$inputArrival = this.container.querySelector('.js-range-date-calendar__masked-arrival');
+    this.$inputArrival = this.container.querySelector(
+      '.js-range-date-calendar__masked-arrival'
+    );
     this.$arrival = this.$inputArrival.querySelector('[data-masked]');
-    this.$inputDeparture = this.container.querySelector('.js-range-date-calendar__masked-departure');
+    this.$inputDeparture = this.container.querySelector(
+      '.js-range-date-calendar__masked-departure'
+    );
     this.$departure = this.$inputDeparture.querySelector('[data-masked]');
     this.$priceDay = this.container.querySelector('[data-price="priceDay"]');
-    this.$sumCountFees = this.container.querySelector('[data-price="resultPrice"]');
-    this.$sumWithoutFees = this.container.querySelector('[data-price="priceWithoutFees"]');
+    this.$sumCountFees = this.container.querySelector(
+      '[data-price="resultPrice"]'
+    );
+    this.$sumWithoutFees = this.container.querySelector(
+      '[data-price="priceWithoutFees"]'
+    );
     this.fees = this.container.querySelector('[data-price="feesPrice"]');
     this.services = this.container.querySelector('[data-price="services"]');
     this.sumDays = this.container.querySelector('.js-room-order__sum-day');
-    this.rangeDateCalendar = this.container.querySelector('.js-range-date-calendar');
+    this.rangeDateCalendar = this.container.querySelector(
+      '.js-range-date-calendar'
+    );
 
     this._init();
   }
@@ -50,21 +60,23 @@ class RoomOrder {
     arraySecondDate[2] = tempSecondArray;
     const resulSecondDate = arraySecondDate.join('-');
 
-    return (this._getTime(resulSecondDate) -
-            this._getTime(resulFirstDate)) / millisecondsPerDay;
+    return (
+      (this._getTime(resulSecondDate) - this._getTime(resulFirstDate)) /
+      millisecondsPerDay
+    );
   }
 
   _countPrice() {
     const fees = Number(this.fees.textContent.replace(/\s/g, ''));
     const servicesCount = Number(this.services.textContent.replace(/\s/g, ''));
     const priceDay = Number(this.$priceDay.textContent.replace(/\s/g, ''));
-    
-    const days = this._daysBetween(this.$arrival.value, this.$departure.value);
-    
-    const resultWithFees = (priceDay * days) - fees + servicesCount;
-    const resultWithoutFees = (priceDay * days);
 
-    const isNotNaN = !(Number.isNaN(resultWithFees));
+    const days = this._daysBetween(this.$arrival.value, this.$departure.value);
+
+    const resultWithFees = priceDay * days - fees + servicesCount;
+    const resultWithoutFees = priceDay * days;
+
+    const isNotNaN = !Number.isNaN(resultWithFees);
     const resultWithFeesNotEmpty = resultWithFees > 0;
 
     if (isNotNaN && resultWithFeesNotEmpty) {

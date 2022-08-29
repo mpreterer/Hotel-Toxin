@@ -4,14 +4,26 @@ class RangeDateCalendar {
   constructor(domParent) {
     this.$container = domParent;
     this.body = document.body;
-    this.arrival = this.$container.querySelector('.js-range-date-calendar__masked-arrival');
+    this.arrival = this.$container.querySelector(
+      '.js-range-date-calendar__masked-arrival'
+    );
     this.$inputArrival = this.arrival.querySelector('[data-masked]');
-    this.departure = this.$container.querySelector('.js-range-date-calendar__masked-departure');
+    this.departure = this.$container.querySelector(
+      '.js-range-date-calendar__masked-departure'
+    );
     this.$inputDeparture = this.departure.querySelector('[data-masked]');
-    this.$inputOpen = this.$container.querySelectorAll('.js-range-date-calendar__field-input');
-    this.$containerCalendar = this.$container.querySelector('.js-range-date-calendar__calendar');
-    this.$clearButton = $(this.$containerCalendar).find('[data-button-type="clear"]');
-    this.$arrow = this.$container.querySelectorAll('.js-range-date-calendar__container-arrow');
+    this.$inputOpen = this.$container.querySelectorAll(
+      '.js-range-date-calendar__field-input'
+    );
+    this.$containerCalendar = this.$container.querySelector(
+      '.js-range-date-calendar__calendar'
+    );
+    this.$clearButton = $(this.$containerCalendar).find(
+      '[data-button-type="clear"]'
+    );
+    this.$arrow = this.$container.querySelectorAll(
+      '.js-range-date-calendar__container-arrow'
+    );
     this.hasOpenCalendar = this.$container.getAttribute('data-is-open');
     this.observers = [];
 
@@ -24,11 +36,25 @@ class RangeDateCalendar {
   }
 
   _bindEventListener() {
-    document.addEventListener('click', this._handleGlobalClick.bind(this), true);
-    
-    this.$inputArrival.addEventListener('click', this._handleInputDateClick.bind(this));
-    this.$inputDeparture.addEventListener('click', this._handleInputDateClick.bind(this));
-    this.$container.addEventListener('keydown', this._setDateClick.bind(this), true);
+    document.addEventListener(
+      'click',
+      this._handleGlobalClick.bind(this),
+      true
+    );
+
+    this.$inputArrival.addEventListener(
+      'click',
+      this._handleInputDateClick.bind(this)
+    );
+    this.$inputDeparture.addEventListener(
+      'click',
+      this._handleInputDateClick.bind(this)
+    );
+    this.$container.addEventListener(
+      'keydown',
+      this._setDateClick.bind(this),
+      true
+    );
 
     this.$arrow.forEach((el) => {
       el.addEventListener('click', this._handleArrowClick.bind(this));
@@ -45,7 +71,7 @@ class RangeDateCalendar {
 
   _setDateClick(event) {
     const calendarDate = this.calendar.$body.data('datepicker');
-    
+
     const valueInputDeparture = this.$inputDeparture.value.split('.').join('');
     const isOnlyNumbersDeparture = /^\d+$/.test(valueInputDeparture);
     const dateYearsDeparture = this.$inputDeparture.value.split('.')[2];
@@ -57,7 +83,7 @@ class RangeDateCalendar {
     const dateYearsArrival = this.$inputArrival.value.split('.')[2];
     const dateMonthArrival = this.$inputArrival.value.split('.')[1] - 1;
     const dateDayArrival = this.$inputArrival.value.split('.')[0];
-    
+
     const attributeArrival = this.arrival.getAttribute('data-complete');
     const attributeDeparture = this.departure.getAttribute('data-complete');
 
@@ -70,7 +96,6 @@ class RangeDateCalendar {
 
     const isNotOnlyNumbersDeparture = !isOnlyNumbersDeparture;
     const isNotOnlyNumbersArrival = !isOnlyNumbersArrival;
-
 
     if (event.key === 'Backspace') {
       if (isNotOnlyNumbersDeparture && isNotOnlyNumbersArrival) {
@@ -85,13 +110,27 @@ class RangeDateCalendar {
         this.departure.setAttribute('data-complete', 'false');
       }
     } else {
-      if (isEnterArrival && isNotEmptyDateArrival && isOnlyNumbersArrival && isNotUseArrival) {
-        calendarDate.selectDate(new Date(dateYearsArrival, dateMonthArrival, dateDayArrival));
+      if (
+        isEnterArrival &&
+        isNotEmptyDateArrival &&
+        isOnlyNumbersArrival &&
+        isNotUseArrival
+      ) {
+        calendarDate.selectDate(
+          new Date(dateYearsArrival, dateMonthArrival, dateDayArrival)
+        );
         this.arrival.setAttribute('data-complete', 'true');
       }
-  
-      if (isEnterDeparture && isNotEmptyDateDeparture && isOnlyNumbersDeparture && isNotUseDeparture) {
-        calendarDate.selectDate(new Date(dateYearsDeparture, dateMonthDeparture, dateDayDeparture));
+
+      if (
+        isEnterDeparture &&
+        isNotEmptyDateDeparture &&
+        isOnlyNumbersDeparture &&
+        isNotUseDeparture
+      ) {
+        calendarDate.selectDate(
+          new Date(dateYearsDeparture, dateMonthDeparture, dateDayDeparture)
+        );
         this.departure.setAttribute('data-complete', 'true');
       }
     }
@@ -140,7 +179,8 @@ class RangeDateCalendar {
     const datesArray = date.split(' - ');
     const dateFirst = datesArray[0];
     const dateSecond = datesArray[1];
-    const hasDates = datesArray !== undefined && datesArray !== null && date !== '';
+    const hasDates =
+      datesArray !== undefined && datesArray !== null && date !== '';
     this.$inputArrival.value = dateFirst;
 
     if (hasDates) {

@@ -25,8 +25,10 @@ class ButtonLike {
       this.$heart.classList.toggle(typeButtonLike.FILL);
       this.$container.classList.toggle(typeButtonLike.ACTIVE);
     }
-    
-    this.count.innerText -= [1, -1][+this.$container.classList.contains(typeButtonLike.ACTIVE)];
+
+    this.count.innerText -= [1, -1][
+      +this.$container.classList.contains(typeButtonLike.ACTIVE)
+    ];
   }
 }
 

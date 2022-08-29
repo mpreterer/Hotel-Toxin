@@ -40,7 +40,9 @@ class SliderRange {
 
   _setRangeValue(values, handle) {
     const prices = [this.minValue, this.maxValue];
-    prices[handle].innerHTML = Math.round(values[handle]).toLocaleString('ru-RU') + prices[handle].innerHTML.slice(-1);
+    prices[handle].innerHTML =
+      Math.round(values[handle]).toLocaleString('ru-RU') +
+      prices[handle].innerHTML.slice(-1);
   }
 }
 

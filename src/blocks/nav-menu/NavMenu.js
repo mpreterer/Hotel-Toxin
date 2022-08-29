@@ -32,10 +32,14 @@ class NavMenu {
   _openSubMenuClick(event) {
     if (event.currentTarget.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
       event.currentTarget.classList.remove(typeNavMenu.ITEM_ACTIVE);
-      event.currentTarget.querySelector('.js-nav-menu__submenu').classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
+      event.currentTarget
+        .querySelector('.js-nav-menu__submenu')
+        .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
     } else {
       event.currentTarget.classList.add(typeNavMenu.ITEM_ACTIVE);
-      event.currentTarget.querySelector('.js-nav-menu__submenu').classList.add(typeNavMenu.SUB_MENU_ACTIVE);
+      event.currentTarget
+        .querySelector('.js-nav-menu__submenu')
+        .classList.add(typeNavMenu.SUB_MENU_ACTIVE);
     }
   }
 
@@ -43,10 +47,14 @@ class NavMenu {
     if (event.key === 'Enter') {
       if (event.currentTarget.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
         event.currentTarget.classList.remove(typeNavMenu.ITEM_ACTIVE);
-        event.currentTarget.querySelector('.js-nav-menu__submenu').classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
+        event.currentTarget
+          .querySelector('.js-nav-menu__submenu')
+          .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
       } else {
         event.currentTarget.classList.add(typeNavMenu.ITEM_ACTIVE);
-        event.currentTarget.querySelector('.js-nav-menu__submenu').classList.add(typeNavMenu.SUB_MENU_ACTIVE);
+        event.currentTarget
+          .querySelector('.js-nav-menu__submenu')
+          .classList.add(typeNavMenu.SUB_MENU_ACTIVE);
       }
     }
   }
@@ -56,7 +64,9 @@ class NavMenu {
       this.$items.forEach((item) => {
         if (item.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
           item.classList.remove(typeNavMenu.ITEM_ACTIVE);
-          item.querySelector('.js-nav-menu__submenu').classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
+          item
+            .querySelector('.js-nav-menu__submenu')
+            .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
         }
       });
     }
@@ -67,7 +77,9 @@ class NavMenu {
       this.$items.forEach((item) => {
         if (item.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
           item.classList.remove(typeNavMenu.ITEM_ACTIVE);
-          item.querySelector('.js-nav-menu__submenu').classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
+          item
+            .querySelector('.js-nav-menu__submenu')
+            .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
         }
       });
     }

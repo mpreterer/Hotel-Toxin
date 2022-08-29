@@ -11,7 +11,7 @@ class Pagination {
     this.itemsOnPage = this.$body.attr('data-items-on-page');
     this.displayedPages = this.$body.attr('data-displayed-pages');
     this.countPages = this.$body.attr('data-count-pages');
-    
+
     this._init();
   }
 
@@ -25,7 +25,9 @@ class Pagination {
   }
 
   _countingPages(size) {
-    const filledArray = Array(size).fill().map((e, count) => count + 1);
+    const filledArray = Array(size)
+      .fill()
+      .map((e, count) => count + 1);
     return filledArray;
   }
 

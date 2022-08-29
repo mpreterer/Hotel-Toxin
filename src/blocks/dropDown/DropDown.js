@@ -9,25 +9,40 @@ class DropDown {
   _init() {
     this.body = document.body;
     this.keyWords = this.container.getAttribute('data-key-phrases');
-    this.inputName = this.container.querySelector('.js-drop-down__counts-guests');
+    this.inputName = this.container.querySelector(
+      '.js-drop-down__counts-guests'
+    );
     this.open = this.container.querySelector('.js-drop-down__name');
-    this.counterPanel = this.container.querySelector('.js-drop-down__drop-block');
+    this.counterPanel = this.container.querySelector(
+      '.js-drop-down__drop-block'
+    );
     this.itemName = this.container.querySelectorAll('[data-item-name]');
     this.counterContext = this.container.querySelector('.js-drop-down__items');
-    this.counterNumber = this.container.querySelectorAll('.js-drop-down__counter');
-    this.appointment = this.container.getAttribute('data-attribute-appointment');
-    this.controlPanel = this.container.querySelector('.js-drop-down__control-panel');
-    this.hasControlPanel = this.controlPanel !== null && this.controlPanel !== undefined;
+    this.counterNumber = this.container.querySelectorAll(
+      '.js-drop-down__counter'
+    );
+    this.appointment = this.container.getAttribute(
+      'data-attribute-appointment'
+    );
+    this.controlPanel = this.container.querySelector(
+      '.js-drop-down__control-panel'
+    );
+    this.hasControlPanel =
+      this.controlPanel !== null && this.controlPanel !== undefined;
 
     if (this.hasControlPanel) {
-      this.btnApply = this.container.querySelector('.js-drop-down__button-apply');
-      this.btnClear = this.container.querySelector('.js-drop-down__button-clear');
+      this.btnApply = this.container.querySelector(
+        '.js-drop-down__button-apply'
+      );
+      this.btnClear = this.container.querySelector(
+        '.js-drop-down__button-clear'
+      );
     }
 
     if (this.appointment === 'guests') {
       this._arrayKeyPhrases();
     }
-    
+
     this._checkOptions();
     this._bindEvents();
     this._dropDownCounter();
@@ -35,7 +50,10 @@ class DropDown {
 
   _bindEvents() {
     this.open.addEventListener('click', this._openDropDown.bind(this));
-    this.container.addEventListener('keydown', this._openDropDownKeyDown.bind(this));
+    this.container.addEventListener(
+      'keydown',
+      this._openDropDownKeyDown.bind(this)
+    );
     this.body.addEventListener('click', this._closeDropDownGlobal.bind(this));
 
     if (this.hasControlPanel) {
@@ -70,8 +88,16 @@ class DropDown {
   }
 
   _arrayKeyPhrases() {
-    const arrayPhrases = this.keyWords.replace(/"/g, '').replace('[', '').replace(']', '').split(',');
-    const arrayCorrectPhrases = [arrayPhrases[0], arrayPhrases[1], arrayPhrases[2]];
+    const arrayPhrases = this.keyWords
+      .replace(/"/g, '')
+      .replace('[', '')
+      .replace(']', '')
+      .split(',');
+    const arrayCorrectPhrases = [
+      arrayPhrases[0],
+      arrayPhrases[1],
+      arrayPhrases[2],
+    ];
 
     this.keyWordsArray = arrayCorrectPhrases;
   }
@@ -87,13 +113,16 @@ class DropDown {
   }
 
   _dropDownCounter() {
-    this.counterContext.addEventListener('click', this._dropDownCounterHandler.bind(this));
+    this.counterContext.addEventListener(
+      'click',
+      this._dropDownCounterHandler.bind(this)
+    );
   }
 
   _checkOptions() {
     this._checkBtnMinus();
     this._checkInputName();
-    
+
     if (this.hasControlPanel) {
       this._checkBtnClear();
     }
@@ -156,13 +185,17 @@ class DropDown {
       const elementSelector = element;
       if (Number(elementSelector.value) > 0) {
         elementSelector.previousElementSibling.disabled = false;
-        elementSelector.previousElementSibling.classList.add(typeDropDown.CLICKBLE);
+        elementSelector.previousElementSibling.classList.add(
+          typeDropDown.CLICKBLE
+        );
       } else {
         elementSelector.previousElementSibling.disabled = true;
-        elementSelector.previousElementSibling.classList.remove(typeDropDown.CLICKBLE);
+        elementSelector.previousElementSibling.classList.remove(
+          typeDropDown.CLICKBLE
+        );
       }
     });
-    
+
     if (this.hasControlPanel) {
       this._checkBtnClear();
     }
@@ -180,7 +213,10 @@ class DropDown {
       this.btnClear.addEventListener('click', this._clearAllCounter.bind(this));
     } else {
       this.btnClear.classList.add(typeDropDown.BTN_TRANSPARENT);
-      this.btnClear.removeEventListener('click', this._clearAllCounter.bind(this));
+      this.btnClear.removeEventListener(
+        'click',
+        this._clearAllCounter.bind(this)
+      );
     }
   }
 
@@ -225,7 +261,7 @@ class DropDown {
     const guests = adults + youngs + child;
 
     let strGuests = '';
-    
+
     if (guests > 0) {
       strGuests = `${guests} ${this._checkEnding(guests, this.keyWordsArray)}`;
     }
@@ -236,9 +272,15 @@ class DropDown {
   _checkEnding(checkEnding, textForms) {
     const checkEndingValue = Math.abs(checkEnding) % 100;
     const resEndingNumber = checkEndingValue % 10;
-    if (checkEndingValue > 10 && checkEndingValue < 20) { return textForms[2]; }
-    if (resEndingNumber > 1 && resEndingNumber < 5) { return textForms[1]; }
-    if (resEndingNumber === 1) { return textForms[0]; }
+    if (checkEndingValue > 10 && checkEndingValue < 20) {
+      return textForms[2];
+    }
+    if (resEndingNumber > 1 && resEndingNumber < 5) {
+      return textForms[1];
+    }
+    if (resEndingNumber === 1) {
+      return textForms[0];
+    }
     return textForms[2];
   }
 
@@ -251,7 +293,7 @@ class DropDown {
     this.itemName.forEach((item) => {
       arrayName.push(item);
     });
-    
+
     let strBedRooms = '';
     let strBed = '';
     let strBathRoom = '';
