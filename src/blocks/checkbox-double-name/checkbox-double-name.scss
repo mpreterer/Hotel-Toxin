@@ -18,18 +18,20 @@
     font-weight: bold;
     font-size: $font-size-main;
     line-height: 18px;
+    transform: translateY(5px);
   }
 
   &__description {
     color: $color-shade-grey;
     font-size: $font-size-small;
     line-height: 14px;
+    transform: translateY(11px);
   }
 
   &__checkbox {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -4px;
     width: 20px;
     height: 20px;
     margin-right: 10px;

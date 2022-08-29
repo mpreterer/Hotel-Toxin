@@ -55,6 +55,10 @@
   &__order-in-room {
     width: 266px;
     height: 128px;
+
+    & .search-room__title {
+      margin-bottom: 20px;
+    }
   }
 
   &__availability {
@@ -64,6 +68,10 @@
     height: 148px;
     margin: 34px 0 28px;
     user-select: none;
+
+    & .search-room__title {
+      margin-bottom: 12px;
+    }
   }
 
   &__furniture {
@@ -88,7 +96,7 @@
   }
 
   &__number-for-user {
-    margin: 0 0 21px 7px;
+    margin: 0 0 21px 13px;
     font-size: $font-size-big;
     line-height: 30px;
 
