@@ -1,14 +1,18 @@
 mixin impressions-room({ list=[] }={})
-    .impressions-room.js-impressions-room
-        h2.impressions-room__title Впечатления от номера
-        .impressions-room__container
-            .impressions-room__container-donut
-                canvas.impressions-room__donut.js-donut
-                .impressions-room__comments-count
-                    p.impressions-room__count.js-counter
-                    p.impressions-room__desc.js-description Голосов
-            ul.impressions-room__list
-                each element in list
-                    li.impressions-room__item.js-item(data-set-comment= element.votes, data-colors= element.colors, tabindex="0")
-                        div.impressions-room__item-color-circle.js-color-circle
-                        span.impressions-room__item-title= element.name 
+  .impressions-room.js-impressions-room
+    h2.impressions-room__title Впечатления от номера
+    .impressions-room__container
+      .impressions-room__container-donut
+        canvas.impressions-room__donut.js-donut
+        .impressions-room__comments-count
+          p.impressions-room__count.js-counter
+          p.impressions-room__desc.js-description Голосов
+      ul.impressions-room__list
+        each element in list
+          li.impressions-room__item.js-item(
+            data-set-comment=element.votes,
+            data-colors=element.colors,
+            tabindex='0'
+          )
+            .impressions-room__item-color-circle.js-color-circle
+            span.impressions-room__item-title= element.name

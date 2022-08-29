@@ -3,27 +3,39 @@ include ../logotype/logotype.pug
 include ../sub-text-input/sub-text-input.pug
 
 mixin footer({desc, menuList, copyright}={})
-    footer.footer
-        .footer__container
-            .footer__list
-                .footer__about-company
-                    +logotype
-                    .footer__description-container
-                        span.footer__description= desc
-                .footer__navigation
-                    +footer-nav-menu({navList: menuList})
-                .footer__description
-                    span.footer__description-title Подписка
-                    p.footer__description-special-title Получайте специальные предложения и новости сервиса
-                    .footer__description-email
-                        +sub-text-input({ name: 'email', placeholder: 'Email', link: 'change-me/mock-address' })
-        .footer__sub-container
-            .footer__sub
-                p.footer__sub-copyright= copyright
-                .footer__sub-icons
-                    a.footer__sub-links(href="https://twitter.com/" target="_blank" rel="noopener noreferrer")
-                        img(src="assets/image/twitter.svg" alt="twitter").fa-twitter
-                    a.footer__sub-links(href="https://facebook.com/" target="_blank" rel="noopener noreferrer")
-                        img(src="assets/image/facebook.svg" alt="facebook").fa-facebook
-                    a.footer__sub-links(href="https://instagram.com/" target="_blank" rel="noopener noreferrer")
-                        img(src="assets/image/instagram.svg" alt="instagram").fa-instagram
+  footer.footer
+    .footer__container
+      .footer__list
+        .footer__about-company
+          +logotype
+          .footer__description-container
+            span.footer__description= desc
+        .footer__navigation
+          +footer-nav-menu({navList: menuList})
+        .footer__description
+          span.footer__description-title Подписка
+          p.footer__description-special-title Получайте специальные предложения и новости сервиса
+          .footer__description-email
+            +sub-text-input({ name: 'email', placeholder: 'Email', link: 'change-me/mock-address' })
+    .footer__sub-container
+      .footer__sub
+        p.footer__sub-copyright= copyright
+        .footer__sub-icons
+          a.footer__sub-links(
+            href='https://twitter.com/',
+            target='_blank',
+            rel='noopener noreferrer'
+          )
+            img.fa-twitter(src='assets/image/twitter.svg', alt='twitter')
+          a.footer__sub-links(
+            href='https://facebook.com/',
+            target='_blank',
+            rel='noopener noreferrer'
+          )
+            img.fa-facebook(src='assets/image/facebook.svg', alt='facebook')
+          a.footer__sub-links(
+            href='https://instagram.com/',
+            target='_blank',
+            rel='noopener noreferrer'
+          )
+            img.fa-instagram(src='assets/image/instagram.svg', alt='instagram')

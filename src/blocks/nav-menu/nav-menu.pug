@@ -1,17 +1,20 @@
 include ../expand-more-arrow/expand-more-arrow
 
 mixin nav-menu({ listMenu = [] }={})
-  div.nav-menu.js-nav-menu
+  .nav-menu.js-nav-menu
     ul.nav-menu__container
       each item in listMenu
         li.nav-menu__item.js-menu-item
           if item.submenu
-            span.nav-menu__sub-list.js-sub-list(title=item.name tabindex="0") !{item.name}
+            span.nav-menu__sub-list.js-sub-list(title=item.name, tabindex='0') !{ item.name }
             .nav-menu__arrow
               +expand-more-arrow
             ul.nav-menu__submenu.js-submenu
               each itemSubmenu in item.submenu
                 li.nav-menu__submenu-item
-                  a.nav-menu__submenu-link(href=itemSubmenu.href title=itemSubmenu.name) !{itemSubmenu.name}
+                  a.nav-menu__submenu-link(
+                    href=itemSubmenu.href,
+                    title=itemSubmenu.name
+                  ) !{ itemSubmenu.name }
           else
-            a.nav-menu__link(href= item.href title= item.name) !{item.name}
+            a.nav-menu__link(href=item.href, title=item.name) !{ item.name }

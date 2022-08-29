@@ -1,10 +1,10 @@
 mixin room-orders({ list = [], title = 'Правила' }={})
-    div.room-orders
-        div.room-orders__container
-            div.room-orders__order
-                if title
-                    span.room-orders__title= title
-                ul.room-orders__list
-                    each element in list
-                        li.room-orders__element
-                            span.room-orders__text= element.txt
+  .room-orders
+    .room-orders__container
+      .room-orders__order
+        if title
+          span.room-orders__title= title
+        ul.room-orders__list
+          each element in list
+            li.room-orders__element
+              span.room-orders__text= element.txt

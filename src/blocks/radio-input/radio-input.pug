@@ -1,6 +1,11 @@
 mixin radio-input({ groupName='default', list = [{name: 'Мужчина', checked: true}, {name: 'Женщина'}] }={})
-    .radio-input
-        each el in list
-            label.radio-input__label
-                input.radio-input__button(type="radio" name= groupName value= el.name checked= el.checked)
-                span.radio-input__text= el.name
+  .radio-input
+    each el in list
+      label.radio-input__label
+        input.radio-input__button(
+          type='radio',
+          name=groupName,
+          value=el.name,
+          checked=el.checked
+        )
+        span.radio-input__text= el.name

@@ -1,21 +1,35 @@
 include ../expand-more-arrow/expand-more-arrow.pug
 
 mixin dropDown({placeholder = 'Сколько гостей',appointment,isOpen = false, showFunction, list = [], keyPhrases=[]}={})
-    .drop-down.js-drop-down(data-attribute-appointment =appointment, data-attribute-function=functionPanel, data-key-phrases= keyPhrases, tabindex="0")
-        .drop-down__name.js-title
-            input.drop-down__counts-guests.js-counts-guests(placeholder=placeholder readonly value="")
-            .drop-down__arrow
-                +expand-more-arrow
-        .drop-down__drop-block.js-drop-block(class= isOpen ? "drop-down__drop-block_open" : "drop-down__drop-block_close")
-            .drop-down__items.js-items
-                each element in list
-                    .drop-down__row
-                        span.drop-down__drop-item(data-item-name= element.name) #{element.name}
-                        .drop-down__block-input
-                            button.drop-down__circle.js-button-minus -
-                            input.drop-down__counter.js-counter(value= element.val || 0 readonly) 
-                            button.drop-down__circle.drop-down__circle-plus.js-button-plus +
-                if showFunction
-                    .drop-down__control-panel.js-control-panel
-                        button.drop-down__functional-buttons.js-button-clear Очистить
-                        button.drop-down__functional-buttons.js-button-apply Применить
+  .drop-down.js-drop-down(
+    data-attribute-appointment=appointment,
+    data-attribute-function=functionPanel,
+    data-key-phrases=keyPhrases,
+    tabindex='0'
+  )
+    .drop-down__name.js-title
+      input.drop-down__counts-guests.js-counts-guests(
+        placeholder=placeholder,
+        readonly,
+        value=''
+      )
+      .drop-down__arrow
+        +expand-more-arrow
+    .drop-down__drop-block.js-drop-block(
+      class=isOpen ? 'drop-down__drop-block_open' : 'drop-down__drop-block_close'
+    )
+      .drop-down__items.js-items
+        each element in list
+          .drop-down__row
+            span.drop-down__drop-item(data-item-name=element.name) #{ element.name }
+            .drop-down__block-input
+              button.drop-down__circle.js-button-minus -
+              input.drop-down__counter.js-counter(
+                value=element.val || 0,
+                readonly
+              ) 
+              button.drop-down__circle.drop-down__circle-plus.js-button-plus +
+        if showFunction
+          .drop-down__control-panel.js-control-panel
+            button.drop-down__functional-buttons.js-button-clear Очистить
+            button.drop-down__functional-buttons.js-button-apply Применить

@@ -1,9 +1,9 @@
 mixin nav-burger({ navLinks = [] }={})
-    div.nav-burger.js-nav-burger
-        button.nav-burger__border-1
-        button.nav-burger__border-2
-        button.nav-burger__border-3
-        ul.nav-burger__menu-burger.js-menu-burger
-            each item in navLinks
-                li.nav-burger__item
-                    a(href= item.link).nav-burger__link= item.title
+  .nav-burger.js-nav-burger
+    button.nav-burger__border-1
+    button.nav-burger__border-2
+    button.nav-burger__border-3
+    ul.nav-burger__menu-burger.js-menu-burger
+      each item in navLinks
+        li.nav-burger__item
+          a.nav-burger__link(href=item.link)= item.title

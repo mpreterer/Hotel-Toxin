@@ -11,10 +11,10 @@ mixin text-input(options={})
 
   label.text-field.js-text-input
     input.text-field__input-field(
-      data-masked= isMasked
-      type= type
-      name= name
-      placeholder= isMasked ? 'ДД.ММ.ГГГГ' : placeholder
-      disabled= disabled
-      readonly= readonly
+      data-masked=isMasked,
+      type=type,
+      name=name,
+      placeholder=isMasked ? 'ДД.ММ.ГГГГ' : placeholder,
+      disabled=disabled,
+      readonly=readonly
     )

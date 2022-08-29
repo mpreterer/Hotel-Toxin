@@ -3,18 +3,17 @@ include ../button/button.pug
 include ../range-date-calendar/range-date-calendar.pug
 
 mixin filter(options={})
-    - const {title,buttonOptions,dropDownOptions} = options;
+  - const { title, buttonOptions, dropDownOptions } = options;
 
-    .filter.js-filter
-        .filter__container-search-room
-            .filter__search-room
-                h1.filter__title !{title}
-                .filter__residence
-                    .filter__block-date
-                        .filter__block-date-calendar
-                            +range-date-calendar
-                        .filter__container-drop-down
-                            span.filter__guest-title Гости
-                            +dropDown(dropDownOptions)
-                        +button(buttonOptions)
-                        
+  .filter.js-filter
+    .filter__container-search-room
+      .filter__search-room
+        h1.filter__title !{ title }
+        .filter__residence
+          .filter__block-date
+            .filter__block-date-calendar
+              +range-date-calendar
+            .filter__container-drop-down
+              span.filter__guest-title Гости
+              +dropDown(dropDownOptions)
+            +button(buttonOptions)

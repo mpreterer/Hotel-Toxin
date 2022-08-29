@@ -7,14 +7,7 @@ mixin sub-text-input(options={})
       link = '/mock-address/change-me',
       target,
     } = options;
-  
+
   label.sub-text-input
-    input.sub-text-input__input(
-      name= name
-      type= type
-      placeholder= placeholder
-    )
-    a.sub-text-input__arrow-link(
-      href= link
-      target= target
-    )
+    input.sub-text-input__input(name=name, type=type, placeholder=placeholder)
+    a.sub-text-input__arrow-link(href=link, target=target)

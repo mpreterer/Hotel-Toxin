@@ -3,8 +3,8 @@ mixin slider-range({title='Slider', subTitle, range = {min: 5000, max: 10000}, c
     .slider-range__container-title
       .slider-range__name= title
       .slider-range__values
-        span.slider-range__min-value.js-min-value #{range.min}#{currency}
+        span.slider-range__min-value.js-min-value #{ range.min }#{ currency }
         span= separator
-        span.slider-range__min-value.js-max-value #{range.max}#{currency}
+        span.slider-range__min-value.js-max-value #{ range.max }#{ currency }
     .slider-range__slider.js-slider
     p.slider-range__sub-title= subTitle

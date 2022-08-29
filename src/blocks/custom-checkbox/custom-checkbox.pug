@@ -1,6 +1,6 @@
-mixin custom-checkbox( options={} )
-    - const { text = '', isChecked } = options;
-    
-    label.custom-checkbox 
-        input.custom-checkbox__checkbox(type="checkbox" checkbox= isChecked)
-        span.custom-checkbox__caption= text
+mixin custom-checkbox(options={})
+  - const { text = '', isChecked } = options;
+
+  label.custom-checkbox 
+    input.custom-checkbox__checkbox(type='checkbox', checkbox=isChecked)
+    span.custom-checkbox__caption= text
