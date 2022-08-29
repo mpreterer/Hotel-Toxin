@@ -8,7 +8,7 @@ class NavBurger {
 
   _init() {
     this.body = document.body;
-    this.menu = this.container.querySelector('.js-nav-burger__menu-burger');
+    this.menu = this.container.querySelector('.js-menu-burger');
     this._initEvents();
   }
 

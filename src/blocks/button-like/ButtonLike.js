@@ -3,8 +3,8 @@ import typeButtonLike from './utils/buttonLikeClassNames';
 class ButtonLike {
   constructor(domParent) {
     this.$container = domParent;
-    this.$heart = this.$container.querySelector('.js-button-like__heart');
-    this.count = this.$container.querySelector('.js-button-like__txt');
+    this.$heart = this.$container.querySelector('.js-button-heart');
+    this.count = this.$container.querySelector('.js-counter');
 
     this._init();
   }

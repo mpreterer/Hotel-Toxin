@@ -5,13 +5,13 @@ class AloneCalendar {
     this.$container = domParent;
     this.body = document.body;
     this.$placeholder = this.$container.querySelector(
-      '.js-alone-calendar__placeholder'
+      '.js-calendar-placeholder',
     );
     this.$calendarBody = this.$container.querySelector(
-      '.js-alone-calendar__calendar'
+      '.js-block-calendar',
     );
     this.$inputCalendar = this.$container.querySelector(
-      '.js-alone-calendar__calendar-container'
+      '.js-calendar-container',
     );
     this.hasOpenCalendar = this.$container.getAttribute('data-is-open');
     this.dateFormat = this.$container.getAttribute('data-format');
@@ -45,16 +45,16 @@ class AloneCalendar {
     this.body.addEventListener(
       'click',
       this._handleGlobalClick.bind(this),
-      true
+      true,
     );
     this.$container.addEventListener(
       'keydown',
       this._eventOpenKeyDown.bind(this),
-      true
+      true,
     );
     this.$inputCalendar.addEventListener(
       'click',
-      this._handleInputClick.bind(this)
+      this._handleInputClick.bind(this),
     );
   }
 

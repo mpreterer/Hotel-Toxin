@@ -1,11 +1,11 @@
 mixin pagination({ minValue = 1, maxValue = 12, allOption = ' 100+ ', items, itemsOnPage, displayedPages, countPages= 15 }={})
     .pagination.js-pagination(data-items= items, data-items-on-page= itemsOnPage, data-displayed-pages= displayedPages, data-count-pages= countPages)
-        .pagination__container.js-pagination__container
-            .pagination__pagination-init.js-pagination__pagination-init
+        .pagination__container
+            .pagination__pagination-init.js-init-pagination
             p.pagination__description
-                span.pagination__min-value.js-pagination__min-value= minValue
+                span.pagination__min-value.js-min-value= minValue
                 span.pagination__line-value -
-                span.pagination__max-value.js-pagination__max-value=  maxValue
+                span.pagination__max-value.js-max-value=  maxValue
                 span.pagination__txt  из
-                span.pagination__all-option.js-pagination__all-option=  allOption
+                span.pagination__all-option.js-all-option=  allOption
                 span.pagination__txt вариантов аренды

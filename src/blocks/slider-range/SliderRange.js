@@ -7,9 +7,9 @@ class SliderRange {
   }
 
   _init() {
-    this.minValue = this.container.querySelector('.js-slider-range__min-value');
-    this.maxValue = this.container.querySelector('.js-slider-range__max-value');
-    this.slider = this.container.querySelector('.js-slider-range__slider');
+    this.minValue = this.container.querySelector('.js-min-value');
+    this.maxValue = this.container.querySelector('.js-max-value');
+    this.slider = this.container.querySelector('.js-slider');
     this.hasSlider = this.slider !== null && this.slider !== undefined;
 
     this._initOptions();

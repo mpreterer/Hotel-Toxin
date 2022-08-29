@@ -8,10 +8,10 @@ class CheckboxList {
   }
 
   _init() {
-    this.$input = this.$container.querySelector('.js-checkbox-list__name');
-    this.$arrow = this.$container.querySelector('.js-checkbox-list__arrow');
-    this.$menu = this.$container.querySelector('.js-checkbox-list__menu');
-    this.isOpen = this.$container.classList.contains('js-checkbox-list_open');
+    this.$input = this.$container.querySelector('.js-title-list');
+    this.$arrow = this.$container.querySelector('.js-arrow');
+    this.$menu = this.$container.querySelector('.js-menu');
+    this.isOpen = this.$container.classList.contains('js-list-open');
 
     this._eventOpen();
   }
@@ -28,7 +28,7 @@ class CheckboxList {
 
     this.$container.addEventListener(
       'keydown',
-      this._openEventKeyDown.bind(this)
+      this._openEventKeyDown.bind(this),
     );
   }
 

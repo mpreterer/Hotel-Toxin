@@ -5,24 +5,21 @@ class RangeDateCalendar {
     this.$container = domParent;
     this.body = document.body;
     this.arrival = this.$container.querySelector(
-      '.js-range-date-calendar__masked-arrival'
+      '.js-masked-arrival',
     );
     this.$inputArrival = this.arrival.querySelector('[data-masked]');
     this.departure = this.$container.querySelector(
-      '.js-range-date-calendar__masked-departure'
+      '.js-masked-departure',
     );
     this.$inputDeparture = this.departure.querySelector('[data-masked]');
-    this.$inputOpen = this.$container.querySelectorAll(
-      '.js-range-date-calendar__field-input'
-    );
     this.$containerCalendar = this.$container.querySelector(
-      '.js-range-date-calendar__calendar'
+      '.js-block-calendar',
     );
     this.$clearButton = $(this.$containerCalendar).find(
-      '[data-button-type="clear"]'
+      '[data-button-type="clear"]',
     );
     this.$arrow = this.$container.querySelectorAll(
-      '.js-range-date-calendar__container-arrow'
+      '.js-container-arrow',
     );
     this.hasOpenCalendar = this.$container.getAttribute('data-is-open');
     this.observers = [];
@@ -39,29 +36,25 @@ class RangeDateCalendar {
     document.addEventListener(
       'click',
       this._handleGlobalClick.bind(this),
-      true
+      true,
     );
 
     this.$inputArrival.addEventListener(
       'click',
-      this._handleInputDateClick.bind(this)
+      this._handleInputDateClick.bind(this),
     );
     this.$inputDeparture.addEventListener(
       'click',
-      this._handleInputDateClick.bind(this)
+      this._handleInputDateClick.bind(this),
     );
     this.$container.addEventListener(
       'keydown',
       this._setDateClick.bind(this),
-      true
+      true,
     );
 
     this.$arrow.forEach((el) => {
       el.addEventListener('click', this._handleArrowClick.bind(this));
-    });
-
-    this.$inputOpen.forEach((el) => {
-      el.addEventListener('click', this._handleInputClick.bind(this));
     });
   }
 
@@ -117,7 +110,7 @@ class RangeDateCalendar {
         isNotUseArrival
       ) {
         calendarDate.selectDate(
-          new Date(dateYearsArrival, dateMonthArrival, dateDayArrival)
+          new Date(dateYearsArrival, dateMonthArrival, dateDayArrival),
         );
         this.arrival.setAttribute('data-complete', 'true');
       }
@@ -129,7 +122,7 @@ class RangeDateCalendar {
         isNotUseDeparture
       ) {
         calendarDate.selectDate(
-          new Date(dateYearsDeparture, dateMonthDeparture, dateDayDeparture)
+          new Date(dateYearsDeparture, dateMonthDeparture, dateDayDeparture),
         );
         this.departure.setAttribute('data-complete', 'true');
       }
@@ -149,10 +142,6 @@ class RangeDateCalendar {
     if (isClickOutsideCalendar) {
       this.calendar.hiddenClear();
     }
-  }
-
-  _handleInputClick() {
-    this.calendar.checkIsOpen();
   }
 
   _init() {

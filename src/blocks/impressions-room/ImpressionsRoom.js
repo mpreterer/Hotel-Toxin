@@ -4,17 +4,17 @@ class ImpressionsRoom {
   constructor(domParent) {
     this.$container = domParent;
     this.$doughnut = this.$container.querySelector(
-      '.js-impressions-room__donut'
+      '.js-donut',
     );
     this.$items = this.$container.querySelectorAll(
-      '.js-impressions-room__item'
+      '.js-item',
     );
     this.$itemsCircle = this.$container.querySelectorAll(
-      '.js-impressions-room__item-color-circle'
+      '.js-color-circle',
     );
-    this.count = this.$container.querySelector('.js-impressions-room__count');
+    this.count = this.$container.querySelector('.js-counter');
     this.countDesc = this.$container.querySelector(
-      '.js-impressions-room__desc'
+      '.js-description',
     );
 
     this._init();

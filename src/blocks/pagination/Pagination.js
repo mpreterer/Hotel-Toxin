@@ -3,10 +3,10 @@ import 'paginationjs';
 class Pagination {
   constructor(domParent) {
     this.$body = $(domParent);
-    this.$container = this.$body.find('.js-pagination__pagination-init');
-    this.$maxValue = this.$body.find('.js-pagination__max-value');
-    this.$minValue = this.$body.find('.js-pagination__min-value');
-    this.$allOption = this.$body.find('.js-pagination__all-option');
+    this.$container = this.$body.find('.js-init-pagination');
+    this.$maxValue = this.$body.find('.js-max-value');
+    this.$minValue = this.$body.find('.js-min-value');
+    this.$allOption = this.$body.find('.js-all-option');
     this.items = this.$body.attr('data-items');
     this.itemsOnPage = this.$body.attr('data-items-on-page');
     this.displayedPages = this.$body.attr('data-displayed-pages');

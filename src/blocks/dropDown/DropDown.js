@@ -10,32 +10,32 @@ class DropDown {
     this.body = document.body;
     this.keyWords = this.container.getAttribute('data-key-phrases');
     this.inputName = this.container.querySelector(
-      '.js-drop-down__counts-guests'
+      '.js-counts-guests',
     );
-    this.open = this.container.querySelector('.js-drop-down__name');
+    this.open = this.container.querySelector('.js-title');
     this.counterPanel = this.container.querySelector(
-      '.js-drop-down__drop-block'
+      '.js-drop-block',
     );
     this.itemName = this.container.querySelectorAll('[data-item-name]');
-    this.counterContext = this.container.querySelector('.js-drop-down__items');
+    this.counterContext = this.container.querySelector('.js-items');
     this.counterNumber = this.container.querySelectorAll(
-      '.js-drop-down__counter'
+      '.js-counter',
     );
     this.appointment = this.container.getAttribute(
-      'data-attribute-appointment'
+      'data-attribute-appointment',
     );
     this.controlPanel = this.container.querySelector(
-      '.js-drop-down__control-panel'
+      '.js-control-panel',
     );
     this.hasControlPanel =
       this.controlPanel !== null && this.controlPanel !== undefined;
 
     if (this.hasControlPanel) {
       this.btnApply = this.container.querySelector(
-        '.js-drop-down__button-apply'
+        '.js-button-apply',
       );
       this.btnClear = this.container.querySelector(
-        '.js-drop-down__button-clear'
+        '.js-button-clear',
       );
     }
 
@@ -52,7 +52,7 @@ class DropDown {
     this.open.addEventListener('click', this._openDropDown.bind(this));
     this.container.addEventListener(
       'keydown',
-      this._openDropDownKeyDown.bind(this)
+      this._openDropDownKeyDown.bind(this),
     );
     this.body.addEventListener('click', this._closeDropDownGlobal.bind(this));
 
@@ -115,7 +115,7 @@ class DropDown {
   _dropDownCounter() {
     this.counterContext.addEventListener(
       'click',
-      this._dropDownCounterHandler.bind(this)
+      this._dropDownCounterHandler.bind(this),
     );
   }
 
@@ -149,9 +149,9 @@ class DropDown {
   _dropDownCounterHandler(event) {
     const { target } = event;
 
-    if (target.classList.contains('js-drop-down__plus')) {
+    if (target.classList.contains('js-button-plus')) {
       this._buttonPlus(target);
-    } else if (target.classList.contains('js-drop-down__minus')) {
+    } else if (target.classList.contains('js-button-minus')) {
       this._buttonMinus(target);
     }
 
@@ -186,12 +186,12 @@ class DropDown {
       if (Number(elementSelector.value) > 0) {
         elementSelector.previousElementSibling.disabled = false;
         elementSelector.previousElementSibling.classList.add(
-          typeDropDown.CLICKBLE
+          typeDropDown.CLICKBLE,
         );
       } else {
         elementSelector.previousElementSibling.disabled = true;
         elementSelector.previousElementSibling.classList.remove(
-          typeDropDown.CLICKBLE
+          typeDropDown.CLICKBLE,
         );
       }
     });
@@ -215,7 +215,7 @@ class DropDown {
       this.btnClear.classList.add(typeDropDown.BTN_TRANSPARENT);
       this.btnClear.removeEventListener(
         'click',
-        this._clearAllCounter.bind(this)
+        this._clearAllCounter.bind(this),
       );
     }
   }

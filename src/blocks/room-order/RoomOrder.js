@@ -3,25 +3,25 @@ class RoomOrder {
     this.container = domParent;
     this.body = document.body;
     this.$inputArrival = this.container.querySelector(
-      '.js-range-date-calendar__masked-arrival'
+      '.js-masked-arrival',
     );
     this.$arrival = this.$inputArrival.querySelector('[data-masked]');
     this.$inputDeparture = this.container.querySelector(
-      '.js-range-date-calendar__masked-departure'
+      '.js-masked-departure',
     );
     this.$departure = this.$inputDeparture.querySelector('[data-masked]');
     this.$priceDay = this.container.querySelector('[data-price="priceDay"]');
     this.$sumCountFees = this.container.querySelector(
-      '[data-price="resultPrice"]'
+      '[data-price="resultPrice"]',
     );
     this.$sumWithoutFees = this.container.querySelector(
-      '[data-price="priceWithoutFees"]'
+      '[data-price="priceWithoutFees"]',
     );
     this.fees = this.container.querySelector('[data-price="feesPrice"]');
     this.services = this.container.querySelector('[data-price="services"]');
-    this.sumDays = this.container.querySelector('.js-room-order__sum-day');
+    this.sumDays = this.container.querySelector('.js-sum-day');
     this.rangeDateCalendar = this.container.querySelector(
-      '.js-range-date-calendar'
+      '.js-range-date-calendar',
     );
 
     this._init();
