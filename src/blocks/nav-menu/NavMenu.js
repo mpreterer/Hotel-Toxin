@@ -7,7 +7,7 @@ class NavMenu {
   }
 
   _init() {
-    this.body = document.querySelector('body');
+    this.body = document.body;
     this.$items = this.$container.querySelectorAll('.js-nav-menu__item');
     this._bindEvents();
   }

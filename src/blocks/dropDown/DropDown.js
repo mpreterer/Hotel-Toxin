@@ -7,7 +7,7 @@ class DropDown {
   }
 
   _init() {
-    this.body = document.querySelector('body');
+    this.body = document.body;
     this.keyWords = this.container.getAttribute('data-key-phrases');
     this.inputName = this.container.querySelector('.js-drop-down__counts-guests');
     this.open = this.container.querySelector('.js-drop-down__name');

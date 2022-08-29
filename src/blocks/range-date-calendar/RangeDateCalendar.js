@@ -3,7 +3,7 @@ import Calendar from '../calendar/Calendar';
 class RangeDateCalendar {
   constructor(domParent) {
     this.$container = domParent;
-    this.body = document.querySelector('body');
+    this.body = document.body;
     this.arrival = this.$container.querySelector('.js-range-date-calendar__masked-arrival');
     this.$inputArrival = this.arrival.querySelector('[data-masked]');
     this.departure = this.$container.querySelector('.js-range-date-calendar__masked-departure');

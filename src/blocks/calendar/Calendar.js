@@ -8,7 +8,7 @@ class Calendar {
     this.isOpen = this.$body.attr('data-is-open');
     this.initIsOpen = params.isOpen;
     this.initDates = this.$body.attr('data-init-dates');
-    this.bodyPage = document.querySelector('body');
+    this.bodyPage = document.body;
     this.observers = [];
 
     this._init(this.options);
