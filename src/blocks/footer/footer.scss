@@ -23,8 +23,6 @@
   }
 
   &__sub-links {
-    padding-left: 20px;
-
     &:hover {
       opacity: 0.5;
     }
@@ -56,9 +54,13 @@
       align-items: center;
     }
   }
-  
+
   &__sub-copyright {
     margin: 0;
+
+    @media (max-width: 1200px) {
+      margin-right: 20px;
+    }
 
     @media (max-width: 768px) {
       margin-bottom: 25px;
@@ -67,14 +69,10 @@
   }
 
   &__sub-icons {
+    display: flex;
+    justify-content: space-between;
     width: 108px;
-    margin-top: 7px;
     text-align: center;
-
-    @media (max-width: 1200px) {
-      display: flex;
-      justify-content: space-around;
-    }
   }
 
   &__sub-container {
@@ -175,15 +173,26 @@
 
   &__about-company {
     margin-bottom: 20px;
-
-    @media (max-width: 1200px) {
-      margin-bottom: 50px;
-    }
   }
 
-  & .fa-twitter {
+  &__icon-twitter,
+  &__icon-facebook,
+  &__icon-instagram {
     width: 24px;
     height: 24px;
+    background-repeat: no-repeat;
+  }
+
+  &__icon-twitter {
+    background-image: url('./images/twitter.svg');
+  }
+
+  &__icon-facebook {
+    background-image: url('./images/facebook.svg');
+  }
+
+  &__icon-instagram {
+    background-image: url('./images/instagram.svg');
   }
 
   @media (max-width: 768px) {

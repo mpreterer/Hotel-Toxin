@@ -1,10 +1,10 @@
 mixin about-room({ list=[], title= 'Сведения о номере' }={})
-  .about-room
+  .about-room.js-about-room
     h2.about-room__title= title
     each item in list
       ul.about-room__list
         li.about-room__item
-          img.about-room__icon(src=item.src, alt=item.alt)
+          .about-room__icon.js-about-room-icon(data-class= item.class)
           .about-room__desc
             p.about-room__advantage-title= item.firstAdvantage
             p.about-room__advantage= item.secondAdvantage
