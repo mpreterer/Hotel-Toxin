@@ -23,7 +23,7 @@
     }
 
     &_border {
-      padding: 12px 23px;
+      padding: 12px 20px;
       color: $color-purple;
       background: $gradient-main;
       background-position: center center;
@@ -41,7 +41,7 @@
     &_empty {
       color: $color-purple;
       border: none;
-  
+
       &:hover {
         color: $color-shade-grey;
       }

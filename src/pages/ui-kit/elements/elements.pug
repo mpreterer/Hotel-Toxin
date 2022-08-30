@@ -93,12 +93,12 @@ block content
                         {
                             firstAdvantage: 'Комфорт',
                             secondAdvantage: 'Шумоподавляющие стены',
-                            src: 'assets/image/insert-emoticon.svg'
+                            class: 'about-room__insert-emoticon'
                         },
                         {
                             firstAdvantage: 'Удобство',
                             secondAdvantage: 'Окно в каждой из спален',
-                            src: 'assets/image/location-city.svg'
+                            class: 'about-room__location-city'
                         },
                     ],
                     title: ''
@@ -196,7 +196,7 @@ block content
                         })
                     .ui-cards__titles
                         .ui-cards__title dropdown
-                    .ui-cards__dropdown-with-guests(data-component-js="js-drop-down")
+                    .ui-cards__drop-down-with-guests(data-component-js="js-drop-down")
                         +dropDown({
                             list: [
                                 { name: 'взрослые', val: 2 },

@@ -16,5 +16,5 @@ mixin room-info({ link = 'room-details.html', number = 888, level = 'Люкс', 
         .room-info__star
           +stars-rating({ stars: stars, readonly: true }) 
         span.room-info__feedback #{ review }
-          span.room-info__feedback-txt Отзывов
+          span.room-info__feedback-txt !{' Отзывов'} 
           
