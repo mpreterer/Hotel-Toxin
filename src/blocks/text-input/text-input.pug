@@ -7,14 +7,16 @@ mixin text-input(options={})
       disabled = false,
       readonly = false,
       isMasked = false,
+      isBorder = true,
     } = options;
 
-  label.text-field.js-text-input
-    input.text-field__input-field(
+  label.text-input.js-text-input
+    input.text-input__input-field(
       data-masked=isMasked,
       type=type,
       name=name,
       placeholder=isMasked ? 'ДД.ММ.ГГГГ' : placeholder,
       disabled=disabled,
-      readonly=readonly
+      readonly=readonly,
+      class=isBorder ? 'text-input_border' : 'text-input_border-none'
     )

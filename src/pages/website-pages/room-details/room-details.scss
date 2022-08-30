@@ -74,7 +74,7 @@
   &__room-loop-middle-2 {
     height: 242px;
 
-    @media  (max-width: 920px) {
+    @media (max-width: 920px) {
       width: 100%;
       height: auto;
       margin: 10px auto;
@@ -129,7 +129,9 @@
     }
   }
 
-  &__room-secondary-3, &__room-secondary-2, &__room-secondary-1 {
+  &__room-secondary-3,
+  &__room-secondary-2,
+  &__room-secondary-1 {
     width: 100%;
     height: 100%;
     object-fit: cover;

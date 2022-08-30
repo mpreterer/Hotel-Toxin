@@ -19,7 +19,7 @@
   }
 
   &__list {
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
     padding: 0;
 
     &:last-child {
@@ -42,8 +42,8 @@
   &__desc {
     width: 233px;
     margin-left: 14px;
-    line-height: 24px;
     font-size: 14px;
+    line-height: 24px;
   }
 
   &__item {
@@ -55,15 +55,15 @@
     border-bottom: 1px solid #1f20411a;
   }
 
-  &__list:last-child .about-room__item {
+  &__list:last-child &__item {
     padding-bottom: 0;
     border: none;
   }
 
   &__advantage-title {
+    margin: 0;
     color: $color-shade-secondary;
     font-weight: bold;
-    margin: 0;
   }
 
   &__advantage {

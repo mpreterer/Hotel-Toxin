@@ -18,10 +18,10 @@
   }
 
   &__container {
-    padding: 40px 30px 30px 30px;
+    padding: 40px 30px 30px;
 
     @media (max-width: 380px) {
-        padding-top: 15px;
+      padding-top: 15px;
     }
   }
 
@@ -41,8 +41,8 @@
   }
 
   &__title {
-    color: $color-shade-dark;
     margin: 0;
+    color: $color-shade-dark;
     font-size: $font-size-big;
     line-height: 30px;
 

@@ -31,30 +31,38 @@ class NavMenu {
 
   _openSubMenuClick(event) {
     if (event.currentTarget.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
-      event.currentTarget.classList.remove(typeNavMenu.ITEM_ACTIVE);
+      event.currentTarget.querySelector('.js-sub-list').classList.remove(typeNavMenu.SUB_LIST_ACTIVE);
+      event.currentTarget
+        .classList.remove(typeNavMenu.ITEM_ACTIVE);
       event.currentTarget
         .querySelector('.js-submenu')
         .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
     } else {
-      event.currentTarget.classList.add(typeNavMenu.ITEM_ACTIVE);
+      event.currentTarget.querySelector('.js-sub-list').classList.add(typeNavMenu.SUB_LIST_ACTIVE);
       event.currentTarget
         .querySelector('.js-submenu')
         .classList.add(typeNavMenu.SUB_MENU_ACTIVE);
+      event.currentTarget
+        .classList.add(typeNavMenu.ITEM_ACTIVE);
     }
   }
 
   _openSubMenuKeyDown(event) {
     if (event.key === 'Enter') {
       if (event.currentTarget.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
-        event.currentTarget.classList.remove(typeNavMenu.ITEM_ACTIVE);
+        event.currentTarget.querySelector('.js-sub-list').classList.remove(typeNavMenu.SUB_LIST_ACTIVE);
+        event.currentTarget
+          .classList.remove(typeNavMenu.ITEM_ACTIVE);
         event.currentTarget
           .querySelector('.js-submenu')
           .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
       } else {
-        event.currentTarget.classList.add(typeNavMenu.ITEM_ACTIVE);
+        event.currentTarget.querySelector('.js-sub-list').classList.add(typeNavMenu.SUB_LIST_ACTIVE);
         event.currentTarget
           .querySelector('.js-submenu')
           .classList.add(typeNavMenu.SUB_MENU_ACTIVE);
+        event.currentTarget
+          .classList.add(typeNavMenu.ITEM_ACTIVE);
       }
     }
   }
@@ -67,6 +75,9 @@ class NavMenu {
           item
             .querySelector('.js-submenu')
             .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
+          item
+            .querySelector('.js-sub-list')
+            .classList.remove(typeNavMenu.SUB_LIST_ACTIVE);
         }
       });
     }
@@ -80,6 +91,9 @@ class NavMenu {
           item
             .querySelector('.js-submenu')
             .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
+          item
+            .querySelector('.js-sub-list')
+            .classList.remove(typeNavMenu.SUB_LIST_ACTIVE);
         }
       });
     }

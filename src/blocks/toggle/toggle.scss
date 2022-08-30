@@ -17,25 +17,25 @@
   &__checkbox {
     appearance: none;
 
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 20px;
+      background-image: url('./images/toggle.svg');
+      background-repeat: no-repeat;
+      background-position: 4px 4px;
+      border: 1px solid $color-shade;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      content: '';
+    }
+
     &:focus::before {
       outline: 1px solid #000;
     }
-  }
-
-  &__checkbox::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 20px;
-    background-image: url('./images/toggle.svg');
-    background-repeat: no-repeat;
-    background-position: 4px 4px;
-    border: 1px solid $color-shade;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    content: '';
   }
 
   &__checkbox:checked::before {

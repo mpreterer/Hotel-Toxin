@@ -17,16 +17,16 @@
   }
 
   &__arrow {
-    margin-left: 5px;
-    margin-top: 2px;
     width: 16px;
+    margin-top: 2px;
+    margin-left: 5px;
   }
 
   &__item {
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     margin-left: 20px;
     list-style: none;
     cursor: pointer;
@@ -34,15 +34,15 @@
     &:first-child {
       margin-left: 0;
     }
-
-    &_active > .nav-menu__sub-list {
-      color: $color-shade-secondary;
-      font-weight: bold;
-    }
   }
 
   &__sub-list {
     color: $color-shade-grey;
+
+    &_active {
+      color: $color-shade-secondary;
+      font-weight: bold;
+    }
 
     &:hover {
       color: $color-shade-secondary;

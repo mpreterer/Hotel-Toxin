@@ -20,8 +20,8 @@
     margin-right: 10px;
     border: 1px solid rgb(31 32 65 / 25%);
     border-radius: 4px;
-    appearance: none;
     cursor: pointer;
+    appearance: none;
 
     &:checked {
       background-image: url('./images/checked.svg');

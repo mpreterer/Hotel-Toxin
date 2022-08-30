@@ -2,13 +2,9 @@ class RoomOrder {
   constructor(domParent) {
     this.container = domParent;
     this.body = document.body;
-    this.$inputArrival = this.container.querySelector(
-      '.js-masked-arrival',
-    );
+    this.$inputArrival = this.container.querySelector('.js-masked-arrival');
     this.$arrival = this.$inputArrival.querySelector('[data-masked]');
-    this.$inputDeparture = this.container.querySelector(
-      '.js-masked-departure',
-    );
+    this.$inputDeparture = this.container.querySelector('.js-masked-departure');
     this.$departure = this.$inputDeparture.querySelector('[data-masked]');
     this.$priceDay = this.container.querySelector('[data-price="priceDay"]');
     this.$sumCountFees = this.container.querySelector(
@@ -49,15 +45,17 @@ class RoomOrder {
     const dateSecond = dateSecondCount;
 
     const arrayFirstDate = dateFirst.split('.');
-    const tempFirstArray = arrayFirstDate[0];
-    arrayFirstDate[0] = arrayFirstDate[2];
-    arrayFirstDate[2] = tempFirstArray;
+    const tempFirstNumb = arrayFirstDate[0];
+    const tempSecondNumb = arrayFirstDate[2];
+    arrayFirstDate[0] = tempSecondNumb;
+    arrayFirstDate[2] = tempFirstNumb;
     const resulFirstDate = arrayFirstDate.join('-');
 
     const arraySecondDate = dateSecond.split('.');
-    const tempSecondArray = arraySecondDate[0];
-    arraySecondDate[0] = arraySecondDate[2];
-    arraySecondDate[2] = tempSecondArray;
+    const tempThirdNumb = arraySecondDate[0];
+    const tempFourthNumb = arraySecondDate[2];
+    arraySecondDate[0] = tempFourthNumb;
+    arraySecondDate[2] = tempThirdNumb;
     const resulSecondDate = arraySecondDate.join('-');
 
     return (

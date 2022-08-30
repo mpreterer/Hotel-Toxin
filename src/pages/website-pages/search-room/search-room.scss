@@ -28,7 +28,7 @@
     @media (max-width: 665px) {
       margin: 0 70px;
     }
-    
+
     @media (max-width: 520px) {
       margin: 0;
     }
@@ -55,10 +55,10 @@
   &__order-in-room {
     width: 266px;
     height: 128px;
+  }
 
-    & .search-room__title {
-      margin-bottom: 20px;
-    }
+  &__order-in-room &__title {
+    margin-bottom: 20px;
   }
 
   &__availability {
@@ -68,10 +68,10 @@
     height: 148px;
     margin: 34px 0 28px;
     user-select: none;
+  }
 
-    & .search-room__title {
-      margin-bottom: 12px;
-    }
+  &__availability &__title {
+    margin-bottom: 12px;
   }
 
   &__furniture {
@@ -130,7 +130,6 @@
     width: 80%;
   }
 
-  
   @media (max-width: 1065px) {
     display: flex;
     flex-wrap: wrap;

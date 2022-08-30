@@ -27,21 +27,21 @@
   }
 
   &__count {
+    margin: 0;
+    color: $color-shade-grey;
     font-weight: 700;
     font-size: 1.714rem;
     line-height: 29px;
     text-transform: uppercase;
-    color: $color-shade-grey;
-    margin: 0;
   }
 
   &__desc {
+    margin: 0;
+    color: $color-shade-grey;
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: $color-shade-grey;
-    margin: 0;
   }
 
   &__list {
@@ -57,17 +57,17 @@
   &__item-color-circle {
     width: 10px;
     height: 10px;
-    border-radius: 50%;
     margin-right: 5px;
+    border-radius: 50%;
   }
 
   &__item {
-    cursor: pointer;
-    user-select: none;
-    text-transform: capitalize;
-    color: $color-shade-secondary;
     display: flex;
     align-items: center;
+    color: $color-shade-secondary;
+    text-transform: capitalize;
+    cursor: pointer;
+    user-select: none;
 
     &:hover {
       opacity: 0.5;

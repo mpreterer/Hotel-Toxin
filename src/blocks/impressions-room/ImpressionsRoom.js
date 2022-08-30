@@ -3,19 +3,11 @@ import Chart from 'chart.js';
 class ImpressionsRoom {
   constructor(domParent) {
     this.$container = domParent;
-    this.$doughnut = this.$container.querySelector(
-      '.js-donut',
-    );
-    this.$items = this.$container.querySelectorAll(
-      '.js-item',
-    );
-    this.$itemsCircle = this.$container.querySelectorAll(
-      '.js-color-circle',
-    );
+    this.$doughnut = this.$container.querySelector('.js-donut');
+    this.$items = this.$container.querySelectorAll('.js-item');
+    this.$itemsCircle = this.$container.querySelectorAll('.js-color-circle');
     this.count = this.$container.querySelector('.js-counter');
-    this.countDesc = this.$container.querySelector(
-      '.js-description',
-    );
+    this.countDesc = this.$container.querySelector('.js-description');
 
     this._init();
   }
@@ -45,7 +37,8 @@ class ImpressionsRoom {
     });
 
     this.$itemsCircle.forEach((el) => {
-      el.style.backgroundImage = `
+      const element = el;
+      element.style.backgroundImage = `
       linear-gradient(180deg, ${arrayColors[count].join(',')})`;
       count += 1;
     });

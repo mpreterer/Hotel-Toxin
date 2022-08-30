@@ -20,19 +20,19 @@
   &__square {
     width: 70px;
     height: 70px;
-    border-radius: 6px;
     margin-right: 40px;
+    border-radius: 6px;
   }
 
   &__title-color {
-    font-size: $font-size-medium;
     display: block;
     font-weight: bold;
+    font-size: $font-size-medium;
   }
 
   &__color-hex {
-    font-size: $font-size-medium;
     display: block;
+    font-size: $font-size-medium;
   }
 
   &__text {
@@ -99,7 +99,12 @@
     font-size: $font-size-big;
   }
 
-  &__big-text.colors-type__text-size-caption {
+  &__text-size-caption {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  &__big-text &__text-size-caption {
     margin-left: 8px;
   }
 
@@ -107,7 +112,7 @@
     font-size: $font-size-medium;
   }
 
-  &__medium-text.colors-type__text-size-caption {
+  &__medium-text &__text-size-caption {
     margin-left: 10px;
   }
 
@@ -115,7 +120,7 @@
     font-size: $font-size-main;
   }
 
-  &__small-text.colors-type__text-size-caption {
+  &__small-text &__text-size-caption {
     margin-left: 18px;
   }
 
@@ -123,12 +128,7 @@
     font-size: $font-size-small;
   }
 
-  &__body-text.colors-type__text-size-caption {
+  &__body-text &__text-size-caption {
     margin-left: 5px;
-  }
-
-  &__text-size-caption {
-    font-weight: bold;
-    margin: 0;
   }
 }
