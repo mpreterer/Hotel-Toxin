@@ -9,7 +9,6 @@
   font-weight: bold;
   font-size: $font-size-small;
   text-transform: uppercase;
-  cursor: pointer;
   user-select: none;
 
   &__arrow {
@@ -21,7 +20,7 @@
       transform: rotate(180deg);
     }
   }
-  
+
   &__container {
     position: absolute;
     top: 50px;
@@ -40,6 +39,7 @@
   }
 
   &__name {
+    cursor: pointer;
     &_hidden {
       display: none;
     }
