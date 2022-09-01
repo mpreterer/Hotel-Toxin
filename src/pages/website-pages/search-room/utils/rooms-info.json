@@ -26,7 +26,7 @@
     },
     {
       "number": 840,
-      "level": "Люкс",
+      "level": "",
       "price": "9 990",
       "stars": 4,
       "review": 65,
@@ -76,7 +76,7 @@
     },
     {
       "number": 856,
-      "level": "Люкс",
+      "level": "",
       "price": "7 300",
       "stars": 5,
       "review": 19,
@@ -101,7 +101,7 @@
     },
     {
       "number": 740,
-      "level": "Люкс",
+      "level": "",
       "price": "6 000",
       "stars": 4,
       "review": 44,
@@ -126,7 +126,7 @@
     },
     {
       "number": 982,
-      "level": "Люкс",
+      "level": "",
       "price": "5 800",
       "stars": 3,
       "review": 56,
@@ -151,7 +151,7 @@
     },
     {
       "number": 678,
-      "level": "Люкс",
+      "level": "",
       "price": "5 500",
       "stars": 5,
       "review": 45,
@@ -176,7 +176,7 @@
     },
     {
       "number": 450,
-      "level": "Люкс",
+      "level": "",
       "price": "5 300",
       "stars": 4,
       "review": 39,
@@ -201,7 +201,7 @@
     },
     {
       "number": 350,
-      "level": "Люкс",
+      "level": "",
       "price": "5 000",
       "stars": 3,
       "review": 77,
@@ -226,7 +226,7 @@
     },
     {
       "number": 666,
-      "level": "Люкс",
+      "level": "",
       "price": "5 000",
       "stars": 5,
       "review": 25,
@@ -251,7 +251,7 @@
     },
     {
       "number": 444,
-      "level": "Люкс",
+      "level": "",
       "price": "5 000",
       "stars": 3,
       "review": 15,
@@ -276,7 +276,7 @@
     },
     {
       "number": 352,
-      "level": "Люкс",
+      "level": "",
       "price": "5 000",
       "stars": 3,
       "review": 55,

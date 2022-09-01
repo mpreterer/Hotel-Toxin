@@ -17,15 +17,11 @@
   }
 
   &__rating {
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 230px;
-    height: 32px;
-    padding-top: 5px;
+    padding-top: 10px;
     border-top: 1px solid #e8e8ec;
   }
 
@@ -54,19 +50,19 @@
   }
 
   &__link {
-    display: block;
-    width: 100%;
-    height: 105px;
     border-radius: 0 0 4px 4px;
   }
 
+  &__link-container {
+    padding: 22px 16px 19px 20px;
+  }
+
   &__head-room {
-    position: absolute;
-    right: 20px;
-    bottom: 62px;
     display: flex;
+    justify-content: space-between;
     font-family: $font-family-main;
     text-decoration: none;
+    margin-bottom: 10px;
   }
 
   &__number-room {

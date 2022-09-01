@@ -7,4 +7,5 @@ mixin room-orders({ list = [], title = 'Правила' }={})
         ul.room-orders__list
           each element in list
             li.room-orders__element
+              .room-orders__circle
               span.room-orders__text= element.txt

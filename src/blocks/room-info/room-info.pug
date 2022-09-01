@@ -7,14 +7,15 @@ mixin room-info({ link = 'room-details.html', number = 888, level = 'Люкс', 
         each slider in sliders 
           img.room-info__photo(src=slider.src, alt=slider.alt)
     .room-info__link
-      a.room-info__head-room(href=link)
-        span.room-info__number-room №#{ number }
-        span.room-info__level #{ level }
-        span.room-info__price #{ price }₽
-          span.room-info__price-day !{ ' в сутки' }
-      .room-info__rating
-        .room-info__star
-          +stars-rating({ stars: stars, readonly: true }) 
-        span.room-info__feedback #{ review }
-          span.room-info__feedback-txt !{' Отзывов'} 
-          
+      .room-info__link-container
+        a.room-info__head-room(href=link)
+          span.room-info__number-room №#{ number }
+          span.room-info__level #{ level }
+          span.room-info__price #{ price }₽
+            span.room-info__price-day !{ ' в сутки' }
+        .room-info__rating
+          .room-info__star
+            +stars-rating({ stars: stars, readonly: true }) 
+          span.room-info__feedback #{ review }
+            span.room-info__feedback-txt !{' Отзывов'} 
+            
