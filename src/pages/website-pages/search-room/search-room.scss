@@ -160,4 +160,11 @@
   @media (max-width: 700px) {
     flex-direction: column;
   }
+
+  @media (max-width: 904px) {
+    .room-info {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
 }

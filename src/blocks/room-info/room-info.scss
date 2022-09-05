@@ -3,7 +3,7 @@
 .room-info {
   position: relative;
   max-width: 270px;
-  height: 100%;
+  max-height: 257.5px;
   font-size: $font-size-small;
   background: #fff;
   background-repeat: no-repeat;
@@ -115,9 +115,5 @@
 
   &__feedback-txt {
     font-weight: normal;
-  }
-
-  @media (max-width: 904px) {
-    max-width: 100%;
   }
 }
