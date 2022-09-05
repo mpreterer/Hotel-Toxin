@@ -5,8 +5,8 @@
   display: flex;
   align-items: center;
   width: fit-content;
-  max-width: 216px;
-  margin-bottom: 19px;
+  max-width: 222px;
+  margin-bottom: 13px;
   font-size: $font-size-main;
   cursor: pointer;
   user-select: none;
@@ -34,6 +34,7 @@
   &__caption {
     padding-left: 30px;
     color: $color-shade-grey;
-    line-height: 12px;
+    line-height: 18px;
+    max-width: 192px;
   }
 }
