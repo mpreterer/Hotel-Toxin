@@ -244,8 +244,9 @@ class DropDown {
   }
 
   _btnApply() {
-    this.counterPanel.classList.remove(typeDropDown.PANEL_OPEN);
-    this.counterPanel.classList.add(typeDropDown.PANEL_CLOSE);
+    this.counterPanel.classList.remove(typeDropDown.BLOCK_OPEN);
+    this.counterPanel.classList.add(typeDropDown.BLOCK_CLOSE);
+    this.open.classList.toggle(typeDropDown.NAME_ACTIVE);
   }
 
   _counterGuests(countArray) {
