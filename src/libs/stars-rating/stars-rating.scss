@@ -3,10 +3,10 @@
 .stars-rating { 
   .br-widget {
     display: flex;
-    
+   
     a {
       margin-left: 2px;
-      font-size: 26px;
+      font-size: 24px;
       line-height: 20px;
       text-decoration: none;
 
@@ -29,6 +29,15 @@
       width: 24px;
       height: 24px;
       content: '★';
+    }
+
+    .br-none-active {
+      &::after {
+        background: $gradient-main;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
 
     .br-selected {
