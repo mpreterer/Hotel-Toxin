@@ -10,7 +10,7 @@ mixin room-info({ link = 'room-details.html', number = 888, level = 'Люкс', 
       .room-info__link-container
         a.room-info__head-room(href=link)
           span.room-info__number-room №#{ number }
-          span.room-info__level #{ level }
+            span.room-info__level #{ level }
           span.room-info__price #{ price }₽
             span.room-info__price-day !{ ' в сутки' }
         .room-info__rating

@@ -2,8 +2,8 @@
 
 .room-info {
   position: relative;
-  width: 270px;
-  height: 257px;
+  max-width: 270px;
+  height: 100%;
   font-size: $font-size-small;
   background: #fff;
   background-repeat: no-repeat;
@@ -12,15 +12,33 @@
   user-select: none;
 
   &__container {
-    width: 270px;
-    height: 151px;
+    max-width: 270px;
+
+    @media (max-width: 904px) {
+      max-width: 470px;
+    }
+
+    @media (max-width: 520px) {
+      max-width: 370px;
+    }
+
+    @media (max-width: 375px) {
+      max-width: 270px;
+    }
+  }
+
+  &__photo {
+    @media (max-width: 904px) {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__rating {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 230px;
     padding-top: 11px;
     border-top: 1px solid #e8e8ec;
   }
@@ -42,9 +60,10 @@
 
   &__level {
     margin-top: 3px;
-    margin-right: 25px;
+    margin-left: 8px;
     color: $color-purple;
     font-weight: bold;
+    font-size: $font-size-small;
     line-height: 15px;
     text-transform: uppercase;
   }
@@ -96,5 +115,9 @@
 
   &__feedback-txt {
     font-weight: normal;
+  }
+
+  @media (max-width: 904px) {
+    max-width: 100%;
   }
 }

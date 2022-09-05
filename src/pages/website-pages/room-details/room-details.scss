@@ -101,7 +101,7 @@
   &__split-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 33px;
+    margin-bottom:29px;
 
     @media (max-width: 1200px) {
       flex-direction: column-reverse;
@@ -173,7 +173,6 @@
   &__cancel {
     width: 341px;
     margin-bottom: 19px;
-    margin-left: 152px;
     color: $color-shade-secondary;
     font-size: $font-size-main;
     line-height: 24px;
@@ -192,14 +191,14 @@
   }
 
   &__cancel-title {
-    margin: 0 0 15px;
+    margin: 0 0 19px;
     color: $color-shade-dark;
     font-weight: bold;
     font-size: $font-size-medium;
   }
 
   &__user-reviews {
-    margin-top: 31px;
+    margin-top: 37px;
     margin-left: 10px;
   }
 
