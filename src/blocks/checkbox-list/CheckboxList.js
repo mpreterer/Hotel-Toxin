@@ -1,4 +1,4 @@
-import typeCheckbox from './utils/checkboxClassNames';
+import checkboxClassNames from './utils/checkboxClassNames';
 
 class CheckboxList {
   constructor(domParent) {
@@ -18,9 +18,9 @@ class CheckboxList {
 
   _eventOpen() {
     if (this.isOpen) {
-      this.$menu.classList.remove(typeCheckbox.HIDDEN);
+      this.$menu.classList.remove(checkboxClassNames.HIDDEN);
     } else {
-      this.$menu.classList.add(typeCheckbox.HIDDEN);
+      this.$menu.classList.add(checkboxClassNames.HIDDEN);
     }
 
     this.$input.addEventListener('click', this._openList.bind(this));
@@ -49,25 +49,25 @@ class CheckboxList {
   }
 
   _openList() {
-    if (this.$menu.classList.contains(typeCheckbox.HIDDEN)) {
-      this.$menu.classList.remove(typeCheckbox.HIDDEN);
+    if (this.$menu.classList.contains(checkboxClassNames.HIDDEN)) {
+      this.$menu.classList.remove(checkboxClassNames.HIDDEN);
       this._rotateArrow(true);
     } else {
-      this.$menu.classList.toggle(typeCheckbox.HIDDEN);
+      this.$menu.classList.toggle(checkboxClassNames.HIDDEN);
       this._rotateArrow(false);
     }
   }
 
   _hideList() {
-    this.$menu.classList.add(typeCheckbox.HIDDEN);
-    this.$arrow.classList.remove(typeCheckbox.ARROW_ACTIVE);
+    this.$menu.classList.add(checkboxClassNames.HIDDEN);
+    this.$arrow.classList.remove(checkboxClassNames.ARROW_ACTIVE);
   }
 
   _rotateArrow(sideTop) {
     if (sideTop) {
-      this.$arrow.classList.add(typeCheckbox.ARROW_ACTIVE);
+      this.$arrow.classList.add(checkboxClassNames.ARROW_ACTIVE);
     } else {
-      this.$arrow.classList.toggle(typeCheckbox.ARROW_ACTIVE);
+      this.$arrow.classList.toggle(checkboxClassNames.ARROW_ACTIVE);
     }
   }
 }

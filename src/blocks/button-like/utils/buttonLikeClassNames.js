@@ -1,6 +1,6 @@
-const typeButtonLike = {
+const buttonLikeClassNames = {
   FILL: 'button-like_fill-heart',
   ACTIVE: 'button-like_active',
 };
 
-export default typeButtonLike;
+export default buttonLikeClassNames;

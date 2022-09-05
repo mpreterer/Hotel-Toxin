@@ -1,5 +1,5 @@
 import 'jquery-bar-rating/dist/jquery.barrating.min';
-import typeStars from './utils/starsRatingClassNames';
+import starsRatingClassNames from './utils/starsRatingClassNames';
 
 class StarsRating {
   constructor(domParent) {
@@ -26,7 +26,7 @@ class StarsRating {
     });
 
     if (isReadonly) {
-      this.$container.addClass(typeStars.READONLY);
+      this.$container.addClass(starsRatingClassNames.READONLY);
     }
   }
 }

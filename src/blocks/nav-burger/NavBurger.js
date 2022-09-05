@@ -1,4 +1,4 @@
-import typeNavBurger from './utils/navBurgerClassNames';
+import navBurgerClassNames from './utils/navBurgerClassNames';
 
 class NavBurger {
   constructor(domParent) {
@@ -19,15 +19,15 @@ class NavBurger {
 
   _eventGlobalClose(event) {
     if (!this.container.contains(event.target)) {
-      this.menu.classList.remove(typeNavBurger.BURGER_OPEN);
+      this.menu.classList.remove(navBurgerClassNames.BURGER_OPEN);
     }
   }
 
   _eventOpen() {
-    if (this.menu.classList.contains(typeNavBurger.BURGER_OPEN)) {
-      this.menu.classList.remove(typeNavBurger.BURGER_OPEN);
+    if (this.menu.classList.contains(navBurgerClassNames.BURGER_OPEN)) {
+      this.menu.classList.remove(navBurgerClassNames.BURGER_OPEN);
     } else {
-      this.menu.classList.add(typeNavBurger.BURGER_OPEN);
+      this.menu.classList.add(navBurgerClassNames.BURGER_OPEN);
     }
   }
 }

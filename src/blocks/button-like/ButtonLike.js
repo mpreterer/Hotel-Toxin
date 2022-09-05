@@ -1,4 +1,4 @@
-import typeButtonLike from './utils/buttonLikeClassNames';
+import buttonLikeClassNames from './utils/buttonLikeClassNames';
 
 class ButtonLike {
   constructor(domParent) {
@@ -18,16 +18,16 @@ class ButtonLike {
   }
 
   _countLike() {
-    if (this.$heart.classList.contains(typeButtonLike.FILL)) {
-      this.$heart.classList.remove(typeButtonLike.FILL);
-      this.$container.classList.remove(typeButtonLike.ACTIVE);
+    if (this.$heart.classList.contains(buttonLikeClassNames.FILL)) {
+      this.$heart.classList.remove(buttonLikeClassNames.FILL);
+      this.$container.classList.remove(buttonLikeClassNames.ACTIVE);
     } else {
-      this.$heart.classList.toggle(typeButtonLike.FILL);
-      this.$container.classList.toggle(typeButtonLike.ACTIVE);
+      this.$heart.classList.toggle(buttonLikeClassNames.FILL);
+      this.$container.classList.toggle(buttonLikeClassNames.ACTIVE);
     }
 
     this.count.innerText -= [1, -1][
-      +this.$container.classList.contains(typeButtonLike.ACTIVE)
+      +this.$container.classList.contains(buttonLikeClassNames.ACTIVE)
     ];
   }
 }

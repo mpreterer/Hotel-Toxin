@@ -1,5 +1,5 @@
 import 'air-datepicker';
-import typeCalendar from './utils/calendarClassNames';
+import calendarClassNames from './utils/calendarClassNames';
 
 class Calendar {
   constructor(params) {
@@ -31,13 +31,13 @@ class Calendar {
   deleteClearBtn() {
     this.$body
       .find('[data-button-type="clear"]')
-      .addClass(typeCalendar.CLEAR_BTN_CLOSE);
+      .addClass(calendarClassNames.CLEAR_BTN_CLOSE);
   }
 
   addClearBtn() {
     this.$body
       .find('[data-button-type="clear"]')
-      .removeClass(typeCalendar.CLEAR_BTN_CLOSE);
+      .removeClass(calendarClassNames.CLEAR_BTN_CLOSE);
   }
 
   checkIsOpen() {
@@ -108,10 +108,10 @@ class Calendar {
     const $datepicker = this.$body.find('.datepicker');
 
     $datepicker.append('<div class="calendar__buttons"></div>');
-    this.$body.find(typeCalendar.BUTTONS).append([clearButton, confirmButton]);
+    this.$body.find(calendarClassNames.BUTTONS).append([clearButton, confirmButton]);
     this.$body
       .find('[data-button-type="clear"]')
-      .addClass(typeCalendar.CLEAR_BTN_CLOSE);
+      .addClass(calendarClassNames.CLEAR_BTN_CLOSE);
 
     if (this.initIsOpen) {
       this.showCalendar();
@@ -132,7 +132,7 @@ class Calendar {
     this._resetDate();
     this.$body
       .find('[data-button-type="clear"]')
-      .addClass(typeCalendar.CLEAR_BTN_CLOSE);
+      .addClass(calendarClassNames.CLEAR_BTN_CLOSE);
   }
 
   _handleConfirmClick() {

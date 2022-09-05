@@ -1,4 +1,4 @@
-import typeDropDown from './utils/dropDownClassNames';
+import dropDownClassNames from './utils/dropDownClassNames';
 
 class DropDown {
   constructor(domParent) {
@@ -63,27 +63,27 @@ class DropDown {
 
   _openDropDownKeyDown(event) {
     if (event.key === 'Enter') {
-      if (this.counterPanel.classList.contains(typeDropDown.BLOCK_CLOSE)) {
-        this.counterPanel.classList.remove(typeDropDown.BLOCK_CLOSE);
-        this.counterPanel.classList.add(typeDropDown.BLOCK_OPEN);
-        this.open.classList.toggle(typeDropDown.NAME_ACTIVE);
+      if (this.counterPanel.classList.contains(dropDownClassNames.BLOCK_CLOSE)) {
+        this.counterPanel.classList.remove(dropDownClassNames.BLOCK_CLOSE);
+        this.counterPanel.classList.add(dropDownClassNames.BLOCK_OPEN);
+        this.open.classList.toggle(dropDownClassNames.NAME_ACTIVE);
       } else {
-        this.counterPanel.classList.remove(typeDropDown.BLOCK_OPEN);
-        this.counterPanel.classList.add(typeDropDown.BLOCK_CLOSE);
-        this.open.classList.toggle(typeDropDown.NAME_ACTIVE);
+        this.counterPanel.classList.remove(dropDownClassNames.BLOCK_OPEN);
+        this.counterPanel.classList.add(dropDownClassNames.BLOCK_CLOSE);
+        this.open.classList.toggle(dropDownClassNames.NAME_ACTIVE);
       }
     }
   }
 
   _openDropDown() {
-    if (this.counterPanel.classList.contains(typeDropDown.BLOCK_CLOSE)) {
-      this.counterPanel.classList.remove(typeDropDown.BLOCK_CLOSE);
-      this.counterPanel.classList.add(typeDropDown.BLOCK_OPEN);
-      this.open.classList.toggle(typeDropDown.NAME_ACTIVE);
+    if (this.counterPanel.classList.contains(dropDownClassNames.BLOCK_CLOSE)) {
+      this.counterPanel.classList.remove(dropDownClassNames.BLOCK_CLOSE);
+      this.counterPanel.classList.add(dropDownClassNames.BLOCK_OPEN);
+      this.open.classList.toggle(dropDownClassNames.NAME_ACTIVE);
     } else {
-      this.counterPanel.classList.remove(typeDropDown.BLOCK_OPEN);
-      this.counterPanel.classList.add(typeDropDown.BLOCK_CLOSE);
-      this.open.classList.toggle(typeDropDown.NAME_ACTIVE);
+      this.counterPanel.classList.remove(dropDownClassNames.BLOCK_OPEN);
+      this.counterPanel.classList.add(dropDownClassNames.BLOCK_CLOSE);
+      this.open.classList.toggle(dropDownClassNames.NAME_ACTIVE);
     }
   }
 
@@ -104,10 +104,10 @@ class DropDown {
 
   _closeDropDownGlobal(event) {
     if (!this.container.contains(event.target)) {
-      this.counterPanel.classList.remove(typeDropDown.BLOCK_OPEN);
-      this.counterPanel.classList.add(typeDropDown.BLOCK_CLOSE);
-      if (this.open.classList.contains(typeDropDown.NAME_ACTIVE)) {
-        this.open.classList.remove(typeDropDown.NAME_ACTIVE);
+      this.counterPanel.classList.remove(dropDownClassNames.BLOCK_OPEN);
+      this.counterPanel.classList.add(dropDownClassNames.BLOCK_CLOSE);
+      if (this.open.classList.contains(dropDownClassNames.NAME_ACTIVE)) {
+        this.open.classList.remove(dropDownClassNames.NAME_ACTIVE);
       }
     }
   }
@@ -203,10 +203,10 @@ class DropDown {
     });
 
     if (checkCount > 0) {
-      this.btnClear.classList.remove(typeDropDown.BTN_TRANSPARENT);
+      this.btnClear.classList.remove(dropDownClassNames.BTN_TRANSPARENT);
       this.btnClear.addEventListener('click', this._clearAllCounter.bind(this));
     } else {
-      this.btnClear.classList.add(typeDropDown.BTN_TRANSPARENT);
+      this.btnClear.classList.add(dropDownClassNames.BTN_TRANSPARENT);
       this.btnClear.removeEventListener(
         'click',
         this._clearAllCounter.bind(this),
@@ -244,9 +244,9 @@ class DropDown {
   }
 
   _btnApply() {
-    this.counterPanel.classList.remove(typeDropDown.BLOCK_OPEN);
-    this.counterPanel.classList.add(typeDropDown.BLOCK_CLOSE);
-    this.open.classList.toggle(typeDropDown.NAME_ACTIVE);
+    this.counterPanel.classList.remove(dropDownClassNames.BLOCK_OPEN);
+    this.counterPanel.classList.add(dropDownClassNames.BLOCK_CLOSE);
+    this.open.classList.toggle(dropDownClassNames.NAME_ACTIVE);
   }
 
   _counterGuests(countArray) {

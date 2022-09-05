@@ -1,4 +1,4 @@
-const typeDropDown = {
+const dropDownClassNames = {
   BLOCK_CLOSE: 'drop-down__drop-block_close',
   BLOCK_OPEN: 'drop-down__drop-block_open',
   NAME_ACTIVE: 'drop-down__name_active',
@@ -7,4 +7,4 @@ const typeDropDown = {
   PANEL_CLOSE: 'drop-down__control-panel_close',
 };
 
-export default typeDropDown;
+export default dropDownClassNames;

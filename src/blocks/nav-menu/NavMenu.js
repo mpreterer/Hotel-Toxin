@@ -1,4 +1,4 @@
-import typeNavMenu from './utils/navMenuClassNames';
+import navMenuClassNames from './utils/navMenuClassNames';
 
 class NavMenu {
   constructor(domParent) {
@@ -30,39 +30,39 @@ class NavMenu {
   }
 
   _openSubMenuClick(event) {
-    if (event.currentTarget.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
-      event.currentTarget.querySelector('.js-sub-list').classList.remove(typeNavMenu.SUB_LIST_ACTIVE);
+    if (event.currentTarget.classList.contains(navMenuClassNames.ITEM_ACTIVE)) {
+      event.currentTarget.querySelector('.js-sub-list').classList.remove(navMenuClassNames.SUB_LIST_ACTIVE);
       event.currentTarget
-        .classList.remove(typeNavMenu.ITEM_ACTIVE);
+        .classList.remove(navMenuClassNames.ITEM_ACTIVE);
       event.currentTarget
         .querySelector('.js-submenu')
-        .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
+        .classList.remove(navMenuClassNames.SUB_MENU_ACTIVE);
     } else {
-      event.currentTarget.querySelector('.js-sub-list').classList.add(typeNavMenu.SUB_LIST_ACTIVE);
+      event.currentTarget.querySelector('.js-sub-list').classList.add(navMenuClassNames.SUB_LIST_ACTIVE);
       event.currentTarget
         .querySelector('.js-submenu')
-        .classList.add(typeNavMenu.SUB_MENU_ACTIVE);
+        .classList.add(navMenuClassNames.SUB_MENU_ACTIVE);
       event.currentTarget
-        .classList.add(typeNavMenu.ITEM_ACTIVE);
+        .classList.add(navMenuClassNames.ITEM_ACTIVE);
     }
   }
 
   _openSubMenuKeyDown(event) {
     if (event.key === 'Enter') {
-      if (event.currentTarget.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
-        event.currentTarget.querySelector('.js-sub-list').classList.remove(typeNavMenu.SUB_LIST_ACTIVE);
+      if (event.currentTarget.classList.contains(navMenuClassNames.ITEM_ACTIVE)) {
+        event.currentTarget.querySelector('.js-sub-list').classList.remove(navMenuClassNames.SUB_LIST_ACTIVE);
         event.currentTarget
-          .classList.remove(typeNavMenu.ITEM_ACTIVE);
+          .classList.remove(navMenuClassNames.ITEM_ACTIVE);
         event.currentTarget
           .querySelector('.js-submenu')
-          .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
+          .classList.remove(navMenuClassNames.SUB_MENU_ACTIVE);
       } else {
-        event.currentTarget.querySelector('.js-sub-list').classList.add(typeNavMenu.SUB_LIST_ACTIVE);
+        event.currentTarget.querySelector('.js-sub-list').classList.add(navMenuClassNames.SUB_LIST_ACTIVE);
         event.currentTarget
           .querySelector('.js-submenu')
-          .classList.add(typeNavMenu.SUB_MENU_ACTIVE);
+          .classList.add(navMenuClassNames.SUB_MENU_ACTIVE);
         event.currentTarget
-          .classList.add(typeNavMenu.ITEM_ACTIVE);
+          .classList.add(navMenuClassNames.ITEM_ACTIVE);
       }
     }
   }
@@ -70,14 +70,14 @@ class NavMenu {
   _eventCloseWithEsc(event) {
     if (event.key === 'Escape') {
       this.$items.forEach((item) => {
-        if (item.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
-          item.classList.remove(typeNavMenu.ITEM_ACTIVE);
+        if (item.classList.contains(navMenuClassNames.ITEM_ACTIVE)) {
+          item.classList.remove(navMenuClassNames.ITEM_ACTIVE);
           item
             .querySelector('.js-submenu')
-            .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
+            .classList.remove(navMenuClassNames.SUB_MENU_ACTIVE);
           item
             .querySelector('.js-sub-list')
-            .classList.remove(typeNavMenu.SUB_LIST_ACTIVE);
+            .classList.remove(navMenuClassNames.SUB_LIST_ACTIVE);
         }
       });
     }
@@ -86,14 +86,14 @@ class NavMenu {
   _globalClose(event) {
     if (!this.$container.contains(event.target)) {
       this.$items.forEach((item) => {
-        if (item.classList.contains(typeNavMenu.ITEM_ACTIVE)) {
-          item.classList.remove(typeNavMenu.ITEM_ACTIVE);
+        if (item.classList.contains(navMenuClassNames.ITEM_ACTIVE)) {
+          item.classList.remove(navMenuClassNames.ITEM_ACTIVE);
           item
             .querySelector('.js-submenu')
-            .classList.remove(typeNavMenu.SUB_MENU_ACTIVE);
+            .classList.remove(navMenuClassNames.SUB_MENU_ACTIVE);
           item
             .querySelector('.js-sub-list')
-            .classList.remove(typeNavMenu.SUB_LIST_ACTIVE);
+            .classList.remove(navMenuClassNames.SUB_LIST_ACTIVE);
         }
       });
     }

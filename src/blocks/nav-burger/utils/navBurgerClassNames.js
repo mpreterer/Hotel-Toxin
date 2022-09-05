@@ -1,5 +1,5 @@
-const typeNavBurger = {
+const navBurgerClassNames = {
   BURGER_OPEN: 'nav-burger__menu-burger_open',
 };
 
-export default typeNavBurger;
+export default navBurgerClassNames;

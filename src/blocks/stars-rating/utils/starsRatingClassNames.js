@@ -1,5 +1,5 @@
-const typeStars = {
+const starsRatingClassNames = {
   READONLY: 'stars-rating_readonly',
 };
 
-export default typeStars;
+export default starsRatingClassNames;
