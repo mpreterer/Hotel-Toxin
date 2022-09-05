@@ -185,14 +185,8 @@ class DropDown {
       const elementSelector = element;
       if (Number(elementSelector.value) > 0) {
         elementSelector.previousElementSibling.disabled = false;
-        elementSelector.previousElementSibling.classList.add(
-          typeDropDown.CLICKBLE,
-        );
       } else {
         elementSelector.previousElementSibling.disabled = true;
-        elementSelector.previousElementSibling.classList.remove(
-          typeDropDown.CLICKBLE,
-        );
       }
     });
 
