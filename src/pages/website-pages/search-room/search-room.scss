@@ -93,9 +93,13 @@
       margin-bottom: 20px;
     }
 
-    @media (max-width: 1355px) {
-      margin: 0 auto;
+    @media (max-width: 1300px) {
       text-align: center;
+      margin-left: 85px;
+    }
+
+    @media (max-width: 1200px) {
+      margin: 0 auto;
     }
 
     @media (max-width: 520px) {

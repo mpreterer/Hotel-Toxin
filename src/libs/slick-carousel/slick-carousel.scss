@@ -10,7 +10,7 @@ button.slick-prev.slick-arrow {
   left: 0%;
   z-index: 10;
   width: 42px;
-  height: 151px;
+  height: 100%;
   background: linear-gradient(
     90deg,
     rgb(0 0 0 / 50%) 0%,
@@ -26,7 +26,7 @@ button.slick-next.slick-arrow {
   right: 0%;
   z-index: 10;
   width: 42px;
-  height: 151px;
+  height: 100%;
   background: linear-gradient(
     -90deg,
     rgb(0 0 0 / 50%) 0%,
@@ -128,4 +128,12 @@ ul.slick-dots li {
 
 ul.slick-dots li {
   padding-right: 4px;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-slide {
+  height: auto;
 }
