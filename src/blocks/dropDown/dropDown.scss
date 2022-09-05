@@ -89,7 +89,7 @@
 
   &__circle-plus {
     cursor: pointer;
-    border-color: #1f204180;
+    border-color: $color-shade-grey;
 
     &:active {
       color: white;
@@ -102,6 +102,7 @@
 
   &__circle-minus {
     cursor: pointer;
+    border-color: $color-shade-grey;
 
     &:active {
       color: white;
@@ -113,6 +114,7 @@
 
     &:disabled {
       cursor: default;
+      border-color: $color-shade;
     }
   }
 
