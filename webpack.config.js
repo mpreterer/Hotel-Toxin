@@ -38,15 +38,18 @@ module.exports = () => {
                 jQuery: 'jquery',
                 'window.jQuery': 'jquery',
               }),
-            new CleanWebpackPlugin(),
             new CopyWebpackPlugin({
                 patterns: [
                   {
-                    from: path.resolve(__dirname, './assets'),
-                    to: path.resolve(__dirname, 'dist/assets'),
+                    from: path.resolve(__dirname, './assets/image'),
+                    to: path.resolve(__dirname, 'dist/assets/image'),
+                    globOptions: {
+                        ignore: ['assets/fonts/**/*']
+                    }
                   },
                 ],
-              }),
+            }),
+            new CleanWebpackPlugin(),
             new HTMLWebpackPlugin({
                 template: `${PAGES_DIR}/website-pages/index/index.pug`,
                 filename: './index.html',
@@ -121,22 +124,16 @@ module.exports = () => {
                     ]
                 },
                 {
-                    test:/\.(png|svg|jpg|jpeg|gif)$/i,
-                    type: 'asset/resource'
+                    test: /\.(ttf|woff|woff2|svg|eot)$/,
+                    exclude: [/image/],
+                    type: 'asset/resource',
+                    generator: {
+                      filename: 'assets/fonts/[name][ext]',
+                    }
                 },
                 {
                     test:/\.pug$/,
                     use: ['pug-loader'],
-                },
-                {
-                    test: /\.(eot|svg|ttf|woff|woff2)$/,
-                    exclude: [/image/],
-                    use: {
-                      loader: 'file-loader',
-                      options: {
-                        name: 'assets/fonts/[name][ext]',
-                      },
-                    },
                 },
             ]
         },
