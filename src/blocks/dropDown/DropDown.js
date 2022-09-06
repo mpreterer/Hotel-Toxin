@@ -49,19 +49,19 @@ class DropDown {
   }
 
   _bindEvents() {
-    this.open.addEventListener('click', this._openDropDown.bind(this));
+    this.open.addEventListener('click', this._handleTitleClick.bind(this));
     this.container.addEventListener(
       'keydown',
-      this._openDropDownKeyDown.bind(this),
+      this._handleDropDownKeyDown.bind(this),
     );
-    this.body.addEventListener('click', this._closeDropDownGlobal.bind(this));
+    this.body.addEventListener('click', this._handleBodyClick.bind(this));
 
     if (this.hasControlPanel) {
-      this.btnApply.addEventListener('click', this._btnApply.bind(this));
+      this.btnApply.addEventListener('click', this._handleButtonApplyClick.bind(this));
     }
   }
 
-  _openDropDownKeyDown(event) {
+  _handleDropDownKeyDown(event) {
     if (event.key === 'Enter') {
       if (this.counterPanel.classList.contains(dropDownClassNames.BLOCK_CLOSE)) {
         this.counterPanel.classList.remove(dropDownClassNames.BLOCK_CLOSE);
@@ -75,7 +75,7 @@ class DropDown {
     }
   }
 
-  _openDropDown() {
+  _handleTitleClick() {
     if (this.counterPanel.classList.contains(dropDownClassNames.BLOCK_CLOSE)) {
       this.counterPanel.classList.remove(dropDownClassNames.BLOCK_CLOSE);
       this.counterPanel.classList.add(dropDownClassNames.BLOCK_OPEN);
@@ -102,7 +102,7 @@ class DropDown {
     this.keyWordsArray = arrayCorrectPhrases;
   }
 
-  _closeDropDownGlobal(event) {
+  _handleBodyClick(event) {
     if (!this.container.contains(event.target)) {
       this.counterPanel.classList.remove(dropDownClassNames.BLOCK_OPEN);
       this.counterPanel.classList.add(dropDownClassNames.BLOCK_CLOSE);
@@ -115,7 +115,7 @@ class DropDown {
   _dropDownCounter() {
     this.counterContext.addEventListener(
       'click',
-      this._dropDownCounterHandler.bind(this),
+      this._handleItemClick.bind(this),
     );
   }
 
@@ -146,7 +146,7 @@ class DropDown {
     }
   }
 
-  _dropDownCounterHandler(event) {
+  _handleItemClick(event) {
     const { target } = event;
 
     if (target.classList.contains('js-button-plus')) {
@@ -204,17 +204,17 @@ class DropDown {
 
     if (checkCount > 0) {
       this.btnClear.classList.remove(dropDownClassNames.BTN_TRANSPARENT);
-      this.btnClear.addEventListener('click', this._clearAllCounter.bind(this));
+      this.btnClear.addEventListener('click', this._handleButtonClearClick.bind(this));
     } else {
       this.btnClear.classList.add(dropDownClassNames.BTN_TRANSPARENT);
       this.btnClear.removeEventListener(
         'click',
-        this._clearAllCounter.bind(this),
+        this._handleButtonClearClick.bind(this),
       );
     }
   }
 
-  _clearAllCounter() {
+  _handleButtonClearClick() {
     this.counterNumber.forEach((element) => {
       const elementSelector = element;
       elementSelector.value = 0;
@@ -243,7 +243,7 @@ class DropDown {
     }
   }
 
-  _btnApply() {
+  _handleButtonApplyClick() {
     this.counterPanel.classList.remove(dropDownClassNames.BLOCK_OPEN);
     this.counterPanel.classList.add(dropDownClassNames.BLOCK_CLOSE);
     this.open.classList.toggle(dropDownClassNames.NAME_ACTIVE);

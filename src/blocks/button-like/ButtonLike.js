@@ -14,10 +14,10 @@ class ButtonLike {
   }
 
   _eventButton() {
-    this.$container.addEventListener('click', this._countLike.bind(this));
+    this.$container.addEventListener('click', this._handleButtonLikeClick.bind(this));
   }
 
-  _countLike() {
+  _handleButtonLikeClick() {
     if (this.$heart.classList.contains(buttonLikeClassNames.FILL)) {
       this.$heart.classList.remove(buttonLikeClassNames.FILL);
       this.$container.classList.remove(buttonLikeClassNames.ACTIVE);

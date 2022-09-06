@@ -46,11 +46,11 @@ class ImpressionsRoom {
 
   _setBindItems() {
     this.$items.forEach((el) => {
-      el.addEventListener('focus', this._setCountComment.bind(this));
+      el.addEventListener('focus', this._handleItemFocus.bind(this));
     });
   }
 
-  _setCountComment(el) {
+  _handleItemFocus(el) {
     const colorComment = JSON.parse(el.path[0].getAttribute('data-colors'))[0];
     this.count.innerHTML = el.path[0].getAttribute('data-set-comment');
     this.count.style.color = colorComment;

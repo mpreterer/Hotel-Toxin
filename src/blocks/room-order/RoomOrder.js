@@ -28,9 +28,21 @@ class RoomOrder {
   }
 
   _eventCount() {
-    this.container.addEventListener('click', this._countPrice.bind(this));
-    this.body.addEventListener('click', this._countPrice.bind(this));
-    this.container.addEventListener('keydown', this._countPrice.bind(this));
+    this.container.addEventListener('click', this._handleRoomOrderClick.bind(this));
+    this.body.addEventListener('click', this._handleBodyClick.bind(this));
+    this.container.addEventListener('keydown', this._handleRoomOrderKeyDown.bind(this));
+  }
+
+  _handleRoomOrderClick() {
+    this._countPrice();
+  }
+
+  _handleRoomOrderKeyDown() {
+    this._countPrice();
+  }
+
+  _handleBodyClick() {
+    this._countPrice();
   }
 
   _getTime(date) {

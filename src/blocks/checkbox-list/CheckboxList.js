@@ -12,6 +12,7 @@ class CheckboxList {
     this.$arrow = this.$container.querySelector('.js-arrow');
     this.$menu = this.$container.querySelector('.js-menu');
     this.isOpen = this.$container.classList.contains('js-list-open');
+    this.body = document.body;
 
     this._eventOpen();
   }
@@ -23,22 +24,22 @@ class CheckboxList {
       this.$menu.classList.add(checkboxClassNames.HIDDEN);
     }
 
-    this.$input.addEventListener('click', this._openList.bind(this));
-    document.addEventListener('click', this._globalOpen.bind(this), true);
+    this.$input.addEventListener('click', this._handleTitleListClick.bind(this));
+    this.body.addEventListener('click', this._handleBodyClick.bind(this), true);
 
     this.$container.addEventListener(
       'keydown',
-      this._openEventKeyDown.bind(this),
+      this._handleCheckboxListKeyDown.bind(this),
     );
   }
 
-  _openEventKeyDown(event) {
+  _handleCheckboxListKeyDown(event) {
     if (event.key === 'Enter') {
-      this._openList();
+      this._handleTitleListClick();
     }
   }
 
-  _globalOpen(event) {
+  _handleBodyClick(event) {
     const { target } = event;
     const isClickOnList = this.$container.contains(target);
     const hasClickOutSideList = !isClickOnList;
@@ -48,7 +49,7 @@ class CheckboxList {
     }
   }
 
-  _openList() {
+  _handleTitleListClick() {
     if (this.$menu.classList.contains(checkboxClassNames.HIDDEN)) {
       this.$menu.classList.remove(checkboxClassNames.HIDDEN);
       this._rotateArrow(true);

@@ -84,10 +84,10 @@ class Calendar {
       this.addClearBtn();
     }
 
-    this.bodyPage.addEventListener('keydown', this._bindEventEsc.bind(this));
+    this.bodyPage.addEventListener('keydown', this._handleBodyKeyDown.bind(this));
   }
 
-  _bindEventEsc(event) {
+  _handleBodyKeyDown(event) {
     if (event.key === 'Escape') {
       this.hiddenClear();
     }

@@ -35,7 +35,7 @@ class AloneCalendar {
     });
   }
 
-  _eventOpenKeyDown(event) {
+  _handleDropDownKeyDown(event) {
     if (event.key === 'Enter') {
       this.calendar.checkIsOpen();
     }
@@ -49,12 +49,12 @@ class AloneCalendar {
     );
     this.$container.addEventListener(
       'keydown',
-      this._eventOpenKeyDown.bind(this),
+      this._handleDropDownKeyDown.bind(this),
       true,
     );
     this.$inputCalendar.addEventListener(
       'click',
-      this._handleInputClick.bind(this),
+      this._handleCalendarContainerClick.bind(this),
     );
   }
 
@@ -69,7 +69,7 @@ class AloneCalendar {
     }
   }
 
-  _handleInputClick() {
+  _handleCalendarContainerClick() {
     this.calendar.checkIsOpen();
   }
 

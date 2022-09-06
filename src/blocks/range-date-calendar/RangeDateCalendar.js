@@ -49,20 +49,20 @@ class RangeDateCalendar {
     );
     this.$container.addEventListener(
       'keydown',
-      this._setDateClick.bind(this),
+      this._handleRootKeyDown.bind(this),
       true,
     );
 
     this.$arrow.forEach((el) => {
-      el.addEventListener('click', this._handleArrowClick.bind(this));
+      el.addEventListener('click', this._handleContainerArrowClick.bind(this));
     });
   }
 
-  _handleArrowClick() {
+  _handleContainerArrowClick() {
     this.calendar.checkIsOpen();
   }
 
-  _setDateClick(event) {
+  _handleRootKeyDown(event) {
     const calendarDate = this.calendar.$body.data('datepicker');
 
     const valueInputDeparture = this.$inputDeparture.value.split('.').join('');

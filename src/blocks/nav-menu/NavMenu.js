@@ -15,21 +15,21 @@ class NavMenu {
   _bindEvents() {
     this.$items.forEach((item) => {
       if (item.querySelector('.js-sub-list')) {
-        item.addEventListener('click', this._openSubMenuClick.bind(this));
+        item.addEventListener('click', this._handleMenuItemClick.bind(this));
       }
     });
 
     this.$items.forEach((item) => {
       if (item.querySelector('.js-sub-list')) {
-        item.addEventListener('keydown', this._openSubMenuKeyDown.bind(this));
+        item.addEventListener('keydown', this._handleMenuItemKeyDown.bind(this));
       }
     });
 
-    this.body.addEventListener('click', this._globalClose.bind(this));
-    this.body.addEventListener('keydown', this._eventCloseWithEsc.bind(this));
+    this.body.addEventListener('click', this._handleBodyClick.bind(this));
+    this.body.addEventListener('keydown', this._handleBodyKeyDown.bind(this));
   }
 
-  _openSubMenuClick(event) {
+  _handleMenuItemClick(event) {
     if (event.currentTarget.classList.contains(navMenuClassNames.ITEM_ACTIVE)) {
       event.currentTarget.querySelector('.js-sub-list').classList.remove(navMenuClassNames.SUB_LIST_ACTIVE);
       event.currentTarget
@@ -47,7 +47,7 @@ class NavMenu {
     }
   }
 
-  _openSubMenuKeyDown(event) {
+  _handleMenuItemKeyDown(event) {
     if (event.key === 'Enter') {
       if (event.currentTarget.classList.contains(navMenuClassNames.ITEM_ACTIVE)) {
         event.currentTarget.querySelector('.js-sub-list').classList.remove(navMenuClassNames.SUB_LIST_ACTIVE);
@@ -67,7 +67,7 @@ class NavMenu {
     }
   }
 
-  _eventCloseWithEsc(event) {
+  _handleBodyKeyDown(event) {
     if (event.key === 'Escape') {
       this.$items.forEach((item) => {
         if (item.classList.contains(navMenuClassNames.ITEM_ACTIVE)) {
@@ -83,7 +83,7 @@ class NavMenu {
     }
   }
 
-  _globalClose(event) {
+  _handleBodyClick(event) {
     if (!this.$container.contains(event.target)) {
       this.$items.forEach((item) => {
         if (item.classList.contains(navMenuClassNames.ITEM_ACTIVE)) {

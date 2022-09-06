@@ -13,17 +13,17 @@ class NavBurger {
   }
 
   _initEvents() {
-    this.container.addEventListener('click', this._eventOpen.bind(this));
-    this.body.addEventListener('click', this._eventGlobalClose.bind(this));
+    this.container.addEventListener('click', this._handleNavBurgerClick.bind(this));
+    this.body.addEventListener('click', this._handleBodyClick.bind(this));
   }
 
-  _eventGlobalClose(event) {
+  _handleBodyClick(event) {
     if (!this.container.contains(event.target)) {
       this.menu.classList.remove(navBurgerClassNames.BURGER_OPEN);
     }
   }
 
-  _eventOpen() {
+  _handleNavBurgerClick() {
     if (this.menu.classList.contains(navBurgerClassNames.BURGER_OPEN)) {
       this.menu.classList.remove(navBurgerClassNames.BURGER_OPEN);
     } else {

@@ -31,10 +31,10 @@ class SliderRange {
   }
 
   _addEvent() {
-    this.slider.noUiSlider.on('update', this._updateValueRange.bind(this));
+    this.slider.noUiSlider.on('update', this._handleSliderUpdate.bind(this));
   }
 
-  _updateValueRange(values, handle) {
+  _handleSliderUpdate(values, handle) {
     this._setRangeValue(values, handle);
   }
 
