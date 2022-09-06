@@ -267,10 +267,14 @@ class DropDown {
   _checkEnding(checkEnding, textForms) {
     const checkEndingValue = Math.abs(checkEnding) % 100;
     const resEndingNumber = checkEndingValue % 10;
-    if (checkEndingValue > 10 && checkEndingValue < 20) {
+
+    const isEndValueCorrectSize = checkEndingValue > 10 && checkEndingValue < 20;
+    const isResCorrectSize = resEndingNumber > 1 && resEndingNumber < 5;
+
+    if (isEndValueCorrectSize) {
       return textForms[2];
     }
-    if (resEndingNumber > 1 && resEndingNumber < 5) {
+    if (isResCorrectSize) {
       return textForms[1];
     }
     if (resEndingNumber === 1) {
@@ -305,23 +309,26 @@ class DropDown {
       strBathRoom = `${bathRoom} ${arrayName[2].textContent}`;
     }
 
-    if (strBedRooms !== '' && strBed !== '' && strBathRoom !== '') {
+    const isAllSelected = strBedRooms !== '' && strBed !== '' && strBathRoom !== '';
+    
+    const isBedRoomsNotEmpty = strBedRooms !== '';
+    const isBedRoomsEmpty = strBedRooms === '';
+    const isBedNotEmpty = strBed !== '';
+    const isBedEmpty = strBed === '';
+    const isBathRoomNotEmpty = strBathRoom !== '';
+    const isBathRoomEmpty = strBathRoom === '';
+
+    if (isAllSelected) {
       strBathRoom = '';
       this.inputName.value = `${strBedRooms}, ${strBed}...`;
-    } else if (strBedRooms !== '' && strBed !== '' && strBathRoom === '') {
+    } else if (isBedRoomsNotEmpty && isBedNotEmpty && isBathRoomEmpty) {
       this.inputName.value = `${strBedRooms}, ${strBed}`;
-    } else if (strBedRooms !== '' && strBed === '' && strBathRoom !== '') {
+    } else if (isBedRoomsNotEmpty && isBedEmpty && isBathRoomNotEmpty) {
       this.inputName.value = `${strBedRooms}, ${strBathRoom}`;
-    } else if (strBedRooms === '' && strBed !== '' && strBathRoom !== '') {
+    } else if (isBedRoomsEmpty && isBedNotEmpty && isBathRoomNotEmpty) {
       this.inputName.value = `${strBed}, ${strBathRoom}`;
-    } else if (strBedRooms === '' && strBed === '' && strBathRoom !== '') {
-      this.inputName.value = `${strBathRoom}`;
-    } else if (strBedRooms === '' && strBed !== '' && strBathRoom === '') {
-      this.inputName.value = `${strBed}`;
-    } else if (strBedRooms !== '' && strBed === '' && strBathRoom === '') {
-      this.inputName.value = `${strBedRooms}`;
     } else {
-      this.inputName.value = '';
+      this.inputName.value = `${strBed}${strBathRoom}${strBedRooms}`;
     }
   }
 }

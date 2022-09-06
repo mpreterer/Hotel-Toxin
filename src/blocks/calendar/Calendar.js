@@ -71,7 +71,9 @@ class Calendar {
 
     this._addButtons();
 
-    if (this.initDates !== '' && this.initDates !== undefined) {
+    const isInitNotEmpty = this.initDates !== '' && this.initDates !== undefined;
+    
+    if (isInitNotEmpty) {
       const parseDate = JSON.parse(this.initDates);
       this.$body
         .datepicker()
