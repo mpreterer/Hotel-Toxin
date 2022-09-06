@@ -63,19 +63,15 @@ class DropDown {
 
   _handleDropDownKeyDown(event) {
     if (event.key === 'Enter') {
-      if (this.counterPanel.classList.contains(dropDownClassNames.BLOCK_CLOSE)) {
-        this.counterPanel.classList.remove(dropDownClassNames.BLOCK_CLOSE);
-        this.counterPanel.classList.add(dropDownClassNames.BLOCK_OPEN);
-        this.open.classList.toggle(dropDownClassNames.NAME_ACTIVE);
-      } else {
-        this.counterPanel.classList.remove(dropDownClassNames.BLOCK_OPEN);
-        this.counterPanel.classList.add(dropDownClassNames.BLOCK_CLOSE);
-        this.open.classList.toggle(dropDownClassNames.NAME_ACTIVE);
-      }
+      this._checkOpenDropDown();
     }
   }
 
   _handleTitleClick() {
+    this._checkOpenDropDown();
+  }
+
+  _checkOpenDropDown() {
     if (this.counterPanel.classList.contains(dropDownClassNames.BLOCK_CLOSE)) {
       this.counterPanel.classList.remove(dropDownClassNames.BLOCK_CLOSE);
       this.counterPanel.classList.add(dropDownClassNames.BLOCK_OPEN);
@@ -106,9 +102,7 @@ class DropDown {
     if (!this.container.contains(event.target)) {
       this.counterPanel.classList.remove(dropDownClassNames.BLOCK_OPEN);
       this.counterPanel.classList.add(dropDownClassNames.BLOCK_CLOSE);
-      if (this.open.classList.contains(dropDownClassNames.NAME_ACTIVE)) {
-        this.open.classList.remove(dropDownClassNames.NAME_ACTIVE);
-      }
+      this.open.classList.remove(dropDownClassNames.NAME_ACTIVE);
     }
   }
 
@@ -129,20 +123,16 @@ class DropDown {
   }
 
   _checkInputName() {
-    let checkCount = [];
     const tempArray = [];
 
     this.counterNumber.forEach((element) => {
-      checkCount += Number(element.value);
       tempArray.push(element.value);
     });
 
-    if (checkCount > 0) {
-      if (this.appointment === 'guests') {
-        this._counterGuests(tempArray);
-      } else if (this.appointment === 'furniture') {
-        this._counterFurniture(tempArray);
-      }
+    if (this.appointment === 'guests') {
+      this._counterGuests(tempArray);
+    } else if (this.appointment === 'furniture') {
+      this._counterFurniture(tempArray);
     }
   }
 

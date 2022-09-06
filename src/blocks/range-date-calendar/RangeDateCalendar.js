@@ -62,7 +62,32 @@ class RangeDateCalendar {
     this.calendar.checkIsOpen();
   }
 
-  _handleRootKeyDown(event) {
+  _removingDate(event) {
+    const calendarDate = this.calendar.$body.data('datepicker');
+
+    const valueInputArrival = this.$inputArrival.value.split('.').join('');
+    const isOnlyNumbersArrival = /^\d+$/.test(valueInputArrival);
+
+    const valueInputDeparture = this.$inputDeparture.value.split('.').join('');
+    const isOnlyNumbersDeparture = /^\d+$/.test(valueInputDeparture);
+
+    const isNotOnlyNumbersDeparture = !isOnlyNumbersDeparture;
+    const isNotOnlyNumbersArrival = !isOnlyNumbersArrival;
+
+    if (isNotOnlyNumbersDeparture && isNotOnlyNumbersArrival) {
+      calendarDate.date = new Date();
+    }
+
+    if (event.target.name === 'arrival') {
+      this.arrival.setAttribute('data-complete', 'false');
+    }
+
+    if (event.target.name === 'departure') {
+      this.departure.setAttribute('data-complete', 'false');
+    }
+  }
+
+  _enterDate() {
     const calendarDate = this.calendar.$body.data('datepicker');
 
     const valueInputDeparture = this.$inputDeparture.value.split('.').join('');
@@ -87,45 +112,36 @@ class RangeDateCalendar {
     const isNotUseArrival = attributeArrival === 'false';
     const isNotUseDeparture = attributeDeparture === 'false';
 
-    const isNotOnlyNumbersDeparture = !isOnlyNumbersDeparture;
-    const isNotOnlyNumbersArrival = !isOnlyNumbersArrival;
+    if (
+      isEnterArrival &&
+      isNotEmptyDateArrival &&
+      isOnlyNumbersArrival &&
+      isNotUseArrival
+    ) {
+      calendarDate.selectDate(
+        new Date(dateYearsArrival, dateMonthArrival, dateDayArrival),
+      );
+      this.arrival.setAttribute('data-complete', 'true');
+    }
 
+    if (
+      isEnterDeparture &&
+      isNotEmptyDateDeparture &&
+      isOnlyNumbersDeparture &&
+      isNotUseDeparture
+    ) {
+      calendarDate.selectDate(
+        new Date(dateYearsDeparture, dateMonthDeparture, dateDayDeparture),
+      );
+      this.departure.setAttribute('data-complete', 'true');
+    }
+  }
+
+  _handleRootKeyDown(event) {
     if (event.key === 'Backspace') {
-      if (isNotOnlyNumbersDeparture && isNotOnlyNumbersArrival) {
-        calendarDate.date = new Date();
-      }
-
-      if (event.target.name === 'arrival') {
-        this.arrival.setAttribute('data-complete', 'false');
-      }
-
-      if (event.target.name === 'departure') {
-        this.departure.setAttribute('data-complete', 'false');
-      }
+      this._removingDate(event);
     } else {
-      if (
-        isEnterArrival &&
-        isNotEmptyDateArrival &&
-        isOnlyNumbersArrival &&
-        isNotUseArrival
-      ) {
-        calendarDate.selectDate(
-          new Date(dateYearsArrival, dateMonthArrival, dateDayArrival),
-        );
-        this.arrival.setAttribute('data-complete', 'true');
-      }
-
-      if (
-        isEnterDeparture &&
-        isNotEmptyDateDeparture &&
-        isOnlyNumbersDeparture &&
-        isNotUseDeparture
-      ) {
-        calendarDate.selectDate(
-          new Date(dateYearsDeparture, dateMonthDeparture, dateDayDeparture),
-        );
-        this.departure.setAttribute('data-complete', 'true');
-      }
+      this._enterDate(event);
     }
   }
 
@@ -172,6 +188,9 @@ class RangeDateCalendar {
       datesArray !== undefined && datesArray !== null && date !== '';
     this.$inputArrival.value = dateFirst;
 
+    // Здесь аналогично с AloneCalendar.
+    // Без проверки даты, календарь может обрушиться.
+    
     if (hasDates) {
       if (datesArray.length > 1) {
         this.$inputDeparture.value = dateSecond;

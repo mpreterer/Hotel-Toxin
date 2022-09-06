@@ -76,6 +76,10 @@ class AloneCalendar {
   _setDate(date) {
     this.$placeholder.innerHTML = date;
 
+    // В этом месте никак без вложенной проверки, так как Calendar
+    // конкретно в этом классе может быть undefined.
+    // При инициализации без проверки может вызвать ошибку.
+    
     if (this.calendar !== undefined) {
       if (date) {
         this.calendar.addClearBtn();
