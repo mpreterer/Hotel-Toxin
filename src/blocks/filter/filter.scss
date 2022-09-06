@@ -107,24 +107,4 @@
   &__container-drop-down {
     margin: 14px 0 31px;
   }
-
-  @media (max-width: 425px) {
-    & .drop-down {
-      &__name {
-        width: auto;
-      }
-    }
-  }
-
-  @media (max-width: 375px) {
-    & .calendar {
-      transform: translate(-15px, 5px);
-    }
-  }
-
-  @media (max-width: 340px) {
-    & .calendar {
-      transform: translate(-36px, 5px);
-    }
-  }
 }

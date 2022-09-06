@@ -43,16 +43,6 @@
     border-top: 1px solid #e8e8ec;
   }
 
-  &__slider-rooms:hover > button.slick-next.slick-arrow {
-    opacity: 1;
-    transition: 0.3s;
-  }
-
-  &__slider-rooms:hover > button.slick-prev.slick-arrow {
-    opacity: 1;
-    transition: 0.3s;
-  }
-
   &__slider-rooms {
     width: 100%;
   }
@@ -115,5 +105,12 @@
 
   &__feedback-txt {
     font-weight: normal;
+  }
+
+  &_responsive {
+    @media (max-width: 904px) {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 }

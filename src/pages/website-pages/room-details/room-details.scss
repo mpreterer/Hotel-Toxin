@@ -17,6 +17,10 @@
 
   &__first-orders {
     margin-right: 100px;
+
+    @media (max-width: 720px) {
+      margin-right: 0;
+    }
   }
 
   &__room-loop-big {
@@ -53,7 +57,7 @@
     }
   }
 
-  &__room-order {
+  &__room-order-container {
     margin-right: 9px;
   }
 
@@ -143,14 +147,6 @@
 
   &__orders {
     display: flex;
-
-    & .room-orders {
-      margin-left: 28px;
-
-      @media (max-width: 341px) {
-        margin-left: 0;
-      }
-    }
 
     @media (max-width: 1200px) {
       justify-content: center;
@@ -245,12 +241,6 @@
   &__order {
     @media (max-width: 1200px) {
       margin-right: 0 !important;
-    }
-  }
-
-  @media (max-width: 380px) {
-    & .calendar {
-      transform: translate(-26px, 5px);
     }
   }
 }

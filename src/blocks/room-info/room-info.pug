@@ -1,7 +1,9 @@
 include ../stars-rating/stars-rating.pug
 
-mixin room-info({ link = 'room-details.html', number = 888, level = 'Люкс', price = '9 990', stars = 5, review = 145, sliders = [{src: 'assets/img/rooms/room-888.png', alt: 'room №888'}, {src: 'assets/img/rooms/room-888.png', alt: 'room №888'}, {src: 'assets/img/rooms/room-888.png', alt: 'room №888'}] }={})
-  .room-info.js-room-info
+mixin room-info({ link = 'room-details.html', number = 888, formatSize='default', level = 'Люкс', price = '9 990', stars = 5, review = 145, sliders = [{src: 'assets/img/rooms/room-888.png', alt: 'room №888'}, {src: 'assets/img/rooms/room-888.png', alt: 'room №888'}, {src: 'assets/img/rooms/room-888.png', alt: 'room №888'}] }={})
+  - var size = 'room-info_' + formatSize;
+  
+  .room-info.js-room-info(class=[size])
     .room-info__container
       .room-info__slider-rooms.js-slider-rooms
         each slider in sliders 

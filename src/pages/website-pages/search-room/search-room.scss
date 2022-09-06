@@ -8,24 +8,6 @@
   font-size: $font-size-small;
   line-height: 15px;
 
-  & .alone-calendar {
-    &__calendar {
-      transform: translateX(-30px);
-      
-      @media (max-width: 700px) {
-        transform: translateX(0px);
-      }
-
-      @media (max-width: 375px) {
-        transform: translateX(-20px);
-      }
-
-      @media (max-width: 332px) {
-        transform: translateX(-30px);
-      }
-    }
-  }
-
   &__rooms {
     display: flex;
     flex-wrap: wrap;
@@ -86,12 +68,12 @@
     margin-bottom: 14px;
   }
 
+  &__room-container {
+    margin-bottom: 20px;
+  }
+
   &__rooms-container {
     margin-left: 45px;
-
-    & .room-info {
-      margin-bottom: 20px;
-    }
 
     @media (max-width: 1300px) {
       text-align: center;
@@ -159,12 +141,5 @@
 
   @media (max-width: 700px) {
     flex-direction: column;
-  }
-
-  @media (max-width: 904px) {
-    .room-info {
-      max-width: 100%;
-      max-height: 100%;
-    }
   }
 }

@@ -79,14 +79,16 @@ block content
             h2.search-room__number-for-user Номера, которые мы для вас подобрали 
             .search-room__rooms
                 each room in roomsList
-                    +room-info({
+                    .search-room__room-container
+                      +room-info({
                         number: room.number,
                         level: room.level,
                         price: room.price,
                         stars: room.stars,
                         review: room.review,
                         sliders: room.sliders,
-                    })
+                        formatSize: 'responsive',
+                      })
             .search-room__pagination-container
                 +pagination({
                     items: 180,

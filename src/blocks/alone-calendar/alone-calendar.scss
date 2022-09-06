@@ -8,8 +8,8 @@
   cursor: pointer;
   user-select: none;
 
-  & .calendar {
-    transform: translateY(5px);
+  &__calendar {
+    margin-top: 5px;
   }
 
   &__calendar-container {

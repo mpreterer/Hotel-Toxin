@@ -104,17 +104,18 @@
     margin-bottom: 100px;
   }
 
-  &__buttons-top {
+  &__button-top {
     width: 101px;
+    height: 43px;
     margin: 16px 0 30px;
   }
 
-  &__buttons-button {
+  &__button-empty {
     width: 101px;
     margin-bottom: 30px;
   }
 
-  &__buttons-center {
+  &__button-center {
     width: 105px;
     margin-bottom: 30px;
   }
@@ -143,11 +144,5 @@
 
   &__alone-calendar {
     margin-bottom: 30px;
-  }
-
-  & .alone-calendar {
-    &__calendar {
-      transform: translateX(0);
-    }
   }
 }
