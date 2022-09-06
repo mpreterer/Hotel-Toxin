@@ -97,13 +97,14 @@ block content
                             services: 300
                         })
                 .room-details__orders 
-                    +room-orders({
-                        list: [
-                            { txt: 'Нельзя с питомцами' },
-                            { txt: 'Без вечеринок и мероприятий' },
-                            { txt: 'Время прибытия — после 13:00, а выезд до 12:00' }
-                        ]
-                    })
+                    .room-details__first-orders
+                        +room-orders({
+                            list: [
+                                { txt: 'Нельзя с питомцами' },
+                                { txt: 'Без вечеринок и мероприятий' },
+                                { txt: 'Время прибытия — после 13:00, а выезд до 12:00' }
+                            ]
+                        })
                     .room-details__cancel
                         p.room-details__cancel-title Отмена
                         span.room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги. 

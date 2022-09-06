@@ -31,7 +31,7 @@ block content
                 +text-input({ placeholder: 'Email', name: 'email' })
             .ui-cards__titles
                 .ui-cards__title Dropdown
-            .ui-cards__drop-down(data-component-js="js-drop-down")
+            .ui-cards__drop-down
                 +dropDown({
                     list: [
                         { name: 'взрослые', val: 0 },
@@ -44,7 +44,7 @@ block content
                 })
             .ui-cards__titles
                 .ui-cards__title masked text field
-            .ui-cards__masked-field(data-component-js="js-text-field")
+            .ui-cards__masked-field
                 +text-input({ isMasked: true, name: 'birthday' })
             .ui-cards__range-dates
                 +range-date-calendar({
@@ -53,7 +53,7 @@ block content
                     })
             .ui-cards__titles
                 .ui-cards__title filter date dropdown
-            .ui-cards__alone-calendar(data-component-js="js-alone-calendar")
+            .ui-cards__alone-calendar
                 +alone-calendar
             .ui-cards__titles
                 .ui-cards__title subscription text field
@@ -62,7 +62,7 @@ block content
             .ui-cards__titles
                 .ui-cards__title dropdown
                 .ui-cards__text Default
-            .ui-cards__drop-down-not-panel-def(data-component-js="js-drop-down-without-panel")
+            .ui-cards__drop-down-not-panel-def
                 +dropDown({
                     appointment: 'furniture',
                     list: [
@@ -73,7 +73,7 @@ block content
                     showFunction: false,
                     placeholder: 'Выберите удобства'
                 })
-            .ui-cards__checkbox-list(data-component-js="js-checkbox-list")
+            .ui-cards__checkbox-list
                 +checkbox-list({
                         title: 'Дополнительные удобства',
                         list: [
@@ -131,12 +131,12 @@ block content
                             +button-like({ count: 11 })
                     .ui-cards__titles
                         .ui-cards__title rate button
-                    .ui-cards__rate-buttons(data-component-js="js-rate-buttons")
+                    .ui-cards__rate-buttons
                         +stars-rating({ stars: 4, readonly: false })
                         +stars-rating({ stars: 5 })
                     .ui-cards__titles
                         .ui-cards__title dropdown
-                    .ui-cards__drop-down-with-panel(data-component-js="js-drop-down")
+                    .ui-cards__drop-down-with-panel
                         +dropDown({
                             list: [
                                 { name: 'взрослые', val: 0 },
@@ -157,7 +157,7 @@ block content
                             ]
                         })
                 .ui-cards__second-right-block
-                    .ui-cards__range-slider(data-component-js="js-slider-range")
+                    .ui-cards__range-slider
                         +slider-range({
                             title: 'Range Slider',
                             subTitle: ''
@@ -188,7 +188,7 @@ block content
                             })
                     .ui-cards__titles
                         .ui-cards__title pagination
-                    .ui-cards__pagination(data-component-js="js-pagination")
+                    .ui-cards__pagination
                         +pagination({
                             items: 180,
                             itemsOnPage: 12,
@@ -196,7 +196,7 @@ block content
                         })
                     .ui-cards__titles
                         .ui-cards__title dropdown
-                    .ui-cards__drop-down-with-guests(data-component-js="js-drop-down")
+                    .ui-cards__drop-down-with-guests
                         +dropDown({
                             list: [
                                 { name: 'взрослые', val: 2 },
