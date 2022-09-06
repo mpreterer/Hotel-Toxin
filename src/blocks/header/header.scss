@@ -7,6 +7,10 @@
   background: #fff;
   box-shadow: 0 10px 20px $color-shade-light;
 
+  &__nav-menu-container {
+    margin-right: 7px;
+  }
+
   &__container {
     display: flex;
     align-items: center;

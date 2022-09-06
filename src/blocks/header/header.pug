@@ -8,7 +8,8 @@ mixin header({ user } = {})
     .header__container
       +logotype
       .header__right-part
-        +nav-menu({ listMenu: [ {name: 'О нас', href: '/mock-address/change-me'}, {name: 'Услуги', href: '/mock-address/change-me', submenu: [ {name: 'Услуга 1', href: '/mock-address/change-me'}, {name: 'Услуга 2', href: '/mock-address/change-me'} ]}, {name: 'Вакансии', href: '/mock-address/change-me'}, {name: 'Новости', href: '/mock-address/change-me'}, {name: 'Соглашения', href: '/mock-address/change-me', submenu: [ {name: 'Соглашение 1', href: '/mock-address/change-me'}, {name: 'Соглашение 2', href: '/mock-address/change-me'} ]}, ] })
+        .header__nav-menu-container
+          +nav-menu({ listMenu: [ {name: 'О нас', href: '/mock-address/change-me'}, {name: 'Услуги', href: '/mock-address/change-me', submenu: [ {name: 'Услуга 1', href: '/mock-address/change-me'}, {name: 'Услуга 2', href: '/mock-address/change-me'} ]}, {name: 'Вакансии', href: '/mock-address/change-me'}, {name: 'Новости', href: '/mock-address/change-me'}, {name: 'Соглашения', href: '/mock-address/change-me', submenu: [ {name: 'Соглашение 1', href: '/mock-address/change-me'}, {name: 'Соглашение 2', href: '/mock-address/change-me'} ]}, ] })
         .header__container-login
           if user
             .header__user

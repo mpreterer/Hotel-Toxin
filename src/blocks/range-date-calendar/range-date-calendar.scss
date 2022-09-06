@@ -5,6 +5,10 @@
   flex-direction: column;
   font-size: $font-size-main;
 
+  & .calendar {
+    transform: translateY(5px);
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;

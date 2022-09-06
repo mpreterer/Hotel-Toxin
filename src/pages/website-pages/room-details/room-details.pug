@@ -27,28 +27,29 @@ block content
                 .room-details__split-container
                     .room-details__split
                         .room-details__more-info
-                            +about-room({
-                               list: [
-                                   {
-                                        firstAdvantage: 'Комфорт',
-                                        secondAdvantage: 'Шумоподавляющие стены',
-                                        class: 'about-room__insert-emoticon',
-                                        alt: 'Комфорт'
-                                   },
-                                   {
-                                        firstAdvantage: 'Удобство',
-                                        secondAdvantage: 'Окно в каждой из спален',
-                                        class: 'about-room__location-city',
-                                        alt: 'Удобство'
-                                   },
-                                   {
-                                        firstAdvantage: 'Уют',
-                                        secondAdvantage: 'Номер оснащён камином',
-                                        class: 'about-room__whatshot',
-                                        alt: 'Уют',
-                                   }
-                               ]
-                            })
+                            .room-details__about-room-container
+                                +about-room({
+                                    list: [
+                                        {
+                                            firstAdvantage: 'Комфорт',
+                                            secondAdvantage: 'Шумоподавляющие стены',
+                                            class: 'about-room__insert-emoticon',
+                                            alt: 'Комфорт'
+                                        },
+                                        {
+                                            firstAdvantage: 'Удобство',
+                                            secondAdvantage: 'Окно в каждой из спален',
+                                            class: 'about-room__location-city',
+                                            alt: 'Удобство'
+                                        },
+                                        {
+                                            firstAdvantage: 'Уют',
+                                            secondAdvantage: 'Номер оснащён камином',
+                                            class: 'about-room__whatshot',
+                                            alt: 'Уют',
+                                        }
+                                    ]
+                                })
                             .room-details__impressions
                                +impressions-room({
                                     list: [

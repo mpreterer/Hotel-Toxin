@@ -8,6 +8,10 @@
   cursor: pointer;
   user-select: none;
 
+  & .calendar {
+    transform: translateY(5px);
+  }
+
   &__calendar-container {
     display: flex;
     align-items: center;
