@@ -1,5 +1,5 @@
 const buttonLikeClassNames = {
-  FILL: 'button-like_fill-heart',
+  FILL: 'button-like__heart_filled',
   ACTIVE: 'button-like_active',
 };
 

@@ -26,14 +26,10 @@
     background-repeat: no-repeat;
     background-position: center;
     pointer-events: none;
-  }
 
-  &_fill-heart {
-    background-image: url('./images/favorite.svg');
-  }
-
-  &_border-heart {
-    background-image: url('./images/favorite-border.svg');
+    &_filled {
+      background-image: url('./images/favorite.svg');
+    }
   }
 
   &_active {
