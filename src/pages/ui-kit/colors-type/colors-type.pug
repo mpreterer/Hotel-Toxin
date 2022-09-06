@@ -1,4 +1,5 @@
 extends ../../../template-head/main-ui.pug
+include ../blocks/colors/colors.pug
 
 block variables 
     - var pageTitle = 'Цвета и Типы'
@@ -8,40 +9,39 @@ block content
         div.colors-type__left-block
             ul.colors-type__list-color
                 li.colors-type__item
-                    div#square-color-1.colors-type__square
-                    div.colors-type__text
-                        span.colors-type__title-color Dark Shade 100%
-                        span.colors-type__color-hex #1F2041
+                    +colors()
                 li.colors-type__item
-                    div#square-color-2.colors-type__square
-                    div.colors-type__text
-                        span.colors-type__title-color Dark Shade 75%
-                        span.colors-type__color-hex #1F2041
+                   +colors({
+                      colorItem: 'shade-secondary',
+                      title:'Dark Shade 75%',
+                    })
                 li.colors-type__item
-                    div#square-color-3.colors-type__square
-                    div.colors-type__text
-                        span.colors-type__title-color Dark Shade 50%
-                        span.colors-type__color-hex #1F2041
+                    +colors({
+                      colorItem: 'shade-grey',
+                      title: 'Dark Shade 50%',
+                    })
                 li.colors-type__item
-                    div#square-color-4.colors-type__square
-                    div.colors-type__text
-                        span.colors-type__title-color Dark Shade 25%
-                        span.colors-type__color-hex #1F2041
+                    +colors({
+                      colorItem: 'shade',
+                      title: 'Dark Shade 25%',
+                    })
                 li.colors-type__item
-                    div#square-color-5.colors-type__square
-                    div.colors-type__text
-                        span.colors-type__title-color Dark Shade 5%
-                        span.colors-type__color-hex #1F2041
+                    +colors({
+                      colorItem: 'shade-light',
+                      title: 'Dark Shade 5%',
+                    })
                 li.colors-type__item
-                    div#square-color-6.colors-type__square
-                    div.colors-type__text
-                        span.colors-type__title-color Purple
-                        span.colors-type__color-hex #BC9CFF
+                  +colors({
+                      colorItem: 'purple',
+                      title: 'Purple',
+                      hex: '#BC9CFF'
+                    })
                 li.colors-type__item
-                    div#square-color-7.colors-type__square
-                    div.colors-type__text
-                        span.colors-type__title-color Green
-                        span.colors-type__color-hex #6FCF97
+                    +colors({
+                      colorItem: 'green',
+                      title: 'Green',
+                      hex: '#6FCF97'
+                    })
         div.colors-type__right-block
             ul.colors-type__right-block-list
                 li.colors-type__right-block-item
