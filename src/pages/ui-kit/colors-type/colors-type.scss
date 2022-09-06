@@ -38,46 +38,4 @@
       margin-bottom: 0;
     }
   }
-
-  &__description {
-    width: 369px;
-    margin: 0;
-  }
-
-  &__big-text {
-    font-size: $font-size-big;
-  }
-
-  &__text-size-caption {
-    margin: 0;
-    font-weight: bold;
-  }
-
-  &__big-text &__text-size-caption {
-    margin-left: 8px;
-  }
-
-  &__medium-text {
-    font-size: $font-size-medium;
-  }
-
-  &__medium-text &__text-size-caption {
-    margin-left: 10px;
-  }
-
-  &__small-text {
-    font-size: $font-size-main;
-  }
-
-  &__small-text &__text-size-caption {
-    margin-left: 18px;
-  }
-
-  &__body-text {
-    font-size: $font-size-small;
-  }
-
-  &__body-text &__text-size-caption {
-    margin-left: 5px;
-  }
 }

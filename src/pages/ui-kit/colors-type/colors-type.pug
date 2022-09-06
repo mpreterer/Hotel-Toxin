@@ -1,5 +1,6 @@
 extends ../../../template-head/main-ui.pug
 include ../blocks/colors/colors.pug
+include ../blocks/text-description/text-description.pug
 
 block variables 
     - var pageTitle = 'Цвета и Типы'
@@ -45,16 +46,24 @@ block content
         div.colors-type__right-block
             ul.colors-type__right-block-list
                 li.colors-type__right-block-item
-                    p.colors-type__big-text.colors-type__text-size-caption H1
-                    p.colors-type__big-text.colors-type__description This one is the sub-section or widget title
+                    +text-description({
+                        textSize: 'big-size',
+                    })
                 li.colors-type__right-block-item
-                    p.colors-type__medium-text.colors-type__text-size-caption H2
-                    p.colors-type__medium-text.colors-type__description Next one is the item title inside widgets
+                   +text-description({
+                        textSize: 'medium-size',
+                        description: 'Next one is the item title inside widgets',
+                        title: 'H2'
+                    })
                 li.colors-type__right-block-item
-                    p.colors-type__small-text.colors-type__text-size-caption H3
-                    p.colors-type__small-text.colors-type__description This is a label or CTA text
+                    +text-description({
+                        textSize: 'small-size',
+                        description: 'This is a label or CTA text',
+                        title: 'H3'
+                    })
                 li.colors-type__right-block-item
-                    p.colors-type__body-text.colors-type__text-size-caption Body
-                    p.colors-type__body-text.colors-type__description This is the body text which is used for most of the design, like paragraphs, lists, etc.
-
-
+                   +text-description({
+                        textSize: 'default-size',
+                        description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.',
+                        title: 'Body'
+                    })
