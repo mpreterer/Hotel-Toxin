@@ -1,8 +1,19 @@
-mixin button({ href = '/mock-address/change-me', type = 'default', text = 'click me', small = false, target }={})
-  - var typeButton = 'button_type_' + type;
-  - var sizeButton = small && 'button_size_small';
+mixin button({ href = '/mock-address/change-me', typeMethod = '', disabled= false, typeTagLik = false, link = '', type = 'default', text = 'click me', small = false, high = false, target }={})
+  -
+    const typeButton = 'button__title_type_' + type;
+    const smallButton = small && 'button__title_size_small';
+    const highButton = high && 'button__title_size_high';
+    const typeTag = typeTagLik ? 'a' : 'button';
+    const buttonAttributes = {
+        a: {
+          href: `./${link}.html`,
+        },
+        button: {
+          disabled: disabled,
+        }
+      }
 
-  a.button(href=href, target=target, class=[typeButton, sizeButton])
-    span.button__title #{ text }
+  #{typeTag}.button&attributes(buttonAttributes[typeTag])
+    span.button__title(class=[typeButton, smallButton, highButton]) #{ text }
     if type === 'long'
       .button__button-arrow
