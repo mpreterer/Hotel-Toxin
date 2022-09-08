@@ -166,20 +166,43 @@ block content
                         .ui-cards__title buttons
                     .ui-cards__buttons-all
                         .ui-cards__button-top
-                            +button({
-                                type: 'background',
-                                text: 'CLICK ME',
-                            })
+                            .ui-cards__button-top-no-disabled
+                                +button({
+                                    type: 'background',
+                                    text: 'CLICK ME',
+                                    high: true,
+                                })
+                            .ui-cards__button-top-disabled
+                                +button({
+                                    type: 'background',
+                                    text: 'CLICK ME',
+                                    disabled: true,
+                                    high: true,
+                                })
                         .ui-cards__button-center
-                            +button({
-                                type: 'border',
-                                text: 'CLICK ME',
-                            })
+                            .ui-cards__button-center-no-disabled
+                                +button({
+                                    type: 'border',
+                                    text: 'CLICK ME',
+                                })
+                            .ui-cards__button-center-disabled
+                                +button({
+                                    type: 'border',
+                                    text: 'CLICK ME',
+                                    disabled: true,
+                                })
                         .ui-cards__button-empty
-                            +button({
-                                type: 'empty',
-                                text: 'CLICK ME',
-                            })
+                            .ui-cards__button-empty-no-disabled
+                                +button({
+                                    type: 'empty',
+                                    text: 'CLICK ME',
+                                })
+                            .ui-cards__button-empty-disabled
+                                +button({
+                                    type: 'empty',
+                                    text: 'CLICK ME',
+                                    disabled: true,
+                                })
                         .ui-cards__pay-button
                             +button({
                                 text:'перейти к оплате',

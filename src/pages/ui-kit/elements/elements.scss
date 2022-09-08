@@ -105,22 +105,33 @@
   }
 
   &__button-top {
-    width: 101px;
+    display: flex;
+    justify-content: space-between;
+    width: 218px;
     height: 43px;
     margin: 16px 0 30px;
   }
 
   &__button-empty {
-    width: 101px;
+    display: flex;
+    height: 15px;
     margin-bottom: 30px;
   }
 
+  &__button-empty-no-disabled {
+    margin-right: 20px;
+  }
+
   &__button-center {
-    width: 105px;
+    display: flex;
+    justify-content: space-between;
+    width: 218px;
+    height: 44px;
     margin-bottom: 30px;
   }
 
   &__pay-button {
+    height: 44px;
     margin-bottom: 30px;
   }
 
