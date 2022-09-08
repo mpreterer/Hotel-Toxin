@@ -4,12 +4,14 @@ mixin login-card({}={})
   .login-card
     .login-card__container
       span.login-card__title Войти
-      .login-card__email
-        +text-input({ placeholder: 'Email', name: 'name' })
-      .login-card__password
-        +text-input({ type: 'password', placeholder: 'Пароль', name: 'password' })
-      .login-card__login-btn
-        +button({ text: 'Войти', type: 'long', href: 'search-room.html' })
-      .login-card__account
-        p.login-card__question Нет аккаунта на Toxin?
-        +button({ text: 'Создать', type: 'border', href: 'registration.html' })
+      form.login-card__action-form(mehtod action="./registration.html")
+        .login-card__email
+          +text-input({ placeholder: 'Email', name: 'name' })
+        .login-card__password
+          +text-input({ type: 'password', placeholder: 'Пароль', name: 'password' })
+        .login-card__login-btn
+          +button({ text: 'Войти', type: 'long', href: 'search-room.html' })
+        .login-card__account
+          p.login-card__question Нет аккаунта на Toxin?
+          .login-card__registration-button
+            +button({ text: 'Создать', typeTag: 'link', type: 'border', href: 'registration.html' })

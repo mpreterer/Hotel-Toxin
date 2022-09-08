@@ -16,7 +16,7 @@ mixin header({ user } = {})
               a.header__user-name(href='/mock-address/change-me')= user
           else
             .header__btn-login
-              +button({ type: 'border', text: 'Войти', href: 'login.html', small: true })
+              +button({ type: 'border', typeTag: 'a', text: 'Войти', href: 'login.html', small: true })
             .header__btn-registration
-              +button({ type: 'background', text: 'Зарегистрироваться', href: 'registration.html' })
+              +button({ type: 'background', typeTag: 'a', text: 'Зарегистрироваться', href: 'registration.html' })
       +nav-burger({ navLinks: [ { title: 'Главная', link: 'index.html' }, { title: 'О нас', link: '/mock-address/change-me' }, { title: 'Услуги', link: '/mock-address/change-me' }, { title: 'Вакансии', link: '/mock-address/change-me' }, { title: 'Новости', link: '/mock-address/change-me' }, { title: 'Соглашения', link: '/mock-address/change-me' }, { title: 'Войти', link: 'login.html' }, { title: 'Регистрация', link: 'registration.html' }, ] })
