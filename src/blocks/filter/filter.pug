@@ -10,7 +10,7 @@ mixin filter(options={})
       .filter__search-room
         h1.filter__title !{ title }
         .filter__residence
-          .filter__block-date
+          form.filter__block-date(method action="./search-room.html")
             .filter__block-date-calendar
               +range-date-calendar
             .filter__container-drop-down

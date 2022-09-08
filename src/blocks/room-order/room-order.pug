@@ -3,7 +3,7 @@ include ../dropDown/dropDown.pug
 
 mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={})
   .room-order.js-room-order
-    .room-order__container
+    form.room-order__container(method action="./registration.html")
       .room-order__head
         span.room-order__number-container
           span.room-order__number-num №
@@ -49,4 +49,4 @@ mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={
           span.room-order__all-result-price(data-price='resultPrice') 0
           span.room-order__all-result-price-currency= currency
       .room-order__to-book
-        +button({ text: 'Забронировать', href: 'registration.html', type: 'long' })
+        +button({ text: 'Забронировать', type: 'long', typeMethod: 'submit' })

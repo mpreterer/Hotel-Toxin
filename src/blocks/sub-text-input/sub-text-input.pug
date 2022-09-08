@@ -5,9 +5,10 @@ mixin sub-text-input(options={})
       type = 'text',
       placeholder = '',
       link = '/mock-address/change-me',
-      target,
+      method = '',
     } = options;
-
-  label.sub-text-input
-    input.sub-text-input__input(name=name, type=type, placeholder=placeholder)
-    a.sub-text-input__arrow-link(href=link, target=target)
+  
+  form.sub-text-input(method=method, action=link)
+    label.sub-text-input__container
+      input.sub-text-input__input(name=name, type=type, placeholder=placeholder)
+      button.sub-text-input__arrow-link(type="submit")
