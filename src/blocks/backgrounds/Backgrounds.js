@@ -1,4 +1,4 @@
-class LoginPage {
+class Backgrounds {
   constructor(domParent) {
     this.container = domParent;
     this._init();
@@ -22,8 +22,11 @@ class LoginPage {
     const arrayBackgroundsParse = JSON.parse(this.arrayBackgroundsJson);
     let counter = 0;
     
+    this.container.style.backgroundImage = `url('${arrayBackgroundsParse.src[counter].background}')`;
+    counter += 1;
+
     setInterval(() => {
-      if (counter === 2) {
+      if (counter === 3) {
         counter = 0;
       }
 
@@ -34,4 +37,4 @@ class LoginPage {
   }
 }
 
-export default LoginPage;
+export default Backgrounds;

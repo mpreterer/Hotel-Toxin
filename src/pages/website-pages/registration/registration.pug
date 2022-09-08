@@ -3,13 +3,15 @@ include ../../../blocks/header/header.pug
 include ../../../blocks/footer/footer.pug
 include ../../../blocks/button/button.pug
 include ../../../blocks/registration-card/registration-card.pug
+include ../../../blocks/backgrounds/backgrounds.pug
 
 block variables
     - var pageTitle = '«Toxin» | Регистрация'
     - roomsList = require('../login/utils/login-backgrounds.json');
 
 block content
-    .registration-main.js-registration-main(style="background-image: url('assets/image/registration-bg.jpg');", data-src= roomsList)
+    .registration-main
+        +backgrounds({ dataSrc: roomsList })
         .registration-main__container
             +registration-card
             

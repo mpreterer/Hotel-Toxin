@@ -1,13 +1,15 @@
 extends ../../../template-head/main-index.pug
 include ../../../blocks/calendar/calendar.pug
 include ../../../blocks/filter/filter.pug
+include ../../../blocks/backgrounds/backgrounds.pug
 
 block variables
     - pageTitle = 'Главная «Toxin» | Отели'
     - roomsList = require('./utils/index-backgrounds.json');
 
 block content
-    main.index-main.js-index-main(style="background-image: url('assets/image/background-index-1.jpg');", data-src= roomsList)
+    main.index-main
+        +backgrounds({ dataSrc: roomsList })
         .index-main__container
             .index-main__filter-item.js-filter-item
                 +filter({

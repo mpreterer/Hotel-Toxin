@@ -1,13 +1,13 @@
 {
     "src": [
         {
+            "background": "assets/image/background-index-1.jpg"
+        },
+        {
             "background": "assets/image/background-index-2.jpg"
         },
         {
             "background": "assets/image/background-index-3.jpg"
-        },
-        {
-            "background": "assets/image/background-index-1.jpg"
         }
     ]
 }

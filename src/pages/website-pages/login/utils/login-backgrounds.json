@@ -1,10 +1,10 @@
 {
     "src": [
         {
-            "background": "assets/image/background-index-1.jpg"
+            "background": "assets/image/registration-bg.jpg"
         },
         {
-            "background": "assets/image/registration-bg.jpg"
+            "background": "assets/image/background-index-1.jpg"
         }
     ]
 }

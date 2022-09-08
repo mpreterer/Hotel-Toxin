@@ -3,10 +3,8 @@
 .index-main {
   height: 830px;
   line-height: 24px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
+  position: relative;
+  
   &__container {
     position: relative;
     max-width: 1175px;
