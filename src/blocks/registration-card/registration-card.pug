@@ -7,14 +7,14 @@ mixin registration-card({ title = 'Регистрация аккаунта' }={}
     .registration-card__container
       .registration-card__user-info
         h1.registration-card__title= title
-      .registration-card__user-about
+      form.registration-card__user-about
         .registration-card__user-name
           .registration-card__first-name
             +text-input({ placeholder: 'Имя', name: 'name' })
           .registration-card__second-name
             +text-input({ placeholder: 'Фамилия', name: 'second name' })
         .registration-card__gender
-          +radio-input
+          +radio-input({ groupName: 'gender' })
         .registration-card__birthday
           span.registration-card__sub-title дата рождения
           +text-input({ isMasked: true, name: 'birthday' })
@@ -27,8 +27,9 @@ mixin registration-card({ title = 'Регистрация аккаунта' }={}
         .registration-card__offer
           +toggle
         .registration-card__buy-btn
-          +button({ text:'зарегистрироваться', href: 'search-room.html', type: 'long' })
+          +button({ text:'зарегистрироваться', type: 'long', typeMethod: 'submit' })
         .registration-card__account
           .registration-card__question
             p.registration-card__question-txt Уже есть аккаунт на Toxin
-          +button({ text: 'Войти', href: 'login.html', type: 'border', })
+          .registration-card__question-link
+            +button({ text: 'Войти', typeTagLink: true, href: './login.html', type: 'border' })

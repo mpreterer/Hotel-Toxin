@@ -23,13 +23,13 @@ mixin dropDown({placeholder = 'Сколько гостей',appointment,isOpen =
           .drop-down__row
             span.drop-down__drop-item(data-item-name=element.name) #{ element.name }
             .drop-down__block-input
-              button.drop-down__circle-minus.js-button-minus -
+              button.drop-down__circle-minus.js-button-minus(type="button") -
               input.drop-down__counter.js-counter(
                 value=element.val || 0,
                 readonly
               ) 
-              button.drop-down__circle-plus.js-button-plus +
+              button.drop-down__circle-plus.js-button-plus(type="button") +
         if showFunction
           .drop-down__control-panel.js-control-panel
-            button.drop-down__functional-button.js-button-clear Очистить
-            button.drop-down__functional-button.js-button-apply Применить
+            button.drop-down__functional-button.js-button-clear(type="button") Очистить
+            button.drop-down__functional-button.js-button-apply(type="button") Применить
