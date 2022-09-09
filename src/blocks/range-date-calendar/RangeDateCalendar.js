@@ -15,9 +15,6 @@ class RangeDateCalendar {
     this.$containerCalendar = this.$container.querySelector(
       '.js-block-calendar',
     );
-    this.$clearButton = $(this.$containerCalendar).find(
-      '[data-button-type="clear"]',
-    );
     this.$arrow = this.$container.querySelectorAll(
       '.js-container-arrow',
     );

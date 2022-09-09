@@ -15,14 +15,6 @@ class Calendar {
     this._bindEventButtons();
   }
 
-  observeShowCalendarEvent(observer) {
-    const isCorrectObserver = observer !== undefined && observer !== null;
-
-    if (isCorrectObserver) {
-      this.observers.push(observer);
-    }
-  }
-
   showCalendar() {
     this.$body.show();
     this.isOpen = true;
@@ -97,19 +89,19 @@ class Calendar {
 
   _addButtons() {
     const clearButton = `
-        <div data-button-type="clear" class="calendar__button">
+        <div data-button-type="clear" class="datepicker__button">
             Очистить
         </div>
     `;
     const confirmButton = `
-        <div data-button-type="confirm" class="calendar__button">
+        <div data-button-type="confirm" class="datepicker__button">
             Применить
         </div>
     `;
 
     const $datepicker = this.$body.find('.datepicker');
 
-    $datepicker.append('<div class="calendar__buttons"></div>');
+    $datepicker.append('<div class="datepicker__buttons"></div>');
     this.$body.find(calendarClassNames.BUTTONS).append([clearButton, confirmButton]);
     this.$body
       .find('[data-button-type="clear"]')
