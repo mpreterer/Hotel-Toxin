@@ -9,7 +9,7 @@ include ../../../blocks/about-room/about-room.pug
 include ../../../blocks/custom-checkbox/custom-checkbox.pug
 include ../../../blocks/toggle/toggle.pug
 include ../../../blocks/radio-input/radio-input.pug
-include ../../../blocks/stars-rating/stars-rating.pug
+include ../../../blocks/stars/stars.pug
 include ../../../blocks/button-like/button-like.pug
 include ../../../blocks/checkbox-double-name/checkbox-double-name.pug
 include ../../../blocks/slider-range/slider-range.pug
@@ -132,8 +132,8 @@ block content
                     .ui-cards__titles
                         .ui-cards__title rate button
                     .ui-cards__rate-buttons
-                        +stars-rating({ stars: 4, readonly: false })
-                        +stars-rating({ stars: 5 })
+                        +stars({ stars: 4, readonly: false })
+                        +stars({ stars: 5 })
                     .ui-cards__titles
                         .ui-cards__title dropdown
                     .ui-cards__drop-down-with-panel
