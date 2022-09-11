@@ -1,5 +1,5 @@
-mixin slider-range({title='Slider', subTitle, range = {min: 5000, max: 10000}, currency = '₽', separator = ' - '}={})
-  .slider-range.js-slider-range
+mixin slider-range({title='Slider', subTitle, range = {min: 5000, max: 10000}, rangeMax = {min: 0, max: 15000}, currency = '₽', separator = ' - '}={})
+  .slider-range.js-slider-range(data-range= range, data-range-max=rangeMax)
     .slider-range__container-title
       .slider-range__name= title
       .slider-range__values

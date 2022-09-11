@@ -1,4 +1,4 @@
-import noUiSlider from 'nouislider';
+import NoUiSlider from '../../libs/no-ui-slider/NoUiSlider';
 
 class SliderRange {
   constructor(domParent) {
@@ -10,39 +10,27 @@ class SliderRange {
     this.minValue = this.container.querySelector('.js-min-value');
     this.maxValue = this.container.querySelector('.js-max-value');
     this.slider = this.container.querySelector('.js-slider');
-    this.hasSlider = this.slider !== null && this.slider !== undefined;
-
+    this.startValues = this.container.getAttribute('data-range');
+    this.rangeMaxValues = this.container.getAttribute('data-range-max');
+  
     this._initOptions();
   }
 
   _initOptions() {
-    if (this.hasSlider) {
-      noUiSlider.create(this.slider, {
-        start: [5000, 10000],
-        connect: true,
-        range: {
-          min: 0,
-          max: 15000,
-        },
-      });
+    const startValues = JSON.parse(this.startValues);
+    const rangeMaxValues = JSON.parse(this.rangeMaxValues);
 
-      this._addEvent();
-    }
-  }
-
-  _addEvent() {
-    this.slider.noUiSlider.on('update', this._handleSliderUpdate.bind(this));
-  }
-
-  _handleSliderUpdate(values, handle) {
-    this._setRangeValue(values, handle);
-  }
-
-  _setRangeValue(values, handle) {
-    const prices = [this.minValue, this.maxValue];
-    prices[handle].innerHTML =
-      Math.round(values[handle]).toLocaleString('ru-RU') +
-      prices[handle].innerHTML.slice(-1);
+    this.sliderRange = new NoUiSlider({
+      body: this.slider,
+      start: [startValues.min, startValues.max],
+      connect: true,
+      range: {
+        min: rangeMaxValues.min,
+        max: rangeMaxValues.max,
+      },
+      selectorMinValue: this.minValue,
+      selectorMaxValue: this.maxValue,
+    });
   }
 }
 
