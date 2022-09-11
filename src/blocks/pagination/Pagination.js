@@ -1,4 +1,4 @@
-import PaginationPlugin from '../../libs/pagination-js/PaginationPlugin';
+import PaginationJs from '../../libs/pagination-js/PaginationJs';
 
 class Pagination {
   constructor(domParent) {
@@ -16,7 +16,7 @@ class Pagination {
   }
 
   _init() {
-    this.pagination = new PaginationPlugin({
+    this.pagination = new PaginationJs({
       body: this.container,
       countPages: this._countingPages(Number(this.countPages)),
       itemsOnPage: Number(this.itemsOnPage),
