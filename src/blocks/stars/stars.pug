@@ -1,0 +1,11 @@
+mixin stars({ stars = 3, readonly= 'true', showSelectedRating= 'false'}={})
+  - let n = 0;
+  .stars.js-stars
+    select(
+      data-stars,
+      data-rating=`${stars}`,
+      data-readonly=`${readonly}`,
+      data-selected-rating= showSelectedRating,
+    )
+      while n < 5
+        option(value=(n += 1))= n

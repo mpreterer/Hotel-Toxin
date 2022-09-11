@@ -1,4 +1,4 @@
-include ../stars-rating/stars-rating.pug
+include ../stars/stars.pug
 
 mixin room-info({ link = 'room-details.html', number = 888, formatSize='default', level = 'Люкс', price = '9 990', stars = 5, review = 145, sliders = [{src: 'assets/img/rooms/room-888.png', alt: 'room №888'}, {src: 'assets/img/rooms/room-888.png', alt: 'room №888'}, {src: 'assets/img/rooms/room-888.png', alt: 'room №888'}] }={})
   - var size = 'room-info_' + formatSize;
@@ -17,7 +17,7 @@ mixin room-info({ link = 'room-details.html', number = 888, formatSize='default'
             span.room-info__price-day !{ ' в сутки' }
         .room-info__rating
           .room-info__star
-            +stars-rating({ stars: stars, readonly: true }) 
+            +stars({ stars: stars, readonly: true }) 
           span.room-info__feedback #{ review }
             span.room-info__feedback-txt !{' Отзывов'} 
             

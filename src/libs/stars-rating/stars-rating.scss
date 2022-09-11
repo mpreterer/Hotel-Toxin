@@ -1,59 +1,61 @@
 @import '@variables';
 
-.stars-rating { 
-  .br-widget {
-    display: flex;
-   
-    a {
-      margin-left: 2px;
-      font-size: 24px;
-      line-height: 20px;
-      text-decoration: none;
+.br-widget {
+  display: flex;
+  margin-left: 5px;
+  
+  a {
+    margin-left: 4px;
+    font-size: 24px;
+    line-height: 20px;
+    text-decoration: none;
 
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &::after {
-        width: 24px;
-        height: 24px;
-        content: '☆';
-        background: $gradient-main;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+    &:first-child {
+      margin-left: 0;
     }
 
-    .br-active::after {
+    &:after {
       width: 24px;
       height: 24px;
-      content: '★';
-    }
-
-    .br-none-active {
-      &::after {
-        background: $gradient-main;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-
-    .br-selected {
-      padding-right: 0;
-    }
-
-    .br-selected::after {
-      width: 24px;
-      height: 24px;
-      content: '★';
+      content: '☆';
+      color: #000;
+      background: $gradient-main;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-position: center;
     }
   }
-  
-  &_readonly {
-    .br-widget a {
-      cursor: default;
+
+  .br-active::after {
+    width: 24px;
+    height: 24px;
+    content: '★';
+  }
+
+  .br-none-active {
+    &::after {
+      background: $gradient-main;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+  }
+
+  .br-selected {
+    padding-right: 0;
+  }
+
+  .br-selected::after {
+    width: 24px;
+    height: 24px;
+    content: '★';
+    background: none;
+  }
+}
+
+.br-readonly {
+  a {
+    cursor: default;
   }
 }
