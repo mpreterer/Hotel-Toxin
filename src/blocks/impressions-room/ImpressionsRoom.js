@@ -1,4 +1,4 @@
-import Chart from 'chart.js';
+import ChartsJs from '../../libs/chart-js/ChartJs';
 
 class ImpressionsRoom {
   constructor(domParent) {
@@ -87,20 +87,9 @@ class ImpressionsRoom {
       ],
     };
 
-    this.arrayComments = dataDoughnut.datasets[0].data;
-
-    new Chart(ctx, {
-      type: 'doughnut',
+    this.doughnut = new ChartsJs({
+      body: this.$doughnut,
       data: dataDoughnut,
-      options: {
-        legend: {
-          display: false,
-        },
-        tooltips: {
-          enabled: false,
-        },
-        cutoutPercentage: 90,
-      },
     });
   }
 }
