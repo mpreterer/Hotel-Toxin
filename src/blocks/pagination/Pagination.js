@@ -1,26 +1,30 @@
-import 'paginationjs';
+import PaginationPlugin from '../../libs/pagination-js/PaginationPlugin';
 
 class Pagination {
   constructor(domParent) {
-    this.$body = $(domParent);
-    this.$container = this.$body.find('.js-init-pagination');
-    this.$maxValue = this.$body.find('.js-max-value');
-    this.$minValue = this.$body.find('.js-min-value');
-    this.$allOption = this.$body.find('.js-all-option');
-    this.items = this.$body.attr('data-items');
-    this.itemsOnPage = this.$body.attr('data-items-on-page');
-    this.displayedPages = this.$body.attr('data-displayed-pages');
-    this.countPages = this.$body.attr('data-count-pages');
+    this.body = domParent;
+    this.container = this.body.querySelector('.js-init-pagination');
+    this.maxValue = this.body.querySelector('.js-max-value');
+    this.minValue = this.body.querySelector('.js-min-value');
+    this.allOption = this.body.querySelector('.js-all-option');
+    this.items = this.body.getAttribute('data-items');
+    this.itemsOnPage = this.body.getAttribute('data-items-on-page');
+    this.pageRange = this.body.getAttribute('data-page-range');
+    this.countPages = this.body.getAttribute('data-count-pages');
 
     this._init();
   }
 
   _init() {
-    this.$container.pagination({
-      dataSource: this._countingPages(Number(this.countPages)),
-      pageSize: 1,
-      pageRange: 1,
-      autoHidePrevious: true,
+    this.pagination = new PaginationPlugin({
+      body: this.container,
+      countPages: this._countingPages(Number(this.countPages)),
+      itemsOnPage: Number(this.itemsOnPage),
+      pageRange: Number(this.pageRange),
+      maxViewPage: Number(this.maxValue.textContent),
+      selectorMaxValue: this.maxValue,
+      selectorMinValue: this.minValue,
+      hidePrevious: true,
     });
   }
 
@@ -29,15 +33,6 @@ class Pagination {
       .fill()
       .map((e, count) => count + 1);
     return filledArray;
-  }
-
-  _countPagination(page) {
-    const { itemsOnPage } = this;
-    const max = page * itemsOnPage;
-    const min = max - (itemsOnPage - 1);
-
-    this.$minValue.html(min);
-    this.$maxValue.html(max);
   }
 }
 

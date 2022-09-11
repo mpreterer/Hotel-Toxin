@@ -1,8 +1,8 @@
-mixin pagination({ minValue = 1, maxValue = 12, allOption = '100+ ', items, itemsOnPage, displayedPages, countPages= 15 }={})
+mixin pagination({ minValue = 1, maxValue = 12, allOption = '100+ ', items, pageSize = 1, pageRange = 1, countPages= 15 }={})
   .pagination.js-pagination(
     data-items=items,
-    data-items-on-page=itemsOnPage,
-    data-displayed-pages=displayedPages,
+    data-items-on-page=pageSize,
+    data-page-range=pageRange,
     data-count-pages=countPages
   )
     .pagination__container
