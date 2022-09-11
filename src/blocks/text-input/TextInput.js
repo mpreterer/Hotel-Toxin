@@ -1,16 +1,15 @@
-import 'inputmask/dist/jquery.inputmask.min';
+import InputMask from '../../libs/inputmask/Inputmask';
 
 class TextInput {
   constructor(domParent) {
     this.$container = $(domParent).find('[data-masked]');
+
     this._init();
   }
 
   _init() {
-    this.$container.inputmask({
-      alias: 'datetime',
-      inputFormat: 'dd.mm.yyyy',
-      placeholder: 'ДД.ММ.ГГГГ',
+    this.textInput = new InputMask({
+      body: this.$container,
     });
   }
 }
