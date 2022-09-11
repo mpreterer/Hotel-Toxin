@@ -63,7 +63,6 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "chart.js": "^2.9.3",
-    "donut-chart-js": "^1.0.1",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
     "jquery-bar-rating": "^1.2.2",
