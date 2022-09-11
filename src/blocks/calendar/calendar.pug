@@ -1,9 +1,9 @@
-mixin calendar({ isOpen = false, range='true', lang, separator=' - ', format, initDates= ''}={})
+mixin calendar({ isOpen= 'false', range='true', lang, separator=' - ', dateFormat='dd.mm.yyyy', initDates= ''}={})
   .calendar.js-calendar(
     data-range=range,
     data-multiple-dates-separator=separator,
     data-language=lang,
+    data-format=dateFormat,
+    data-init-dates=initDates,
     data-is-open=isOpen,
-    data-format=format,
-    data-init-dates=initDates
   )

@@ -13,31 +13,25 @@ class AloneCalendar {
     this.$inputCalendar = this.$container.querySelector(
       '.js-calendar-container',
     );
-    this.hasOpenCalendar = this.$container.getAttribute('data-is-open');
     this.dateFormat = this.$container.getAttribute('data-format');
-
-    this.observers = [];
 
     this._init();
     this._bindEvent();
   }
 
   _init() {
-    const isOpen = this.hasOpenCalendar === 'true';
-
     this.calendar = new Calendar({
-      body: this.$calendarBody,
-      isOpen,
       options: {
-        onSelect: (formattedDate) => this._setDate(formattedDate),
         dateFormat: this.dateFormat,
       },
     });
+
+    this._setDate();
   }
 
   _handleDropDownKeyDown(event) {
     if (event.key === 'Enter') {
-      this.calendar.checkIsOpen();
+      this.calendar.calendarPlugin.checkIsOpen();
     }
   }
 
@@ -52,6 +46,7 @@ class AloneCalendar {
       this._handleDropDownKeyDown.bind(this),
       true,
     );
+    this.$container.addEventListener('click', this._setDate.bind(this));
     this.$inputCalendar.addEventListener(
       'click',
       this._handleCalendarContainerClick.bind(this),
@@ -61,39 +56,24 @@ class AloneCalendar {
   _handleGlobalClick(event) {
     const { target } = event;
     const isClickOnInput = this.$container.contains(target);
-    const isOpenCalendar = this.calendar.isOpen;
+    const isOpenCalendar = this.calendar.calendarPlugin.isOpen;
     const isClickOutsideCalendar = !isClickOnInput && isOpenCalendar;
 
     if (isClickOutsideCalendar) {
-      this.calendar.hiddenClear();
+      this.calendar.calendarPlugin.hiddenCalendar();
     }
   }
 
   _handleCalendarContainerClick() {
-    this.calendar.checkIsOpen();
+    this.calendar.calendarPlugin.checkIsOpen();
   }
 
-  _setDate(date) {
-    this.$placeholder.innerHTML = date;
-
-    // В этом месте никак без вложенной проверки, так как Calendar
-    // конкретно в этом классе может быть undefined.
-    // При инициализации без проверки может вызвать ошибку.
+  _setDate() {
+    const date = this.calendar.calendarPlugin.onDates;
     
-    if (this.calendar !== undefined) {
-      if (date) {
-        this.calendar.addClearBtn();
-      } else {
-        this.calendar.deleteClearBtn();
-        this.$placeholder.innerHTML = 'Выберите дату';
-      }
+    if (date !== undefined) {
+      this.$placeholder.value = date;
     }
-
-    this._notifyObservers();
-  }
-
-  _notifyObservers(data) {
-    this.observers.forEach((observer) => observer(data));
   }
 }
 

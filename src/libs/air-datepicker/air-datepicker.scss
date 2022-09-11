@@ -1,5 +1,48 @@
 @import '@variables';
 
+.datepicker {
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 20px;
+    color: $color-purple;
+    font-weight: bold;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+  }
+
+  &__clear-btn {
+    &_close {
+      cursor: default;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+  }
+}
+
+.arrow-back-btn {
+  width: 40px;
+  height: 40px;
+  background-image: url('./images/arrow-back.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
+
+.arrow-next-btn {
+  width: 40px;
+  height: 40px;
+  background-image: url('./images/arrow-back.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  content: '';
+}
+
 .datepicker--cell-day.-other-month-,
 .datepicker--cell-year.-other-decade- {
   color: #dedede;
@@ -320,11 +363,11 @@
 }
 
 .datepicker {
+  width: 320px;
   position: absolute;
   left: -100000px;
   z-index: 100;
   box-sizing: content-box;
-  max-width: 320px;
   color: #4a4a4a;
   font-size: $font-size-main;
   font-family: $font-family-main;
@@ -913,8 +956,46 @@
   border: none;
 }
 
-@media all and (max-width: 350px) {
+
+@media (max-width: 380px) {
   .datepicker {
-    width: 320px;
+    width: 266px;
+  }
+
+  .datepicker--cells .datepicker--cells-days {
+    font-size: 12px;
+  }
+
+  .datepicker--cell-day {
+    height: 35px;
+    width: 35px;
+  }
+
+  .datepicker--cell.-range-from-.-selected-::after {
+    width: 35px;
+    height: 35px;
+  }
+
+  .datepicker--cell.-range-to-.-selected-::after {
+    width: 35px;
+    height: 35px;
+  }
+
+  .datepicker--body.active {
+    margin: 33px 5px 0;
+  }
+
+  .datepicker--day-name {
+    flex: none;
+  }
+
+  .datepicker--days-names {
+    width: 245px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .datepicker--cell-month {
+    width: 29%;
   }
 }

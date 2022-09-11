@@ -18,15 +18,9 @@ class RangeDateCalendar {
     this.$arrow = this.$container.querySelectorAll(
       '.js-container-arrow',
     );
-    this.hasOpenCalendar = this.$container.getAttribute('data-is-open');
-    this.observers = [];
 
     this._init();
     this._bindEventListener();
-  }
-
-  _notifyObservers(data) {
-    this.observers.forEach((observer) => observer(data));
   }
 
   _bindEventListener() {
@@ -35,7 +29,6 @@ class RangeDateCalendar {
       this._handleGlobalClick.bind(this),
       true,
     );
-
     this.$inputArrival.addEventListener(
       'click',
       this._handleInputDateClick.bind(this),
@@ -49,6 +42,7 @@ class RangeDateCalendar {
       this._handleRootKeyDown.bind(this),
       true,
     );
+    this.$container.addEventListener('click', this._setDate.bind(this));
 
     this.$arrow.forEach((el) => {
       el.addEventListener('click', this._handleContainerArrowClick.bind(this));
@@ -56,12 +50,10 @@ class RangeDateCalendar {
   }
 
   _handleContainerArrowClick() {
-    this.calendar.checkIsOpen();
+    this.calendar.calendarPlugin.checkIsOpen();
   }
 
   _removingDate(event) {
-    const calendarDate = this.calendar.$body.data('datepicker');
-
     const valueInputArrival = this.$inputArrival.value.split('.').join('');
     const isOnlyNumbersArrival = /^\d+$/.test(valueInputArrival);
 
@@ -72,7 +64,7 @@ class RangeDateCalendar {
     const isNotOnlyNumbersArrival = !isOnlyNumbersArrival;
 
     if (isNotOnlyNumbersDeparture && isNotOnlyNumbersArrival) {
-      calendarDate.date = new Date();
+      this.calendar.calendarPlugin.selectNewDate();
     }
 
     if (event.target.name === 'arrival') {
@@ -85,8 +77,6 @@ class RangeDateCalendar {
   }
 
   _enterDate() {
-    const calendarDate = this.calendar.$body.data('datepicker');
-
     const valueInputDeparture = this.$inputDeparture.value.split('.').join('');
     const isOnlyNumbersDeparture = /^\d+$/.test(valueInputDeparture);
     const dateYearsDeparture = this.$inputDeparture.value.split('.')[2];
@@ -115,8 +105,8 @@ class RangeDateCalendar {
       isOnlyNumbersArrival &&
       isNotUseArrival
     ) {
-      calendarDate.selectDate(
-        new Date(dateYearsArrival, dateMonthArrival, dateDayArrival),
+      this.calendar.calendarPlugin.selectDate(
+        dateYearsArrival, dateMonthArrival, dateDayArrival,
       );
       this.arrival.setAttribute('data-complete', 'true');
     }
@@ -127,8 +117,8 @@ class RangeDateCalendar {
       isOnlyNumbersDeparture &&
       isNotUseDeparture
     ) {
-      calendarDate.selectDate(
-        new Date(dateYearsDeparture, dateMonthDeparture, dateDayDeparture),
+      this.calendar.calendarPlugin.selectDate(
+        dateYearsDeparture, dateMonthDeparture, dateDayDeparture,
       );
       this.departure.setAttribute('data-complete', 'true');
     }
@@ -143,58 +133,41 @@ class RangeDateCalendar {
   }
 
   _handleInputDateClick() {
-    this.calendar.showCalendar();
+    this.calendar.calendarPlugin.showCalendar();
   }
 
   _handleGlobalClick(event) {
     const { target } = event;
     const isClickOnInput = this.$container.contains(target);
-    const isOpenCalendar = this.calendar.isOpen;
+    const isOpenCalendar = this.calendar.calendarPlugin.isOpen;
     const isClickOutsideCalendar = !isClickOnInput && isOpenCalendar;
 
     if (isClickOutsideCalendar) {
-      this.calendar.hiddenClear();
+      this.calendar.calendarPlugin.hiddenCalendar();
     }
   }
 
   _init() {
-    const isOpen = this.hasOpenCalendar === 'true';
-
-    this.calendar = new Calendar({
-      body: this.$containerCalendar,
-      isOpen,
-      options: {
-        onSelect: (formattedDate) => this._setDate(formattedDate),
-      },
-    });
+    this.calendar = new Calendar({});
   }
 
-  _setDate(date) {
-    if (date) {
-      this.calendar.addClearBtn();
-    } else {
-      this.calendar.deleteClearBtn();
+  _setDate() {
+    const date = this.calendar.calendarPlugin.onDates;
+
+    if (date !== undefined) {
       this.$inputArrival.value = '';
       this.$inputDeparture.value = '';
-    }
 
-    const datesArray = date.split(' - ');
-    const dateFirst = datesArray[0];
-    const dateSecond = datesArray[1];
-    const hasDates =
-      datesArray !== undefined && datesArray !== null && date !== '';
-    this.$inputArrival.value = dateFirst;
+      const datesArray = date.split(' - ');
+      const dateFirst = datesArray[0];
+      const dateSecond = datesArray[1];
+      
+      this.$inputArrival.value = dateFirst;
 
-    // Здесь аналогично с AloneCalendar.
-    // Без проверки даты, календарь может обрушиться.
-    
-    if (hasDates) {
       if (datesArray.length > 1) {
         this.$inputDeparture.value = dateSecond;
       }
     }
-
-    this._notifyObservers(date);
   }
 }
 

@@ -26,13 +26,23 @@
   }
 
   &__placeholder {
+    height: 100%;
+    width: 80%;
     color: $color-shade-secondary;
     font-size: $font-size-main;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: $font-family-main;
   }
 
   &__calendar {
     position: absolute;
-    left: 0;
+    left: -30px;
     z-index: 99;
+
+    @media (max-width: 700px) {
+      left: 0;
+    }
   }
 }

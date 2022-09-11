@@ -1,16 +1,15 @@
 include ../calendar/calendar.pug
 include ../expand-more-arrow/expand-more-arrow.pug
 
-mixin alone-calendar({ title='Даты прибывания в отеле', placeholder='Выберите даты', isOpen = false, dateFormat='d MM'}={})
+mixin alone-calendar({ title='Даты прибывания в отеле', dateFormat='d MM', placeholder='Выберите даты', isOpen = 'false'}={})
   .alone-calendar.js-alone-calendar(
-    data-format=dateFormat,
-    data-is-open=isOpen,
     data-selected-dates=selectedDates,
-    tabindex='0'
+    data-format=dateFormat,
+    tabindex='0',
   )
     .alone-calendar__calendar-container.js-calendar-container
-      span.alone-calendar__placeholder.js-calendar-placeholder= placeholder
+      input.alone-calendar__placeholder.js-calendar-placeholder(type="text", disabled, placeholder= placeholder) 
       .alone-calendar__arrow
         +expand-more-arrow
     .alone-calendar__calendar.js-block-calendar
-      +calendar({ initDates: ['2022-08-19', '2022-08-23'] })
+      +calendar({ initDates: ['2022-08-19', '2022-08-23'], isOpen: isOpen })
