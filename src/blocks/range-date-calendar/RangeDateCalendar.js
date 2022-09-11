@@ -42,7 +42,7 @@ class RangeDateCalendar {
       this._handleRootKeyDown.bind(this),
       true,
     );
-    this.$container.addEventListener('click', this._setDate.bind(this));
+    this.$container.addEventListener('click', this._handleContainerClick.bind(this));
 
     this.$arrow.forEach((el) => {
       el.addEventListener('click', this._handleContainerArrowClick.bind(this));
@@ -151,7 +151,7 @@ class RangeDateCalendar {
     this.calendar = new Calendar({});
   }
 
-  _setDate() {
+  _handleContainerClick() {
     const date = this.calendar.calendarPlugin.onDates;
 
     if (date !== undefined) {

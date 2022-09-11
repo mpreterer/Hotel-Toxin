@@ -26,7 +26,7 @@ class AloneCalendar {
       },
     });
 
-    this._setDate();
+    this._handleContainerClick();
   }
 
   _handleDropDownKeyDown(event) {
@@ -46,7 +46,7 @@ class AloneCalendar {
       this._handleDropDownKeyDown.bind(this),
       true,
     );
-    this.$container.addEventListener('click', this._setDate.bind(this));
+    this.$container.addEventListener('click', this._handleContainerClick.bind(this));
     this.$inputCalendar.addEventListener(
       'click',
       this._handleCalendarContainerClick.bind(this),
@@ -68,7 +68,7 @@ class AloneCalendar {
     this.calendar.calendarPlugin.checkIsOpen();
   }
 
-  _setDate() {
+  _handleContainerClick() {
     const date = this.calendar.calendarPlugin.onDates;
     
     if (date !== undefined) {
