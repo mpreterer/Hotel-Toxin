@@ -39,3 +39,13 @@
 .noUi-handle::before {
   display: none;
 }
+
+.slick-next:focus {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.slick-prev:focus {
+  opacity: 1;
+  transition: 0.3s;
+}

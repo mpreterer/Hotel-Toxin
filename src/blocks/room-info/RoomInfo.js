@@ -1,4 +1,4 @@
-import NoUiSlider from '../../libs/no-ui-slider/NoUiSlider';
+import SlickCarousel from '../../libs/slick-carousel/SlickCarousel';
 
 class RoomInfo {
   constructor(domParent) {
@@ -13,7 +13,7 @@ class RoomInfo {
   }
 
   _initSlick() {
-    new NoUiSlider(this.$slider);
+    new SlickCarousel(this.$slider);
   }
 }
 
