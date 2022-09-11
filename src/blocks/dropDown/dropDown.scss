@@ -115,6 +115,13 @@
     &:disabled {
       cursor: default;
       border-color: $color-shade;
+
+      &:active {
+        color: $color-shade;
+        font-weight: normal;
+        background: #fff;
+        border-color: $color-shade;
+      }
     }
   }
 
