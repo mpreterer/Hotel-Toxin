@@ -1,6 +1,4 @@
-import 'slick-carousel/slick/slick.min';
-import 'slick-carousel/slick/slick.scss';
-import 'slick-carousel/slick/slick-theme.scss';
+import NoUiSlider from '../../libs/no-ui-slider/NoUiSlider';
 
 class RoomInfo {
   constructor(domParent) {
@@ -15,9 +13,7 @@ class RoomInfo {
   }
 
   _initSlick() {
-    this.$slider.slick({
-      dots: true,
-    });
+    new NoUiSlider(this.$slider);
   }
 }
 

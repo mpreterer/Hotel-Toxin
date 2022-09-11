@@ -137,3 +137,13 @@ ul.slick-dots li {
 .slick-slide {
   height: auto;
 }
+
+.slick-slider:hover > button.slick-next.slick-arrow {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.slick-slider:hover > button.slick-prev.slick-arrow {
+  opacity: 1;
+  transition: 0.3s;
+}
