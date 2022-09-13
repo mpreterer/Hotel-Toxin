@@ -74,7 +74,8 @@
     text-transform: uppercase;
   }
 
-  &__circle-plus, &__circle-minus {
+  &__circle-plus,
+  &__circle-minus {
     box-sizing: border-box;
     width: 30px;
     height: 30px;
@@ -88,8 +89,8 @@
   }
 
   &__circle-plus {
-    cursor: pointer;
     border-color: $color-shade-grey;
+    cursor: pointer;
 
     &:active {
       color: white;
@@ -101,8 +102,8 @@
   }
 
   &__circle-minus {
-    cursor: pointer;
     border-color: $color-shade-grey;
+    cursor: pointer;
 
     &:active {
       color: white;
@@ -113,8 +114,8 @@
     }
 
     &:disabled {
-      cursor: default;
       border-color: $color-shade;
+      cursor: default;
 
       &:active {
         color: $color-shade;

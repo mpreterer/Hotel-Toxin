@@ -1,12 +1,12 @@
 @import '@variables';
 
 .login-page {
-  height: 699px;
   position: relative;
+  height: 699px;
 
   &__container {
     padding: 172px 0;
-    
+
     @media (max-width: 400px) {
       width: 92%;
       margin: 0 10px;

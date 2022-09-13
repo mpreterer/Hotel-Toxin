@@ -8,15 +8,12 @@
   cursor: pointer;
   user-select: none;
 
-  &__calendar {
-    margin-top: 5px;
-  }
-
   &__calendar-container {
     display: flex;
     align-items: center;
     height: 44px;
     padding-left: 15px;
+    margin: 0 auto;
   }
 
   &__arrow {
@@ -26,19 +23,20 @@
   }
 
   &__placeholder {
-    height: 100%;
     width: 80%;
+    height: 100%;
     color: $color-shade-secondary;
     font-size: $font-size-main;
+    font-family: $font-family-main;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-family: $font-family-main;
   }
 
   &__calendar {
     position: absolute;
     left: -30px;
+    margin-top: 5px;
     z-index: 99;
 
     @media (max-width: 840px) {

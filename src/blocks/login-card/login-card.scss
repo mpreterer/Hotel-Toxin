@@ -1,9 +1,8 @@
 @import '@variables';
 
 .login-card {
-  width: 380px;
+  max-width: 380px;
   height: 358px;
-  margin: 0 auto;
   background-color: #fff;
   border: 1px solid rgb(0 0 0 / 12%);
   border-radius: 4px;
@@ -49,9 +48,5 @@
   &__question {
     margin: 0;
     font-size: $font-size-main;
-  }
-
-  @media (max-width: 480px) {
-    max-width: 320px;
   }
 }

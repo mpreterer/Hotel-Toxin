@@ -1,14 +1,14 @@
 @import '@variables';
 
 .text-description {
-  width: 436px;
   display: flex;
   justify-content: space-between;
+  width: 436px;
 
   &__title {
     margin: 0;
-    font-weight: 400;
     color: $color-shade;
+    font-weight: 400;
 
     &_big-size {
       margin-left: 8px;
@@ -21,7 +21,7 @@
     &_small-size {
       margin-left: 18px;
     }
-    
+
     &_default-size {
       margin-left: 5px;
     }
@@ -30,22 +30,22 @@
   &__description {
     width: 369px;
     margin: 0;
-    color: #1F2041;
+    color: #1f2041;
   }
 
   &_big-size {
-    font-size: $font-size-big;
     font-weight: bold;
+    font-size: $font-size-big;
   }
 
   &_medium-size {
-    font-size: $font-size-medium;
     font-weight: bold;
+    font-size: $font-size-medium;
   }
 
   &_small-size {
-    font-size: $font-size-small;
     font-weight: bold;
+    font-size: $font-size-small;
     text-transform: uppercase;
   }
 
