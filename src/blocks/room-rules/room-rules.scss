@@ -3,12 +3,6 @@
 .room-rules {
   font-size: $font-size-main;
 
-  &__order {
-    @media (max-width: 793px) {
-      margin-right: 0;
-    }
-  }
-
   &__title {
     display: block;
     margin-bottom: 20px;
@@ -45,17 +39,6 @@
     }
   }
 
-  &__container {
-    @media (max-width: 1200px) {
-      align-items: center;
-      justify-content: center;
-    }
-
-    @media (max-width: 693px) {
-      flex-direction: column;
-    }
-  }
-
   &__orders {
     @media (max-width: 693px) {
       flex-direction: column;
@@ -68,5 +51,14 @@
     width: 240px;
     color: $color-shade-secondary;
     line-height: 24px;
+  }
+
+  @media (max-width: 1200px) {
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 693px) {
+    flex-direction: column;
   }
 }

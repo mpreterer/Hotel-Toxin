@@ -1,11 +1,9 @@
 mixin room-rules({ list = [], title = 'Правила' }={})
   .room-rules
-    .room-rules__container
-      .room-rules__order
-        if title
-          span.room-rules__title= title
-        ul.room-rules__list
-          each element in list
-            li.room-rules__element
-              .room-rules__circle
-              span.room-rules__text= element.txt
+    if title
+      span.room-rules__title= title
+    ul.room-rules__list
+      each element in list
+        li.room-rules__element
+          .room-rules__circle
+          span.room-rules__text= element.txt

@@ -15,7 +15,7 @@
     }
   }
 
-  &__first-orders {
+  &__rules-container {
     margin: 0 100px 0 31px;
 
     @media (max-width: 1200px) {
@@ -139,7 +139,7 @@
     object-fit: cover;
   }
 
-  &__orders {
+  &__rules-container {
     display: flex;
 
     @media (max-width: 1200px) {
