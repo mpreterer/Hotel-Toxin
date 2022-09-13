@@ -32,6 +32,11 @@
     border-radius: 50%;
     box-shadow: none;
     cursor: pointer;
+
+    @media (max-width: 361px) {
+      width: 34.5px;
+      height: 34.5px;
+    }
   }
 
   & ul li:last-child {
