@@ -1,18 +1,23 @@
 @import '@variables';
 
 .nav-burger {
-  position: relative;
   display: none;
   width: 50px;
-  height: 50px;
+  height: 40px;
+  position: relative;
   cursor: pointer;
 
   &__menu-burger {
     display: none;
-    margin-top: 60px;
+    width: 310px;
+    position: absolute;
+    top: 60px;
+    right: -8px;
     padding: 0;
+    margin: 0;
     list-style: none;
     user-select: none;
+    z-index: 999;
 
     &_open {
       display: block;
@@ -35,13 +40,6 @@
   }
 
   &__item {
-    position: relative;
-    right: 260px;
-    z-index: 999;
-    display: flex;
-    flex-direction: row;
-    width: 310px;
-    margin: 0;
     padding: 10px 0 10px 15px;
     font-size: 16px;
     background: #fff;
@@ -49,48 +47,38 @@
     box-shadow: 0 -2px 4px 0 #e8e8ec;
   }
 
-  &__line {
-    &_top-position {
+  &__button-menu {
+    width: 50px;
+    height: 8px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:before {
+      content: '';
       position: absolute;
-      top: 4px;
+      top: 0;
       left: 0;
       width: 50px;
       height: 8px;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-      border: none;
-      outline: none;
-      cursor: pointer;
-      transition: 0.2s;
     }
 
-    &_center-position {
+    &:after {
+      content: '';
       position: absolute;
-      top: 21px;
-      width: 50px;
-      height: 8px;
-      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-      border: none;
-      outline: none;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    &_bottom-position {
-      position: absolute;
-      bottom: 4px;
+      bottom: 0;
       left: 0;
       width: 50px;
       height: 8px;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-      border: none;
-      outline: none;
-      cursor: pointer;
-      transition: 0.2s;
     }
   }
 
   @media (max-width: 1200px) {
-    display: block;
+    display: flex;
+    align-items: center;
     margin-right: 15px;
   }
 }
