@@ -15,7 +15,7 @@ include ../../../blocks/checkbox-double-name/checkbox-double-name.pug
 include ../../../blocks/slider-range/slider-range.pug
 include ../../../blocks/button/button.pug
 include ../../../blocks/pagination/pagination.pug
-include ../../../blocks/room-orders/room-orders.pug
+include ../../../blocks/room-rules/room-rules
 include ../../../blocks/user-reviews/user-reviews.pug
 
 block variables 
@@ -233,7 +233,7 @@ block content
                     .ui-cards__titles
                         .ui-cards__title bullet list
                     .ui-cards__bullet-list
-                        +room-orders({
+                        +room-rules({
                             list: [
                                 { txt: 'Нельзя с питомцами' },
                                 { txt: 'Без вечеринок и мероприятий' },

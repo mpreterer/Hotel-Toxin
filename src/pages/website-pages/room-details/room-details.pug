@@ -7,7 +7,7 @@ include ../../../blocks/about-room/about-room.pug
 include ../../../blocks/impressions-room/impressions-room.pug
 include ../../../blocks/room-order/room-order.pug
 include ../../../blocks/user-reviews/user-reviews.pug
-include ../../../blocks/room-orders/room-orders.pug
+include ../../../blocks/room-rules/room-rules
 
 block variables 
     - pageTitle = '«Toxin» | Номер для вас'
@@ -99,7 +99,7 @@ block content
                         })
                 .room-details__orders 
                     .room-details__first-orders
-                        +room-orders({
+                        +room-rules({
                             list: [
                                 { txt: 'Нельзя с питомцами' },
                                 { txt: 'Без вечеринок и мероприятий' },
