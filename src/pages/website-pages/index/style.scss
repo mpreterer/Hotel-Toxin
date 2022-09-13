@@ -19,10 +19,6 @@
     margin-right: 15px;
     font-size: $font-size-main;
     text-align: right;
-
-    @media (max-width: 650px) {
-      display: none;
-    }
   }
 
   &__filter-item {
