@@ -6,9 +6,10 @@
 
   &__container {
     padding: 172px 0;
+    max-width: 380px;
+    margin: 0 auto;
 
     @media (max-width: 400px) {
-      width: 92%;
       margin: 0 10px;
     }
   }
