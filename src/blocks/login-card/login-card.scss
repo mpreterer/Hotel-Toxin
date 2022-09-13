@@ -12,6 +12,10 @@
   &__container {
     height: 286px;
     padding: 40px 30px 32px;
+
+    @media (max-width: 360px) {
+      padding: 40px 16px 32px;
+    }
   }
 
   &__title {
@@ -46,7 +50,7 @@
     font-size: $font-size-main;
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (max-width: 480px) {
     max-width: 320px;
   }
 }
