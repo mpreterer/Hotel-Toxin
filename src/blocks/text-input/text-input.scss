@@ -12,8 +12,8 @@
     padding: 0 15px;
     color: $color-shade-secondary;
     font-family: $font-family-main;
-    border: 1px solid $color-shade;
     border-radius: 4px;
+    border: none;
     outline: none;
     user-select: none;
 
@@ -25,9 +25,9 @@
     &::placeholder {
       color: $color-shade;
     }
-  }
 
-  &_not-bordered {
-    border: none;
+    &_bordered {
+      border: 1px solid $color-shade;
+    }
   }
 }
