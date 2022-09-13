@@ -75,36 +75,11 @@
     font-size: $font-size-main;
   }
 
-  &__number-level {
-    margin-left: 8px;
-    color: $color-purple;
-    font-size: $font-size-small;
-    text-transform: uppercase;
-  }
-
   &__arrival {
     margin-bottom: 7px;
 
     @media (max-width: 793px) {
       flex-direction: column;
-    }
-  }
-
-  &__container-arrival {
-    position: relative;
-    width: 150px;
-    height: 64.4px;
-    margin-right: 20px;
-    transition: 0.3s;
-
-    &::after {
-      @media (max-width: 793px) {
-        right: 0;
-      }
-    }
-
-    @media (max-width: 793px) {
-      width: 88%;
     }
   }
 

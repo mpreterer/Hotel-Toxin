@@ -55,44 +55,8 @@
     }
   }
 
-  &__date-arrival {
-    position: relative;
-    border: 1px solid $color-shade;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
   &__residence {
     margin-top: 15px;
-  }
-
-  &__search-room-title {
-    margin-bottom: 5px;
-  }
-
-  &__container-date-departure {
-    position: relative;
-    margin-left: 18px;
-  }
-
-  &__button-pay {
-    width: 320px;
-    height: 19px;
-    padding: 15px 0 10px;
-    color: white;
-    text-align: center;
-    background: $gradient-main;
-    border-radius: 22px;
-  }
-
-  &__button-pay:hover {
-    background: linear-gradient(90deg, #bc9cff 0%, #8ba4f9 100%);
-    border-radius: 40px;
-  }
-
-  &__search-room-link {
-    height: 44px;
-    margin-top: 32px;
   }
 
   &__block-date {

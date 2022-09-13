@@ -68,16 +68,6 @@
     margin-top: 24px;
   }
 
-  &__gender-checkbox {
-    position: absolute;
-    top: 0;
-    display: inline-flex;
-    align-items: center;
-    width: 50px;
-    opacity: 0;
-    user-select: none;
-  }
-
   &__birthday {
     display: flex;
     flex-direction: column;

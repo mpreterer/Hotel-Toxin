@@ -230,15 +230,4 @@
       font-size: $font-size-main;
     }
   }
-
-  &__button-like {
-    position: absolute;
-    top: 62px;
-  }
-
-  &__order {
-    @media (max-width: 1200px) {
-      margin-right: 0 !important;
-    }
-  }
 }

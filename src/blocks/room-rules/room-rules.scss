@@ -39,13 +39,6 @@
     }
   }
 
-  &__orders {
-    @media (max-width: 693px) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
   &__text {
     display: block;
     width: 240px;

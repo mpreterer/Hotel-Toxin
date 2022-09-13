@@ -20,6 +20,10 @@
     margin: 0 auto;
     user-select: none;
 
+    @media (max-width: 1200px) {
+      padding: 0 10px;
+    }
+
     @media (max-width: 425px) {
       margin-bottom: 50px;
     }
