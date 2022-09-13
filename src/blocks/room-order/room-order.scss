@@ -83,7 +83,7 @@
   }
 
   &__arrival {
-    margin-bottom: 15px;
+    margin-bottom: 7px;
 
     @media (max-width: 793px) {
       flex-direction: column;
@@ -128,7 +128,7 @@
   }
 
   &__additional-fees {
-    margin-bottom: 28px;
+    margin-bottom: 33px;
   }
 
   &__currency-information,
@@ -262,7 +262,7 @@
     font-weight: bold;
   }
 
-  @media (max-width: 380px) {
+  @media (max-width: 400px) {
     width: 100%;
   }
 }

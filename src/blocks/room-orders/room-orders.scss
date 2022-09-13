@@ -69,17 +69,4 @@
     color: $color-shade-secondary;
     line-height: 24px;
   }
-
-  @media (max-width: 1200px) {
-    margin: 0 10px;
-  }
-
-  @media (max-width: 693px) {
-    width: 341px;
-    margin: 20px 10px 50px 0;
-  }
-
-  @media (max-width: 380px) {
-    width: 240px;
-  }
 }
