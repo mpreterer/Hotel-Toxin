@@ -1,7 +1,7 @@
 @import '@variables';
 
 .room-details {
-  &__room-loop {
+  &__room-photos {
     display: flex;
     justify-content: center;
     max-width: 1440px;
@@ -31,7 +31,7 @@
     }
   }
 
-  &__room-loop-big {
+  &__room-big-photo-container {
     height: 485px;
 
     @media (max-width: 1500px) {
@@ -54,7 +54,7 @@
     }
   }
 
-  &__room-loop-head {
+  &__room-side-section-photos {
     width: 459px;
     height: 485px;
 
@@ -69,26 +69,8 @@
     margin-right: 9px;
   }
 
-  &__room-loop-middle-1 {
+  &__room-small-photo-container {
     height: 243px;
-
-    @media (max-width: 920px) {
-      width: 100%;
-      height: auto;
-      margin: 10px auto;
-    }
-
-    @media (max-width: 693px) {
-      height: auto;
-    }
-
-    @media (max-width: 440px) {
-      height: 180px;
-    }
-  }
-
-  &__room-loop-middle-2 {
-    height: 242px;
 
     @media (max-width: 920px) {
       width: 100%;
@@ -150,9 +132,8 @@
     }
   }
 
-  &__room-secondary-3,
-  &__room-secondary-2,
-  &__room-secondary-1 {
+  &__room-small-photo,
+  &__room-big-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
