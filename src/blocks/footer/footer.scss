@@ -88,6 +88,9 @@
     @media (max-width: 1200px) {
       display: flex;
       justify-content: space-around;
+    }
+
+    @media (max-width: 768px) {
       border: none;
     }
   }
