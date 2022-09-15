@@ -39,7 +39,37 @@
     }
   }
 
+  &__arrow {
+    margin-left: 10px;
+  }
+
+  &__submenu {
+    display: none;
+    padding: 0;
+    margin-top: 10px;
+    list-style: none;
+
+    &_open {
+      display: block;
+    }
+  }
+
+  &__submenu-item {
+    box-shadow: 1px 1px 4px #808080;
+    padding: 7px;
+    margin-right: 10px;
+    color: $color-shade-grey;
+  }
+
+  &__sub-list {
+    display: flex;
+    align-items: center;
+    color: $color-shade-grey;
+  }
+
   &__item {
+    display: flex;
+    flex-direction: column;
     padding: 10px 0 10px 15px;
     font-size: 16px;
     background: #fff;

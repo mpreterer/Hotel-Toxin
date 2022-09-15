@@ -1,7 +1,21 @@
 mixin nav-burger({ navLinks = [] }={})
   .nav-burger.js-nav-burger
-    button.nav-burger__button-menu(type="button")
+    button.nav-burger__button-menu.js-burger-button(type="button")
     ul.nav-burger__menu-burger.js-menu-burger
       each item in navLinks
-        li.nav-burger__item
-          a.nav-burger__link(href=item.link)= item.title
+        li.nav-burger__item.js-burger-item
+          if item.submenu
+            span.nav-burger__sub-list.js-burger-sub-list(
+              title=item.name, 
+            ) !{ item.name }
+              .nav-burger__arrow
+                +expand-more-arrow
+            ul.nav-burger__submenu.js-burger-submenu
+              each itemSubmenu in item.submenu
+                li.nav-burger__submenu-item
+                  a.nav-burger__submenu-link(
+                    href=itemSubmenu.href,
+                    title=itemSubmenu.name
+                  ) !{ itemSubmenu.name }
+          else
+            a.nav-burger__link(href=item.link)= item.title
