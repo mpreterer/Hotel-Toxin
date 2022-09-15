@@ -24,7 +24,7 @@ mixin footer(params = {})
           span.footer__description-title Подписка
           p.footer__description-special-title= specialTitle
           .footer__description-email
-            +sub-text-input({ name: 'email', placeholder: 'Email' })
+            +sub-text-input({ name: 'email', placeholder: 'Email', type: 'email' })
     .footer__sub-container
       .footer__sub
         p.footer__sub-copyright= copyright
