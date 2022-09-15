@@ -51,8 +51,8 @@ class ImpressionsRoom {
   }
 
   _handleItemFocus(el) {
-    const colorComment = JSON.parse(el.path[0].getAttribute('data-colors'))[0];
-    this.count.innerHTML = el.path[0].getAttribute('data-set-comment');
+    const colorComment = JSON.parse(el.target.getAttribute('data-colors'))[0];
+    this.count.innerHTML = el.target.getAttribute('data-set-comment');
     this.count.style.color = colorComment;
     this.countDesc.style.color = colorComment;
   }
