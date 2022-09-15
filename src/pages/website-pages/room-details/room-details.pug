@@ -16,12 +16,12 @@ block content
     .room-details
         .room-details__room-photos
             .room-details__room-big-photo-container
-                img(src="assets/image/rooms/room-loop-1.jpg" alt="room 888").room-details__room-big-photo
+                img(src="assets/image/rooms/room-loop-1.jpg", alt="room 888").room-details__room-big-photo
             .room-details__room-side-section-photos
                 .room-details__room-small-photo-container
-                    img(src="assets/image/rooms/room-loop-2.jpg" alt="room 888").room-details__room-small-photo
+                    img(src="assets/image/rooms/room-loop-2.jpg", alt="room 888").room-details__room-small-photo
                 .room-details__room-small-photo-container
-                    img(src="assets/image/rooms/room-loop-3.jpg" alt="room 888").room-details__room-small-photo
+                    img(src="assets/image/rooms/room-loop-3.jpg", alt="room 888").room-details__room-small-photo
         .room-details__expend
             .room-details__expend-container
                 .room-details__split-container
@@ -51,7 +51,7 @@ block content
                                     ]
                                 })
                             .room-details__impressions
-                               +impressions-room({
+                                +impressions-room({
                                     list: [
                                         {
                                             name: 'великолепно',
@@ -74,7 +74,7 @@ block content
                                             colors: ['#919191', '#3D4975'],
                                         },
                                     ]
-                               })
+                                })
                         .room-details__user-reviews
                             .room-details__user-reviews-comments
                                 span.room-details__title-comment Отзывы посетителей номера
@@ -87,7 +87,7 @@ block content
                                 src: 'assets/image/user-2.png',
                                 desc: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
                                 alt: 'Патрисия Стёклышкова'
-                             })
+                            })
                     .room-details__room-order-container
                         +room-order({
                             numberRoom: 888, 
