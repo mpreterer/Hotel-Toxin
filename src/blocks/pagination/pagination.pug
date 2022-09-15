@@ -1,4 +1,15 @@
-mixin pagination({ minValue = 1, maxValue = 12, allOption = '100+ ', items, pageSize = 1, pageRange = 1, countPages= 15 }={})
+mixin pagination(params = {})
+  -
+    const {
+      minValue = 1,
+      maxValue = 12,
+      allOption = '100+ ',
+      items,
+      pageSize = 1,
+      pageRange = 1,
+      countPages= 15
+    } = params
+  
   .pagination.js-pagination(
     data-items=items,
     data-items-on-page=pageSize,

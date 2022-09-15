@@ -32,4 +32,9 @@ mixin registration-card({ title = 'Регистрация аккаунта' }={}
           .registration-card__question
             p.registration-card__question-txt Уже есть аккаунт на Toxin
           .registration-card__question-link
-            +button({ text: 'Войти', typeTagLink: true, href: './login.html', type: 'border' })
+            +button({
+              text: 'Войти',
+              typeTagLink: true,
+              href: './login.html',
+              type: 'border'
+            })

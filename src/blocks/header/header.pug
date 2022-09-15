@@ -9,14 +9,53 @@ mixin header({ user } = {})
       +logotype
       .header__right-part
         .header__nav-menu-container
-          +nav-menu({ listMenu: [ {name: 'О нас', href: '/mock-address/change-me'}, {name: 'Услуги', href: '/mock-address/change-me', submenu: [ {name: 'Услуга 1', href: '/mock-address/change-me'}, {name: 'Услуга 2', href: '/mock-address/change-me'} ]}, {name: 'Вакансии', href: '/mock-address/change-me'}, {name: 'Новости', href: '/mock-address/change-me'}, {name: 'Соглашения', href: '/mock-address/change-me', submenu: [ {name: 'Соглашение 1', href: '/mock-address/change-me'}, {name: 'Соглашение 2', href: '/mock-address/change-me'} ]}, ] })
+          +nav-menu({ 
+            listMenu: [
+              {name: 'О нас', href: '/mock-address/change-me'},
+              {
+                name: 'Услуги', href: '/mock-address/change-me',
+                submenu: [
+                  {name: 'Услуга 1', href: '/mock-address/change-me'},
+                  {name: 'Услуга 2', href: '/mock-address/change-me'}
+                ]}, 
+              {name: 'Вакансии', href: '/mock-address/change-me'},
+              {name: 'Новости', href: '/mock-address/change-me'},
+              {
+                name: 'Соглашения', href: '/mock-address/change-me', 
+                submenu: [
+                  {name: 'Соглашение 1', href: '/mock-address/change-me'},
+                  {name: 'Соглашение 2', href: '/mock-address/change-me'}
+                ]
+              },
+              ]})
         .header__container-login
           if user
             .header__user
               a.header__user-name(href='/mock-address/change-me')= user
           else
             .header__btn-login
-              +button({ type: 'border', typeTagLink: true, text: 'Войти', href: './login.html', small: true })
+              +button({
+                type: 'border', 
+                typeTagLink: true, 
+                text: 'Войти', 
+                href: './login.html', 
+                small: true 
+              })
             .header__btn-registration
-              +button({ type: 'background', typeTagLink: true, text: 'Зарегистрироваться', href: './registration.html' })
-      +nav-burger({ navLinks: [ { title: 'Главная', link: 'index.html' }, { title: 'О нас', link: '/mock-address/change-me' }, { title: 'Услуги', link: '/mock-address/change-me' }, { title: 'Вакансии', link: '/mock-address/change-me' }, { title: 'Новости', link: '/mock-address/change-me' }, { title: 'Соглашения', link: '/mock-address/change-me' }, { title: 'Войти', link: 'login.html' }, { title: 'Регистрация', link: 'registration.html' }, ] })
+              +button({
+                type: 'background', 
+                typeTagLink: true, 
+                text: 'Зарегистрироваться', 
+                href: './registration.html'
+              })
+      +nav-burger({
+        navLinks: [ 
+          { title: 'Главная', link: 'index.html' },
+          { title: 'О нас', link: '/mock-address/change-me' },
+          { title: 'Услуги', link: '/mock-address/change-me' }, 
+          { title: 'Вакансии', link: '/mock-address/change-me' },
+          { title: 'Новости', link: '/mock-address/change-me' },
+          { title: 'Соглашения', link: '/mock-address/change-me' },
+          { title: 'Войти', link: 'login.html' },
+          { title: 'Регистрация', link: 'registration.html' },
+        ]})

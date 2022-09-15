@@ -1,4 +1,11 @@
-mixin radio-input({ groupName='default', list = [{name: 'Мужчина', checked: true}, {name: 'Женщина'}] }={})
+mixin radio-input(params = {})
+  -
+    const {
+      groupName='default',
+      list = [{name: 'Мужчина', checked: true},
+      {name: 'Женщина'}]
+    } = params
+
   .radio-input
     each el in list
       label.radio-input__label

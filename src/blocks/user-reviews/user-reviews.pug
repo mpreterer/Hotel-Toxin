@@ -1,6 +1,18 @@
 include ../button-like/button-like.pug
 
-mixin user-reviews({ src='assets/image/user-1.png', count= 12, username= 'Мурад Сарафанов', dayComment= '5 дней назад', desc='Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', alt='Мурад Сарафанов' }={})
+mixin user-reviews(params = {})
+  -
+    const {
+      src='assets/image/user-1.png',
+      count= 12,
+      username= 'Мурад Сарафанов',
+      dayComment= '5 дней назад',
+      desc=`Великолепный матрас на кровати в основной спальне! 
+            А пуфик вообще потрясающий. 
+            И стены, действительно, шумоподавляющие.
+            Выкрикивал комплименты повару — никто не жаловался из соседей.`,
+      alt='Мурад Сарафанов'
+    } = params
   .user-reviews
     .user-reviews__comment
       .user-reviews__avatar-container

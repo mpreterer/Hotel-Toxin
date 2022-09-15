@@ -1,7 +1,15 @@
 include ../calendar/calendar.pug
 include ../expand-more-arrow/expand-more-arrow.pug
 
-mixin alone-calendar({ title='Даты прибывания в отеле', dateFormat='d MM', placeholder='Выберите даты', isOpen = 'false'}={})
+mixin alone-calendar(params = {})
+  -
+    const {
+      title='Даты прибывания в отеле', 
+      dateFormat='d MM', 
+      placeholder='Выберите даты', 
+      isOpen = 'false'
+    } = params
+
   .alone-calendar.js-alone-calendar(
     data-selected-dates=selectedDates,
     data-format=dateFormat,

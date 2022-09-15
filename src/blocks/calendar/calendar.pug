@@ -1,4 +1,14 @@
-mixin calendar({ isOpen= 'false', range='true', lang, separator=' - ', dateFormat='dd.mm.yyyy', initDates= ''}={})
+mixin calendar(params = {})
+  -
+    const {
+      isOpen= 'false', 
+      range='true', 
+      lang, 
+      separator=' - ', 
+      dateFormat='dd.mm.yyyy', 
+      initDates= ''
+    } = params
+
   .calendar.js-calendar(
     data-range=range,
     data-multiple-dates-separator=separator,

@@ -1,7 +1,14 @@
 include ../custom-checkbox/custom-checkbox.pug
 include ../expand-more-arrow/expand-more-arrow.pug
 
-mixin checkbox-list({ title = 'Открыть список', list = [], isOpen= false }={})
+mixin checkbox-list(params = {})
+  -
+    const {
+      title = 'Открыть список', 
+      list = [], 
+      isOpen= false
+    } = params
+
   .checkbox-list.js-checkbox-list(
     class=isOpen ? 'js-list-open' : 'js-list-close',
     tabindex='0'

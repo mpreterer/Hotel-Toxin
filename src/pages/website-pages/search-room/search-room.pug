@@ -12,8 +12,9 @@ include ../../../blocks/room-info/room-info.pug
 include ../../../blocks/pagination/pagination.pug
 
 block variables
-  - pageTitle = '«Toxin» | Лучшие номера для вас'
-  - roomsList = require('./utils/rooms-info.json');
+  -
+    pageTitle = '«Toxin» | Лучшие номера для вас'
+    roomsList = require('./utils/rooms-info.json');
 
 block content
   .search-room.js-search-room

@@ -2,7 +2,18 @@ include ../calendar/calendar.pug
 include ../text-input/text-input.pug
 include ../expand-more-arrow/expand-more-arrow.pug
 
-mixin range-date-calendar({ titleFirst='Прибытие', titleSecond='Выезд', isOpen = false, range='true', lang, separator=' - ', format}={})
+mixin range-date-calendar(params = {})
+  -
+    const {
+      titleFirst='Прибытие',
+      titleSecond='Выезд',
+      isOpen = false,
+      range='true',
+      lang,
+      separator=' - ',
+      format
+    } = params
+
   .range-date-calendar.js-range-date-calendar(
     data-is-open=isOpen,
     data-date-format=format
@@ -14,7 +25,12 @@ mixin range-date-calendar({ titleFirst='Прибытие', titleSecond='Выез
           .range-date-calendar__masked-arrival.js-masked-arrival(
             data-complete='false'
           )
-            +text-input({ isMasked: true, name: 'arrival', isBorder: false, autocomplete: 'off' })
+            +text-input({
+              isMasked: true,
+              name: 'arrival',
+              isBorder: false,
+              autocomplete: 'off'
+            })
           .range-date-calendar__container-arrow.js-container-arrow
             .range-date-calendar__arrow
               +expand-more-arrow
@@ -24,7 +40,12 @@ mixin range-date-calendar({ titleFirst='Прибытие', titleSecond='Выез
           .range-date-calendar__masked-departure.js-masked-departure(
             data-complete='false'
           )
-            +text-input({ isMasked: true, name: 'departure', isBorder: false, autocomplete: 'off' })
+            +text-input({
+              isMasked: true,
+              name: 'departure',
+              isBorder: false,
+              autocomplete: 'off'
+            })
           .range-date-calendar__container-arrow.js-container-arrow
             .range-date-calendar__arrow
               +expand-more-arrow

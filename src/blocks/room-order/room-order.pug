@@ -17,7 +17,16 @@ mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={
         +range-date-calendar
       .room-order__guests
         span.room-order__title-guest гости
-        +dropDown({ appointment: 'guests', list: [ { name: 'взрослые', val: 0 }, { name: 'дети', val: 0 }, { name: 'младенцы', val: 0 } ], showFunction: true, placeholder: 'Сколько гостей', keyPhrases: ['гость', 'гостя', 'гостей'] })
+        +dropDown({
+          appointment: 'guests',
+          list: [
+            { name: 'взрослые', val: 0 },
+            { name: 'дети', val: 0 },
+            { name: 'младенцы', val: 0 } ],
+          showFunction: true,
+          placeholder: 'Сколько гостей',
+          keyPhrases: ['гость', 'гостя', 'гостей']
+        })
       .room-order__price
         .room-order__full-price
           span.room-order__full-price-container

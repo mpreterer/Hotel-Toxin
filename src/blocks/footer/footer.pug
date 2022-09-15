@@ -2,7 +2,15 @@ include ../footer-nav-menu/footer-nav-menu.pug
 include ../logotype/logotype.pug
 include ../sub-text-input/sub-text-input.pug
 
-mixin footer({desc, menuList, copyright}={})
+mixin footer(params = {})
+  -
+    const {
+      desc, 
+      menuList, 
+      copyright,
+      specialTitle= 'Получайте специальные предложения и новости сервиса',
+    } = params
+
   footer.footer
     .footer__container
       .footer__list
@@ -14,7 +22,7 @@ mixin footer({desc, menuList, copyright}={})
           +footer-nav-menu({navList: menuList})
         .footer__description
           span.footer__description-title Подписка
-          p.footer__description-special-title Получайте специальные предложения и новости сервиса
+          p.footer__description-special-title= specialTitle
           .footer__description-email
             +sub-text-input({ name: 'email', placeholder: 'Email' })
     .footer__sub-container

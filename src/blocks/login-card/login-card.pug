@@ -8,10 +8,24 @@ mixin login-card({}={})
         .login-card__email
           +text-input({ placeholder: 'Email', name: 'name' })
         .login-card__password
-          +text-input({ type: 'password', placeholder: 'Пароль', name: 'password' })
+          +text-input({ 
+            type: 'password',
+            placeholder: 'Пароль',
+            name: 'password'
+          })
         .login-card__login-btn
-          +button({ text: 'Войти', type: 'long', href: './search-room.html', typeMethod: 'submit' })
+          +button({ 
+            text: 'Войти',
+            type: 'long',
+            href: './search-room.html',
+            typeMethod: 'submit'
+          })
         .login-card__account
           p.login-card__question Нет аккаунта на Toxin?
           .login-card__registration-button
-            +button({ text: 'Создать', typeTagLink: true, type: 'border', href: './registration.html' })
+            +button({
+              text: 'Создать',
+              typeTagLink: true,
+              type: 'border',
+              href: './registration.html'
+            })
