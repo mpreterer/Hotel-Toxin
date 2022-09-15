@@ -1,0 +1,8 @@
+mixin color-section({ colorItem='shade-dark', title='Dark Shade 100%', hex='#1F2041' }={})
+  - const colorSquare = `color-section__square_color_${colorItem}`;
+
+  .color-section
+    .color-section__square(class=[colorSquare])
+    .color-section__text
+      span.color-section__title-color= title
+      span.color-section__color-hex= hex

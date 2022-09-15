@@ -1,6 +1,6 @@
 mixin text-description({title= 'H1', textSize = '', description='This one is the sub-section or widget title'}={})
-  - var textClass = 'text-description_' + textSize;
-  - var titleClass = 'text-description__title_' + textSize;
+  - const textClass = 'text-description_' + textSize;
+  - const titleClass = 'text-description__title_' + textSize;
 
   .text-description(class=[textClass])
     p.text-description__title(class=[titleClass])= title
