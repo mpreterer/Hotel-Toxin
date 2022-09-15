@@ -146,7 +146,9 @@ class RangeDateCalendar {
   }
 
   _init() {
-    this.calendar = new Calendar({});
+    this.calendar = new Calendar({
+      body: this.$container,
+    });
   }
 
   _handleContainerClick() {

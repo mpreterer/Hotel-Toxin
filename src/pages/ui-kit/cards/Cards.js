@@ -1,25 +1,16 @@
 import Calendar from '../../../blocks/calendar/Calendar';
 
 class Cards {
-  constructor() {
+  constructor(domParent) {
+    this.container = domParent;
+    this.calendar = this.container.querySelector('[data-component-js="js-calendar-open"]');
     this._init();
   }
 
   _init() {
-    const {
-      calendar,
-    } = this._getElements();
-
-    calendar.forEach((item) => new Calendar({
-      body: item,
-      isOpen: true,
-    }));
-  }
-
-  _getElements() {
-    return {
-      calendar: document.querySelectorAll('[data-component-js="js-calendar-open"]'),
-    };
+    this.calendar = new Calendar({
+      body: this.calendar,
+    });
   }
 }
 

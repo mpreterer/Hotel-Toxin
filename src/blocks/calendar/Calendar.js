@@ -2,7 +2,7 @@ import AirDatepicker from '../../libs/air-datepicker/AirDatepicker';
 
 class Calendar {
   constructor(params) {
-    this.$container = document.querySelector('.js-calendar');
+    this.$container = params.body.querySelector('.js-calendar');
     this.initDates = this.$container.getAttribute('data-init-dates');
     this.isOpen = this.$container.getAttribute('data-is-open');
     this.dateFormat = this.$container.getAttribute('data-format');
@@ -14,7 +14,6 @@ class Calendar {
 
   _init() {
     const isOpen = this.isOpen === 'true';
-    this.isOpen = isOpen;
 
     this.calendarPlugin = new AirDatepicker({
       body: this.$container,
