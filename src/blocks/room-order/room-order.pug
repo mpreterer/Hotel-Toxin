@@ -3,7 +3,11 @@ include ../dropDown/dropDown.pug
 
 mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={})
   .room-order.js-room-order
-    form.room-order__container(method action="./registration.html")
+    form.room-order__container(
+      method,
+      action="./registration.html",
+      name="room-order"
+      )
       .room-order__head
         span.room-order__number-container
           span.room-order__number-num №

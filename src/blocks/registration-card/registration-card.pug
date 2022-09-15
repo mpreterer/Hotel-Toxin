@@ -7,7 +7,11 @@ mixin registration-card({ title = 'Регистрация аккаунта' }={}
     .registration-card__container
       .registration-card__user-info
         h1.registration-card__title= title
-      form.registration-card__user-about
+      form.registration-card__user-about(
+        method,
+        action="",
+        name="registration-card",
+        )
         .registration-card__user-name
           .registration-card__first-name
             +text-input({ placeholder: 'Имя', name: 'name' })
