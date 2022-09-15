@@ -8,21 +8,15 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transition: 0;
-  -moz-transition: opacity 1s;
   opacity: 0;
 
   &_transitioned {
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
     opacity: 1;
+    transition: opacity 1s;
   }
 
   &_opacity_high {
-    transition: 1s;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
     opacity: 0.1;
+    transition: opacity 1s;
   }
 }

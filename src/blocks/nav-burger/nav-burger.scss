@@ -1,23 +1,23 @@
 @import '@variables';
 
 .nav-burger {
+  position: relative;
   display: none;
   width: 50px;
   height: 40px;
-  position: relative;
   cursor: pointer;
 
   &__menu-burger {
-    display: none;
-    width: 310px;
     position: absolute;
     top: 60px;
     right: -8px;
-    padding: 0;
+    z-index: 999;
+    display: none;
+    width: 310px;
     margin: 0;
+    padding: 0;
     list-style: none;
     user-select: none;
-    z-index: 999;
 
     &_open {
       display: block;
@@ -55,24 +55,24 @@
     outline: none;
     cursor: pointer;
 
-    &:before {
-      content: '';
+    &::before {
       position: absolute;
       top: 0;
       left: 0;
       width: 50px;
       height: 8px;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      content: '';
     }
 
-    &:after {
-      content: '';
+    &::after {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 50px;
       height: 8px;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      content: '';
     }
   }
 

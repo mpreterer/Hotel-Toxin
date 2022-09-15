@@ -5,9 +5,9 @@
   height: 699px;
 
   &__container {
-    padding: 172px 0;
     max-width: 380px;
     margin: 0 auto;
+    padding: 172px 0;
 
     @media (max-width: 400px) {
       margin: 0 10px;

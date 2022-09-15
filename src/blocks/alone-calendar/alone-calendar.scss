@@ -12,8 +12,8 @@
     display: flex;
     align-items: center;
     height: 44px;
-    padding-left: 15px;
     margin: 0 auto;
+    padding-left: 15px;
   }
 
   &__arrow {
@@ -36,8 +36,8 @@
   &__calendar {
     position: absolute;
     left: -30px;
-    margin-top: 5px;
     z-index: 99;
+    margin-top: 5px;
 
     @media (max-width: 840px) {
       left: 0;

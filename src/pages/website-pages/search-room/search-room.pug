@@ -12,86 +12,86 @@ include ../../../blocks/room-info/room-info.pug
 include ../../../blocks/pagination/pagination.pug
 
 block variables
-    - pageTitle = '«Toxin» | Лучшие номера для вас'
-    - roomsList = require('./utils/rooms-info.json');
+  - pageTitle = '«Toxin» | Лучшие номера для вас'
+  - roomsList = require('./utils/rooms-info.json');
 
 block content
-    .search-room.js-search-room
-        aside.search-room__left-bar
-            .search-room__arrival-in-hotel
-                span.search-room__title даты пребывания в отеле
-                +alone-calendar
-            .search-room__guests-container
-                span.search-room__title Гости
-                +dropDown({
-                    list: [
-                        { name: 'взрослые', val: 2 },
-                        { name: 'дети', val: 1 },
-                        { name: 'младенцы', val: 1 },
-                    ],
-                    appointment: 'guests',
-                    showFunction: true,
-                    keyPhrases: ['гость', 'гостя', 'гостей']
-                })
-            .search-room__price-hotel
-                +slider-range({
-                    title: 'ДИАПАЗОН ЦЕНЫ',
-                    subTitle: 'Стоимость за сутки пребывания в номере'
-                })
-            .search-room__order-in-room
-                span.search-room__title правила дома
-                +custom-checkbox({text: 'Можно курить'})
-                +custom-checkbox({text: 'Можно с питомцами'})
-                +custom-checkbox({text: 'Можно пригласить гостей (до 10 человек)'})
-            .search-room__availability
-                span.search-room__title доступность
-                +checkbox-double-name({
-                    list: [
-                        { title: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.' },
-                        { title: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.' },
-                    ]
-                })
-            span.search-room__title удобства номера
-            .search-room__furniture
-                +dropDown({
-                    appointment: 'furniture',
-                    list: [
-                        { name: 'спальни', val: 0 },
-                        { name: 'кровати', val: 0 },
-                        { name: 'ванные комнаты', val: 0 }
-                    ],
-                    showFunction: false,
-                    placeholder: 'Выберите удобства'
-                })
-            .search-room__convenience
-                +checkbox-list({
-                    title: 'Дополнительные удобства',
-                    list: [
-                        { text: 'Завтрак', isChecked: false },
-                        { text: 'Письменный стол' },
-                        { text: 'Стул для кормления' },
-                        { text: 'Кроватка' },
-                        { text: 'Телевизор', isChecked: false },
-                        { text: 'Шампунь', isChecked: false },
-                    ]
-                })
-        .search-room__rooms-container
-            h2.search-room__number-for-user Номера, которые мы для вас подобрали 
-            .search-room__rooms
-                each room in roomsList
-                    .search-room__room-container
-                        +room-info({
-                            number: room.number,
-                            level: room.level,
-                            price: room.price,
-                            stars: room.stars,
-                            review: room.review,
-                            sliders: room.sliders,
-                            formatSize: 'responsive',
-                        })
-            .search-room__pagination-container
-                +pagination({
-                    items: 180,
-                    itemsOnPage: 12,
-                    displayedPages: 3,
-                })
+  .search-room.js-search-room
+    aside.search-room__left-bar
+      .search-room__arrival-in-hotel
+        span.search-room__title даты пребывания в отеле
+        +alone-calendar
+      .search-room__guests-container
+        span.search-room__title Гости
+        +dropDown({
+          list: [
+            { name: 'взрослые', val: 2 },
+            { name: 'дети', val: 1 },
+            { name: 'младенцы', val: 1 },
+          ],
+          appointment: 'guests',
+          showFunction: true,
+          keyPhrases: ['гость', 'гостя', 'гостей']
+        })
+      .search-room__price-hotel
+        +slider-range({
+          title: 'ДИАПАЗОН ЦЕНЫ',
+          subTitle: 'Стоимость за сутки пребывания в номере'
+        })
+      .search-room__order-in-room
+        span.search-room__title правила дома
+        +custom-checkbox({text: 'Можно курить'})
+        +custom-checkbox({text: 'Можно с питомцами'})
+        +custom-checkbox({text: 'Можно пригласить гостей (до 10 человек)'})
+      .search-room__availability
+        span.search-room__title доступность
+        +checkbox-double-name({
+          list: [
+            { title: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.' },
+            { title: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.' },
+          ]
+        })
+      span.search-room__title удобства номера
+      .search-room__furniture
+        +dropDown({
+          appointment: 'furniture',
+          list: [
+            { name: 'спальни', val: 0 },
+            { name: 'кровати', val: 0 },
+            { name: 'ванные комнаты', val: 0 }
+          ],
+          showFunction: false,
+          placeholder: 'Выберите удобства'
+        })
+      .search-room__convenience
+        +checkbox-list({
+          title: 'Дополнительные удобства',
+          list: [
+            { text: 'Завтрак', isChecked: false },
+            { text: 'Письменный стол' },
+            { text: 'Стул для кормления' },
+            { text: 'Кроватка' },
+            { text: 'Телевизор', isChecked: false },
+            { text: 'Шампунь', isChecked: false },
+          ]
+        })
+    .search-room__rooms-container
+      h2.search-room__number-for-user Номера, которые мы для вас подобрали 
+      .search-room__rooms
+        each room in roomsList
+          .search-room__room-container
+            +room-info({
+              number: room.number,
+              level: room.level,
+              price: room.price,
+              stars: room.stars,
+              review: room.review,
+              sliders: room.sliders,
+              formatSize: 'responsive',
+            })
+      .search-room__pagination-container
+        +pagination({
+          items: 180,
+          itemsOnPage: 12,
+          displayedPages: 3,
+        })

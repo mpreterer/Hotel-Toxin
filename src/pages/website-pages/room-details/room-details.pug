@@ -10,102 +10,102 @@ include ../../../blocks/user-reviews/user-reviews.pug
 include ../../../blocks/room-rules/room-rules
 
 block variables 
-    - pageTitle = '«Toxin» | Номер для вас'
+  - pageTitle = '«Toxin» | Номер для вас'
 
 block content
-    .room-details
-        .room-details__room-photos
-            .room-details__room-big-photo-container
-                img(src="assets/image/rooms/room-loop-1.jpg", alt="room 888").room-details__room-big-photo
-            .room-details__room-side-section-photos
-                .room-details__room-small-photo-container
-                    img(src="assets/image/rooms/room-loop-2.jpg", alt="room 888").room-details__room-small-photo
-                .room-details__room-small-photo-container
-                    img(src="assets/image/rooms/room-loop-3.jpg", alt="room 888").room-details__room-small-photo
-        .room-details__expend
-            .room-details__expend-container
-                .room-details__split-container
-                    .room-details__split
-                        .room-details__more-info
-                            .room-details__about-room-container
-                                +about-room({
-                                    list: [
-                                        {
-                                            firstAdvantage: 'Комфорт',
-                                            secondAdvantage: 'Шумоподавляющие стены',
-                                            class: 'about-room__insert-emoticon',
-                                            alt: 'Комфорт'
-                                        },
-                                        {
-                                            firstAdvantage: 'Удобство',
-                                            secondAdvantage: 'Окно в каждой из спален',
-                                            class: 'about-room__location-city',
-                                            alt: 'Удобство'
-                                        },
-                                        {
-                                            firstAdvantage: 'Уют',
-                                            secondAdvantage: 'Номер оснащён камином',
-                                            class: 'about-room__whatshot',
-                                            alt: 'Уют',
-                                        }
-                                    ]
-                                })
-                            .room-details__impressions
-                                +impressions-room({
-                                    list: [
-                                        {
-                                            name: 'великолепно',
-                                            votes: 520,
-                                            colors: ['#FFE39C', '#FFBA9C'],
-                                        },
-                                        {
-                                            votes: 260,
-                                            name: 'хорошо',
-                                            colors: ['#6FCF97', '#66D2EA'],
-                                        },
-                                        {
-                                            name: 'удовлетворительно',
-                                            votes: 260,
-                                            colors: ['#BC9CFF', '#8BA4F9'],
-                                        },
-                                        {
-                                            name: 'разочарован',
-                                            votes: 0,
-                                            colors: ['#919191', '#3D4975'],
-                                        },
-                                    ]
-                                })
-                        .room-details__user-reviews
-                            .room-details__user-reviews-comments
-                                span.room-details__title-comment Отзывы посетителей номера
-                                span.room-details__reviews-comments 2 отзыва 
-                            +user-reviews({ count: 11 })
-                            +user-reviews({ 
-                                count: 2,
-                                username: 'Патрисия Стёклышкова',
-                                dayComment: 'Неделю назад',
-                                src: 'assets/image/user-2.png',
-                                desc: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
-                                alt: 'Патрисия Стёклышкова'
-                            })
-                    .room-details__room-order-container
-                        +room-order({
-                            numberRoom: 888, 
-                            level: 'люкс', 
-                            priceDay: '9 990', 
-                            currency: '₽', 
-                            discount: '2 179', 
-                            services: 300
-                        })
-                .room-details__rules-container
-                    .room-details__room-rules-container
-                        +room-rules({
-                            list: [
-                                { txt: 'Нельзя с питомцами' },
-                                { txt: 'Без вечеринок и мероприятий' },
-                                { txt: 'Время прибытия — после 13:00, а выезд до 12:00' }
-                            ]
-                        })
-                    .room-details__cancel
-                        p.room-details__cancel-title Отмена
-                        span.room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги. 
+  .room-details
+    .room-details__room-photos
+      .room-details__room-big-photo-container
+        img(src="assets/image/rooms/room-loop-1.jpg", alt="room 888").room-details__room-big-photo
+      .room-details__room-side-section-photos
+        .room-details__room-small-photo-container
+          img(src="assets/image/rooms/room-loop-2.jpg", alt="room 888").room-details__room-small-photo
+        .room-details__room-small-photo-container
+          img(src="assets/image/rooms/room-loop-3.jpg", alt="room 888").room-details__room-small-photo
+    .room-details__expend
+      .room-details__expend-container
+        .room-details__split-container
+          .room-details__split
+            .room-details__more-info
+              .room-details__about-room-container
+                +about-room({
+                  list: [
+                    {
+                      firstAdvantage: 'Комфорт',
+                      secondAdvantage: 'Шумоподавляющие стены',
+                      class: 'about-room__insert-emoticon',
+                      alt: 'Комфорт'
+                    },
+                    {
+                      firstAdvantage: 'Удобство',
+                      secondAdvantage: 'Окно в каждой из спален',
+                      class: 'about-room__location-city',
+                      alt: 'Удобство'
+                    },
+                    {
+                      firstAdvantage: 'Уют',
+                      secondAdvantage: 'Номер оснащён камином',
+                      class: 'about-room__whatshot',
+                      alt: 'Уют',
+                    }
+                  ]
+                })
+              .room-details__impressions
+                +impressions-room({
+                  list: [
+                    {
+                      name: 'великолепно',
+                      votes: 520,
+                      colors: ['#FFE39C', '#FFBA9C'],
+                    },
+                    {
+                      votes: 260,
+                      name: 'хорошо',
+                      colors: ['#6FCF97', '#66D2EA'],
+                    },
+                    {
+                      name: 'удовлетворительно',
+                      votes: 260,
+                      colors: ['#BC9CFF', '#8BA4F9'],
+                    },
+                    {
+                      name: 'разочарован',
+                      votes: 0,
+                      colors: ['#919191', '#3D4975'],
+                    },
+                  ]
+                })
+            .room-details__user-reviews
+              .room-details__user-reviews-comments
+                span.room-details__title-comment Отзывы посетителей номера
+                span.room-details__reviews-comments 2 отзыва 
+              +user-reviews({ count: 11 })
+              +user-reviews({ 
+                count: 2,
+                username: 'Патрисия Стёклышкова',
+                dayComment: 'Неделю назад',
+                src: 'assets/image/user-2.png',
+                desc: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+                alt: 'Патрисия Стёклышкова'
+              })
+          .room-details__room-order-container
+            +room-order({
+              numberRoom: 888, 
+              level: 'люкс', 
+              priceDay: '9 990', 
+              currency: '₽', 
+              discount: '2 179', 
+              services: 300
+            })
+        .room-details__rules-container
+          .room-details__room-rules-container
+            +room-rules({
+              list: [
+                { txt: 'Нельзя с питомцами' },
+                { txt: 'Без вечеринок и мероприятий' },
+                { txt: 'Время прибытия — после 13:00, а выезд до 12:00' }
+              ]
+            })
+          .room-details__cancel
+            p.room-details__cancel-title Отмена
+            span.room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги. 

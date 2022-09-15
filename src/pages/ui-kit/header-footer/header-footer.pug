@@ -3,46 +3,46 @@ include ../../../blocks/header/header.pug
 include ../../../blocks/footer/footer.pug
 
 block variables 
-    - pageTitle = 'Футер и Хедер'
+  - pageTitle = 'Футер и Хедер'
 
 block content
-    .header-footer 
-        .header-footer__header(data-component-js="js-header")
-            +header
-        .header-footer__header-login(data-component-js="js-header")
-            +header({
-                user: 'Юлий Цезарь'
-            })
-        .header-footer__footer 
-            +footer({
-                desc: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
-                menuList: [
-                    {
-                        title: 'Навигация',
-                        links: [
-                            { title: 'О нас', href: '/mock-address/change-me' },
-                            { title: 'Новости', href: '/mock-address/change-me' },
-                            { title: 'Служба поддержки', href: '/mock-address/change-me' },
-                            { title: 'Услуги', href: '/mock-address/change-me' },
-                        ]
-                    },
-                    {
-                        title: 'О нас',
-                        links: [
-                            { title: 'О сервисе', href: '/mock-address/change-me' },
-                            { title: 'Наша команда', href: '/mock-address/change-me' },
-                            { title: 'Вакансии', href: '/mock-address/change-me' },
-                            { title: 'Инвесторы', href: '/mock-address/change-me' },
-                        ]
-                    },
-                    {
-                        title: 'Служба поддержки',
-                        links: [
-                            { title: 'Соглашения', href: '/mock-address/change-me' },
-                            { title: 'Сообщества', href: '/mock-address/change-me' },
-                            { title: 'Связь с нами', href: '/mock-address/change-me' },
-                        ]
-                    },
-                ],
-                copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.'
-            })
+  .header-footer 
+    .header-footer__header(data-component-js="js-header")
+      +header
+    .header-footer__header-login(data-component-js="js-header")
+      +header({
+        user: 'Юлий Цезарь'
+      })
+    .header-footer__footer 
+      +footer({
+        desc: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+        menuList: [
+          {
+            title: 'Навигация',
+            links: [
+              { title: 'О нас', href: '/mock-address/change-me' },
+              { title: 'Новости', href: '/mock-address/change-me' },
+              { title: 'Служба поддержки', href: '/mock-address/change-me' },
+              { title: 'Услуги', href: '/mock-address/change-me' },
+            ]
+          },
+          {
+            title: 'О нас',
+            links: [
+              { title: 'О сервисе', href: '/mock-address/change-me' },
+              { title: 'Наша команда', href: '/mock-address/change-me' },
+              { title: 'Вакансии', href: '/mock-address/change-me' },
+              { title: 'Инвесторы', href: '/mock-address/change-me' },
+            ]
+          },
+          {
+            title: 'Служба поддержки',
+            links: [
+              { title: 'Соглашения', href: '/mock-address/change-me' },
+              { title: 'Сообщества', href: '/mock-address/change-me' },
+              { title: 'Связь с нами', href: '/mock-address/change-me' },
+            ]
+          },
+        ],
+        copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.'
+      })
