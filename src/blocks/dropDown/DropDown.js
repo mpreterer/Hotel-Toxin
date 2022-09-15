@@ -299,26 +299,14 @@ class DropDown {
       strBathRoom = `${bathRoom} ${arrayName[2].textContent}`;
     }
 
-    const isAllSelected = strBedRooms !== '' && strBed !== '' && strBathRoom !== '';
+    const options = [strBedRooms, strBed, strBathRoom];
+    const optionsMaxCount = 2;
+    const selectedOptions = options.filter((option) => option !== '');
     
-    const isBedRoomsNotEmpty = strBedRooms !== '';
-    const isBedRoomsEmpty = strBedRooms === '';
-    const isBedNotEmpty = strBed !== '';
-    const isBedEmpty = strBed === '';
-    const isBathRoomNotEmpty = strBathRoom !== '';
-    const isBathRoomEmpty = strBathRoom === '';
-
-    if (isAllSelected) {
-      strBathRoom = '';
-      this.inputName.value = `${strBedRooms}, ${strBed}...`;
-    } else if (isBedRoomsNotEmpty && isBedNotEmpty && isBathRoomEmpty) {
-      this.inputName.value = `${strBedRooms}, ${strBed}`;
-    } else if (isBedRoomsNotEmpty && isBedEmpty && isBathRoomNotEmpty) {
-      this.inputName.value = `${strBedRooms}, ${strBathRoom}`;
-    } else if (isBedRoomsEmpty && isBedNotEmpty && isBathRoomNotEmpty) {
-      this.inputName.value = `${strBed}, ${strBathRoom}`;
+    if (selectedOptions.length <= optionsMaxCount) {
+      this.inputName.value = selectedOptions.join(', ');
     } else {
-      this.inputName.value = `${strBed}${strBathRoom}${strBedRooms}`;
+      this.inputName.value = `${selectedOptions.slice(0, optionsMaxCount).join(', ')}...`;
     }
   }
 }
