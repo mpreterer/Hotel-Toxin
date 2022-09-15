@@ -6,12 +6,11 @@ include ../../../blocks/registration-card/registration-card.pug
 include ../../../blocks/backgrounds/backgrounds.pug
 
 block variables
-    - var pageTitle = '«Toxin» | Регистрация'
-    - roomsList = require('../login/utils/login-backgrounds.json');
+  - const pageTitle = '«Toxin» | Регистрация'
+  - roomsList = require('../login/utils/login-backgrounds.json');
 
 block content
-    .registration-main
-        +backgrounds({ dataSrc: roomsList })
-        .registration-main__container
-            +registration-card
-            
+  .registration-main
+    +backgrounds({ dataSrc: roomsList })
+    .registration-main__container
+      +registration-card

@@ -1,15 +1,15 @@
 include ../pages/ui-kit/blocks/ui-header/ui-header.pug
 
 block variables
-    - var pageTitle = 'Главная «Toxin» | Отели'
+  - const pageTitle = 'Главная «Toxin» | Отели'
 
 html
-    head
-        meta(charset="UTF-8")
-        link(rel="icon" href="assets/image/favicon.ico" type="image/x-icon")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title=pageTitle
-    body
-        +ui-header()
-        block content
+  head
+    meta(charset="UTF-8")
+    link(rel="icon", href="assets/image/favicon.ico", type="image/x-icon")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title=pageTitle
+  body
+    +ui-header()
+    block content

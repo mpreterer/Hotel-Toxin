@@ -1,18 +1,18 @@
 mixin button({ href = '/mock-address/change-me', typeMethod = '', disabled= false, typeTagLink = false, type = 'default', text = 'click me', small = false, high = false, target }={})
   -
-    const typeButton = 'button__title_type_' + type;
+    const typeButton = `button__title_type_${type}`;
     const smallButton = small && 'button__title_size_small';
     const highButton = high && 'button__title_size_high';
     const typeTag = typeTagLink ? 'a' : 'button';
     const buttonAttributes = {
-        a: {
-          href: `${href}`,
-        },
-        button: {
-          disabled: disabled,
-          type: typeMethod,
-        }
+      a: {
+        href: `${href}`,
+      },
+      button: {
+        disabled: disabled,
+        type: typeMethod,
       }
+    }
 
   #{typeTag}.button&attributes(buttonAttributes[typeTag])
     span.button__title(class=[typeButton, smallButton, highButton]) #{ text }
