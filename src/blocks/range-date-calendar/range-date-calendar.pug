@@ -14,7 +14,7 @@ mixin range-date-calendar({ titleFirst='Прибытие', titleSecond='Выез
           .range-date-calendar__masked-arrival.js-masked-arrival(
             data-complete='false'
           )
-            +text-input({ isMasked: true, name: 'arrival', isBorder: false })
+            +text-input({ isMasked: true, name: 'arrival', isBorder: false, autocomplete: 'off' })
           .range-date-calendar__container-arrow.js-container-arrow
             .range-date-calendar__arrow
               +expand-more-arrow
@@ -24,7 +24,7 @@ mixin range-date-calendar({ titleFirst='Прибытие', titleSecond='Выез
           .range-date-calendar__masked-departure.js-masked-departure(
             data-complete='false'
           )
-            +text-input({ isMasked: true, name: 'departure', isBorder: false })
+            +text-input({ isMasked: true, name: 'departure', isBorder: false, autocomplete: 'off' })
           .range-date-calendar__container-arrow.js-container-arrow
             .range-date-calendar__arrow
               +expand-more-arrow

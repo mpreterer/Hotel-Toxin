@@ -60,10 +60,7 @@ class RangeDateCalendar {
     const valueInputDeparture = this.$inputDeparture.value.split('.').join('');
     const isOnlyNumbersDeparture = /^\d+$/.test(valueInputDeparture);
 
-    const isNotOnlyNumbersDeparture = !isOnlyNumbersDeparture;
-    const isNotOnlyNumbersArrival = !isOnlyNumbersArrival;
-
-    if (isNotOnlyNumbersDeparture && isNotOnlyNumbersArrival) {
+    if (!isOnlyNumbersDeparture && !isOnlyNumbersArrival) {
       this.calendar.calendarPlugin.selectNewDate();
     }
 
@@ -94,16 +91,16 @@ class RangeDateCalendar {
 
     const isEnterArrival = valueInputArrival.length === 8;
     const isEnterDeparture = valueInputDeparture.length === 8;
-    const isNotEmptyDateArrival = this.$inputArrival.value !== '';
-    const isNotEmptyDateDeparture = this.$inputDeparture.value !== '';
-    const isNotUseArrival = attributeArrival === 'false';
-    const isNotUseDeparture = attributeDeparture === 'false';
-
+    const isEmptyDateArrival = this.$inputArrival.value === '';
+    const isEmptyDateDeparture = this.$inputDeparture.value === '';
+    const isUseArrival = attributeArrival === 'true';
+    const isUseDeparture = attributeDeparture === 'true';
+    
     if (
       isEnterArrival &&
-      isNotEmptyDateArrival &&
+      !isEmptyDateArrival &&
       isOnlyNumbersArrival &&
-      isNotUseArrival
+      !isUseArrival
     ) {
       this.calendar.calendarPlugin.selectDate(
         dateYearsArrival, dateMonthArrival, dateDayArrival,
@@ -113,13 +110,14 @@ class RangeDateCalendar {
 
     if (
       isEnterDeparture &&
-      isNotEmptyDateDeparture &&
+      !isEmptyDateDeparture &&
       isOnlyNumbersDeparture &&
-      isNotUseDeparture
+      !isUseDeparture
     ) {
       this.calendar.calendarPlugin.selectDate(
         dateYearsDeparture, dateMonthDeparture, dateDayDeparture,
       );
+
       this.departure.setAttribute('data-complete', 'true');
     }
   }
@@ -154,19 +152,19 @@ class RangeDateCalendar {
   _handleContainerClick() {
     const date = this.calendar.calendarPlugin.onDates;
 
-    if (date !== undefined) {
-      this.$inputArrival.value = '';
-      this.$inputDeparture.value = '';
+    if (date === undefined) return;
+    
+    this.$inputArrival.value = '';
+    this.$inputDeparture.value = '';
 
-      const datesArray = date.split(' - ');
-      const dateFirst = datesArray[0];
-      const dateSecond = datesArray[1];
-      
-      this.$inputArrival.value = dateFirst;
+    const datesArray = date.split(' - ');
+    const dateFirst = datesArray[0];
+    const dateSecond = datesArray[1];
+    
+    this.$inputArrival.value = dateFirst;
 
-      if (datesArray.length > 1) {
-        this.$inputDeparture.value = dateSecond;
-      }
+    if (datesArray.length > 1) {
+      this.$inputDeparture.value = dateSecond;
     }
   }
 }
