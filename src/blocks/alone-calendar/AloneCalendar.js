@@ -21,6 +21,7 @@ class AloneCalendar {
 
   _init() {
     this.calendar = new Calendar({
+      body: this.$container,
       options: {
         dateFormat: this.dateFormat,
       },

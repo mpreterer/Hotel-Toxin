@@ -5,6 +5,7 @@ include ../../../blocks/room-order/room-order.pug
 include ../../../blocks/login-card/login-card.pug
 include ../../../blocks/calendar/calendar.pug
 include ../../../blocks/room-info/room-info.pug
+include ../blocks/demo-calendar/demo-calendar.pug
 
 block variables 
   - pageTitle = 'Карточки'
@@ -48,10 +49,8 @@ block content
         .cards__login-card(data-component-js="js-cards-login")
           +login-card
       .cards__rooms
-        .cards__calendar-open(data-component-js="js-calendar-open")
-          +calendar({
-            isOpen: 'true',
-          })
+        .cards__calendar-open
+          +demo-calendar
         .cards__room-card-first(data-component-js="js-card-room")
           +room-info({
             number: 888,
