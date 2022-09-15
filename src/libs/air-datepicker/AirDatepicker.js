@@ -6,7 +6,7 @@ class AirDatepicker {
     this.container = $(params.body);
     this.isOpen = params.visible;
     this.options = params.options || {};
-    this.initDate = params.initDate;
+    this.initDate = params.initDate || 'empty';
     this.bodyPage = document.body;
 
     this._init(this.options);
@@ -71,18 +71,14 @@ class AirDatepicker {
     this.datepicker = this.container.data('datepicker');
     this._addButtons();
 
-    const isInitNotEmpty =
-      this.initDate !== '' && this.initDate !== undefined;
-
-    if (isInitNotEmpty) {
+    const isInitEmpty =
+      this.initDate === 'empty';
+      
+    if (!isInitEmpty) {
       const parseDate = JSON.parse(this.initDate);
-      this.container
-        .datepicker()
-        .data('datepicker')
+        this.datepicker
         .selectDate(new Date(parseDate[0]));
-      this.container
-        .datepicker()
-        .data('datepicker')
+        this.datepicker
         .selectDate(new Date(parseDate[1]));
       this.addClearBtn();
     }
@@ -104,15 +100,15 @@ class AirDatepicker {
 
   _addButtons() {
     const clearButton = `
-            <div data-button-type="clear" class="datepicker__button">
-                Очистить
-            </div>
-        `;
+      <div data-button-type="clear" class="datepicker__button">
+          Очистить
+      </div>
+    `;
     const confirmButton = `
-            <div data-button-type="confirm" class="datepicker__button">
-                Применить
-            </div>
-        `;
+      <div data-button-type="confirm" class="datepicker__button">
+          Применить
+      </div>
+    `;
 
     const $datepicker = this.container.find('.datepicker');
 
