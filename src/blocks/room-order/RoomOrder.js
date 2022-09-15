@@ -88,8 +88,9 @@ class RoomOrder {
 
     const isNaN = Number.isNaN(resultWithFees);
     const resultWithFeesFilled = resultWithFees > 0;
+    const isCountValidate = !isNaN && resultWithFeesFilled;
 
-    if (!isNaN && resultWithFeesFilled) {
+    if (isCountValidate) {
       this.$sumCountFees.textContent = resultWithFees.toLocaleString();
       this.$sumWithoutFees.textContent = resultWithoutFees.toLocaleString();
       this.sumDays.textContent = days;

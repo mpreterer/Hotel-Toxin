@@ -56,11 +56,12 @@ class RangeDateCalendar {
   _removingDate(event) {
     const valueInputArrival = this.$inputArrival.value.split('.').join('');
     const isOnlyNumbersArrival = /^\d+$/.test(valueInputArrival);
-
     const valueInputDeparture = this.$inputDeparture.value.split('.').join('');
     const isOnlyNumbersDeparture = /^\d+$/.test(valueInputDeparture);
+    
+    const isOnlyNumbers = !isOnlyNumbersDeparture && !isOnlyNumbersArrival;
 
-    if (!isOnlyNumbersDeparture && !isOnlyNumbersArrival) {
+    if (isOnlyNumbers) {
       this.calendar.calendarPlugin.selectNewDate();
     }
 
@@ -88,19 +89,27 @@ class RangeDateCalendar {
 
     const attributeArrival = this.arrival.getAttribute('data-complete');
     const attributeDeparture = this.departure.getAttribute('data-complete');
-
-    const isEnterArrival = valueInputArrival.length === 8;
-    const isEnterDeparture = valueInputDeparture.length === 8;
-    const isEmptyDateArrival = this.$inputArrival.value === '';
-    const isEmptyDateDeparture = this.$inputDeparture.value === '';
-    const isUseArrival = attributeArrival === 'true';
-    const isUseDeparture = attributeDeparture === 'true';
     
-    if (
+    const isEnterArrival = valueInputArrival.length === 8;
+    const isEmptyDateArrival = this.$inputArrival.value === '';
+    const isUseArrival = attributeArrival === 'true';
+    const isEnterDeparture = valueInputDeparture.length === 8;
+    const isEmptyDateDeparture = this.$inputDeparture.value === '';
+    const isUseDeparture = attributeDeparture === 'true';
+
+    const isArrivalValidate =
       isEnterArrival &&
       !isEmptyDateArrival &&
       isOnlyNumbersArrival &&
-      !isUseArrival
+      !isUseArrival;
+    const isDepartureValidate =
+      isEnterDeparture &&
+      !isEmptyDateDeparture &&
+      isOnlyNumbersDeparture &&
+      !isUseDeparture;
+
+    if (
+      isArrivalValidate
     ) {
       this.calendar.calendarPlugin.selectDate(
         dateYearsArrival, dateMonthArrival, dateDayArrival,
@@ -109,10 +118,7 @@ class RangeDateCalendar {
     }
 
     if (
-      isEnterDeparture &&
-      !isEmptyDateDeparture &&
-      isOnlyNumbersDeparture &&
-      !isUseDeparture
+      isDepartureValidate
     ) {
       this.calendar.calendarPlugin.selectDate(
         dateYearsDeparture, dateMonthDeparture, dateDayDeparture,
