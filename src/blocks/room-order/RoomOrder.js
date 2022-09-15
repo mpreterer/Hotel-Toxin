@@ -86,10 +86,10 @@ class RoomOrder {
     const resultWithFees = priceDay * days - fees + servicesCount;
     const resultWithoutFees = priceDay * days;
 
-    const isNotNaN = !Number.isNaN(resultWithFees);
-    const resultWithFeesNotEmpty = resultWithFees > 0;
+    const isNaN = Number.isNaN(resultWithFees);
+    const resultWithFeesFilled = resultWithFees > 0;
 
-    if (isNotNaN && resultWithFeesNotEmpty) {
+    if (!isNaN && resultWithFeesFilled) {
       this.$sumCountFees.textContent = resultWithFees.toLocaleString();
       this.$sumWithoutFees.textContent = resultWithoutFees.toLocaleString();
       this.sumDays.textContent = days;
