@@ -1,6 +1,7 @@
 @import '@variables';
 
 .button-like {
+  min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
