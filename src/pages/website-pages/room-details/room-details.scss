@@ -19,11 +19,11 @@
     margin: 0 100px 0 31px;
 
     @media (max-width: 1200px) {
-      margin: 0 100px 0 10px;
+      margin: 0 100px 0 12px;
     }
 
     @media (max-width: 720px) {
-      margin-right: 0;
+      margin-right: 63px;
     }
 
     @media (max-width: 693px) {
@@ -66,7 +66,7 @@
   }
 
   &__room-order-container {
-    margin-right: 9px;
+    margin: 0 10px;
   }
 
   &__room-small-photo-container {
@@ -106,10 +106,6 @@
       align-items: center;
       justify-content: center;
     }
-
-    @media all and (max-width: 693px) {
-      margin: 5px;
-    }
   }
 
   &__more-info {
@@ -119,7 +115,7 @@
     margin-bottom: 20px;
 
     @media (max-width: 1200px) {
-      margin-top: 60px;
+      margin: 60px 0 20px 7px;
     }
 
     @media (max-width: 693px) {
@@ -164,7 +160,11 @@
     list-style: none;
 
     @media (max-width: 1200px) {
-      margin-right: 10px;
+      margin-right: 12px;
+    }
+
+    @media (max-width: 693px) {
+      margin-right: 0;
     }
   }
 
@@ -174,15 +174,6 @@
     @media (max-width: 693px) {
       margin-right: 26px;
       margin-bottom: 30px;
-    }
-
-    @media (max-width: 693px) {
-      margin-right: 26px;
-      margin-bottom: 30px;
-    }
-
-    @media (max-width: 693px) {
-      margin-right: 0;
     }
   }
 
@@ -208,6 +199,14 @@
 
   &__user-reviews {
     margin: 37px 0 0 10px;
+
+    @media (max-width: 1200px) {
+      margin: 37px 0 0 0;
+    }
+
+    @media (max-width: 1200px) {
+      margin: 37px 5px 0 5px;
+    }
   }
 
   &__user-reviews-comments {
@@ -222,12 +221,12 @@
     font-weight: bold;
     font-size: $font-size-medium;
 
-    @media (max-width: 440px) {
-      width: 220px;
+    @media (max-width: 693px) {
+      margin-left: 0;
     }
 
-    @media (max-width: 380px) {
-      font-size: $font-size-main;
+    @media (max-width: 440px) {
+      width: 220px;
     }
   }
 }

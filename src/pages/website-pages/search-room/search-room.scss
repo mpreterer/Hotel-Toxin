@@ -12,11 +12,21 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-    margin: 0 auto;
+    justify-content: flex-start;
+    margin-left: 12px;
 
-    @media (max-width: 905px) {
+    @media (max-width: 1200px) {
+      margin-left: 0;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 1100px) {
+      margin-right: 10px;
+    }
+
+    @media (max-width: 840px) {
       margin: 0 auto;
+      justify-content: space-around;
     }
   }
 
@@ -70,22 +80,39 @@
 
   &__room-container {
     margin-bottom: 20px;
+    margin-right: 10px;
+
+    &:nth-child(3) {
+      margin-right: 0;
+    }
+
+    @media (max-width: 1100px) {
+      margin-right: 0;
+    }
+
+    @media (max-width: 450px) {
+      margin-right: 0;
+    }
   }
 
   &__rooms-container {
     margin-left: 45px;
 
-    @media (max-width: 1300px) {
-      margin-left: 85px;
+    @media (max-width: 1200px) {
       text-align: center;
+      width: 51%;
+      margin-right: 10px;
+      margin-left: 10px;
     }
 
     @media (max-width: 1200px) {
-      margin: 0 auto;
+      margin-right: 0;
+      margin-left: 0;
     }
 
-    @media (max-width: 520px) {
-      margin-left: 0;
+    @media (max-width: 840px) {
+      width: auto;
+      margin: 0 10px;
     }
   }
 
@@ -95,12 +122,7 @@
     line-height: 30px;
 
     @media (max-width: 900px) {
-      font-size: 20px;
-      text-align: center;
-    }
-
-    @media (max-width: 520px) {
-      font-size: 20px;
+      font-size: $font-size-medium;
     }
   }
 
@@ -120,23 +142,15 @@
     max-width: 266px;
     margin-left: 10px;
 
-    @media (max-width: 1065px) {
-      margin: 0 0 0 60px;
+    @media (max-width: 1200px) {
+      max-width: 100%;
+      width: 45%;
+      margin-right: 10px;
     }
 
-    @media (max-width: 1065px) {
-      max-width: inherit;
-      margin: 0 30px;
+    @media (max-width: 840px) {
+      width: auto;
     }
-  }
-
-  @media (max-width: 1355px) {
-    width: 90%;
-  }
-
-  @media (max-width: 1065px) {
-    display: flex;
-    width: 100%;
   }
 
   @media (max-width: 840px) {
