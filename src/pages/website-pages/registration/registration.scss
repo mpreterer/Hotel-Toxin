@@ -6,9 +6,11 @@
   height: 684px;
 
   &__container {
-    width: 92%;
     height: 684px;
-    margin: 0 10px;
     padding: 17px 0;
+
+    @media (max-width: 1200px) {
+      margin: 0 10px;
+    }
   }
 }
