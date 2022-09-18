@@ -17,7 +17,8 @@ mixin checkbox-list(params = {})
       span.checkbox-list__title= title
       .checkbox-list__arrow.js-arrow
         +expand-more-arrow
-    .checkbox-list__container
-      .checkbox-list__menu.js-menu
-        each input in list
-          +custom-checkbox(input)
+    .checkbox-list__menu.js-menu
+      each input in list
+        label.checkbox-list__list
+          input.checkbox-list__checkbox(type='checkbox', checked= input.isChecked)
+          span.checkbox-list__caption= input.text

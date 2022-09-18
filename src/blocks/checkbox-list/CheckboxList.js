@@ -11,7 +11,7 @@ class CheckboxList {
     this.$input = this.$container.querySelector('.js-title-list');
     this.$arrow = this.$container.querySelector('.js-arrow');
     this.$menu = this.$container.querySelector('.js-menu');
-    this.isOpen = this.$container.classList.contains('js-list-open');
+    this.isOpen = this.$menu.classList.contains(checkboxClassNames.OPEN);
     this.body = document.body;
 
     this._eventOpen();
@@ -19,9 +19,9 @@ class CheckboxList {
 
   _eventOpen() {
     if (this.isOpen) {
-      this.$menu.classList.remove(checkboxClassNames.HIDDEN);
+      this.$menu.classList.add(checkboxClassNames.OPEN);
     } else {
-      this.$menu.classList.add(checkboxClassNames.HIDDEN);
+      this.$menu.classList.remove(checkboxClassNames.OPEN);
     }
 
     this.$input.addEventListener('click', this._handleTitleListClick.bind(this));
@@ -50,17 +50,17 @@ class CheckboxList {
   }
 
   _handleTitleListClick() {
-    if (this.$menu.classList.contains(checkboxClassNames.HIDDEN)) {
-      this.$menu.classList.remove(checkboxClassNames.HIDDEN);
-      this._rotateArrow(true);
-    } else {
-      this.$menu.classList.toggle(checkboxClassNames.HIDDEN);
+    if (this.$menu.classList.contains(checkboxClassNames.OPEN)) {
+      this.$menu.classList.remove(checkboxClassNames.OPEN);
       this._rotateArrow(false);
+    } else {
+      this.$menu.classList.toggle(checkboxClassNames.OPEN);
+      this._rotateArrow(true);
     }
   }
 
   _hideList() {
-    this.$menu.classList.add(checkboxClassNames.HIDDEN);
+    this.$menu.classList.remove(checkboxClassNames.OPEN);
     this.$arrow.classList.remove(checkboxClassNames.ARROW_ACTIVE);
   }
 

@@ -1,5 +1,5 @@
 const checkboxClassNames = {
-  HIDDEN: 'checkbox-list__name_hidden',
+  OPEN: 'checkbox-list__menu_open',
   ARROW_ACTIVE: 'checkbox-list__arrow_active',
 };
 

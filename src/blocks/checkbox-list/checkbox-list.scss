@@ -3,17 +3,12 @@
 .checkbox-list {
   position: relative;
   display: flex;
-  align-items: center;
-  height: 44px;
-  color: $color-shade-dark;
-  font-weight: bold;
-  font-size: $font-size-small;
-  text-transform: uppercase;
+  flex-direction: column;
   user-select: none;
 
   &__arrow {
     position: absolute;
-    top: 17px;
+    top: 2px;
     right: 15px;
 
     &_active {
@@ -21,28 +16,63 @@
     }
   }
 
-  &__container {
-    position: absolute;
-    top: 50px;
-    z-index: 999;
-    width: fit-content;
-    width: 266px;
-    max-width: 266px;
-    color: #1f204180;
-    line-height: 12px;
-    text-transform: none;
-    background-color: #fff;
-  }
-
-  &__menu {
-    font-weight: normal;
+  &__title {
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    color: $color-shade-dark;
+    font-weight: bold;
   }
 
   &__name {
     cursor: pointer;
+  }
 
-    &_hidden {
-      display: none;
+  &__menu {
+    display: none;
+    margin-top: 20px;
+    flex-direction: column;
+    max-width: 266px;
+    color: #1f204180;
+    line-height: 12px;
+
+    &_open {
+      display: flex;
     }
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: -4px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(31 32 65 / 25%);
+    border-radius: 4px;
+    margin: 0;
+    cursor: pointer;
+    appearance: none;
+
+    &:checked {
+      background-image: url('./images/checked.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      border-color: $color-purple;
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    max-width: 266px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__caption {
+    font-size: $font-size-main;
+    margin-left: 30px;
+    cursor: pointer;
   }
 }

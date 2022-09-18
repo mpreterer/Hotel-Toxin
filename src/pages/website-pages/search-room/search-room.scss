@@ -30,6 +30,12 @@
     }
   }
 
+  &__convenience {
+    @media (max-width: 840px) {
+      margin-bottom: 30px;
+    }
+  }
+
   &__arrival-in-hotel {
     margin-bottom: 18px;
   }
@@ -75,7 +81,7 @@
   }
 
   &__furniture {
-    margin-bottom: 14px;
+    margin-bottom: 30px;
   }
 
   &__room-container {
