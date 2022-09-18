@@ -7,6 +7,7 @@
   &__text {
     padding-left: 10px;
     color: $color-shade-grey;
+    user-select: none;
   }
 
   &__button {

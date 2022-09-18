@@ -10,7 +10,7 @@ class DropDown {
     this.body = document.body;
     this.keyWords = this.container.getAttribute('data-key-phrases');
     this.inputName = this.container.querySelector(
-      '.js-counts-guests',
+      '.js-counts-field',
     );
     this.open = this.container.querySelector('.js-title');
     this.counterPanel = this.container.querySelector(
