@@ -25,7 +25,7 @@ mixin registration-card({ title = 'Регистрация аккаунта' }={}
         .registration-card__data-login
           span.registration-card__sub-title данные для входа в сервис
           .registration-card__email
-            +text-input({ placeholder: 'Email', name: 'email' })
+            +text-input({ placeholder: 'Email', name: 'email', type: 'email' })
           .registration-card__password
             +text-input({ type: 'password', placeholder: 'Пароль', name: 'password' })
         .registration-card__offer
