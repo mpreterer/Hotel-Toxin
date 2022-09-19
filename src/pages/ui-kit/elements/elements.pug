@@ -25,12 +25,11 @@ block content
   .ui-cards.js-ui-card
     .ui-cards__left-blocks
       .ui-cards__titles
-        .ui-cards__title text field
+        .ui-cards__bold-caption text field
         .ui-cards__text Default
       .ui-cards__default-field
         +text-input({ placeholder: 'Email', name: 'email', type: 'email' })
-      .ui-cards__titles
-        .ui-cards__title Dropdown
+      .ui-cards__title Dropdown
       .ui-cards__drop-down
         +dropDown({
           list: [
@@ -42,8 +41,7 @@ block content
           showFunction: true,
           keyPhrases: ['гость', 'гостя', 'гостей']
         })
-      .ui-cards__titles
-        .ui-cards__title masked text field
+      .ui-cards__title masked text field
       .ui-cards__masked-field
         +text-input({ isMasked: true, name: 'birthday' })
       .ui-cards__range-dates
@@ -51,16 +49,14 @@ block content
           titleFirst: 'DATE DROPDOWN',
           titleSecond: 'DATE DROPDOWN'
           })
-      .ui-cards__titles
-        .ui-cards__title filter date dropdown
+      .ui-cards__title filter date dropdown
       .ui-cards__alone-calendar
         +alone-calendar
-      .ui-cards__titles
-        .ui-cards__title subscription text field
+      .ui-cards__title subscription text field
       .ui-cards__subscribe-field
         +sub-text-input({ name: 'email', placeholder: 'Email', link: 'change-me/mock-address', type: 'email' })
       .ui-cards__titles
-        .ui-cards__title dropdown
+        .ui-cards__bold-caption dropdown
         .ui-cards__text Default
       .ui-cards__drop-down-not-panel-def
         +dropDown({
@@ -106,36 +102,30 @@ block content
     .ui-cards__right-blocks
       .ui-cards__right-blocks-container
         .ui-cards__first-right-block
-          .ui-cards__titles 
-            .ui-cards__title Checkbox Buttons
+          .ui-cards__title Checkbox Buttons
           .ui-cards__checkbox-buttons
             +custom-checkbox({text: 'Можно курить'})
             +custom-checkbox({text: 'Можно с питомцами'})
             +custom-checkbox({text: 'Можно пригласить гостей (до 10 человек)'})
-          .ui-cards__titles
-            .ui-cards__title Radio Buttons
+          .ui-cards__title Radio Buttons
           .ui-cards__radio-buttons
             +radio-input
-          .ui-cards__titles
-            .ui-cards__title Toggle
+          .ui-cards__title Toggle
           .ui-cards__toggles
             +toggle({ isChecked: true })
             .ui-cards__toggle-2
               +toggle
-          .ui-cards__titles
-            .ui-cards__title like button
+          .ui-cards__title like button
           .ui-cards__like-buttons
             .ui-cards__like-button
               +button-like({ count: 2 })
             .ui-cards__like-button-second
               +button-like({ count: 11 })
-          .ui-cards__titles
-            .ui-cards__title rate button
+          .ui-cards__title rate button
           .ui-cards__rate-buttons
             +stars({ stars: 4, readonly: false })
             +stars({ stars: 5 })
-          .ui-cards__titles
-            .ui-cards__title dropdown
+          .ui-cards__title dropdown
           .ui-cards__drop-down-with-panel
             +dropDown({
               list: [
@@ -147,8 +137,7 @@ block content
               showFunction: true,
               keyPhrases: ['гость', 'гостя', 'гостей']
             })
-          .ui-cards__titles
-            .ui-cards__title rich Checkbox Buttons
+          .ui-cards__title rich Checkbox Buttons
           .ui-cards__rich-checkbox-list
             +checkbox-double-name({
               list: [
@@ -162,11 +151,10 @@ block content
               title: 'Range Slider',
               subTitle: ''
             })
-          .ui-cards__titles
-            .ui-cards__title buttons
+          .ui-cards__title buttons
           .ui-cards__buttons-all
             .ui-cards__button-top
-              .ui-cards__button-top-no-disabled
+              .ui-cards__button-top-not-disabled
                 +button({
                   type: 'background',
                   text: 'CLICK ME',
@@ -180,7 +168,7 @@ block content
                   high: true,
                 })
             .ui-cards__button-center
-              .ui-cards__button-center-no-disabled
+              .ui-cards__button-center-not-disabled
                 +button({
                   type: 'border',
                   text: 'CLICK ME',
@@ -192,7 +180,7 @@ block content
                   disabled: true,
                 })
             .ui-cards__button-empty
-              .ui-cards__button-empty-no-disabled
+              .ui-cards__button-empty-not-disabled
                 +button({
                   type: 'empty',
                   text: 'CLICK ME',
@@ -209,16 +197,14 @@ block content
                 href: 'mock-address/change-me',
                 type: 'long'
               })
-          .ui-cards__titles
-            .ui-cards__title pagination
+          .ui-cards__title pagination
           .ui-cards__pagination
             +pagination({
               items: 180,
               itemsOnPage: 12,
               displayedPages: 3,
             })
-          .ui-cards__titles
-            .ui-cards__title dropdown
+          .ui-cards__title dropdown
           .ui-cards__drop-down-with-guests
             +dropDown({
               list: [
@@ -230,8 +216,7 @@ block content
               showFunction: true,
               keyPhrases: ['гость', 'гостя', 'гостей']
             })
-          .ui-cards__titles
-            .ui-cards__title bullet list
+          .ui-cards__title bullet list
           .ui-cards__bullet-list
             +room-rules({
               list: [

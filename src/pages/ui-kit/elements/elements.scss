@@ -26,7 +26,7 @@
     width: 320px;
   }
 
-  &__titles {
+  &__titles, &__title {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
@@ -35,7 +35,7 @@
     text-transform: uppercase;
   }
 
-  &__title {
+  &__bold-caption, &__title {
     font-weight: bold;
   }
 
@@ -118,7 +118,7 @@
     margin-bottom: 30px;
   }
 
-  &__button-empty-no-disabled {
+  &__button-empty-not-disabled {
     margin-right: 20px;
   }
 

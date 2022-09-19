@@ -34,10 +34,10 @@ block content
               keyPhrases: ['гость', 'гостя', 'гостей']
             },
           })
-        .cards__registration(data-component-js="js-cards-registration")
+        .cards__registration
           +registration-card
       .cards__dates
-        .cards__range-dates(data-component-js="js-cards-range-dates")
+        .cards__range-dates
           +room-order({
             numberRoom: 888, 
             level: 'люкс', 
@@ -46,12 +46,12 @@ block content
             discount: '2 179', 
             services: 300
           })
-        .cards__login-card(data-component-js="js-cards-login")
+        .cards__login-card
           +login-card
       .cards__rooms
         .cards__calendar-open
           +demo-calendar
-        .cards__room-card-first(data-component-js="js-card-room")
+        .cards__room-card-first
           +room-info({
             number: 888,
             level: 'Люкс',
@@ -77,7 +77,7 @@ block content
               }
                 ],
           })
-        .cards__room-card-second(data-component-js="js-card-room")
+        .cards__room-card-second
           +room-info({
             number: 840,
             level: '',

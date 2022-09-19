@@ -10,7 +10,7 @@ mixin login-card({}={})
         name="login-card"
       )
         .login-card__email
-          +text-input({ placeholder: 'Email', name: 'name' })
+          +text-input({ placeholder: 'Email', name: 'name', type: 'email' })
         .login-card__password
           +text-input({ 
             type: 'password',
