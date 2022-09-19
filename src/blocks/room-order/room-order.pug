@@ -37,7 +37,7 @@ mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={
             span.room-order__price-day= priceDay
             span.room-order__currency= currency
             span.room-order__separator !{ ' x ' }
-            span.room-order__sum-day.js-sum-day 0
+            span.room-order__sum-days.js-sum-days(name="sum-days") 0
             span.room-order__days !{' суток'}
           span.room-order__result-full-price-container 
             span.room-order__nofees-result-price(data-price='priceWithoutFees') 0
@@ -59,7 +59,7 @@ mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={
         span.room-order__all-result-price-title Итого
         .room-order__all-result-price-hr
         span.room-order__all-result-price-container
-          span.room-order__all-result-price(data-price='resultPrice') 0
+          span.room-order__all-result-price(data-price='resultPrice', name="result-price") 0
           span.room-order__all-result-price-currency= currency
       .room-order__to-book
         +button({ text: 'Забронировать', type: 'long', typeMethod: 'submit' })

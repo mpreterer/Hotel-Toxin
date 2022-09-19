@@ -7,7 +7,8 @@ mixin alone-calendar(params = {})
       title='Даты прибывания в отеле', 
       dateFormat='d MM', 
       placeholder='Выберите даты', 
-      isOpen = 'false'
+      isOpen = 'false',
+      name = 'range-days'
     } = params
 
   .alone-calendar.js-alone-calendar(
@@ -16,7 +17,12 @@ mixin alone-calendar(params = {})
     tabindex='0',
   )
     .alone-calendar__calendar-container.js-calendar-container
-      input.alone-calendar__placeholder.js-calendar-placeholder(type="text", disabled, placeholder= placeholder) 
+      input.alone-calendar__placeholder.js-calendar-placeholder(
+        type="text",
+        disabled,
+        placeholder= placeholder,
+        name=name
+      ) 
       .alone-calendar__arrow
         +expand-more-arrow
     .alone-calendar__calendar.js-block-calendar

@@ -10,7 +10,7 @@ mixin login-card({}={})
         name="login-card"
       )
         .login-card__email
-          +text-input({ placeholder: 'Email', name: 'name', type: 'email' })
+          +text-input({ placeholder: 'Email', name: 'email', type: 'email' })
         .login-card__password
           +text-input({ 
             type: 'password',
@@ -22,7 +22,7 @@ mixin login-card({}={})
             text: 'Войти',
             type: 'long',
             href: './search-room.html',
-            typeMethod: 'submit'
+            typeMethod: 'submit',
           })
         .login-card__account
           p.login-card__question Нет аккаунта на Toxin?

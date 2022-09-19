@@ -67,7 +67,8 @@ block content
             { name: 'ванные комнаты', val: 0 }
           ],
           showFunction: false,
-          placeholder: 'Выберите удобства'
+          placeholder: 'Выберите удобства',
+          name: 'furniture'
         })
       .ui-cards__checkbox-list
         +checkbox-list({
@@ -135,7 +136,8 @@ block content
               ],
               appointment: 'guests',
               showFunction: true,
-              keyPhrases: ['гость', 'гостя', 'гостей']
+              keyPhrases: ['гость', 'гостя', 'гостей'],
+              name: 'furniture'
             })
           .ui-cards__title rich Checkbox Buttons
           .ui-cards__rich-checkbox-list
@@ -214,7 +216,7 @@ block content
               ],
               appointment: 'guests',
               showFunction: true,
-              keyPhrases: ['гость', 'гостя', 'гостей']
+              keyPhrases: ['гость', 'гостя', 'гостей'],
             })
           .ui-cards__title bullet list
           .ui-cards__bullet-list

@@ -15,7 +15,7 @@ class RoomOrder {
     );
     this.fees = this.container.querySelector('[data-price="feesPrice"]');
     this.services = this.container.querySelector('[data-price="services"]');
-    this.sumDays = this.container.querySelector('.js-sum-day');
+    this.sumDays = this.container.querySelector('.js-sum-days');
 
     this._init();
   }

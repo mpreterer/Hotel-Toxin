@@ -1,6 +1,17 @@
 include ../expand-more-arrow/expand-more-arrow.pug
 
-mixin dropDown({placeholder = 'Сколько гостей',appointment,isOpen = false, showFunction, list = [], keyPhrases=[]}={})
+mixin dropDown(params = {})
+  -
+    const {
+      placeholder = 'Сколько гостей',
+      name= 'count-guests',
+      appointment,
+      isOpen = false,
+      showFunction,
+      list = [],
+      keyPhrases=[]
+    } = params
+
   .drop-down.js-drop-down(
     data-attribute-appointment=appointment,
     data-attribute-function=functionPanel,
@@ -11,7 +22,8 @@ mixin dropDown({placeholder = 'Сколько гостей',appointment,isOpen =
       input.drop-down__counts-field.js-counts-field(
         placeholder=placeholder,
         readonly,
-        value=''
+        value='',
+        name=name
       )
       .drop-down__arrow
         +expand-more-arrow
