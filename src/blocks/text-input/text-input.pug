@@ -7,7 +7,7 @@ mixin text-input(options={})
       disabled = false,
       readonly = false,
       isMasked = false,
-      isBorder = true,
+      isBordered = true,
       autocomplete = 'on',
     } = options;
 
@@ -19,6 +19,6 @@ mixin text-input(options={})
       placeholder=isMasked ? 'ДД.ММ.ГГГГ' : placeholder,
       disabled=disabled,
       readonly=readonly,
-      class=isBorder ? 'text-input__input-field_bordered' : '',
+      class=isBordered ? 'text-input__input-field_bordered' : '',
       autocomplete= autocomplete,
     )
