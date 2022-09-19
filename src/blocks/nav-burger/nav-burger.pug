@@ -1,6 +1,7 @@
 mixin nav-burger({ navLinks = [] }={})
   .nav-burger.js-nav-burger
-    button.nav-burger__button-menu.js-burger-button(type="button")
+    .nav-burger__button-menu-container.js-burger-button
+      button.nav-burger__button-menu(type="button")
     ul.nav-burger__menu-burger.js-menu-burger
       each item in navLinks
         li.nav-burger__item.js-burger-item
