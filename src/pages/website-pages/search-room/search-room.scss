@@ -127,6 +127,10 @@
     font-size: $font-size-big;
     line-height: 30px;
 
+    @media (max-width: 1200px) {
+      font-size: 23px;
+    }
+
     @media (max-width: 900px) {
       font-size: $font-size-medium;
     }

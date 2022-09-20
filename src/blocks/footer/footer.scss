@@ -166,7 +166,9 @@
   }
 
   &__about-company {
-    margin-bottom: 20px;
+    @media (max-width: 1200px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__icon-twitter,

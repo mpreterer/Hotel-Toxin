@@ -16,17 +16,17 @@
   }
 
   &__room-rules-container {
-    margin: 0 100px 0 31px;
+    margin: 0 100px 0 18px;
 
     @media (max-width: 1200px) {
       margin: 0 100px 0 12px;
     }
 
     @media (max-width: 720px) {
-      margin-right: 63px;
+      margin-right: 72px;
     }
 
-    @media (max-width: 693px) {
+    @media (max-width: 720px) {
       margin: 20px 10px 50px 0;
     }
   }
@@ -45,7 +45,7 @@
       background-size: 100%;
     }
 
-    @media (max-width: 693px) {
+    @media (max-width: 720px) {
       height: auto;
     }
 
@@ -65,10 +65,6 @@
     }
   }
 
-  &__room-order-container {
-    margin: 0 10px;
-  }
-
   &__room-small-photo-container {
     height: 243px;
 
@@ -78,7 +74,7 @@
       margin: 10px auto;
     }
 
-    @media (max-width: 693px) {
+    @media (max-width: 720px) {
       height: auto;
     }
 
@@ -88,7 +84,7 @@
   }
 
   &__expend-container {
-    max-width: 1179px;
+    max-width: 1160px;
     margin: 67px auto 72px;
   }
 
@@ -111,19 +107,18 @@
   &__more-info {
     display: flex;
     max-width: 672px;
-    margin: 0 0 20px 12px;
     margin-bottom: 20px;
 
     @media (max-width: 1200px) {
       margin: 60px 0 20px 7px;
     }
 
-    @media (max-width: 693px) {
+    @media (max-width: 720px) {
       flex-direction: column;
       align-items: center;
     }
 
-    @media (max-width: 693px) {
+    @media (max-width: 720px) {
       margin: 60px 0 0;
     }
   }
@@ -141,7 +136,7 @@
       justify-content: center;
     }
 
-    @media (max-width: 693px) {
+    @media (max-width: 720px) {
       flex-direction: column;
       align-items: center;
     }
@@ -162,15 +157,15 @@
       margin-right: 12px;
     }
 
-    @media (max-width: 693px) {
+    @media (max-width: 720px) {
       margin-right: 0;
     }
   }
 
   &__about-room-container {
-    margin-right: 79px;
+    margin-right: 78px;
 
-    @media (max-width: 693px) {
+    @media (max-width: 720px) {
       margin-right: 26px;
       margin-bottom: 30px;
     }
@@ -183,7 +178,7 @@
     font-size: $font-size-main;
     line-height: 24px;
 
-    @media (max-width: 693px) {
+    @media (max-width: 720px) {
       width: 255px;
       margin: 0 10px;
     }
@@ -197,14 +192,10 @@
   }
 
   &__user-reviews {
-    margin: 37px 0 0 10px;
+    margin-top: 37px;
 
     @media (max-width: 1200px) {
-      margin: 37px 0 0 0;
-    }
-
-    @media (max-width: 1200px) {
-      margin: 37px 5px 0 5px;
+      margin: 37px 8px 0 6px;
     }
   }
 
@@ -220,7 +211,7 @@
     font-weight: bold;
     font-size: $font-size-medium;
 
-    @media (max-width: 693px) {
+    @media (max-width: 720px) {
       margin-left: 0;
     }
 
