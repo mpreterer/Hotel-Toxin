@@ -12,8 +12,8 @@
   &__container {
     margin: 46px 30px 30px;
 
-    @media (max-width: 375px) {
-      margin: 15px;
+    @media (max-width: 400px) {
+      margin: 10px;
     }
   }
 
@@ -31,6 +31,10 @@
   &__price-day-title {
     margin-top: 5px;
     margin-left: 10px;
+  }
+
+  &__price {
+    margin-bottom: 33px;
   }
 
   &__all-result-price-title {
@@ -87,126 +91,8 @@
     margin-bottom: 17px;
   }
 
-  &__fees,
-  &__full-price,
-  &__additional-fees {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__full-price {
-    margin-bottom: 11px;
-  }
-
-  &__fees {
-    margin-bottom: 10px;
-  }
-
-  &__additional-fees {
-    margin-bottom: 33px;
-  }
-
-  &__currency-information,
-  &__additional-fees-information {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 99;
-    display: none;
-    max-width: 160px;
-    padding: 5px;
-    color: $color-shade-secondary;
-    font-weight: bold;
-    font-size: $font-size-small;
-    background-color: #c3c3c3;
-    border: 1px dotted #000;
-    border-radius: 4px;
-  }
-
-  &__additional-fees-title {
-    position: relative;
-    width: 214px;
-    line-height: 19px;
-
-    &::after {
-      position: absolute;
-      top: 0;
-      right: -30px;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      background-image: url('./images/inform-price.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      border: 1px solid $color-shade;
-      border-radius: 50%;
-      cursor: pointer;
-      content: '';
-
-      &:hover {
-        display: block;
-      }
-
-      @media (max-width: 400px) {
-        right: 0;
-      }
-    }
-
-    &:focus {
-      border: none;
-      outline: none;
-
-      &::after {
-        outline: 1px solid #000;
-      }
-    }
-  }
-
-  &__additional-fees-title:focus > &__additional-fees-information {
-    display: block;
-  }
-
-  &__fees-container {
-    position: relative;
-
-    &::after {
-      position: absolute;
-      top: 0;
-      right: -30px;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      background-image: url('./images/inform-price.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      border: 1px solid $color-shade;
-      border-radius: 50%;
-      cursor: pointer;
-      content: '';
-    }
-
-    &:focus {
-      border: none;
-      outline: none;
-
-      &::after {
-        outline: 1px solid #000;
-
-        @media (max-width: 380px) {
-          right: -20px;
-        }
-      }
-    }
-
-    &:hover {
-      &::after {
-        display: block;
-      }
-    }
-  }
-
-  &__fees-container:focus > &__currency-information {
-    display: block;
+  &__count-price-container {
+    margin-bottom: 30px;
   }
 
   &__result-price {
@@ -238,6 +124,6 @@
   }
 
   @media (max-width: 400px) {
-    width: 100%;
+    width: 318px;
   }
 }

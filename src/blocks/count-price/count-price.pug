@@ -1,0 +1,31 @@
+mixin count-price({ list = [] }={})
+  .count-price
+    each item in list
+      .count-price__line
+        if item.priceDays
+          span.count-price__price-days-container
+            span.count-price__price-day(data-price="priceDay")= item.price
+            span.count-price__currency= item.currency
+            span.count-price__separator !{' x '}
+            span.count-price__days.js-sum-days 0
+            span.count-price__in-day !{' суток'}
+          span.count-price__full-price-days-container
+            span.count-price__full-price-days(data-price="priceWithoutFees") 0
+            span.count-price__currency= item.currency
+        else if item.fees
+          .count-price__fees-container
+            span.count-price__fees-description= item.description
+              span.count-price__fees-price(data-price='feesPrice')= item.discount
+              span.count-price__currency= item.currency
+            .count-price__additional-inform-button(tabindex='0') i
+              .count-price__additional-inform= item.information
+          span.count-price__fees-result 0
+            span.count-price__currency= item.currency
+        else
+          .count-price__additional-fees-container
+            span.count-price__additional-fees-description= item.description
+            .count-price__additional-inform-button(tabindex='0') i
+              .count-price__additional-inform= item.information
+          span.count-price__additional-fees-price-container
+            span.count-price__additional-fees-price(data-price="services")= item.price
+            span.count-price__currency= item.currency

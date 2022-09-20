@@ -1,4 +1,5 @@
 include ../range-date-calendar/range-date-calendar.pug
+include ../count-price/count-price.pug
 include ../dropDown/dropDown.pug
 
 mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={})
@@ -31,35 +32,34 @@ mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={
           placeholder: 'Сколько гостей',
           keyPhrases: ['гость', 'гостя', 'гостей']
         })
-      .room-order__price
-        .room-order__full-price
-          span.room-order__full-price-container
-            span.room-order__price-day= priceDay
-            span.room-order__currency= currency
-            span.room-order__separator !{ ' x ' }
-            span.room-order__sum-days.js-sum-days(name="sum-days") 0
-            span.room-order__days !{' суток'}
-          span.room-order__result-full-price-container 
-            span.room-order__nofees-result-price(data-price='priceWithoutFees') 0
-            span.room-order__currency= currency
-        .room-order__fees
-          span.room-order__fees-container(tabindex='0') !{ 'Сбор за услуги: скидка ' }
-            span.room-order__fees-price(data-price='feesPrice')= discount
-            span.room-order__currency= currency
-            .room-order__currency-information Здесь появится ваша доп. информация
-          span.room-order__fees-result 0
-            span.room-order__currency= currency
-        .room-order__additional-fees
-          span.room-order__additional-fees-title(tabindex='0') Сбор за дополнительные услуги.
-            .room-order__additional-fees-information Здесь появится ваша доп. информация
-          span.room-order__additional-fess-price-container
-            span.room-order__additional-fess-price(data-price='services')= services
-            span.room-order__currency= currency
+      .room-order__count-price-container
+        +count-price({
+          list: [
+            {
+              priceDays: true,
+              currency: currency,
+              price: '9 990',
+            },
+            {
+              fees: true,
+              description: 'Сбор за услуги: скидка ',
+              information: 'Здесь появится ваша доп. информация',
+              discount: '2 179',
+              currency: currency,
+            },
+            {
+              currency: currency,
+              information: 'Здесь появится ваша доп. информация',
+              description: 'Сбор за дополнительные услуги',
+              price: '300'
+            }
+          ]
+        })
       .room-order__result-price
         span.room-order__all-result-price-title Итого
         .room-order__all-result-price-hr
         span.room-order__all-result-price-container
-          span.room-order__all-result-price(data-price='resultPrice', name="result-price") 0
+          span.room-order__all-result-price(data-price='resultPrice') 0
           span.room-order__all-result-price-currency= currency
       .room-order__to-book
         +button({ text: 'Забронировать', type: 'long', typeMethod: 'submit' })

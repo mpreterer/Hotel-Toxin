@@ -1,0 +1,75 @@
+@import '@variables';
+
+.count-price {
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__price-days-container {
+    max-width: 214px;
+  }
+
+  &__fees-description {
+    max-width: 214px;
+    position: relative;
+  }
+
+  &__additional-fees-description {
+    position: relative;
+    max-width: 214px;
+  }
+
+  &__additional-fees-container, &__fees-container {
+    display: flex;
+  }
+  
+  &__additional-inform-button {
+    position: relative;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-shade;
+    border: 1px solid $color-shade;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: $font-size-small;
+    user-select: none;
+    
+    &:focus {
+      outline: 1px solid #000;
+    }
+  }
+
+  &__additional-inform {
+    display: none;
+    max-width: 160px;
+    width: 160px;
+    padding: 5px;
+    color: $color-shade-dark;
+    position: absolute;
+    right: 25px;
+    top: 0;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #c3c3c3;
+    font-weight: bold;
+    font-size: $font-size-small;
+    color: $color-shade-secondary;
+    line-height: 20px;
+    z-index: 99;
+  }
+
+  &__additional-inform-button:focus > &__additional-inform {
+    display: block;
+  }
+}
