@@ -2,7 +2,17 @@ include ../range-date-calendar/range-date-calendar.pug
 include ../count-price/count-price.pug
 include ../dropDown/dropDown.pug
 
-mixin room-order({ numberRoom, level, priceDay, currency, discount, services }={})
+mixin room-order(params={})
+  -
+    const {
+      numberRoom,
+      level,
+      priceDay,
+      currency,
+      discount,
+      services
+    } = params
+
   .room-order.js-room-order
     form.room-order__container(
       method,
