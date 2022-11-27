@@ -1,7 +1,7 @@
 class RoomOrder {
   constructor(domParent) {
     this.container = domParent;
-    this.body = document.body;
+    this.body = document.bod;
     this.$inputArrival = this.container.querySelector('.js-masked-arrival');
     this.$arrival = this.$inputArrival.querySelector('[data-masked]');
     this.$inputDeparture = this.container.querySelector('.js-masked-departure');
@@ -58,17 +58,17 @@ class RoomOrder {
     const tempSecondNumb = arrayFirstDate[2];
     arrayFirstDate[0] = tempSecondNumb;
     arrayFirstDate[2] = tempFirstNumb;
-    const resulFirstDate = arrayFirstDate.join('-');
+    const resultFirstDate = arrayFirstDate.join('-');
 
     const arraySecondDate = dateSecond.split('.');
     const tempThirdNumb = arraySecondDate[0];
     const tempFourthNumb = arraySecondDate[2];
     arraySecondDate[0] = tempFourthNumb;
     arraySecondDate[2] = tempThirdNumb;
-    const resulSecondDate = arraySecondDate.join('-');
+    const resultSecondDate = arraySecondDate.join('-');
 
     return (
-      (this._getTime(resulSecondDate) - this._getTime(resulFirstDate)) /
+      (this._getTime(resultSecondDate) - this._getTime(resultFirstDate)) /
       millisecondsPerDay
     );
   }
