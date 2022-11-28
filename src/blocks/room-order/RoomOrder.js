@@ -1,7 +1,7 @@
 class RoomOrder {
   constructor(domParent) {
     this.container = domParent;
-    this.body = document.bod;
+    this.body = document.body;
     this.$inputArrival = this.container.querySelector('.js-masked-arrival');
     this.$arrival = this.$inputArrival.querySelector('[data-masked]');
     this.$inputDeparture = this.container.querySelector('.js-masked-departure');

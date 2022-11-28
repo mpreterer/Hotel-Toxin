@@ -26,7 +26,8 @@
     width: 320px;
   }
 
-  &__titles, &__title {
+  &__title-section,
+  &__title {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
@@ -35,7 +36,8 @@
     text-transform: uppercase;
   }
 
-  &__bold-caption, &__title {
+  &__bold-caption,
+  &__title {
     font-weight: bold;
   }
 

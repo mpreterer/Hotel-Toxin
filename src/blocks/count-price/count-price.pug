@@ -2,7 +2,7 @@ mixin count-price({ list = [] }={})
   .count-price
     each item in list
       .count-price__line
-        if item.priceDays
+        if item.isPriceDays
           span.count-price__price-days-container
             span.count-price__price-day(data-price="priceDay")= item.price
             span.count-price__currency= item.currency
@@ -12,7 +12,7 @@ mixin count-price({ list = [] }={})
           span.count-price__full-price-days-container
             span.count-price__full-price-days(data-price="priceWithoutFees") 0
             span.count-price__currency= item.currency
-        else if item.fees
+        else if item.isFees
           .count-price__fees-container
             span.count-price__fees-description= item.description
               span.count-price__fees-price(data-price='feesPrice')= item.discount

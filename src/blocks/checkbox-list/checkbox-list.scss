@@ -17,10 +17,10 @@
   }
 
   &__title {
-    font-size: $font-size-small;
-    text-transform: uppercase;
     color: $color-shade-dark;
     font-weight: bold;
+    font-size: $font-size-small;
+    text-transform: uppercase;
   }
 
   &__name {
@@ -29,9 +29,9 @@
 
   &__menu {
     display: none;
-    margin-top: 20px;
     flex-direction: column;
     max-width: 266px;
+    margin-top: 20px;
     color: #1f204180;
     line-height: 12px;
 
@@ -45,9 +45,9 @@
     top: -4px;
     width: 20px;
     height: 20px;
+    margin: 0;
     border: 1px solid rgb(31 32 65 / 25%);
     border-radius: 4px;
-    margin: 0;
     cursor: pointer;
     appearance: none;
 
@@ -62,8 +62,8 @@
   &__list {
     position: relative;
     display: flex;
-    margin-bottom: 20px;
     max-width: 266px;
+    margin-bottom: 20px;
 
     &:last-child {
       margin-bottom: 0;
@@ -71,8 +71,8 @@
   }
 
   &__caption {
-    font-size: $font-size-main;
     margin-left: 30px;
+    font-size: $font-size-main;
     cursor: pointer;
   }
 }

@@ -1,16 +1,16 @@
 @import '@variables';
 
 .button-like {
-  min-width: 40px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-width: 40px;
   height: 20px;
   color: #c7c7cf;
   background-color: #fff;
   border: 1px solid $color-shade;
   border-radius: 22px;
-  position: relative;
   cursor: pointer;
 
   &__txt {
