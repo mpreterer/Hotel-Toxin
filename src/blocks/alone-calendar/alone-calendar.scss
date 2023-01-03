@@ -39,7 +39,11 @@
     z-index: 99;
     margin-top: 5px;
 
-    @media (max-width: 840px) {
+    @media (max-width: 1230px) {
+      left: -10px;
+    }
+
+    @media (max-width: 1200px) {
       left: 0;
     }
   }
