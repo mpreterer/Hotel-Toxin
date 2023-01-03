@@ -17,60 +17,61 @@ include ../../../blocks/button/button.pug
 include ../../../blocks/pagination/pagination.pug
 include ../../../blocks/room-rules/room-rules
 include ../../../blocks/user-reviews/user-reviews.pug
+include ../blocks/form-elements-set/form-elements-set.pug
 
 block variables 
   - pageTitle = 'Элементы'
 
 block content
-  .ui-cards.js-ui-card
-    .ui-cards__left-blocks
-      .ui-cards__title-section
-        .ui-cards__bold-caption text field
-        .ui-cards__text Default
-      .ui-cards__default-field
-        +text-input({ placeholder: 'Email', name: 'email', type: 'email' })
-      .ui-cards__title Dropdown
-      .ui-cards__drop-down
-        +dropDown({
-          list: [
-            { name: 'взрослые', val: 0 },
-            { name: 'дети', val: 0 },
-            { name: 'младенцы', val: 0 }
-          ],
-          appointment: 'guests',
-          showFunction: true,
-          keyPhrases: ['гость', 'гостя', 'гостей']
-        })
-      .ui-cards__title masked text field
-      .ui-cards__masked-field
-        +text-input({ isMasked: true, name: 'birthday' })
-      .ui-cards__range-dates
+  .elements
+    .elements__left-blocks
+      .elements__form-elements-set
+        +form-elements-set({ title: 'text field', details: 'Default' })
+          +text-input({ placeholder: 'Email', name: 'email', type: 'email' })
+      .elements__form-elements-set
+        +form-elements-set({ title: 'dropdown' })
+          +dropDown({
+            list: [
+              { name: 'взрослые', val: 0 },
+              { name: 'дети', val: 0 },
+              { name: 'младенцы', val: 0 }
+            ],
+            appointment: 'guests',
+            showFunction: true,
+            keyPhrases: ['гость', 'гостя', 'гостей']
+          })
+      .elements__form-elements-set-birthday
+        .elements__form-elements-set
+          +form-elements-set({ title: 'MASKED TEXT FIELD' })
+            +text-input({ isMasked: true, name: 'birthday' })
+      .elements__range-dates
         +range-date-calendar({
           titleFirst: 'DATE DROPDOWN',
           titleSecond: 'DATE DROPDOWN'
           })
-      .ui-cards__title filter date dropdown
-      .ui-cards__alone-calendar
-        +alone-calendar
-      .ui-cards__title subscription text field
-      .ui-cards__subscribe-field
-        +sub-text-input({ name: 'email', placeholder: 'Email', link: 'change-me/mock-address', type: 'email' })
-      .ui-cards__title-section
-        .ui-cards__bold-caption dropdown
-        .ui-cards__text Default
-      .ui-cards__drop-down-not-panel-def
-        +dropDown({
-          appointment: 'furniture',
-          list: [
-            { name: 'спальни', val: 0 },
-            { name: 'кровати', val: 0 },
-            { name: 'ванные комнаты', val: 0 }
-          ],
-          showFunction: false,
-          placeholder: 'Выберите удобства',
-          name: 'furniture'
-        })
-      .ui-cards__checkbox-list
+      .elements__form-elements-set-alone-calendar
+        .elements__form-elements-set
+          +form-elements-set({ title: 'filter date dropdown'})
+            +alone-calendar
+      .elements__form-elements-set-email
+        .elements__form-elements-set
+          +form-elements-set({ title: 'subscription text field' })
+            +sub-text-input({ name: 'email', placeholder: 'Email', link: 'change-me/mock-address', type: 'email' })
+      .elements__form-elements-set-furniture
+        .elements__form-elements-set
+          +form-elements-set({ title: 'dropdown', details: 'Default' })
+            +dropDown({
+              appointment: 'furniture',
+              list: [
+                { name: 'спальни', val: 0 },
+                { name: 'кровати', val: 0 },
+                { name: 'ванные комнаты', val: 0 }
+              ],
+              showFunction: false,
+              placeholder: 'Выберите удобства',
+              name: 'furniture'
+            })
+      .elements__checkbox-list
         +checkbox-list({
           title: 'Дополнительные удобства',
           list: [
@@ -84,7 +85,7 @@ block content
             { text: 'Шампунь', isChecked: false },
           ]
           })
-      .ui-cards__about-room
+      .elements__about-room
         +about-room({
           list: [
             {
@@ -100,133 +101,133 @@ block content
           ],
           title: ''
         })
-    .ui-cards__right-blocks
-      .ui-cards__right-blocks-container
-        .ui-cards__first-right-block
-          .ui-cards__title Checkbox Buttons
-          .ui-cards__checkbox-buttons
-            +custom-checkbox({text: 'Можно курить'})
-            +custom-checkbox({text: 'Можно с питомцами'})
-            +custom-checkbox({text: 'Можно пригласить гостей (до 10 человек)'})
-          .ui-cards__title Radio Buttons
-          .ui-cards__radio-buttons
-            +radio-input
-          .ui-cards__title Toggle
-          .ui-cards__toggles
+    .elements__right-blocks
+      .elements__right-blocks-container
+        .elements__first-right-block
+          .elements__form-elements-set
+            +form-elements-set({ title: 'CHECKBOX BUTTONS'})
+              +custom-checkbox({text: 'Можно курить'})
+              +custom-checkbox({text: 'Можно с питомцами'})
+              +custom-checkbox({text: 'Можно пригласить гостей (до 10 человек)'})
+          .elements__form-elements-set
+            +form-elements-set({ title: 'Radio Buttons'})
+              +radio-input
+          .elements__title Toggle
+          .elements__toggles
             +toggle({ isChecked: true })
-            .ui-cards__toggle-2
+            .elements__toggle-2
               +toggle
-          .ui-cards__title like button
-          .ui-cards__like-buttons
-            .ui-cards__like-button
+          .elements__title like button
+          .elements__like-buttons
+            .elements__like-button
               +button-like({ count: 2 })
-            .ui-cards__like-button-second
+            .elements__like-button-second
               +button-like({ count: 11 })
-          .ui-cards__title rate button
-          .ui-cards__rate-buttons
-            +stars({ stars: 4, readonly: false })
-            +stars({ stars: 5 })
-          .ui-cards__title dropdown
-          .ui-cards__drop-down-with-panel
-            +dropDown({
-              list: [
-                { name: 'взрослые', val: 0 },
-                { name: 'дети', val: 0 },
-                { name: 'младенцы', val: 0 }
-              ],
-              appointment: 'guests',
-              showFunction: true,
-              keyPhrases: ['гость', 'гостя', 'гостей'],
-              name: 'furniture'
-            })
-          .ui-cards__title rich Checkbox Buttons
-          .ui-cards__rich-checkbox-list
-            +checkbox-double-name({
-              list: [
-                { title: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.' },
-                { title: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.' },
-              ]
-            })
-        .ui-cards__second-right-block
-          .ui-cards__range-slider
+          .elements__form-elements-set
+            +form-elements-set({ title: 'rate button'})
+              +stars({ stars: 4, readonly: false })
+              +stars({ stars: 5 })
+          .elements__form-elements-set
+            +form-elements-set({ title: 'dropdown'})
+              +dropDown({
+                list: [
+                  { name: 'взрослые', val: 0 },
+                  { name: 'дети', val: 0 },
+                  { name: 'младенцы', val: 0 }
+                ],
+                appointment: 'guests',
+                showFunction: true,
+                keyPhrases: ['гость', 'гостя', 'гостей'],
+                name: 'furniture'
+              })
+          .elements__form-elements-set
+            +form-elements-set({ title: 'rich Checkbox Buttons'})
+              +checkbox-double-name({
+                list: [
+                  { title: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.' },
+                  { title: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.' },
+                ]
+              })
+        .elements__second-right-block
+          .elements__range-slider
             +slider-range({
               title: 'Range Slider',
               subTitle: ''
             })
-          .ui-cards__title buttons
-          .ui-cards__buttons-all
-            .ui-cards__button-top
-              .ui-cards__button-top-not-disabled
+          .elements__title buttons
+          .elements__buttons-all
+            .elements__button-top
+              .elements__button-top-not-disabled
                 +button({
                   type: 'background',
                   text: 'CLICK ME',
                   high: true,
                 })
-              .ui-cards__button-top-disabled
+              .elements__button-top-disabled
                 +button({
                   type: 'background',
                   text: 'CLICK ME',
                   disabled: true,
                   high: true,
                 })
-            .ui-cards__button-center
-              .ui-cards__button-center-not-disabled
+            .elements__button-center
+              .elements__button-center-not-disabled
                 +button({
                   type: 'border',
                   text: 'CLICK ME',
                 })
-              .ui-cards__button-center-disabled
+              .elements__button-center-disabled
                 +button({
                   type: 'border',
                   text: 'CLICK ME',
                   disabled: true,
                 })
-            .ui-cards__button-empty
-              .ui-cards__button-empty-not-disabled
+            .elements__button-empty
+              .elements__button-empty-not-disabled
                 +button({
                   type: 'empty',
                   text: 'CLICK ME',
                 })
-              .ui-cards__button-empty-disabled
+              .elements__button-empty-disabled
                 +button({
                   type: 'empty',
                   text: 'CLICK ME',
                   disabled: true,
                 })
-            .ui-cards__pay-button
+            .elements__pay-button
               +button({
                 text:'перейти к оплате',
                 href: 'mock-address/change-me',
                 type: 'long'
               })
-          .ui-cards__title pagination
-          .ui-cards__pagination
-            +pagination({
-              items: 180,
-              itemsOnPage: 12,
-              displayedPages: 3,
-            })
-          .ui-cards__title dropdown
-          .ui-cards__drop-down-with-guests
-            +dropDown({
-              list: [
-                { name: 'взрослые', val: 2 },
-                { name: 'дети', val: 1 },
-                { name: 'младенцы', val: 0 }
-              ],
-              appointment: 'guests',
-              showFunction: true,
-              keyPhrases: ['гость', 'гостя', 'гостей'],
-            })
-          .ui-cards__title bullet list
-          .ui-cards__bullet-list
-            +room-rules({
-              list: [
-                { txt: 'Нельзя с питомцами' },
-                { txt: 'Без вечеринок и мероприятий' },
-                { txt: 'Время прибытия — после 13:00, а выезд до 12:00' }
-              ],
-              title: ''
-            })
-      .ui-cards__comment
+          .elements__form-elements-set
+            +form-elements-set({ title: 'pagination'})
+              +pagination({
+                items: 180,
+                itemsOnPage: 12,
+                displayedPages: 3,
+              })
+          .elements__form-elements-set
+            +form-elements-set({ title: 'filter date dropdown'})
+              +dropDown({
+                list: [
+                  { name: 'взрослые', val: 2 },
+                  { name: 'дети', val: 1 },
+                  { name: 'младенцы', val: 0 }
+                ],
+                appointment: 'guests',
+                showFunction: true,
+                keyPhrases: ['гость', 'гостя', 'гостей'],
+              })
+          .elements__form-elements-set
+            +form-elements-set({ title: 'bullet list'})
+              +room-rules({
+                list: [
+                  { txt: 'Нельзя с питомцами' },
+                  { txt: 'Без вечеринок и мероприятий' },
+                  { txt: 'Время прибытия — после 13:00, а выезд до 12:00' }
+                ],
+                title: ''
+              })
+      .elements__comment
         +user-reviews({ count: 11, src: 'assets/image/user-1.png' })

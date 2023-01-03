@@ -1,0 +1,8 @@
+mixin form-elements-set({ title = 'Element name', details }={})
+  .form-elements-set
+    .form-elements-set__legend
+      span.form-elements-set__title= title
+      if details
+        span.form-elements-set__details= details
+    .form-elements-set__elements
+      block

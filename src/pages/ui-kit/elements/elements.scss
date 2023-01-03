@@ -1,6 +1,6 @@
 @import '@variables';
 
-.ui-cards {
+.elements {
   display: flex;
   justify-content: space-between;
   padding: 140px;
@@ -35,8 +35,32 @@
     line-height: 12px;
     text-transform: uppercase;
   }
+  
+  &__form-elements-set {
+    margin-bottom: 20px;
+  }
 
-  &__bold-caption,
+  &__form-elements-set-birthday {
+    margin-bottom: 40px;
+  }
+  
+  &__form-elements-set-alone-calendar {
+    margin-bottom: 30px;
+  }
+
+  &__form-elements-set-email {
+    margin-bottom: 93px;
+  }
+
+  &__form-elements-set-alone-calendar {
+    margin-bottom: 30px;
+  }
+
+  &__form-elements-set-furniture {
+    margin-bottom: 90px;
+  }
+
+  &__caption,
   &__title {
     font-weight: bold;
   }

@@ -1,0 +1,14 @@
+.form-elements-set {
+  &__legend {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+}
