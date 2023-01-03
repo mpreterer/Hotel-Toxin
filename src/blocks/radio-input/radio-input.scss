@@ -27,7 +27,7 @@
     }
 
     &:checked::before {
-      background-image: url('./images/radio-chacked.svg');
+      background-image: url('./images/radio-checked.svg');
       background-repeat: no-repeat;
       background-position: 3px;
       border-color: $color-purple;
