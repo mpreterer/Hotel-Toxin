@@ -12,6 +12,8 @@ mixin alone-calendar(params = {})
       displaced = false,
     } = params
 
+    const withOffset = displaced && 'alone-calendar__calendar_displaced';
+
   .alone-calendar.js-alone-calendar(
     data-selected-dates=selectedDates,
     data-format=dateFormat,
@@ -26,5 +28,5 @@ mixin alone-calendar(params = {})
       ) 
       .alone-calendar__arrow
         +expand-more-arrow
-    .alone-calendar__calendar.js-block-calendar
-      +calendar({ initDates: ['2022-08-19', '2022-08-23'], isOpen: isOpen, displaced: displaced })
+    .alone-calendar__calendar.js-block-calendar(class=withOffset)
+      +calendar({ initDates: ['2022-08-19', '2022-08-23'], isOpen: isOpen })

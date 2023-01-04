@@ -38,6 +38,10 @@
     z-index: 99;
     margin-top: 5px;
 
+    &_displaced {
+      left: -30px;
+    }
+
     @media (max-width: 1230px) {
       left: -10px;
     }
