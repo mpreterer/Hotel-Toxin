@@ -13,7 +13,7 @@
 
   &__container-donut {
     position: relative;
-    margin-right: 30px;
+    margin-right: 45px;
   }
 
   &__comments-count {
@@ -59,6 +59,8 @@
     height: 10px;
     margin-right: 5px;
     border-radius: 50%;
+    position: absolute;
+    left: -15px;
   }
 
   &__item {
@@ -68,6 +70,7 @@
     text-transform: capitalize;
     cursor: pointer;
     user-select: none;
+    position: relative;
 
     &:hover {
       opacity: 0.5;
