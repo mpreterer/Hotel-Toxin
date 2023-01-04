@@ -18,6 +18,10 @@
     width: 711px;
   }
 
+  &__like-buttons {
+    display: flex;
+  }
+
   &__first-right-block {
     width: 320px;
   }
@@ -26,7 +30,6 @@
     width: 320px;
   }
 
-  &__title-section,
   &__title {
     display: flex;
     justify-content: space-between;
@@ -34,10 +37,37 @@
     font-size: 12px;
     line-height: 12px;
     text-transform: uppercase;
+    font-weight: bold;
+
+    &_middle-margin {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__stars-container {
+    margin-bottom: 90px;
   }
   
   &__form-elements-set {
     margin-bottom: 20px;
+
+    &_margin {
+      &_small {
+        margin-bottom: 30px;
+      }
+
+      &_middle {
+        margin-bottom: 40px;
+      }
+
+      &_big {
+        margin-bottom: 90px;
+      }
+
+      &_very-big {
+        margin-bottom: 161px;
+      }
+    }
   }
 
   &__form-elements-set-birthday {
@@ -60,45 +90,8 @@
     margin-bottom: 90px;
   }
 
-  &__caption,
-  &__title {
-    font-weight: bold;
-  }
-
-  &__text {
-    color: $color-shade-grey;
-    font-weight: 400;
-  }
-
-  &__default-field,
-  &__drop-down {
-    margin-bottom: 20px;
-  }
-
-  &__masked-field,
-  &__range-dates,
-  &__filter-date {
-    margin-bottom: 40px;
-  }
-
-  &__subscribe-field {
-    margin-bottom: 95;
-  }
-
-  &__bullet-list {
-    margin-top: 10px;
-  }
-
-  &__rich-checkbox-list {
-    margin-top: 6px;
-  }
-
   &__checkbox-list {
     margin-bottom: 100px;
-  }
-
-  &__like-buttons {
-    display: flex;
   }
 
   &__like-button-second {
@@ -177,9 +170,5 @@
 
   &__toggle-2 {
     margin-top: 10px;
-  }
-
-  &__alone-calendar {
-    margin-bottom: 30px;
   }
 }

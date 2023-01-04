@@ -44,7 +44,7 @@ block content
         .elements__form-elements-set
           +form-elements-set({ title: 'MASKED TEXT FIELD' })
             +text-input({ isMasked: true, name: 'birthday' })
-      .elements__range-dates
+      .elements__form-elements-set.elements__form-elements-set_margin_middle
         +range-date-calendar({
           titleFirst: 'DATE DROPDOWN',
           titleSecond: 'DATE DROPDOWN'
@@ -57,7 +57,7 @@ block content
         .elements__form-elements-set
           +form-elements-set({ title: 'subscription text field' })
             +sub-text-input({ name: 'email', placeholder: 'Email', link: 'change-me/mock-address', type: 'email' })
-      .elements__form-elements-set-furniture
+      .elements__form-elements-set.elements__form-elements-set_margin_big
         .elements__form-elements-set
           +form-elements-set({ title: 'dropdown', details: 'Default' })
             +dropDown({
@@ -104,30 +104,33 @@ block content
     .elements__right-blocks
       .elements__right-blocks-container
         .elements__first-right-block
-          .elements__form-elements-set
-            +form-elements-set({ title: 'CHECKBOX BUTTONS'})
+          .elements__form-elements-set.elements__form-elements-set_margin_middle
+            .elements__title.elements__title_middle-margin CHECKBOX BUTTONS
+            .elements__custom-checkboxes
               +custom-checkbox({text: 'Можно курить'})
               +custom-checkbox({text: 'Можно с питомцами'})
               +custom-checkbox({text: 'Можно пригласить гостей (до 10 человек)'})
+          .elements__form-elements-set.elements__form-elements-set_margin_middle
+            .elements__title.elements__title_middle-margin Radio Buttons
+            +radio-input
           .elements__form-elements-set
-            +form-elements-set({ title: 'Radio Buttons'})
-              +radio-input
-          .elements__title Toggle
-          .elements__toggles
-            +toggle({ isChecked: true })
-            .elements__toggle-2
-              +toggle
-          .elements__title like button
-          .elements__like-buttons
-            .elements__like-button
-              +button-like({ count: 2 })
-            .elements__like-button-second
-              +button-like({ count: 11 })
+            .elements__title.elements__title_middle-margin Toggle
+            .elements__toggles
+              +toggle({ isChecked: true })
+              .elements__toggle-2
+                +toggle
           .elements__form-elements-set
-            +form-elements-set({ title: 'rate button'})
-              +stars({ stars: 4, readonly: false })
-              +stars({ stars: 5 })
-          .elements__form-elements-set
+            .elements__title.elements__title_middle-margin like button
+            .elements__like-buttons
+              .elements__like-button
+                +button-like({ count: 2 })
+              .elements__like-button-second
+                +button-like({ count: 11 })
+          .elements__form-elements-set.elements__form-elements-set_margin_big
+            .elements__title.elements__title_middle-margin rate button
+            +stars({ stars: 4, readonly: false })
+            +stars({ stars: 5 })
+          .elements__form-elements-set.elements__form-elements-set_margin_big
             +form-elements-set({ title: 'dropdown'})
               +dropDown({
                 list: [
@@ -200,15 +203,15 @@ block content
                 href: 'mock-address/change-me',
                 type: 'long'
               })
-          .elements__form-elements-set
-            +form-elements-set({ title: 'pagination'})
-              +pagination({
-                items: 180,
-                itemsOnPage: 12,
-                displayedPages: 3,
-              })
-          .elements__form-elements-set
-            +form-elements-set({ title: 'filter date dropdown'})
+          .elements__form-elements-set.elements__form-elements-set_margin_very-big
+            .elements__title.elements__title_middle-margin pagination
+            +pagination({
+              items: 180,
+              itemsOnPage: 12,
+              displayedPages: 3,
+            })
+          .elements__form-elements-set.elements__form-elements-set_margin_big
+            +form-elements-set({ title: 'dropdown'})
               +dropDown({
                 list: [
                   { name: 'взрослые', val: 2 },
