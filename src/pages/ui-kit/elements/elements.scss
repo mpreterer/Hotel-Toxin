@@ -39,15 +39,13 @@
     text-transform: uppercase;
     font-weight: bold;
 
-    &_middle-margin {
-      margin-bottom: 15px;
+    &_margin {
+      &_middle {
+        margin-bottom: 15px;
+      }
     }
   }
 
-  &__stars-container {
-    margin-bottom: 90px;
-  }
-  
   &__form-elements-set {
     margin-bottom: 20px;
 
@@ -70,57 +68,13 @@
     }
   }
 
-  &__form-elements-set-birthday {
-    margin-bottom: 40px;
-  }
-  
-  &__form-elements-set-alone-calendar {
-    margin-bottom: 30px;
-  }
-
-  &__form-elements-set-email {
-    margin-bottom: 93px;
-  }
-
-  &__form-elements-set-alone-calendar {
-    margin-bottom: 30px;
-  }
-
-  &__form-elements-set-furniture {
-    margin-bottom: 90px;
-  }
-
-  &__checkbox-list {
-    margin-bottom: 100px;
-  }
-
   &__like-button-second {
     margin-left: 10px;
-  }
-
-  &__checkbox-buttons {
-    margin: 17px 0 40px;
-  }
-
-  &__drop-down-not-panel-def {
-    margin-bottom: 84px;
-  }
-
-  &__radio-buttons {
-    margin: 16px 0 37px;
   }
 
   &__toggles,
   &__like-buttons {
     margin: 16px 0 40px;
-  }
-
-  &__rate-buttons {
-    margin: 16px 0 90px;
-  }
-
-  &__drop-down-with-panel {
-    margin-bottom: 100px;
   }
 
   &__button-top {
@@ -152,15 +106,6 @@
   &__pay-button {
     height: 44px;
     margin-bottom: 30px;
-  }
-
-  &__pagination {
-    margin-top: 25px;
-    margin-bottom: 151px;
-  }
-
-  &__drop-down-with-guests {
-    margin-bottom: 95px;
   }
 
   &__right-blocks-container {

@@ -6,4 +6,8 @@
   font-family: $font-family-main;
   background-color: #fff;
   user-select: none;
+
+  &_displaced {
+    left: -30px;
+  }
 }

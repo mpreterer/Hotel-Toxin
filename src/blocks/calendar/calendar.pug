@@ -6,8 +6,11 @@ mixin calendar(params = {})
       lang, 
       separator=' - ', 
       dateFormat='dd.mm.yyyy', 
-      initDates= ''
+      initDates= '',
+      displaced= false,
     } = params
+
+    const withOffset = displaced && 'calendar_displaced';
 
   .calendar.js-calendar(
     data-range=range,
@@ -16,4 +19,5 @@ mixin calendar(params = {})
     data-format=dateFormat,
     data-init-dates=initDates,
     data-is-open=isOpen,
+    class=withOffset,
   )
